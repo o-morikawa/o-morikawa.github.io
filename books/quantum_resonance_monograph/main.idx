@@ -1,0 +1,1610 @@
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{vi}
+\indexentry{Hilbert space|hyperpage}{vi}
+\indexentry{topology|hyperpage}{vi}
+\indexentry{spectral theorem|hyperpage}{vi}
+\indexentry{spectrum!point|hyperpage}{vi}
+\indexentry{resolvent|hyperpage}{vi}
+\indexentry{von Neumann algebra@\vN\ algebra|hyperpage}{vi}
+\indexentry{Jost function|hyperpage}{vi}
+\indexentry{wave operator|hyperpage}{vi}
+\indexentry{partial-wave expansion|hyperpage}{vi}
+\indexentry{unbounded operator|hyperpage}{viii}
+\indexentry{Hilbert space|hyperpage}{viii}
+\indexentry{spectral measure|hyperpage}{viii}
+\indexentry{spectrum!point|hyperpage}{viii}
+\indexentry{connection coefficient|hyperpage}{viii}
+\indexentry{Breit--Wigner approximation|hyperpage}{viii}
+\indexentry{exact WKB|hyperpage}{viii}
+\indexentry{Zel'dovich regularization|hyperpage}{viii}
+\indexentry{rigged Hilbert space|hyperpage}{viii}
+\indexentry{CDCC|hyperpage}{x}
+\indexentry{lithium nuclei|hyperpage}{x}
+\indexentry{beryllium nuclei|hyperpage}{x}
+\indexentry{spectrum!continuous|hyperpage}{1}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{1}
+\indexentry{unbounded operator|hyperpage}{1}
+\indexentry{topology|hyperpage}{1}
+\indexentry{spectral theorem|hyperpage}{1}
+\indexentry{spectral measure|hyperpage}{1}
+\indexentry{spectrum!continuous|hyperpage}{1}
+\indexentry{Sturm--Liouville theory|hyperpage}{1}
+\indexentry{wave packet|hyperpage}{1}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{1}
+\indexentry{Jacobi coordinate|hyperpage}{1}
+\indexentry{operator!closed|hyperpage}{2}
+\indexentry{Hilbert space|hyperpage}{2}
+\indexentry{topology|hyperpage}{2}
+\indexentry{spectrum!essential|hyperpage}{2}
+\indexentry{resolvent|hyperpage}{2}
+\indexentry{wave operator|hyperpage}{2}
+\indexentry{Gauss law|hyperpage}{2}
+\indexentry{truncation contract|hyperpage}{2}
+\indexentry{Hilbert space|hyperpage}{3}
+\indexentry{scattering matrix|hyperpage}{3}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{3}
+\indexentry{scattering!Coulomb|hyperpage}{3}
+\indexentry{scattering!three-body Coulomb|hyperpage}{3}
+\indexentry{distorted-wave approximation|hyperpage}{3}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{3}
+\indexentry{Wronskian|hyperpage}{3}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{3}
+\indexentry{scattering!Coulomb|hyperpage}{3}
+\indexentry{continuum response|hyperpage}{3}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{4}
+\indexentry{Hilbert space|hyperpage}{4}
+\indexentry{resolvent|hyperpage}{4}
+\indexentry{Jost function|hyperpage}{4}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{4}
+\indexentry{exact WKB|hyperpage}{4}
+\indexentry{complex scaling|hyperpage}{4}
+\indexentry{Zel'dovich regularization|hyperpage}{4}
+\indexentry{rigged Hilbert space|hyperpage}{4}
+\indexentry{exceptional point|hyperpage}{4}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{6}
+\indexentry{Hilbert space|hyperpage}{6}
+\indexentry{topology|hyperpage}{6}
+\indexentry{measure theory|hyperpage}{6}
+\indexentry{spectral theorem|hyperpage}{6}
+\indexentry{spectrum!continuous|hyperpage}{6}
+\indexentry{spectrum!point|hyperpage}{6}
+\indexentry{resolvent|hyperpage}{6}
+\indexentry{Riesz projection|hyperpage}{6}
+\indexentry{direct integral|hyperpage}{6}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{9}
+\indexentry{unbounded operator|hyperpage}{9}
+\indexentry{Hilbert space|hyperpage}{9}
+\indexentry{spectrum!point|hyperpage}{9}
+\indexentry{resolvent|hyperpage}{9}
+\indexentry{Riemann sheet|hyperpage}{9}
+\indexentry{resonance!residue|hyperpage}{9}
+\indexentry{antiresonance|hyperpage}{9}
+\indexentry{Breit--Wigner approximation|hyperpage}{9}
+\indexentry{resolvent|hyperpage}{10}
+\indexentry{complex scaling|hyperpage}{10}
+\indexentry{CDCC|hyperpage}{10}
+\indexentry{lithium nuclei|hyperpage}{10}
+\indexentry{beryllium nuclei|hyperpage}{10}
+\indexentry{exceptional point|hyperpage}{10}
+\indexentry{horizon boundary condition|hyperpage}{10}
+\indexentry{Wronskian|hyperpage}{11}
+\indexentry{connection coefficient|hyperpage}{11}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{11}
+\indexentry{resonance!residue|hyperpage}{11}
+\indexentry{Borel summation|hyperpage}{11}
+\indexentry{Stokes automorphism|hyperpage}{11}
+\indexentry{Riccati equation|hyperpage}{11}
+\indexentry{exact WKB|hyperpage}{11}
+\indexentry{monodromy|hyperpage}{11}
+\indexentry{exceptional point|hyperpage}{11}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{12}
+\indexentry{resonance!residue|hyperpage}{12}
+\indexentry{Gamow--Siegert state|hyperpage}{12}
+\indexentry{exact WKB|hyperpage}{12}
+\indexentry{monodromy|hyperpage}{12}
+\indexentry{Zel'dovich regularization|hyperpage}{12}
+\indexentry{continuum level density|hyperpage}{12}
+\indexentry{exceptional point|hyperpage}{12}
+\indexentry{holonomy|hyperpage}{12}
+\indexentry{quasinormal mode|hyperpage}{12}
+\indexentry{topology|hyperpage}{13}
+\indexentry{spectral measure|hyperpage}{13}
+\indexentry{resolvent|hyperpage}{13}
+\indexentry{Wronskian|hyperpage}{13}
+\indexentry{connection coefficient|hyperpage}{13}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{13}
+\indexentry{branch cut|hyperpage}{13}
+\indexentry{resonance!residue|hyperpage}{13}
+\indexentry{scattering!Coulomb|hyperpage}{13}
+\indexentry{infrared problem|hyperpage}{13}
+\indexentry{GNS construction|hyperpage}{17}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{17}
+\indexentry{antiresonance|hyperpage}{17}
+\indexentry{quasinormal mode|hyperpage}{17}
+\indexentry{horizon boundary condition|hyperpage}{17}
+\indexentry{Hilbert space|hyperpage}{18}
+\indexentry{locally convex space|hyperpage}{18}
+\indexentry{spectrum!continuous|hyperpage}{18}
+\indexentry{spectrum!essential|hyperpage}{18}
+\indexentry{resolvent|hyperpage}{18}
+\indexentry{resolvent set|hyperpage}{18}
+\indexentry{pseudospectrum|hyperpage}{18}
+\indexentry{direct integral|hyperpage}{18}
+\indexentry{von Neumann algebra@\vN\ algebra|hyperpage}{18}
+\indexentry{scattering matrix|hyperpage}{18}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{19}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{19}
+\indexentry{Hilbert space|hyperpage}{19}
+\indexentry{topology|hyperpage}{19}
+\indexentry{measure theory|hyperpage}{19}
+\indexentry{spectral theorem|hyperpage}{19}
+\indexentry{spectral measure|hyperpage}{19}
+\indexentry{trace-class operator|hyperpage}{19}
+\indexentry{trace class|hyperpage}{19}
+\indexentry{weak operator topology|hyperpage}{19}
+\indexentry{projection-valued measure|hyperpage}{19}
+\indexentry{strongly continuous|hyperpage}{20}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{20}
+\indexentry{spectrum!continuous|hyperpage}{20}
+\indexentry{spectrum!point|hyperpage}{20}
+\indexentry{resolvent|hyperpage}{20}
+\indexentry{wave packet|hyperpage}{20}
+\indexentry{resonance!residue|hyperpage}{20}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{21}
+\indexentry{self-adjoint extension|hyperpage}{21}
+\indexentry{spectrum!point|hyperpage}{21}
+\indexentry{exact WKB|hyperpage}{21}
+\indexentry{monodromy|hyperpage}{21}
+\indexentry{Frobenius solution|hyperpage}{21}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{22}
+\indexentry{spectral theorem|hyperpage}{22}
+\indexentry{complex scaling|hyperpage}{22}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{22}
+\indexentry{direct integral|hyperpage}{22}
+\indexentry{tensor product!gauge constraint|hyperpage}{22}
+\indexentry{pseudostate|hyperpage}{22}
+\indexentry{Feshbach projection|hyperpage}{22}
+\indexentry{antisymmetrization|hyperpage}{22}
+\indexentry{CDCC|hyperpage}{22}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{23}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{23}
+\indexentry{Feshbach projection|hyperpage}{23}
+\indexentry{self-energy|hyperpage}{23}
+\indexentry{CDCC|hyperpage}{23}
+\indexentry{spectral measure|hyperpage}{23}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{24}
+\indexentry{operator!closed|hyperpage}{24}
+\indexentry{Hilbert space|hyperpage}{24}
+\indexentry{topology|hyperpage}{24}
+\indexentry{spectral measure|hyperpage}{24}
+\indexentry{spectrum!essential|hyperpage}{24}
+\indexentry{spectrum!point|hyperpage}{24}
+\indexentry{resolvent|hyperpage}{24}
+\indexentry{resolvent set|hyperpage}{24}
+\indexentry{exact WKB|hyperpage}{24}
+\indexentry{resolvent set|hyperpage}{24}
+\indexentry{spectrum|hyperpage}{24}
+\indexentry{essential spectrum|hyperpage}{24}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{25}
+\indexentry{spectrum!essential|hyperpage}{25}
+\indexentry{spectrum!point|hyperpage}{25}
+\indexentry{resolvent|hyperpage}{25}
+\indexentry{pseudospectrum|hyperpage}{25}
+\indexentry{exceptional point|hyperpage}{25}
+\indexentry{self-orthogonality|hyperpage}{25}
+\indexentry{normal|hyperpage}{25}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{26}
+\indexentry{locally convex space|hyperpage}{26}
+\indexentry{topology|hyperpage}{26}
+\indexentry{measure theory|hyperpage}{26}
+\indexentry{spectrum!point|hyperpage}{26}
+\indexentry{Jost function|hyperpage}{26}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{26}
+\indexentry{resonance!residue|hyperpage}{26}
+\indexentry{infrared problem|hyperpage}{26}
+\indexentry{dressing state|hyperpage}{26}
+\indexentry{unbounded operator|hyperpage}{27}
+\indexentry{topology|hyperpage}{27}
+\indexentry{measure theory|hyperpage}{27}
+\indexentry{resolvent|hyperpage}{27}
+\indexentry{direct integral|hyperpage}{27}
+\indexentry{von Neumann algebra@\vN\ algebra|hyperpage}{27}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{27}
+\indexentry{Hilbert space|hyperpage}{27}
+\indexentry{locally convex space|hyperpage}{27}
+\indexentry{topology|hyperpage}{27}
+\indexentry{measure theory|hyperpage}{27}
+\indexentry{resolvent|hyperpage}{27}
+\indexentry{von Neumann algebra@\vN\ algebra|hyperpage}{27}
+\indexentry{trace-class operator|hyperpage}{27}
+\indexentry{wave operator|hyperpage}{27}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{29}
+\indexentry{self-adjoint extension|hyperpage}{29}
+\indexentry{unbounded operator|hyperpage}{29}
+\indexentry{operator!closed|hyperpage}{29}
+\indexentry{resolvent|hyperpage}{29}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{30}
+\indexentry{topology|hyperpage}{30}
+\indexentry{spectral theorem|hyperpage}{30}
+\indexentry{spectral measure|hyperpage}{30}
+\indexentry{spectrum!point|hyperpage}{30}
+\indexentry{resolvent|hyperpage}{30}
+\indexentry{GNS construction|hyperpage}{30}
+\indexentry{wave packet|hyperpage}{30}
+\indexentry{Banach space|hyperpage}{31}
+\indexentry{Hilbert space|hyperpage}{31}
+\indexentry{measure theory|hyperpage}{31}
+\indexentry{spectral theorem|hyperpage}{31}
+\indexentry{direct integral|hyperpage}{31}
+\indexentry{decomposable operator|hyperpage}{31}
+\indexentry{commutant|hyperpage}{31}
+\indexentry{measurable|hyperpage}{31}
+\indexentry{commutant|hyperpage}{31}
+\indexentry{wave operator|hyperpage}{32}
+\indexentry{partial-wave expansion|hyperpage}{32}
+\indexentry{scattering!on-shell|hyperpage}{32}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{33}
+\indexentry{Hilbert space|hyperpage}{33}
+\indexentry{topology|hyperpage}{33}
+\indexentry{commutant|hyperpage}{33}
+\indexentry{von Neumann algebra@\vN\ algebra|hyperpage}{33}
+\indexentry{GNS construction|hyperpage}{33}
+\indexentry{infrared problem|hyperpage}{33}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{34}
+\indexentry{Banach space|hyperpage}{34}
+\indexentry{Hilbert space|hyperpage}{34}
+\indexentry{measure theory|hyperpage}{34}
+\indexentry{direct integral|hyperpage}{34}
+\indexentry{direct integral!fiber|hyperpage}{34}
+\indexentry{decomposable operator|hyperpage}{34}
+\indexentry{commutant|hyperpage}{34}
+\indexentry{von Neumann algebra@\vN\ algebra|hyperpage}{34}
+\indexentry{central decomposition|hyperpage}{34}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{36}
+\indexentry{locally convex space|hyperpage}{36}
+\indexentry{topology|hyperpage}{36}
+\indexentry{spectral theorem|hyperpage}{36}
+\indexentry{complex scaling|hyperpage}{36}
+\indexentry{rigged Hilbert space|hyperpage}{36}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{37}
+\indexentry{topology|hyperpage}{37}
+\indexentry{measure theory|hyperpage}{37}
+\indexentry{spectral measure|hyperpage}{37}
+\indexentry{resolvent|hyperpage}{37}
+\indexentry{resolvent set|hyperpage}{37}
+\indexentry{Riesz projection|hyperpage}{37}
+\indexentry{direct integral|hyperpage}{37}
+\indexentry{direct integral!fiber|hyperpage}{37}
+\indexentry{decomposable operator|hyperpage}{37}
+\indexentry{spectrum!point|hyperpage}{37}
+\indexentry{resolvent|hyperpage}{37}
+\indexentry{direct integral|hyperpage}{37}
+\indexentry{compact operator|hyperpage}{37}
+\indexentry{Fredholm theory|hyperpage}{37}
+\indexentry{Fredholm determinant|hyperpage}{37}
+\indexentry{Lippmann--Schwinger equation|hyperpage}{37}
+\indexentry{resonance!residue|hyperpage}{37}
+\indexentry{pseudostate|hyperpage}{37}
+\indexentry{CDCC|hyperpage}{37}
+\indexentry{compact operator|hyperpage}{37}
+\indexentry{Fredholm determinant|hyperpage}{37}
+\indexentry{Galerkin method|hyperpage}{37}
+\indexentry{Hilbert space|hyperpage}{39}
+\indexentry{spectrum!point|hyperpage}{39}
+\indexentry{Riesz projection|hyperpage}{39}
+\indexentry{compact operator|hyperpage}{39}
+\indexentry{Jordan chain|hyperpage}{39}
+\indexentry{spectrum!point|hyperpage}{40}
+\indexentry{resolvent|hyperpage}{40}
+\indexentry{compact operator|hyperpage}{40}
+\indexentry{Hilbert--Schmidt operator|hyperpage}{40}
+\indexentry{trace-class operator|hyperpage}{40}
+\indexentry{Hilbert--Schmidt operator|hyperpage}{40}
+\indexentry{trace-class operator|hyperpage}{40}
+\indexentry{Schatten ideal|hyperpage}{40}
+\indexentry{spectrum!continuous|hyperpage}{41}
+\indexentry{spectrum!point|hyperpage}{41}
+\indexentry{resolvent|hyperpage}{41}
+\indexentry{compact operator|hyperpage}{41}
+\indexentry{Fredholm theory|hyperpage}{41}
+\indexentry{Birman--Schwinger operator|hyperpage}{41}
+\indexentry{Jost function|hyperpage}{41}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{41}
+\indexentry{scattering!Coulomb|hyperpage}{41}
+\indexentry{Birman--Schwinger operator|hyperpage}{41}
+\indexentry{spectrum!point|hyperpage}{42}
+\indexentry{resolvent|hyperpage}{42}
+\indexentry{compact operator|hyperpage}{42}
+\indexentry{Fredholm theory|hyperpage}{42}
+\indexentry{analytic Fredholm theorem|hyperpage}{42}
+\indexentry{meromorphic resolvent|hyperpage}{42}
+\indexentry{spectrum!point|hyperpage}{42}
+\indexentry{Hilbert--Schmidt operator|hyperpage}{42}
+\indexentry{trace-class operator|hyperpage}{42}
+\indexentry{Fredholm theory|hyperpage}{42}
+\indexentry{Fredholm determinant|hyperpage}{42}
+\indexentry{Jost function|hyperpage}{42}
+\indexentry{connection coefficient|hyperpage}{42}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{42}
+\indexentry{resolvent|hyperpage}{43}
+\indexentry{Fredholm theory|hyperpage}{43}
+\indexentry{scattering!multichannel|hyperpage}{43}
+\indexentry{connection coefficient|hyperpage}{43}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{43}
+\indexentry{resonance!residue|hyperpage}{43}
+\indexentry{exact WKB|hyperpage}{43}
+\indexentry{Feshbach projection|hyperpage}{43}
+\indexentry{residue|hyperpage}{43}
+\indexentry{left eigenvector|hyperpage}{43}
+\indexentry{right eigenvector|hyperpage}{43}
+\indexentry{spectrum!point|hyperpage}{44}
+\indexentry{resolvent|hyperpage}{44}
+\indexentry{Fredholm theory|hyperpage}{44}
+\indexentry{connection coefficient|hyperpage}{44}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{44}
+\indexentry{resonance!residue|hyperpage}{44}
+\indexentry{spectrum!point|hyperpage}{45}
+\indexentry{resolvent|hyperpage}{45}
+\indexentry{Riesz projection|hyperpage}{45}
+\indexentry{Hilbert--Schmidt operator|hyperpage}{45}
+\indexentry{Fredholm theory|hyperpage}{45}
+\indexentry{Fredholm determinant|hyperpage}{45}
+\indexentry{resonance!residue|hyperpage}{45}
+\indexentry{pseudostate|hyperpage}{45}
+\indexentry{CDCC|hyperpage}{45}
+\indexentry{Galerkin method|hyperpage}{45}
+\indexentry{pseudostate|hyperpage}{45}
+\indexentry{CDCC|hyperpage}{45}
+\indexentry{measure theory|hyperpage}{46}
+\indexentry{resolvent|hyperpage}{46}
+\indexentry{direct integral|hyperpage}{46}
+\indexentry{decomposable operator|hyperpage}{46}
+\indexentry{compact operator|hyperpage}{46}
+\indexentry{Hilbert--Schmidt operator|hyperpage}{46}
+\indexentry{Fredholm theory|hyperpage}{46}
+\indexentry{Birman--Schwinger operator|hyperpage}{46}
+\indexentry{scattering matrix|hyperpage}{46}
+\indexentry{scattering!on-shell|hyperpage}{46}
+\indexentry{direct integral|hyperpage}{46}
+\indexentry{decomposable operator|hyperpage}{46}
+\indexentry{Jost function|hyperpage}{49}
+\indexentry{Wronskian|hyperpage}{49}
+\indexentry{wave packet|hyperpage}{49}
+\indexentry{Lippmann--Schwinger equation|hyperpage}{49}
+\indexentry{cross section|hyperpage}{49}
+\indexentry{partial-wave expansion|hyperpage}{49}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{49}
+\indexentry{Zel'dovich regularization|hyperpage}{49}
+\indexentry{Jost function|hyperpage}{50}
+\indexentry{wave operator|hyperpage}{50}
+\indexentry{scattering!Coulomb|hyperpage}{50}
+\indexentry{radial equation|hyperpage}{50}
+\indexentry{locally convex space|hyperpage}{51}
+\indexentry{wave packet|hyperpage}{51}
+\indexentry{wave operator|hyperpage}{51}
+\indexentry{scattering matrix|hyperpage}{51}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{51}
+\indexentry{Gamow--Siegert state|hyperpage}{51}
+\indexentry{resolvent|hyperpage}{52}
+\indexentry{Lippmann--Schwinger equation|hyperpage}{52}
+\indexentry{scattering!on-shell|hyperpage}{52}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{52}
+\indexentry{resolvent|hyperpage}{53}
+\indexentry{optical theorem|hyperpage}{53}
+\indexentry{cross section|hyperpage}{53}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{53}
+\indexentry{Feshbach projection|hyperpage}{53}
+\indexentry{effective Hamiltonian|hyperpage}{53}
+\indexentry{optical potential|hyperpage}{53}
+\indexentry{cross section|hyperpage}{53}
+\indexentry{partial-wave expansion|hyperpage}{53}
+\indexentry{phase shift|hyperpage}{53}
+\indexentry{threshold law|hyperpage}{53}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{53}
+\indexentry{Jost function|hyperpage}{55}
+\indexentry{Wronskian|hyperpage}{55}
+\indexentry{scattering!multichannel|hyperpage}{55}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{55}
+\indexentry{scattering!Coulomb|hyperpage}{55}
+\indexentry{direct integral|hyperpage}{56}
+\indexentry{wave operator|hyperpage}{56}
+\indexentry{scattering matrix|hyperpage}{56}
+\indexentry{scattering!on-shell|hyperpage}{56}
+\indexentry{wave operator|hyperpage}{56}
+\indexentry{scattering matrix|hyperpage}{56}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{56}
+\indexentry{strong commutation|hyperpage}{56}
+\indexentry{measure theory|hyperpage}{57}
+\indexentry{spectral measure|hyperpage}{57}
+\indexentry{decomposable operator|hyperpage}{57}
+\indexentry{commutant|hyperpage}{57}
+\indexentry{scattering matrix|hyperpage}{57}
+\indexentry{scattering!on-shell|hyperpage}{57}
+\indexentry{on-shell scattering matrix|hyperpage}{57}
+\indexentry{direct integral!fiber|hyperpage}{57}
+\indexentry{decomposable operator|hyperpage}{57}
+\indexentry{partial-wave expansion|hyperpage}{57}
+\indexentry{scattering matrix|hyperpage}{57}
+\indexentry{measure theory|hyperpage}{58}
+\indexentry{resolvent|hyperpage}{58}
+\indexentry{direct integral|hyperpage}{58}
+\indexentry{decomposable operator|hyperpage}{58}
+\indexentry{Jost function|hyperpage}{58}
+\indexentry{wave operator|hyperpage}{58}
+\indexentry{scattering matrix|hyperpage}{58}
+\indexentry{scattering!on-shell|hyperpage}{58}
+\indexentry{scattering!multichannel|hyperpage}{58}
+\indexentry{exact WKB|hyperpage}{58}
+\indexentry{scattering matrix|hyperpage}{59}
+\indexentry{CDCC|hyperpage}{59}
+\indexentry{nuclear breakup|hyperpage}{59}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{59}
+\indexentry{spectral measure|hyperpage}{59}
+\indexentry{Sturm--Liouville theory|hyperpage}{59}
+\indexentry{Jost function|hyperpage}{59}
+\indexentry{Wronskian|hyperpage}{59}
+\indexentry{partial-wave expansion|hyperpage}{59}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{59}
+\indexentry{resonance!residue|hyperpage}{59}
+\indexentry{exact WKB|hyperpage}{59}
+\indexentry{radial equation|hyperpage}{59}
+\indexentry{Sturm--Liouville operator|hyperpage}{59}
+\indexentry{Jost function|hyperpage}{59}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{60}
+\indexentry{Hilbert space|hyperpage}{60}
+\indexentry{measure theory|hyperpage}{60}
+\indexentry{radial equation|hyperpage}{60}
+\indexentry{maximal operator|hyperpage}{60}
+\indexentry{minimal operator|hyperpage}{60}
+\indexentry{boundary form|hyperpage}{60}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{61}
+\indexentry{self-adjoint extension|hyperpage}{61}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{61}
+\indexentry{unbounded operator|hyperpage}{61}
+\indexentry{Sturm--Liouville theory!limit-point/limit-circle|hyperpage}{61}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{61}
+\indexentry{Langer correction|hyperpage}{61}
+\indexentry{Frobenius solution|hyperpage}{61}
+\indexentry{limit-point endpoint|hyperpage}{61}
+\indexentry{limit-circle endpoint|hyperpage}{61}
+\indexentry{Weyl alternative|hyperpage}{61}
+\indexentry{spectral measure|hyperpage}{62}
+\indexentry{resolvent|hyperpage}{62}
+\indexentry{Sturm--Liouville theory!limit-point/limit-circle|hyperpage}{62}
+\indexentry{Weyl--Titchmarsh function|hyperpage}{62}
+\indexentry{Wronskian|hyperpage}{62}
+\indexentry{Weyl--Titchmarsh function|hyperpage}{62}
+\indexentry{Green function|hyperpage}{62}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{63}
+\indexentry{spectral theorem|hyperpage}{63}
+\indexentry{spectral measure|hyperpage}{63}
+\indexentry{direct integral|hyperpage}{63}
+\indexentry{Gamow--Siegert state|hyperpage}{63}
+\indexentry{Jost function|hyperpage}{64}
+\indexentry{Wronskian|hyperpage}{64}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{64}
+\indexentry{Riccati equation|hyperpage}{64}
+\indexentry{Volterra equation|hyperpage}{64}
+\indexentry{Jost solution|hyperpage}{64}
+\indexentry{Jost function|hyperpage}{65}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{65}
+\indexentry{Riemann sheet|hyperpage}{65}
+\indexentry{branch cut|hyperpage}{65}
+\indexentry{resonance!residue|hyperpage}{65}
+\indexentry{square-well potential|hyperpage}{65}
+\indexentry{GNS construction|hyperpage}{66}
+\indexentry{Jost function|hyperpage}{66}
+\indexentry{Wronskian|hyperpage}{66}
+\indexentry{exact WKB|hyperpage}{66}
+\indexentry{monodromy|hyperpage}{66}
+\indexentry{Zel'dovich regularization|hyperpage}{66}
+\indexentry{Berggren completeness relation|hyperpage}{66}
+\indexentry{Zel'dovich regularization|hyperpage}{66}
+\indexentry{Jost-function derivative|hyperpage}{66}
+\indexentry{Hilbert space|hyperpage}{66}
+\indexentry{Jost function|hyperpage}{66}
+\indexentry{Wronskian|hyperpage}{66}
+\indexentry{connection coefficient|hyperpage}{66}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{66}
+\indexentry{resonance!residue|hyperpage}{66}
+\indexentry{exact WKB|hyperpage}{66}
+\indexentry{Langer correction|hyperpage}{66}
+\indexentry{Frobenius solution|hyperpage}{66}
+\indexentry{complex scaling|hyperpage}{66}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{67}
+\indexentry{spectral theorem|hyperpage}{67}
+\indexentry{Jost function|hyperpage}{67}
+\indexentry{Wronskian|hyperpage}{67}
+\indexentry{scattering!Coulomb|hyperpage}{67}
+\indexentry{scattering!three-body Coulomb|hyperpage}{67}
+\indexentry{infrared problem|hyperpage}{67}
+\indexentry{dressing state|hyperpage}{67}
+\indexentry{Coulomb scattering|hyperpage}{67}
+\indexentry{three-body Coulomb scattering|hyperpage}{67}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{67}
+\indexentry{resolvent|hyperpage}{67}
+\indexentry{Sturm--Liouville theory|hyperpage}{67}
+\indexentry{Sturm--Liouville theory!limit-point/limit-circle|hyperpage}{67}
+\indexentry{Jost function|hyperpage}{67}
+\indexentry{Wronskian|hyperpage}{67}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{67}
+\indexentry{resonance!residue|hyperpage}{67}
+\indexentry{scattering!Coulomb|hyperpage}{67}
+\indexentry{spectrum!point|hyperpage}{68}
+\indexentry{resolvent|hyperpage}{68}
+\indexentry{Jost function|hyperpage}{68}
+\indexentry{scattering matrix|hyperpage}{68}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{68}
+\indexentry{resonance!residue|hyperpage}{68}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{68}
+\indexentry{Hilbert space|hyperpage}{68}
+\indexentry{topology|hyperpage}{68}
+\indexentry{spectrum!continuous|hyperpage}{68}
+\indexentry{resolvent|hyperpage}{68}
+\indexentry{GNS construction|hyperpage}{68}
+\indexentry{scattering matrix|hyperpage}{68}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{68}
+\indexentry{Riemann sheet|hyperpage}{68}
+\indexentry{resonance!residue|hyperpage}{68}
+\indexentry{GNS construction|hyperpage}{69}
+\indexentry{partial-wave expansion|hyperpage}{69}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{69}
+\indexentry{Riemann sheet|hyperpage}{69}
+\indexentry{Gamow--Siegert state|hyperpage}{69}
+\indexentry{resolvent|hyperpage}{70}
+\indexentry{Fredholm theory|hyperpage}{70}
+\indexentry{Jost function|hyperpage}{70}
+\indexentry{Wronskian|hyperpage}{70}
+\indexentry{scattering matrix|hyperpage}{70}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{70}
+\indexentry{resonance!residue|hyperpage}{70}
+\indexentry{Gamow--Siegert state|hyperpage}{70}
+\indexentry{antiresonance|hyperpage}{70}
+\indexentry{Breit--Wigner approximation|hyperpage}{70}
+\indexentry{phase shift|hyperpage}{73}
+\indexentry{Wigner time delay|hyperpage}{73}
+\indexentry{scattering!multichannel|hyperpage}{73}
+\indexentry{resolvent|hyperpage}{73}
+\indexentry{wave packet|hyperpage}{73}
+\indexentry{Riemann sheet|hyperpage}{73}
+\indexentry{complex scaling|hyperpage}{73}
+\indexentry{wave operator|hyperpage}{74}
+\indexentry{scattering!Coulomb|hyperpage}{74}
+\indexentry{Dollard comparison dynamics|hyperpage}{74}
+\indexentry{scattering!three-body Coulomb|hyperpage}{74}
+\indexentry{infrared problem|hyperpage}{74}
+\indexentry{dressing state|hyperpage}{74}
+\indexentry{Jost function|hyperpage}{74}
+\indexentry{Lippmann--Schwinger equation|hyperpage}{74}
+\indexentry{cross section|hyperpage}{74}
+\indexentry{partial-wave expansion|hyperpage}{74}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{74}
+\indexentry{scattering!Coulomb|hyperpage}{74}
+\indexentry{cross section|hyperpage}{76}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{76}
+\indexentry{scattering!Coulomb|hyperpage}{76}
+\indexentry{Dollard comparison dynamics|hyperpage}{76}
+\indexentry{compact operator|hyperpage}{77}
+\indexentry{scattering!Coulomb|hyperpage}{77}
+\indexentry{scattering!three-body Coulomb|hyperpage}{77}
+\indexentry{Jacobi coordinate|hyperpage}{77}
+\indexentry{Faddeev equation|hyperpage}{77}
+\indexentry{nuclear breakup|hyperpage}{77}
+\indexentry{superselection sector|hyperpage}{78}
+\indexentry{GNS construction|hyperpage}{78}
+\indexentry{wave packet|hyperpage}{78}
+\indexentry{cross section|hyperpage}{78}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{78}
+\indexentry{scattering!Coulomb|hyperpage}{78}
+\indexentry{infrared problem|hyperpage}{78}
+\indexentry{dressing state|hyperpage}{78}
+\indexentry{Fock space!infrared limitation|hyperpage}{78}
+\indexentry{observable algebra|hyperpage}{78}
+\indexentry{scattering!Coulomb|hyperpage}{80}
+\indexentry{scattering!three-body Coulomb|hyperpage}{80}
+\indexentry{infrared problem|hyperpage}{80}
+\indexentry{dressing state|hyperpage}{80}
+\indexentry{measure theory|hyperpage}{81}
+\indexentry{direct integral|hyperpage}{81}
+\indexentry{von Neumann algebra@\vN\ algebra|hyperpage}{81}
+\indexentry{superselection sector|hyperpage}{81}
+\indexentry{GNS construction|hyperpage}{81}
+\indexentry{wave operator|hyperpage}{81}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{81}
+\indexentry{scattering!Coulomb|hyperpage}{81}
+\indexentry{Dollard comparison dynamics|hyperpage}{81}
+\indexentry{scattering!three-body Coulomb|hyperpage}{81}
+\indexentry{spectrum!point|hyperpage}{82}
+\indexentry{GNS construction|hyperpage}{82}
+\indexentry{Jost function|hyperpage}{82}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{82}
+\indexentry{resonance!residue|hyperpage}{82}
+\indexentry{scattering!Coulomb|hyperpage}{82}
+\indexentry{infrared problem|hyperpage}{82}
+\indexentry{dressing state|hyperpage}{82}
+\indexentry{exact WKB|hyperpage}{82}
+\indexentry{complex scaling|hyperpage}{82}
+\indexentry{Hilbert space|hyperpage}{83}
+\indexentry{Gauss law|hyperpage}{83}
+\indexentry{BRST cohomology|hyperpage}{83}
+\indexentry{observable algebra|hyperpage}{83}
+\indexentry{algebraic quantum field theory|hyperpage}{83}
+\indexentry{Hilbert space|hyperpage}{84}
+\indexentry{GNS construction|hyperpage}{84}
+\indexentry{observable algebra|hyperpage}{84}
+\indexentry{algebraic quantum field theory|hyperpage}{84}
+\indexentry{operator!closed|hyperpage}{85}
+\indexentry{Hilbert space|hyperpage}{85}
+\indexentry{topology|hyperpage}{85}
+\indexentry{BRST cohomology|hyperpage}{85}
+\indexentry{Gribov problem|hyperpage}{85}
+\indexentry{Hilbert space|hyperpage}{85}
+\indexentry{measure theory|hyperpage}{85}
+\indexentry{direct integral|hyperpage}{85}
+\indexentry{factor|hyperpage}{85}
+\indexentry{GNS construction|hyperpage}{85}
+\indexentry{BRST cohomology|hyperpage}{85}
+\indexentry{observable algebra|hyperpage}{85}
+\indexentry{von Neumann algebra@\vN\ algebra|hyperpage}{86}
+\indexentry{central decomposition|hyperpage}{86}
+\indexentry{superselection sector|hyperpage}{86}
+\indexentry{Gauss law|hyperpage}{87}
+\indexentry{tensor product!gauge constraint|hyperpage}{87}
+\indexentry{Hilbert space|hyperpage}{88}
+\indexentry{direct integral|hyperpage}{88}
+\indexentry{central decomposition|hyperpage}{88}
+\indexentry{Gauss law|hyperpage}{88}
+\indexentry{observable algebra|hyperpage}{88}
+\indexentry{tensor product!gauge constraint|hyperpage}{88}
+\indexentry{von Neumann algebra@\vN\ algebra|hyperpage}{88}
+\indexentry{superselection sector|hyperpage}{88}
+\indexentry{dressing state|hyperpage}{88}
+\indexentry{Gauss law|hyperpage}{88}
+\indexentry{observable algebra|hyperpage}{88}
+\indexentry{algebraic quantum field theory|hyperpage}{88}
+\indexentry{tensor product!gauge constraint|hyperpage}{88}
+\indexentry{split property|hyperpage}{89}
+\indexentry{Hilbert space|hyperpage}{89}
+\indexentry{topology|hyperpage}{89}
+\indexentry{measure theory|hyperpage}{89}
+\indexentry{direct integral|hyperpage}{89}
+\indexentry{central decomposition|hyperpage}{89}
+\indexentry{GNS construction|hyperpage}{89}
+\indexentry{connection coefficient|hyperpage}{89}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{89}
+\indexentry{resonance!residue|hyperpage}{89}
+\indexentry{dressing state|hyperpage}{89}
+\indexentry{Riccati equation|hyperpage}{93}
+\indexentry{Riccati equation|hyperpage}{93}
+\indexentry{exact WKB|hyperpage}{93}
+\indexentry{monodromy|hyperpage}{93}
+\indexentry{Langer correction|hyperpage}{93}
+\indexentry{Borel transform|hyperpage}{95}
+\indexentry{Borel summation|hyperpage}{95}
+\indexentry{lateral Borel sum|hyperpage}{95}
+\indexentry{Borel plane|hyperpage}{95}
+\indexentry{Stokes automorphism|hyperpage}{95}
+\indexentry{exact WKB|hyperpage}{95}
+\indexentry{monodromy|hyperpage}{95}
+\indexentry{Stokes curve|hyperpage}{95}
+\indexentry{turning point|hyperpage}{95}
+\indexentry{monodromy|hyperpage}{95}
+\indexentry{Jost function|hyperpage}{96}
+\indexentry{connection coefficient|hyperpage}{96}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{96}
+\indexentry{Borel summation|hyperpage}{96}
+\indexentry{Voros symbol|hyperpage}{96}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{97}
+\indexentry{Voros symbol|hyperpage}{97}
+\indexentry{monodromy|hyperpage}{97}
+\indexentry{spectrum!point|hyperpage}{97}
+\indexentry{Wronskian|hyperpage}{97}
+\indexentry{connection coefficient|hyperpage}{97}
+\indexentry{Stokes curve|hyperpage}{97}
+\indexentry{monodromy|hyperpage}{97}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{98}
+\indexentry{spectrum!essential|hyperpage}{98}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{98}
+\indexentry{exact WKB|hyperpage}{98}
+\indexentry{complex scaling|hyperpage}{98}
+\indexentry{connection coefficient|hyperpage}{98}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{98}
+\indexentry{Stokes curve|hyperpage}{98}
+\indexentry{turning point|hyperpage}{98}
+\indexentry{Rosen--Morse potential|hyperpage}{98}
+\indexentry{Wronskian|hyperpage}{100}
+\indexentry{scattering matrix|hyperpage}{100}
+\indexentry{connection coefficient|hyperpage}{100}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{100}
+\indexentry{resonance!residue|hyperpage}{100}
+\indexentry{exact WKB|hyperpage}{100}
+\indexentry{unbounded operator|hyperpage}{100}
+\indexentry{spectrum!continuous|hyperpage}{100}
+\indexentry{spectrum!essential|hyperpage}{100}
+\indexentry{resolvent|hyperpage}{100}
+\indexentry{exact WKB|hyperpage}{100}
+\indexentry{complex scaling|hyperpage}{100}
+\indexentry{spectrum!point|hyperpage}{101}
+\indexentry{resolvent|hyperpage}{101}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{101}
+\indexentry{resonance!residue|hyperpage}{101}
+\indexentry{Borel summation|hyperpage}{101}
+\indexentry{exact WKB|hyperpage}{101}
+\indexentry{complex scaling|hyperpage}{101}
+\indexentry{resolvent|hyperpage}{116}
+\indexentry{effective Hamiltonian|hyperpage}{116}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{116}
+\indexentry{resolvent|hyperpage}{116}
+\indexentry{Jost function|hyperpage}{116}
+\indexentry{Lippmann--Schwinger equation|hyperpage}{116}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{116}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{117}
+\indexentry{Feshbach projection|hyperpage}{117}
+\indexentry{effective Hamiltonian|hyperpage}{117}
+\indexentry{self-energy|hyperpage}{117}
+\indexentry{exceptional point|hyperpage}{117}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{118}
+\indexentry{unbounded operator|hyperpage}{118}
+\indexentry{Hilbert space|hyperpage}{118}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{118}
+\indexentry{Gamow--Siegert state|hyperpage}{118}
+\indexentry{exact WKB|hyperpage}{118}
+\indexentry{rigged Hilbert space|hyperpage}{118}
+\indexentry{Feshbach projection|hyperpage}{118}
+\indexentry{self-energy|hyperpage}{118}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{118}
+\indexentry{Berggren completeness relation|hyperpage}{118}
+\indexentry{pseudostate|hyperpage}{118}
+\indexentry{operator!closed|hyperpage}{119}
+\indexentry{spectrum!continuous|hyperpage}{119}
+\indexentry{spectrum!point|hyperpage}{119}
+\indexentry{resolvent|hyperpage}{119}
+\indexentry{Riesz projection|hyperpage}{119}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{119}
+\indexentry{scattering!Coulomb|hyperpage}{119}
+\indexentry{complex scaling|hyperpage}{119}
+\indexentry{analytic dilation|hyperpage}{119}
+\indexentry{complex scaling!exterior|hyperpage}{119}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{120}
+\indexentry{Gamow--Siegert state|hyperpage}{120}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{120}
+\indexentry{unbounded operator|hyperpage}{120}
+\indexentry{operator!closed|hyperpage}{120}
+\indexentry{spectrum!continuous|hyperpage}{120}
+\indexentry{spectrum!essential|hyperpage}{120}
+\indexentry{spectrum!point|hyperpage}{120}
+\indexentry{resolvent|hyperpage}{120}
+\indexentry{Riesz projection|hyperpage}{120}
+\indexentry{pseudospectrum|hyperpage}{120}
+\indexentry{compact operator|hyperpage}{120}
+\indexentry{spectrum!point|hyperpage}{122}
+\indexentry{complex scaling|hyperpage}{122}
+\indexentry{complex scaling!smooth|hyperpage}{122}
+\indexentry{complex absorbing potential|hyperpage}{122}
+\indexentry{biorthogonality|hyperpage}{123}
+\indexentry{complex-symmetric operator|hyperpage}{123}
+\indexentry{Berggren completeness relation|hyperpage}{123}
+\indexentry{exceptional point|hyperpage}{123}
+\indexentry{self-orthogonality|hyperpage}{123}
+\indexentry{resolvent|hyperpage}{123}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{124}
+\indexentry{spectrum!point|hyperpage}{124}
+\indexentry{resolvent|hyperpage}{124}
+\indexentry{resolvent set|hyperpage}{124}
+\indexentry{resonance!residue|hyperpage}{124}
+\indexentry{scattering!Coulomb|hyperpage}{124}
+\indexentry{Aguilar--Balslev--Combes theorem|hyperpage}{124}
+\indexentry{resolvent|hyperpage}{124}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{125}
+\indexentry{resolvent|hyperpage}{125}
+\indexentry{compact operator|hyperpage}{125}
+\indexentry{Fredholm theory|hyperpage}{125}
+\indexentry{spectrum!point|hyperpage}{126}
+\indexentry{resolvent|hyperpage}{126}
+\indexentry{Fredholm theory|hyperpage}{126}
+\indexentry{Jordan chain|hyperpage}{126}
+\indexentry{Hilbert space|hyperpage}{126}
+\indexentry{spectrum!point|hyperpage}{126}
+\indexentry{resolvent|hyperpage}{126}
+\indexentry{GNS construction|hyperpage}{126}
+\indexentry{resonance!residue|hyperpage}{126}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{127}
+\indexentry{spectrum!point|hyperpage}{127}
+\indexentry{Riesz projection|hyperpage}{127}
+\indexentry{spectrum!essential|hyperpage}{127}
+\indexentry{compact operator|hyperpage}{127}
+\indexentry{Fredholm theory|hyperpage}{127}
+\indexentry{complex scaling|hyperpage}{127}
+\indexentry{complex scaling!exterior|hyperpage}{127}
+\indexentry{tortoise coordinate|hyperpage}{127}
+\indexentry{horizon boundary condition|hyperpage}{127}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{128}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{128}
+\indexentry{Gamow--Siegert state|hyperpage}{128}
+\indexentry{Zel'dovich regularization|hyperpage}{128}
+\indexentry{Gaussian regularization|hyperpage}{128}
+\indexentry{Berggren completeness relation|hyperpage}{128}
+\indexentry{locally convex space|hyperpage}{129}
+\indexentry{Jost function|hyperpage}{129}
+\indexentry{partial-wave expansion|hyperpage}{129}
+\indexentry{scattering!Coulomb|hyperpage}{129}
+\indexentry{biorthogonality|hyperpage}{129}
+\indexentry{Zel'dovich regularization|hyperpage}{129}
+\indexentry{Berggren completeness relation|hyperpage}{129}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{130}
+\indexentry{Stokes curve|hyperpage}{130}
+\indexentry{Zel'dovich regularization|hyperpage}{130}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{130}
+\indexentry{Gamow--Siegert state|hyperpage}{130}
+\indexentry{Riccati equation|hyperpage}{130}
+\indexentry{complex-symmetric operator|hyperpage}{130}
+\indexentry{Berggren completeness relation|hyperpage}{130}
+\indexentry{exceptional point|hyperpage}{130}
+\indexentry{self-orthogonality|hyperpage}{130}
+\indexentry{resolvent|hyperpage}{132}
+\indexentry{Jost function|hyperpage}{132}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{132}
+\indexentry{resonance!residue|hyperpage}{132}
+\indexentry{radial equation|hyperpage}{132}
+\indexentry{Zel'dovich regularization|hyperpage}{132}
+\indexentry{Berggren completeness relation|hyperpage}{132}
+\indexentry{Hilbert space|hyperpage}{132}
+\indexentry{locally convex space|hyperpage}{132}
+\indexentry{Jost function|hyperpage}{132}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{132}
+\indexentry{resonance!residue|hyperpage}{132}
+\indexentry{Zel'dovich regularization|hyperpage}{132}
+\indexentry{Berggren completeness relation|hyperpage}{132}
+\indexentry{rigged Hilbert space|hyperpage}{132}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{133}
+\indexentry{Hilbert space|hyperpage}{133}
+\indexentry{locally convex space|hyperpage}{133}
+\indexentry{topology|hyperpage}{133}
+\indexentry{spectrum!point|hyperpage}{133}
+\indexentry{resolvent|hyperpage}{133}
+\indexentry{direct integral|hyperpage}{133}
+\indexentry{resonance!residue|hyperpage}{133}
+\indexentry{Gamow--Siegert state|hyperpage}{133}
+\indexentry{rigged Hilbert space|hyperpage}{133}
+\indexentry{locally convex space|hyperpage}{134}
+\indexentry{Gamow--Siegert state|hyperpage}{134}
+\indexentry{Hardy class|hyperpage}{134}
+\indexentry{spectrum!point|hyperpage}{134}
+\indexentry{resolvent|hyperpage}{134}
+\indexentry{resonance!residue|hyperpage}{134}
+\indexentry{Gamow--Siegert state|hyperpage}{134}
+\indexentry{complex scaling|hyperpage}{134}
+\indexentry{wave packet|hyperpage}{135}
+\indexentry{resonance!residue|hyperpage}{135}
+\indexentry{Gamow--Siegert state|hyperpage}{135}
+\indexentry{biorthogonality|hyperpage}{135}
+\indexentry{exceptional point|hyperpage}{135}
+\indexentry{complex scaling|hyperpage}{147}
+\indexentry{spectrum!point|hyperpage}{147}
+\indexentry{resolvent|hyperpage}{147}
+\indexentry{trace-class operator|hyperpage}{147}
+\indexentry{cross section|hyperpage}{147}
+\indexentry{continuum level density|hyperpage}{147}
+\indexentry{spectrum!point|hyperpage}{148}
+\indexentry{spectrum!point|hyperpage}{149}
+\indexentry{pseudospectrum|hyperpage}{149}
+\indexentry{pseudostate|hyperpage}{149}
+\indexentry{spectrum!point|hyperpage}{149}
+\indexentry{complex scaling|hyperpage}{149}
+\indexentry{complex absorbing potential|hyperpage}{149}
+\indexentry{stabilization method|hyperpage}{149}
+\indexentry{Fredholm theory|hyperpage}{150}
+\indexentry{connection coefficient|hyperpage}{150}
+\indexentry{resonance!residue|hyperpage}{150}
+\indexentry{Breit--Wigner approximation|hyperpage}{150}
+\indexentry{Fano profile|hyperpage}{150}
+\indexentry{continuum response|hyperpage}{150}
+\indexentry{resonance formula|hyperpage}{150}
+\indexentry{line shape|hyperpage}{150}
+\indexentry{spectral measure|hyperpage}{150}
+\indexentry{resolvent|hyperpage}{150}
+\indexentry{resonance!residue|hyperpage}{150}
+\indexentry{resolvent|hyperpage}{151}
+\indexentry{scattering!on-shell|hyperpage}{151}
+\indexentry{resonance!residue|hyperpage}{151}
+\indexentry{Feshbach projection|hyperpage}{151}
+\indexentry{self-energy|hyperpage}{151}
+\indexentry{Feshbach operator|hyperpage}{151}
+\indexentry{self-energy|hyperpage}{151}
+\indexentry{wave-function renormalization|hyperpage}{151}
+\indexentry{cross section|hyperpage}{152}
+\indexentry{scattering matrix|hyperpage}{152}
+\indexentry{scattering!multichannel|hyperpage}{152}
+\indexentry{resonance!residue|hyperpage}{152}
+\indexentry{Breit--Wigner approximation|hyperpage}{152}
+\indexentry{effective Hamiltonian|hyperpage}{152}
+\indexentry{self-energy|hyperpage}{152}
+\indexentry{phase shift|hyperpage}{153}
+\indexentry{Wigner time delay|hyperpage}{153}
+\indexentry{scattering matrix|hyperpage}{153}
+\indexentry{resonance!residue|hyperpage}{153}
+\indexentry{Breit--Wigner approximation|hyperpage}{153}
+\indexentry{self-energy|hyperpage}{153}
+\indexentry{Breit--Wigner formula|hyperpage}{153}
+\indexentry{Wigner time delay|hyperpage}{153}
+\indexentry{resonance!residue|hyperpage}{154}
+\indexentry{Fano profile|hyperpage}{154}
+\indexentry{Fano profile|hyperpage}{154}
+\indexentry{background interference|hyperpage}{154}
+\indexentry{threshold law|hyperpage}{154}
+\indexentry{scattering!Coulomb|hyperpage}{154}
+\indexentry{nuclear breakup|hyperpage}{154}
+\indexentry{threshold law|hyperpage}{154}
+\indexentry{Wigner threshold law|hyperpage}{154}
+\indexentry{Fredholm theory|hyperpage}{155}
+\indexentry{connection coefficient|hyperpage}{155}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{155}
+\indexentry{resonance!residue|hyperpage}{155}
+\indexentry{Breit--Wigner approximation|hyperpage}{155}
+\indexentry{exact WKB|hyperpage}{155}
+\indexentry{exceptional point|hyperpage}{155}
+\indexentry{exceptional point!defectiveness|hyperpage}{155}
+\indexentry{connection matrix|hyperpage}{155}
+\indexentry{exact WKB!resonance residue|hyperpage}{155}
+\indexentry{spectrum!point|hyperpage}{156}
+\indexentry{resonance!residue|hyperpage}{156}
+\indexentry{complex scaling|hyperpage}{156}
+\indexentry{pseudostate|hyperpage}{156}
+\indexentry{scattering!multichannel|hyperpage}{156}
+\indexentry{connection coefficient|hyperpage}{156}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{156}
+\indexentry{resonance!residue|hyperpage}{156}
+\indexentry{Breit--Wigner approximation|hyperpage}{156}
+\indexentry{Fano profile|hyperpage}{156}
+\indexentry{resolvent|hyperpage}{157}
+\indexentry{trace-class operator|hyperpage}{157}
+\indexentry{spectral shift function|hyperpage}{157}
+\indexentry{scattering!Coulomb|hyperpage}{174}
+\indexentry{exact WKB|hyperpage}{174}
+\indexentry{exact quantization condition|hyperpage}{174}
+\indexentry{monodromy|hyperpage}{174}
+\indexentry{Langer correction|hyperpage}{174}
+\indexentry{Frobenius solution|hyperpage}{174}
+\indexentry{monodromy|hyperpage}{174}
+\indexentry{Langer correction|hyperpage}{174}
+\indexentry{Frobenius solution|hyperpage}{174}
+\indexentry{radial equation|hyperpage}{174}
+\indexentry{spectrum!point|hyperpage}{175}
+\indexentry{turning point|hyperpage}{175}
+\indexentry{exact quantization condition|hyperpage}{175}
+\indexentry{monodromy|hyperpage}{175}
+\indexentry{Frobenius solution|hyperpage}{175}
+\indexentry{topology|hyperpage}{176}
+\indexentry{turning point|hyperpage}{176}
+\indexentry{monodromy|hyperpage}{176}
+\indexentry{Langer correction|hyperpage}{176}
+\indexentry{scattering!Coulomb|hyperpage}{176}
+\indexentry{turning point|hyperpage}{176}
+\indexentry{Voros symbol|hyperpage}{176}
+\indexentry{scattering!Coulomb|hyperpage}{176}
+\indexentry{monodromy|hyperpage}{176}
+\indexentry{renormalization group|hyperpage}{176}
+\indexentry{scattering!Coulomb|hyperpage}{177}
+\indexentry{Borel summation|hyperpage}{177}
+\indexentry{monodromy|hyperpage}{177}
+\indexentry{optimized perturbation theory|hyperpage}{177}
+\indexentry{variational perturbation theory|hyperpage}{177}
+\indexentry{Langer correction|hyperpage}{178}
+\indexentry{radial equation|hyperpage}{178}
+\indexentry{optical potential|hyperpage}{202}
+\indexentry{distorted-wave approximation|hyperpage}{202}
+\indexentry{nuclear breakup|hyperpage}{202}
+\indexentry{central decomposition|hyperpage}{202}
+\indexentry{Jacobi coordinate|hyperpage}{202}
+\indexentry{spectrum!point|hyperpage}{203}
+\indexentry{scattering!Coulomb|hyperpage}{203}
+\indexentry{antisymmetrization|hyperpage}{203}
+\indexentry{Feshbach projection|hyperpage}{204}
+\indexentry{nuclear breakup|hyperpage}{204}
+\indexentry{wave packet|hyperpage}{205}
+\indexentry{coupled-channel equation|hyperpage}{205}
+\indexentry{CDCC|hyperpage}{205}
+\indexentry{Born approximation|hyperpage}{205}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{205}
+\indexentry{distorted-wave approximation|hyperpage}{205}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{206}
+\indexentry{scattering!Coulomb|hyperpage}{206}
+\indexentry{exact WKB|hyperpage}{206}
+\indexentry{Feshbach projection|hyperpage}{206}
+\indexentry{R-matrix@$R$-matrix|hyperpage}{206}
+\indexentry{Lippmann--Schwinger equation|hyperpage}{207}
+\indexentry{scattering!on-shell|hyperpage}{207}
+\indexentry{Faddeev equation|hyperpage}{207}
+\indexentry{CDCC|hyperpage}{207}
+\indexentry{nuclear breakup|hyperpage}{207}
+\indexentry{resolvent|hyperpage}{208}
+\indexentry{scattering!Coulomb|hyperpage}{208}
+\indexentry{scattering!three-body Coulomb|hyperpage}{208}
+\indexentry{infrared problem|hyperpage}{208}
+\indexentry{Jacobi coordinate|hyperpage}{208}
+\indexentry{Faddeev equation|hyperpage}{208}
+\indexentry{CDCC|hyperpage}{208}
+\indexentry{scattering!Coulomb|hyperpage}{208}
+\indexentry{eikonal approximation|hyperpage}{208}
+\indexentry{adiabatic approximation|hyperpage}{208}
+\indexentry{CDCC|hyperpage}{208}
+\indexentry{nuclear breakup|hyperpage}{208}
+\indexentry{pseudostate|hyperpage}{209}
+\indexentry{nuclear breakup|hyperpage}{209}
+\indexentry{lithium nuclei|hyperpage}{209}
+\indexentry{beryllium nuclei|hyperpage}{209}
+\indexentry{Wronskian|hyperpage}{209}
+\indexentry{wave packet|hyperpage}{209}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{209}
+\indexentry{exact WKB|hyperpage}{209}
+\indexentry{complex scaling|hyperpage}{209}
+\indexentry{pseudostate|hyperpage}{209}
+\indexentry{Feshbach projection|hyperpage}{209}
+\indexentry{R-matrix@$R$-matrix|hyperpage}{209}
+\indexentry{distorted-wave approximation|hyperpage}{209}
+\indexentry{Faddeev equation|hyperpage}{209}
+\indexentry{partial-wave expansion|hyperpage}{211}
+\indexentry{scattering!Coulomb|hyperpage}{211}
+\indexentry{tensor product!gauge constraint|hyperpage}{211}
+\indexentry{exact WKB|hyperpage}{211}
+\indexentry{radial equation|hyperpage}{211}
+\indexentry{complex scaling|hyperpage}{211}
+\indexentry{pseudostate|hyperpage}{211}
+\indexentry{Feshbach projection|hyperpage}{211}
+\indexentry{self-energy|hyperpage}{211}
+\indexentry{Jacobi coordinate|hyperpage}{211}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{212}
+\indexentry{central decomposition|hyperpage}{212}
+\indexentry{analytic dilation|hyperpage}{212}
+\indexentry{CDCC|hyperpage}{212}
+\indexentry{CDCC|hyperpage}{213}
+\indexentry{nuclear breakup|hyperpage}{213}
+\indexentry{Hilbert space|hyperpage}{214}
+\indexentry{wave packet|hyperpage}{214}
+\indexentry{partial-wave expansion|hyperpage}{214}
+\indexentry{CDCC|hyperpage}{214}
+\indexentry{CDCC!bin discretization|hyperpage}{214}
+\indexentry{spectrum!point|hyperpage}{214}
+\indexentry{pseudostate|hyperpage}{214}
+\indexentry{Jacobi coordinate|hyperpage}{214}
+\indexentry{CDCC|hyperpage}{214}
+\indexentry{Gaussian expansion method|hyperpage}{214}
+\indexentry{CDCC!four-body|hyperpage}{214}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{215}
+\indexentry{scattering!Coulomb|hyperpage}{215}
+\indexentry{CDCC|hyperpage}{215}
+\indexentry{scattering!Coulomb|hyperpage}{216}
+\indexentry{CDCC|hyperpage}{216}
+\indexentry{nuclear breakup|hyperpage}{216}
+\indexentry{radial equation|hyperpage}{216}
+\indexentry{pseudostate|hyperpage}{216}
+\indexentry{Jacobi coordinate|hyperpage}{216}
+\indexentry{antisymmetrization|hyperpage}{216}
+\indexentry{CDCC|hyperpage}{216}
+\indexentry{CDCC!four-body|hyperpage}{216}
+\indexentry{monodromy|hyperpage}{217}
+\indexentry{CDCC|hyperpage}{217}
+\indexentry{folding interaction|hyperpage}{217}
+\indexentry{spectrum!continuous|hyperpage}{217}
+\indexentry{resolvent|hyperpage}{217}
+\indexentry{Lippmann--Schwinger equation|hyperpage}{217}
+\indexentry{complex scaling|hyperpage}{217}
+\indexentry{biorthogonality|hyperpage}{217}
+\indexentry{continuum level density|hyperpage}{217}
+\indexentry{pseudostate|hyperpage}{217}
+\indexentry{CDCC|hyperpage}{217}
+\indexentry{CDCC!four-body|hyperpage}{217}
+\indexentry{nuclear breakup|hyperpage}{217}
+\indexentry{cross section|hyperpage}{219}
+\indexentry{scattering!Coulomb|hyperpage}{219}
+\indexentry{scattering!three-body Coulomb|hyperpage}{219}
+\indexentry{pseudostate|hyperpage}{219}
+\indexentry{CDCC|hyperpage}{219}
+\indexentry{nuclear breakup|hyperpage}{219}
+\indexentry{cross section|hyperpage}{219}
+\indexentry{scattering matrix|hyperpage}{219}
+\indexentry{scattering!Coulomb|hyperpage}{219}
+\indexentry{pseudostate|hyperpage}{219}
+\indexentry{optical potential|hyperpage}{219}
+\indexentry{CDCC|hyperpage}{219}
+\indexentry{nuclear breakup|hyperpage}{219}
+\indexentry{spectral measure|hyperpage}{220}
+\indexentry{spectrum!point|hyperpage}{220}
+\indexentry{complex scaling|hyperpage}{220}
+\indexentry{pseudostate|hyperpage}{220}
+\indexentry{CDCC|hyperpage}{220}
+\indexentry{spectrum!point|hyperpage}{220}
+\indexentry{scattering matrix|hyperpage}{220}
+\indexentry{scattering!multichannel|hyperpage}{220}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{220}
+\indexentry{exact WKB|hyperpage}{220}
+\indexentry{adiabatic approximation|hyperpage}{220}
+\indexentry{CDCC|hyperpage}{220}
+\indexentry{holonomy|hyperpage}{220}
+\indexentry{partial-wave expansion|hyperpage}{221}
+\indexentry{scattering!Coulomb|hyperpage}{221}
+\indexentry{pseudostate|hyperpage}{221}
+\indexentry{Jacobi coordinate|hyperpage}{221}
+\indexentry{CDCC|hyperpage}{221}
+\indexentry{folding interaction|hyperpage}{221}
+\indexentry{Fredholm theory|hyperpage}{222}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{222}
+\indexentry{resonance!residue|hyperpage}{222}
+\indexentry{complex scaling|hyperpage}{222}
+\indexentry{pseudostate|hyperpage}{222}
+\indexentry{CDCC|hyperpage}{222}
+\indexentry{helium-6@${}^6$He|hyperpage}{222}
+\indexentry{helium-6@$^6$He|hyperpage}{222}
+\indexentry{three-body resonance|hyperpage}{222}
+\indexentry{CDCC|hyperpage}{222}
+\indexentry{spectrum!point|hyperpage}{223}
+\indexentry{central decomposition|hyperpage}{223}
+\indexentry{pseudostate|hyperpage}{223}
+\indexentry{Jacobi coordinate|hyperpage}{223}
+\indexentry{antisymmetrization|hyperpage}{223}
+\indexentry{Gaussian expansion method|hyperpage}{223}
+\indexentry{Jacobi coordinate|hyperpage}{223}
+\indexentry{Gaussian expansion method|hyperpage}{223}
+\indexentry{orthogonality-condition model|hyperpage}{223}
+\indexentry{spectrum!point|hyperpage}{224}
+\indexentry{complex scaling|hyperpage}{224}
+\indexentry{biorthogonality|hyperpage}{224}
+\indexentry{complex-symmetric operator|hyperpage}{224}
+\indexentry{Jacobi coordinate|hyperpage}{224}
+\indexentry{antisymmetrization|hyperpage}{224}
+\indexentry{complex scaling!three-body system|hyperpage}{224}
+\indexentry{extended completeness relation|hyperpage}{224}
+\indexentry{spectrum!continuous|hyperpage}{225}
+\indexentry{resolvent|hyperpage}{225}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{225}
+\indexentry{scattering!Coulomb|hyperpage}{225}
+\indexentry{pseudostate|hyperpage}{225}
+\indexentry{CDCC|hyperpage}{225}
+\indexentry{nuclear breakup|hyperpage}{225}
+\indexentry{helium-6@${}^6$He|hyperpage}{225}
+\indexentry{CDCC!proton--helium-6 breakup|hyperpage}{225}
+\indexentry{resonance!residue|hyperpage}{227}
+\indexentry{complex scaling|hyperpage}{227}
+\indexentry{locally convex space|hyperpage}{228}
+\indexentry{Riesz projection|hyperpage}{228}
+\indexentry{complex scaling|hyperpage}{228}
+\indexentry{pseudostate|hyperpage}{228}
+\indexentry{CDCC|hyperpage}{228}
+\indexentry{fragmented resonance|hyperpage}{228}
+\indexentry{Riesz projection|hyperpage}{228}
+\indexentry{cross section|hyperpage}{229}
+\indexentry{partial-wave expansion|hyperpage}{229}
+\indexentry{resonance!residue|hyperpage}{229}
+\indexentry{Gamow--Siegert state|hyperpage}{229}
+\indexentry{Jacobi coordinate|hyperpage}{229}
+\indexentry{antisymmetrization|hyperpage}{229}
+\indexentry{CDCC|hyperpage}{229}
+\indexentry{nuclear breakup|hyperpage}{229}
+\indexentry{double-differential breakup cross section|hyperpage}{229}
+\indexentry{dineutron correlation|hyperpage}{229}
+\indexentry{spectrum!point|hyperpage}{230}
+\indexentry{connection coefficient|hyperpage}{230}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{230}
+\indexentry{resonance!residue|hyperpage}{230}
+\indexentry{pseudostate|hyperpage}{230}
+\indexentry{adiabatic approximation|hyperpage}{230}
+\indexentry{CDCC|hyperpage}{230}
+\indexentry{resonance!residue|hyperpage}{231}
+\indexentry{complex scaling|hyperpage}{231}
+\indexentry{Jacobi coordinate|hyperpage}{231}
+\indexentry{CDCC|hyperpage}{231}
+\indexentry{connection coefficient|hyperpage}{233}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{233}
+\indexentry{pseudostate|hyperpage}{233}
+\indexentry{Jacobi coordinate|hyperpage}{233}
+\indexentry{antisymmetrization|hyperpage}{233}
+\indexentry{CDCC|hyperpage}{233}
+\indexentry{lithium nuclei|hyperpage}{233}
+\indexentry{beryllium nuclei|hyperpage}{233}
+\indexentry{scattering!Coulomb|hyperpage}{233}
+\indexentry{pseudostate|hyperpage}{233}
+\indexentry{Jacobi coordinate|hyperpage}{233}
+\indexentry{CDCC|hyperpage}{233}
+\indexentry{CDCC!four-body|hyperpage}{233}
+\indexentry{folding interaction|hyperpage}{233}
+\indexentry{nuclear breakup|hyperpage}{233}
+\indexentry{lithium nuclei|hyperpage}{233}
+\indexentry{beryllium nuclei|hyperpage}{233}
+\indexentry{spectrum!point|hyperpage}{234}
+\indexentry{central decomposition|hyperpage}{234}
+\indexentry{cross section|hyperpage}{234}
+\indexentry{partial-wave expansion|hyperpage}{234}
+\indexentry{radial equation|hyperpage}{234}
+\indexentry{pseudostate|hyperpage}{234}
+\indexentry{stabilization method|hyperpage}{234}
+\indexentry{Jacobi coordinate|hyperpage}{234}
+\indexentry{antisymmetrization|hyperpage}{234}
+\indexentry{CDCC|hyperpage}{234}
+\indexentry{CDCC|hyperpage}{235}
+\indexentry{CDCC!four-body|hyperpage}{235}
+\indexentry{folding interaction|hyperpage}{235}
+\indexentry{transition density|hyperpage}{235}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{236}
+\indexentry{scattering!Coulomb|hyperpage}{236}
+\indexentry{nuclear breakup|hyperpage}{236}
+\indexentry{scattering!Coulomb|hyperpage}{237}
+\indexentry{scattering!Coulomb|hyperpage}{237}
+\indexentry{pseudostate|hyperpage}{237}
+\indexentry{Jacobi coordinate|hyperpage}{237}
+\indexentry{antisymmetrization|hyperpage}{237}
+\indexentry{CDCC|hyperpage}{237}
+\indexentry{CDCC!four-body|hyperpage}{237}
+\indexentry{resolvent|hyperpage}{237}
+\indexentry{cross section|hyperpage}{237}
+\indexentry{pseudostate|hyperpage}{237}
+\indexentry{Jacobi coordinate|hyperpage}{237}
+\indexentry{CDCC|hyperpage}{237}
+\indexentry{nuclear breakup|hyperpage}{237}
+\indexentry{cross section|hyperpage}{238}
+\indexentry{scattering!Coulomb|hyperpage}{238}
+\indexentry{optical potential|hyperpage}{238}
+\indexentry{nuclear breakup|hyperpage}{238}
+\indexentry{central decomposition|hyperpage}{239}
+\indexentry{resonance!residue|hyperpage}{239}
+\indexentry{distorted-wave approximation|hyperpage}{239}
+\indexentry{spectrum!point|hyperpage}{240}
+\indexentry{scattering!on-shell|hyperpage}{240}
+\indexentry{pseudostate|hyperpage}{240}
+\indexentry{nuclear breakup|hyperpage}{240}
+\indexentry{pseudostate|hyperpage}{241}
+\indexentry{Jacobi coordinate|hyperpage}{241}
+\indexentry{nuclear breakup|hyperpage}{241}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{245}
+\indexentry{exceptional point|hyperpage}{245}
+\indexentry{Jordan chain|hyperpage}{245}
+\indexentry{self-orthogonality|hyperpage}{245}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{245}
+\indexentry{operator!closed|hyperpage}{245}
+\indexentry{spectrum!point|hyperpage}{245}
+\indexentry{resolvent|hyperpage}{245}
+\indexentry{Feshbach projection|hyperpage}{245}
+\indexentry{self-energy|hyperpage}{245}
+\indexentry{exceptional point|hyperpage}{245}
+\indexentry{Jordan chain|hyperpage}{245}
+\indexentry{exceptional point!defectiveness|hyperpage}{245}
+\indexentry{spectrum!point|hyperpage}{246}
+\indexentry{pseudospectrum|hyperpage}{246}
+\indexentry{biorthogonality|hyperpage}{246}
+\indexentry{complex-symmetric operator|hyperpage}{246}
+\indexentry{exceptional point|hyperpage}{246}
+\indexentry{self-orthogonality|hyperpage}{246}
+\indexentry{topology|hyperpage}{247}
+\indexentry{spectrum!point|hyperpage}{247}
+\indexentry{Riemann sheet|hyperpage}{247}
+\indexentry{pseudostate|hyperpage}{247}
+\indexentry{CDCC!bin discretization|hyperpage}{247}
+\indexentry{exceptional point|hyperpage}{247}
+\indexentry{exceptional point!defectiveness|hyperpage}{247}
+\indexentry{spectrum!point|hyperpage}{248}
+\indexentry{resolvent|hyperpage}{248}
+\indexentry{resonance!residue|hyperpage}{248}
+\indexentry{Feshbach projection|hyperpage}{248}
+\indexentry{effective Hamiltonian|hyperpage}{248}
+\indexentry{exceptional point|hyperpage}{248}
+\indexentry{monodromy|hyperpage}{248}
+\indexentry{adiabatic approximation|hyperpage}{248}
+\indexentry{exceptional point|hyperpage}{248}
+\indexentry{geometric phase|hyperpage}{248}
+\indexentry{resolvent|hyperpage}{249}
+\indexentry{exceptional point|hyperpage}{249}
+\indexentry{Jordan chain|hyperpage}{249}
+\indexentry{exceptional point|hyperpage}{249}
+\indexentry{holonomy|hyperpage}{249}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{249}
+\indexentry{biorthogonality|hyperpage}{249}
+\indexentry{exceptional point|hyperpage}{249}
+\indexentry{geometric phase|hyperpage}{249}
+\indexentry{holonomy|hyperpage}{249}
+\indexentry{exceptional point|hyperpage}{250}
+\indexentry{holonomy|hyperpage}{250}
+\indexentry{topology|hyperpage}{251}
+\indexentry{biorthogonality|hyperpage}{251}
+\indexentry{exceptional point|hyperpage}{251}
+\indexentry{Chern number|hyperpage}{251}
+\indexentry{monodromy|hyperpage}{251}
+\indexentry{biorthogonality|hyperpage}{251}
+\indexentry{exceptional point|hyperpage}{251}
+\indexentry{holonomy|hyperpage}{251}
+\indexentry{renormalization group|hyperpage}{251}
+\indexentry{topology|hyperpage}{252}
+\indexentry{exceptional point|hyperpage}{252}
+\indexentry{holonomy|hyperpage}{252}
+\indexentry{radial equation|hyperpage}{273}
+\indexentry{quasinormal mode|hyperpage}{273}
+\indexentry{Regge--Wheeler equation|hyperpage}{273}
+\indexentry{Zerilli equation|hyperpage}{273}
+\indexentry{horizon boundary condition|hyperpage}{273}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{273}
+\indexentry{Gamow--Siegert state|hyperpage}{273}
+\indexentry{quasinormal mode|hyperpage}{273}
+\indexentry{tortoise coordinate|hyperpage}{273}
+\indexentry{horizon boundary condition|hyperpage}{273}
+\indexentry{spectrum!point|hyperpage}{274}
+\indexentry{Regge--Wheeler equation|hyperpage}{274}
+\indexentry{Schwarzschild black hole|hyperpage}{274}
+\indexentry{quasinormal mode|hyperpage}{277}
+\indexentry{Regge--Wheeler equation|hyperpage}{277}
+\indexentry{Schwarzschild black hole|hyperpage}{277}
+\indexentry{Kerr black hole|hyperpage}{277}
+\indexentry{branch cut|hyperpage}{279}
+\indexentry{quasinormal mode|hyperpage}{279}
+\indexentry{Regge--Wheeler equation|hyperpage}{279}
+\indexentry{Zerilli equation|hyperpage}{279}
+\indexentry{tortoise coordinate|hyperpage}{279}
+\indexentry{horizon boundary condition|hyperpage}{279}
+\indexentry{Schwarzschild black hole|hyperpage}{279}
+\indexentry{spectrum!point|hyperpage}{280}
+\indexentry{exact WKB|hyperpage}{280}
+\indexentry{complex scaling|hyperpage}{280}
+\indexentry{tortoise coordinate|hyperpage}{280}
+\indexentry{horizon boundary condition|hyperpage}{280}
+\indexentry{Reissner--Nordstr\"om black hole|hyperpage}{280}
+\indexentry{Wronskian|hyperpage}{281}
+\indexentry{resonance!residue|hyperpage}{281}
+\indexentry{quasinormal mode|hyperpage}{281}
+\indexentry{horizon boundary condition|hyperpage}{281}
+\indexentry{monodromy|hyperpage}{281}
+\indexentry{horizon boundary condition|hyperpage}{281}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{281}
+\indexentry{resonance!residue|hyperpage}{281}
+\indexentry{Stokes curve|hyperpage}{281}
+\indexentry{turning point|hyperpage}{281}
+\indexentry{monodromy|hyperpage}{281}
+\indexentry{quasinormal mode|hyperpage}{281}
+\indexentry{horizon boundary condition|hyperpage}{281}
+\indexentry{Borel transform|hyperpage}{282}
+\indexentry{quasinormal mode|hyperpage}{282}
+\indexentry{Reissner--Nordstr\"om black hole|hyperpage}{282}
+\indexentry{Kerr black hole|hyperpage}{282}
+\indexentry{Pad\'e approximant|hyperpage}{282}
+\indexentry{connection coefficient|hyperpage}{282}
+\indexentry{resonance!residue|hyperpage}{282}
+\indexentry{exact WKB|hyperpage}{282}
+\indexentry{complex scaling|hyperpage}{282}
+\indexentry{coupled-channel equation|hyperpage}{282}
+\indexentry{quasinormal mode!excitation factor|hyperpage}{282}
+\indexentry{continuum response|hyperpage}{282}
+\indexentry{spectrum!point|hyperpage}{282}
+\indexentry{GNS construction|hyperpage}{282}
+\indexentry{turning point|hyperpage}{282}
+\indexentry{exact WKB|hyperpage}{282}
+\indexentry{exact quantization condition|hyperpage}{282}
+\indexentry{radial equation|hyperpage}{282}
+\indexentry{horizon boundary condition|hyperpage}{282}
+\indexentry{Kerr black hole|hyperpage}{282}
+\indexentry{superradiance|hyperpage}{282}
+\indexentry{Teukolsky equation|hyperpage}{282}
+\indexentry{topology|hyperpage}{283}
+\indexentry{branch cut|hyperpage}{283}
+\indexentry{resonance!residue|hyperpage}{283}
+\indexentry{exact WKB|hyperpage}{283}
+\indexentry{complex scaling|hyperpage}{283}
+\indexentry{quasinormal mode|hyperpage}{283}
+\indexentry{late-time tail|hyperpage}{283}
+\indexentry{complex scaling|hyperpage}{283}
+\indexentry{quasinormal mode|hyperpage}{283}
+\indexentry{quasinormal mode|hyperpage}{283}
+\indexentry{tortoise coordinate|hyperpage}{283}
+\indexentry{spectrum!point|hyperpage}{284}
+\indexentry{complex scaling|hyperpage}{284}
+\indexentry{quasinormal mode|hyperpage}{284}
+\indexentry{horizon boundary condition|hyperpage}{284}
+\indexentry{Kerr black hole|hyperpage}{284}
+\indexentry{spectrum!point|hyperpage}{284}
+\indexentry{coupled-channel equation|hyperpage}{284}
+\indexentry{quasinormal mode|hyperpage}{284}
+\indexentry{pseudostate|hyperpage}{285}
+\indexentry{Regge--Wheeler equation|hyperpage}{285}
+\indexentry{Schwarzschild black hole|hyperpage}{285}
+\indexentry{Reissner--Nordstr\"om black hole|hyperpage}{285}
+\indexentry{spectrum!point|hyperpage}{285}
+\indexentry{resolvent|hyperpage}{285}
+\indexentry{pseudospectrum|hyperpage}{285}
+\indexentry{resonance!residue|hyperpage}{285}
+\indexentry{complex scaling|hyperpage}{285}
+\indexentry{quasinormal mode|hyperpage}{285}
+\indexentry{continuum response|hyperpage}{285}
+\indexentry{quasinormal mode|hyperpage}{318}
+\indexentry{horizon boundary condition|hyperpage}{318}
+\indexentry{de Sitter spacetime|hyperpage}{318}
+\indexentry{continuum response|hyperpage}{318}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{318}
+\indexentry{complex scaling|hyperpage}{318}
+\indexentry{quasinormal mode|hyperpage}{318}
+\indexentry{tortoise coordinate|hyperpage}{318}
+\indexentry{horizon boundary condition|hyperpage}{318}
+\indexentry{Schwarzschild black hole|hyperpage}{318}
+\indexentry{de Sitter spacetime|hyperpage}{318}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{318}
+\indexentry{quasinormal mode|hyperpage}{318}
+\indexentry{horizon boundary condition|hyperpage}{318}
+\indexentry{scattering matrix|hyperpage}{319}
+\indexentry{continuum level density|hyperpage}{319}
+\indexentry{horizon boundary condition|hyperpage}{319}
+\indexentry{continuum response|hyperpage}{319}
+\indexentry{spectrum!point|hyperpage}{319}
+\indexentry{scattering matrix|hyperpage}{319}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{319}
+\indexentry{Riemann sheet|hyperpage}{319}
+\indexentry{resonance!residue|hyperpage}{319}
+\indexentry{complex scaling|hyperpage}{319}
+\indexentry{coupled-channel equation|hyperpage}{319}
+\indexentry{horizon boundary condition|hyperpage}{319}
+\indexentry{horizon boundary condition|hyperpage}{320}
+\indexentry{unbounded operator|hyperpage}{344}
+\indexentry{Hilbert space|hyperpage}{344}
+\indexentry{spectrum!point|hyperpage}{344}
+\indexentry{resolvent|hyperpage}{344}
+\indexentry{Jost function|hyperpage}{344}
+\indexentry{Wronskian|hyperpage}{344}
+\indexentry{connection coefficient|hyperpage}{344}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{344}
+\indexentry{resonance!residue|hyperpage}{344}
+\indexentry{Hilbert space|hyperpage}{344}
+\indexentry{locally convex space|hyperpage}{344}
+\indexentry{topology|hyperpage}{344}
+\indexentry{spectrum!point|hyperpage}{344}
+\indexentry{resolvent|hyperpage}{344}
+\indexentry{connection coefficient|hyperpage}{344}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{344}
+\indexentry{resonance!residue|hyperpage}{344}
+\indexentry{lateral Borel sum|hyperpage}{344}
+\indexentry{exact WKB|hyperpage}{344}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{346}
+\indexentry{spectrum!point|hyperpage}{346}
+\indexentry{Riemann sheet|hyperpage}{346}
+\indexentry{complex scaling|hyperpage}{346}
+\indexentry{Feshbach projection|hyperpage}{346}
+\indexentry{spectrum!point|hyperpage}{346}
+\indexentry{resolvent|hyperpage}{346}
+\indexentry{Wigner time delay|hyperpage}{346}
+\indexentry{connection coefficient|hyperpage}{346}
+\indexentry{resonance!residue|hyperpage}{346}
+\indexentry{exact WKB|hyperpage}{346}
+\indexentry{complex scaling|hyperpage}{346}
+\indexentry{exceptional point|hyperpage}{346}
+\indexentry{holonomy|hyperpage}{346}
+\indexentry{quasinormal mode!excitation factor|hyperpage}{346}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{347}
+\indexentry{spectrum!point|hyperpage}{347}
+\indexentry{connection coefficient|hyperpage}{347}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{347}
+\indexentry{resonance!residue|hyperpage}{347}
+\indexentry{Gamow--Siegert state|hyperpage}{347}
+\indexentry{exact WKB|hyperpage}{347}
+\indexentry{monodromy|hyperpage}{347}
+\indexentry{Langer correction|hyperpage}{347}
+\indexentry{Frobenius solution|hyperpage}{347}
+\indexentry{resolvent|hyperpage}{348}
+\indexentry{complex scaling|hyperpage}{348}
+\indexentry{Aguilar--Balslev--Combes theorem|hyperpage}{348}
+\indexentry{quasinormal mode|hyperpage}{348}
+\indexentry{horizon boundary condition|hyperpage}{348}
+\indexentry{de Sitter spacetime|hyperpage}{348}
+\indexentry{resolvent|hyperpage}{349}
+\indexentry{resonance!residue|hyperpage}{349}
+\indexentry{turning point|hyperpage}{349}
+\indexentry{self-energy|hyperpage}{349}
+\indexentry{exceptional point|hyperpage}{349}
+\indexentry{measure theory|hyperpage}{349}
+\indexentry{connection coefficient|hyperpage}{349}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{349}
+\indexentry{resonance!residue|hyperpage}{349}
+\indexentry{exact WKB|hyperpage}{349}
+\indexentry{biorthogonality|hyperpage}{349}
+\indexentry{quasinormal mode!excitation factor|hyperpage}{349}
+\indexentry{topology|hyperpage}{349}
+\indexentry{resolvent|hyperpage}{349}
+\indexentry{Riesz projection|hyperpage}{349}
+\indexentry{wave packet|hyperpage}{349}
+\indexentry{Berggren completeness relation|hyperpage}{349}
+\indexentry{pseudostate|hyperpage}{349}
+\indexentry{exceptional point|hyperpage}{349}
+\indexentry{holonomy|hyperpage}{349}
+\indexentry{momentum-bin regularization|hyperpage}{349}
+\indexentry{resolvent|hyperpage}{350}
+\indexentry{Stokes automorphism|hyperpage}{350}
+\indexentry{monodromy|hyperpage}{350}
+\indexentry{Langer correction|hyperpage}{350}
+\indexentry{renormalization group|hyperpage}{350}
+\indexentry{transseries|hyperpage}{350}
+\indexentry{spectrum!point|hyperpage}{350}
+\indexentry{exact WKB|hyperpage}{350}
+\indexentry{monodromy|hyperpage}{350}
+\indexentry{exceptional point|hyperpage}{350}
+\indexentry{horizon boundary condition|hyperpage}{350}
+\indexentry{Kerr black hole|hyperpage}{350}
+\indexentry{superradiance|hyperpage}{350}
+\indexentry{measure theory|hyperpage}{350}
+\indexentry{resolvent|hyperpage}{350}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{350}
+\indexentry{scattering!Coulomb|hyperpage}{350}
+\indexentry{scattering!three-body Coulomb|hyperpage}{350}
+\indexentry{exact WKB|hyperpage}{350}
+\indexentry{monodromy|hyperpage}{350}
+\indexentry{complex scaling|hyperpage}{350}
+\indexentry{Berggren completeness relation|hyperpage}{350}
+\indexentry{coupled-channel equation|hyperpage}{350}
+\indexentry{measure theory|hyperpage}{351}
+\indexentry{resolvent|hyperpage}{351}
+\indexentry{direct integral|hyperpage}{351}
+\indexentry{asymptotic completeness|hyperpage}{351}
+\indexentry{boundary condition!incoming and outgoing|hyperpage}{351}
+\indexentry{resonance!residue|hyperpage}{351}
+\indexentry{infrared problem|hyperpage}{351}
+\indexentry{dressing state|hyperpage}{351}
+\indexentry{observable algebra|hyperpage}{351}
+\indexentry{Borel plane|hyperpage}{351}
+\indexentry{spectrum!point|hyperpage}{352}
+\indexentry{Borel summation|hyperpage}{352}
+\indexentry{Pad\'e approximant|hyperpage}{352}
+\indexentry{spectrum!point|hyperpage}{352}
+\indexentry{branch cut|hyperpage}{352}
+\indexentry{resonance!residue|hyperpage}{352}
+\indexentry{monodromy|hyperpage}{352}
+\indexentry{Pad\'e approximant|hyperpage}{352}
+\indexentry{operator!adjoint and self-adjoint|hyperpage}{353}
+\indexentry{unbounded operator|hyperpage}{353}
+\indexentry{Hilbert space|hyperpage}{353}
+\indexentry{locally convex space|hyperpage}{353}
+\indexentry{topology|hyperpage}{353}
+\indexentry{measure theory|hyperpage}{353}
+\indexentry{spectral measure|hyperpage}{353}
+\indexentry{spectrum!point|hyperpage}{353}
+\indexentry{resolvent|hyperpage}{353}
+\indexentry{direct integral|hyperpage}{353}
+\indexentry{resummation|hyperxindexformat{\textbf}}{356}
+\indexentry{divergent series|hyperxindexformat{\textbf}}{356}
+\indexentry{instanton|hyperxindexformat{\textbf}}{356}
+\indexentry{quartic integral|hyperpage}{357}
+\indexentry{zero-dimensional field theory|hyperpage}{357}
+\indexentry{perturbation series|hyperpage}{357}
+\indexentry{Gaussian moment|hyperpage}{357}
+\indexentry{optimal truncation|hyperpage}{358}
+\indexentry{least term|hyperpage}{358}
+\indexentry{Borel transform|hyperxindexformat{\textbf}}{359}
+\indexentry{Borel sum|hyperxindexformat{\textbf}}{359}
+\indexentry{lateral sum|hyperpage}{359}
+\indexentry{Borel plane|hyperpage}{359}
+\indexentry{Borel singularity|hyperpage}{359}
+\indexentry{large-order relation|hyperpage}{359}
+\indexentry{Pad\'e approximant|hyperxindexformat{\textbf}}{360}
+\indexentry{Borel--Pad\'e approximation|hyperxindexformat{\textbf}}{360}
+\indexentry{convergence!resummation|hyperpage}{361}
+\indexentry{spurious pole|hyperpage}{361}
+\indexentry{optimized perturbation theory|hyperxindexformat{\textbf}}{361}
+\indexentry{variational perturbation theory|hyperxindexformat{\textbf}}{361}
+\indexentry{delta expansion|hyperpage}{361}
+\indexentry{principle of minimal sensitivity|hyperpage}{361}
+\indexentry{strong-coupling expansion|hyperpage}{362}
+\indexentry{order-dependent mapping|hyperxindexformat{\textbf}}{363}
+\indexentry{conformal map|hyperpage}{363}
+\indexentry{conformal Borel mapping|hyperpage}{363}
+\indexentry{instanton action|hyperxindexformat{\textbf}}{364}
+\indexentry{saddle point|hyperpage}{364}
+\indexentry{large-order behavior|hyperpage}{364}
+\indexentry{dispersion relation!large order|hyperpage}{364}
+\indexentry{exact WKB!resummation dictionary|hyperpage}{365}
+\indexentry{Voros period|hyperpage}{365}
+\indexentry{Stokes automorphism|hyperpage}{365}
+\indexentry{transseries|hyperpage}{365}
+\indexentry{boundary condition!and resummation|hyperpage}{366}
+\indexentry{Wolfram Language|hyperpage}{366}
+\indexentry{reproducibility!resummation|hyperpage}{366}
+\indexentry{method comparison|hyperpage}{368}
+\indexentry{resummation!summary|hyperpage}{369}
+\indexentry{ABC theorem|hyperxindexformat{\see{Aguilar--Balslev--Combes theorem}}}{417}
+\indexentry{Gamow state|hyperxindexformat{\see{Gamow--Siegert state}}}{417}
+\indexentry{Moller operator@M{\o}ller operator|hyperxindexformat{\see{wave operator}}}{417}
+\indexentry{QNM|hyperxindexformat{\see{quasinormal mode}}}{417}
+\indexentry{rigged space|hyperxindexformat{\see{rigged Hilbert space}}}{417}
+\indexentry{Zel'dovich norm|hyperxindexformat{\see{Zel'dovich regularization}}}{417}
+\indexentry{continuum discretization|hyperxindexformat{\see{CDCC}}}{417}
+\indexentry{pseudostate method|hyperxindexformat{\see{CDCC}}}{417}
+\indexentry{Borel--Pad\'e|hyperxindexformat{\see{Borel--Pad\'e approximation}}}{417}
+\indexentry{PMS|hyperxindexformat{\see{principle of minimal sensitivity}}}{417}
+\indexentry{ODM|hyperxindexformat{\see{order-dependent mapping}}}{417}

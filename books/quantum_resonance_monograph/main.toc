@@ -1,0 +1,398 @@
+\contentsline {chapter}{Synopsis}{vi}{chapter*.1}%
+\contentsline {chapter}{Preface}{viii}{chapter*.2}%
+\contentsline {chapter}{Prologue: why scattering still defines quantum dynamics}{1}{chapter*.4}%
+\contentsline {section}{A genealogy of the connection problem}{1}{section*.5}%
+\contentsline {section}{The truncation contract}{2}{section*.6}%
+\contentsline {section}{Preparation, interaction, and detection}{3}{section*.7}%
+\contentsline {section}{A diagnostic laboratory before the formalism}{3}{section*.8}%
+\contentsline {section}{The organizing claim of this book}{4}{section*.9}%
+\contentsline {chapter}{\numberline {1}The resonance problem}{6}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Scope and terminology}{9}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Organization and the central line of argument}{10}{section.1.2}%
+\contentsline {section}{\numberline {1.3}The exact-WKB thesis and the computational spine}{11}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}What is novel in this ordering}{12}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}The calculation cycle used in every laboratory}{13}{subsection.1.3.2}%
+\contentsline {part}{I\hspace {1em}Mathematical and quantum-mechanical foundations}{16}{part.1}%
+\contentsline {chapter}{\numberline {2}Stage I-A: Operators, domains, and the spectral theorem}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Working conventions before the first calculation}{17}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Notation used in the calculation cycle}{18}{section.2.2}%
+\contentsline {section}{\numberline {2.3}From finite-dimensional quantum mechanics to spectral analysis}{19}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}States, effects, and transition probabilities}{19}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}The finite-dimensional model and what fails in the continuum}{20}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Domains through the simplest boundary-value problem}{21}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Quadratic forms and Schr\"odinger Hamiltonians}{22}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Tensor products, internal coordinates, and channels}{22}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Projection, elimination, and energy-dependent effective operators}{23}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.7}Survival amplitude and the origin of exponential decay}{23}{subsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.3.8}Resolvents as the interface between dynamics and analytic continuation}{24}{subsection.2.3.8}%
+\contentsline {subsection}{\numberline {2.3.9}Basis truncation: what the Ritz method proves and what it does not}{25}{subsection.2.3.9}%
+\contentsline {subsection}{\numberline {2.3.10}Three distinctions used throughout the book}{26}{subsection.2.3.10}%
+\contentsline {chapter}{\numberline {3}Stage I-B: Multiplicity, operator algebras, and Fredholm theory}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The functional analysis forced on us by the calculation}{27}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Topology decides what convergence means}{27}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Unbounded operators: the domain is part of the observable}{29}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Projection-valued measures and the spectral theorem}{30}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Direct integrals: a continuum of channel Hilbert spaces}{31}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Worked example: the free-particle energy representation}{32}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Operator algebras, von~Neumann\ algebras, and states}{33}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Abelian spectral algebras and central decomposition}{34}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.8}Locally convex test spaces and generalized eigenvectors}{36}{subsection.3.1.8}%
+\contentsline {subsection}{\numberline {3.1.9}Riesz projections and what an operator algebra does not add}{37}{subsection.3.1.9}%
+\contentsline {section}{\numberline {3.2}Compact kernels, Fredholm determinants, and finite model spaces}{37}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Compactness is uniform finite-dimensionality after the operator acts}{39}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Hilbert--Schmidt and trace-class kernels}{40}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}The Birman--Schwinger kernel of a Schr\"odinger operator}{41}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Analytic Fredholm theorem: why the continued inverse is meromorphic}{42}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Fredholm and regularized determinants}{42}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Simple-zero residue without diagonalizing the whole operator}{43}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Worked model: a rank-one interaction}{44}{subsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.2.8}Galerkin, pseudostates, and CDCC as compact-kernel quadrature}{45}{subsection.3.2.8}%
+\contentsline {subsection}{\numberline {3.2.9}Compact kernels versus decomposable scattering operators}{46}{subsection.3.2.9}%
+\contentsline {section}{\numberline {3.3}Problems for Stage I}{46}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Stage II: Construct scattering data before continuing it}{49}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Step 1: Extract asymptotic coefficients from a scattering problem}{49}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Two-body reduction and the class of potentials}{50}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Wave packets, asymptotic states, and wave operators}{51}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Free resolvent and the Lippmann--Schwinger boundary condition}{52}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Flux, cross sections, and the optical theorem}{53}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Partial waves, phase shifts, and threshold data}{53}{subsection.4.1.5}%
+\contentsline {subsection}{\numberline {4.1.6}Jost solutions as a common coordinate basis}{55}{subsection.4.1.6}%
+\contentsline {section}{\numberline {4.2}The on-shell scattering operator as a direct integral}{56}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Intertwining is stronger than a formal commutator}{56}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Decomposability and the on-shell fibers}{57}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}The free particle and partial waves}{57}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Thresholds and channel multiplicity}{58}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}What a finite channel calculation approximates}{59}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Half-line Sturm--Liouville theory as the source of Jost data}{59}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}The differential expression and the Hilbert space}{60}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Regular endpoints and the boundary condition at the origin}{61}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Singular endpoints and Weyl's alternative}{61}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Fundamental solutions, the Weyl solution, and the Green kernel}{62}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}The spectral measure and generalized eigenfunction expansion}{63}{subsection.4.3.5}%
+\contentsline {subsection}{\numberline {4.3.6}Volterra construction of the Jost solution}{64}{subsection.4.3.6}%
+\contentsline {subsection}{\numberline {4.3.7}Worked example: the attractive spherical square well}{65}{subsection.4.3.7}%
+\contentsline {subsection}{\numberline {4.3.8}Wronskian derivatives and Zel'dovich normalization}{66}{subsection.4.3.8}%
+\contentsline {subsection}{\numberline {4.3.9}Exact WKB computes the Jost Wronskian globally}{66}{subsection.4.3.9}%
+\contentsline {subsection}{\numberline {4.3.10}Where Coulomb and many-body asymptotics change the construction}{67}{subsection.4.3.10}%
+\contentsline {subsection}{\numberline {4.3.11}A reproducible half-line pole calculation}{67}{subsection.4.3.11}%
+\contentsline {section}{\numberline {4.4}Step 2: Identify the analytic quantity that can have a resonance}{68}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Self-adjoint starting point and resolvent boundary values}{68}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Momentum sheets and outgoing boundary conditions}{69}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Jost functions, the scattering matrix, and pole residues}{70}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Phase shift and time delay}{73}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}From poles to time evolution}{73}{subsection.4.4.5}%
+\contentsline {section}{\numberline {4.5}When Step 1 fails: long-range scattering and infrared sectors}{74}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Two-body Coulomb waves rather than free plane waves}{74}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Dollard comparison dynamics}{76}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Three charged particles: known sectors and the missing uniform form}{77}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}From Coulomb phases to soft photons in QED}{78}{subsection.4.5.4}%
+\contentsline {subsection}{\numberline {4.5.5}Composite charged operators and long-range correlations}{80}{subsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.5.6}Operator-algebraic interpretation of infrared sectors}{81}{subsection.4.5.6}%
+\contentsline {subsection}{\numberline {4.5.7}Consequences for resonances, complex scaling, and exact WKB}{82}{subsection.4.5.7}%
+\contentsline {section}{\numberline {4.6}Gauge constraints, observable algebras, and physical Hilbert spaces}{83}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Three layers that must not be collapsed}{84}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}The BRST cohomological route}{85}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}The observable-first definition}{85}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Central decomposition is not sector classification}{86}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Solving Gauss law on a lattice}{87}{subsection.4.6.5}%
+\contentsline {subsection}{\numberline {4.6.6}Laboratory: the smallest $\mathbb Z_2$ boundary-flux sector}{88}{subsection.4.6.6}%
+\contentsline {subsection}{\numberline {4.6.7}Which nonlocality is an artifact?}{88}{subsection.4.6.7}%
+\contentsline {subsection}{\numberline {4.6.8}Connection coefficients sector by sector}{89}{subsection.4.6.8}%
+\contentsline {section}{\numberline {4.7}Problems for Stage II}{90}{section.4.7}%
+\contentsline {part}{II\hspace {1em}The exact-WKB construction of resonance}{92}{part.2}%
+\contentsline {chapter}{\numberline {5}Stage III: Build the global connection problem}{93}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Step 3: Construct the local resurgent basis}{93}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Riccati equation and formal WKB solutions}{93}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Borel transform and lateral resummation}{95}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Turning points and Stokes geometry}{95}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}Voros symbols and exact quantization}{96}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}Local normalization versus global invariants}{97}{subsection.5.1.5}%
+\contentsline {section}{\numberline {5.2}Step 4: Transport the basis without losing the Wronskian}{97}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Step 5: Turn the no-incoming condition into a pole equation}{98}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Outgoing conditions as subdominance after continuation}{98}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}The inverted Rosen--Morse barrier}{98}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Transmission and reflection from connection matrices}{100}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Complex scaling as a change of Stokes sector}{100}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Continuum states in exact-WKB language}{101}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}Calculation laboratory III: From a Stokes graph to a resonance width}{101}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Worked Stokes geometry: cubic decay and the solvable barrier}{102}{subsection.5.4.1}%
+\contentsline {subsubsection}{Application to unstable QM: Anharmonic oscillator with cubic potential}{102}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {5.4.2}Resonant states in exact WKB analysis}{104}{subsection.5.4.2}%
+\contentsline {subsubsection}{What is a resonant state from the viewpoint of exact WKB?}{104}{subsubsection*.17}%
+\contentsline {subsubsection}{Inverted Rosen--Morse potential}{106}{subsubsection*.20}%
+\contentsline {paragraph}{Exact solution}{106}{paragraph*.21}%
+\contentsline {paragraph}{Traditional approach to resonance}{106}{paragraph*.22}%
+\contentsline {paragraph}{Stokes graph}{109}{paragraph*.23}%
+\contentsline {paragraph}{Leading order}{110}{paragraph*.26}%
+\contentsline {paragraph}{Exact WKB analysis for resonance}{112}{paragraph*.27}%
+\contentsline {section}{\numberline {5.5}Problems for Stage III}{114}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Stage IV: Realize one analytic pole in several spaces}{116}{chapter.6}%
+\contentsline {section}{\numberline {6.1}From the connection zero to resolvents and effective Hamiltonians}{116}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Lippmann--Schwinger equation and the transition operator}{116}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Feshbach projection and energy-dependent effective Hamiltonian}{117}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Equivalence of the Feshbach and Siegert pictures}{118}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}Resonance expansion and the role of the continuum}{118}{subsection.6.1.4}%
+\contentsline {section}{\numberline {6.2}Represent the outgoing branch as a square-integrable eigenvector}{119}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Analytic dilation}{119}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Why an outgoing wave becomes square integrable}{120}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}The Aguilar--Balslev--Combes structure}{120}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Exterior and smooth complex scaling}{122}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}Biorthogonality and the complex-symmetric case}{123}{subsection.6.2.5}%
+\contentsline {subsection}{\numberline {6.2.6}Spectral representation of the complex-scaled resolvent}{123}{subsection.6.2.6}%
+\contentsline {section}{\numberline {6.3}Derive the Aguilar--Balslev--Combes mechanism step by step}{124}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Define the resonance functional and its norm}{128}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Gaussian regularization of a Gamow state}{128}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Berggren's proof: orthogonality, normalization, and completeness}{129}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}The Gelfand triple}{133}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Hardy classes and time direction}{134}{subsection.6.4.4}%
+\contentsline {subsection}{\numberline {6.4.5}Relation to complex scaling}{134}{subsection.6.4.5}%
+\contentsline {subsection}{\numberline {6.4.6}Probability, observables, and normalization}{135}{subsection.6.4.6}%
+\contentsline {section}{\numberline {6.5}Calculation laboratory IV-A: One Gamow pole in three realizations}{135}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}One pole, three realizations}{136}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Zel'dovich regularization}{136}{subsection.6.5.2}%
+\contentsline {subsubsection}{Hamiltonian under Zel'dovich transformation}{136}{subsubsection*.28}%
+\contentsline {subsubsection}{Inverted Rosen--Morse potential}{137}{subsubsection*.29}%
+\contentsline {subsubsection}{Remarks on difficulties of irrational potential}{143}{subsubsection*.34}%
+\contentsline {subsection}{\numberline {6.5.3}Complex scaling method}{143}{subsection.6.5.3}%
+\contentsline {subsubsection}{Solving method within complex scaling method}{143}{subsubsection*.35}%
+\contentsline {subsubsection}{Exact WKB framework of complex scaling method}{144}{subsubsection*.36}%
+\contentsline {subsection}{\numberline {6.5.4}Rigged-space reading of the model pole}{145}{subsection.6.5.4}%
+\contentsline {section}{\numberline {6.6}Keep the continuum: response and numerical complex scaling}{147}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Continuum level density}{147}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Basis expansion and generalized eigenvalue problem}{148}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Pole-identification protocol}{149}{subsection.6.6.3}%
+\contentsline {subsection}{\numberline {6.6.4}Complex absorbing potentials and stabilization}{149}{subsection.6.6.4}%
+\contentsline {section}{\numberline {6.7}Pole calculus for widths, line shapes, and measured response}{150}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Every measurement contains a source, propagation, and a detector}{150}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}Feshbach elimination and the exact scalar denominator}{151}{subsection.6.7.2}%
+\contentsline {subsection}{\numberline {6.7.3}The multichannel effective Hamiltonian and unitary S matrix}{152}{subsection.6.7.3}%
+\contentsline {subsection}{\numberline {6.7.4}Derivation of the one-channel Breit--Wigner factor}{153}{subsection.6.7.4}%
+\contentsline {subsection}{\numberline {6.7.5}Background interference and the Fano profile}{154}{subsection.6.7.5}%
+\contentsline {subsection}{\numberline {6.7.6}Threshold laws and why broad resonances are not Lorentzians}{154}{subsection.6.7.6}%
+\contentsline {subsection}{\numberline {6.7.7}Connection-matrix residue: the exact-WKB resonance formula}{155}{subsection.6.7.7}%
+\contentsline {subsection}{\numberline {6.7.8}Complex scaling separates a pole term without discarding the cut}{156}{subsection.6.7.8}%
+\contentsline {subsection}{\numberline {6.7.9}A line-shape calculation that can be reproduced}{156}{subsection.6.7.9}%
+\contentsline {section}{\numberline {6.8}Derive the continuum level-density relation}{157}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Calculation laboratory IV-B: Transmission, the ABC mechanism, and the continuum}{157}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Transmission via exact WKB analysis}{158}{subsection.6.9.1}%
+\contentsline {subsubsection}{Strategy to general scattering potentials}{158}{subsubsection*.38}%
+\contentsline {subsubsection}{Transmission coefficient in Rosen--Morse potential}{159}{subsubsection*.40}%
+\contentsline {paragraph}{Airy-type local model (simple turning point).}{160}{paragraph*.41}%
+\contentsline {paragraph}{Comparison with exact solution}{161}{paragraph*.42}%
+\contentsline {paragraph}{Remark on cycles and matching data.}{162}{paragraph*.44}%
+\contentsline {subsection}{\numberline {6.9.2}The ABC invariants seen in exact WKB}{163}{subsection.6.9.2}%
+\contentsline {subsubsection}{Rotation of the Stokes data}{163}{subsubsection*.45}%
+\contentsline {subsubsection}{Connection-geometric comparison with Feshbach elimination}{164}{subsubsection*.46}%
+\contentsline {subsection}{\numberline {6.9.3}Continuum and resonant spectra in Hilbert space}{166}{subsection.6.9.3}%
+\contentsline {section}{\numberline {6.10}Problems for Stage IV}{171}{section.6.10}%
+\contentsline {part}{III\hspace {1em}Radial motion and weakly bound nuclei}{173}{part.3}%
+\contentsline {chapter}{\numberline {7}Stage V: Add a singular endpoint and renormalize monodromy}{174}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Radial exact WKB: add the origin as monodromy data}{174}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Radial equation and the origin}{174}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Open-path and closed-cycle quantization}{175}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Harmonic-oscillator benchmark}{176}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}Coulomb benchmark}{176}{subsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.1.5}Monodromy renormalization}{176}{subsection.7.1.5}%
+\contentsline {subsection}{\numberline {7.1.6}Optimized perturbation around monodromy-preserving seeds}{177}{subsection.7.1.6}%
+\contentsline {section}{\numberline {7.2}Derive the exponential map and the Langer term}{178}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Calculation laboratory V: Radial monodromy from oscillator to Coulomb}{179}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Benchmark I: the three-dimensional oscillator}{179}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Harmonic oscillator}{180}{subsection.7.3.2}%
+\contentsline {subsubsection}{Stokes graph for the harmonic oscillator and the choice of path}{180}{subsubsection*.48}%
+\contentsline {subsubsection}{Derivation of the quantization condition for the harmonic oscillator}{181}{subsubsection*.50}%
+\contentsline {subsection}{\numberline {7.3.3}Coulomb potential}{184}{subsection.7.3.3}%
+\contentsline {subsubsection}{Stokes geometry and the quantization condition for the Coulomb potential}{184}{subsubsection*.52}%
+\contentsline {subsubsection}{Open-path quantization and the regularity near the origin}{186}{subsubsection*.54}%
+\contentsline {subsection}{\numberline {7.3.4}Exponential mapping and boundary transfer}{187}{subsection.7.3.4}%
+\contentsline {subsection}{\numberline {7.3.5}Monodromy renormalization}{189}{subsection.7.3.5}%
+\contentsline {subsubsection}{Minimal scheme of monodromy renormalization}{189}{subsubsection*.55}%
+\contentsline {subsubsection}{An optimized-perturbation-theory realization}{190}{subsubsection*.56}%
+\contentsline {subsubsection}{Some remarks}{192}{subsubsection*.57}%
+\contentsline {subsection}{\numberline {7.3.6}Anharmonic oscillator}{193}{subsection.7.3.6}%
+\contentsline {subsection}{\numberline {7.3.7}Variations of Coulomb}{196}{subsection.7.3.7}%
+\contentsline {subsection}{\numberline {7.3.8}Open-path and closed-cycle equivalence: a general statement}{197}{subsection.7.3.8}%
+\contentsline {subparagraph}{Sketch of proof}{199}{subparagraph*.63}%
+\contentsline {section}{\numberline {7.4}Problems for Stage V}{200}{section.7.4}%
+\contentsline {chapter}{\numberline {8}Stage VI: Resolve a few-body continuum with CDCC and complex scaling}{202}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Nuclear reaction theory reconstructed from scattering principles}{202}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Translational invariance and Jacobi kinetic energy}{202}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Cluster channels and antisymmetry}{203}{subsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.1.3}The optical model as a Feshbach boundary value}{204}{subsection.8.1.3}%
+\contentsline {subsection}{\numberline {8.1.4}Coupled channels from an internal basis}{205}{subsection.8.1.4}%
+\contentsline {subsection}{\numberline {8.1.5}Distorted waves and first-order transition theory}{205}{subsection.8.1.5}%
+\contentsline {subsection}{\numberline {8.1.6}The R-matrix split: an interior connection problem}{206}{subsection.8.1.6}%
+\contentsline {subsection}{\numberline {8.1.7}Three-body equations before discretization}{207}{subsection.8.1.7}%
+\contentsline {subsection}{\numberline {8.1.8}Why three-body Coulomb is structurally harder}{208}{subsection.8.1.8}%
+\contentsline {subsection}{\numberline {8.1.9}Adiabatic and eikonal limits}{208}{subsection.8.1.9}%
+\contentsline {subsection}{\numberline {8.1.10}Threshold scales in lithium and beryllium systems}{209}{subsection.8.1.10}%
+\contentsline {subsection}{\numberline {8.1.11}One dictionary for reaction approximations}{209}{subsection.8.1.11}%
+\contentsline {section}{\numberline {8.2}Few-body continua and CDCC}{211}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Two-cluster projectile: coordinates and Hamiltonian}{212}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Model-space projection and the CDCC equation}{213}{subsection.8.2.2}%
+\contentsline {subsection}{\numberline {8.2.3}Bin discretization}{214}{subsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.2.4}Pseudostate discretization and the Gaussian expansion method}{214}{subsection.8.2.4}%
+\contentsline {subsection}{\numberline {8.2.5}Open, closed, and Coulomb-distorted channels}{215}{subsection.8.2.5}%
+\contentsline {subsection}{\numberline {8.2.6}Multipole expansion of the coupling}{216}{subsection.8.2.6}%
+\contentsline {subsection}{\numberline {8.2.7}Three-cluster projectiles and four-body CDCC}{216}{subsection.8.2.7}%
+\contentsline {subsection}{\numberline {8.2.8}Folding interactions and transition densities}{217}{subsection.8.2.8}%
+\contentsline {subsection}{\numberline {8.2.9}From discrete breakup strengths to a continuous spectrum}{217}{subsection.8.2.9}%
+\contentsline {subsection}{\numberline {8.2.10}Selecting a rearrangement channel}{219}{subsection.8.2.10}%
+\contentsline {subsection}{\numberline {8.2.11}Observables from the channel S matrix}{219}{subsection.8.2.11}%
+\contentsline {subsection}{\numberline {8.2.12}CDCC as a spectral quadrature}{220}{subsection.8.2.12}%
+\contentsline {subsection}{\numberline {8.2.13}Connection data and coupled-channel exact WKB}{220}{subsection.8.2.13}%
+\contentsline {subsection}{\numberline {8.2.14}A reproducible convergence protocol}{221}{subsection.8.2.14}%
+\contentsline {section}{\numberline {8.3}Calculation laboratory VI-A: A broad $^6$He resonance from pole to observable}{222}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Station A: choose Jacobi coordinates before choosing a basis}{223}{subsection.8.3.1}%
+\contentsline {subsection}{\numberline {8.3.2}Station B: expose poles with a common complex dilation}{224}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Station C: derive proton--$^6$He CDCC from the same internal model}{225}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Station D: calculate the continuous response before naming a peak}{227}{subsection.8.3.4}%
+\contentsline {subsection}{\numberline {8.3.5}Station E: replace a fragmented energy window by a rank-one pole projector}{228}{subsection.8.3.5}%
+\contentsline {subsection}{\numberline {8.3.6}Station F: construct a resonance-only double-differential breakup distribution}{229}{subsection.8.3.6}%
+\contentsline {subsection}{\numberline {8.3.7}Station G: identify the exact-WKB invariant inside the many-channel calculation}{230}{subsection.8.3.7}%
+\contentsline {subsection}{\numberline {8.3.8}Station H: convergence ledger}{231}{subsection.8.3.8}%
+\contentsline {paragraph}{Structure space.}{231}{paragraph*.67}%
+\contentsline {paragraph}{Complex scaling.}{232}{paragraph*.68}%
+\contentsline {paragraph}{Reaction space.}{232}{paragraph*.69}%
+\contentsline {paragraph}{Smoothing and decay.}{232}{paragraph*.70}%
+\contentsline {section}{\numberline {8.4}Calculation laboratory VI-B: Lithium projectiles and beryllium-core breakup}{233}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Station A: construct the $\alpha +p+n$ Hamiltonian of $^6$Li}{234}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Station B: derive nucleon--$^6$Li four-body CDCC}{235}{subsection.8.4.2}%
+\contentsline {subsubsection}{Open and closed channel test}{236}{subsubsection*.72}%
+\contentsline {subsubsection}{Convergence table to produce before plotting data}{237}{subsubsection*.73}%
+\contentsline {subsection}{\numberline {8.4.3}Station C: $^9$C as $p+p+{}^7$Be}{237}{subsection.8.4.3}%
+\contentsline {subsection}{\numberline {8.4.4}Station D: separate sequential and direct breakup with CSLS}{237}{subsection.8.4.4}%
+\contentsline {subsection}{\numberline {8.4.5}Station E: from a breakup ANC to $S_{18}$}{238}{subsection.8.4.5}%
+\contentsline {subsection}{\numberline {8.4.6}Station F: $^6$Li$(p,2p){}^5$He as an overlap measurement}{239}{subsection.8.4.6}%
+\contentsline {subsection}{\numberline {8.4.7}What the three stations teach about resonance representations}{240}{subsection.8.4.7}%
+\contentsline {section}{\numberline {8.5}Problems for Stage VI}{241}{section.8.5}%
+\contentsline {part}{IV\hspace {1em}Coalescing poles and horizon resonances}{244}{part.4}%
+\contentsline {chapter}{\numberline {9}Stage VII: Continue the quantization condition through an exceptional point}{245}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Exceptional points as multiple zeros of the pole condition}{245}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Degeneracy, defectiveness, and Jordan chains}{245}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Self-orthogonality and eigenvalue condition numbers}{246}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Exceptional points in an open scattering problem}{247}{subsection.9.1.3}%
+\contentsline {subsection}{\numberline {9.1.4}Feshbach description of pole coalescence}{248}{subsection.9.1.4}%
+\contentsline {subsection}{\numberline {9.1.5}Dynamics around an exceptional point}{248}{subsection.9.1.5}%
+\contentsline {section}{\numberline {9.2}Derive the resolvent of a second-order Jordan block}{249}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Transport a resonance around the multiple zero}{249}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Biorthogonal Berry connection}{249}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Momentum-bin regularization of the continuum}{250}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Chern data and branch exchange}{251}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Renormalizing a distributional holonomy}{251}{subsection.9.3.4}%
+\contentsline {subsection}{\numberline {9.3.5}What survives the continuum limit}{252}{subsection.9.3.5}%
+\contentsline {section}{\numberline {9.4}Calculation laboratory VII: Encircling an exceptional resonance}{253}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}The solvable resonance family used at the exceptional point}{253}{subsection.9.4.1}%
+\contentsline {subsubsection}{Solving method within complex-scaling method}{253}{subsubsection*.74}%
+\contentsline {subsubsection}{Analyticity of the control parameter near the resonance pole}{255}{subsubsection*.75}%
+\contentsline {subsection}{\numberline {9.4.2}Classification of wave functions and self-orthogonality}{257}{subsection.9.4.2}%
+\contentsline {subsection}{\numberline {9.4.3}Geometric phase near resonance pole}{260}{subsection.9.4.3}%
+\contentsline {subparagraph}{\textbf {Case I:} $x\to \infty $}{261}{subparagraph*.80}%
+\contentsline {subparagraph}{\textbf {Case II:} $x\xrightarrow {}-\infty $}{262}{subparagraph*.81}%
+\contentsline {subsection}{\numberline {9.4.4}Chern characteristic and monodromy renormalization}{265}{subsection.9.4.4}%
+\contentsline {subsubsection}{Biorthogonal connection and bin-regularized holonomy}{265}{subsubsection*.83}%
+\contentsline {subsubsection}{Continuum limit: Two sources of ill definedness}{266}{subsubsection*.84}%
+\contentsline {subsubsection}{Monodromy renormalization: Fixing the physical holonomy}{268}{subsubsection*.85}%
+\contentsline {subsection}{\numberline {9.4.5}Complex-scaled continuum states in momentum-bin method}{269}{subsection.9.4.5}%
+\contentsline {subsubsection}{Hermitian quantum mechanics}{269}{subsubsection*.86}%
+\contentsline {subsubsection}{Complex-scaled Hamiltonian}{270}{subsubsection*.87}%
+\contentsline {section}{\numberline {9.5}Problems for Stage VII}{272}{section.9.5}%
+\contentsline {chapter}{\numberline {10}Stage VIII: Turn horizons into a resonance connection problem}{273}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Derive black-hole master equations and their connection data}{273}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Master equation and boundary conditions}{273}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}Derivation of the Regge--Wheeler equation}{274}{subsection.10.1.2}%
+\contentsline {subsection}{\numberline {10.1.3}Schwarzschild potentials}{279}{subsection.10.1.3}%
+\contentsline {subsection}{\numberline {10.1.4}Reissner--Nordstr\"om backgrounds}{280}{subsection.10.1.4}%
+\contentsline {subsection}{\numberline {10.1.5}Green functions, poles, cuts, and excitation}{281}{subsection.10.1.5}%
+\contentsline {section}{\numberline {10.2}Read black-hole spectra from quantum periods and horizon monodromy}{281}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Spectral curve and complex horizons}{281}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Quantum periods and Borel--Pad\'e resummation}{282}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}Relation to complex scaling}{282}{subsection.10.2.3}%
+\contentsline {subsection}{\numberline {10.2.4}Kerr as the next major test}{282}{subsection.10.2.4}%
+\contentsline {subsection}{\numberline {10.2.5}Late-time tails and branch cuts}{283}{subsection.10.2.5}%
+\contentsline {section}{\numberline {10.3}Represent black-hole QNMs by complex scaling}{283}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Complex deformation of the tortoise coordinate}{283}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}Why the spectral parameter is $\omega ^2$}{284}{subsection.10.3.2}%
+\contentsline {subsection}{\numberline {10.3.3}Basis construction and parity}{284}{subsection.10.3.3}%
+\contentsline {subsection}{\numberline {10.3.4}Schwarzschild and extremal RN benchmarks}{285}{subsection.10.3.4}%
+\contentsline {subsection}{\numberline {10.3.5}Spectral instability and pseudospectra}{285}{subsection.10.3.5}%
+\contentsline {section}{\numberline {10.4}Calculation laboratory VIII-A: Schwarzschild and extremal Reissner--Nordstrom QNMs}{286}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}Finite-basis realization of the black-hole resonance problem}{286}{subsection.10.4.1}%
+\contentsline {subsubsection}{Numerical implementation and some schemes of choosing bases}{286}{subsubsection*.88}%
+\contentsline {paragraph}{Variational procedure to eigenvalue problem}{286}{paragraph*.89}%
+\contentsline {paragraph}{Demonstration in a simpler case: $\mathrm {e}^{-\alpha r_*^2}$ and $r_* \mathrm {e}^{-\alpha r_*^2}$}{287}{paragraph*.90}%
+\contentsline {paragraph}{Variations of Gaussian basis functions and diagonalization}{290}{paragraph*.91}%
+\contentsline {subsubsection}{Stability analysis and identification of QNM frequencies}{293}{subsubsection*.92}%
+\contentsline {subsection}{\numberline {10.4.2}Numerical simulation of QNM via CSM}{294}{subsection.10.4.2}%
+\contentsline {subsubsection}{Benchmark strategy}{294}{subsubsection*.93}%
+\contentsline {subsubsection}{Trial run of the methodology and comparison of basis dependence}{294}{subsubsection*.94}%
+\contentsline {subsubsection}{Basis selection from trial run of more general cases}{300}{subsubsection*.99}%
+\contentsline {subsubsection}{Numerical results}{301}{subsubsection*.100}%
+\contentsline {paragraph}{Schwarzschild case}{301}{paragraph*.101}%
+\contentsline {paragraph}{Extremal Reissner--Nordstr\"om case}{302}{paragraph*.104}%
+\contentsline {paragraph}{Summary of low-lying QNM frequencies}{305}{paragraph*.109}%
+\contentsline {subsection}{\numberline {10.4.3}Leaver's method and benchmark tables}{310}{subsection.10.4.3}%
+\contentsline {subsection}{\numberline {10.4.4}A note on continuum level density in the complex-scaling framework}{314}{subsection.10.4.4}%
+\contentsline {section}{\numberline {10.5}Two horizons: de Sitter QNMs and continuum response}{318}{section.10.5}%
+\contentsline {subsection}{\numberline {10.5.1}Two-horizon scattering problem}{318}{subsection.10.5.1}%
+\contentsline {subsection}{\numberline {10.5.2}Pole motion with the cosmological constant}{318}{subsection.10.5.2}%
+\contentsline {subsection}{\numberline {10.5.3}Continuum level density for black-hole response}{319}{subsection.10.5.3}%
+\contentsline {subsection}{\numberline {10.5.4}Coupled channels and string-inspired backgrounds}{319}{subsection.10.5.4}%
+\contentsline {subsection}{\numberline {10.5.5}Higher dimensions}{320}{subsection.10.5.5}%
+\contentsline {section}{\numberline {10.6}Calculation laboratory VIII-B: Two-horizon spectra and continuum response}{320}{section.10.6}%
+\contentsline {subsection}{\numberline {10.6.1}QNM and CLD for dS black holes}{321}{subsection.10.6.1}%
+\contentsline {subsubsection}{Numerical results of QNMs}{321}{subsubsection*.120}%
+\contentsline {subsubsection}{Numerical results of CLD}{326}{subsubsection*.125}%
+\contentsline {subsection}{\numberline {10.6.2}Discussion}{329}{subsection.10.6.2}%
+\contentsline {subsubsection}{On spectral response}{329}{subsubsection*.132}%
+\contentsline {subsubsection}{CLD, transmission phase, and greybody factors}{330}{subsubsection*.133}%
+\contentsline {subsection}{\numberline {10.6.3}Further applications}{333}{subsection.10.6.3}%
+\contentsline {subsubsection}{Coupled-channel systems: toward stringy black holes}{333}{subsubsection*.134}%
+\contentsline {subsubsection}{Higher-dimensional dS black holes}{336}{subsubsection*.137}%
+\contentsline {subsection}{\numberline {10.6.4}Exponentially growing matrix blocks in diagonalization}{338}{subsection.10.6.4}%
+\contentsline {subsubsection}{Block balancing}{339}{subsubsection*.140}%
+\contentsline {subsubsection}{Channel-basis balancing}{340}{subsubsection*.141}%
+\contentsline {section}{\numberline {10.7}Problems for Stage VIII}{341}{section.10.7}%
+\contentsline {part}{V\hspace {1em}Synthesis and frontiers}{343}{part.5}%
+\contentsline {chapter}{\numberline {11}What is invariant and what is chosen}{344}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Invariant resonance data versus representations}{344}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}The invariant core}{344}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}A compact dictionary}{344}{subsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.1.3}What non-self-adjointness does and does not mean}{346}{subsection.11.1.3}%
+\contentsline {subsection}{\numberline {11.1.4}Observables beyond pole positions}{346}{subsection.11.1.4}%
+\contentsline {section}{\numberline {11.2}What exact WKB changed in the present research program}{347}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Where the connection-first framework is incomplete}{348}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Operator theory for black-hole complex scaling}{348}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}Uniform analysis at thresholds}{349}{subsection.11.3.2}%
+\contentsline {subsection}{\numberline {11.3.3}Residues and excitation factors from exact WKB}{349}{subsection.11.3.3}%
+\contentsline {subsection}{\numberline {11.3.4}A regulator-independent EP continuum limit}{349}{subsection.11.3.4}%
+\contentsline {subsection}{\numberline {11.3.5}Status of monodromy renormalization}{350}{subsection.11.3.5}%
+\contentsline {subsection}{\numberline {11.3.6}Kerr, superradiance, and nonlinear spectral problems}{350}{subsection.11.3.6}%
+\contentsline {subsection}{\numberline {11.3.7}Coupled channels and many-body resonances}{350}{subsection.11.3.7}%
+\contentsline {subsection}{\numberline {11.3.8}Quantum field theory}{351}{subsection.11.3.8}%
+\contentsline {subsection}{\numberline {11.3.9}Numerical certification}{352}{subsection.11.3.9}%
+\contentsline {section}{\numberline {11.4}Reproducibility checklist for every representation}{352}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Conclusions: resonance theory as a connection problem}{353}{section.11.5}%
+\contentsline {part}{VI\hspace {1em}Computational appendices}{355}{part.6}%
+\contentsline {chapter}{\numberline {A}Resummation, variational reorganization, and instantons}{356}{appendix.A}%
+\contentsline {section}{\numberline {A.1}A benchmark with an exact answer}{357}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Derive the weak-coupling coefficients}{357}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Optimal truncation is the first nonperturbative estimate}{358}{subsection.A.1.2}%
+\contentsline {section}{\numberline {A.2}Borel and lateral summation}{359}{section.A.2}%
+\contentsline {subsection}{\numberline {A.2.1}What the Borel plane tells us before integration}{359}{subsection.A.2.1}%
+\contentsline {section}{\numberline {A.3}Pad\'e and Borel--Pad\'e approximation}{360}{section.A.3}%
+\contentsline {subsection}{\numberline {A.3.1}A convergence protocol rather than one decimal number}{361}{subsection.A.3.1}%
+\contentsline {section}{\numberline {A.4}Optimized and variational perturbation theory}{361}{section.A.4}%
+\contentsline {subsection}{\numberline {A.4.1}Why optimization can recover strong coupling}{362}{subsection.A.4.1}%
+\contentsline {section}{\numberline {A.5}Order-dependent mapping}{363}{section.A.5}%
+\contentsline {subsection}{\numberline {A.5.1}How ODM differs from a fixed conformal Borel map}{363}{subsection.A.5.1}%
+\contentsline {section}{\numberline {A.6}Instantons and the origin of large order}{364}{section.A.6}%
+\contentsline {subsection}{\numberline {A.6.1}Dispersion relation for the coefficients}{364}{subsection.A.6.1}%
+\contentsline {section}{\numberline {A.7}The exact-WKB translation}{365}{section.A.7}%
+\contentsline {subsection}{\numberline {A.7.1}What ordinary resummation cannot decide}{366}{subsection.A.7.1}%
+\contentsline {section}{\numberline {A.8}A reproducible Wolfram Language laboratory}{366}{section.A.8}%
+\contentsline {subsection}{\numberline {A.8.1}Protocol for comparing methods}{368}{subsection.A.8.1}%
+\contentsline {section}{\numberline {A.9}What to retain for the rest of the book}{369}{section.A.9}%
+\contentsline {chapter}{Hints and selected solutions}{371}{appendix*.142}%
+\contentsline {chapter}{Glossary of recurring structures}{383}{appendix*.143}%
+\contentsline {chapter}{Bibliographical notes}{392}{appendix*.144}%
+\contentsline {chapter}{Subject index}{418}{section*.146}%

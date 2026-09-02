@@ -1,0 +1,300 @@
+\documentclass[11pt,openany]{book}
+
+% Monograph trim and typography.  The 6.5 x 9.5 inch page is deliberately
+% chosen as a reading format rather than as a journal preprint format.
+\usepackage[
+  paperwidth=6.5in,
+  paperheight=9.5in,
+  inner=0.82in,
+  outer=0.68in,
+  top=0.80in,
+  bottom=0.86in,
+  headheight=24pt,
+  headsep=18pt,
+  footskip=24pt
+]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{setspace}
+\setstretch{1.10}
+
+\usepackage[nocomments,norevision]{omphys}
+% Equation and section keys are useful during proofreading but obscure the
+% typeset mathematics.  Set this switch true only for a labelled proof copy.
+\newif\ifshowdraftlabels
+\showdraftlabelsfalse
+\ifshowdraftlabels
+  \usepackage[inline]{showlabels}
+\fi
+
+\usepackage{amsthm}
+\usepackage{booktabs,array,longtable,tabularx}
+\usepackage{enumitem}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.pathmorphing,positioning}
+\tikzset{snake it/.style={decorate,decoration=snake}}
+\usepackage{comment}
+\usepackage[most]{tcolorbox}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage{imakeidx}
+\usepackage{hyperref}
+\setlength{\emergencystretch}{2em}
+\Urlmuskip=0mu plus 1mu\relax
+\hypersetup{
+  pdftitle={Quantum Resonance as a Global Connection Problem},
+  pdfauthor={Okuto Morikawa and Shoya Ogawa},
+  colorlinks=true,
+  linkcolor=blue!48!black,
+  citecolor=teal!52!black,
+  urlcolor=blue!60!black
+}
+\pdfstringdefDisableCommands{%
+  \def\vN{von~Neumann}%
+  \def\tH{'t~Hooft}%
+}
+\allowdisplaybreaks[2]
+\makeindex[intoc,columns=2,title=Subject index]
+
+%\usepackage{orcidlink}
+
+% Running heads and chapter openings.
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\thepage\quad\nouppercase{\leftmark}}
+\fancyhead[RO]{\small\nouppercase{\rightmark}\quad\thepage}
+\makeatletter
+\renewcommand{\chaptermark}[1]{%
+  \markboth{%
+    \if@mainmatter\@chapapp\ \thechapter.\quad\fi #1}{%
+    \if@mainmatter\@chapapp\ \thechapter.\quad\fi #1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\quad #1}}
+\makeatother
+\renewcommand{\headrulewidth}{0.35pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}
+  {\color{teal!55!black}\chaptertitlename\ \thechapter}
+  {0.55ex}{}
+\titlespacing*{\chapter}{0pt}{-12pt}{24pt}
+
+\providecommand{\Box}{\square}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{prop*}{Proposition}
+
+% Pedagogical environments.  Results are stated once in a canonical chapter;
+% later laboratories point back to the corresponding anchor.
+\newtcolorbox{readercontract}{
+  enhanced,breakable,colback=teal!3,colframe=teal!55!black,
+  title=Reader contract,fonttitle=\bfseries}
+\newtcolorbox{derivationbox}[1]{
+  enhanced,breakable,colback=blue!2,colframe=blue!48!black,
+  title={#1},fonttitle=\bfseries}
+\newtcolorbox{checkpointbox}{
+  enhanced,breakable,colback=orange!5,colframe=orange!70!black,
+  title=Checkpoint,fonttitle=\bfseries}
+\newtcolorbox{warningbox}{
+  enhanced,breakable,colback=red!3,colframe=red!60!black,
+  title=Domain or asymptotic warning,fonttitle=\bfseries}
+
+\newcommand{\learningstage}[3]{%
+  \chapter{Stage #1: #2}%
+  \begin{readercontract}#3\end{readercontract}%
+}
+\newcommand{\calculationroute}[3]{%
+  \begin{derivationbox}{Calculation route}
+  \textbf{Prerequisites.} #1\par\smallskip
+  \textbf{Calculation goal.} #2\par\smallskip
+  \textbf{Completion criterion.} #3
+  \end{derivationbox}%
+}
+\newcommand{\firstdefined}[2]{#1\index{#2|textbf}}
+\newcommand{\term}[1]{\textit{#1}\index{#1}}
+
+\title{\Huge Quantum Resonance\\ as a Global Connection Problem
+\\[3ex]
+\large Scattering Theory, Exact WKB Analysis, and Non-Self-Adjoint Spectral Methods
+\\[5ex]
+\Large by
+}
+\author{
+\Large Okuto Morikawa
+\and
+\Large Shoya Ogawa
+}
+\date{}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\input{chapters/frontmatter/author_information}
+\input{chapters/frontmatter/review_by_openai}
+\input{chapters/frontmatter/abstract}
+\input{chapters/frontmatter/preface}
+\tableofcontents
+\clearpage
+
+\mainmatter
+\input{chapters/frontmatter/prologue_scattering}
+\input{chapters/core/sec_introduction}
+\input{chapters/frontmatter/computational_spine}
+
+\part{Mathematical and quantum-mechanical foundations}
+
+\learningstage{I-A}{Operators, domains, and the spectral theorem}{
+This stage starts with finite-dimensional quantum mechanics and reconstructs
+the infinite-dimensional theory in the order in which its definitions are
+needed: topology, measure, domains, self-adjointness, spectrum, resolvent, and
+the projection-valued spectral measure.  It ends when the reader can state
+exactly what a continuum spectral value is and why a resonance is not an
+additional eigenprojection of a self-adjoint Hamiltonian.}
+\input{chapters/core/app_conventions}
+\input{chapters/core/app_notation}
+\input{chapters/core/sec_quantum_foundations}
+
+\learningstage{I-B}{Multiplicity, operator algebras, and Fredholm theory}{
+The spectral measure is now resolved into measurable multiplicity fibers.
+This stage constructs direct integrals, commutants, \vN\ algebras,
+central decompositions, locally convex test spaces, and compact-operator
+methods.  It distinguishes energy fibers, factor decompositions, and genuine
+superselection sectors before any of them is used in scattering theory.}
+\input{chapters/core/sec_functional_operator_algebra}
+\input{chapters/core/sec_hilbert_schmidt_fredholm}
+\input{chapters/problems/problems_stage_I}
+
+\learningstage{II}{Construct scattering data before continuing it}{
+Starting from two-body kinematics and wave packets, this stage derives the
+resolvent, M{\o}ller operators, cross sections, partial waves, and Jost
+functions.  Short-range hypotheses are stated where they are used.  Coulomb,
+three-charge, and QED asymptotics then show exactly which premise fails when
+the free comparison dynamics is chosen incorrectly.}
+\input{chapters/core/sec_textbook_scattering}
+\input{chapters/core/sec_scattering_direct_integral}
+\input{chapters/core/sec_sturm_liouville_jost}
+\input{chapters/core/sec_resonance_definition}
+\input{chapters/core/sec_long_range_ir}
+\input{chapters/core/sec_gauge_aqft}
+\input{chapters/problems/problems_stage_II}
+
+\part{The exact-WKB construction of resonance}
+
+\learningstage{III}{Build the global connection problem}{
+This stage constructs the resonance rather than postulating a complex
+eigenvalue.  Local Riccati branches are Borel resummed, transported through
+Stokes sectors, and assembled into a Wronskian-preserving connection matrix.
+The stage ends when the prohibited incoming coefficient, its zero, its
+derivative, and the decay width can all be calculated.}
+\input{chapters/core/sec_exact_wkb}
+\input{chapters/core/app_connection_matrices}
+\input{chapters/core/sec_wkb_resonance}
+\input{chapters/laboratories/lab_I_stokes_resonance}
+\input{chapters/problems/problems_stage_III}
+
+\learningstage{IV}{Realize one analytic pole in several spaces}{
+The exact-WKB zero is now represented by a continued resolvent, a Feshbach
+operator, Zel'dovich regularization, analytic dilation, and a rigged-space
+functional.  Each construction is derived from its hypotheses and checked
+against the same invariant pole and residue.  The continuum is retained as
+part of the response rather than discarded as background.}
+\input{chapters/core/sec_scattering}
+\input{chapters/core/sec_complex_scaling}
+\input{chapters/core/app_abc_sketch}
+\input{chapters/core/sec_rigged_hilbert}
+\input{chapters/laboratories/lab_II_pole_realizations}
+\input{chapters/core/sec_continuum_response}
+\input{chapters/core/sec_resonance_formulae}
+\input{chapters/core/app_cld_derivation}
+\input{chapters/laboratories/lab_III_continuum}
+\input{chapters/problems/problems_stage_IV}
+
+\part{Radial motion and weakly bound nuclei}
+
+\learningstage{V}{Add a singular endpoint and renormalize monodromy}{
+The origin of a radial equation carries Frobenius data and cannot be treated
+as an ordinary turning point.  This stage derives the Langer correction and
+open-path quantization, then turns regulator independence of the global
+monodromy into a practical renormalization condition.}
+\input{chapters/core/sec_radial_wkb}
+\input{chapters/core/app_langer_map}
+\input{chapters/laboratories/lab_IV_radial_monodromy}
+\input{chapters/problems/problems_stage_V}
+
+\learningstage{VI}{Resolve a few-body continuum with CDCC and complex scaling}{
+This stage derives Jacobi-coordinate few-body Hamiltonians and the
+continuum-discretized coupled-channels equations from the same projection
+logic used for a resonance.  Pseudostates, channel truncation, smoothing, and
+complex-scaled level densities are then applied first to broad and fragmented
+$^6$He resonances, and subsequently to lithium and beryllium-core reactions.
+The reader finishes with a reproducible pole-to-observable convergence
+protocol, not merely a catalogue of applications.}
+\input{chapters/core/sec_nuclear_reaction_foundations}
+\input{chapters/core/sec_few_body_cdcc}
+\input{chapters/laboratories/lab_VI_helium6}
+\input{chapters/laboratories/lab_VI_lithium_beryllium}
+\input{chapters/problems/problems_stage_VI}
+
+\part{Coalescing poles and horizon resonances}
+
+\learningstage{VII}{Continue the quantization condition through an exceptional point}{
+An exceptional point is treated as a multiple zero of the already
+constructed analytic determinant.  Jordan chains, self-orthogonality,
+branch exchange, and geometric phase follow by differentiation and
+continuation; momentum bins separate physical holonomy from continuum
+normalization.}
+\input{chapters/core/sec_exceptional_points}
+\input{chapters/core/app_jordan_resolvent}
+\input{chapters/core/sec_ep_holonomy}
+\input{chapters/laboratories/lab_V_exceptional_point}
+\input{chapters/problems/problems_stage_VII}
+
+\learningstage{VIII}{Turn horizons into a resonance connection problem}{
+The Regge--Wheeler and related master equations are derived before a spectral
+method is chosen.  Horizon conditions are translated into incoming and
+outgoing connection data, after which exact WKB and complex scaling are
+compared for Schwarzschild, charged, and de Sitter geometries, including
+continuum response and coupled channels.}
+\input{chapters/core/sec_black_hole_qnm}
+\input{chapters/core/sec_bh_exact_wkb}
+\input{chapters/core/sec_bh_complex_scaling}
+\input{chapters/laboratories/lab_VII_black_holes}
+\input{chapters/core/sec_bh_desitter}
+\input{chapters/laboratories/lab_VIII_desitter}
+\input{chapters/problems/problems_stage_VIII}
+
+\part{Synthesis and frontiers}
+\chapter{What is invariant and what is chosen}
+\input{chapters/core/sec_unified_dictionary}
+\input{chapters/core/sec_program_development}
+\input{chapters/core/sec_open_problems}
+\input{chapters/core/app_numerical_checklist}
+\input{chapters/core/sec_conclusions}
+
+\appendix
+\part{Computational appendices}
+\input{chapters/appendices/app_resummation_instantons}
+
+\backmatter
+\input{chapters/backmatter/solutions}
+\input{chapters/backmatter/glossary}
+\input{chapters/backmatter/bibliographical_notes}
+\bibliographystyle{utphys}
+\bibliography{ref}
+\input{chapters/backmatter/index_crossrefs}
+\printindex
+
+\end{document}

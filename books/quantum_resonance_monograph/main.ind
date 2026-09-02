@@ -1,0 +1,635 @@
+\begin{theindex}
+
+  \item ABC theorem, 
+		\hyperxindexformat{\see{Aguilar--Balslev--Combes theorem}}{417}
+  \item adiabatic approximation, \hyperpage{208}, \hyperpage{220}, 
+		\hyperpage{230}, \hyperpage{248}
+  \item Aguilar--Balslev--Combes theorem, \hyperpage{124}, 
+		\hyperpage{348}
+  \item algebraic quantum field theory, \hyperpage{83, 84}, 
+		\hyperpage{88}
+  \item analytic dilation, \hyperpage{119}, \hyperpage{212}
+  \item analytic Fredholm theorem, \hyperpage{42}
+  \item antiresonance, \hyperpage{9}, \hyperpage{17}, \hyperpage{70}
+  \item antisymmetrization, \hyperpage{22}, \hyperpage{203}, 
+		\hyperpage{216}, \hyperpage{223, 224}, \hyperpage{229}, 
+		\hyperpage{233, 234}, \hyperpage{237}
+  \item asymptotic completeness, \hyperpage{351}
+
+  \indexspace
+
+  \item background interference, \hyperpage{154}
+  \item Banach space, \hyperpage{31}, \hyperpage{34}
+  \item Berggren completeness relation, \hyperpage{66}, \hyperpage{118}, 
+		\hyperpage{123}, \hyperpage{128--130}, \hyperpage{132}, 
+		\hyperpage{349, 350}
+  \item beryllium nuclei, \hyperpage{x}, \hyperpage{10}, 
+		\hyperpage{209}, \hyperpage{233}
+  \item biorthogonality, \hyperpage{123}, \hyperpage{129}, 
+		\hyperpage{135}, \hyperpage{217}, \hyperpage{224}, 
+		\hyperpage{246}, \hyperpage{249}, \hyperpage{251}, 
+		\hyperpage{349}
+  \item Birman--Schwinger operator, \hyperpage{41}, \hyperpage{46}
+  \item Borel plane, \hyperpage{95}, \hyperpage{351}, \hyperpage{359}
+  \item Borel singularity, \hyperpage{359}
+  \item Borel sum, \hyperxindexformat{\textbf}{359}
+  \item Borel summation, \hyperpage{11}, \hyperpage{95, 96}, 
+		\hyperpage{101}, \hyperpage{177}, \hyperpage{352}
+  \item Borel transform, \hyperpage{95}, \hyperpage{282}, 
+		\hyperxindexformat{\textbf}{359}
+  \item Borel--Pad\'e, 
+		\hyperxindexformat{\see{Borel--Pad\'e approximation}}{417}
+  \item Borel--Pad\'e approximation, \hyperxindexformat{\textbf}{360}
+  \item Born approximation, \hyperpage{205}
+  \item boundary condition
+    \subitem and resummation, \hyperpage{366}
+    \subitem incoming and outgoing, \hyperpage{1}, \hyperpage{3, 4}, 
+		\hyperpage{11--13}, \hyperpage{17}, \hyperpage{23}, 
+		\hyperpage{26}, \hyperpage{41--44}, \hyperpage{49}, 
+		\hyperpage{51--53}, \hyperpage{55, 56}, \hyperpage{59}, 
+		\hyperpage{61}, \hyperpage{64--70}, \hyperpage{74}, 
+		\hyperpage{76}, \hyperpage{78}, \hyperpage{81, 82}, 
+		\hyperpage{89}, \hyperpage{96--98}, 
+		\hyperpage{100, 101}, \hyperpage{116}, 
+		\hyperpage{118--120}, \hyperpage{128}, \hyperpage{130}, 
+		\hyperpage{132}, \hyperpage{155, 156}, 
+		\hyperpage{205, 206}, \hyperpage{209}, \hyperpage{215}, 
+		\hyperpage{220}, \hyperpage{222}, \hyperpage{225}, 
+		\hyperpage{230}, \hyperpage{233}, \hyperpage{236}, 
+		\hyperpage{245}, \hyperpage{273}, \hyperpage{281}, 
+		\hyperpage{318, 319}, \hyperpage{344}, \hyperpage{347}, 
+		\hyperpage{349--351}
+  \item boundary form, \hyperpage{60}
+  \item branch cut, \hyperpage{13}, \hyperpage{65}, \hyperpage{279}, 
+		\hyperpage{283}, \hyperpage{352}
+  \item Breit--Wigner approximation, \hyperpage{viii}, \hyperpage{9}, 
+		\hyperpage{70}, \hyperpage{150}, \hyperpage{152, 153}, 
+		\hyperpage{155, 156}
+  \item Breit--Wigner formula, \hyperpage{153}
+  \item BRST cohomology, \hyperpage{83}, \hyperpage{85}
+
+  \indexspace
+
+  \item CDCC, \hyperpage{x}, \hyperpage{10}, \hyperpage{22, 23}, 
+		\hyperpage{37}, \hyperpage{45}, \hyperpage{59}, 
+		\hyperpage{205}, \hyperpage{207, 208}, 
+		\hyperpage{212--217}, \hyperpage{219--222}, 
+		\hyperpage{225}, \hyperpage{228--231}, 
+		\hyperpage{233--235}, \hyperpage{237}
+    \subitem bin discretization, \hyperpage{214}, \hyperpage{247}
+    \subitem four-body, \hyperpage{214}, \hyperpage{216, 217}, 
+		\hyperpage{233}, \hyperpage{235}, \hyperpage{237}
+    \subitem proton--helium-6 breakup, \hyperpage{225}
+  \item central decomposition, \hyperpage{34}, \hyperpage{86}, 
+		\hyperpage{88, 89}, \hyperpage{202}, \hyperpage{212}, 
+		\hyperpage{223}, \hyperpage{234}, \hyperpage{239}
+  \item Chern number, \hyperpage{251}
+  \item commutant, \hyperpage{31}, \hyperpage{33, 34}, \hyperpage{57}
+  \item compact operator, \hyperpage{37}, \hyperpage{39--42}, 
+		\hyperpage{46}, \hyperpage{77}, \hyperpage{120}, 
+		\hyperpage{125}, \hyperpage{127}
+  \item complex absorbing potential, \hyperpage{122}, \hyperpage{149}
+  \item complex scaling, \hyperpage{4}, \hyperpage{10}, \hyperpage{22}, 
+		\hyperpage{36}, \hyperpage{66}, \hyperpage{73}, 
+		\hyperpage{82}, \hyperpage{98}, \hyperpage{100, 101}, 
+		\hyperpage{119}, \hyperpage{122}, \hyperpage{127}, 
+		\hyperpage{134}, \hyperpage{147}, \hyperpage{149}, 
+		\hyperpage{156}, \hyperpage{209}, \hyperpage{211}, 
+		\hyperpage{217}, \hyperpage{220}, \hyperpage{222}, 
+		\hyperpage{224}, \hyperpage{227, 228}, \hyperpage{231}, 
+		\hyperpage{280}, \hyperpage{282--285}, 
+		\hyperpage{318, 319}, \hyperpage{346}, \hyperpage{348}, 
+		\hyperpage{350}
+    \subitem exterior, \hyperpage{119}, \hyperpage{127}
+    \subitem smooth, \hyperpage{122}
+    \subitem three-body system, \hyperpage{224}
+  \item complex-symmetric operator, \hyperpage{123}, \hyperpage{130}, 
+		\hyperpage{224}, \hyperpage{246}
+  \item conformal Borel mapping, \hyperpage{363}
+  \item conformal map, \hyperpage{363}
+  \item connection coefficient, \hyperpage{viii}, \hyperpage{11}, 
+		\hyperpage{13}, \hyperpage{42--44}, \hyperpage{66}, 
+		\hyperpage{89}, \hyperpage{96--98}, \hyperpage{100}, 
+		\hyperpage{150}, \hyperpage{155, 156}, \hyperpage{230}, 
+		\hyperpage{233}, \hyperpage{282}, \hyperpage{344}, 
+		\hyperpage{346, 347}, \hyperpage{349}
+  \item connection matrix, \hyperpage{155}
+  \item continuum discretization, \hyperxindexformat{\see{CDCC}}{417}
+  \item continuum level density, \hyperpage{12}, \hyperpage{147}, 
+		\hyperpage{217}, \hyperpage{319}
+  \item continuum response, \hyperpage{3}, \hyperpage{150}, 
+		\hyperpage{282}, \hyperpage{285}, \hyperpage{318, 319}
+  \item convergence
+    \subitem resummation, \hyperpage{361}
+  \item Coulomb scattering, \hyperpage{67}
+  \item coupled-channel equation, \hyperpage{205}, \hyperpage{282}, 
+		\hyperpage{284}, \hyperpage{319}, \hyperpage{350}
+  \item cross section, \hyperpage{49}, \hyperpage{53}, \hyperpage{74}, 
+		\hyperpage{76}, \hyperpage{78}, \hyperpage{147}, 
+		\hyperpage{152}, \hyperpage{219}, \hyperpage{229}, 
+		\hyperpage{234}, \hyperpage{237, 238}
+
+  \indexspace
+
+  \item de Sitter spacetime, \hyperpage{318}, \hyperpage{348}
+  \item decomposable operator, \hyperpage{31}, \hyperpage{34}, 
+		\hyperpage{37}, \hyperpage{46}, \hyperpage{57, 58}
+  \item delta expansion, \hyperpage{361}
+  \item dineutron correlation, \hyperpage{229}
+  \item direct integral, \hyperpage{6}, \hyperpage{18}, \hyperpage{22}, 
+		\hyperpage{27}, \hyperpage{31}, \hyperpage{34}, 
+		\hyperpage{37}, \hyperpage{46}, \hyperpage{56}, 
+		\hyperpage{58}, \hyperpage{63}, \hyperpage{81}, 
+		\hyperpage{85}, \hyperpage{88, 89}, \hyperpage{133}, 
+		\hyperpage{351}, \hyperpage{353}
+    \subitem fiber, \hyperpage{34}, \hyperpage{37}, \hyperpage{57}
+  \item dispersion relation
+    \subitem large order, \hyperpage{364}
+  \item distorted-wave approximation, \hyperpage{3}, \hyperpage{202}, 
+		\hyperpage{205}, \hyperpage{209}, \hyperpage{239}
+  \item divergent series, \hyperxindexformat{\textbf}{356}
+  \item Dollard comparison dynamics, \hyperpage{74}, \hyperpage{76}, 
+		\hyperpage{81}
+  \item double-differential breakup cross section, \hyperpage{229}
+  \item dressing state, \hyperpage{26}, \hyperpage{67}, \hyperpage{74}, 
+		\hyperpage{78}, \hyperpage{80}, \hyperpage{82}, 
+		\hyperpage{88, 89}, \hyperpage{351}
+
+  \indexspace
+
+  \item effective Hamiltonian, \hyperpage{53}, \hyperpage{116, 117}, 
+		\hyperpage{152}, \hyperpage{248}
+  \item eikonal approximation, \hyperpage{208}
+  \item essential spectrum, \hyperpage{24}
+  \item exact quantization condition, \hyperpage{174, 175}, 
+		\hyperpage{282}
+  \item exact WKB, \hyperpage{viii}, \hyperpage{4}, \hyperpage{11, 12}, 
+		\hyperpage{21}, \hyperpage{24}, \hyperpage{43}, 
+		\hyperpage{58, 59}, \hyperpage{66}, \hyperpage{82}, 
+		\hyperpage{93}, \hyperpage{95}, \hyperpage{98}, 
+		\hyperpage{100, 101}, \hyperpage{118}, \hyperpage{155}, 
+		\hyperpage{174}, \hyperpage{206}, \hyperpage{209}, 
+		\hyperpage{211}, \hyperpage{220}, \hyperpage{280}, 
+		\hyperpage{282, 283}, \hyperpage{344}, 
+		\hyperpage{346, 347}, \hyperpage{349, 350}
+    \subitem resonance residue, \hyperpage{155}
+    \subitem resummation dictionary, \hyperpage{365}
+  \item exceptional point, \hyperpage{4}, \hyperpage{10--12}, 
+		\hyperpage{25}, \hyperpage{117}, \hyperpage{123}, 
+		\hyperpage{130}, \hyperpage{135}, \hyperpage{155}, 
+		\hyperpage{245--252}, \hyperpage{346}, 
+		\hyperpage{349, 350}
+    \subitem defectiveness, \hyperpage{155}, \hyperpage{245}, 
+		\hyperpage{247}
+  \item extended completeness relation, \hyperpage{224}
+
+  \indexspace
+
+  \item factor, \hyperpage{85}
+  \item Faddeev equation, \hyperpage{77}, \hyperpage{207--209}
+  \item Fano profile, \hyperpage{150}, \hyperpage{154}, \hyperpage{156}
+  \item Feshbach operator, \hyperpage{151}
+  \item Feshbach projection, \hyperpage{22, 23}, \hyperpage{43}, 
+		\hyperpage{53}, \hyperpage{117, 118}, \hyperpage{151}, 
+		\hyperpage{204}, \hyperpage{206}, \hyperpage{209}, 
+		\hyperpage{211}, \hyperpage{245}, \hyperpage{248}, 
+		\hyperpage{346}
+  \item Fock space
+    \subitem infrared limitation, \hyperpage{78}
+  \item folding interaction, \hyperpage{217}, \hyperpage{221}, 
+		\hyperpage{233}, \hyperpage{235}
+  \item fragmented resonance, \hyperpage{228}
+  \item Fredholm determinant, \hyperpage{37}, \hyperpage{42}, 
+		\hyperpage{45}
+  \item Fredholm theory, \hyperpage{37}, \hyperpage{41--46}, 
+		\hyperpage{70}, \hyperpage{125--127}, \hyperpage{150}, 
+		\hyperpage{155}, \hyperpage{222}
+  \item Frobenius solution, \hyperpage{21}, \hyperpage{61}, 
+		\hyperpage{66}, \hyperpage{174, 175}, \hyperpage{347}
+
+  \indexspace
+
+  \item Galerkin method, \hyperpage{37}, \hyperpage{45}
+  \item Gamow state, 
+		\hyperxindexformat{\see{Gamow--Siegert state}}{417}
+  \item Gamow--Siegert state, \hyperpage{12}, \hyperpage{51}, 
+		\hyperpage{63}, \hyperpage{69, 70}, \hyperpage{118}, 
+		\hyperpage{120}, \hyperpage{128}, \hyperpage{130}, 
+		\hyperpage{133--135}, \hyperpage{229}, \hyperpage{273}, 
+		\hyperpage{347}
+  \item Gauss law, \hyperpage{2}, \hyperpage{83}, \hyperpage{87, 88}
+  \item Gaussian expansion method, \hyperpage{214}, \hyperpage{223}
+  \item Gaussian moment, \hyperpage{357}
+  \item Gaussian regularization, \hyperpage{128}
+  \item geometric phase, \hyperpage{248, 249}
+  \item GNS construction, \hyperpage{17}, \hyperpage{30}, 
+		\hyperpage{33}, \hyperpage{66}, \hyperpage{68, 69}, 
+		\hyperpage{78}, \hyperpage{81, 82}, \hyperpage{84, 85}, 
+		\hyperpage{89}, \hyperpage{126}, \hyperpage{282}
+  \item Green function, \hyperpage{62}
+  \item Gribov problem, \hyperpage{85}
+
+  \indexspace
+
+  \item Hardy class, \hyperpage{134}
+  \item $^6$He, \hyperpage{222}
+  \item ${}^6$He, \hyperpage{222}, \hyperpage{225}
+  \item Hilbert space, \hyperpage{vi}, \hyperpage{viii}, 
+		\hyperpage{2--4}, \hyperpage{6}, \hyperpage{9}, 
+		\hyperpage{18, 19}, \hyperpage{24}, \hyperpage{27}, 
+		\hyperpage{31}, \hyperpage{33, 34}, \hyperpage{39}, 
+		\hyperpage{60}, \hyperpage{66}, \hyperpage{68}, 
+		\hyperpage{83--85}, \hyperpage{88, 89}, 
+		\hyperpage{118}, \hyperpage{126}, \hyperpage{132, 133}, 
+		\hyperpage{214}, \hyperpage{344}, \hyperpage{353}
+  \item Hilbert--Schmidt operator, \hyperpage{40}, \hyperpage{42}, 
+		\hyperpage{45, 46}
+  \item holonomy, \hyperpage{12}, \hyperpage{220}, \hyperpage{249--252}, 
+		\hyperpage{346}, \hyperpage{349}
+  \item horizon boundary condition, \hyperpage{10}, \hyperpage{17}, 
+		\hyperpage{127}, \hyperpage{273}, \hyperpage{279--282}, 
+		\hyperpage{284}, \hyperpage{318--320}, \hyperpage{348}, 
+		\hyperpage{350}
+
+  \indexspace
+
+  \item infrared problem, \hyperpage{13}, \hyperpage{26}, 
+		\hyperpage{33}, \hyperpage{67}, \hyperpage{74}, 
+		\hyperpage{78}, \hyperpage{80}, \hyperpage{82}, 
+		\hyperpage{208}, \hyperpage{351}
+  \item instanton, \hyperxindexformat{\textbf}{356}
+  \item instanton action, \hyperxindexformat{\textbf}{364}
+
+  \indexspace
+
+  \item Jacobi coordinate, \hyperpage{1}, \hyperpage{77}, 
+		\hyperpage{202}, \hyperpage{208}, \hyperpage{211}, 
+		\hyperpage{214}, \hyperpage{216}, \hyperpage{221}, 
+		\hyperpage{223, 224}, \hyperpage{229}, \hyperpage{231}, 
+		\hyperpage{233, 234}, \hyperpage{237}, \hyperpage{241}
+  \item Jordan chain, \hyperpage{39}, \hyperpage{126}, \hyperpage{245}, 
+		\hyperpage{249}
+  \item Jost function, \hyperpage{vi}, \hyperpage{4}, \hyperpage{26}, 
+		\hyperpage{41, 42}, \hyperpage{49, 50}, \hyperpage{55}, 
+		\hyperpage{58, 59}, \hyperpage{64--68}, \hyperpage{70}, 
+		\hyperpage{74}, \hyperpage{82}, \hyperpage{96}, 
+		\hyperpage{116}, \hyperpage{129}, \hyperpage{132}, 
+		\hyperpage{344}
+  \item Jost solution, \hyperpage{64}
+  \item Jost-function derivative, \hyperpage{66}
+
+  \indexspace
+
+  \item Kerr black hole, \hyperpage{277}, \hyperpage{282}, 
+		\hyperpage{284}, \hyperpage{350}
+
+  \indexspace
+
+  \item Langer correction, \hyperpage{61}, \hyperpage{66}, 
+		\hyperpage{93}, \hyperpage{174}, \hyperpage{176}, 
+		\hyperpage{178}, \hyperpage{347}, \hyperpage{350}
+  \item large-order behavior, \hyperpage{364}
+  \item large-order relation, \hyperpage{359}
+  \item late-time tail, \hyperpage{283}
+  \item lateral Borel sum, \hyperpage{95}, \hyperpage{344}
+  \item lateral sum, \hyperpage{359}
+  \item least term, \hyperpage{358}
+  \item left eigenvector, \hyperpage{43}
+  \item limit-circle endpoint, \hyperpage{61}
+  \item limit-point endpoint, \hyperpage{61}
+  \item line shape, \hyperpage{150}
+  \item Lippmann--Schwinger equation, \hyperpage{37}, \hyperpage{49}, 
+		\hyperpage{52}, \hyperpage{74}, \hyperpage{116}, 
+		\hyperpage{207}, \hyperpage{217}
+  \item lithium nuclei, \hyperpage{x}, \hyperpage{10}, \hyperpage{209}, 
+		\hyperpage{233}
+  \item locally convex space, \hyperpage{18}, \hyperpage{26, 27}, 
+		\hyperpage{36}, \hyperpage{51}, \hyperpage{129}, 
+		\hyperpage{132--134}, \hyperpage{228}, \hyperpage{344}, 
+		\hyperpage{353}
+
+  \indexspace
+
+  \item maximal operator, \hyperpage{60}
+  \item measurable, \hyperpage{31}
+  \item measure theory, \hyperpage{6}, \hyperpage{19}, 
+		\hyperpage{26, 27}, \hyperpage{31}, \hyperpage{34}, 
+		\hyperpage{37}, \hyperpage{46}, \hyperpage{57, 58}, 
+		\hyperpage{60}, \hyperpage{81}, \hyperpage{85}, 
+		\hyperpage{89}, \hyperpage{349--351}, \hyperpage{353}
+  \item meromorphic resolvent, \hyperpage{42}
+  \item method comparison, \hyperpage{368}
+  \item minimal operator, \hyperpage{60}
+  \item M{\o}ller operator, 
+		\hyperxindexformat{\see{wave operator}}{417}
+  \item momentum-bin regularization, \hyperpage{349}
+  \item monodromy, \hyperpage{11, 12}, \hyperpage{21}, \hyperpage{66}, 
+		\hyperpage{93}, \hyperpage{95}, \hyperpage{97}, 
+		\hyperpage{174--177}, \hyperpage{217}, \hyperpage{248}, 
+		\hyperpage{251}, \hyperpage{281}, \hyperpage{347}, 
+		\hyperpage{350}, \hyperpage{352}
+
+  \indexspace
+
+  \item normal, \hyperpage{25}
+  \item nuclear breakup, \hyperpage{59}, \hyperpage{77}, 
+		\hyperpage{154}, \hyperpage{202}, \hyperpage{204}, 
+		\hyperpage{207--209}, \hyperpage{213}, 
+		\hyperpage{216, 217}, \hyperpage{219}, \hyperpage{225}, 
+		\hyperpage{229}, \hyperpage{233}, \hyperpage{236--238}, 
+		\hyperpage{240, 241}
+
+  \indexspace
+
+  \item observable algebra, \hyperpage{78}, \hyperpage{83--85}, 
+		\hyperpage{88}, \hyperpage{351}
+  \item ODM, \hyperxindexformat{\see{order-dependent mapping}}{417}
+  \item on-shell scattering matrix, \hyperpage{57}
+  \item operator
+    \subitem adjoint and self-adjoint, \hyperpage{vi}, \hyperpage{3, 4}, 
+		\hyperpage{6}, \hyperpage{9}, \hyperpage{19--27}, 
+		\hyperpage{29, 30}, \hyperpage{33, 34}, 
+		\hyperpage{36, 37}, \hyperpage{59--61}, \hyperpage{63}, 
+		\hyperpage{67, 68}, \hyperpage{116--118}, 
+		\hyperpage{120}, \hyperpage{124, 125}, 
+		\hyperpage{127, 128}, \hyperpage{133}, \hyperpage{212}, 
+		\hyperpage{245}, \hyperpage{249}, \hyperpage{346, 347}, 
+		\hyperpage{353}
+    \subitem closed, \hyperpage{2}, \hyperpage{24}, \hyperpage{29}, 
+		\hyperpage{85}, \hyperpage{119, 120}, \hyperpage{245}
+  \item optical potential, \hyperpage{53}, \hyperpage{202}, 
+		\hyperpage{219}, \hyperpage{238}
+  \item optical theorem, \hyperpage{53}
+  \item optimal truncation, \hyperpage{358}
+  \item optimized perturbation theory, \hyperpage{177}, 
+		\hyperxindexformat{\textbf}{361}
+  \item order-dependent mapping, \hyperxindexformat{\textbf}{363}
+  \item orthogonality-condition model, \hyperpage{223}
+
+  \indexspace
+
+  \item Pad\'e approximant, \hyperpage{282}, \hyperpage{352}, 
+		\hyperxindexformat{\textbf}{360}
+  \item partial-wave expansion, \hyperpage{vi}, \hyperpage{32}, 
+		\hyperpage{49}, \hyperpage{53}, \hyperpage{57}, 
+		\hyperpage{59}, \hyperpage{69}, \hyperpage{74}, 
+		\hyperpage{129}, \hyperpage{211}, \hyperpage{214}, 
+		\hyperpage{221}, \hyperpage{229}, \hyperpage{234}
+  \item perturbation series, \hyperpage{357}
+  \item phase shift, \hyperpage{53}, \hyperpage{73}, \hyperpage{153}
+  \item PMS, 
+		\hyperxindexformat{\see{principle of minimal sensitivity}}{417}
+  \item principle of minimal sensitivity, \hyperpage{361}
+  \item projection-valued measure, \hyperpage{19}
+  \item pseudospectrum, \hyperpage{18}, \hyperpage{25}, \hyperpage{120}, 
+		\hyperpage{149}, \hyperpage{246}, \hyperpage{285}
+  \item pseudostate, \hyperpage{22}, \hyperpage{37}, \hyperpage{45}, 
+		\hyperpage{118}, \hyperpage{149}, \hyperpage{156}, 
+		\hyperpage{209}, \hyperpage{211}, \hyperpage{214}, 
+		\hyperpage{216, 217}, \hyperpage{219--223}, 
+		\hyperpage{225}, \hyperpage{228}, \hyperpage{230}, 
+		\hyperpage{233, 234}, \hyperpage{237}, 
+		\hyperpage{240, 241}, \hyperpage{247}, \hyperpage{285}, 
+		\hyperpage{349}
+  \item pseudostate method, \hyperxindexformat{\see{CDCC}}{417}
+
+  \indexspace
+
+  \item QNM, \hyperxindexformat{\see{quasinormal mode}}{417}
+  \item quartic integral, \hyperpage{357}
+  \item quasinormal mode, \hyperpage{12}, \hyperpage{17}, 
+		\hyperpage{273}, \hyperpage{277}, \hyperpage{279}, 
+		\hyperpage{281--285}, \hyperpage{318}, \hyperpage{348}
+    \subitem excitation factor, \hyperpage{282}, \hyperpage{346}, 
+		\hyperpage{349}
+
+  \indexspace
+
+  \item $R$-matrix, \hyperpage{206}, \hyperpage{209}
+  \item radial equation, \hyperpage{50}, \hyperpage{59, 60}, 
+		\hyperpage{132}, \hyperpage{174}, \hyperpage{178}, 
+		\hyperpage{211}, \hyperpage{216}, \hyperpage{234}, 
+		\hyperpage{273}, \hyperpage{282}
+  \item Regge--Wheeler equation, \hyperpage{273, 274}, \hyperpage{277}, 
+		\hyperpage{279}, \hyperpage{285}
+  \item Reissner--Nordstr\"om black hole, \hyperpage{280}, 
+		\hyperpage{282}, \hyperpage{285}
+  \item renormalization group, \hyperpage{176}, \hyperpage{251}, 
+		\hyperpage{350}
+  \item reproducibility
+    \subitem resummation, \hyperpage{366}
+  \item residue, \hyperpage{43}
+  \item resolvent, \hyperpage{vi}, \hyperpage{2}, \hyperpage{4}, 
+		\hyperpage{6}, \hyperpage{9, 10}, \hyperpage{13}, 
+		\hyperpage{18}, \hyperpage{20}, \hyperpage{24, 25}, 
+		\hyperpage{27}, \hyperpage{29, 30}, \hyperpage{37}, 
+		\hyperpage{40--46}, \hyperpage{52, 53}, \hyperpage{58}, 
+		\hyperpage{62}, \hyperpage{67, 68}, \hyperpage{70}, 
+		\hyperpage{73}, \hyperpage{100, 101}, \hyperpage{116}, 
+		\hyperpage{119, 120}, \hyperpage{123--126}, 
+		\hyperpage{132--134}, \hyperpage{147}, 
+		\hyperpage{150, 151}, \hyperpage{157}, \hyperpage{208}, 
+		\hyperpage{217}, \hyperpage{225}, \hyperpage{237}, 
+		\hyperpage{245}, \hyperpage{248, 249}, \hyperpage{285}, 
+		\hyperpage{344}, \hyperpage{346}, \hyperpage{348--351}, 
+		\hyperpage{353}
+  \item resolvent set, \hyperpage{18}, \hyperpage{24}, \hyperpage{37}, 
+		\hyperpage{124}
+  \item resonance
+    \subitem residue, \hyperpage{9}, \hyperpage{11--13}, \hyperpage{20}, 
+		\hyperpage{26}, \hyperpage{37}, \hyperpage{43--45}, 
+		\hyperpage{59}, \hyperpage{65--68}, \hyperpage{70}, 
+		\hyperpage{82}, \hyperpage{89}, \hyperpage{100, 101}, 
+		\hyperpage{124}, \hyperpage{126}, \hyperpage{132--135}, 
+		\hyperpage{150--156}, \hyperpage{222}, \hyperpage{227}, 
+		\hyperpage{229--231}, \hyperpage{239}, \hyperpage{248}, 
+		\hyperpage{281--283}, \hyperpage{285}, \hyperpage{319}, 
+		\hyperpage{344}, \hyperpage{346, 347}, \hyperpage{349}, 
+		\hyperpage{351, 352}
+  \item resonance formula, \hyperpage{150}
+  \item resummation, \hyperxindexformat{\textbf}{356}
+    \subitem summary, \hyperpage{369}
+  \item Riccati equation, \hyperpage{11}, \hyperpage{64}, 
+		\hyperpage{93}, \hyperpage{130}
+  \item Riemann sheet, \hyperpage{9}, \hyperpage{65}, 
+		\hyperpage{68, 69}, \hyperpage{73}, \hyperpage{247}, 
+		\hyperpage{319}, \hyperpage{346}
+  \item Riesz projection, \hyperpage{6}, \hyperpage{37}, \hyperpage{39}, 
+		\hyperpage{45}, \hyperpage{119, 120}, \hyperpage{127}, 
+		\hyperpage{228}, \hyperpage{349}
+  \item rigged Hilbert space, \hyperpage{viii}, \hyperpage{4}, 
+		\hyperpage{36}, \hyperpage{118}, \hyperpage{132, 133}
+  \item rigged space, 
+		\hyperxindexformat{\see{rigged Hilbert space}}{417}
+  \item right eigenvector, \hyperpage{43}
+  \item Rosen--Morse potential, \hyperpage{98}
+
+  \indexspace
+
+  \item saddle point, \hyperpage{364}
+  \item scattering
+    \subitem Coulomb, \hyperpage{3}, \hyperpage{13}, \hyperpage{41}, 
+		\hyperpage{50}, \hyperpage{55}, \hyperpage{67}, 
+		\hyperpage{74}, \hyperpage{76--78}, \hyperpage{80--82}, 
+		\hyperpage{119}, \hyperpage{124}, \hyperpage{129}, 
+		\hyperpage{154}, \hyperpage{174}, \hyperpage{176, 177}, 
+		\hyperpage{203}, \hyperpage{206}, \hyperpage{208}, 
+		\hyperpage{211}, \hyperpage{215, 216}, \hyperpage{219}, 
+		\hyperpage{221}, \hyperpage{225}, \hyperpage{233}, 
+		\hyperpage{236--238}, \hyperpage{350}
+    \subitem multichannel, \hyperpage{43}, \hyperpage{55}, 
+		\hyperpage{58}, \hyperpage{73}, \hyperpage{152}, 
+		\hyperpage{156}, \hyperpage{220}
+    \subitem on-shell, \hyperpage{32}, \hyperpage{46}, \hyperpage{52}, 
+		\hyperpage{56--58}, \hyperpage{151}, \hyperpage{207}, 
+		\hyperpage{240}
+    \subitem three-body Coulomb, \hyperpage{3}, \hyperpage{67}, 
+		\hyperpage{74}, \hyperpage{77}, \hyperpage{80, 81}, 
+		\hyperpage{208}, \hyperpage{219}, \hyperpage{350}
+  \item scattering matrix, \hyperpage{3}, \hyperpage{18}, 
+		\hyperpage{46}, \hyperpage{51}, \hyperpage{56--59}, 
+		\hyperpage{68}, \hyperpage{70}, \hyperpage{100}, 
+		\hyperpage{152, 153}, \hyperpage{219, 220}, 
+		\hyperpage{319}
+  \item Schatten ideal, \hyperpage{40}
+  \item Schwarzschild black hole, \hyperpage{274}, \hyperpage{277}, 
+		\hyperpage{279}, \hyperpage{285}, \hyperpage{318}
+  \item self-adjoint extension, \hyperpage{21}, \hyperpage{29}, 
+		\hyperpage{61}
+  \item self-energy, \hyperpage{23}, \hyperpage{117, 118}, 
+		\hyperpage{151--153}, \hyperpage{211}, \hyperpage{245}, 
+		\hyperpage{349}
+  \item self-orthogonality, \hyperpage{25}, \hyperpage{123}, 
+		\hyperpage{130}, \hyperpage{245, 246}
+  \item spectral measure, \hyperpage{viii}, \hyperpage{1}, 
+		\hyperpage{13}, \hyperpage{19}, \hyperpage{23, 24}, 
+		\hyperpage{30}, \hyperpage{37}, \hyperpage{57}, 
+		\hyperpage{59}, \hyperpage{62, 63}, \hyperpage{150}, 
+		\hyperpage{220}, \hyperpage{353}
+  \item spectral shift function, \hyperpage{157}
+  \item spectral theorem, \hyperpage{vi}, \hyperpage{1}, \hyperpage{6}, 
+		\hyperpage{19}, \hyperpage{22}, \hyperpage{30, 31}, 
+		\hyperpage{36}, \hyperpage{63}, \hyperpage{67}
+  \item spectrum, \hyperpage{24}
+    \subitem continuous, \hyperpage{1}, \hyperpage{6}, \hyperpage{18}, 
+		\hyperpage{20}, \hyperpage{41}, \hyperpage{68}, 
+		\hyperpage{100}, \hyperpage{119, 120}, \hyperpage{217}, 
+		\hyperpage{225}
+    \subitem essential, \hyperpage{2}, \hyperpage{18}, 
+		\hyperpage{24, 25}, \hyperpage{98}, \hyperpage{100}, 
+		\hyperpage{120}, \hyperpage{127}
+    \subitem point, \hyperpage{vi}, \hyperpage{viii}, \hyperpage{6}, 
+		\hyperpage{9}, \hyperpage{20, 21}, \hyperpage{24--26}, 
+		\hyperpage{30}, \hyperpage{37}, \hyperpage{39--42}, 
+		\hyperpage{44, 45}, \hyperpage{68}, \hyperpage{82}, 
+		\hyperpage{97}, \hyperpage{101}, \hyperpage{119, 120}, 
+		\hyperpage{122}, \hyperpage{124}, \hyperpage{126, 127}, 
+		\hyperpage{133, 134}, \hyperpage{147--149}, 
+		\hyperpage{156}, \hyperpage{175}, \hyperpage{203}, 
+		\hyperpage{214}, \hyperpage{220}, \hyperpage{223, 224}, 
+		\hyperpage{230}, \hyperpage{234}, \hyperpage{240}, 
+		\hyperpage{245--248}, \hyperpage{274}, \hyperpage{280}, 
+		\hyperpage{282}, \hyperpage{284, 285}, \hyperpage{319}, 
+		\hyperpage{344}, \hyperpage{346, 347}, \hyperpage{350}, 
+		\hyperpage{352, 353}
+  \item split property, \hyperpage{89}
+  \item spurious pole, \hyperpage{361}
+  \item square-well potential, \hyperpage{65}
+  \item stabilization method, \hyperpage{149}, \hyperpage{234}
+  \item Stokes automorphism, \hyperpage{11}, \hyperpage{95}, 
+		\hyperpage{350}, \hyperpage{365}
+  \item Stokes curve, \hyperpage{95}, \hyperpage{97, 98}, 
+		\hyperpage{130}, \hyperpage{281}
+  \item strong commutation, \hyperpage{56}
+  \item strong-coupling expansion, \hyperpage{362}
+  \item strongly continuous, \hyperpage{20}
+  \item Sturm--Liouville operator, \hyperpage{59}
+  \item Sturm--Liouville theory, \hyperpage{1}, \hyperpage{59}, 
+		\hyperpage{67}
+    \subitem limit-point/limit-circle, \hyperpage{61, 62}, 
+		\hyperpage{67}
+  \item superradiance, \hyperpage{282}, \hyperpage{350}
+  \item superselection sector, \hyperpage{78}, \hyperpage{81}, 
+		\hyperpage{86}, \hyperpage{88}
+
+  \indexspace
+
+  \item tensor product
+    \subitem gauge constraint, \hyperpage{22}, \hyperpage{87, 88}, 
+		\hyperpage{211}
+  \item Teukolsky equation, \hyperpage{282}
+  \item three-body Coulomb scattering, \hyperpage{67}
+  \item three-body resonance, \hyperpage{222}
+  \item threshold law, \hyperpage{53}, \hyperpage{154}
+  \item topology, \hyperpage{vi}, \hyperpage{1, 2}, \hyperpage{6}, 
+		\hyperpage{13}, \hyperpage{19}, \hyperpage{24}, 
+		\hyperpage{26, 27}, \hyperpage{30}, \hyperpage{33}, 
+		\hyperpage{36, 37}, \hyperpage{68}, \hyperpage{85}, 
+		\hyperpage{89}, \hyperpage{133}, \hyperpage{176}, 
+		\hyperpage{247}, \hyperpage{251, 252}, \hyperpage{283}, 
+		\hyperpage{344}, \hyperpage{349}, \hyperpage{353}
+  \item tortoise coordinate, \hyperpage{127}, \hyperpage{273}, 
+		\hyperpage{279, 280}, \hyperpage{283}, \hyperpage{318}
+  \item trace class, \hyperpage{19}
+  \item trace-class operator, \hyperpage{19}, \hyperpage{27}, 
+		\hyperpage{40}, \hyperpage{42}, \hyperpage{147}, 
+		\hyperpage{157}
+  \item transition density, \hyperpage{235}
+  \item transseries, \hyperpage{350}, \hyperpage{365}
+  \item truncation contract, \hyperpage{2}
+  \item turning point, \hyperpage{95}, \hyperpage{98}, 
+		\hyperpage{175, 176}, \hyperpage{281, 282}, 
+		\hyperpage{349}
+
+  \indexspace
+
+  \item unbounded operator, \hyperpage{viii}, \hyperpage{1}, 
+		\hyperpage{9}, \hyperpage{27}, \hyperpage{29}, 
+		\hyperpage{61}, \hyperpage{100}, \hyperpage{118}, 
+		\hyperpage{120}, \hyperpage{344}, \hyperpage{353}
+
+  \indexspace
+
+  \item variational perturbation theory, \hyperpage{177}, 
+		\hyperxindexformat{\textbf}{361}
+  \item Volterra equation, \hyperpage{64}
+  \item \vN\ algebra, \hyperpage{vi}, \hyperpage{18}, \hyperpage{27}, 
+		\hyperpage{33, 34}, \hyperpage{81}, \hyperpage{86}, 
+		\hyperpage{88}
+  \item Voros period, \hyperpage{365}
+  \item Voros symbol, \hyperpage{96, 97}, \hyperpage{176}
+
+  \indexspace
+
+  \item wave operator, \hyperpage{vi}, \hyperpage{2}, \hyperpage{27}, 
+		\hyperpage{32}, \hyperpage{50, 51}, \hyperpage{56}, 
+		\hyperpage{58}, \hyperpage{74}, \hyperpage{81}
+  \item wave packet, \hyperpage{1}, \hyperpage{20}, \hyperpage{30}, 
+		\hyperpage{49}, \hyperpage{51}, \hyperpage{73}, 
+		\hyperpage{78}, \hyperpage{135}, \hyperpage{205}, 
+		\hyperpage{209}, \hyperpage{214}, \hyperpage{349}
+  \item wave-function renormalization, \hyperpage{151}
+  \item weak operator topology, \hyperpage{19}
+  \item Weyl alternative, \hyperpage{61}
+  \item Weyl--Titchmarsh function, \hyperpage{62}
+  \item Wigner threshold law, \hyperpage{154}
+  \item Wigner time delay, \hyperpage{73}, \hyperpage{153}, 
+		\hyperpage{346}
+  \item Wolfram Language, \hyperpage{366}
+  \item Wronskian, \hyperpage{3}, \hyperpage{11}, \hyperpage{13}, 
+		\hyperpage{49}, \hyperpage{55}, \hyperpage{59}, 
+		\hyperpage{62}, \hyperpage{64}, \hyperpage{66, 67}, 
+		\hyperpage{70}, \hyperpage{97}, \hyperpage{100}, 
+		\hyperpage{209}, \hyperpage{281}, \hyperpage{344}
+
+  \indexspace
+
+  \item Zel'dovich norm, 
+		\hyperxindexformat{\see{Zel'dovich regularization}}{417}
+  \item Zel'dovich regularization, \hyperpage{viii}, \hyperpage{4}, 
+		\hyperpage{12}, \hyperpage{49}, \hyperpage{66}, 
+		\hyperpage{128--130}, \hyperpage{132}
+  \item Zerilli equation, \hyperpage{273}, \hyperpage{279}
+  \item zero-dimensional field theory, \hyperpage{357}
+
+\end{theindex}
