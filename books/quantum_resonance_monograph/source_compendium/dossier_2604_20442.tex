@@ -1,0 +1,1768 @@
+% Generated from arXiv:2604.20442; see tools/build_source_compendium.py.
+\section{Calculation laboratory VIII-A: Schwarzschild and extremal Reissner--Nordstrom QNMs}
+\label{lab:2604_20442}
+
+\calculationroute
+  {The Regge--Wheeler/Zerilli reduction, QNM boundary conditions, analytic dilation of the tortoise coordinate, and basis stability.}
+  {The Regge--Wheeler/Zerilli--Moncrief reduction, complex-scaled basis construction, matrix elements, stability tests, numerical spectra, Leaver benchmarks, continuum density, and complex-range Gaussians.}
+  {Construct the complex-scaled black-hole matrix problem, identify stable QNMs, and reproduce the Schwarzschild and extremal-RN benchmarks.}
+
+This Laboratory reconstructs the calculation underlying
+Ref.~\cite{Ogawa:2026veu}.  The Regge--Wheeler and
+Zerilli--Moncrief derivations are given once in
+Sec.~\ref{sec:black-hole-qnm}, including the charged background; general
+complex scaling is fixed in Stage IV.  We therefore begin with the basis and
+matrix construction specific to the QNM calculation.
+
+\begin{comment}
+\subsection{Review of Regge--Wheeler and Zerilli--Moncrief equations}\label{src:2604_20442:sec:qnm}
+% =========================
+% BEGIN INSERTED FROM QNMnote_Hirose.tex (translated and condensed)
+% =========================
+\subsubsection{Linearized Einstein equations around a fixed background}
+We briefly review the perturbative setup that leads to the $1$-dimensional wave equation used in the complex-scaling analysis.
+Let the spacetime metric be decomposed as (we use geometrized units $c=G=1$)
+\begin{align}
+ g_{\mu\nu} =g^{(0)}_{\mu\nu}+h_{\mu\nu},
+\end{align}
+where $g^{(0)}_{\mu\nu}$ is the background metric and $h_{\mu\nu}$ is a linear perturbation satisfying $|h_{\mu\nu}|\ll 1$.
+To first order in $h_{\mu\nu}$, the Christoffel symbol is decomposed as
+\begin{align}
+ \Gamma^{\lambda}_{\mu\nu}
+ =\Gamma^{\lambda~(0)}_{\mu\nu}+\Gamma^{\lambda~(1)}_{\mu\nu},
+\end{align}
+with
+\begin{align}
+ \Gamma^{\lambda~(1)}_{\mu\nu}
+ =\frac{1}{2}g^{(0)\lambda\rho}
+ \left(
+ \nabla_{\mu}h_{\nu\rho}
+ +\nabla_{\nu}h_{\mu\rho}
+ -\nabla_{\rho}h_{\mu\nu}
+ \right),
+\end{align}
+where $\nabla_{\mu}$ denotes the covariant derivative compatible with the background metric $g^{(0)}_{\mu\nu}$.
+The Ricci tensor similarly splits into
+\begin{align}
+ R_{\mu\nu}=R^{(0)}_{\mu\nu}+R^{(1)}_{\mu\nu},
+\end{align}
+and for a vacuum background satisfying $R^{(0)}_{\mu\nu}=0$ the linearized Einstein equation is simply
+\begin{align}
+ R^{(1)}_{\mu\nu}=0.
+\end{align}
+This is the starting point for the Regge--Wheeler and Zerilli formalisms.
+\subsubsection{Odd/even decomposition on Schwarzschild}
+For the Schwarzschild background,
+\begin{align}
+ \rmd s^2
+ =-f(r)\rmd t^2+f(r)^{-1}\rmd r^2+r^2(\rmd\theta^2+\sin^2\theta\dd\phi^2),
+ \qquad
+ f(r)=1-\frac{2M}{r},
+ \label{src:2604_20442:eq:Schwarzschild-metric}
+\end{align}
+metric perturbations can be expanded in tensor harmonics on~$S^2$~\cite{Regge:1957td,Zerilli:1970wzz}.
+Under the parity transformation $(\theta,\phi)\to(\pi-\theta,\phi+\pi)$, these perturbations decompose into two independent sectors:
+odd-parity (axial) modes transforming as $(-1)^{l+1}$ and  even-parity (polar) modes transforming as $(-1)^{l}$.
+After imposing the Regge--Wheeler gauge, the two sectors decouple.
+In the odd-parity sector, one may write the perturbation in terms of two radial-temporal amplitudes, traditionally denoted by $h_0^{l m}(t,r)$ and $h_1^{l m}(t,r)$.
+The linearized Einstein equations then reduce to a constraint equation and a dynamical equation.
+Introducing the master variable as
+\begin{align}
+ Q(t,r)=\frac{f(r)}{r}h_1(t,r),
+\end{align}
+one finds a single second-order wave equation after using the tortoise coordinate $r_*$ defined by
+\begin{align}
+ r_*=r+2M\ln\left(\frac{r}{2M}-1\right),
+ \qquad
+ \frac{\rmd}{\rmd r_*}=f(r)\frac{\rmd}{\rmd r}.
+\end{align}
+Assuming harmonic time dependence,
+\begin{align}
+ Q(t,r)=\psi_{l}(r)\rme^{\rmi\omega t},
+\end{align}
+the odd-parity perturbation equation takes the Schr\"odinger-type form
+\begin{align}
+ \left[ -\frac{\rmd^2}{\rmd r_*^2}+\vsup{V}{RW}_{l}(r) \right]\psi_{l}(r)=\omega^2\psi_{l}(r),
+ \label{src:2604_20442:eq:RW_review_inserted}
+\end{align}
+with the Regge--Wheeler potential~\cite{Regge:1957td}
+\begin{align}
+ \vsup{V}{RW}_{l}(r)
+ =f(r)
+ \left(
+ \frac{l(l+1)}{r^2}-\frac{6M}{r^3}
+ \right).
+ \label{src:2604_20442:eq:RWpotential}
+\end{align}
+This is the basic radial equation analyzed in the present work.
+\subsubsection{Parity sectors and related master equations}
+For later reference, it is useful to recall that Schwarzschild perturbations admit both odd- and even-parity master equations.
+The odd-parity potential may be written more generally as~\cite{Kokkotas:1999bd}
+\begin{align}
+ \vsup{V}{odd}_{l}(r)
+ =f(r)
+ \left( \frac{l(l+1)}{r^2}+\frac{2\sigma M}{r^3} \right),
+ \qquad
+ \sigma=1-s^2,
+\end{align}
+where $s=0$, $1$, and $2$ correspond to scalar, electromagnetic, and gravitational perturbations, respectively.
+For gravitational odd-parity perturbations $s=2$, this reduces to Eq.~\eqref{src:2604_20442:eq:RW_review_inserted}.
+The even-parity (Zerilli) sector obeys a different $1$-dimensional wave equation with potential~\cite{Zerilli:1970wzz}
+\begin{align}
+ \vsup{V}{even}_{l}(r)
+ =f(r)
+ \frac{ 2n^2(n+1)r^3+6n^2Mr^2+18nM^2r+18M^3 }{ r^3(nr+3M)^2 },
+ \qquad
+ n=\frac{(l-1)(l+2)}{2}.
+\end{align}
+Although the present paper focuses on the odd-parity Regge--Wheeler problem, these related potentials are useful when discussing extensions of the complex-scaling framework beyond the simplest benchmark.
+\subsubsection{Quasinormal-mode boundary conditions and Leaver benchmark}
+Quasinormal modes (QNMs) are defined by purely ingoing behavior at the event horizon and purely outgoing behavior at spatial infinity.
+Since $\vsup{V}{RW}_{l}(r)\to 0$ as $r_*\to\pm\infty$, the asymptotic
+solutions behave as
+\begin{align}
+ \psi_{l}(r)\sim \rme^{-\rmi\omega r_*}
+ \qquad r_*\to-\infty,
+\end{align}
+and
+\begin{align}
+ \psi_{l}(r)\sim \rme^{+\rmi\omega r_*}
+ \qquad r_*\to+\infty.
+\end{align}
+In the Schwarzschild problem these conditions can be implemented very accurately by Leaver's continued-fraction method, which therefore provides an important benchmark for the complex-scaling calculations reported below.
+For convenience, numerical values used for comparison are collected in Sec.~\ref{src:2604_20442:sec:leaver}.
+% =========================
+% END INSERTED FROM QNMnote_Hirose.tex
+% =========================
+\subsubsection{Extremal Reissner--Nordstr\"om black hole}
+The Reissner--Nordstr\"om black hole is a charged generalization of the Schwarzschild solution with a charge $Q$.
+The metric is modified by replacing $f(r)$ in Eq.~\eqref{src:2604_20442:eq:Schwarzschild-metric} with
+\begin{align}
+    \vsub{f}{RN}(r)=1-\frac{2M}{r}+\frac{Q^2}{r^2},
+\end{align}
+while the angular part of the metric is unchanged.
+The charge $Q$ has a maximum value, $|Q|\leq M$. If maximally charged such that $|Q|=M$ such a Reissner--Nordstr\"om black hole is called extremal.
+Gravitational perturbations with the Reissner--Nordstr\"om background have been studied in Refs.~\cite{Zerilli:1974ai,Moncrief:1974gw, Moncrief:1974ng}.
+In particular, its odd-parity perturbation obeys Eq.~\eqref{src:2604_20442:eq:RW_review_inserted} but the potential differs from the Regge--Wheeler potential.
+In the Reissner--Nordstr\"om case, the relation between $r_*$ and $r$ is obtained by solving
+\begin{align}
+    \frac{\rmd r}{\rmd r_*} = \frac{\Delta}{r^2},
+\end{align}
+and the corresponding potential is given by~\cite{Chandrasekhar:book}
+\begin{align}
+%    \vsup{V}{odd}_{\pm}(r)=\frac{\Delta}{r^5}\left(A r-q_{\mp}+\frac{4Q^2}{r}\right),
+    \vsupb{V}{odd}{RN,s}(r)=\frac{\Delta}{r^5}\left(A r-q_{s}+\frac{p_sQ^2}{r}\right),
+\end{align}
+where
+\begin{align}
+    \Delta&=r^2-2Mr+Q^2, \\
+    A&=l(l+1),\\
+    q_0&=2,\\
+    q_1&=3M-\sqrt{9M^2+4Q^2(l-1)(l+2)},\\
+    q_2&=3M+\sqrt{9M^2+4Q^2(l-1)(l+2)}.\\
+    p_0&=2,\\
+    p_1&=p_2=4.
+\end{align}
+This potential provides the Zerilli--Moncrief equation.\footnote{%
+Related charged backgrounds have also been considered in asymptotically AdS
+settings, for example in studies of Reissner--Nordstr\"om--AdS black holes
+\cite{Berti:2003ud,Liu:2025reu}.}
+$\vsupb{V}{odd}{RN,0}$, $\vsupb{V}{odd}{RN,1}$, and $\vsupb{V}{odd}{RN,2}$ denote the potentials contributing to scalar, electromagnetic, and gravitational perturbations, respectively.\footnote{Note that the Reissner--Nordstr\"om metric is a solution to Einstein--Maxwell equations. The electromagnetic perturbations must be considered as well as the gravitational perturbations.}
+In the limit $Q\to0$, $\vsup{V}{odd}_{2}$ leads to the Regge--Wheeler potential~\eqref{src:2604_20442:eq:RWpotential}.
+Finally, let us comment on the applicability of Leaver's method to the Reissner--Nordstr\"om case, since this point motivates our CSM-based approach.
+For a nonextremal Reissner--Nordstr\"om black hole, the Zerilli--Moncrief equation still admits the standard QNM boundary-value problem, and one may formulate a Leaver-type continued-fraction method.
+In that case, the geometry has two distinct horizons,
+\begin{align}
+    r_{\pm}=M\pm\sqrt{M^2-Q^2},
+\end{align}
+so that the radial equation has regular singular points at $r=r_+$ and $r=r_-$, and the solution can be expanded in a Frobenius series around the outer horizon (see Sec.~\ref{src:2604_20442:sec:leaver}).
+This situation changes qualitatively in the extremal limit $|Q|=M$, where the two horizons merge.
+Because of this degeneration of the horizon structure, the nature of the singularity at the horizon is altered, and the radial equation is no longer in the standard form assumed in the naive Leaver construction.
+In particular, the degenerate horizon gives rise to an irregular singular point, so that the usual Frobenius expansion about the outer horizon is not available in its standard form.
+For this reason, the original continued-fraction method cannot be applied naively to extremal Reissner--Nordstr\"om black holes, and one must either substantially reformulate the method or adopt a different framework.
+This is one of the reasons why it is worthwhile to develop a formulation, such as CSM, that is less directly tied to the Frobenius structure of the radial equation.
+\subsection{Direct-measurement approach to resonance poles in scattering theory}\label{src:2604_20442:sec:csm}
+As in quantum mechanics, many problems of interest are governed by Schr\"odinger-type equations, that is, elliptic-regular differential equations.
+The Regge--Wheeler or Zerilli--Moncrief equation is also one of Schr\"odinger-type wave equations.
+In this section, let us review a well-established technique, complex scaling method (CSM), to solve a general (time-independent) Schr\"odinger equation and to analyze quantum resonance/scattering theory.
+\subsubsection{Theoretical and mathematical overview of CSM}
+Since black-hole QNMs are resonances rather than ordinary bound states, their mode functions satisfy outgoing boundary conditions and are not square-integrable in the usual sense.
+For a Schr\"odinger-type radial equation,\footnote{%
+In the standard formulation, the radial function is often written as~$\psi(r)$.
+In the present work, however, the complex scaling is implemented in the tortoise coordinate $r_*$, so we rewrite the wave function as~$\psi(r_*)$ in the theoretical discussion for simplicity.
+In the numerical implementation, the potential is still evaluated as~$V(r(r_*))$; for the Schwarzschild case, the inverse relation $r=r(r_*)$ is written explicitly in terms of the Lambert $W$ function.}
+\begin{align}
+    \left[ -\frac{\rmd^2}{\rmd r_*^2}+V(r) \right]\psi(r_*)
+    = \omega^2 \psi(r_*),
+    \label{src:2604_20442:eq:csm-review-rw-like}
+\end{align}
+%\Hirose{exactly, $\psi$ depends on $r$ such as $\psi(r)$, not $\psi(r_*)$. But the following B.C. is correct except for $\psi(r_*)\to\psi(r)$.}
+the QNM boundary conditions require
+\begin{align}
+    \psi(r_*) \sim
+    \begin{cases}
+        \rme^{-\rmi\omega r_*} & r_* \to -\infty,\\
+        \rme^{+\rmi\omega r_*} & r_* \to +\infty,
+    \end{cases}
+\end{align}
+with $\im \omega < 0$ for decaying modes.
+Because of the sign of $\im \omega$, these solutions typically grow exponentially along at least one asymptotic direction and hence do not belong to the standard Hilbert space $L^2$.
+This is the basic reason why QNMs are naturally interpreted as resonance poles of the analytically continued resolvent or S-matrix, rather than as ordinary normal modes \cite{Siegert:1939,Newton:1960}.
+The complex scaling method (CSM) provides a way to convert this resonance problem into a non-Hermitian spectral problem~\cite{Myo:2014ypa}.
+In the simplest global version, one performs the complex dilation
+\begin{align}
+    r_* \mapsto r_* \rme^{\rmi\theta},
+    \qquad
+    0 < \theta < \frac{\pi}{2},
+\end{align}
+which induces a non-unitary similarity transformation
+\begin{align}
+    H_\theta = U_\theta H U_\theta^{-1}.
+\end{align}
+For a $1$-dimensional Schr\"odinger operator $H=-\rmd^2/\rmd r_*^2+V(r)$, the transformed operator takes the schematic form
+\begin{align}
+    H_\theta
+    =
+    - \rme^{-2\rmi\theta}\frac{\rmd^2}{\rmd r_*^2}
+    + V(r(r_* \rme^{\rmi\theta})),
+    \label{src:2604_20442:eq:csm-review-global}
+\end{align}
+provided the potential admits a suitable analytic continuation.
+$r=r(r_*)$ is understood through the inverse tortoise-coordinate relation.
+In a nutshell, since the QNM boundary condition is changed by, for instance,
+\begin{align}
+    \rme^{\pm\rmi\omega r_*}
+    \mapsto \rme^{\pm\rmi(\re \omega+\rmi\im \omega) r_* \rme^{\rmi\theta}}
+    = \rme^{\mp (\re \omega \sin\theta + \im \omega \cos\theta) r_*}
+    \rme^{\pm \rmi (\re \omega \cos\theta - \im \omega \sin\theta) r_*},
+\end{align}
+the complex-scaled wave function converges if $\re \omega \sin\theta + \im \omega \cos\theta > 0$, or $\theta > \tan^{-1} (-\im \omega/\re \omega)$.
+The mathematical foundation is the Aguilar--Balslev--Combes (ABC) theorem \cite{Aguilar:1971ve,Balslev:1971vb}, together with subsequent refinements~\cite{Simon1972BalslevCombes}.
+Its essential consequences are the following.
+First, resonance states satisfying outgoing boundary conditions become square-integrable after complex scaling.
+Second, bound-state and resonance eigenvalues are independent of $\theta$ within the allowed analyticity wedge.
+Third, the continuous spectrum is rotated into the lower half of the complex energy plane.
+For the eigenvalue problem \eqref{src:2604_20442:eq:csm-review-rw-like}, the natural spectral parameter is
+\begin{align}
+    \lambda = \omega^2,
+\end{align}
+and the continuum on the positive real $\lambda$ axis is rotated by an angle
+$2\theta$.
+In this way, resonances that were hidden on the unphysical sheet become exposed
+as isolated complex eigenvalues of the non-Hermitian operator $H_\theta$
+\cite{Moiseyev:1998gjp,Myo:2014ypa}.\footnote{%
+For black-hole perturbations, however, a global scaling of the entire radial coordinate may be unnecessarily strong.
+What is actually problematic is the asymptotic region, where the outgoing-wave behavior diverges.
+This motivates the use of exterior complex scaling (ECS), in which the coordinate is left unchanged in an inner region and rotated only beyond a finite onset radius $R_0$ \cite{Simon1979ECS}.
+A standard choice is
+\begin{align}
+    g_{\theta,R_0}(r_*)
+    =
+    \begin{cases}
+        r_*, & r_* \le R_0,\\
+        R_0 + (r_*-R_0)\rme^{\rmi\theta}, & r_* > R_0,
+    \end{cases}
+    \label{src:2604_20442:eq:ecs-map-review}
+\end{align}
+or the analogous deformation on both asymptotic sides when needed.
+The corresponding ECS operator is then obtained by replacing $r_*$ with $g_{\theta,R_0}(r_*)$ and transforming derivatives accordingly.
+The advantage of ECS is that it preserves the interaction region while regularizing only the asymptotic outgoing sector.
+This is especially natural in black-hole problems, where one wishes to keep the near-potential-barrier region intact and modify only the asymptotic domain responsible for the non-normalizable QNM behavior.
+}
+Operationally, the role of complex scaling is therefore not merely to provide a numerical trick.
+Rather, it changes the functional setting of the problem so that resonances can be treated on the same footing as discrete eigenstates of a non-Hermitian
+operator.
+This point is particularly important when one wants to discuss not only individual QNM frequencies but also the relation between resonant and continuum sectors in a common spectral language.
+In that setting, one works with right and left eigenfunctions,
+\begin{align}
+    H_\theta \ket{\psi_n^R}
+    &= \lambda_n \ket{\psi_n^R},
+    \\
+    H_\theta^\dagger \ket{\psi_n^L}
+    &= \lambda_n^* \ket{\psi_n^L},
+\end{align}
+which satisfy a biorthogonal normalization,
+\begin{align}
+    \braket{\psi_m^L | \psi_n^R}
+    = \delta_{mn}.
+\end{align}
+The resolvent then admits the formal spectral representation
+\begin{align}
+    (z-H_\theta)^{-1}
+    \sim
+    \sum_n
+    \frac{ \ket{\psi_n^R}\bra{\psi_n^L} }{ z-\lambda_n }
+    + \text{continuum contribution},
+    \label{src:2604_20442:eq:csm-review-resolvent}
+\end{align}
+which makes explicit how isolated resonances and the rotated continuum enter a single non-Hermitian spectral decomposition~\cite{Moiseyev:1998gjp,Myo:2014ypa}.
+From the viewpoint of the present paper, this framework is attractive for two
+reasons.
+First, it gives a direct eigenvalue formulation of black-hole QNMs without imposing the outgoing boundary condition by hand at infinity in the original real coordinate.
+Second, it is less tightly tied to the specific Frobenius or continued-fraction structure of a particular radial equation.
+This flexibility is important when one moves from the Schwarzschild Regge--Wheeler problem to the Reissner--Nordstr\"om family, and especially
+toward the extremal limit, where the analytic structure at the horizon becomes more delicate and the naive Leaver construction is no longer available in its usual form.
+For this reason, CSM and ECS provide a natural framework for the present analysis of QNM spectra in both Schwarzschild and Reissner--Nordstr\"om black holes.
+In addition to isolated resonance poles, the same framework should in principle also allow one to study continuum observables, such as the continuum level density, which may be relevant to branch-cut contributions
+and late-time tails (see Sec.~\ref{src:2604_20442:app:cld}).
+\end{comment}
+\subsection{Finite-basis realization of the black-hole resonance problem}
+\subsubsection{Numerical implementation and some schemes of choosing bases}
+\paragraph{Variational procedure to eigenvalue problem}
+We now turn to the practical implementation of the complex-scaled eigenvalue problem.
+The purpose of this section is not to introduce a new mathematical structure, but rather to explain how the complex-scaled radial equation is converted into a finite-dimensional matrix problem suitable for numerical computation.
+As discussed in the previous subsection, the essential effect of complex scaling is to transform the outgoing-wave resonance problem into a non-Hermitian eigenvalue problem.
+For the Schwarzschild case, this begins with the Regge--Wheeler equation,
+which has the Schr\"odinger-type form
+\begin{align}
+    \left[ -\frac{\rmd^2}{\rmd r_*^2} + V_l(r) \right]
+    \psi_l(r_*)
+    =
+    \omega^2 \psi_l(r_*).
+    \label{src:2604_20442:eq:rw_schr}
+\end{align}
+After complex scaling, the kinetic term acquires the factor $\rme^{-2 \rmi \theta}$, while the potential is evaluated along the deformed contour.
+The resulting equation can then be treated as an eigenvalue problem for the complex-scaled operator.
+To solve this problem numerically, we expand the complex-scaled wave function in a finite set of square-integrable basis functions and apply the Rayleigh--Ritz variational procedure.
+In the present work, we adopt several types of Gaussian basis functions of both even and odd parity.
+This choice is convenient because such a basis is analytically simple, provides stable matrix elements for the kinetic term, and allows a flexible coverage of the tortoise-coordinate domain through a geometric progression of Gaussian ranges.
+The complex-scaled differential equation is thereby reduced to a generalized matrix eigenvalue problem for the expansion coefficients.
+This basis-expansion strategy is particularly suitable for the present purpose.
+First, it is fully compatible with the CSM framework, in which resonance wave functions become effectively $L^2$-integrable after complex scaling.
+Second, it does not rely on a Frobenius expansion tied to a specific horizon structure, unlike continued-fraction approaches of Leaver type.
+This point is important for our broader goal of treating not only the Schwarzschild problem but also the Reissner--Nordstr\"om family within a common framework.
+In what follows, we first construct the matrix representation of the complex-scaled Regge--Wheeler operator in a simple Gaussian basis.
+We then explain how the generalized complex eigenvalue problem is solved in practice and how physically relevant QNM frequencies are identified among the resulting eigenvalues.
+\paragraph{Demonstration in a simpler case: $\rme^{-\alpha r_*^2}$ and $r_* \rme^{-\alpha r_*^2}$}
+As a first implementation of the complex scaling method, we discretize the
+complex-scaled Regge--Wheeler equation in a Gaussian basis.
+The purpose of this subsection is mainly illustrative:
+it provides a direct realization of the CSM eigenvalue problem in terms of
+explicit basis functions and matrix elements, and it serves as a useful
+reference point before introducing more efficient basis choices in the next
+subsubsection.
+We begin with the Regge--Wheeler equation derived in
+Sec.~\ref{sec:black-hole-qnm}, with the potential in
+Eq.~\eqref{eq:rw-potential-derived}.
+Under complex scaling, the equation is transformed into
+\begin{align}
+    \left[
+        -\rme^{-2\rmi\theta}\frac{\rmd^2}{\rmd r_*^2}
+        + V_l^\theta(r_*)
+    \right]
+    \psi_l^\theta(r_*\rme^{\rmi\theta})
+    =
+    (\omega^\theta)^2 \psi_l^\theta(r_*\rme^{\rmi\theta}),
+    \label{src:2604_20442:eq:rw-csm-gaussian}
+\end{align}
+where $V_l^\theta$ denotes the potential evaluated along the
+complex-rotated contour.
+To solve Eq.~\eqref{src:2604_20442:eq:rw-csm-gaussian}, we use the Gaussian expansion method~\cite{Hiyama:2003cu} and expand the complex-scaled
+wave function in square-integrable Gaussian basis functions.
+Since, in practice, an expansion restricted to even functions alone is not
+sufficient to reproduce the quasinormal frequencies accurately, we include
+both even- and odd-parity Gaussian functions:
+\begin{align}
+    \psi_l^\theta(r_*\rme^{\rmi\theta})
+    =
+    \sum_{i=1}^{i_{\max}}
+    C_{l i}^{\theta,\mathrm{(even)}}
+    \vsup{\phi_i}{(even)}(r_*)
+    +
+    \sum_{i=1}^{i_{\max}}
+    C_{l i}^{\theta,\mathrm{(odd)}}
+    \vsup{\phi_i}{(odd)}(r_*).
+    \label{src:2604_20442:eq:gaussian-expansion}
+\end{align}
+$i_{\max}$ is the truncation order of a basis.
+We choose
+\begin{align}
+    \vsup{\phi}{(even)}_i(r_*)
+    &= \vsup{N}{(even)}_i
+    \rme^{ -\left(\frac{r_*}{r_i}\right)^2 }
+    = \vsup{N}{(even)}_i \rme^{-\alpha_i r_*^2},
+    \\
+    \vsup{\phi}{(odd)}_i(r_*)
+    &= \vsup{N}{(odd)}_i
+    \left(\frac{r_*}{r_i}\right) \rme^{ -\left(\frac{r_*}{r_i}\right)^2 }
+    = \vsup{N}{(odd)}_i (\sqrt{\alpha_i}\, r_*) \rme^{-\alpha_i r_*^2},
+\end{align}
+with
+\begin{align}
+    \alpha_i = \frac{1}{r_i^2}.
+\end{align}
+The normalization constants are chosen as
+\begin{align}
+    \vsup{N}{(even)}_i
+    = \left( \frac{2\alpha_i}{\pi} \right)^{1/4},
+    \qquad
+    \vsup{N}{(odd)}_i
+    = \left( \frac{2^{5}\alpha_i}{\pi} \right)^{1/4}.
+\end{align}
+The Gaussian ranges are taken in geometric progression,
+\begin{align}
+    r_i = r_{*0}\, a^{\,i-1},
+    \qquad
+    a = \left( \frac{r_{*\max}}{r_{*0}} \right)^{1/(i_{\max}-1)},
+    \label{src:2604_20442:eq:gaussian-ranges}
+\end{align}
+so that the basis efficiently covers both short- and long-distance regions in the tortoise coordinate.
+Applying the Rayleigh--Ritz variational procedure to the expansion
+\eqref{src:2604_20442:eq:gaussian-expansion}, we obtain a generalized complex eigenvalue
+problem,
+\begin{align}
+    \sum_j \left[ H_{ij}^\theta - (\omega^\theta)^2 N_{ij} \right]
+    C_j^\theta
+    = 0,
+    \label{src:2604_20442:eq:generalized-evp-gaussian}
+\end{align}
+where the Hamiltonian matrix has the block form
+\begin{align}
+    H_{ij}^\theta
+    =
+    \begin{pmatrix}
+        T_{ij}^{\theta,\mathrm{(even)}}
+        +
+        V_{l,ij}^{\theta,\mathrm{(even)}}
+        &
+        V_{l,ij}^{\theta,\mathrm{(even\mbox{-}odd)}}
+        \\
+        V_{l,ij}^{\theta,\mathrm{(odd\mbox{-}even)}}
+        &
+        T_{ij}^{\theta,\mathrm{(odd)}}
+        +
+        V_{l,ij}^{\theta,\mathrm{(odd)}}
+    \end{pmatrix},
+\end{align}
+and the overlap matrix is
+\begin{align}
+    N =
+    \begin{pmatrix}
+        \vsup{N}{(even)}_{ij} & 0 \\
+        0 & \vsup{N}{(odd)}_{ij}
+    \end{pmatrix}.
+\end{align}
+The overlap matrix elements are given analytically by
+\begin{align}
+    \vsup{N}{(even)}_{ij}
+    &= \int_{-\infty}^{\infty} \rmd r_*\,
+    \vsup{\phi}{(even)}_i(r_*) \vsup{\phi}{(even)}_j(r_*)
+    = \vsup{N}{(even)}_i \vsup{N}{(even)}_j
+    \frac{\sqrt{\pi}}{(\alpha_i+\alpha_j)^{1/2}},
+    \\
+    \vsup{N_{ij}}{(odd)}
+    &= \int_{-\infty}^{\infty} \rmd r_*\,
+    \vsup{\phi}{(odd)}_i(r_*) \vsup{\phi}{(odd)}_j(r_*)
+    = \vsup{N}{(odd)}_i \vsup{N}{(odd)}_j \sqrt{\alpha_i\alpha_j}
+    \frac{\sqrt{\pi}}{2(\alpha_i+\alpha_j)^{3/2}}.
+\end{align}
+Similarly, the kinetic-energy matrix elements can also be evaluated in closed
+form:
+\begin{align}
+    T_{ij}^{\theta,\mathrm{(even)}}
+    &= \rme^{-2\rmi\theta} \vsup{N}{(even)}_i \vsup{N}{(even)}_j
+    \frac{ 2\sqrt{\pi}\,\alpha_i\alpha_j }{ (\alpha_i+\alpha_j)^{3/2} },
+    \\
+    T_{ij}^{\theta,\mathrm{(odd)}}
+    &=
+    \rme^{-2\rmi\theta} \vsup{N}{(odd)}_i \vsup{N}{(odd)}_j
+    \frac{ 3\sqrt{\pi}\,(\alpha_i\alpha_j)^{3/2} }{ (\alpha_i+\alpha_j)^{5/2} }.
+\end{align}
+The potential matrix elements are expressed as\footnote{%
+In the present implementation, the practical upper bound on the scaling angle is not set by the resonance physics itself, but by the convergence of the basis representation.
+The Gaussian basis, $\rme^{- (\alpha_i+\alpha_j) \rme^{-2 \rmi \theta} r_*^2}$, converges only if $\cos2\theta>0$, i.e., $\theta<\pi/4$.
+More generally, in black-hole problems the inverse relation $r=r(r_*)$ may develop nontrivial branch structures after analytic continuation, so that the allowed range of the scaling angle can be restricted not only by the basis representation but also by the branch structure of $r(r_*)$ itself.}
+\begin{align}
+    V_{l,ij}^{\theta,\mathrm{(even)}}
+    &= \rme^{-\rmi\theta} \vsup{N}{(even)}_i \vsup{N}{(even)}_j
+    \int_{-\infty}^{\infty} \rmd r_*\,
+    V_l(r)\, \rme^{-(\alpha_i+\alpha_j)\rme^{-2\rmi\theta}r_*^2},
+    \\
+    V_{l,ij}^{\theta,\mathrm{(odd)}}
+    &= \rme^{-3\rmi\theta} \vsup{N}{(odd)}_i \vsup{N}{(odd)}_j
+    \sqrt{\alpha_i\alpha_j}\int_{-\infty}^{\infty} \rmd r_*\,
+    V_l(r)\, r_*^2 \rme^{-(\alpha_i+\alpha_j)\rme^{-2\rmi\theta}r_*^2},
+    \\
+    V_{l,ij}^{\theta,\mathrm{(even\mbox{-}odd)}}
+    &= \rme^{-2\rmi\theta} \vsup{N}{(even)}_i \vsup{N}{(odd)}_j
+    \sqrt{\alpha_j}\int_{-\infty}^{\infty} \rmd r_*\,
+    V_l(r)\, r_* \rme^{-(\alpha_i+\alpha_j)\rme^{-2\rmi\theta}r_*^2},
+    \\
+    V_{l,ij}^{\theta,\mathrm{(odd\mbox{-}even)}}
+    &= V_{l,ji}^{\theta,\mathrm{(even\mbox{-}odd)}}.
+\end{align}
+Here $r=r(r_*)$ is understood through the inverse tortoise-coordinate relation.
+For Schwarzschild spacetime, this relation may be written explicitly in terms
+of the Lambert $W$ function, which is convenient for the numerical evaluation
+of the potential matrix elements.
+The resulting matrix is complex symmetric, and the quasinormal frequencies are
+obtained by solving the generalized complex eigenvalue problem
+\eqref{src:2604_20442:eq:generalized-evp-gaussian}.
+Although this Gaussian discretization is not yet the most efficient basis for
+the present problem, it is conceptually transparent and provides a direct
+illustration of how the CSM formulation can be implemented in practice.
+This representation therefore serves as a useful starting point before turning
+to improved basis choices in the next subsubsection.
+\paragraph{Variations of Gaussian basis functions and diagonalization}
+In addition to the Gaussian basis introduced in the previous subsubsection, it is
+useful to consider several alternative basis sets.
+The purpose of this subsubsection is to summarize the candidate basis functions
+used in our exploration of the CSM eigenvalue problem.
+While the real range Gaussian basis already provides a direct implementation of
+the CSM eigenvalue problem, other basis choices can offer improved flexibility
+for oscillatory or resonance-like wave functions.
+\begin{itemize}
+    \item \textbf{Real range Gaussian}
+    The wave function is expanded as
+    \begin{align}
+        \psi^\theta(r_* \rme^{\rmi\theta})
+        &=
+        \sum_{i=1}^{i_{\max}}
+        \vsup{C}{even}_i \vsup{N}{even}_i \rme^{-\alpha_i r_*^2}
+        +
+        \sum_{i=1}^{i_{\max}}
+        \vsup{C}{odd}_i \vsup{N}{odd}_i (\sqrt{\alpha_i}\, r_*) \rme^{-\alpha_i r_*^2}.
+    \end{align}
+%    \item \textbf{Complex range Gaussian}
+%    The wave function is expanded as
+%    \begin{align}
+%        \psi^\theta(r_* \rme^{\rmi\theta})
+%        &=
+%        \sum_{i=1}^{i_{\max}}
+%        \vsup{C}{even}_{1,i} \vsup{N}{even}_{1,i}
+%        \rme^{-(1+\rmi\beta)\alpha_i r_*^2}
+%        +
+%        \sum_{i=1}^{i_{\max}}
+%        \vsup{C}{even}_{2,i} \vsup{N}{even}_{2,i}
+%        \rme^{-(1-\rmi\beta)\alpha_i r_*^2}
+%        \notag\\
+%        &\quad
+%        +
+%        \sum_{i=1}^{i_{\max}}
+%        \vsup{C}{odd}_{1,i} \vsup{N}{odd}_{1,i}
+%        r_* \rme^{-(1+\rmi\beta)\alpha_i r_*^2}
+%        +
+%        \sum_{i=1}^{i_{\max}}
+%        \vsup{C}{odd}_{2,i} \vsup{N}{odd}_{2,i}
+%        r_* \rme^{-(1-\rmi\beta)\alpha_i r_*^2},
+%    \end{align}
+%    where
+%    \begin{align}
+%        \beta = \frac{\pi}{2}.
+%    \end{align}
+%    In the present implementation, this value is fixed.
+    \item \textbf{Polynomial $\times$ real range Gaussian}
+    The wave function is expanded as
+    \begin{align}
+        \psi^\theta(r_* \rme^{\rmi\theta})
+        &=
+        \sum_{p=0}^{p_{\max}}
+        \sum_{i=1}^{i_{\max}}
+        C_i^{p} N_i^{p}
+        \left( \sqrt{\alpha_i}\, r_* \right)^p
+        \rme^{-\alpha_i r_*^2}.
+    \end{align}
+    $p_{\max}$ is the highest degree of the polynomial of~$r_*$;
+    for each~$i$, the basis is spanned by~$1$, $r_*$, $r_*^2$, \dots, $r_*^{p_{\max}}$ with the Gaussian factor.
+    \item \textbf{sin/cos $\times$ real range Gaussian}
+    The wave function is expanded as
+    \begin{align}
+        \psi^\theta(r_* \rme^{\rmi\theta})
+        &=
+        \sum_{i=1}^{i_{\max}}
+        C_i^{\sin} N_i^{\sin}
+        \sin\!\left( \sqrt{\alpha_i}\, r_* \right)
+        \rme^{-\alpha_i r_*^2}
+        \notag\\
+        &\quad
+        +
+        \sum_{i=1}^{i_{\max}}
+        C_i^{\cos} N_i^{\cos}
+        \cos\!\left( \sqrt{\alpha_i}\, r_* \right)
+        \rme^{-\alpha_i r_*^2}.
+    \end{align}
+\end{itemize}
+The Real range Gaussian basis corresponds to the Polynomial $\times$ real range Gaussian one with $p_{\max}=1$.
+%The Complex range Gaussian basis is somewhat similar to the sin/cos $\times$ real range Gaussian one.
+Among these candidates, the Polynomial or sin/cos $\times$ real range Gaussian basis is expected to be
+particularly effective for representing oscillatory behavior while maintaining
+the analytic convenience of Gaussian matrix elements.
+After choosing a basis set, we represent the complex-scaled wavefunction as
+\begin{align}
+    \psi^\theta(r_* \rme^{\rmi\theta})
+    = \sum_i c_i^\theta \phi_i(r_*),
+\end{align}
+where $\{\phi_i\}$ denotes one of the basis sets introduced above.
+Substituting this expansion into the complex-scaled wave equation and applying
+the Rayleigh--Ritz procedure, we obtain the generalized eigenvalue problem
+\begin{align}
+    H_\theta c
+    =
+    \lambda N c,
+    \qquad
+    \lambda = \omega^2,
+    \label{src:2604_20442:eq:gevp-diag}
+\end{align}
+where $H_\theta$ is the complex-scaled Hamiltonian matrix,
+$N$ is the overlap matrix of the non-orthogonal basis,
+and $c$ is the coefficient vector.
+For basis sets with sufficiently mild overlap, one may solve
+Eq.~\eqref{src:2604_20442:eq:gevp-diag} directly as a generalized complex eigenvalue problem.
+In practice, however, the basis functions used here are often strongly
+non-orthogonal, and the overlap matrix may contain nearly linearly dependent
+directions.
+To improve numerical stability, we therefore orthogonalize the basis before
+the final diagonalization whenever necessary.
+More precisely, we first diagonalize the overlap matrix,
+\begin{align}
+    N = U K U^\dagger,
+\end{align}
+where
+\begin{align}
+    K = \diag(\kappa_1,\kappa_2,\dots)
+\end{align}
+contains the eigenvalues of $N$, and $U$ is the corresponding eigenvector
+matrix.
+Small eigenvalues of $N$ indicate nearly redundant directions in the truncated
+basis.
+We therefore discard basis components whose overlap eigenvalues satisfy
+\begin{align}
+    |\kappa_i| \le \epsilon_N,
+\end{align}
+with $\epsilon_N$ a numerical cutoff.
+We set $\epsilon_N=10^{-5}$, a value often adopted empirically.
+After this truncation, the Hamiltonian is transformed to the orthonormalized
+basis according to
+\begin{align}
+    \Tilde{H}_\theta
+    =
+    K^{-1/2} U^\dagger H_\theta U K^{-1/2},
+    \label{src:2604_20442:eq:orth-ham}
+\end{align}
+where only the retained subspace is understood.
+The generalized eigenvalue problem~\eqref{src:2604_20442:eq:gevp-diag} is thereby reduced to
+the ordinary eigenvalue problem
+\begin{align}
+    \Tilde{H}_\theta \Tilde{c} = \lambda \Tilde{c}.
+    \label{src:2604_20442:eq:ordinary-evp}
+\end{align}
+We then diagonalize the complex matrix
+$\Tilde{H}_\theta$
+and obtain a set of complex eigenvalues $\lambda_k$.
+The corresponding quasinormal-frequency candidates are defined by
+\begin{align}
+    \omega_k = \sqrt{\lambda_k},
+\end{align}
+where the physically relevant branch is selected by the usual QNM convention,
+namely
+\begin{align}
+    \im \omega_k < 0.
+\end{align}
+In the present implementation, this orthogonalization step is particularly
+important for the polynomial and trigonometric Gaussian bases, for which the
+overlap matrix can become ill-conditioned as the basis size increases.
+The orthogonalized formulation substantially improves the numerical stability
+of the diagonalization and suppresses spurious directions associated with
+near-linear dependence in the original non-orthogonal basis.
+It should be emphasized that the output of a single diagonalization is not yet
+sufficient to identify the physical QNMs.
+The resulting spectrum generally contains not only resonance candidates but
+also discretized continuum states.
+For this reason, the physical QNM frequencies are identified only after the
+stability analysis described below, in particular through their dependence on
+the scaling angle, basis size, and basis parameters.
+\subsubsection{Stability analysis and identification of QNM frequencies}
+The eigenvalues obtained from a single diagonalization generally contain not only resonance candidates but also discretized continuum states and basis-dependent artifacts.
+Physical QNM frequencies are therefore identified through their stability under variations of the complex-scaling angle $\theta$.
+In particular, resonance eigenvalues are expected to remain nearly invariant as $\theta$ is varied, whereas continuum-related eigenvalues typically move along the rotated continuum.
+A second diagnostic is the dependence on the basis size.
+Genuine QNM frequencies should approach stable values as the basis is enlarged.
+One should also examine the dependence on the basis parameters, such as the range parameters of the Gaussian basis.
+Physical resonances are expected to be much less sensitive to such changes than spurious states.
+Only eigenvalues that are simultaneously stable against variations of $\theta$, basis size, and basis parameters are identified as physical QNM frequencies.
+When reference results are available, such as those obtained by Leaver's method, the identified QNM frequencies should also be compared with them in order to assess the numerical accuracy of the method.
+\subsection{Numerical simulation of QNM via CSM}\label{src:2604_20442:sec:numerics}
+\subsubsection{Benchmark strategy}
+The complex-scaling eigenvalues shown in this section are compared with the standard Schwarzschild QNM data obtained by Leaver's continued-fraction method and others summarized in Sec.~\ref{src:2604_20442:sec:leaver}.
+In the present paper, the main role of this benchmark is not to rederive the continued-fraction formalism itself, but to use its established numerical values as a reference for identifying stable resonance eigenvalues under variations of the scaling angle, basis choice, and radial cutoff.
+When an isolated eigenvalue remains approximately invariant under these variations and agrees with the tabulated Leaver frequencies, we regard it as strong evidence that the mode is a genuine QNM rather than a discretized continuum artifact.
+\subsubsection{Trial run of the methodology and comparison of basis dependence}
+As a first trial run of the present methodology, we compare the complex-scaled spectra obtained with several basis sets.
+The purpose of this comparison is twofold.
+First, it provides a basic numerical check that the physically relevant QNM frequencies are reproduced in a reasonably stable manner across different basis choices.
+Second, it illustrates that, although the detailed distribution of the nonphysical eigenvalues depends on the basis, the low-lying resonance candidates are much more robust.
+We focus on the $l=2$ gravitational mode ($s=2$) for the Regge--Wheeler equation with $M=0.5$ and consider three representative basis sets: the Real range Gaussian basis (equivalently, the Polynomial $\times$ real range Gaussian basis with $p_{\max}=1$), the Polynomial $\times$ real range Gaussian basis with $p_{\max}=3$, and the sin/cos $\times$ real range Gaussian basis.
+In each case, we diagonalize the complex-scaled Hamiltonian for nearby values of the scaling angle $\theta$ and compare the resulting eigenvalue distributions in the complex $\omega$ plane.
+The stability of the lowest resonance candidates under such changes provides a basic diagnostic for identifying the physical QNMs.
+Figure~\ref{src:2604_20442:fig:ene_l2_poly_nmax1} shows the result obtained with the real range Gaussian basis.
+The scaling angle is taken to be $\theta=25^\circ$, $30^\circ$ in the upper panel, and $\theta=40^\circ$, $42^\circ$ in the lower panel.
+As seen in the figure, a sequence of discrete eigenvalues appears roughly along a rotated branch in the complex $\omega$ plane.
+This sequence represents the discretized continuum spectrum in the present finite-basis calculation.
+By contrast, the isolated points on the real-axis side of this branch are interpreted as resonance eigenvalues, namely the QNM frequencies.
+This is the standard spectral pattern expected in the CSM: continuum-related states move with the scaling angle and align along the rotated branch, whereas genuine resonance states remain relatively isolated from it and show much weaker $\theta$ dependence.
+For this reason, the identification of QNM frequencies is based not on a single diagonalization result alone, but on whether an eigenvalue remains isolated from the rotated continuum and stable under changes of $\theta$.
+The lowest mode in Fig.~\ref{src:2604_20442:fig:ene_l2_poly_nmax1} is already rather stable under the changes $\theta=25^\circ \to 30^\circ$ and $\theta=40^\circ \to 42^\circ$, while the second mode exhibits a visibly larger displacement for $\theta \gtrsim 40^\circ$.
+This behavior is consistent with the general expectation that the fundamental QNM is more robust than higher-lying states against basis and scaling-angle variations.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{source_compendium/figures/2604_20442/fig/ene_l2_poly_nmax1_1.pdf}
+    \includegraphics[width=0.7\columnwidth]{source_compendium/figures/2604_20442/fig/ene_l2_poly_nmax1_2.pdf}
+    \caption{$l=2$, Real range Gaussian basis.
+    %$\rme^{-\alpha r_*^2}$ and $r_* \rme^{-\alpha r_*^2}$.
+    The scaling angle is taken to be~$\theta=25^\circ$, $30^\circ$ on the upper panel, and $\theta=40^\circ$, $42^\circ$ on the lower panel.
+    We take  $i_{\max}=30$, $r_{*0}=0.1$, and $r_{*\max}=60$.
+    The sequence of points aligned approximately along the $\theta$-rotated direction represents the discretized continuum spectrum, while the isolated points on the real-axis side are interpreted as resonance eigenvalues, namely the QNM frequencies.
+    The lowest resonance candidate is
+    $\omega_1=0.747343-\rmi0.177958$ ($\theta=40^{\circ}$) and
+    $\omega_1=0.747349-\rmi0.177940$ ($\theta=42^{\circ}$).
+    The next candidate is
+    $\omega_2=0.750229-\rmi0.481678$ ($\theta=40^{\circ}$) and
+    $\omega_2=0.738955-\rmi0.497959$ ($\theta=42^{\circ}$).}
+    \label{src:2604_20442:fig:ene_l2_poly_nmax1}
+\end{figure}
+Figure~\ref{src:2604_20442:fig:ene_l2_poly_nmax3} shows the corresponding result for the Polynomial $\times$ real range Gaussian basis with $p_{\max}=3$.
+Compared with the previous case, the fundamental mode is again highly stable, whereas the second mode still shows a more noticeable $\theta$ dependence.
+At the same time, the polynomial basis yields a visibly better reproduction of the low-lying frequencies than the simple real range Gaussian basis, in particular for the first overtone.
+This indicates that the present CSM formulation robustly captures the lowest QNM, while higher modes remain more sensitive to the details of the truncated basis representation.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{source_compendium/figures/2604_20442/fig/ene_l2_poly_nmax3_1.pdf}
+    \includegraphics[width=0.7\columnwidth]{source_compendium/figures/2604_20442/fig/ene_l2_poly_nmax3_2.pdf}
+    \caption{$l=2$, Polynomial $\times$ real range Gaussian basis with~$p_{\max}=3$.
+    %$\rme^{-\alpha r_*^2}$, $r_* \rme^{-\alpha r_*^2}$, $r_*^2 \rme^{-\alpha r_*^2}$, and $r_*^3 \rme^{-\alpha r_*^2}$.
+    We take $i_{\max}=30$, $r_{*0}=0.1$, and $r_{*\max}=60$.
+    The lowest resonance candidate is
+    $\omega_1=0.747348-\rmi0.177926$ ($\theta=40^{\circ}$) and
+    $\omega_1=0.747345-\rmi0.177925$ ($\theta=42^{\circ}$).
+    The next candidate is
+    $\omega_2=0.712209-\rmi0.485971$ ($\theta=40^{\circ}$),
+    $\omega_2=0.704895-\rmi0.502870$ ($\theta=42^{\circ}$).}
+    \label{src:2604_20442:fig:ene_l2_poly_nmax3}
+\end{figure}
+Finally, Fig.~\ref{src:2604_20442:fig:ene_l2_trigo} displays the result for the sin/cos $\times$ real range Gaussian basis.
+This basis is designed to incorporate more explicit oscillatory structure into the trial space and is therefore expected to be advantageous for resonance wave functions.
+However, in practice its performance is more delicate.
+Although the detailed eigenvalue distribution is broadly similar to the other cases, the low-lying resonance candidates are reproduced less accurately than with the polynomial basis.
+Moreover, obtaining results of comparable quality appears to require a more careful tuning of the numerical setup, including the number of basis functions, the Gaussian ranges, and the integration interval used for the interaction matrix.
+At the present stage, this makes the trigonometric basis less suitable for a systematic survey.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{source_compendium/figures/2604_20442/fig/ene_l2_trigo_1.pdf}
+    \includegraphics[width=0.7\columnwidth]{source_compendium/figures/2604_20442/fig/ene_l2_trigo_2.pdf}
+    \caption{$l=2$, sin/cos $\times$ real range Gaussian basis.
+    We take $i_{\max}=30$, $r_{*0}=0.1$, and $r_{*\max}=80$.
+    The lowest resonance candidate is
+    $\omega_1=0.743544-\rmi0.168990$ ($\theta=40^\circ$) and
+    $\omega_1=0.746374-\rmi0.169193$ ($\theta=42^\circ$).
+    The second-mode candidate is
+    $\omega_2=0.672161-\rmi0.389585$ ($\theta=40^\circ$) and
+    $\omega_2=0.673930-\rmi0.403464$ ($\theta=42^\circ$).}
+    \label{src:2604_20442:fig:ene_l2_trigo}
+\end{figure}
+Taken together, these figures show that the fundamental QNM is reproduced rather stably across different basis choices, while higher-lying states are more sensitive to the basis and to the scaling angle.
+This is precisely the behavior expected in a CSM calculation: physical resonance eigenvalues should remain comparatively stable, whereas continuum-related or spurious states tend to move more substantially under changes of the numerical representation.
+For convenience, the lowest and next resonance candidates obtained with the different basis sets are summarized in Table~\ref{src:2604_20442:tab:l2_basis_comparison}.
+For the $l=2$ Regge--Wheeler mode, the fundamental frequency is reproduced very stably and is already close to Leaver's value across the basis sets considered here.
+By contrast, the second-mode candidate shows a visibly stronger dependence on the basis choice and on the scaling angle.
+Among the basis sets examined here, the polynomial basis with $p_{\max}=3$ gives the best overall agreement for both the fundamental mode and the first overtone, while the sin/cos basis reproduces even the fundamental mode less accurately in the present implementation.
+It is therefore natural to regard the Polynomial $\times$ real range Gaussian basis as the most practical choice for the subsequent calculations.
+The trial run in this subsection thus serves not only as a demonstration of basis dependence, but also as a concrete basis-selection step for the main numerical analysis below.
+\begin{table}[ht]
+    \centering
+    \caption{Comparison of the lowest and next resonance candidates for the $l=2$ Regge--Wheeler mode obtained with different basis sets.
+    In this analysis, we set $s=2$ and $M=0.5$.
+    For reference, the corresponding Schwarzschild QNM frequencies from Leaver's method are also shown.}
+    \label{src:2604_20442:tab:l2_basis_comparison}
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{llcc}
+        \toprule
+        Basis & Angle & Lowest mode $\omega_1$ & Next mode $\omega_2$ \\
+        \midrule
+        \multicolumn{4}{l}{\textit{Reference (Leaver)}} \\
+        Leaver & --- &
+        $0.747343-\rmi0.177925$ &
+        $0.693422-\rmi0.547830$ \\
+        \midrule
+        \multicolumn{4}{l}{\textit{Real range Gaussian basis}} \\
+        Real range Gaussian & $\theta=40^\circ$ &
+        $0.747343-\rmi0.177958$ &
+        $0.750229-\rmi0.481678$ \\
+        Real range Gaussian & $\theta=42^\circ$ &
+        $0.747349-\rmi0.177940$ &
+        $0.738955-\rmi0.497959$ \\
+        \midrule
+        \multicolumn{4}{l}{\textit{Polynomial $\times$ real range Gaussian basis ($p_{\max}=3$)}} \\
+        Polynomial $\times$ Gaussian & $\theta=40^\circ$ &
+        $0.747348-\rmi0.177926$ &
+        $0.712209-\rmi0.485971$ \\
+        Polynomial $\times$ Gaussian & $\theta=42^\circ$ &
+        $0.747345-\rmi0.177925$ &
+        $0.704895-\rmi0.502870$ \\
+        \midrule
+        \multicolumn{4}{l}{\textit{sin/cos $\times$ real range Gaussian basis}} \\
+        $\sin/\cos \times$ Gaussian & $\theta=40^\circ$ &
+        $0.743544-\rmi0.168990$ &
+        $0.672161-\rmi0.389585$ \\
+        $\sin/\cos \times$ Gaussian & $\theta=42^\circ$ &
+        $0.746374-\rmi0.169193 $ &
+        $0.673930-\rmi0.403464$ \\
+        \bottomrule
+    \end{tabular}%
+    }
+\end{table}
+\clearpage
+\subsubsection{Basis selection from trial run of more general cases}
+Before presenting the main numerical results, we briefly summarize the outcome of a broader trial run aimed at selecting a practical working basis for the subsequent calculations.
+The purpose of this subsection is not yet to establish the final numerical accuracy of the method, but rather to identify which class of basis functions captures the low-lying QNM spectrum in a stable and manageable way in the Schwarzschild and extremal Reissner--Nordstr\"om problems.
+As candidate trial spaces, we considered several basis families built from real-range Gaussians.
+Among them, a particularly natural choice is the Polynomial $\times$ real range Gaussian basis,
+\begin{align}
+    \phi_{i,n}(r_*)
+    \propto
+    r_*^n \rme^{-\alpha_i r_*^2},
+    \qquad
+    \text{$n=0$, $1$, $2$, \dots} ,
+\end{align}
+which extends the simplest Gaussian basis by increasing the polynomial degree.
+We also tested more explicitly oscillatory trial spaces, such as the sin/cos $\times$ real range Gaussian basis.
+The motivation for the latter is clear: since QNM wave functions are oscillatory, one may expect a trigonometric basis to be advantageous.
+In practice, however, the situation turned out to be more delicate.
+Our exploratory calculations indicate that the polynomial basis is the most practical choice among those examined here.
+For the low-lying modes, it reproduces the known QNM frequencies rather well over a moderate range of basis parameters.
+By contrast, the sin/cos basis appears to require a more careful tuning of the numerical setup, including the number of basis functions, the Gaussian ranges, and the integration interval used for the interaction matrix.
+At the present stage, this makes the trigonometric basis less convenient for a systematic study.
+This tendency is already visible in the Schwarzschild benchmark.
+The fundamental mode is reproduced stably across different basis parameter sets, whereas the first overtone shows a noticeably larger spread, and still higher modes become increasingly difficult to identify.
+This is consistent with the general expectation that relatively narrow resonances are easier to isolate in a finite-basis CSM calculation, while broad and strongly damped modes are more sensitive to basis truncation and to the vicinity of the rotated continuum.
+A similar tendency persists in the extremal Reissner--Nordstr\"om case.
+The lowest modes can still be identified in reasonable agreement with existing reference values, while higher and broader modes become more ambiguous.
+From the present exploratory viewpoint, the important practical conclusion is therefore the following: although several basis choices are in principle possible, the Polynomial $\times$ real range Gaussian basis provides the best balance between numerical stability, flexibility, and ease of implementation at the current stage of the calculation.
+For this reason, in the following subsection we adopt the polynomial basis as our main working basis and present the numerical results obtained within that setup.
+The trial run described above should thus be understood as a preparatory step, which clarifies both the range of validity and the practical limitations of the present implementation.
+\subsubsection{Numerical results}
+Having selected the Polynomial $\times$ real range Gaussian basis as the main working basis, we now present the numerical results obtained with the present CSM formulation.
+Our emphasis is on the low-lying QNM frequencies, for which the stability of the calculation is best under control.
+\paragraph{Schwarzschild case}
+We begin with the Schwarzschild case, which serves as the primary benchmark.
+To examine the sensitivity of $\omega$ to Gaussian parameters, we performed calculations for several values of $\theta$ between $42^\circ$ and $44^\circ$ using the four parameter sets listed in Table~\ref{src:2604_20442:tab:RW_parameters}.
+\begin{table}[htbp]
+  \centering
+  \caption{Parameter sets used to examine the sensitivity of $\omega$ to the Gaussian basis parameters.}
+  \label{src:2604_20442:tab:RW_parameters}
+  \begin{tabular}{cccc}
+    \toprule
+    Set & $i_{\max}$ & $r_{*0}$ & $r_{*\max}$ \\
+    \midrule
+    1 & 30 & 0.1 & 60 \\
+    2 & 30 & 0.1 & 80 \\
+    3 & 40 & 0.1 & 60 \\
+    4 & 40 & 0.1 & 80 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+The results are shown in Fig.~\ref{src:2604_20442:fig:RW_QNM}.
+The upper panels show the states obtained by diagonalizing $H_\theta$ for $l=2$ and $l=3$. In the lower panels, the values of $\omega$ identified as QNMs are compared with those obtained by Leaver’s method for each case.
+For the Regge--Wheeler equation, the fundamental mode is reproduced with high accuracy, and the agreement with Leaver's continued-fraction values is very good.
+The first overtone can also be identified, although its numerical spread is already noticeably larger than that of the fundamental mode.
+For still higher overtones, the identification becomes substantially more difficult within the present implementation, and the extracted values are more sensitive to the basis parameters and the scaling angle.
+This behavior is natural in CSM, since highly damped modes lie closer to the rotated continuum and are therefore more vulnerable to finite-basis effects.
+\begin{figure}[htbp]
+ \centering
+ \resizebox{\textwidth}{!}{%
+ \begin{tikzpicture}
+  \node at (0,8) 
+  {\includegraphics[width=0.45\linewidth]{source_compendium/figures/2604_20442/fig/ene_RW_l2.pdf}};
+  \node at (8,8) 
+  {\includegraphics[width=0.45\linewidth]{source_compendium/figures/2604_20442/fig/ene_RW_l3.pdf}};
+  \node at (0,0) 
+  {\includegraphics[width=0.45\linewidth]{source_compendium/figures/2604_20442/fig/ene_RW_l2_QNM.pdf}};
+  \node at (8,0) 
+  {\includegraphics[width=0.45\linewidth]{source_compendium/figures/2604_20442/fig/ene_RW_l3_QNM.pdf}};
+  \node[draw, rectangle] at (-1,8) {$l=2$};
+  \node[draw, rectangle] at (-1,0) {$l=2$};
+  \node[draw, rectangle] at (7,8) {$l=3$};
+  \node[draw, rectangle] at (7,0) {$l=3$};
+  \draw[thick, red] (2.0625,10.3) circle (0.3);
+  \node[above] at (2.0625,10.6) {$n=1$};
+  \draw[thick, red] (1.75,8.3) circle (0.3);
+  \node[above] at (1.75,8.6) {$n=2$};
+  \draw[thick, red] (10.55,10.5) circle (0.3);
+  \node[above] at (10.655,10.7) {$n=1$};
+  \draw[thick, red] (10.4,8.9) circle (0.3);
+  \node[above] at (10.45,9.2) {$n=2$};
+ \end{tikzpicture}
+ }
+ \caption{The Schwarzschild case. $M=0.5$.
+ \textbf{Upper panels:} eigenvalues of the complex-scaled Hamiltonian $H_\theta$ for $l=2$ and $l=3$. $\theta=42^\circ$--$44^\circ$.
+ \textbf{Lower panels}: comparison of the QNM candidates with Leaver's values.}
+ \label{src:2604_20442:fig:RW_QNM}
+\end{figure}
+\paragraph{Extremal Reissner--Nordstr\"om case}
+We next turn to the extremal Reissner--Nordstr\"om problem.
+Here the present framework is particularly useful, since the standard continued-fraction treatment becomes more delicate in the extremal limit.
+As in the Schwarzschild case, we examine the sensitivity of the extracted frequencies to the Gaussian basis parameters.
+%by using the same parameter sets as those listed in Table~\ref{src:2604_20442:tab:RW_parameters}.
+For $(s,l)=(0,0)$, we use the same Gaussian parameter sets as listed in Table~\ref{src:2604_20442:tab:RW_parameters}. For the other cases, we adopt the parameter sets listed in Table~\ref{src:2604_20442:tab:exRN_parameters}.
+%In this way, the comparison between the Schwarzschild and extremal Reissner--Nordstr\"om cases is performed under essentially the same numerical setup.
+We again performed calculations for several values of $\theta$ from $42^\circ$ to $44^\circ$
+\begin{table}[htbp]
+  \centering
+  \caption{Parameter sets used to examine the sensitivity of $\omega$ to the Gaussian basis parameters.}
+  \label{src:2604_20442:tab:exRN_parameters}
+  \begin{tabular}{cccc}
+    \toprule
+    Set & $i_{\max}$ & $r_{*0}$ & $r_{*\max}$ \\
+    \midrule
+    I & 40 & 0.1 & 60 \\
+    II & 40 & 0.1 & 80 \\
+    III & 50 & 0.1 & 60 \\
+    IV & 50 & 0.1 & 80 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+The numerical results are shown in Figs.~\ref{src:2604_20442:fig:exRN_scalar_QNM}, \ref{src:2604_20442:fig:exRN_em_QNM}, and~\ref{src:2604_20442:fig:exRN_grav_QNM} for scalar ($s=0$), odd-parity electromagnetic ($s=1$), and odd-parity gravitational ($s=2$) perturbations, respectively.
+As in the Schwarzschild case, the upper panels show the eigenvalues obtained by diagonalizing the complex-scaled Hamiltonian $H_\theta$ for several values of $l$, while the lower panels compare the frequencies identified as QNMs with existing reference values.
+In the extremal Reissner--Nordstr\"om case, the lower panels include the results of Onozawa \textit{et al.\/}~\cite{Onozawa:1995vu} for comparison.
+\begin{figure}[htbp]
+ \centering
+ \resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+  \node at (0,6) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s0_l0.pdf}};
+  \node at (6,6) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s0_l1.pdf}};
+  \node at (12,6) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s0_l2.pdf}};
+  \node at (0,0) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s0_l0_QNM.pdf}};
+  \node at (6,0) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s0_l1_QNM.pdf}};
+  \node at (12,0) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s0_l2_QNM.pdf}};
+  \node[draw, rectangle] at (-1,5) {$l=0$};
+  \node[draw, rectangle] at (-0.9,1) {$l=0$};
+  \node[draw, rectangle] at (5,5) {$l=1$};
+  \node[draw, rectangle] at (5,1) {$l=1$};
+  \node[draw, rectangle] at (11,5) {$l=2$};
+  \node[draw, rectangle] at (11,1) {$l=2$};
+  \draw[thick, red] (1.15,6.4) circle (0.2);
+  \node[above] at (1.2,6.7) {$n=0$};
+  \draw[thick, red] (8.4,7.5) circle (0.2);
+  \node[above] at (8.0,7.8) {$n=0$};
+  \draw[thick, red] (8.05,5.55) circle (0.2);
+  \node[above] at (8.1,5.9) {$n=1$};  
+  \draw[thick, red] (14.15,7.95) circle (0.2);
+  \node[above] at (13.3,8.0) {$n=0$};
+  \draw[thick, red] (14.05,6.75) circle (0.2);
+  \node[above] at (13.5,7.0) {$n=1$};
+ \end{tikzpicture}%
+}
+ \caption{The extremal Reissner--Nordstr\"om scalar case. $M=1$.
+ Identification and comparison for $l=0$, $1$ and~$2$ with Onozawa \textit{et al.\/}}
+ \label{src:2604_20442:fig:exRN_scalar_QNM}
+\end{figure}
+\begin{figure}[htbp]
+ \centering
+ \resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+  \node at (0,6) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s1_l1.pdf}};
+  \node at (6,6) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s1_l2.pdf}};
+  \node at (12,6) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s1_l3.pdf}};
+  \node at (0,0) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s1_l1_QNM.pdf}};
+  \node at (6,0) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s1_l2_QNM.pdf}};
+  \node at (12,0) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s1_l3_QNM.pdf}};
+  \node[draw, rectangle] at (-1,5) {$l=1$};
+  \node[draw, rectangle] at (1.5,1) {$l=1$};
+  \node[draw, rectangle] at (5,5) {$l=2$};
+  \node[draw, rectangle] at (7.5,1) {$l=2$};
+  \node[draw, rectangle] at (11,5) {$l=3$};
+  \node[draw, rectangle] at (13.5,1) {$l=3$};
+  \draw[thick, red] (2.0,7.8) circle (0.2);
+  \node[above] at (2.0,8.0) {$n=0$};
+  \draw[thick, red] (1.8,6.2) circle (0.2);
+  \node[above] at (1.4,6.5) {$n=1$};
+  \draw[thick, red] (8.1,8.05) circle (0.2);
+  \node[above] at (7.4,8.0) {$n=0$};
+  \draw[thick, red] (8.0,7.05) circle (0.2);
+  \node[above] at (7.3,7.1) {$n=1$};  
+  \draw[thick, red] (7.8,6.1) ellipse [x radius=0.3, y radius=0.13, rotate=-30];
+  \node[above] at (7.8,6.2) {$n=2$};  
+  \draw[thick, red] (13.75,8.20) circle (0.2);
+  \node[above] at (13.0,8.0) {$n=0$};
+  \draw[thick, red] (13.7,7.5) circle (0.2);
+  \node[above] at (12.95,7.3) {$n=1$};
+  \draw[thick, red] (13.6,6.85) circle (0.2);
+  \node[above] at (12.8,6.8) {$n=2$};
+ \end{tikzpicture}%
+}
+ \caption{The extremal Reissner--Nordstr\"om odd-parity electromagnetic case. $M=1$.}
+ \label{src:2604_20442:fig:exRN_em_QNM}
+\end{figure}
+\begin{figure}[htbp]
+ \centering
+ \resizebox{\linewidth}{!}{%
+\begin{tikzpicture}
+  \node at (0,6) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s2_l2.pdf}};
+  \node at (6,6) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s2_l3.pdf}};
+  \node at (12,6) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s2_l4.pdf}};
+  \node at (0,0) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s2_l2_QNM.pdf}};
+  \node at (6,0) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s2_l3_QNM.pdf}};
+  \node at (12,0) 
+  {\includegraphics[width=0.35\linewidth]{source_compendium/figures/2604_20442/fig/ene_exRN_s2_l4_QNM.pdf}};
+  \node[draw, rectangle] at (-1,5) {$l=2$};
+  \node[draw, rectangle] at (1.5,1) {$l=2$};
+  \node[draw, rectangle] at (5,5) {$l=3$};
+  \node[draw, rectangle] at (7.5,1) {$l=3$};
+  \node[draw, rectangle] at (11,5) {$l=4$};
+  \node[draw, rectangle] at (13.5,1) {$l=4$};
+  \draw[thick, red] (2.0,7.8) circle (0.2);
+  \node[above] at (2.0,8.0) {$n=0$};
+  \draw[thick, red] (1.8,6.2) circle (0.2);
+  \node[above] at (1.4,6.5) {$n=1$};
+  \draw[thick, red] (8.1,8.05) circle (0.2);
+  \node[above] at (7.4,8.0) {$n=0$};
+  \draw[thick, red] (8.0,7.05) circle (0.2);
+  \node[above] at (7.3,7.1) {$n=1$};  
+  \draw[thick, red] (7.8,6.1) ellipse [x radius=0.3, y radius=0.13, rotate=-30];
+  \node[above] at (7.8,6.2) {$n=2$};  
+  \draw[thick, red] (13.75,8.20) circle (0.2);
+  \node[above] at (13.0,8.0) {$n=0$};
+  \draw[thick, red] (13.7,7.5) circle (0.2);
+  \node[above] at (12.95,7.3) {$n=1$};
+  \draw[thick, red] (13.6,6.85) circle (0.2);
+  \node[above] at (12.8,6.8) {$n=2$};
+ \end{tikzpicture}%
+}
+ \caption{The extremal Reissner--Nordstr\"om odd-parity gravitational case. $M=1$.}
+ \label{src:2604_20442:fig:exRN_grav_QNM}
+\end{figure}
+For the perturbations considered here, the low-lying QNM frequencies are again reproduced in reasonable agreement with the existing calculations.
+The agreement is especially good for the lowest and relatively narrow modes, whereas broader and more strongly damped modes exhibit a larger spread under changes of the basis parameters and the scaling angle.
+This is qualitatively the same tendency as in the Schwarzschild benchmark and is consistent with the general expectation that highly damped modes, being closer to the rotated continuum, are more sensitive to finite-basis effects in the CSM.
+It is also worth noting that, whenever both Onozawa \textit{et al.\/} and WKB values are available, the present CSM results tend in general to lie closer to the former than to the latter.
+From the viewpoint of resonance identification, this is an encouraging sign that the present implementation is correctly capturing the low-lying QNM spectrum in the extremal Reissner--Nordstr\"om background.
+Another useful consistency check is provided by the known isospectrality between the odd-parity electromagnetic and odd-parity gravitational sectors in extremal Reissner--Nordstr\"om spacetime.
+Within the numerical precision of the present calculation, we confirm that the same QNM frequencies are obtained in these two sectors.
+This agreement provides an additional indication that the present CSM implementation is correctly capturing the low-lying resonance spectrum.
+\paragraph{Summary of low-lying QNM frequencies}
+Overall, the numerical results support the following picture.
+For relatively narrow, isolated modes, the present CSM formulation performs well and yields QNM frequencies in good agreement with established methods.
+For broader, more strongly damped modes, however, numerical stability is reduced, and a more careful analysis of convergence with respect to basis size, basis parameters, integration range, and scaling angle will be required.
+Accordingly, the present results should be regarded as a first systematic demonstration of the method rather than as its final optimized form.
+In the remainder of this section, we summarize the low-lying frequencies obtained for the Schwarzschild and extremal Reissner--Nordstr\"om cases, and compare them with the available reference values reviewed in Sec.~\ref{src:2604_20442:sec:leaver}.
+Table~\ref{src:2604_20442:tab:result_schw} presents the numerical results obtained by the CSM for the Schwarzschild case.
+To estimate the numerical uncertainty of the extracted QNM frequencies, we use the spread of the results obtained from different numerical parameter sets.
+Let $\omega_i$ denote the frequency obtained in the $i$th run, and let $\vsub{N}{samp}$ be the total number of runs.
+We then define the average frequency by
+\begin{align}
+    \bar{\omega}
+    =
+    \frac{1}{\vsub{N}{samp}}
+    \sum_{i=1}^{\vsub{N}{samp}}
+    \omega_i ,
+\end{align}
+and the numerical uncertainty by
+\begin{align}
+    \Delta \omega
+    =
+    \max_i
+    \left|
+        \omega_i-\bar{\omega}
+    \right|.
+\end{align}
+Accordingly, we quote the final result as
+\begin{align}
+    \omega = \bar{\omega} \pm \Delta\omega .
+\end{align}
+Here, $\Delta\omega$ should be understood as a practical measure of numerical stability rather than as a statistical error bar.
+% =========================================
+% Schwarzschild
+% =========================================
+\begin{table}[htbp]
+\centering
+\caption{Numerical results of QNM frequencies of Schwarzschild. The numbers in parentheses indicate the estimated numerical uncertainty in the last quoted digits.}
+\label{src:2604_20442:tab:result_schw}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cl
+                l@{$-\rmi$}lc
+                l@{$-\rmi$}l}
+\toprule
+$n$ & Method & \multicolumn{2}{c}{$l=2$} &  & \multicolumn{2}{c}{$l=3$} \\
+\midrule 
+$1$ & CSM    & $0.7473434(10)$ & $0.17792461(83)$
+    &        & $1.19888660(11)$ & $0.18540611(13)$ \\
+    & Leaver & $0.747343$    & $0.177925$
+    &        & $1.198887$    & $0.185406$ \\
+\addlinespace
+$2$ & CSM    & $0.6998(55)$ & $0.5081(90)$
+    &        & $1.16423(53)$  & $0.56265(27)$ \\
+    & Leaver & $0.693422$   & $0.547830$
+    &        & $1.165288$   & $0.562596$ \\
+\addlinespace
+$3$ & CSM    & \multicolumn{2}{c}{---}
+    &        & \multicolumn{2}{c}{not identified} \\
+    & Leaver & $0.602107$ & $0.956554$
+    &        & $1.103370$ & $0.958186$ \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+Tables~\ref{src:2604_20442:tab:result_rn0}--\ref{src:2604_20442:tab:result_rn0_2}, \ref{src:2604_20442:tab:result_rn1}--\ref{src:2604_20442:tab:result_rn1_2}, and~\ref{src:2604_20442:tab:result_rn2}--\ref{src:2604_20442:tab:result_rn2_2} show the corresponding results for the extremal Reissner--Nordstr\"om case with scalar ($s=0$), odd-parity electromagnetic ($s=1$), and odd-parity gravitational ($s=2$) perturbations, respectively.
+Particular attention will be paid to the degree of stability under changes of the basis parameters, as well as to the distinction between robust resonance eigenvalues and basis-dependent artifacts.
+% =========================================
+% Extremal Reissner--Nordstrom scalar (s=0)
+% =========================================
+\begin{table}[htbp]
+\centering
+\caption{QNMs of extremal Reissner--Nordstr\"om scalar ($s=0$) for $l=0$ and $l=1$}
+\label{src:2604_20442:tab:result_rn0}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l
+                l@{$-\rmi$}l
+                l@{$-\rmi$}l}
+\toprule
+Method & \multicolumn{2}{c}{$l=0$} & \multicolumn{2}{c}{$l=1$} \\
+\midrule
+\multicolumn{5}{c}{$n=0$} \\
+CSM     & $0.1349(11)$  & $0.0917(14)$
+        & $0.3776424(14)$ & $0.08938386(76)$ \\
+Onozawa & $0.13346$     & $0.095844$
+        & $0.37764$     & $0.089384$ \\
+WKB     & $0.12109$     & $0.10371$
+        & $0.37570$     & $0.08936$ \\
+\addlinespace
+\multicolumn{5}{c}{$n=1$} \\
+CSM     & \multicolumn{2}{c}{---}
+        & $0.3507(82)$ & $0.2571(49)$ \\
+Onozawa & $0.092965$    & $0.33065$
+        & $0.34818$     & $0.27614$ \\
+WKB     & $0.09157$     & $0.33742$
+        & $0.34392$     & $0.27828$ \\
+\addlinespace
+\multicolumn{5}{c}{$n=2$} \\
+CSM     & \multicolumn{2}{c}{---}
+        & \multicolumn{2}{c}{---} \\
+Onozawa & $0.075081$ & $0.58833$
+        & $0.29846$  & $0.48643$ \\
+WKB     & $0.05056$  & $0.57164$
+        & $0.29661$  & $0.48145$ \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+\begin{table}[htbp]
+\centering
+\caption{QNMs of extremal Reissner--Nordstr\"om scalar ($s=0$) for $l=2$}
+\label{src:2604_20442:tab:result_rn0_2}
+\begin{tabular}{l
+                l@{$-\rmi$}l}
+\toprule
+Method & \multicolumn{2}{c}{$l=2$} \\
+\midrule
+\multicolumn{3}{c}{$n=0$} \\
+CSM     & $0.62657272(19)$ & $0.088748359(98)$ \\
+Onozawa & $0.62657$     & $0.088748$ \\
+WKB     & $0.62609$     & $0.08873$ \\
+\addlinespace
+\multicolumn{3}{c}{$n=1$} \\
+CSM     & $0.60810(10)$   & $0.26920(11)$ \\
+Onozawa & $0.60817$     & $0.26909$ \\
+WKB     & $0.60677$     & $0.26944$ \\
+\addlinespace
+\multicolumn{3}{c}{$n=2$} \\
+CSM     & \multicolumn{2}{c}{not identified} \\
+Onozawa & $0.57287$  & $0.45820$ \\
+WKB     & $0.57254$  & $0.45750$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+% =========================================
+% Extremal Reissner--Nordstrom, odd-parity electromagnetic (s=1)
+% =========================================
+\begin{table}[htbp]
+\centering
+\caption{QNMs of extremal Reissner--Nordstr\"om odd-parity electromagnetic ($s=1$) for $l=1$ and $l=2$}
+\label{src:2604_20442:tab:result_rn1}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l
+                l@{$-\rmi$}l
+                l@{$-\rmi$}l}
+\toprule
+Method & \multicolumn{2}{c}{$l=1$} & \multicolumn{2}{c}{$l=2$} \\
+\midrule
+\multicolumn{5}{c}{$n=0$} \\
+CSM     & $0.431340738(82)$ & $0.08346031(23)$
+        & $0.704304022(14)$ & $0.085973391(76)$ \\
+Onozawa & $0.43134$     & $0.083460$
+        & $0.70430$     & $0.085973$ \\
+Leaver  & $0.431415$    & $0.08343$
+        & $0.704075$    & $0.086205$ \\
+WKB     & $0.43013$     & $0.08349$
+        & $0.70398$     & $0.08596$ \\
+\addlinespace
+\multicolumn{5}{c}{$n=1$} \\
+CSM     & $0.4054(27)$ & $0.2556(53)$
+        & $0.688059(56)$  & $0.259911(49)$ \\
+Onozawa & $0.40452$    & $0.25498$
+        & $0.68804$    & $0.25992$ \\
+Leaver  & $0.40602$    & $0.259705$
+        & $0.68315$    & $0.26256$ \\
+WKB     & $0.40076$    & $0.25675$
+        & $0.68701$    & $0.26014$ \\
+\addlinespace
+\multicolumn{5}{c}{$n=2$} \\
+CSM     & \multicolumn{2}{c}{---}
+        & $0.649(25)$ & $0.427(15)$ \\
+Onozawa & $0.35340$    & $0.44137$
+        & $0.65624$    & $0.44007$ \\
+Leaver  & $0.35347$    & $0.44260$
+        & $0.655675$   & $0.4408$ \\
+WKB     & $0.35136$    & $0.44210$
+        & $0.65575$    & $0.43986$ \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+\begin{table}[htbp]
+\centering
+\caption{QNMs of extremal Reissner--Nordstr\"om odd-parity electromagnetic ($s=1$) for $l=3$}
+\label{src:2604_20442:tab:result_rn1_2}
+\begin{tabular}{l
+                l@{$-\rmi$}l}
+\toprule
+Method & \multicolumn{2}{c}{$l=3$} \\
+\midrule
+\multicolumn{3}{c}{$n=0$} \\
+CSM     & $0.965762603(31)$ & $0.087001340(45)$ \\
+Onozawa & $0.96576$     & $0.087001$ \\
+Leaver  & \multicolumn{2}{c}{---} \\
+WKB     & $0.96563$     & $0.08700$ \\
+\addlinespace
+\multicolumn{3}{c}{$n=1$} \\
+CSM     & $0.953816(10)$ & $0.2621206(52)$ \\
+Onozawa & $0.95381$   & $0.26212$ \\
+Leaver  & \multicolumn{2}{c}{---} \\
+WKB     & $0.95339$   & $0.26218$ \\
+\addlinespace
+\multicolumn{3}{c}{$n=2$} \\
+CSM     & $0.9296(16)$ & $0.4403(26)$ \\
+Onozawa & $0.93020$    & $0.44064$ \\
+Leaver  & \multicolumn{2}{c}{---} \\
+WKB     & $0.93004$    & $0.44056$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+% =========================================
+% Extremal Reissner--Nordstrom, odd-parity gravitational (s=2)
+% =========================================
+\begin{table}[htbp]
+\centering
+\caption{QNMs of extremal Reissner--Nordstr\"om odd-parity gravitational ($s=2$) for $l=2$ and $l=3$}
+\label{src:2604_20442:tab:result_rn2}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l
+                l@{$-\rmi$}l
+                l@{$-\rmi$}l}
+\toprule
+Method & \multicolumn{2}{c}{$l=2$} & \multicolumn{2}{c}{$l=3$} \\
+\midrule
+\multicolumn{5}{c}{$n=0$} \\
+CSM     & $0.431340738(82)$ & $0.08346031(23)$
+        & $0.704304022(14)$ & $0.085973391(76)$ \\
+Onozawa & $0.43134$     & $0.083460$
+        & $0.70430$     & $0.085973$ \\
+Leaver  & $0.431415$    & $0.08343$
+        & $0.704075$    & $0.086205$ \\
+WKB     & $0.43013$     & $0.08349$
+        & $0.70398$     & $0.08596$ \\
+\addlinespace
+\multicolumn{5}{c}{$n=1$} \\
+CSM     & $0.4054(27)$ & $0.2556(53)$
+        & $0.688059(56)$  & $0.259911(49)$ \\
+Onozawa & $0.40452$    & $0.25498$
+        & $0.68804$    & $0.25992$ \\
+Leaver  & $0.40602$    & $0.259705$
+        & $0.68315$    & $0.26256$ \\
+WKB     & $0.40076$    & $0.25675$
+        & $0.68701$    & $0.26014$ \\
+\addlinespace
+\multicolumn{5}{c}{$n=2$} \\
+CSM     & \multicolumn{2}{c}{---}
+        & $0.649(25)$ & $0.427(15)$ \\
+Onozawa & $0.35340$    & $0.44137$
+        & $0.65624$    & $0.44007$ \\
+Leaver  & $0.35347$    & $0.44260$
+        & $0.655675$   & $0.4408$ \\
+WKB     & $0.35136$    & $0.44210$
+        & $0.65575$    & $0.43986$ \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+\begin{table}[htbp]
+\centering
+\caption{QNMs of extremal Reissner--Nordstr\"om odd-parity gravitational ($s=2$) for $l=4$}
+\label{src:2604_20442:tab:result_rn2_2}
+\begin{tabular}{l
+                l@{$-\rmi$}l}
+\toprule
+Method & \multicolumn{2}{c}{$l=4$} \\
+\midrule
+\multicolumn{3}{c}{$n=0$} \\
+CSM     & $0.965762603(31)$ & $0.087001340(45)$ \\
+Onozawa & $0.96576$     & $0.087001$ \\
+Leaver  & \multicolumn{2}{c}{---} \\
+WKB     & $0.96563$     & $0.08700$ \\
+\addlinespace
+\multicolumn{3}{c}{$n=1$} \\
+CSM     & $0.953816(10)$ & $0.2621206(52)$ \\
+Onozawa & $0.95381$   & $0.26212$ \\
+Leaver  & \multicolumn{2}{c}{---} \\
+WKB     & $0.95339$   & $0.26218$ \\
+\addlinespace
+\multicolumn{3}{c}{$n=2$} \\
+CSM     & $0.9296(16)$ & $0.4403(26)$ \\
+Onozawa & $0.93020$    & $0.44064$ \\
+Leaver  & \multicolumn{2}{c}{---} \\
+WKB     & $0.93004$    & $0.44056$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+A few general trends may be read off from Tables~\ref{src:2604_20442:tab:result_schw}--\ref{src:2604_20442:tab:result_rn2_2}.
+In both the Schwarzschild and extremal Reissner--Nordstr\"om cases, the agreement with the reference values is best for the lowest and relatively narrow modes.
+The fundamental mode is reproduced very accurately, whereas the numerical spread becomes larger for higher overtones.
+This is consistent with the general expectation in the CSM that strongly damped modes lie closer to the rotated continuum and are therefore more sensitive to finite-basis effects.
+In the extremal Reissner--Nordstr\"om case, the present CSM values tend in general to be closer to the results of Onozawa \textit{et al.\/} than to the corresponding WKB values.
+Moreover, the odd-parity electromagnetic and odd-parity gravitational sectors yield the same low-lying frequencies within the present numerical precision, in agreement with the known isospectrality of these sectors in the extremal Reissner--Nordstr\"om background.
+Taken together, these results indicate that the present implementation already captures the robust low-lying resonance spectrum reliably, while broader and more highly damped modes still require a more systematic study of convergence and numerical stability.
+\subsection{Leaver's method and benchmark tables}\label{src:2604_20442:sec:leaver}
+For later comparison, we briefly summarize Leaver's method for computing
+quasinormal mode frequencies given in Refs.~\cite{Leaver:1985ax,Leaver:1986gd}.
+Let $\psi_{l}(r)$ denote the radial wave function.
+For the Regge--Wheeler equation, the effective potential vanishes both at the horizon and at spatial infinity.
+Hence the quasinormal-mode boundary conditions are
+\begin{align}
+ \psi_{l}(r)\big|_{\mathrm{in}}
+ &\sim \rme^{- \rmi \omega r_*}
+ \sim (r-2M)^{-2 \rmi M \omega}
+ \qquad
+ r \to 2M,
+\end{align}
+and
+\begin{align}
+ \psi_{l}(r)\big|_{\mathrm{out}}
+ &\sim \rme^{+ \rmi \omega r_*}
+ \sim \rme^{\rmi \omega r} \, r^{2 \rmi M \omega}
+ \qquad
+ r \to \infty,
+\end{align}
+where $M$ is the black-hole mass, $\omega$ is the complex quasinormal frequency, and $r_*$ is the tortoise coordinate.
+A convenient starting point is the generalized radial equation
+\begin{align}
+ \left[\Delta^{-s}\frac{\rmd}{\rmd r}\left(\Delta^{s+1}\frac{\rmd}{\rmd r}\right)-V(r)\right]
+ \psi_{l}(r)
+ =
+ 0,
+ \label{src:2604_20442:eq:app-generalized-radial}
+\end{align}
+where $s$ is the spin weight, $V(r)$ is the radial potential, and
+\begin{align}
+\Delta = r^2 - 2 M r + a^2 .
+\end{align}
+Here $a$ is the Kerr rotation parameter.
+The Schwarzschild case is recovered by setting $a=0$.
+To implement the boundary conditions, one introduces the series ansatz
+\begin{align}
+ \psi_{l}(r)
+ &= \rme^{\rmi \omega r}
+ (r-r_-)^{-1-s+2 \rmi M \omega + 2 \rmi M \sigma}
+ (r-r_+)^{-s-2 \rmi M \sigma}
+ \sum_{n=0}^{\infty} a_n
+ \left( \frac{r-r_+}{r-r_-} \right)^n ,
+ \label{src:2604_20442:eq:app-leaver-ansatz}
+\end{align}
+with
+\begin{align}
+ r_{\pm} &= M \pm \sqrt{M^2-a^2},
+ &
+ \sigma &= \frac{1}{r_+ - r_-} \left( r_+ \omega - \frac{m a}{2M} \right).
+\end{align}
+Here $m$ is the azimuthal quantum number.
+Substituting Eq.~\eqref{src:2604_20442:eq:app-leaver-ansatz} into Eq.~\eqref{src:2604_20442:eq:app-generalized-radial} yields a three-term recurrence relation for the expansion coefficients
+$a_n$:
+\begin{align}
+ \alpha_0 a_1 + \beta_0 a_0 &= 0,
+ \\
+ \alpha_n a_{n+1} + \beta_n a_n + \gamma_n a_{n-1} &= 0,
+ \qquad n \ge 1.
+\end{align}
+The coefficients $\alpha_n$, $\beta_n$, and $\gamma_n$ depend on the mode parameters,
+in particular on $a$, $m$, and~$\omega$.
+It is useful to define the ratio
+\begin{align}
+ A_n \equiv - \frac{a_n}{a_{n-1}} .
+\end{align}
+Then the recurrence relation implies
+\begin{align}
+ A_n = \frac{\gamma_n}{\beta_n - \alpha_n A_{n+1}} .
+\end{align}
+Iterating this relation gives the continued-fraction equation
+\begin{align}
+ \beta_0 &= \alpha_0 A_1
+ = \frac{\alpha_0 \gamma_1}{
+ \beta_1 - \frac{\alpha_1 \gamma_2}{
+ \beta_2 - \frac{\alpha_2 \gamma_3}{
+ \beta_3 - \cdots
+ }}}.
+ \label{src:2604_20442:eq:app-leaver-cf}
+\end{align}
+The quasinormal frequencies are obtained by solving Eq.~\eqref{src:2604_20442:eq:app-leaver-cf}.
+In practice, one truncates the continued fraction at sufficiently large order.
+Leaver solved, for example, the cases $l=2,3$ up to $N=60$ as in Table~\ref{src:2604_20442:tab:leaver_schwarzschild}.
+\begin{comment}
+See also Tables~\ref{src:2604_20442:tab:leaver_kerr_m0} and~\ref{src:2604_20442:tab:leaver_kerr_m1} for results of Kerr black hole.
+\end{comment}
+Nollert later improved the large-$N$ convergence~\cite{Nollert:1993zz}.
+Table~\ref{src:2604_20442:tab:onozawa_table1} summarizes QNM frequencies for extremal Reissner--Nordstr\"om black hole given by Onozawa \textit{et al.\/} in Ref.~\cite{Onozawa:1995vu}.
+% =========================
+% Table 1 (Leaver 1985): l=2 and l=3 Schwarzschild gravitational QNMs
+% =========================
+\begin{table}[ht]
+\centering
+\caption{$l=2$ and $l=3$ Schwarzschild gravitational QNMs by Leaver's method~\cite{Leaver:1985ax,Leaver:1986gd}.
+$(\re\omega, \im\omega)$ is shown. Here $s=2$ and $M=0.5$.}
+\label{src:2604_20442:tab:leaver_schwarzschild}
+\begin{tabular}{rcc}
+\toprule
+$n$ & $l=2:\ \omega_n$ & $l=3:\ \omega_n$ \\
+\midrule
+ 1 & $( 0.747343,\,-0.177925)$ & $( 1.198887,\,-0.185406)$ \\
+ 2 & $( 0.693422,\,-0.547830)$ & $( 1.165288,\,-0.562596)$ \\
+ 3 & $( 0.602107,\,-0.956554)$ & $( 1.103370,\,-0.958186)$ \\
+ 4 & $( 0.503010,\,-1.410296)$ & $( 1.023924,\,-1.380674)$ \\
+ 5 & $( 0.415029,\,-1.893690)$ & $( 0.940348,\,-1.831299)$ \\
+ 6 & $( 0.338599,\,-2.391216)$ & $( 0.862773,\,-2.304303)$ \\
+ 7 & $( 0.266505,\,-2.895822)$ & $( 0.795319,\,-2.791824)$ \\
+ 8 & $( 0.185617,\,-3.407676)$ & $( 0.737985,\,-3.287689)$ \\
+ 9 & $( 0.000000,\,-3.998000)$ & $( 0.689237,\,-3.788066)$ \\
+10 & $( 0.126527,\,-4.605289)$ & $( 0.647366,\,-4.290798)$ \\
+11 & $( 0.153107,\,-5.121653)$ & $( 0.610922,\,-4.794709)$ \\
+12 & $( 0.165196,\,-5.630885)$ & $( 0.578768,\,-5.299159)$ \\
+20 & $( 0.175608,\,-9.660879)$ & $( 0.404157,\,-9.333121)$ \\
+30 & $( 0.165814,\,-14.677118)$ & $( 0.257431,\,-14.363580)$ \\
+40 & $( 0.156368,\,-19.684873)$ & $( 0.075298,\,-19.415545)$ \\
+41 & $( 0.154912,\,-20.188298)$ & $(-0.000259,\,-20.015653)$ \\
+42 & $( 0.156392,\,-20.685530)$ & $( 0.017662,\,-20.566075)$ \\
+50 & $( 0.151216,\,-24.693716)$ & $( 0.134153,\,-24.119329)$ \\
+60 & $( 0.148484,\,-29.696417)$ & $( 0.163614,\,-29.135345)$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{comment}
+% =========================
+% Table 2 (Leaver 1985): Kerr, l=2, m=0 fundamental mode
+% =========================
+\begin{table}[ht]
+\centering
+\caption{Kerr, $l=2$, $m=0$ fundamental mode by Leaver's method~\cite{Leaver:1985ax,Leaver:1986gd}.}
+\label{src:2604_20442:tab:leaver_kerr_m0}
+\begin{tabular}{rccccc}
+\toprule
+$a$ & $\re(A_{lm})$ & $\im(A_{lm})$ & $\re(\omega_1)$ & $\im(\omega_1)$ \\
+\midrule
+0.0000 & 4.00000 &  0.00000 &  0.747343 & -0.177925 \\
+0.1000 & 3.99722 &  0.00139 &  0.750248 & -0.177401 \\
+0.2000 & 3.98856 &  0.00560 &  0.759363 & -0.175653 \\
+0.3000 & 3.97297 &  0.01262 &  0.776108 & -0.171989 \\
+0.4000 & 3.94800 &  0.02226 &  0.803835 & -0.164313 \\
+0.4500 & 3.93038 &  0.02763 &  0.824009 & -0.156965 \\
+0.4900 & 3.91269 &  0.03152 &  0.844509 & -0.147065 \\
+0.4999 & 3.90770 &  0.03227 &  0.850233 & -0.143646 \\
+\midrule
+0.0000 & 4.00000 &  0.00000 & -0.747343 & -0.177925 \\
+0.1000 & 3.99722 & -0.00139 & -0.750248 & -0.177401 \\
+0.2000 & 3.98856 & -0.00560 & -0.759363 & -0.175653 \\
+0.3000 & 3.97297 & -0.01262 & -0.776108 & -0.171989 \\
+0.4000 & 3.94800 & -0.02226 & -0.803835 & -0.164313 \\
+0.4500 & 3.93038 & -0.02763 & -0.824009 & -0.156965 \\
+0.4900 & 3.91269 & -0.03152 & -0.844509 & -0.147065 \\
+0.4999 & 3.90770 & -0.03227 & -0.850233 & -0.143646 \\
+\bottomrule
+\end{tabular}
+\end{table}
+% =========================
+% Table 3 (Leaver 1985): Kerr, l=2, m=1 fundamental mode
+% =========================
+\begin{table}[ht]
+\centering
+\caption{Kerr, $l=2$, $m=1$ fundamental mode by Leaver's method~\cite{Leaver:1985ax,Leaver:1986gd}.}
+\label{src:2604_20442:tab:leaver_kerr_m1}
+\begin{tabular}{rccccc}
+\toprule
+$a$ & $\re(A_{lm})$ & $\im(A_{lm})$ & $\re(\omega_1)$ & $\im(\omega_1)$ \\
+\midrule
+0.0000 & 4.00000 & 0.00000 &  0.747343 & -0.177925 \\
+0.1000 & 3.89315 & 0.02520 &  0.776500 & -0.176977 \\
+0.2000 & 3.76757 & 0.05324 &  0.815958 & -0.174514 \\
+0.3000 & 3.61247 & 0.08347 &  0.871937 & -0.169128 \\
+0.4000 & 3.40228 & 0.11217 &  0.960461 & -0.155910 \\
+0.4500 & 3.25345 & 0.11951 &  1.032583 & -0.139609 \\
+0.4900 & 3.07966 & 0.10216 &  1.128310 & -0.103285 \\
+0.4999 & 3.02131 & 0.07903 &  1.162546 & -0.076881 \\
+\midrule
+0.0000 & 4.00000 & 0.00000 & -0.747343 & -0.177925 \\
+0.1000 & 4.09389 & 0.02224 & -0.725477 & -0.177871 \\
+0.2000 & 4.17836 & 0.04150 & -0.709265 & -0.176968 \\
+0.3000 & 4.25579 & 0.05767 & -0.697821 & -0.175132 \\
+0.4000 & 4.32786 & 0.07049 & -0.690712 & -0.172007 \\
+0.4500 & 4.36229 & 0.07547 & -0.688717 & -0.169730 \\
+0.4900 & 4.38917 & 0.07868 & -0.687845 & -0.167425 \\
+0.4999 & 4.39573 & 0.07935 & -0.687724 & -0.166772 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{comment}
+% =========================
+% Table I (Onozawa et al. 1996)
+% extremal Reissner--Nordstrom QNMs
+% =========================
+\begin{table}[ht]
+\centering
+\caption{Quasinormal frequencies for the extremal Reissner--Nordstr\"om black hole with $M=1$. The values $(\im \omega, \re \omega)$ are shown for each $s$ and~$l$. This table is taken from Ref.~\cite{Onozawa:1995vu} (Onozawa \textit{et al.\/}).}
+\label{src:2604_20442:tab:onozawa_table1}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{clccc}
+\toprule
+$n$ & Method & $(s,l)=(2,2)$ & $(2,3)$ & $(2,4)$ \\
+\midrule
+0 & Onozawa& $(-0.083460,\,0.43134 )$ & $(-0.085973,\,0.70430 )$ 
+           & $(-0.087001,\,0.96576 )$ \\
+  & Leaver & $(-0.083645,\,0.43098 )$ & ---                     
+           & ---                      \\
+  & WKB    & $(-0.08349 ,\,0.43013 )$ & $(-0.08596 ,\,0.70398 )$ 
+           & $(-0.08700 ,\,0.96563 )$ \\
+\addlinespace
+1 &  Onozawa& $(-0.25498 ,\,0.40452 )$ & $(-0.25992 ,\,0.68804 )$ 
+           & $(-0.26212 ,\,0.95381 )$ \\
+  & Leaver & $(-0.257055,\,0.39309 )$ & ---                     
+           & ---                      \\
+  & WKB    & $(-0.25675 ,\,0.40076 )$ & $(-0.26014 ,\,0.68701 )$ 
+           & $(-0.26218 ,\,0.95339 )$ \\
+\addlinespace
+2 & Onozawa& $(-0.44137 ,\,0.35340 )$ & $(-0.44007 ,\,0.65624 )$ 
+           & $(-0.44064 ,\,0.93020 )$ \\
+  & Leaver & $(-0.442035,\,0.353515)$ & ---                     
+           & ---                      \\
+  & WKB    & $(-0.44210 ,\,0.35136 )$ & $(-0.43986 ,\,0.65575 )$ 
+           & $(-0.44056 ,\,0.93004 )$ \\
+\midrule
+$n$ & Method & $(s,l)=(1,1)$ & $(1,2)$ & $(1,3)$ \\
+\midrule
+0 & Onozawa& $(-0.083460,\,0.43134 )$ & $(-0.085973,\,0.70430 )$ 
+           & $(-0.087001,\,0.96576 )$ \\
+  & Leaver & $(-0.08343 ,\,0.431415)$ & $(-0.086205,\,0.704075)$
+           & ---                      \\
+  & WKB    & $(-0.08349 ,\,0.43013 )$ & $(-0.08596 ,\,0.70398 )$ 
+           & $(-0.08700 ,\,0.96563 )$ \\
+\addlinespace
+1 & Onozawa& $(-0.25498 ,\,0.40452 )$ & $(-0.25992 ,\,0.68804 )$  
+           & $(-0.26212 ,\,0.95381 )$ \\
+  & Leaver & $(-0.259705,\,0.40602 )$ & $(-0.26256 ,\,0.68315 )$ 
+           & ---                      \\
+  & WKB    & $(-0.25675 ,\,0.40076 )$ & $(-0.26014 ,\,0.68701 )$ 
+           & $(-0.26218 ,\,0.95339 )$ \\
+\addlinespace
+2 & Onozawa& $(-0.44137 ,\,0.35340 )$ & $(-0.44007 ,\,0.65624 )$  
+           & $(-0.44064 ,\,0.93020 )$ \\
+  & Leaver & $(-0.44260 ,\,0.35347 )$ & $(-0.4408 ,\,0.655675 )$
+           & ---                      \\
+  & WKB    & $(-0.44210 ,\,0.35136 )$ & $(-0.43986,\,0.65575  )$ 
+           & $(-0.44056 ,\,0.93004 )$ \\
+\midrule
+$n$ & Method & $(s,l)=(0,0)$ & $(0,1)$ & $(0,2)$ \\
+\midrule
+0 & Onozawa& $(-0.095844,\,0.13346 )$ & $(-0.089384,\,0.37764 )$
+           & $(-0.088748,\,0.62657 )$ \\
+  & WKB    & $(-0.10371 ,\,0.12109 )$ & $(-0.08936 ,\,0.37570 )$
+           & $(-0.08873 ,\,0.62609 )$ \\
+\addlinespace
+1 & Onozawa& $(-0.33065 ,\,0.092965)$ & $(-0.27614 ,\,0.34818 )$
+           & $(-0.26909 ,\,0.60817 )$ \\
+  & WKB    & $(-0.33742 ,\,0.09157 )$ & $(-0.27828 ,\,0.34392 )$
+           & $(-0.26944 ,\,0.60677 )$ \\
+\addlinespace
+2 & Onozawa& $(-0.58833 ,\,0.075081)$ & $(-0.48643 ,\,0.29846 )$ 
+           & $(-0.45820 ,\,0.57287 )$ \\
+  & WKB    & $(-0.57164 ,\,0.05056 )$ & $(-0.48145 ,\,0.29661 )$
+           & $(-0.45750 ,\,0.57254 )$ \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+\clearpage
+\subsection{A note on continuum level density in the complex-scaling framework}
+\label{src:2604_20442:app:cld}
+In the main text, we have focused on the extraction of quasinormal-mode (QNM)
+frequencies as isolated resonance eigenvalues of the complex-scaled operator.
+For the present paper, this is the primary use of the complex scaling method
+(CSM).
+However, the CSM is not limited to discrete resonance poles.
+It also provides a natural framework for treating the continuum sector, which
+is physically important in black-hole perturbation theory.
+From the black-hole point of view, this issue is closely related to the
+late-time tail.
+While the intermediate-time ringdown is governed by QNM poles, the late-time
+signal is associated with continuum contributions, often described in terms of
+a branch cut of the Green function and the resulting power-law decay.
+For this reason, a quantity that probes the continuum sector is of direct
+physical interest.
+In the CSM framework, such a quantity is the continuum level density (CLD)~\cite{Suzuki:2005wv}.
+Let $H$ be the full operator and $H_0$ a suitable reference operator.
+The CLD is formally defined by
+\begin{align}
+    \Delta \rho(E)
+    =
+    -\frac{1}{\pi}
+    \im
+    \Tr
+    \left[
+        \frac{1}{E-H+\rmi 0}
+        -
+        \frac{1}{E-H_0+\rmi 0}
+    \right],
+    \label{src:2604_20442:eq:cld_def_appendix}
+\end{align}
+where $E$ is the spectral parameter~\cite{Avishai1985}.
+After complex scaling, this becomes
+\begin{align}
+    \Delta \rho^\theta(E)
+    &=
+    -\frac{1}{\pi}
+    \im
+    \Tr
+    \left[
+        \frac{1}{E-H^\theta}
+        -
+        \frac{1}{E-H_0^\theta}
+    \right]
+    \\
+    &=
+    -\frac{1}{\pi}
+    \im
+    \left[
+        \sum_\nu\frac{1}{E-E^\theta_\nu}
+        -
+        \sum_{\nu'}\frac{1}{E-E_{0,\nu'}^\theta}
+    \right],
+    \label{src:2604_20442:eq:cld_csm_appendix}
+\end{align}
+where $E^\theta_\nu$ and $E_{0,\nu'}^\theta$ are complex energies of complex-scaled Hamiltonians $H^\theta$ and $H^\theta_0$, respectively.
+The point is that, in the CSM, both isolated resonances and the rotated
+continuum are represented within the same non-Hermitian spectral problem.
+Therefore, the same framework that extracts QNM frequencies can, in principle,
+also be used to analyze continuum observables relevant to late-time tails.
+Another important point should be emphasized. As seen from Eq.~\eqref{src:2604_20442:eq:cld_csm_appendix}, the CLD is expressed as an incoherent sum of terms of the form $1/(E-E^\theta_\nu)$. This means that, because each resonance is completely isolated as a single eigenstate in the CSM, its contribution to the CLD can be extracted separately.
+It is helpful to explain the meaning of this expression in simple terms.
+If one considers only discrete bound states, then the spectrum consists of
+isolated energy levels.
+By contrast, in a scattering problem the spectrum also contains a continuum.
+The CLD describes how this continuum is modified by the interaction.
+In other words, it is not merely a count of isolated states, but a spectral
+measure of how the interacting system differs from the free or reference one
+throughout the continuum region.
+In standard scattering theory, the CLD is closely related to phase-shift
+information.
+For a single channel, one may schematically write
+\begin{align}
+    \Delta \rho(E)
+    \propto
+    \frac{\rmd \delta(E)}{\rmd E},
+\end{align}
+where $\delta(E)$ is the scattering phase shift.
+This relation is well known in other areas of physics and is one of the
+reasons why the CLD is a useful bridge between spectral theory and scattering
+observables.
+We do not make direct use of this relation in the present paper, but it is
+worth keeping in mind because it clarifies that the CLD is fundamentally a
+continuum quantity.
+In the present work, we do not attempt a systematic CLD analysis for all
+backgrounds.
+A full study would require a careful choice of the reference operator $H_0$,
+together with a dedicated investigation of the dependence on the scaling
+angle, basis truncation, and numerical integration range.
+Nevertheless, it is useful to record that the present CSM formulation is in
+principle capable of treating not only resonance poles but also the continuum
+sector.
+As a simple illustration, one may consider the extremal
+Reissner--Nordstr\"om case in a channel where the QNM calculation is
+numerically most stable, for example the odd-parity electromagnetic mode with
+$(s,l)=(1,3)$ or equivalently the odd-parity gravitational mode with
+$(s,l)=(2,4)$.
+In such a case, the low-lying resonance poles are already well separated and
+accurately reproduced in the main analysis, so the same setup is a natural
+starting point for a CLD plot.
+In the present formulation, the spectral variable of the Schr\"odinger-type equation is $E=\omega^2$. Therefore, when we express the CLD in terms of $\omega$ rather than $E$, the Jacobian of the transformation should be taken into account as
+\begin{align}
+    \Delta^{\theta}(\omega)=\frac{\rmd E}{\rmd \omega}\Delta^{\theta}(E)
+    = 2\omega\Delta^{\theta}(E).
+\end{align}
+A representative result is shown in
+Fig.~\ref{src:2604_20442:fig:cld_illustration} as a function of $\omega$
+(or equivalently of $E$) with $\theta=40^\circ$.
+The full CLD (the solid line) exhibits the characteristic resonance profile familiar in the CSM: it is negative on the low-energy side, develops a pronounced peak near the resonance region, and then gradually approaches zero at higher energies. Since the CSM allows one to separate the contributions from individual resonance states, we also show the decomposition into the contributions of the
+lowest mode $\omega_0$ and of the higher modes $\omega_1$ and $\omega_2$, which are represented by the dotted, dot-dashed, and dashed curves, respectively.
+The dominant peak structure is produced mainly by the lowest resonance
+$\omega_0$, whose contribution already shows essentially the same qualitative behavior as the full CLD, namely a negative low-energy part, a resonance peak, and an asymptotic approach to zero.
+By contrast, the contributions from $\omega_1$ and $\omega_2$ do not display
+comparably visible isolated peaks in the present range, but rather yield a
+smoother component that changes from a negative value toward zero.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.48\columnwidth]{source_compendium/figures/2604_20442/fig/cld_s1_l3.pdf}
+    \hspace{1em}
+    \includegraphics[bb=0 0 270 252,clip,width=0.45\columnwidth]{source_compendium/figures/2604_20442/fig/lev-th10-20-eps-converted-to.pdf}
+    \caption{\textbf{Left panel:} Illustrative CLD in the CSM for the extremal Reissner--Nordstr\"om case in the odd-parity electromagnetic channel $(s,l)=(1,3)$, together with its decomposition into contributions from the low-lying modes $\omega_{n=0,1,2}$.
+    We set $H_0=-\rmd^2/\rmd r_*^2$ and $\theta=40^\circ$. The vertical dashed line represents the value of $\re \omega_1$.
+    %The purpose of this figure is not yet a full quantitative analysis, but rather to demonstrate that the same CSM framework used for the QNM frequencies can also resolve the continuum sector.
+    The CLD shows a characteristic structure: it is negative on the low-energy side, develops a pronounced peak near the resonance energy, and then gradually approaches zero at higher energies.
+    This is qualitatively the same pattern as in standard CSM applications to resonance problems, indicating that the present black-hole calculation captures a resonance embedded in the continuum in essentially the same spectral manner.
+    In black-hole language, this is the sector that is expected to be related to branch-cut contributions and late-time power-law tails.
+    \textbf{Right panel:} A typical CLD in a nuclear system taken from Ref.~\cite{Suzuki:2005wv}, where one finds the same qualitative behavior: a negative contribution on the low-energy side, a resonance peak, and an asymptotic approach to zero.}
+    \label{src:2604_20442:fig:cld_illustration}
+\end{figure}
+Again, the purpose of this figure is only illustrative.
+It is included here simply to show that the CSM framework used in the main text
+for QNM frequencies can also be extended to continuum observables.
+Our emphasis in this paper remains on the simpler and more immediate
+problem of extracting QNM frequencies from the complex-scaled eigenvalue
+spectrum.
+Once the numerical implementation is sufficiently mature, it should be
+possible to extend the analysis to continuum observables of CLD type.
+This would be especially interesting in black-hole problems where the balance
+between resonance poles and continuum contributions is physically important.
+Thus, the main message of this calculation module is simple:
+the CSM is useful not only because it turns QNM boundary conditions into a
+tractable eigenvalue problem, but also because it provides, in principle, a
+way to study the continuum sector relevant to the late-time tail.
+In this sense, the CLD should be viewed as a natural next step beyond the
+frequency calculations presented in the main text.
+
+\subsection*{Laboratory checkpoint}
+Before moving to the next stage, perform the following checks without copying
+the displayed final answer.
+\begin{enumerate}
+  \item Derive the Regge--Wheeler potential from the odd-parity perturbation equations, including the tortoise-coordinate boundary conditions.
+  \item Assemble one finite complex-scaled basis matrix and scan scaling angle, basis size, and radial range to identify a stable QNM.
+  \item Compare the extracted frequency with a Leaver benchmark and inspect the corresponding continuum-level-density contribution.
+\end{enumerate}

@@ -1,0 +1,900 @@
+% Generated from arXiv:2505.02301; see tools/build_source_compendium.py.
+\section{Calculation laboratory IV-A: One Gamow pole in three realizations}
+\label{lab:2505_02301}
+
+\calculationroute
+  {The resonance connection coefficient, analytic continuation of a Gamow solution, Gaussian regularization, and analytic dilation.}
+  {Generalized Riccati equations, Borel summation, Gaussian regularization, analytic dilation, and the rigged-Hilbert-space interpretation in one explicit model.}
+  {Show on the same solvable model that Zel'dovich, complex-scaled, and rigged-space pairings encode the same continued resonance datum.}
+
+This Laboratory reconstructs the calculation underlying
+Ref.~\cite{Morikawa:2025xjq}.  The generalized Riccati recursion and local
+connection formula use the canonical conventions of Sec.~\ref{sec:exact-wkb};
+they are not derived a second time.  The calculation begins where the choice
+of regularization first matters.
+
+\begin{comment}
+\subsection{Exact WKB analysis for generalized Riccati equation}
+\subsubsection{WKB ansatz for generalized Riccati equation}
+Let us first review the exact WKB analysis for a potential with first-order differentiation.\footnote{%
+For more mathematical studies on first-order differentiation, see Refs.~\cite{Nikolaev:2008,Nikolaev:2021xzt}.}
+A general $1$-dimensional Schr\"odinger equation is
+\begin{align}
+    \left[-\frac{\hbar^2}{2}\frac{\rmd^2}{\rmd x^2}+\frac{\hbar^2}{2} f(x)\frac{\rmd}{\rmd x}+V(x)\right]
+    \psi(x) = E \psi(x) ,
+\end{align}
+where $f(x)$ is a function of~$x$ of order~$O(\hbar^0)$; in particular, under the Zel'dovich regularization, $f(x)\propto -x$.
+We also have
+\begin{align}
+    \left[-\frac{\rmd^2}{\rmd x^2}+f(x)\frac{\rmd}{\rmd x} + \hbar^{-2}Q(x)\right]
+    \psi(x) = 0 ,
+\end{align}
+where $Q=2(V-E)$.
+Let us introduce the WKB solution of the above equation.
+This is the ansatz which is defined by a formal power series as
+\begin{align}
+    \psi(x,\hbar) &= \rme^{\int^x \rmd x'\, S(x',\hbar)} ,&
+    S(x,\hbar) &= \sum_{i=-1}^{\infty}\hbar^{i} S_{i}(x) .
+\end{align}
+Substituting $S(x,\hbar)$ into the Schr\"odinger equation,
+we have the generalized Riccati equation
+\begin{align}
+    S^2 + \frac{\rmd S}{\rmd x} - f S = \hbar^{-2} Q .
+    \label{src:2505_02301:eq:riccati_eq}
+\end{align}
+We can obtain the recursive equation of $S_i$ for each power of~$\hbar$ as follows:
+\begin{align}
+    \hbar^{-2}&:S_{-1}^2 = Q ,
+    \label{src:2505_02301:eq:recursive_eq_1}\\
+    \hbar^{i-1}&:2S_{-1}S_{i} + \sum_{j=0}^{i-1} S_{j}S_{i-j}
+    + \frac{\rmd S_{i-1}}{\rmd x} - f S_{i-1} = 0 \qquad i\geq0.
+    \label{src:2505_02301:eq:recursive_eq}
+\end{align}
+From the two leading-order solutions of~Eq~\eqref{src:2505_02301:eq:recursive_eq_1}
+\begin{align}
+    S_{-1}(x) = S_{-1}^{\pm}(x) \equiv \pm \sqrt{Q(x)} ,
+\end{align}
+all higher-order terms~$S_i$ with $i\geq0$ can be determined
+uniquely by Eq.~\eqref{src:2505_02301:eq:recursive_eq}.
+Hence we find two solutions
+\begin{align}
+    S^{\pm} = \sum_{i=-1}^{\infty} \hbar^i S_i^{\pm} .
+\end{align}
+It is known that $S_i^{\pm}$ has the following properties:
+\begin{enumerate}
+    \item From Eq.~\eqref{src:2505_02301:eq:recursive_eq}, $S_i^{-}=(-1)^i S_i^{+}$ holds for $i\geq-1$ by mathematical induction;
+    \item hence, immediately we can write
+        \begin{align}
+            S^{\pm}=\pm \vsub{S}{odd} + \vsub{S}{even},
+        \end{align}
+    where $\vsub{S}{odd}=\sum_{i\geq0}\hbar^{2i-1} S_{2i-1}^{+}$ and $\vsub{S}{even}=\sum_{i\geq0}\hbar^{2i} S_{2i}$;
+    \item substituting the above expression into the Riccati equation~\eqref{src:2505_02301:eq:riccati_eq}, we obtain
+        \begin{align}
+            2 \vsub{S}{odd}\vsub{S}{even} + \left(\frac{\rmd}{\rmd x}-f\right) \vsub{S}{odd}
+            = 0 .
+        \end{align}
+    Therefore $\vsub{S}{even}$ can be rewritten in terms of~$\vsub{S}{odd}$ by
+        \begin{align}
+            \vsub{S}{even}
+            = - \frac{1}{2} \frac{1}{\vsub{S}{odd}}
+            \left(\frac{\rmd}{\rmd x}-f\right) \vsub{S}{odd}
+            = - \frac{1}{2}\frac{\rmd}{\rmd x} \ln \vsub{S}{odd}
+            + \frac{1}{2}f ;
+        \end{align}
+    \item the WKB wave function is
+        \begin{align}
+            \psi(x,\hbar)^{\pm} = \frac{1}{\sqrt{\vsub{S}{odd}}}
+            \rme^{\pm\int^x \rmd x'\, \vsub{S}{odd} + \int^x \rmd x'\, f}.
+        \end{align}
+\end{enumerate}
+\subsubsection{Borel resummation and Stokes geometry}
+The formal series, say,
+\begin{align}
+    \psi(x,\hbar)^{\pm}
+    = \rme^{\pm\hbar^{-1}\int^x \rmd x'\sqrt{Q}}
+    \sum_{n\geq0} \psi_n^{\pm}(x) \hbar^{n+1/2}
+\end{align}
+is not necessarily convergent.
+Now, we would define the Borel resummation to obtain a convergent/finite value.
+The essential point is the insertion of one,
+\begin{align}
+    1 = \frac{1}{\Gamma(n+\alpha)} \int_0^\infty \rmd x\, \rme^{-x} x^{n+\alpha-1},
+\end{align}
+and exchange of the infinite sum and the above integral:
+\begin{align}
+    \psi(x,\hbar)^{\pm}
+    &= \rme^{\pm\hbar^{-1}\int^x \rmd x'\sqrt{Q}}
+    \sum_{n\geq0}\int_0^\infty \rmd u\, \psi_n^{\pm}(x)
+    \frac{1}{\Gamma(n+1/2)}  \rme^{-u/\hbar} u^{n-1/2}\\
+    &= \sum_{n\geq0}\int_{\mp u_0}^\infty \rmd u\, \psi_n^{\pm}(x)
+    \frac{1}{\Gamma(n+1/2)}  \rme^{-u/\hbar} (u\pm u_0)^{n-1/2}\\
+    \Psi(x,\hbar)^{\pm}
+    &\equiv \int_{\mp u_0}^\infty \rmd u\, \rme^{-u/\hbar}
+    \underbrace{\sum_{n\geq0} \frac{\psi_n^{\pm}(x)}{\Gamma(n+1/2)} (u\pm u_0)^{n-1/2}}_{=:\mathcal{B}[\psi^{\pm}](u)} ,
+\end{align}
+where $u_0 = \int^x \rmd x'\sqrt{Q}$, $\psi$ is redefined as~$\Psi$,
+and $\mathcal{B}[\psi^{\pm}]$ is the Borel transform.
+The infinite sum in~$\mathcal{B}[\psi]$ becomes a convergent series.
+On the other hand, for divergent series, the Borel transform itself may develop a singularity, called Borel singularity.
+If there exists a singular point on the integration path over~$u$,
+the series is Borel non-summable and the integral is ambiguous;
+otherwise, this is Borel summable.
+If Borel non-summable,
+we may pick up some analytically continued paths
+that have an imaginary difference as a non-perturbative effect.
+When we vary some parameters in a system and the path jumps over the Borel singularity,
+the value of the Borel integral suddenly changes.
+This is the Stokes phenomenon.
+It depends on the parameter~$x$ whether the WKB solution is Borel summable or not.
+To see this, at first, we introduce turning points such that
+\begin{align}
+    \exists a,\, Q(x=a) = 0 ,
+\end{align}
+and a Stokes curve is defined by
+\begin{align}
+    \im \hbar^{-1}\int_a^x \rmd x' \sqrt{Q} = 0. \label{src:2505_02301:eq:stokes_curve}
+\end{align}
+Now, we consider an integration contour from a reference point~$x_0$ to~$x$ in
+\begin{align}
+    u_0 = \int_{x_0}^x \rmd x'\sqrt{Q} .
+\end{align}
+If this path goes across the Stokes curve,
+we observe a Borel singularity with $\im u_0=0$;
+it makes the integral ill-defined, i.e., Borel non-summable.
+Then, the turning points and the Stokes curves determine analytically continuable regions and are called the Stokes graph or geometry.
+\subsubsection{Connection formula near turning point}
+Let us see a connection formula of the Borel resummation of the WKB solution.
+Note that $\psi^{\pm}$ and $\psi^{\mp}$ are dominant and subdominant,
+respectively, along a Stokes curve with
+\begin{align}
+    \re \hbar^{-1}\int_a^x \rmd x' \sqrt{Q} \gtrless 0 .
+\end{align}
+Let regions I and II be Borel summable areas,
+whose boundary curve starting from the same turning point makes $\psi^{\pm}$ dominant.
+When we go across this Stokes curve from I to II near the turning point, the Stokes phenomenon gives rise to
+\begin{align}
+    \begin{pmatrix}
+      \vsub{\psi^{+}}{I} \\ \vsub{\psi^{-}}{I}
+    \end{pmatrix}
+    =
+    M
+    \begin{pmatrix}
+      \vsub{\psi^{+}}{II} \\ \vsub{\psi^{-}}{II}
+    \end{pmatrix} ,
+    \label{src:2505_02301:eq:connection}
+\end{align}
+where $M$ depends on the rotation of the path around the turning point,
+\begin{align}
+    M =
+    \begin{cases}
+        M_{+} & \text{if anti-clockwise for the index~$+$,} \\
+        M_{+}^{-1}& \text{if clockwise for the index~$+$,} \\
+        M_{-} & \text{if anti-clockwise for the index~$-$,} \\
+        M_{-}^{-1} &\text{if clockwise for the index~$-$,}
+    \end{cases}
+\end{align}
+and
+\begin{align}
+    M_{+} &=
+    \begin{pmatrix}
+        1 & \rmi \\ 0 & 1
+    \end{pmatrix}, &
+    M_{-} &=
+    \begin{pmatrix}
+        1 & 0 \\ \rmi & 1
+    \end{pmatrix} .
+\end{align}
+We can connect the different turning points, $a_1$ and $a_2$,
+such that the wave function is related to each other by the factor,
+\begin{align}
+    N_{a_1a_2}=\diag\left(\rme^{\int_{a_1}^{a_2}\rmd x\, \vsub{S}{odd} + \int_{a_1}^{a_2} \rmd x\, f},\rme^{-\int_{a_1}^{a_2}\rmd x\, \vsub{S}{odd} + \int_{a_1}^{a_2} \rmd x\, f}\right) .
+\end{align}
+Noting that there exists a branch cut due to $1/\sqrt{\vsub{S}{odd}}$, after crossing this cut, i.e., going to another Riemann sheet, the index $+$ ($-$) must be replaced by $-$ ($+$) (see Fig.~\ref{src:2505_02301:fig:branch}).
+\begin{figure}
+\centering
+  \begin{tikzpicture}[scale=0.12]
+   %Riemann
+   \draw[line width=1pt] (22,25) .. controls (22,0) and (30,0) .. (30,-25);
+   \draw[line width=1pt] (30,28) .. controls (30,0) and (22,0) .. (22,-28);
+   \draw[line width=1pt] (22,25) -- (-30,25) -- (-30,-28) -- (22,-28);
+   \draw[line width=1pt] (30,28) -- (-22,28) -- (-22,25);
+   \draw[line width=1pt] (30,-25) -- (22,-25);
+   %axis
+   \draw[line width=2pt] (-4,0) .. controls (-10,-3) and (-22,-3) .. (-27,-3) node[below] {$+$};
+   \draw[gray,dashed,line width=2pt] (-4,0) .. controls (-10,3) and (-22,3) .. (-27,3) node[above] {$-$};
+   \draw[line width=2pt] (-4,0) .. controls (-7,-10) and (-7,-22) .. (-7,-24-3) node[left] {$-$};
+   \draw[gray,dashed,line width=2pt] (-4,0) .. controls (-1,-10) and (-1,-22) .. (-1,-24-3) node[right] {$+$};
+   \draw[line width=2pt] (-4,0) .. controls (-7,10) and (-7,22) .. (-7,24) node[left] {$-$};
+   \draw[gray,dashed,line width=2pt] (-4,0) .. controls (-1,10) and (-1,22) .. (-1,24) node[right] {$+$};
+   %%
+   \draw[blue,line width=3pt,snake it] (-4,0) -- (26,0);
+   %x
+   \draw[line width=1pt] (-26,17) -- (-21,17) -- (-21,22);
+   \draw[line width=1pt] (-23.5,19.5) node {$x$};
+  \end{tikzpicture}
+  \caption{Stokes graph near a turning point. The solid and dashed curves are the associated Stokes curves on the first and second Riemann sheets, respectively. The blue wavy line is a branch cut. After crossing a branch cut once, the correspondence to the indices $+$ and $-$ in $M$ must be reversed.}
+  \label{src:2505_02301:fig:branch}
+\end{figure}
+\end{comment}
+\subsection{One pole, three realizations}
+The continued Gamow branch is the zero of the incoming connection coefficient
+constructed in Stage III.  We now compute its Zel'dovich, complex-scaled, and
+rigged-space representatives.
+\subsection{Zel'dovich regularization}
+\subsubsection{Hamiltonian under Zel'dovich transformation}
+The wave function of a resonant state diverges in the asymptotic region.
+This singular nature causes difficulty in investigating the state as follows: In the $3$-dimensional space, the radial wave function $\varphi(r)$ of a resonant state with $k=k_{r}-\rmi k_{i}$ ($k_{r}$, $k_{i}\in\mathbb{R}^{+}$) has the typical asymptotic form
+\begin{align}
+ \varphi(r) \xrightarrow[r\to\infty]{}\rme^{\rmi kr} = \rme^{\rmi k_{r}}\rme^{k_{i}r},
+\end{align}
+which grows up exponentially because of~$\rme^{k_{i}r}$.
+The integration of the norm, $||\varphi(r)||^2$, is also ill-defined.
+Similarly, in time-independent scattering theory,
+a factor, $\rme^{\rmi \varepsilon t}$ with $\varepsilon>0$, suppress the $\rme^{-\rmi Et}$ oscillations in stationary solutions.
+An analogous approach, called the Zel'dovich regularization~\cite{Zel'dovich:1961}, can be introduced in order to obtain a finite value of the norm as
+\begin{align}
+ ||\varphi(r)||_S^2\equiv\lim_{\varepsilon\to+0}\int_{0}^{\infty} \rmd r\, \rme^{-\varepsilon r^2}\varphi(r)^2r^2 .
+\end{align}
+Using this regularization, Berggren~\cite{Berggren:1968zz} proved the orthogonality and completeness properties of the resonant states.
+Now, the square of the wave function is integrated with the norm not only of the bound states but also of the resonant states.
+For the Schr\"odinger equation,
+we can have a similarity transformation associated with Zel'dovich regularization.
+The Zel'dovich transformation is given by
+\begin{align}
+    H\psi = E\psi
+    \qquad\Rightarrow\qquad
+    H_S\psi_S = E\psi_S
+\end{align}
+with
+\begin{align}
+    \psi_S &\equiv S\psi,& H_S &\equiv S H S^{-1}.
+\end{align}
+Here $S$ is the Gaussian factor $\rme^{-\varepsilon r^2}$.
+Note that the Zel'dovich-transformed Hamiltonian~\cite{Moiseyev:2011} is related to the original one as
+\begin{align}
+    H_S = H - \frac{\hbar^2\varepsilon}{m}(\nabla \cdot \bm{r} + \bm{r} \cdot \nabla)
+    + O(\varepsilon^2) .
+\end{align}
+For the $1$-dimensional system, one finds that
+\begin{align}
+    H_S = H - \frac{\hbar^2\varepsilon}{m} \left(\frac{\rmd}{\rmd x}x+x\frac{\rmd}{\rmd x}\right)
+        = H - \frac{\hbar^2\varepsilon}{m} \left(1 + 2 x \frac{\rmd}{\rmd x}\right).
+    \label{src:2505_02301:eq:zel_hamiltonian}
+\end{align}
+\begin{comment}
+\subsubsection{Exact solution}
+\begin{align}
+    \left[ -\frac{\hbar^2}{2m} \frac{\rmd^2}{\rmd x^2} + \frac{U_{0}}{\cosh^2 \beta x} - \frac{\hbar^2\varepsilon}{m} \left(1 + 2 x \frac{\rmd}{\rmd x}\right)
+    \right] \psi(x)
+    &= E \psi(x).
+\end{align}
+\begin{align}
+    \left[ \frac{\rmd^2}{\rmd x^2} - \frac{2mU_{0}}{\hbar^2}\frac{1}{\cosh^2 \beta x} +  2\varepsilon \left(1 + 2 x \frac{\rmd}{\rmd x}\right) + \frac{2mE}{\hbar^2}
+    \right] \psi(x)
+    &= 0    
+\end{align}
+$\xi=\tanh{\beta x}$
+\begin{align}
+    \left[ \frac{\rmd}{\rmd \xi} (1-\xi^2) \frac{\rmd}{\rmd \xi} - \frac{2mU_{0}}{\beta^2\hbar^2} + \frac{2\varepsilon}{\beta^2}\ln{\frac{1+\xi}{1-\xi}} \frac{\rmd}{\rmd \xi} + \left( \frac{2mE}{\beta^2\hbar^2} + \frac{2\varepsilon}{\beta^2} \right) \frac{1}{1-\xi^2}
+    \right] \psi(x)
+    &= 0    
+\end{align}
+\end{comment}
+\subsubsection{Inverted Rosen--Morse potential}
+The Stokes graph via the Zel'dovich transformation is identical to the original graph
+with $f(x)=-\frac{4\varepsilon}{m}x$ in Eq.~\eqref{src:2505_02301:eq:zel_hamiltonian}.
+For the inverted Rosen--Morse potential,
+\begin{align}
+    V(x) = \frac{U_0}{\cosh^2\beta x},
+        \qquad U_0 > 0,
+\end{align}
+see Figs.~\ref{src:2505_02301:fig:stokes_graph} ($\im\hbar\gtrless0$ and~$\im E\gtrless0$) and \ref{src:2505_02301:fig:stokes_graph2} ($\im\hbar\gtrless0$ and~$\im E\lessgtr0$, but $\im E\sim0$) \cite{Morikawa:2025grx}.
+Note that $\im \resonantE<0$ for the complex energy of resonance, $\resonantE$.
+Now, since the wave function is expected to be normalizable after the Zel'dovich transformation,
+Note that the normalizability of the wave function,
+i.e., the dominance of~$\psi^{-}$ at infinity,
+gives rise to the quantization condition which is given by the analytical continuation and the connection formula.
+One may choose the simple path depicted on the left panel in~Fig.~\ref{src:2505_02301:fig:stokes_graph_path}
+for giving the quantization condition.
+The non-perturbative cycle, $A=\rme^{\oint_{a_1}^{a_2}\rmd x\,S_{\text{odd}}}$, contributes $M_{-}N_{a_1a_2}M_{+}$, where $a_{1,2}$ is a turning point; a simple convergence condition that $\psi^{+}$ should vanish at~$\im x\to\pm\infty$ gives rise to $1-A=0$ as is given in Ref.~\cite{Morikawa:2025grx}.
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[scale=1]
+  \draw[->] (-2.5,-1.4) -- (2.5,-1.4) node[right] {$\re x$};
+  \draw[->] (0,-3) -- (0,3) node[above] {$\im x$};
+  %
+  \draw[thick,domain=0:520,samples=100,variable=\t,rotate=20] plot ({-0.002*\t*sin(\t)}, {-0.0018*\t^1.05*cos(\t)}) ..controls (0.5,1.35) and (1,1.1).. (1.4,1) node[above left] {$-$};
+  \draw[thick,domain=0:-520,samples=100,variable=\t,rotate=20] plot ({0.002*\t*sin(\t)}, {-0.0018*\t^1.05*cos(\t)}) ..controls (-0.5,-1.35) and (-1,-1.1).. (-1.4,-1) node[below right] {$+$};
+  \draw[thick,domain=0:550,samples=100,variable=\t,rotate=110] plot ({-0.0018*\t^1.05*sin(\t)}, {-0.002*\t*cos(\t)}) ..controls (1.5,0.9) and (1.5,0.4).. (1.7,0.5) node[below left] {$+$};
+  \draw[thick,domain=0:-550,samples=100,variable=\t,rotate=110] plot ({0.0018*\t^1.05*sin(\t)}, {-0.002*\t*cos(\t)}) ..controls (-1.5,-0.9) and (-1.5,-0.4).. (-1.7,-0.5) node[above right] {$-$};
+  %
+  \draw[dashed] (1,1.4) ..controls (1.15,1.5) and (1.2,2) .. (0.9,2.8);
+  \draw[dashed] (-1,-1.4) ..controls (-1.15,-1.5) and (-1.2,-2) .. (-0.9,-2.8);
+  \draw[dashed] (-1,1.4)   ..controls (-0.5,1.4)   and (-0.2,1.6)  .. (0,1.7);
+  \draw[dashed] (1,-1.4) ..controls (0.5,-1.4) and (0.2,-1.6) .. (0,-1.7);
+  %
+  \draw[thick] (1,1.4) ..controls (1.5,1) and (1.6,-1.4) .. (1.5,-2.8) node[right] {$+$};
+  \draw[thick] (-1,-1.4) ..controls (-1.5,-1) and (-1.6,1.4) .. (-1.5,2.8) node[left] {$-$};
+  %
+  \fill[blue] (0,0) circle(4pt);
+  \draw[very thick,blue, snake it] (-1,1.4) -- (1,-1.4);
+  %
+  \fill (-1,1.4) circle(3pt); \fill (1,1.4) circle(3pt);
+  \fill (1,-1.4) circle(3pt); \fill (-1,-1.4) circle(3pt);
+  %
+\end{tikzpicture}
+\hspace{1em}
+\begin{tikzpicture}[scale=1]
+  \draw[->] (-2.5,-1.4) -- (2.5,-1.4) node[right] {$\re x$};
+  \draw[->] (0,-3) -- (0,3) node[above] {$\im x$};
+  %
+  \fill (-1,1.4) circle(3pt); \fill (1,1.4) circle(3pt);
+  \fill (1,-1.4) circle(3pt); \fill (-1,-1.4) circle(3pt);
+  %
+  \draw[thick,domain=0:-520,samples=100,variable=\t,rotate=-20] plot ({0.002*\t*sin(\t)}, {0.0018*\t^1.05*cos(\t)}) ..controls (-0.5,1.35) and (-1,1.1).. (-1.4,1) node[above right] {$+$};
+  \draw[thick,domain=0:520,samples=100,variable=\t,rotate=-20] plot ({-0.002*\t*sin(\t)}, {0.0018*\t^1.05*cos(\t)}) ..controls (0.5,-1.35) and (1,-1.1).. (1.4,-1) node[below left] {$-$};
+  \draw[thick,domain=0:-550,samples=100,variable=\t,rotate=-110] plot ({0.0018*\t^1.05*sin(\t)}, {0.002*\t*cos(\t)}) ..controls (-1.5,0.9) and (-1.5,0.4).. (-1.7,0.5) node[below right] {$-$};
+  \draw[thick,domain=0:550,samples=100,variable=\t,rotate=-110] plot ({-0.0018*\t^1.05*sin(\t)}, {0.002*\t*cos(\t)}) ..controls (1.5,-0.9) and (1.5,-0.4).. (1.7,-0.5) node[above left] {$+$};
+  %
+  \draw[dashed] (-1,1.4) ..controls (-1.15,1.5) and (-1.2,2) .. (-0.9,2.8);
+  \draw[dashed] (1,-1.4) ..controls (1.15,-1.5) and (1.2,-2) .. (0.9,-2.8);
+  \draw[dashed] (1,1.4)   ..controls (0.5,1.4)   and (0.2,1.6)   .. (0,1.7);
+  \draw[dashed] (-1,-1.4) ..controls (-0.5,-1.4) and (-0.2,-1.6) .. (0,-1.7);
+  %
+  \draw[thick] (-1,1.4) ..controls (-1.5,1) and (-1.6,-1.4) .. (-1.5,-2.8) node[left] {$-$};
+  \draw[thick] (1,-1.4) ..controls (1.5,-1) and (1.6,1.4) .. (1.5,2.8) node[right] {$+$};
+  %
+  \fill[blue] (0,0) circle(4pt);
+  \draw[very thick,blue, snake it] (1,1.4) -- (-1,-1.4);
+  %
+\end{tikzpicture}
+\caption{Schematic illustration of Stokes graph for the inverted Rosen--Morse potential, $V(x)=1/\cosh^2x$, via the Zel'dovich transformation.
+This geometry itself is identical to the original one~\cite{Morikawa:2025grx}.
+The left/right panels are devoted to~$\im\hbar\gtrless0$ and~$\im E\gtrless0$.
+The black points are the turning points and the solid curves are the associated Stokes curves.
+The dashed Stokes curves mean the periodicity of~$\im x\in[-\pi/2,\pi/2]$ due to the cosine function on~$\re x=0$.
+The blue points are double poles and the blue wavy lines are branch cuts.}
+\label{src:2505_02301:fig:stokes_graph}
+\end{figure}
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[scale=1]
+  \draw[->] (-2.5,-1.4) -- (2.5,-1.4) node[right] {$\re x$};
+  \draw[->] (0,-3) -- (0,3) node[above] {$\im x$};
+  %
+  %\draw[thick,domain=0:520,samples=100,variable=\t,rotate=20] plot ({-0.002*\t*sin(\t)}, {-0.0018*\t^1.05*cos(\t)}) ..controls (0.5,1.35) and (1,1.1).. (1.4,1) node[above left] {$-$};
+  %\draw[thick,domain=0:-520,samples=100,variable=\t,rotate=20] plot ({0.002*\t*sin(\t)}, {-0.0018*\t^1.05*cos(\t)}) ..controls (-0.5,-1.35) and (-1,-1.1).. (-1.4,-1) node[below right] {$+$};
+  \draw[thick,domain=0:550,samples=100,variable=\t,rotate=110] plot ({-0.0018*\t^1.05*sin(\t)}, {-0.002*\t*cos(\t)}) ..controls (1.5,0.9) and (1.5,0.4).. (1.7,0.5) node[below left] {$+$};
+  \draw[thick,domain=0:-550,samples=100,variable=\t,rotate=110] plot ({0.0018*\t^1.05*sin(\t)}, {-0.002*\t*cos(\t)}) ..controls (-1.5,-0.9) and (-1.5,-0.4).. (-1.7,-0.5) node[above right] {$-$};
+  \draw[very thick] (-1,-1.4) -- (1,-1.4);
+  \draw[very thick] (-1,1.4) -- (1,1.4);
+  %
+  \draw[dashed] (1,1.4) ..controls (1.15,1.5) and (1.2,2) .. (0.9,2.8);
+  \draw[dashed] (-1,-1.4) ..controls (-1.15,-1.5) and (-1.2,-2) .. (-0.9,-2.8);
+  %\draw[dashed] (-1,1.4)   ..controls (-0.5,1.4)   and (-0.2,1.6)  .. (0,1.7);
+  %\draw[dashed] (1,-1.4) ..controls (0.5,-1.4) and (0.2,-1.6) .. (0,-1.7);
+  %
+  \draw[thick] (1,1.4) ..controls (1.5,1) and (1.6,-1.4) .. (1.5,-2.8) node[right] {$+$};
+  \draw[thick] (-1,-1.4) ..controls (-1.5,-1) and (-1.6,1.4) .. (-1.5,2.8) node[left] {$-$};
+  %
+  \fill[blue] (0,0) circle(4pt);
+  \draw[very thick,blue, snake it] (-1,1.4) -- (1,-1.4);
+  %
+  \fill (-1,1.4) circle(3pt); \fill (1,1.4) circle(3pt);
+  \fill (1,-1.4) circle(3pt); \fill (-1,-1.4) circle(3pt);
+  %
+\end{tikzpicture}
+\hspace{1em}
+\begin{tikzpicture}[scale=1]
+  \draw[->] (-2.5,-1.4) -- (2.5,-1.4) node[right] {$\re x$};
+  \draw[->] (0,-3) -- (0,3) node[above] {$\im x$};
+  %
+  \fill (-1,1.4) circle(3pt); \fill (1,1.4) circle(3pt);
+  \fill (1,-1.4) circle(3pt); \fill (-1,-1.4) circle(3pt);
+  %
+  %\draw[thick,domain=0:-520,samples=100,variable=\t,rotate=-20] plot ({0.002*\t*sin(\t)}, {0.0018*\t^1.05*cos(\t)}) ..controls (-0.5,1.35) and (-1,1.1).. (-1.4,1) node[above right] {$+$};
+  %\draw[thick,domain=0:520,samples=100,variable=\t,rotate=-20] plot ({-0.002*\t*sin(\t)}, {0.0018*\t^1.05*cos(\t)}) ..controls (0.5,-1.35) and (1,-1.1).. (1.4,-1) node[below left] {$-$};
+  \draw[thick,domain=0:-550,samples=100,variable=\t,rotate=-110] plot ({0.0018*\t^1.05*sin(\t)}, {0.002*\t*cos(\t)}) ..controls (-1.5,0.9) and (-1.5,0.4).. (-1.7,0.5) node[below right] {$-$};
+  \draw[thick,domain=0:550,samples=100,variable=\t,rotate=-110] plot ({-0.0018*\t^1.05*sin(\t)}, {0.002*\t*cos(\t)}) ..controls (1.5,-0.9) and (1.5,-0.4).. (1.7,-0.5) node[above left] {$+$};
+  \draw[very thick] (-1,-1.4) -- (1,-1.4);
+  \draw[very thick] (-1,1.4) -- (1,1.4);
+  %
+  \draw[dashed] (-1,1.4) ..controls (-1.15,1.5) and (-1.2,2) .. (-0.9,2.8);
+  \draw[dashed] (1,-1.4) ..controls (1.15,-1.5) and (1.2,-2) .. (0.9,-2.8);
+  %\draw[dashed] (1,1.4)   ..controls (0.5,1.4)   and (0.2,1.6)   .. (0,1.7);
+  %\draw[dashed] (-1,-1.4) ..controls (-0.5,-1.4) and (-0.2,-1.6) .. (0,-1.7);
+  %
+  \draw[thick] (-1,1.4) ..controls (-1.5,1) and (-1.6,-1.4) .. (-1.5,-2.8) node[left] {$-$};
+  \draw[thick] (1,-1.4) ..controls (1.5,-1) and (1.6,1.4) .. (1.5,2.8) node[right] {$+$};
+  %
+  \fill[blue] (0,0) circle(4pt);
+  \draw[very thick,blue, snake it] (1,1.4) -- (-1,-1.4);
+  %
+\end{tikzpicture}
+\caption{Schematic illustration of Stokes graph for the inverted Rosen--Morse potential. Same as Fig.~\ref{src:2505_02301:fig:stokes_graph}, but $\im\hbar\gtrless0$ and~$\im E\lessgtr0$. For simplicity, $\im E\sim 0$.}
+\label{src:2505_02301:fig:stokes_graph2}
+\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\begin{tikzpicture}[scale=1.2]
+%  \draw[->] (-2.5,-1.4) -- (2.5,-1.4) node[right] {$\re x$};
+%  \draw[->] (0,-3) -- (0,3) node[above] {$\im x$};
+%  %
+%  \draw[thick,domain=0:660,samples=100,variable=\t,rotate=20] plot ({-0.002*\t*sin(\t)}, {-0.0018*\t^1.05*cos(\t)}) .. controls (1,-1.4) and (1,-1.5) .. (0.3,-3);
+%  \draw[thick,domain=0:-660,samples=100,variable=\t,rotate=20] plot ({0.002*\t*sin(\t)}, {-0.0018*\t^1.05*cos(\t)}) .. controls (-1,1.4) and (-1,1.5) .. (-0.3,3);
+%  \draw[thick,domain=0:550,samples=100,variable=\t,rotate=110] plot ({-0.0018*\t^1.05*sin(\t)}, {-0.002*\t*cos(\t)}) ..controls (1.5,0.9) and (1.5,0.4).. (1.7,0.5) node[below left] {$+$};
+%  \draw[thick,domain=0:-550,samples=100,variable=\t,rotate=110] plot ({0.0018*\t^1.05*sin(\t)}, {-0.002*\t*cos(\t)}) ..controls (-1.5,-0.9) and (-1.5,-0.4).. (-1.7,-0.5) node[above right] {$-$};
+%  %
+%  %\draw[dashed] (1,1.4) ..controls (1.15,1.5) and (1.2,2) .. (0.9,2.8);
+%  %\draw[dashed] (-1,-1.4) ..controls (-1.15,-1.5) and (-1.2,-2) .. (-0.9,-2.8);
+%  %\draw[dashed] (-1,1.4)   ..controls (-0.5,1.4)   and (-0.2,1.6)  .. (0,1.7);
+%  %\draw[dashed] (1,-1.4) ..controls (0.5,-1.4) and (0.2,-1.6) .. (0,-1.7);
+%  %
+%  \draw[thick] (1,1.4) ..controls (1.5,1) and (1.6,-1.4) .. (1.5,-2.8) node[right] {$+$};
+%  \draw[thick] (-1,-1.4) ..controls (-1.5,-1) and (-1.6,1.4) .. (-1.5,2.8) node[left] {$-$};
+%  %
+%  \fill[blue] (0,0) circle(4pt);
+%  \draw[very thick,blue, snake it] (-1,1.4) -- (1,-1.4);
+%  %
+%  \fill (-1,1.4) circle(3pt); \fill (1,1.4) circle(3pt);
+%  \fill (1,-1.4) circle(3pt); \fill (-1,-1.4) circle(3pt);
+%  %
+%  \draw[thick] (-1,-1.4) .. controls (0.8,-1.8) and (0.9,-2) .. (1,-2.8) node[left] {$+$};
+%  \draw[thick] (1,-1.4) .. controls (1.1,-1.9) and (1.2,-2.4) .. (1.15,-2.8) node[below] {$+$};
+%  \draw[thick] (1,-1.4) .. controls (-1.1,-1.4) and (-1.2,-1.4) .. (-1.4,0);
+%\end{tikzpicture}
+%\hspace{1em}
+%\begin{tikzpicture}[scale=1.2]
+%  \draw[->] (-2.5,-1.4) -- (2.5,-1.4) node[right] {$\re x$};
+%  \draw[->] (0,-3) -- (0,3) node[above] {$\im x$};
+%  %
+%  \fill (-1,1.4) circle(3pt); \fill (1,1.4) circle(3pt);
+%  \fill (1,-1.4) circle(3pt); \fill (-1,-1.4) circle(3pt);
+%  %
+%  \draw[thick,domain=0:-660,samples=100,variable=\t,rotate=-20] plot ({0.002*\t*sin(\t)}, {0.0018*\t^1.05*cos(\t)}) .. controls (-1,-1.4) and (-1,-1.5) .. (-0.3,-3);
+%  \draw[thick,domain=0:660,samples=100,variable=\t,rotate=-20] plot ({-0.002*\t*sin(\t)}, {0.0018*\t^1.05*cos(\t)}) .. controls (1,1.4) and (1,1.5) .. (0.3,3);
+%  \draw[thick,domain=0:-550,samples=100,variable=\t,rotate=-110] plot ({0.0018*\t^1.05*sin(\t)}, {0.002*\t*cos(\t)}) ..controls (-1.5,0.9) and (-1.5,0.4).. (-1.7,0.5) node[below right] {$-$};
+%  \draw[thick,domain=0:550,samples=100,variable=\t,rotate=-110] plot ({-0.0018*\t^1.05*sin(\t)}, {0.002*\t*cos(\t)}) ..controls (1.5,-0.9) and (1.5,-0.4).. (1.7,-0.5) node[above left] {$+$};
+%  %
+%  %\draw[dashed] (-1,1.4) ..controls (-1.15,1.5) and (-1.2,2) .. (-0.9,2.8);
+%  %\draw[dashed] (1,-1.4) ..controls (1.15,-1.5) and (1.2,-2) .. (0.9,-2.8);
+%  %\draw[dashed] (1,1.4)   ..controls (0.5,1.4)   and (0.2,1.6)   .. (0,1.7);
+%  %\draw[dashed] (-1,-1.4) ..controls (-0.5,-1.4) and (-0.2,-1.6) .. (0,-1.7);
+%  %
+%  \draw[thick] (-1,1.4) ..controls (-1.5,1) and (-1.6,-1.4) .. (-1.5,-2.8) node[left] {$-$};
+%  \draw[thick] (1,-1.4) ..controls (1.5,-1) and (1.6,1.4) .. (1.5,2.8) node[right] {$+$};
+%  %
+%  \fill[blue] (0,0) circle(4pt);
+%  \draw[very thick,blue, snake it] (1,1.4) -- (-1,-1.4);
+%  %
+%  \draw[thick] (1,-1.4) .. controls (-0.8,-1.8) and (-0.9,-2) .. (-1,-2.8) node[right] {$-$};
+%  \draw[thick] (-1,-1.4) .. controls (-1.1,-1.9) and (-1.2,-2.4) .. (-1.15,-2.8) node[below] {$-$};
+%  \draw[thick] (-1,-1.4) .. controls (1.1,-1.4) and (1.2,-1.4) .. (1.4,0);
+%\end{tikzpicture}
+%\caption{Schematic illustration of Stokes graph for the inverted Rosen--Morse potential, $V(x)=1/\cosh^2x$. Same as in Fig.~\ref{src:2505_02301:fig:stokes_graph} but the left/right panels are devoted to~$\im\hbar\gtrless0$ and~$\im E\lessgtr0$.}
+%\label{src:2505_02301:fig:stokes_graph2}
+%\end{figure}
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[scale=0.92]
+  \draw[->] (-2.5,-1.4) -- (2,-1.4) node[right] {$\re x$};
+  \draw[->] (0,-3.2) -- (0,1.1) node[above] {$\im x$};
+  \draw (0,-8) -- (0,-4); \draw[dashed] (0,-4) -- (0,-3.2);
+  %
+  \draw[thick] (1,-1.4) ..controls (1.15,-1.3) and (1.2,-0.8) .. (0.9,0) node[above] {$-$};
+  \draw[thick] (-1,-1.4) ..controls (-1.15,-1.5) and (-1.2,-2) .. (-0.9,-2.8) node[left] {$+$};
+  %\draw[thick] (-1,-1.4)   ..controls (-0.5,-1.4)   and (0,-1.2)  .. (0.6,-0.5) node[midway,above left] {$+$};
+  %\draw[thick] (1,-1.4) ..controls (0.5,-1.4) and (0,-1.6) .. (-0.6,-2.3) node[midway,below right] {$-$};
+  \draw[very thick] (-1,-1.4) -- (1,-1.4);
+  %
+  \draw[thick] (1.2,0.5) ..controls (1.4,0) and (1.6,-1.4) .. (1.5,-2.8) node[right] {$+$};
+  \draw[thick] (-1,-1.4) ..controls (-1.5,-1) and (-1.6,1) .. (-1.6,1) node[left] {$-$};
+  \draw[thick] (1,-1.4) ..controls (1.4,-1.6) and (1.3,-2.5) .. (1.3,-2.8) node[left] {$+$};
+  %
+  \fill[blue] (0,0) circle(3pt); \fill[blue] (0,-2.8) circle(3pt);
+  \draw[blue, snake it] (0,0) -- (1,-1.4);
+  \draw[blue, snake it] (0,-2.8) -- (-1,-1.4);
+  %
+  \fill (1,-1.4) circle(3pt); \fill (-1,-1.4) circle(3pt);
+  %
+  \draw[very thick,dashed,teal] (0,-1.4) circle [x radius=1.3,y radius=0.4] node[below left] {$A$};
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  \draw[thick] (1,-6.4) ..controls (1.15,-6.3) and (1.2,-5.8) .. (0.9,-5) node[above] {$-$};
+  \draw[thick] (-1,-6.4) ..controls (-1.15,-6.5) and (-1.2,-7) .. (-0.9,-7.8) node[left] {$+$};
+  %\draw[thick] (-1,-6.4)   ..controls (-0.5,-6.4)   and (0,-6.2)  .. (0.6,-5.5) node[midway,above left] {$+$};
+  %\draw[thick] (1,-6.4) ..controls (0.5,-6.4) and (0,-6.6) .. (-0.6,-7.3) node[midway,below right] {$-$};
+  \draw[very thick] (-1,-6.4) -- (1,-6.4);
+  %
+  \draw[thick] (1.2,-4.5) ..controls (1.4,-5) and (1.6,-6.4) .. (1.5,-7.8) node[right] {$+$};
+  \draw[thick] (-1,-6.4) ..controls (-1.5,-6) and (-1.6,-4) .. (-1.6,-4) node[left] {$-$};
+  \draw[thick] (1,-6.4) ..controls (1.4,-6.6) and (1.3,-7.5) .. (1.3,-7.8) node[left] {$+$};
+  %
+  \fill[blue] (0,-5) circle(3pt); \fill[blue] (0,-7.8) circle(3pt);
+  \draw[blue, snake it] (0,-5) -- (1,-6.4);
+  \draw[blue, snake it] (0,-7.8) -- (-1,-6.4);
+  %
+  \fill (1,-6.4) circle(3pt); \fill (-1,-6.4) circle(3pt);
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  \draw[ultra thick,red] (-2.5,-1) -- (0.65,-1);
+  \draw[ultra thick,dashed,red,->] (0.6,-1) -- (2.5,-1);
+\end{tikzpicture}
+\hspace{1em}
+\begin{tikzpicture}[scale=0.92]
+  \draw[->] (-2.5,-1.4) -- (2,-1.4) node[right] {$\re x$};
+  \draw[->] (0,-3.2) -- (0,1.1) node[above] {$\im x$};
+  \draw (0,-8) -- (0,-4); \draw[dashed] (0,-4) -- (0,-3.2);
+  %
+  \draw[thick] (1,-1.4) ..controls (1.15,-1.3) and (1.2,-0.8) .. (0.9,0) node[above] {$-$};
+  \draw[thick] (-1,-1.4) ..controls (-1.15,-1.5) and (-1.2,-2) .. (-0.9,-2.8) node[left] {$+$};
+  %\draw[thick] (-1,-1.4)   ..controls (-0.5,-1.4)   and (0,-1.2)  .. (0.6,-0.5) node[midway,above left] {$+$};
+  %\draw[thick] (1,-1.4) ..controls (0.5,-1.4) and (0,-1.6) .. (-0.6,-2.3) node[midway,below right] {$-$};
+  \draw[very thick] (-1,-1.4) -- (1,-1.4);
+  %
+  \draw[thick] (1.2,0.5) ..controls (1.4,0) and (1.6,-1.4) .. (1.5,-2.8) node[right] {$+$};
+  \draw[thick] (-1,-1.4) ..controls (-1.5,-1) and (-1.6,1) .. (-1.6,1) node[left] {$-$};
+  \draw[thick] (1,-1.4) ..controls (1.4,-1.6) and (1.3,-2.5) .. (1.3,-2.8) node[left] {$+$};
+  %
+  \fill[blue] (0,0) circle(3pt); \fill[blue] (0,-2.8) circle(3pt);
+  \draw[blue, snake it] (0,0) -- (1,-1.4);
+  \draw[blue, snake it] (0,-2.8) -- (-1,-1.4);
+  %
+  \fill (1,-1.4) circle(3pt); \fill (-1,-1.4) circle(3pt);
+  %
+  \draw[very thick,dashed,teal] (0,-1.4) circle [x radius=1.3,y radius=0.4] node[below left] {$A$};
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  \draw[thick] (1,-6.4) ..controls (1.15,-6.3) and (1.2,-5.8) .. (0.9,-5) node[above] {$-$};
+  \draw[thick] (-1,-6.4) ..controls (-1.15,-6.5) and (-1.2,-7) .. (-0.9,-7.8) node[left] {$+$};
+  %\draw[thick] (-1,-6.4)   ..controls (-0.5,-6.4)   and (0,-6.2)  .. (0.6,-5.5) node[midway,above left] {$+$};
+  %\draw[thick] (1,-6.4) ..controls (0.5,-6.4) and (0,-6.6) .. (-0.6,-7.3) node[midway,below right] {$-$};
+  \draw[very thick] (-1,-6.4) -- (1,-6.4);
+  %
+  \draw[thick] (1.2,-4.5) ..controls (1.4,-5) and (1.6,-6.4) .. (1.5,-7.8) node[right] {$+$};
+  \draw[thick] (-1,-6.4) ..controls (-1.5,-6) and (-1.6,-4) .. (-1.6,-4) node[left] {$-$};
+  \draw[thick] (1,-6.4) ..controls (1.4,-6.6) and (1.3,-7.5) .. (1.3,-7.8) node[left] {$+$};
+  %
+  \fill[blue] (0,-5) circle(3pt); \fill[blue] (0,-7.8) circle(3pt);
+  \draw[blue, snake it] (0,-5) -- (1,-6.4);
+  \draw[blue, snake it] (0,-7.8) -- (-1,-6.4);
+  %
+  \fill (1,-6.4) circle(3pt); \fill (-1,-6.4) circle(3pt);
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %
+  %\draw[ultra thick,red] (-1.3,-8) -- (-1.3,-1) -- (1.3,-1) -- (1.3,1);
+  \draw[ultra thick,red] (-1.3,-8) -- (-1.3,-1) -- (0.6,-1);
+  \draw[ultra thick,red,dashed] (0.6,-1) -- (1.3,-1) -- (1.3,1);
+  \draw[ultra thick,dotted,red] (-2.6,-1) .. controls (-2.6,-5) and (-1.8,-7) .. (-1.3,-8); \node[red,above] at (-2.6,-1) {$-\infty$};
+  \draw[ultra thick,dotted,red,->] (1.3,1) .. controls (1.8,0.5) and (2.5,0) .. (2.5,-0.8) node[below] {$+\infty$};
+\end{tikzpicture}
+\caption{Quantization condition with~$\im\hbar>0$ and $\im E\lesssim0$ for resonance.
+The red path on the left panel is a simple option to carry out the analytical continuation,
+along which we can expect the normalizability of the exact WKB solution.
+The right panel shows actual connection manipulations of it.
+The red solid line is on the Riemann sheet depicted and the red dashed line is on another Riemann sheet after passing through the branch cut;
+the red dotted curve is the analytical continuation at infinity.
+The nontrivial cycle, $A$-cycle, is shown as the green loop.}
+\label{src:2505_02301:fig:stokes_graph_path}
+\end{figure}
+We should now observe the convergence of (norm of) the wave function at~$x=\pm\infty$.
+Then, the actual connection path is given by the red path on the right panel in Fig.~\ref{src:2505_02301:fig:stokes_graph_path}.
+The red solid line is on the Riemann sheet depicted and the red dashed line is on another Riemann sheet after passing through the branch cut.
+In the WKB solution,
+$\rme^{-\int^x \rmd x'\, \vsub{S}{odd}}$ along the Stokes curve with the index~$-$ exponentially dumps,
+and hence the dominant effect comes from~$\rme^{\int^x \rmd x'\, f}=\rme^{-2\varepsilon x^2/m}$.
+At $\im x=\pm\infty$, the overall factor of the WKB solution diverges exponentially,
+while at $\re x=\pm\infty$ it converges exponentially.
+As a consequence, we find that this consistency provides the connection formula for $\psi=(\psi^{+},\psi^{-})^{\mathsf T}$ between $x\to\pm\infty$.  Let $\mathcal A_-$ denote analytic continuation from $-\infty$ to $\lim_{n\to\infty}(-a-2\pi \rmi n/\beta)$, and let $\mathcal A_+$ denote continuation from $\lim_{n\to\infty}(a+2\pi \rmi n/\beta)$ to $+\infty$; both are taken within the corresponding Borel-summable region.  Then
+\begin{align}
+    \psi|_{x\to-\infty} &= \mathcal A_-
+    \times \prod_{n=\infty}^{0} M_{-}^{-1} N_{-a-2\pi \rmi  (n+1)/\beta,-a-2\pi \rmi n/\beta}\notag\\
+    &\qquad
+    \times M_{-}^{-1} N_{-a,a} M_{+}^{-1} \notag\\
+    &\qquad
+    \times \prod_{n=0}^{\infty} N_{a+2\pi \rmi n/\beta,a+2\pi \rmi  (n+1)/\beta} M_{-}\notag\\
+    &\qquad
+    \times \mathcal A_+\psi|_{x\to\infty} .
+\end{align}
+Hence, $\psi^{\pm}|_{x\to-\infty}$ is a linear combination of $\psi^+|_{x\to\infty}$ and $\psi^-|_{x\to\infty}$.
+Reference~\cite{Morikawa:2025grx} states that the resonant wave-function is described by the connection formula of $\psi^{-}$ from~$\im x\to\infty$ to $\im x\to-\infty$. From the observation of the explicit asymptotic behavior of the exact solution (see Section~4.2.2 in Ref.~\cite{Morikawa:2025grx}), the analytical-continued wave-function $\psi^-|_{x\to\infty}$ corresponds to the wave function being normalizable on a path extended in the $\im x$-direction, but is divergent on the current horizontal path in the $\re x$-direction as the non-normalizability problem of resonance. Then, the analytically continued $\psi^+|_{x\to-\infty}$ is an indeed non-normalizable solution.\footnote{Note that the current path in this paper is similar near $x=a$ to that in Ref.~\cite{Morikawa:2025grx}, but is quite different near $x=-a$ from it. Then the latter path reverses the asymptotic behavior of~$\psi^{\pm}$.} Now, noting that
+\begin{align}
+    \cdots M_{-}^{-1} N_{-a,a} M_{+}^{-1} \cdots \propto
+    \begin{pmatrix}
+        1 & -\rmi \\ -\rmi & \frac{1}{A} - 1
+    \end{pmatrix},
+\end{align}
+where $A$ is the non-perturbative cycle as~$A=\rme^{\oint_{-a}^{a}\rmd x\, \vsub{S}{odd}}$ and the dots ``$\cdots$'' do not alter the structure of the matrix,
+the coefficient of $\psi^{-}$, the $(2,2)$ entry, must vanish due to the consistency of blowing-up behaviors of $\psi^-|_{x\to\infty}$ and $\psi^+|_{x\to-\infty}$.
+To satisfy this normalizability of the wave function,
+the quantization condition is given by
+\begin{align}
+    0 &=\rme^{\int_{a+\rmi \infty}^{a+\infty} \rmd x (-\vsub{S}{odd}+f)}
+    \left[\prod_{n=0}^{\infty}
+    \rme^{\int_{a+2\pi \rmi n/\beta}^{a+2\pi \rmi  (n+1)/\beta} \rmd x (-\vsub{S}{odd}+f)}
+    \right]
+    (1 - A)
+    \notag\\&\qquad\times
+    \left[\prod_{n=0}^{\infty}
+    \rme^{\int_{-a-2\pi \rmi  (n+1)/\beta}^{-a-2\pi \rmi n/\beta} \rmd x (-\vsub{S}{odd}+f)}
+    \right]
+    \rme^{\int_{-a-\infty}^{-a-\rmi \infty} \rmd x (-\vsub{S}{odd}+f)}
+    \label{src:2505_02301:eq:zel_quantization_0}
+    \\
+    &= \rme^{\int_{a}^{-a} \rmd x (-\vsub{S}{odd}+f)} (1-A),
+    \label{src:2505_02301:eq:zel_quantization}
+\end{align}
+where the turning point $a=\beta^{-1}\cosh^{-1}\sqrt{U_0/E}$.
+In the second equality, we have used some properties shown in Fig.~\ref{src:2505_02301:fig:zel_integration}.
+Note that if $\varepsilon=0$ (the usual resonant state) then the integration over $x\in(-\infty,\infty)$ cannot be finite because $\rme^{\int_{\pm\infty}^{\pm\infty\pm \rmi \infty}\rmd x\, \vsub{S}{odd}}$ diverges, so we should take the other contour given in~Ref.~\cite{Morikawa:2025grx}.\footnote{When $\varepsilon>0$, we can take an \textit{asymmetric} path at infinity, but one finds an overall factor that is irrelevant to the quantization condition. Equation~\eqref{src:2505_02301:eq:zel_quantization} implies that the path is anti-symmetric.}
+\begin{figure}
+    \centering
+\begin{tikzpicture}[scale=0.68]
+    \draw[->] (-5,0) -- (5,0) node[right] {$\re x$};
+    \draw[->] (0,-5) -- (0,5) node[above] {$\im x$};
+    \draw[very thick,->,red] (-5.5,-0.5) -- (-5.5,-5.5) -- (-2,-5.5) -- (-2,0) -- (2,0) -- (2,5.5) -- (5.5,5.5) -- (5.5,0.5);
+    \fill (-2,0) circle(5pt) node[above right] {$-a$}; \fill (2,0) circle(5pt) node[above right] {$a$};
+    \fill (-2,-2) circle(5pt) node[above left] {$(-a,2\pi n)$}; \fill (2,2) circle(5pt) node[below right] {$(a,2\pi n)$};
+    \fill (-2,-3) circle(5pt) node[below left] {$(-a,2\pi(n+1))$}; \fill (2,3) circle(5pt) node[above right] {$(a,2\pi(n+1))$};
+    \draw[ultra thick,->,blue] (-2,-3) -- (-2,-2) node[midway,left] {$\rme^{I_n}=\rme^{\int \vsub{S}{odd}+f}$};
+    \draw[ultra thick,->,blue] (2,2) -- (2,3) node[midway,right] {$\rme^{-I_n}$};
+    \draw[ultra thick,->,orange] (-5.5,-5.6) -- (-2,-5.6) node[right] {$\rme^{I_{\rmi \infty}}=\rme^{\int \vsub{S}{odd}}$};
+    \draw[ultra thick,->,orange] (2,5.6) -- (5.5,5.6) node[right] {$\rme^{-I_{\rmi \infty}}$};
+    \draw[ultra thick,->,red!40] (-5.6,-0.5) -- (-5.6,-5.5) node[midway,left] {$\rme^{I_\infty}=\rme^{\int \vsub{S}{odd}+f}\to0$};
+    \draw[ultra thick,->,red!40] (5.6,5.5) -- (5.6,0.5) node[midway,right] {$\rme^{-I_\infty}$};
+\end{tikzpicture}
+    \caption{Illustration of computing Eq.~\eqref{src:2505_02301:eq:zel_quantization}. $\beta=1$. Although $f(x)$ diverges near $|\im x|\to\infty$, $f(-x)=-f(x)$ and hence $f(x)$ does not contribute to~$\rme^{I_{\rmi \infty}}$.
+    Note that $I_n$, $I_{\rmi \infty}$ and $I_\infty$ are finite.
+    (If $f=0$ then $\rme^{I_\infty}$ is divergent.)}
+    \label{src:2505_02301:fig:zel_integration}
+\end{figure}
+The quantum system with the (inverted) Rosen--Morse potential is exactly solvable.
+The solution is given by
+\begin{align}
+    \psi(x) = \rme^{-\varepsilon x^2}
+    (1-\xi^2)^{-\frac{\rmi k}{2\beta}}
+    F\left( -\frac{\rmi k}{\beta}-s, -\frac{\rmi k}{\beta}+s+1, -\frac{\rmi k}{\beta}+1, \frac{1-\xi}{2} \right) ,
+ \label{src:2505_02301:eq:rm_sol}
+\end{align}
+where the first factor depending on~$\varepsilon$ is the Zel'dovich regulator;
+$\xi = \tanh \beta x$
+\begin{align}
+    k = \frac{\sqrt{2mE}}{\hbar}, \quad
+    -\frac{2mU_{0}}{\beta^2\hbar^2} = s(s+1), \quad
+    s=\frac{1}{2}\left( -1+\sqrt{1-\frac{8mU_{0}}{\beta^2 \hbar^2}} \right) ,
+\end{align}
+and $F$ is the Gauss hypergeometric function.
+Therefore, we can compute the exact expression in~Eq.~\eqref{src:2505_02301:eq:zel_quantization} as (we can take the limit~$\varepsilon\to0$); the formula of $A$-cycle is explicitly given in Ref.~\cite{Morikawa:2025grx} and one finds
+\begin{align}
+    \left[
+    \frac{F\left( -\frac{\rmi k}{\beta}-s, -\frac{\rmi k}{\beta}+s+1, -\frac{\rmi k}{\beta}+1, \frac{1-|\xi|}{2} \right)}
+    {F\left( -\frac{\rmi k}{\beta}-s, -\frac{\rmi k}{\beta}+s+1, -\frac{\rmi k}{\beta}+1, \frac{1+|\xi|}{2} \right)}
+    \right]^2
+    = 1 ,
+    \label{src:2505_02301:eq:quant_cond_F}
+\end{align}
+where $|\xi|=\tanh(\cosh^{-1}\sqrt{U_0/E})$.
+Writing the Gauss function as $F(a,b;c;z)$ and defining
+\begin{align}
+    a_-&=-\frac{\rmi k}{2\beta}-\frac{s}{2},
+    &b_-&=-\frac{\rmi k}{2\beta}+\frac{s+1}{2},
+    \notag\\
+    a_+&=-\frac{\rmi k}{2\beta}-\frac{s-1}{2},
+    &b_+&=-\frac{\rmi k}{2\beta}+\frac{s}{2}+1,
+\end{align}
+we use the quadratic transformation
+\begin{align}
+    &F\left( -\frac{\rmi k}{\beta}-s, -\frac{\rmi k}{\beta}+s+1, -\frac{\rmi k}{\beta}+1, \frac{1\pm|\xi|}{2} \right)\notag\\
+    &= \mathfrak{A} F\left(a_-,b_-;\frac{1}{2};|\xi|^2\right)
+    \notag\\
+    &\qquad
+    \mp \mathfrak{B} F\left(a_+,b_+;\frac{3}{2};|\xi|^2\right) ,
+\end{align}
+where
+\begin{align}
+    \mathfrak{A} &= \frac{\Gamma\left(-\frac{\rmi k}{\beta}+1\right)\Gamma\left(\frac{1}{2}\right)}
+    {\Gamma\left(-\frac{\rmi k}{2\beta}-\frac{s-1}{2}\right)\Gamma\left(-\frac{\rmi k}{2\beta}+\frac{s}{2}+1\right)},
+    \notag\\
+    \mathfrak{B} &= \frac{\Gamma\left(-\frac{\rmi k}{\beta}+1\right)\Gamma\left(-\frac{1}{2}\right)}
+    {\Gamma\left(-\frac{\rmi k}{2\beta}-\frac{s}{2}\right)\Gamma\left(-\frac{\rmi k}{2\beta}+\frac{s+1}{2}\right)} ,
+\end{align}
+we observe the complex energy for resonance with $\frac{8mU_{0}}{\beta^2 \hbar^2}>1$
+\begin{align}
+    E=\frac{\hbar^2 \beta^2}{8m}
+    \left[\sqrt{\frac{8mU_{0}}{\beta^2 \hbar^2}-1}-\rmi (2n+1)\right]^2,
+    \qquad n\in\mathbb{Z}_{\geq0}.
+    \label{src:2505_02301:eq:res-ene}
+\end{align}
+\subsubsection{Remarks on difficulties of irrational potential}
+We make remarks on some technical and conceptual points.
+Figure~\ref{src:2505_02301:fig:stokes_graph} corresponds to $\im\hbar\gtrless0$ and $\im E\gtrless0$, while Fig.~\ref{src:2505_02301:fig:stokes_graph2} is $\im\hbar\gtrless0$ and $\im E\lessgtr0$.
+In the case that $\im\hbar>0$, originally, for $\im E>0$, $\psi^{+}$ beginning at the left turning point, $-a$, is absorbed into the above double pole. However, for $\im E<0$, the curve of $\psi^{+}$ becomes flat and so falls down.
+Actually, this phenomenon is quite difficult since we focus on non-polynomial and irrational potential functions such as the inverted Rosen--Morse potential. It is not straightforward to consider the monodromy and connection formula around the double poles.
+In fact, for an irrational potential, the residue theorem can be violated; it makes the derivation of explicit connection formula hard since estimations of some contour integrals become too nontrivial. To our best knowledge, in particular, the Stokes phenomenon across the Stokes curve connecting the two turning points in Fig.~\ref{src:2505_02301:fig:stokes_graph2} is subtle. Furthermore, though we mentioned $\im E\sim0$, for large $|\im E|$ there are two Stokes curves extending from a double pole to $\im x\to\pm\infty$. The monodromy associated with these curves may be unidentifiable in an analytic sense due to such an irrational potential.\footnote{The validity of our analytical strategy should be examined through numerical verification in future studies.}
+\subsection{Complex scaling method}
+\subsubsection{Solving method within complex scaling method}
+For the inverted Rosen–Morse potential, the Schr\"{o}dinger equation with the complex scaling method (CSM) is given by
+\begin{align}
+    \left[-\frac{\hbar^2}{2m} \frac{\rmd^2}{\rmd x'^2} + \frac{U_{0}}{\cosh^2 \beta x'}\right] \psi(x')
+    = E \psi(x') ,
+\end{align}
+where we have replaced $x\in\mathbb{R}$ by $x'=xe^{\rmi \theta}\in\mathbb{C}$ with the scaling angle $\theta$. The range of $\theta$ is restricted to $0<\theta<\pi/4$ in the CSM. Using $\xi=\tanh\beta x'$, the equation is represented as
+\begin{align}
+    \left[ \frac{\rmd}{\rmd \xi} (1-\xi^2)\frac{\rmd}{\rmd \xi} +s(s+1) - \frac{\kappa^2}{1-\xi^2} \right] \psi(x')
+    &= 0 , \qquad
+    \kappa = \frac{\sqrt{-2mE}}{\beta\hbar} .
+    \label{src:2505_02301:eq:CSM-reduced-eq}
+\end{align}
+Letting $\psi(x')=(1-\xi^2)^{\frac{\kappa}{2}}\omega(\xi)$ and substituting this into Eq.~\eqref{src:2505_02301:eq:CSM-reduced-eq}, we obtain the following equation:
+\begin{align}
+    u(1-u)\omega''+(\kappa+1)(1-2u)\omega'
+    -(\kappa-s)(\kappa+s+1)\omega&=0,
+    \\
+    u&=\frac{1-\xi}{2}.
+\end{align}
+Here primes denote derivatives with respect to~$u$.
+The solution of this equation, which is regular at $x=0$, is given by
+\begin{align}
+    \vsub{\psi}{CSM}(x)= (1-\xi^2)^{\frac{\kappa}{2}} 
+    F\left( \kappa-s, \kappa+s+1, \kappa+1, \frac{1-\xi}{2} \right).
+\end{align}
+In general, as $x\to-\infty$ ($\xi\to-1$), the Gauss hypergeometric function diverges. However, physical wave functions of resonant states under CSM are normalizable because of the ABC theorem~\cite{Aguilar:1971ve,Balslev:1971vb}. To ensure the normalizability of the wave function, the hypergeometric function should be expressed as a finite-order polynomial. This requirement leads to the condition, $\kappa-s=-n$ $(n\in\mathbb{Z}_{\geq0})$, which gives
+\begin{align}
+    E = \frac{\hbar^2\beta^2}{8m} \left[\sqrt{\frac{8mU_0}{\beta^2 \hbar^2} - 1} - \rmi (2n + 1) \right]^2.
+\end{align}
+This complex energy is completely the same result as Eq.~\eqref{src:2505_02301:eq:res-ene}.
+\subsubsection{Exact WKB framework of complex scaling method}
+The potential~$Q$ of the CSM Schr\"odinger equation can be rewritten by
+\begin{align}
+    \vsub{Q}{CSM}(x) = 2\rme^{2\rmi \theta}\left(\frac{U_{0}}{\cosh^2 \beta xe^{\rmi \theta}} - E\right) .
+\end{align}
+The Stokes graph, i.e., Fig.~\ref{src:2505_02301:fig:stokes_graph}, is rotated by~$\theta$.
+Now, the path for the quantization condition can be schematically depicted as in~Fig.~\ref{src:2505_02301:fig:csm_integration}.
+Thus, we have the almost same quantization condition as~Eq.~\eqref{src:2505_02301:eq:zel_quantization_0} with~$f(x)=0$, but the interval of the integration $\int \vsub{S}{odd}$ is smaller as follows:
+\begin{align}
+    \lim_{r\to\infty}\int_{\pm(1+\rmi)r}^{\pm r} \vsub{S}{odd}
+    \to 
+    \lim_{r\to\infty}\int_{\pm(1+\rmi)r}^{\pm \rme^{\pm \rmi \theta}r} \vsub{S}{odd}^\theta .
+\end{align}
+The CSM excludes the region near~$x=\pm\infty$, where the solution is most singular.
+At $\re x\to\infty$, the analytic continuation is supposed to be carried out from the argument $\pi/4$ to $\theta$.
+Therefore, from the formula in Ref.~\cite{Morikawa:2025grx}, we have the overall convergent factor in the quantization condition as
+\begin{align}
+    &\lim_{r\to\infty}\rme^{\int_{\rme^{\rmi \theta}r}^{\rme^{\rmi \pi/4}r} \vsub{S}{odd}^\theta}\notag\\
+    &=\lim_{r\to\infty}
+    \frac{F\left( \kappa-s, \kappa+s+1, \kappa+1, \frac{1-\tanh\beta r \rme^{\rmi \pi/4}}{2} \right)}
+    {F\left( \kappa-s, \kappa+s+1, \kappa+1, \frac{1-\tanh\beta r \rme^{\rmi \theta}}{2} \right)}
+    = \text{finite}
+    \qquad \text{if $0<\theta<\frac{\pi}{4}$} .
+\end{align}
+The non-perturbative cycle $A$ is now given by
+\begin{align}
+    A = \rme^{\oint_{-a \rme^{-\rmi \theta}}^{a \rme^{-\rmi \theta}} \vsub{S}{odd}^\theta}
+    = \left[\frac{\vsub{\psi}{CSM}(a \rme^{-\rmi \theta})}{\vsub{\psi}{CSM}(-a \rme^{-\rmi \theta})}\right]^2
+    = \left[\frac{\psi(a)}{\psi(-a)}\right]^2
+    = \rme^{\oint_{-a}^a \vsub{S}{odd}} ,
+\end{align}
+where $\vsub{\psi}{CSM}(x' \rme^{-\rmi \theta}) = \psi(x')$, $a \rme^{-\rmi \theta}$ denotes the turning point after complex rotation, and $a$ is the original turning point with $\theta=0$.
+We obtain the well-defined complex energy being identical to~Eq.~\eqref{src:2505_02301:eq:res-ene}.
+\begin{figure}[t]
+    \centering
+\begin{tikzpicture}[scale=0.64,transform shape]
+    \draw[->] (-7,0) -- (7,0) node[right] {$\re x$};
+    \draw[->] (0,-4) -- (0,4) node[above] {$\im x$};
+    \draw[very thick,->,orange,rotate around={-22.5:(0,0)}] (-5.5,0) -- (-5.5,-5.5) -- (-2,-5.5) -- (-2,0) -- (2,0) -- (2,5.5) -- (5.5,5.5) -- (5.5,0);
+    \fill[rotate around={-22.5:(0,0)}] (-2,0) circle(5pt) node[above right] {$-a \rme^{-\rmi \theta}$}; \fill[rotate around={-22.5:(0,0)}] (2,0) circle(5pt) node[below right] {$a \rme^{-\rmi \theta}$};
+    \fill[blue,rotate around={-22.5:(0,0)}] (0,1) circle(3pt); \fill[blue,rotate around={-22.5:(0,0)}] (0,3) circle(3pt);
+    \fill[blue,rotate around={-22.5:(0,0)}] (0,-1) circle(3pt); \fill[blue,rotate around={-22.5:(0,0)}] (0,-3) circle(3pt);
+    \draw[dotted,blue,rotate around={-22.5:(0,0)}] (0,-4) -- (0,4);
+    \draw[blue] (0,1) arc(90:67.5:1) node[midway,above] {$\theta$};
+    \draw[ultra thick,->,green!50!black,rotate around={-22.5:(0,0)}] (-5.6,-2.3) -- (-5.6,-5.5) node[midway,left] {$\rme^{I'_\infty}=\rme^{\int \vsub{S}{odd}}$}; \fill[green!50!black,rotate around={-22.5:(0,0)}] (-5.6,-2.3) circle(5pt) node[above left] {$-\infty$};
+    \draw[ultra thick,->,green!50!black,rotate around={-22.5:(0,0)}] (5.6,5.5) -- (5.6,2.4) node[midway,right] {$\rme^{-I'_\infty}$}; \fill[green!50!black,rotate around={-22.5:(0,0)}] (5.6,2.3) circle(5pt) node[below right] {$\infty$};
+\end{tikzpicture}
+    \caption{Rotated path on the inverted Rosen--Morse potential by~$\theta$.
+    The black points and the blue points denote the turning points and the double poles, respectively.
+    The orange path is the usual contour ($\theta=0$) given in~Figs.~\ref{src:2505_02301:fig:stokes_graph_path} and \ref{src:2505_02301:fig:zel_integration},
+    which is rotated by~$\theta$ under the CSM.
+    The endpoints of the path in the CSM are at~$x=\pm\infty$, and so the interval of the integration $\int \vsub{S}{odd}$ is smaller than the usual one by~$\theta$.
+    $I'_\infty$ is finite for $0<\theta<\pi/4$.}
+    \label{src:2505_02301:fig:csm_integration}
+\end{figure}
+\begin{comment}
+\subsection{Rigged Hilbert space}
+Finally, we define a Hilbert space on the exact WKB framework.
+In the usual context of the exact WKB analysis, details of the Hilbert space of WKB solutions are not mentioned explicitly.
+In Table~\ref{src:2505_02301:tab:ewkb_space}, we summarize the classification of the corresponding linear spaces defined in each step of the exact WKB manipulations. This can be explained as follows.
+\begin{table}[t]
+    \centering
+\begin{tabular}{ll}\toprule
+    Wave function & Linear space\\\midrule
+    Formal power series & Formal infinite-dim linear space\\
+        &\, (not convergent)\\
+\addlinespace
+    Borel resummation & (Infinite-dim) Function space\\
+        &\, (convergent/analytically-continuable\\
+        &\quad in each Borel summable region) \\
+\addlinespace
+    Quantization & Norm space\\
+        &\, \textcolor{red}{but Banach space (completeness) if bound state}\\
+\addlinespace
+    Observable & Metric space (inner product)\\
+        &\, \textcolor{red}{but Hilbert space (completeness) if bound state}\\
+    \midrule
+    Resonance & At most function space\\
+\addlinespace
+    Resonance regularized & ``Hilbert space'' where resonance is bound state\\
+        &\, \textcolor{red}{with different def of norm/inner product}\\
+        &\, (completeness)\\
+\addlinespace
+    Regularization off & Unbound state\\
+    \bottomrule
+\end{tabular}
+    \caption{Classification of linear space in each step of exact WKB analysis.}
+    \label{src:2505_02301:tab:ewkb_space}
+\end{table}
+At first, the space of the WKB ansatz, i.e., formal power series~$\psi(x,\hbar)^{\pm}$, is just a formal linear space, where we have only the formal observables as position ($X\in\mathbb{C}$), momentum ($P$), and the Hamiltonian ($H$), and no other mathematical manipulations are defined.
+After the Borel resummation, the Borel integral~$\Psi(x,\hbar)^{\pm}$ is convergent and analytically continuable if $\Psi(x,\hbar)^{\pm}\in\mathcal{D}_{\mathcal{B}}[Q(x),\hbar]$ where $\mathcal{D}_{\mathcal{B}}$ is a Borel-summable region connected to~$x$ (recall the canonical Stokes-curve definition in Eq.~\eqref{eq:stokes-curve}).
+Thus, in~$\mathcal{D}_{\mathcal{B}}|_{x}$, the set of wave functions build up a function space.
+Also, we can use the monodromy matrix~$M_{\pm}$ across a Stokes curve and the connection formula between turning points, and hence $\cup\mathcal{D}_{\mathcal{B}}$ is well-defined on $X\in\mathbb{C}$.
+Now, we assume that some kind of physical condition holds.
+For instance, we have introduced the quantization condition;
+we have defined the norm of wave functions which should be convergent in a physical sense.
+This means that our linear space is supposed to be a norm space.
+If there exist only bound states, it is straightforward to prove the completeness and then this is a Banach space.
+Then, for computing any observable, we have the metric space or Hilbert space if bound state.
+Resonance (or scattering) is remarkable because such a quasi-stable state is not normalizable; we should use regularization such as the CSM.
+Also, the probability becomes a complex number~\cite{Berggren:1996}, and a transition cross-section is quite subtle~\cite{Berggren:1971,Berggren:1978}.
+We have already shown the equivalence and complementarity between the exact WKB analysis, Zel'dovich regularization, and the CSM.
+The most important point is that the crucial singular region
+\begin{align}
+    \vsup{\mathcal{D}_\varepsilon}{R}
+    = \{ x\in\mathbb{C} \mid \varepsilon>0, \lim_{r\to\pm\infty}|x - r| < \varepsilon \}
+\end{align}
+should be eliminated, and so $X\in\mathbb{C}\setminus\vsup{\mathcal{D}_\varepsilon}{R}$.
+Then, the ABC theorem of the CSM (the completeness of the Hilbert space) is valid in the exact WKB framework for resonance if $X\in\mathbb{C}\setminus\vsup{\mathcal{D}_\varepsilon}{R}$.
+Therefore, we have the well-defined Hilbert space including resonance, $\mathcal{H}_\varepsilon$ with~$\varepsilon>0$.
+Note that the regulator~$\varepsilon$ indicates that the concrete definition of the norm or inner product is quite different as shown in the above figures.
+To observe some physical quantities, we consider a set of operators, $\{A_i\}$.
+$A_i$ must be defined on the domain $D(A_i)\subset\mathcal{H}_\varepsilon$; then let us introduce the dense subspace
+\begin{align}
+    \Phi \equiv \cap_i D(A_i) \subseteq \mathcal{H}_\varepsilon .
+\end{align}
+In our prescription, truly unbound states as resonance can be realized by the range/codomain with the limit $\varepsilon\to0$, $\Phi^\times$.
+Due to the elimination of the regulator, $\mathcal{H}_\varepsilon\subset\Phi^\times$.
+Therefore we have the Gelfand triplet~\cite{DelaMadrid:2001dln,DelaMadrid:2001wwa,DelaMadrid:2002cz}
+\begin{align}
+    \Phi\subseteq\mathcal{H}_\varepsilon\subset\Phi^\times ,
+\end{align}
+and this modified Hilbert space with the pair~$(\mathcal{H}_\varepsilon,\Phi)$ is called the rigged Hilbert space.
+\end{comment}
+
+\subsection{Rigged-space reading of the model pole}
+The topology and duality of a Gelfand triple have already been constructed in
+Sec.~\ref{sec:rigged-hilbert}; they should not be inferred from an informal
+classification of ``linear spaces'' attached to successive WKB operations.
+For the inverted Rosen--Morse model, choose the test space so that its energy
+representatives admit the same continuation used in the connection problem.
+The Gamow functional is then defined by the residue
+\begin{equation}
+  \dualpair{\phi}{\Psi_{\mathrm R}}
+  =\Res_{E=\resonantE}
+  \dualpair{\phi}{(E-H)^{-1}\chi},
+  \qquad \phi,\chi\in\PhiSpace .
+  \label{src:2505_02301:eq:model-gamow-functional}
+\end{equation}
+Its normalization is fixed by the derivative of the same incoming connection
+coefficient that produced Eq.~\eqref{src:2505_02301:eq:res-ene}.  The
+Zel'dovich integral realizes this residue as an analytically continued
+bilinear pairing; complex scaling realizes it as a left--right eigenvector
+pairing of an exposed discrete eigenvalue.  Removing either regulator returns
+the functional to $\PhiSpace^\times$, not to a new canonical Hilbert space of
+resonances.  This is the precise sense in which the three realizations agree.
+
+\subsection*{Laboratory checkpoint}
+Before moving to the next stage, perform the following checks without copying
+the displayed final answer.
+\begin{enumerate}
+  \item Carry the Gaussian regulator through the Gamow bilinear norm before taking its analytically continued zero-regulator value.
+  \item Rotate the integration contour within the admissible wedge and check that the exposed pole and residue do not depend on the rotation angle.
+  \item Write the same result as a pairing with a test function and identify the continuity property required of the test-space topology.
+\end{enumerate}

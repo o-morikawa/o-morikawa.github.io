@@ -1,0 +1,122 @@
+\documentclass[11pt,openany]{book}
+
+\usepackage[
+  paperwidth=6.5in,
+  paperheight=9.5in,
+  inner=0.82in,
+  outer=0.68in,
+  top=0.78in,
+  bottom=0.84in,
+  headheight=25pt,
+  headsep=16pt,
+  footskip=23pt
+]{geometry}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont[
+  Path=solutions_ja/fonts/,
+  Extension=.ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Regular,
+  BoldItalicFont=*-Bold,
+  ItalicFeatures={FakeSlant=0.18},
+  BoldItalicFeatures={FakeSlant=0.18}
+]{NotoSerifJP}
+\XeTeXlinebreaklocale "ja"
+\XeTeXlinebreakskip=0pt plus 1pt
+\XeTeXlinebreakpenalty=0
+
+\usepackage[nocomments,norevision]{omphys}
+\usepackage{amsthm}
+\usepackage{booktabs,longtable,tabularx}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\hypersetup{
+  unicode=true,
+  pdftitle={量子共鳴を大域接続問題として理解する：完全解答集},
+  pdfauthor={森川奥統・小川将也},
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  urlcolor=blue!55!black
+}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[2]
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\thepage\quad\nouppercase{\leftmark}}
+\fancyhead[RO]{\small\nouppercase{\rightmark}\quad\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}
+  {\color{teal!55!black}第\thechapter 部}
+  {0.55ex}{}
+\titlespacing*{\chapter}{0pt}{-12pt}{22pt}
+
+\newtcolorbox{problemstatement}{
+  enhanced,breakable,colback=teal!3,colframe=teal!55!black,
+  title=問題,fonttitle=\bfseries}
+\newtcolorbox{solutionbox}{
+  enhanced,breakable,colback=blue!2,colframe=blue!48!black,
+  title=解答,fonttitle=\bfseries}
+\newtcolorbox{checkbox}{
+  enhanced,breakable,colback=orange!5,colframe=orange!70!black,
+  title=検算・数値確認,fonttitle=\bfseries}
+\newcommand{\solproblem}[3]{%
+  \section*{#1}%
+  \phantomsection%
+  \addcontentsline{toc}{section}{#1}%
+  \markright{#1}%
+  \begin{problemstatement}#2\end{problemstatement}%
+  \begin{solutionbox}#3\end{solutionbox}%
+}
+\newcommand{\oplusint}{\int^{\oplus}}
+
+\title{量子共鳴を大域接続問題として理解する\\[0.8ex]
+  \Large 問題・演習 完全解答集}
+\author{森川億人 \and 小川翔也}
+\date{2026年8月}
+
+\begin{document}
+\frontmatter
+\maketitle
+\chapter*{本解答集の使い方}
+本冊子は、英語版教科書 \textit{Quantum Resonance as a Global
+Connection Problem} の Stage I--VIII の99問と、再総和付録の7問を
+すべて解く。問題番号は本体と一致する。各解答では、結論だけでなく、
+符号、作用素の定義域、解析接続するシート、境界条件、数値計算の収束判定
+まで明記する。数値実験を要求する問題については、再現可能なアルゴリズムと
+合否基準を解答の一部とした。
+
+式の記法は本体に合わせる。特に
+$\Resolvent(z)=(z-H)^{-1}$、虚数単位 $\rmi$、微分記号 $\rmd$、
+積分測度 $\dd x$、入射接続係数 $\Cincoming$ を用いる。
+\tableofcontents
+
+\mainmatter
+\input{solutions_ja/stages/stage_I}
+\input{solutions_ja/stages/stage_II}
+\input{solutions_ja/stages/stage_III}
+\input{solutions_ja/stages/stage_IV}
+\input{solutions_ja/stages/stage_V}
+\input{solutions_ja/stages/stage_VI}
+\input{solutions_ja/stages/stage_VII}
+\input{solutions_ja/stages/stage_VIII}
+\input{solutions_ja/stages/resummation}
+
+\backmatter
+\chapter*{記号の最終確認}
+作用素の等式は指定された定義域上で読む。連続スペクトル上の
+$\Resolvent(E\pm\rmi0)$ は境界値であり、$L^2$ 上の通常の逆作用素では
+ない。共鳴極はシートと境界条件を指定して初めて意味を持つ。有限基底の
+複素固有値は、変形角・基底・切断を変えた安定性試験を通過した場合にのみ
+共鳴と同定する。
+\end{document}
