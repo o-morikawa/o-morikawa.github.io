@@ -1,0 +1,44 @@
+\section{Step 4: Transport the basis without losing the Wronskian}
+\label{app:connection-matrices}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{Wronskian}
+\index{connection coefficient}
+\index{Stokes curve}
+\index{monodromy}
+% END CURATED SUBJECT INDEX
+
+Let $\bm\Psi=(\psi_+,\psi_-)^{\mathsf T}$ be a local WKB basis with constant
+Wronskian.  Crossing a simple Stokes curve multiplies its coefficient vector by
+one of the triangular matrices in Eq.~\eqref{eq:stokes-matrices}.  Transport
+between reference points $a$ and $b$ gives a diagonal matrix
+\begin{equation}
+  P_{ab}
+  =\begin{pmatrix}
+  \rme^{\VorosPeriod_{ab}}&0\\
+  0&\rme^{-\VorosPeriod_{ab}}
+  \end{pmatrix},
+  \qquad
+  \VorosPeriod_{ab}=\int_a^b\vsub{S}{odd}\dd x .
+  \label{eq:propagation-matrix}
+\end{equation}
+A global connection matrix is an ordered product
+\begin{equation}
+  M_{\Gamma}
+  =M_{j_n}P_{n-1,n}\cdots M_{j_2}P_{12}M_{j_1} .
+  \label{eq:global-connection-product}
+\end{equation}
+Changing local normalization conjugates or diagonally rescales
+$M_{\Gamma}$.  Its relevant zero condition and monodromy eigenvalues are
+unchanged.
+
+For an equation without a first-derivative term, the Wronskian
+\begin{equation}
+  W[\psi_1,\psi_2]
+  =\psi_1\partial_x\psi_2
+  -\psi_2\partial_x\psi_1
+  \label{eq:wronskian}
+\end{equation}
+is independent of $x$.  Consequently every exact connection matrix has unit
+determinant after consistent basis normalization.  This algebraic constraint
+is a useful check on symbolic and numerical Stokes calculations.

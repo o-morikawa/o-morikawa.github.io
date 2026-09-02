@@ -1,0 +1,220 @@
+\section{Transport a resonance around the multiple zero}
+\label{sec:ep-holonomy}
+% BEGIN CURATED SUBJECT INDEX
+\index{exceptional point}
+\index{holonomy}
+% END CURATED SUBJECT INDEX
+
+\subsection{Biorthogonal Berry connection}
+\label{subsec:biorthogonal-berry}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{biorthogonality}
+\index{exceptional point}
+\index{geometric phase}
+\index{holonomy}
+% END CURATED SUBJECT INDEX
+
+Away from degeneracies, choose a right--left pair normalized by
+\begin{equation}
+  \braket{\Psi_n^{\mathrm L}(\bm\lambda)|
+  \Psi_n^{\mathrm R}(\bm\lambda)}=1 ,
+  \label{eq:ep-normalization}
+\end{equation}
+where $\bm\lambda$ denotes control parameters.  The biorthogonal Berry
+connection is
+\begin{equation}
+  \mathcal A_n(\bm\lambda)
+  =\rmi\bra{\Psi_n^{\mathrm L}(\bm\lambda)}
+  \bm\nabla_{\lambda}
+  \ket{\Psi_n^{\mathrm R}(\bm\lambda)} .
+  \label{eq:biorthogonal-connection}
+\end{equation}
+For a closed loop $C$ that returns the eigenspace to itself, the geometric
+holonomy is
+\begin{equation}
+  \gamma_n(C)=\oint_C\mathcal A_n\cdot\rmd\bm\lambda .
+  \label{eq:berry-holonomy}
+\end{equation}
+In a non-self-adjoint problem $\gamma_n$ may be complex; its real part is a
+phase and its imaginary part changes the transported amplitude.  Under a
+biorthogonal gauge transformation
+\begin{align}
+  \ket{\Psi_n^{\mathrm R}}&\longmapsto
+  \rme^{f_n}\ket{\Psi_n^{\mathrm R}},
+  \notag\\
+  \bra{\Psi_n^{\mathrm L}}&\longmapsto
+  \bra{\Psi_n^{\mathrm L}}\rme^{-f_n},
+  \label{eq:biorthogonal-gauge}
+\end{align}
+the connection changes by $\rmi\bm\nabla_{\lambda}f_n$, while a properly
+closed holonomy is gauge invariant modulo the allowed branch and normalization
+conventions.
+
+At a second-order EP, one circuit exchanges the two eigenlines.  A scalar
+Berry phase for a single eigenline is therefore defined only after enough
+circuits to close the line, or by using a non-Abelian connection on the
+two-dimensional root bundle.  In the standard finite-dimensional case, two
+circuits return the eigenvector with a minus sign under common conventions.
+
+\subsection{Momentum-bin regularization of the continuum}
+\label{subsec:momentum-bin}
+% BEGIN CURATED SUBJECT INDEX
+\index{exceptional point}
+\index{holonomy}
+% END CURATED SUBJECT INDEX
+
+Let continuum states satisfy
+\begin{equation}
+  \braket{k|k'}=\delta(k-k') .
+  \label{eq:continuum-normalization}
+\end{equation}
+Partition a complex-scaled momentum contour into bins
+$[k_n,k_{n+1}]$ with width $\Delta k_n=k_{n+1}-k_n$.  Define
+\begin{equation}
+  \ket{n}
+  =\frac{1}{\sqrt{\Delta k_n}}
+  \int_{k_n}^{k_{n+1}}\rmd k\,\ket{k} .
+  \label{eq:momentum-bin-state}
+\end{equation}
+For nonoverlapping bins and a compatible contour pairing,
+$\braket{m|n}=\delta_{mn}$.  The factor
+$1/\sqrt{\Delta k_n}$ converts Dirac-delta normalization into Kronecker-delta
+normalization.  It is also the source of an additional branch when the bin
+width itself depends on the EP parameter.
+
+Near a resonance--continuum coalescence, suppose the continued momentum has
+the local form
+\begin{equation}
+  k_n(\lambda)
+  =\vsub{k}{EP}
+  +a_n(\lambda-\vsub{\lambda}{EP})^{1/2}
+  +\cdots .
+  \label{eq:k-ep-puiseux}
+\end{equation}
+Then
+\begin{equation}
+  \Delta k_n
+  =(a_{n+1}-a_n)
+  (\lambda-\vsub{\lambda}{EP})^{1/2}
+  +\cdots .
+  \label{eq:bin-width-branch}
+\end{equation}
+The integral in Eq.~\eqref{eq:momentum-bin-state} contributes one power of
+$\Delta k_n$, while the normalization contributes its inverse square root.
+Consequently the leading binned wave function scales as
+\begin{equation}
+  \ket{n(\lambda)}
+  \propto(\lambda-\vsub{\lambda}{EP})^{1/4} .
+  \label{eq:quarter-root-state}
+\end{equation}
+A $2\pi$ circuit in $\arg(\lambda-\vsub{\lambda}{EP})$ multiplies this
+factor by $\rme^{\rmi\pi/2}$; two circuits give a minus sign, and four circuits
+restore the original branch.  The quarter root combines the square-root
+energy sheet with the square root required by continuum normalization
+\cite{Morikawa:2025inx}.
+
+The bin result is not an extra physical state.  It is a regulated
+representation of a distributional continuum vector.  A wave-packet
+regularization gives the same logic with a smooth width $\epsilon$ in place of
+$\Delta k_n$.  Any claim of universality should be phrased in terms of the
+closed physical holonomy after the regulator is removed, not in terms of an
+individual normalization factor.
+
+\subsection{Chern data and branch exchange}
+\label{subsec:chern-branch}
+% BEGIN CURATED SUBJECT INDEX
+\index{topology}
+\index{biorthogonality}
+\index{exceptional point}
+\index{Chern number}
+% END CURATED SUBJECT INDEX
+
+On a parameter surface that avoids the EP, define the curvature
+\begin{equation}
+  \mathcal F_n=\rmd\mathcal A_n .
+  \label{eq:berry-curvature}
+\end{equation}
+If a closed two-cycle is well defined and the eigenline returns to itself, the
+first Chern number is
+\begin{equation}
+  c_1=\frac{1}{2\pi}
+  \int\mathcal F_n .
+  \label{eq:first-chern}
+\end{equation}
+Near an EP, a single eigenline is branched and may not define a line bundle on
+the punctured base without passing to a covering space.  One may instead work
+on that cover or use the rank-two bundle of the exchanging pair.  This avoids
+assigning an integer Chern number to a path that does not close in the original
+bundle.  Non-Hermitian topological classifications use related biorthogonal
+constructions, with additional boundary sensitivity in spatially extended
+systems
+\cite{Gong2018Topological,Yao2018EdgeStates,Alase:2016tqv}.
+
+\subsection{Renormalizing a distributional holonomy}
+\label{subsec:holonomy-renormalization}
+% BEGIN CURATED SUBJECT INDEX
+\index{monodromy}
+\index{biorthogonality}
+\index{exceptional point}
+\index{holonomy}
+\index{renormalization group}
+% END CURATED SUBJECT INDEX
+
+The continuum limit of Eq.~\eqref{eq:biorthogonal-connection} can contain
+objects such as $\delta(0)$ or derivatives of a delta function if unsmeared
+continuum eigenvectors are inserted directly.  These symbols are not numbers.
+They stand for normalization-volume or wave-packet-width dependence.  Let
+$R>0$ denote a small radius excised around the EP in parameter space, and let
+$\epsilon>0$ denote a continuum smearing scale.  Write a bare holonomy as
+\begin{equation}
+  \vsup{\gamma}{bare}(R,\epsilon)
+  =Z_{\gamma}(R,\epsilon)
+  \vsup{\gamma}{phys} .
+  \label{eq:holonomy-Z}
+\end{equation}
+The physical holonomy is defined by a renormalization condition, for example
+by matching the finite-bin branch exchange.  Regulator independence requires
+\begin{equation}
+  \left(
+  R\frac{\partial}{\partial R}
+  +\epsilon\frac{\partial}{\partial\epsilon}
+  \right)
+  \vsup{\gamma}{phys}=0 .
+  \label{eq:holonomy-rg-invariance}
+\end{equation}
+Equivalently, the running of $Z_\gamma$ cancels the regulator dependence of the
+bare connection.  This is the EP analogue of fixing the origin monodromy in
+Eq.~\eqref{eq:monodromy-Z}.
+
+The construction is best called \textit{monodromy renormalization} or an
+\textit{RG-type regulator-independence condition}.  It does not by itself
+establish a Wilsonian renormalization group, a universal beta function, or a
+new thermodynamic scaling law.  Its testable claim is narrower: different
+continuum regulators that preserve the analytic pole and the same matching
+condition should give the same closed holonomy.  Demonstrating this regulator
+equivalence beyond solvable one-dimensional models is an important open
+problem.
+
+\subsection{What survives the continuum limit}
+\label{subsec:ep-universal-data}
+% BEGIN CURATED SUBJECT INDEX
+\index{topology}
+\index{exceptional point}
+\index{holonomy}
+% END CURATED SUBJECT INDEX
+
+Four pieces of data have different degrees of robustness.  The location of
+the continued branch point is invariant under admissible spectral
+representations.  The Puiseux order is invariant unless a threshold changes
+the analytic class.  The exchange permutation of spectral sheets is
+topological.  The phase assigned to an individual eigenvector depends on
+normalization and gauge, but a closed, matched holonomy is physical.  This
+hierarchy prevents regulator-specific factors from being mistaken for new
+topological invariants.
+
+In applications, one should report the analytic family being varied, the
+definition of the continuum regulator, the number of circuits required to
+close the state, and the left--right normalization.  Without these data, two
+  correct calculations can appear to disagree merely because they compare
+  different covers or gauges.

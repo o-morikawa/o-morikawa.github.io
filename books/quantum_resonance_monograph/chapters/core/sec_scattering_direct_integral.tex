@@ -1,0 +1,206 @@
+\section{The on-shell scattering operator as a direct integral}
+\label{sec:scattering-direct-integral}
+% BEGIN CURATED SUBJECT INDEX
+\index{direct integral}
+\index{wave operator}
+\index{scattering matrix}
+\index{scattering!on-shell}
+% END CURATED SUBJECT INDEX
+
+The energy representation constructed in
+Section~\ref{subsec:free-direct-integral} becomes a scattering representation
+only after the M{\o}ller operators have been defined.  We now prove the missing
+step.  This is also the point at which the symbol $\Scattering$ acquires its
+full operator meaning; it is not an unspecified object that happens to
+commute with a Hamiltonian.
+
+\subsection{Intertwining is stronger than a formal commutator}
+% BEGIN CURATED SUBJECT INDEX
+\index{wave operator}
+\index{scattering matrix}
+\index{boundary condition!incoming and outgoing}
+% END CURATED SUBJECT INDEX
+
+Use the convention of Eq.~\eqref{eq:moller-wave-operators}:
+$\Omega^{(+)}$ describes an incoming state and $\Omega^{(-)}$ an outgoing
+state.  Suppose the strong limits exist on
+$\Hil_{0,\mathrm{ac}}=\vsub{P}{ac}(H_0)\Hil$.  Translation of the limiting
+time gives, first for the unitary groups and then for every bounded Borel
+function $f$, the intertwining relation
+\begin{equation}
+  f(H)\Omega^{(\pm)}
+  =\Omega^{(\pm)}f(H_0).
+  \label{eq:wave-operator-borel-intertwining}
+\end{equation}
+The statement includes spectral projections, not only vectors in the domain
+of $H_0$.  In particular,
+\begin{equation}
+  P_H(\Delta)\Omega^{(\pm)}
+  =\Omega^{(\pm)}P_{H_0}(\Delta)
+  \label{eq:wave-operator-spectral-intertwining}
+\end{equation}
+for every Borel set $\Delta$.
+
+Define
+\begin{equation}
+  \Scattering=\Omega^{(-)\dagger}\Omega^{(+)}
+  \quad\text{on }\Hil_{0,\mathrm{ac}}.
+  \label{eq:scattering-operator-direct-integral}
+\end{equation}
+Using Eq.~\eqref{eq:wave-operator-spectral-intertwining} twice gives
+\begin{equation}
+  P_{H_0}(\Delta)\Scattering
+  =\Scattering P_{H_0}(\Delta).
+  \label{eq:S-strongly-commutes-H0}
+\end{equation}
+This is \term{strong commutation} with $H_0$.  The shorthand
+$[\Scattering,H_0]=0$ is safe only after
+Eq.~\eqref{eq:S-strongly-commutes-H0} has been established; a formal
+commutator on an unspecified common domain would be weaker.
+
+If the wave operators are isometries, $\Scattering$ is an isometry.  If their
+ranges coincide with the absolutely continuous subspace of $H$---the
+asymptotic-completeness statement---then $\Scattering$ is unitary on
+$\Hil_{0,\mathrm{ac}}$.  Completeness is therefore the step that upgrades
+flux conservation in all represented channels to operator unitarity.
+
+\subsection{Decomposability and the on-shell fibers}
+% BEGIN CURATED SUBJECT INDEX
+\index{measure theory}
+\index{spectral measure}
+\index{decomposable operator}
+\index{commutant}
+\index{scattering matrix}
+\index{scattering!on-shell}
+% END CURATED SUBJECT INDEX
+
+Let $U_0$ be a multiplicity representation of $H_0$,
+\begin{equation}
+  U_0\Hil_{0,\mathrm{ac}}
+  =\int_{\acspectrum(H_0)}^\oplus
+    \mathcal K_E\dd\mu_0(E),
+  \qquad
+  (U_0H_0U_0^\dagger\psi)(E)=E\psi(E).
+  \label{eq:H0-multiplicity-stage-II}
+\end{equation}
+Here $\acspectrum(H_0)$ denotes an essential support of the
+absolutely continuous spectral measure; changing it on a null set changes no
+direct-integral vector.
+Equation~\eqref{eq:S-strongly-commutes-H0} says exactly that
+$U_0\Scattering U_0^\dagger$ lies in the commutant of the diagonal algebra.
+The decomposability theorem of Section~\ref{subsec:direct-integrals} therefore
+yields
+\begin{equation}
+  U_0\Scattering U_0^\dagger
+  =\int_{\acspectrum(H_0)}^\oplus
+    \Scattering(E)\dd\mu_0(E).
+  \label{eq:S-direct-integral}
+\end{equation}
+The family $E\mapsto\Scattering(E)$ is measurable and essentially bounded;
+when $\Scattering$ is unitary, $\Scattering(E)$ is unitary for
+$\mu_0$-almost every $E$.  This almost-everywhere family is the rigorous
+meaning of the \term{on-shell scattering matrix}.
+
+The conclusion is representation independent, although its displayed matrix
+is not.  Replacing the measure by
+$\rmd\widetilde\mu(E)=w(E)\rmd\mu_0(E)$ rescales fiber coordinates by
+$w(E)^{-1/2}$.  Channel amplitudes and delta functions acquire compensating
+density factors.  Probabilities, pole positions after analytic continuation,
+and the unitary equivalence class of the decomposable operator do not change.
+
+\subsection{The free particle and partial waves}
+% BEGIN CURATED SUBJECT INDEX
+\index{direct integral!fiber}
+\index{decomposable operator}
+\index{partial-wave expansion}
+\index{scattering matrix}
+% END CURATED SUBJECT INDEX
+
+For the three-dimensional free particle, Eq.~\eqref{eq:free-energy-unitary}
+gives
+\begin{equation}
+  \mathcal K_E=L^2(S^2,\rmd\Omega),
+  \qquad E>0.
+  \label{eq:free-fiber-angular}
+\end{equation}
+Thus $\Scattering(E)$ is an operator on angular wave functions at fixed
+energy.  Rotational invariance implies that it commutes with the angular
+momentum representation.  For a spinless central interaction,
+\begin{equation}
+  \Scattering(E)Y_{lm}
+  =S_l(E)Y_{lm},
+  \qquad
+  S_l(E)=\rme^{2\rmi\delta_l(E)}.
+  \label{eq:S-fiber-partial-waves}
+\end{equation}
+The familiar sequence of partial-wave numbers is therefore a second,
+discrete decomposition inside one energy fiber.  Energy is the direct-
+integral base; $(l,m)$ are multiplicity coordinates in the fiber.
+
+In generalized momentum notation the same fact is often written
+\begin{equation}
+  \bra{\bm k'}\Scattering\ket{\bm k}
+  =\delta(E_{k'}-E_k)\,
+   \mathsf s_E(\widehat{\bm k}',\widehat{\bm k}) .
+  \label{eq:S-kernel-energy-delta}
+\end{equation}
+The energy delta function is not an additional dynamical assumption.  It is
+the distributional kernel of a decomposable operator.  Its normalization
+depends on the chosen momentum measure, which is why working first with
+packets avoids spurious factors.
+
+\subsection{Thresholds and channel multiplicity}
+% BEGIN CURATED SUBJECT INDEX
+\index{measure theory}
+\index{resolvent}
+\index{direct integral}
+\index{decomposable operator}
+\index{Jost function}
+\index{wave operator}
+\index{scattering matrix}
+\index{scattering!on-shell}
+\index{scattering!multichannel}
+\index{exact WKB}
+% END CURATED SUBJECT INDEX
+
+Suppose channel $a$ has threshold $E_a$.  A convenient fiber is
+\begin{equation}
+  \mathcal K_E
+  =\bigoplus_{a:E>E_a}\mathcal K_{a,E}.
+  \label{eq:open-channel-fiber}
+\end{equation}
+The fiber dimension jumps at thresholds.  Since isolated threshold energies
+form a null set for Lebesgue measure, the measurable direct integral has no
+difficulty with the jump.  Analytic continuation does: the channel momentum
+\begin{equation}
+  k_a(E)=\frac{\sqrt{2\mu_a(E-E_a)}}{\hbar}
+  \label{eq:channel-momentum-threshold}
+\end{equation}
+introduces a branch point and a sheet choice.  Direct-integral theory tells us
+what the real-axis on-shell operator is almost everywhere; it does not supply
+the analytic relation between different energies or sheets.  Jost functions,
+resolvent boundary values, and exact WKB provide that extra structure.
+
+\begin{checkpointbox}
+The statement $[\Scattering,H_0]=0$ has now been unpacked into three claims:
+wave operators exist, their spectral projections intertwine, and the
+resulting scattering operator is decomposable in the spectral representation
+of the \textit{comparison} Hamiltonian.  None of these claims says that
+$\Scattering$ commutes with an arbitrary interacting Hamiltonian.
+\end{checkpointbox}
+
+\subsection{What a finite channel calculation approximates}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering matrix}
+\index{CDCC}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+A finite coupled-channel matrix $S^{(N)}(E)$ approximates the fiber operator
+$\Scattering(E)$, not the full operator before energy decomposition.  Its
+truncation contract must specify the retained channel subspace
+$P_N(E)\mathcal K_E$, the energy interval, and the norm or observable in which
+convergence is tested.  Pointwise convergence away from thresholds need not
+be uniform at a threshold or pole.  Conversely, exact unitarity of a finite
+matrix does not prove that omitted breakup channels are negligible.  The CDCC
+Stage will turn these observations into a numerical convergence protocol.

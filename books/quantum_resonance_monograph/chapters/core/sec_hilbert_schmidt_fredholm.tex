@@ -1,0 +1,559 @@
+\section{Compact kernels, Fredholm determinants, and finite model spaces}
+\label{sec:hilbert-schmidt-fredholm}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{direct integral}
+\index{compact operator}
+\index{Fredholm theory}
+\index{Fredholm determinant}
+\index{Lippmann--Schwinger equation}
+\index{resonance!residue}
+\index{pseudostate}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+\index{compact operator}\index{Fredholm determinant}\index{Galerkin method}
+
+\calculationroute
+  {The operator topologies, direct integrals, and resolvents constructed in
+  Section~\ref{sec:functional-operator-algebra}.}
+  {Identify the compact operator hidden in a scattering equation, replace
+  the infinite-dimensional inverse by a Fredholm determinant, and calculate
+  the residue of a simple pole.}
+  {Know exactly why a finite-basis calculation can converge even though the
+  identity operator itself cannot be approximated in operator norm by
+  finite-rank projections.}
+
+The Lippmann--Schwinger equation looks like a linear equation,
+\begin{equation}
+  (\identity-K(z))\psi(z)=\phi(z),
+  \label{eq:fredholm-start}
+\end{equation}
+but an inverse of an infinite matrix need not share the elementary properties
+of a finite inverse.  The missing hypothesis is usually compactness.  Once
+the interaction has been placed in a compact kernel, three operations used
+throughout this book become legitimate versions of one another:
+\begin{equation}
+  \begin{aligned}
+    \text{solve an integral equation}
+    &\quad\Longleftrightarrow\quad
+    \text{locate a determinant zero},\\
+    &\quad\Longleftrightarrow\quad
+    \text{extract a finite-rank pole residue}.
+  \end{aligned}
+  \label{eq:fredholm-three-operations}
+\end{equation}
+This section develops that statement from the definition of a compact
+operator.  The theory is also the mathematical reason why Gaussian
+pseudostates, Galerkin bases, and CDCC model spaces can approximate tested
+continuum amplitudes without turning every positive-energy eigenvalue into a
+physical level.  Standard references include
+Refs.~\cite{Kato:1995,SimonTraceIdeals:2005,Kukulin:1989}.
+
+\subsection{Compactness is uniform finite-dimensionality after the operator acts}
+\label{subsec:compact-operators}
+% BEGIN CURATED SUBJECT INDEX
+\index{Hilbert space}
+\index{spectrum!point}
+\index{Riesz projection}
+\index{compact operator}
+\index{Jordan chain}
+% END CURATED SUBJECT INDEX
+
+A bounded operator $K:\Hil_1\to\Hil_2$ is compact if it maps the unit ball of
+$\Hil_1$ into a relatively compact subset of $\Hil_2$.  Equivalently, for
+every bounded sequence $\{\psi_n\}$ there is a subsequence for which
+$K\psi_{n_j}$ converges in norm.  A finite-rank operator is compact, and a
+norm limit of finite-rank operators is compact.  On Hilbert space the
+converse also holds: every compact operator is a norm limit of finite-rank
+operators.
+
+This definition contains the important order of operations.  Let $P_N$ be
+orthogonal projections onto an increasing sequence of finite-dimensional
+spaces with $P_N\to\identity$ strongly.  In an infinite-dimensional space,
+\begin{equation}
+  \|\identity-P_N\|=1
+  \label{eq:projection-not-norm-identity}
+\end{equation}
+for every finite $N$.  Thus a basis truncation never approximates the
+identity in operator norm.  If $K$ is compact, however,
+\begin{equation}
+  \|(\identity-P_N)K\|\longrightarrow0,
+  \qquad
+  \|K(\identity-P_N)\|\longrightarrow0.
+  \label{eq:compact-projection-norm}
+\end{equation}
+To prove the first limit, cover the compact closure of the image of the unit
+ball by finitely many small balls.  Strong convergence is uniform on their
+finite set of centers and hence, by the triangle inequality, on the whole
+compact image.  The second statement follows by applying the first to
+$K^\dagger$.  Consequently
+\begin{equation}
+  K_N=P_NKP_N
+  \quad\Longrightarrow\quad
+  \|K_N-K\|\to0 .
+  \label{eq:galerkin-compact-convergence}
+\end{equation}
+Equation~\eqref{eq:galerkin-compact-convergence}, not an imagined norm
+convergence $P_N\to\identity$, is the compactness mechanism behind a stable
+Galerkin calculation.
+
+The nonzero spectrum of a compact operator consists of isolated eigenvalues
+of finite algebraic multiplicity, with zero as the only possible accumulation
+point.  A nonzero spectral point therefore has a finite-rank Riesz projection.
+For a non-normal $K$, right and left eigenvectors need not be orthogonal and
+Jordan chains may occur, but the root space belonging to a nonzero isolated
+eigenvalue remains finite dimensional.  This is the first place where the
+infinite-dimensional problem recovers finite matrix algebra without being
+replaced by it.
+
+\subsection{Hilbert--Schmidt and trace-class kernels}
+\label{subsec:schatten-ideals}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{compact operator}
+\index{Hilbert--Schmidt operator}
+\index{trace-class operator}
+% END CURATED SUBJECT INDEX
+\index{Hilbert--Schmidt operator}\index{trace-class operator}
+\index{Schatten ideal}
+
+Let $s_n(K)$ be the singular values of a compact operator, namely the
+eigenvalues of $|K|=(K^\dagger K)^{1/2}$ in decreasing order and with
+multiplicity.  The Schatten ideal $\mathfrak S_p$ consists of operators for
+which
+\begin{equation}
+  \|K\|_p^p=\sum_n s_n(K)^p<\infty .
+  \label{eq:schatten-norm}
+\end{equation}
+The two classes needed here are
+\begin{align}
+  \mathfrak S_2&=\{\text{Hilbert--Schmidt operators}\},
+  &\|K\|_2^2&=\tr(K^\dagger K),
+  \label{eq:hilbert-schmidt-definition}\\
+  \mathfrak S_1&=\{\text{trace-class operators}\},
+  &\|K\|_1&=\tr|K|.
+  \label{eq:trace-class-schatten-definition}
+\end{align}
+One has $\mathfrak S_1\subset\mathfrak S_2\subset\mathcal K(\Hil)$, where
+$\mathcal K(\Hil)$ denotes the compact operators.  If $A$, $B$ are bounded and
+$K\in\mathfrak S_p$, then
+\begin{equation}
+  AKB\in\mathfrak S_p,
+  \qquad
+  \|AKB\|_p\leq\|A\|\,\|K\|_p\,\|B\|.
+  \label{eq:schatten-ideal-property}
+\end{equation}
+Thus these are two-sided ideals in $\BHil$.
+
+For $\Hil=L^2(X,\rmd\mu)$, an integral kernel $K(x,y)$ satisfying
+\begin{equation}
+  \int_X\int_X |K(x,y)|^2\dd\mu(x)\rmd\mu(y)<\infty
+  \label{eq:hs-kernel-criterion}
+\end{equation}
+defines a Hilbert--Schmidt operator, and the integral is $\|K\|_2^2$.
+This elementary criterion is the most useful entry point for scattering.
+It also explains why the order in which potential factors and a resolvent are
+multiplied matters: a free resolvent is not compact on all of space, but a
+resolvent localized on both sides by a sufficiently short-range potential can
+be Hilbert--Schmidt.
+
+\begin{warningbox}
+Neither a delta function nor a continuous-spectrum identity kernel is square
+integrable on $X\times X$.  Discretizing such a kernel produces a finite
+matrix, but finiteness of that matrix is not evidence that the original
+operator was Hilbert--Schmidt.  Compactness must be checked before the
+discretization or proved in a weighted realization.
+\end{warningbox}
+
+\subsection{The Birman--Schwinger kernel of a Schr\"odinger operator}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!continuous}
+\index{spectrum!point}
+\index{resolvent}
+\index{compact operator}
+\index{Fredholm theory}
+\index{Birman--Schwinger operator}
+\index{Jost function}
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+% END CURATED SUBJECT INDEX
+\index{Birman--Schwinger operator}
+\label{subsec:birman-schwinger}
+
+Let $H=H_0+V$ on $L^2(\real^d)$ and use the resolvent convention
+\begin{equation}
+  \Resolvent_0(z)=(z-H_0)^{-1}.
+  \label{eq:bs-free-resolvent}
+\end{equation}
+For a real multiplication potential write
+$V=\sgn(V)|V|$ and define
+\begin{equation}
+  K(z)=|V|^{1/2}\Resolvent_0(z)\sgn(V)|V|^{1/2}.
+  \label{eq:birman-schwinger-kernel}
+\end{equation}
+If $(z-H)\psi=0$ and $\phi=|V|^{1/2}\psi$, then
+\begin{equation}
+  (\identity-K(z))\phi=0.
+  \label{eq:birman-schwinger-equation}
+\end{equation}
+Conversely, a solution of Eq.~\eqref{eq:birman-schwinger-equation} gives
+$\psi=\Resolvent_0(z)\sgn(V)|V|^{1/2}\phi$, subject to the usual
+domain qualifications.  Hence an eigenvalue or continued pole of $H$ occurs
+when $1$ is an eigenvalue of $K(z)$.  If one instead defines the resolvent as
+$(H_0-z)^{-1}$, the corresponding eigenvalue is $-1$; many sign differences
+in the literature are only this convention.
+
+For $d=3$ and $z$ away from $[0,\infty)$, the free kernel is proportional to
+\begin{equation}
+  G_0(z;\bm x-\bm y)
+  =\frac{\rme^{-\kappa(z)|\bm x-\bm y|}}
+  {|\bm x-\bm y|},
+  \qquad \re\kappa(z)>0,
+  \label{eq:off-shell-free-green-decay}
+\end{equation}
+up to constants fixed in Section~\ref{subsec:free-resolvent-ls}.  If, for
+example, $V$ is bounded and compactly supported, then
+\begin{equation}
+  \|K(z)\|_2^2
+  \propto
+  \iint
+  |V(\bm x)|,|G_0(z;\bm x-\bm y)|^2,|V(\bm y)|
+  \dd^3x\rmd^3y<\infty.
+  \label{eq:bs-hs-integral}
+\end{equation}
+The singularity $|\bm x-\bm y|^{-2}$ is locally integrable in three
+dimensions, while the localization controls large separations.  Much weaker
+hypotheses are available, but this sufficient condition displays the
+mechanism without hiding it in a theorem.
+
+On the continuous spectrum the exponential decay in
+Eq.~\eqref{eq:off-shell-free-green-decay} disappears.  Compactness and
+boundary values are then formulated between weighted spaces, or after
+localization by the potential.  A Coulomb tail changes the comparison
+resolvent itself.  Thus the Birman--Schwinger argument does not license using
+the free kernel for the long-range problems of
+Section~\ref{sec:long-range-ir}.
+
+The resolvent identity follows by solving Eq.~\eqref{eq:fredholm-start}:
+\begin{align}
+  \Resolvent(z)
+  &=\Resolvent_0(z)
+  +\Resolvent_0(z)\sgn(V)|V|^{1/2}
+  [\identity-K(z)]^{-1}
+  |V|^{1/2}\Resolvent_0(z).
+  \label{eq:bs-resolvent-formula}
+\end{align}
+Every nontrivial singularity of the right-hand side is therefore carried by
+$[\identity-K(z)]^{-1}$.  This is the operator whose determinant will be
+compared with a Jost function and with the exact-WKB incoming coefficient.
+
+\subsection{Analytic Fredholm theorem: why the continued inverse is meromorphic}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{compact operator}
+\index{Fredholm theory}
+% END CURATED SUBJECT INDEX
+\index{analytic Fredholm theorem}\index{meromorphic resolvent}
+\label{subsec:analytic-fredholm}
+
+Let $\Omega\subset\complex$ be connected and let
+$z\mapsto K(z)$ be analytic in operator norm with compact values.  The
+analytic Fredholm theorem states that exactly one of the following occurs:
+\begin{enumerate}[label=(\roman*)]
+  \item $\identity-K(z)$ is noninvertible for every $z\in\Omega$;
+  \item $[\identity-K(z)]^{-1}$ exists except at a discrete set and is a
+  meromorphic operator-valued function whose principal parts have finite
+  rank.
+\end{enumerate}
+If the inverse exists at one point, alternative (ii) holds.  In scattering,
+large negative energy or sufficiently small coupling usually supplies that
+one point.
+
+The finite-dimensional content of the theorem can be seen locally.  Near a
+point $z_0$ where $1$ is an isolated eigenvalue of $K(z_0)$, take a small
+spectral contour around that eigenvalue and form its finite-rank Riesz
+projection $P$.  Decompose $\Hil=P\Hil\oplus(\identity-P)\Hil$.  The block on
+$(\identity-P)\Hil$ is invertible near $z_0$; a Schur complement reduces the
+remaining obstruction to a finite matrix on $P\Hil$.  Its ordinary
+determinant has isolated zeros, and its inverse has a finite-rank Laurent
+principal part.  Compactness is precisely what made the obstructing block
+finite.
+
+This proof also identifies a limitation.  A threshold is not, in general, an
+ordinary interior point of an analytic domain: it is a branch point of the
+continued kernel.  The theorem is applied on a chosen momentum sheet or in a
+uniformizing variable, not blindly across the threshold.
+
+\subsection{Fredholm and regularized determinants}
+\label{subsec:fredholm-determinants}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{Hilbert--Schmidt operator}
+\index{trace-class operator}
+\index{Fredholm theory}
+\index{Fredholm determinant}
+\index{Jost function}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+% END CURATED SUBJECT INDEX
+
+If $K(z)$ is trace class, its Fredholm determinant is
+\begin{equation}
+  D(z)=\det(\identity-K(z))
+  =\prod_n[1-\lambda_n(z)],
+  \label{eq:fredholm-determinant}
+\end{equation}
+where the eigenvalues are counted with algebraic multiplicity.  The product
+converges, $D$ is analytic, and
+\begin{equation}
+  D(z)=0
+  \quad\Longleftrightarrow\quad
+  \identity-K(z)\text{ is not invertible}.
+  \label{eq:fredholm-zero}
+\end{equation}
+Where the inverse exists,
+\begin{equation}
+  \frac{\rmd}{\rmd z}\log D(z)
+  =-\tr\!\left([\identity-K(z)]^{-1}K'(z)\right).
+  \label{eq:fredholm-log-derivative}
+\end{equation}
+
+A Hilbert--Schmidt operator need not be trace class, so the linear term in
+the product can diverge.  The regularized determinant
+\begin{equation}
+  \det{}_2(\identity-K)
+  =\det\bigl[(\identity-K)\rme^K\bigr]
+  =\prod_n(1-\lambda_n)\rme^{\lambda_n}
+  \label{eq:det2-definition}
+\end{equation}
+is well defined for $K\in\mathfrak S_2$.  The exponential removes the
+non-summable linear contribution.  Most importantly,
+\begin{equation}
+  \det{}_2(\identity-K)=0
+  \quad\Longleftrightarrow\quad
+  1\in\spectrum(K),
+  \label{eq:det2-zero}
+\end{equation}
+with the same zero multiplicity.  Multiplication of a resonance determinant
+by a nonvanishing analytic factor changes neither its zeros nor the local
+null spaces.  This is why a Jost function, a Fredholm determinant, and an
+exact-WKB connection coefficient may differ in normalization while encoding
+the same poles.
+
+For a partial-wave Schr\"odinger problem one may schematically write
+\begin{equation}
+  \Cincoming(E)
+  =N(E)F_l(k(E))
+  =\widetilde N(E)\det{}_2[\identity-K_l(E)],
+  \label{eq:cin-jost-fredholm}
+\end{equation}
+on a domain where all three objects have been constructed and where
+$N$, $\widetilde N$ do not vanish.  Equation~\eqref{eq:cin-jost-fredholm} is not
+a universal equality of preferred normalizations.  It is the precise local
+statement that the three analytic coordinates define the same divisor of
+resonance zeros.
+
+\subsection{Simple-zero residue without diagonalizing the whole operator}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{Fredholm theory}
+\index{scattering!multichannel}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{exact WKB}
+\index{Feshbach projection}
+% END CURATED SUBJECT INDEX
+\index{residue}\index{left eigenvector}\index{right eigenvector}
+\label{subsec:fredholm-simple-residue}
+
+Set $A(z)=\identity-K(z)$ and suppose $\vsub{z}{R}$ is a simple
+noninvertibility point.  Choose right and left null vectors
+\begin{equation}
+  A(\vsub{z}{R})u=0,
+  \qquad
+  A(\vsub{z}{R})^\dagger v=0,
+  \label{eq:fredholm-left-right-null}
+\end{equation}
+where the second equation represents the left functional in Hilbert-space
+notation.  If
+\begin{equation}
+  \vsub{\mathcal N}{R}
+  =\dualpair{v}{A'(\vsub{z}{R})u}\ne0,
+  \label{eq:fredholm-derivative-normalization}
+\end{equation}
+then
+\begin{equation}
+  A(z)^{-1}
+  =\frac{\ket{u}\bra{v}}
+  {(z-\vsub{z}{R})\vsub{\mathcal N}{R}}
+  +\vsub{A}{reg}(z).
+  \label{eq:fredholm-inverse-residue}
+\end{equation}
+The result follows by applying $A(z)=A(\vsub{z}{R})+
+(z-\vsub{z}{R})A'(\vsub{z}{R})+\dots$ to the proposed Laurent term.
+The scale changes $u\mapsto cu$, $v\mapsto c^{-1*}v$ cancel between numerator
+and denominator.
+
+Substitution in Eq.~\eqref{eq:bs-resolvent-formula} gives the factorized
+resolvent residue.  The denominator
+$\dualpair{v}{A'u}$ is the operator form of every derivative
+normalization encountered later:
+\begin{equation}
+  \dualpair{v}{A'u}
+  \quad\longleftrightarrow\quad
+  F_l'(k_{\mathrm R})
+  \quad\longleftrightarrow\quad
+  \Cincoming'(\resonantE)
+  \quad\longleftrightarrow\quad
+  1-\Sigma'(\resonantE).
+  \label{eq:derivative-normalization-dictionary}
+\end{equation}
+The last expression occurs after Feshbach elimination.  Neglecting the energy
+derivative of an effective interaction is therefore not an innocent
+normalization choice; it changes the pole residue.
+
+For a matrix incoming block $\Cincoming(E)$, the identical
+calculation gives
+\begin{equation}
+  \Cincoming(E)^{-1}
+  \sim
+  \frac{\ket{u}\bra{v}}
+  {(E-\resonantE)
+   \dualpair{v}{\partial_E\Cincoming(\resonantE)u}}.
+  \label{eq:matrix-connection-residue}
+\end{equation}
+This is the multichannel extension of dividing by
+$\Cincoming'(\resonantE)$ in exact WKB.
+
+\subsection{Worked model: a rank-one interaction}
+\label{subsec:rank-one-fredholm-model}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{Fredholm theory}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+% END CURATED SUBJECT INDEX
+
+Let
+\begin{equation}
+  V=\lambda\ket{g}\bra{g},
+  \qquad g\in\Hil .
+  \label{eq:rank-one-potential}
+\end{equation}
+The transition operator has the separable form
+\begin{equation}
+  T(z)=\ket{g}\tau(z)\bra{g}.
+  \label{eq:rank-one-T-ansatz}
+\end{equation}
+Inserting it in $T=V+V\Resolvent_0T$ yields
+\begin{align}
+  \tau(z)&=\frac{\lambda}{D(z)},
+  &D(z)&=1-\lambda g_0(z),
+  &g_0(z)&=\braket{g|\Resolvent_0(z)|g}.
+  \label{eq:rank-one-denominator}
+\end{align}
+The entire pole problem is now one Fredholm eigenvalue.  If
+$D(\vsub{z}{R})=0$ and $D'(\vsub{z}{R})\ne0$, then
+\begin{equation}
+  \Res_{z=\vsub{z}{R}}T(z)
+  =\frac{\lambda\ket{g}\bra{g}}{D'(\vsub{z}{R})}
+  =-\frac{\ket{g}\bra{g}}{g_0'(\vsub{z}{R})}.
+  \label{eq:rank-one-residue}
+\end{equation}
+The first equality has exactly the form
+$\mathcal N(\resonantE)/\Cincoming'(\resonantE)$.  A numerical
+calculation that reproduces $\vsub{z}{R}$ but not $g_0'(\vsub{z}{R})$
+has not yet reproduced the resonance strength.
+
+The discontinuity of $g_0(E\pm\rmi0)$ supplies the open-channel width.  A
+threshold branch point remains in $g_0(z)$ even though the algebra in
+Eq.~\eqref{eq:rank-one-denominator} is one dimensional.  Finite rank does not
+remove continuum analyticity; it isolates where that analyticity enters.
+
+\subsection{Galerkin, pseudostates, and CDCC as compact-kernel quadrature}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{Riesz projection}
+\index{Hilbert--Schmidt operator}
+\index{Fredholm theory}
+\index{Fredholm determinant}
+\index{resonance!residue}
+\index{pseudostate}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+\index{Galerkin method}\index{pseudostate}\index{CDCC}
+\label{subsec:fredholm-galerkin-cdcc}
+
+Let $K_N=P_NKP_N$.  If $K$ is compact, Eq.~\eqref{eq:galerkin-compact-convergence}
+implies that isolated nonzero eigenvalues and their total Riesz projections
+are stable under a sufficiently large truncation.  If $K\in\mathfrak S_2$
+and $\|K_N-K\|_2\to0$, the regularized determinants converge locally
+uniformly.  A practical pole calculation may therefore proceed as follows:
+\begin{enumerate}[label=\arabic*.]
+  \item construct the compact or Hilbert--Schmidt kernel before projection;
+  \item choose $P_N$ and calculate the finite matrix $P_NK(z)P_N$;
+  \item locate zeros of its determinant on a declared sheet;
+  \item enlarge $P_N$ and track a whole Riesz cluster, not a single sorted
+  eigenvalue;
+  \item calculate the left--right derivative denominator in
+  Eq.~\eqref{eq:fredholm-derivative-normalization};
+  \item test the resulting residue between the physical source and detector.
+\end{enumerate}
+
+The same logic clarifies continuum pseudostates.  The projection $P_N$ is a
+finite quadrature for matrix elements of a compactly tested resolvent.  Most
+positive-energy eigenvalues depend on basis ranges and should move as the
+quadrature is refined.  A resonance is identified by stability of a
+continued pole or of its Riesz projection and residue.  CDCC adds coupled
+relative motion and physical channel boundary conditions, but its internal
+pseudostate space obeys the same rule.
+
+\subsection{Compact kernels versus decomposable scattering operators}
+% BEGIN CURATED SUBJECT INDEX
+\index{measure theory}
+\index{resolvent}
+\index{direct integral}
+\index{decomposable operator}
+\index{compact operator}
+\index{Hilbert--Schmidt operator}
+\index{Fredholm theory}
+\index{Birman--Schwinger operator}
+\index{scattering matrix}
+\index{scattering!on-shell}
+% END CURATED SUBJECT INDEX
+\index{direct integral}\index{decomposable operator}
+\label{subsec:compact-versus-direct-integral}
+
+Compactness should not be attached to the wrong operator.  In the spectral
+representation of $H_0$, the scattering operator is decomposable,
+\begin{equation}
+  \Scattering=\int^\oplus \Scattering(E)\dd E.
+  \label{eq:S-decomposable-repeat}
+\end{equation}
+On a non-atomic energy interval, a nonzero decomposable multiplication
+operator is ordinarily not compact.  Indeed, if
+$\|\Scattering(E)-\identity\|>\varepsilon$ on a set of positive measure,
+divide that set into disjoint subsets and choose unit sections supported on
+them.  Their images remain separated, so no convergent subsequence exists.
+
+There is no contradiction.  The compact object is the localized off-shell
+kernel, a Birman--Schwinger operator, or a difference of suitably weighted
+resolvents.  The on-shell scattering operator is a measurable family acting
+throughout a continuum.  Direct-integral theory tells us how it is organized;
+Fredholm theory tells us how its analytic singularities arise.  Exact WKB
+then calculates the same singularity from global connection data.
+
+\begin{checkpointbox}
+Before proceeding, the reader should be able to distinguish the strong limit
+$P_N\to\identity$ from the norm limit $P_NKP_N\to K$, verify the
+Hilbert--Schmidt criterion for a localized Green kernel, derive
+Eq.~\eqref{eq:fredholm-inverse-residue}, and explain why the derivative of a
+determinant or incoming coefficient is part of the physical pole residue.
+\end{checkpointbox}

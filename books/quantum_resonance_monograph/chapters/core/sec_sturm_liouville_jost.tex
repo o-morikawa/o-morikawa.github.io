@@ -1,0 +1,577 @@
+\section{Half-line Sturm--Liouville theory as the source of Jost data}
+\label{sec:sturm-liouville-jost}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{spectral measure}
+\index{Sturm--Liouville theory}
+\index{Jost function}
+\index{Wronskian}
+\index{partial-wave expansion}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{exact WKB}
+\index{radial equation}
+% END CURATED SUBJECT INDEX
+\index{Sturm--Liouville operator}\index{Jost function}
+
+\calculationroute
+  {The radial Schr\"odinger equation, partial waves, and Jost asymptotics of
+  Section~\ref{sec:textbook-scattering}.}
+  {Construct the self-adjoint half-line operator from its differential
+  expression, derive its Green kernel and spectral measure, and then continue
+  the Wronskian that becomes the resonance condition.}
+  {Given a radial potential, classify both endpoints, calculate the regular
+  and outgoing solutions, form their Wronskian, and differentiate it to
+  obtain a pole residue.}
+
+A radial equation becomes a scattering problem only after two logically
+different choices have been made.  At the origin one chooses an operator
+domain.  At infinity one chooses a comparison solution and, after analytic
+continuation, a sheet.  Sturm--Liouville theory controls the first choice and
+the physical spectral measure; Jost theory adds the analytic data required
+for the second.  Exact WKB joins them by transporting the origin solution to
+the asymptotic sector and calculating their Wronskian.
+
+The purpose of this section is not to place an abstract theorem beside the
+radial equation.  We derive each object in the order in which it is used in a
+calculation.  References for the underlying spectral theory include
+Refs.~\cite{Titchmarsh:1962,Zettl:2005,Rakityansky:2022Jost,
+Kukulin:1989}.
+
+\subsection{The differential expression and the Hilbert space}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{Hilbert space}
+\index{measure theory}
+\index{radial equation}
+% END CURATED SUBJECT INDEX
+\index{maximal operator}\index{minimal operator}\index{boundary form}
+\label{subsec:sl-expression-space}
+
+On an interval $(a,b)$, possibly with singular endpoints, consider
+\begin{equation}
+  \tau u
+  =\frac{1}{w(r)}
+  \left[-\frac{\rmd}{\rmd r}
+  \left(p(r)\frac{\rmd u}{\rmd r}\right)+q(r)u(r)\right],
+  \label{eq:sturm-liouville-expression}
+\end{equation}
+where $p>0$, $w>0$ almost everywhere and
+$1/p,q,w$ are locally integrable.  The natural Hilbert space is
+\begin{equation}
+  \Hil_w=L^2((a,b),w(r)\rmd r),
+  \qquad
+  \dualpair{u}{v}_w
+  =\int_a^b u(r)^*v(r)w(r)\dd r.
+  \label{eq:sl-weighted-space}
+\end{equation}
+The maximal domain consists of functions for which $u$ and $pu'$ are locally
+absolutely continuous and $\tau u\in\Hil_w$.  Absolute continuity, rather
+than twice continuous differentiability, is enough to make integration by
+parts meaningful and includes many potentials used in scattering.
+
+For $u,v$ in the maximal domain define the boundary bracket
+\begin{equation}
+  [u,v](r)
+  =p(r)\left(u(r)^*v'(r)-u'(r)^*v(r)\right).
+  \label{eq:sl-boundary-bracket}
+\end{equation}
+Direct integration gives Lagrange's identity
+\begin{equation}
+  \dualpair{u}{\tau v}_w
+  -\dualpair{\tau u}{v}_w
+  =[u,v](b)-[u,v](a),
+  \label{eq:lagrange-identity}
+\end{equation}
+where endpoint values are limits from inside the interval.  Equation
+\eqref{eq:lagrange-identity} is the radial version of probability-current
+conservation.  It also shows why the differential formula alone does not
+define a self-adjoint Hamiltonian: a domain must make the boundary form
+vanish for every pair of domain vectors.
+
+For the reduced radial Schr\"odinger equation one has $p=w=1$ after
+multiplying by $2\mu/\hbar^2$,
+\begin{equation}
+  \tau_l u
+  =-u''+\left[\frac{l(l+1)}{r^2}+U(r)\right]u,
+  \qquad
+  U(r)=\frac{2\mu}{\hbar^2}V(r),
+  \label{eq:sl-radial-expression}
+\end{equation}
+and the spectral parameter is $k^2=2\mu E/\hbar^2$.  The reduced function
+$u$ belongs to $L^2(0,\infty;\rmd r)$ for a bound state; the factor $r^2$ in
+the three-dimensional volume element has already been removed.
+
+\subsection{Regular endpoints and the boundary condition at the origin}
+\label{subsec:sl-regular-endpoint}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{self-adjoint extension}
+% END CURATED SUBJECT INDEX
+
+An endpoint $a$ is regular if it is finite and $1/p,q,w$ are integrable near
+it.  The boundary values $u(a)$ and $(pu')(a)$ then exist.  A separated
+self-adjoint condition is
+\begin{equation}
+  u(a)\cos\alpha+(pu')(a)\sin\alpha=0,
+  \qquad \alpha\in[0,\pi).
+  \label{eq:sl-separated-boundary}
+\end{equation}
+Substituting two functions obeying the same condition into
+Eq.~\eqref{eq:sl-boundary-bracket} makes the bracket vanish.  Dirichlet and
+Neumann conditions are the cases $\alpha=0$ and $\alpha=\pi/2$.
+
+For the three-dimensional $s$ wave with a nonsingular potential, the reduced
+operator $-\rmd^2/\rmd r^2$ on $(0,\infty)$ needs a boundary condition at
+$r=0$.  Regularity of the full wave function $u(r)/r$ selects
+\begin{equation}
+  u(0)=0.
+  \label{eq:radial-dirichlet-origin}
+\end{equation}
+Other self-adjoint extensions describe additional contact physics and should
+not be introduced accidentally by a numerical boundary stencil.  The phrase
+``regular solution'' means the solution satisfying the declared origin
+domain, conventionally normalized by
+\begin{equation}
+  \varphi(k,0)=0,
+  \qquad
+  \varphi'(k,0)=1
+  \label{eq:regular-solution-initial}
+\end{equation}
+for an $s$ wave.
+
+\subsection{Singular endpoints and Weyl's alternative}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{unbounded operator}
+\index{Sturm--Liouville theory!limit-point/limit-circle}
+\index{boundary condition!incoming and outgoing}
+\index{Langer correction}
+\index{Frobenius solution}
+% END CURATED SUBJECT INDEX
+\index{limit-point endpoint}\index{limit-circle endpoint}
+\index{Weyl alternative}
+\label{subsec:weyl-limit-point-circle}
+
+At a singular endpoint, individual boundary values may not exist.  Weyl's
+classification asks instead how many solutions of
+\begin{equation}
+  \tau u=z u,
+  \qquad z\in\complex\setminus\real,
+  \label{eq:sl-nonreal-equation}
+\end{equation}
+are square integrable near that endpoint:
+\begin{itemize}
+  \item the endpoint is \textit{limit circle} if every solution is locally in
+  $L^2_w$ there;
+  \item it is \textit{limit point} if, up to scale, at most one solution is
+  locally in $L^2_w$ there.
+\end{itemize}
+The classification is independent of the chosen nonreal $z$.  A limit-circle
+endpoint requires one boundary condition.  At a limit-point endpoint the
+boundary bracket vanishes automatically on the operator domain, and no
+boundary condition is added.  Imposing one anyway can overconstrain the
+problem.
+
+The inverse-square model makes the criterion calculable.  Near $r=0$ let
+\begin{equation}
+  \tau_\nu=-\frac{\rmd^2}{\rmd r^2}
+  +\frac{\nu^2-\tfrac14}{r^2}.
+  \label{eq:inverse-square-endpoint-model}
+\end{equation}
+The two Frobenius behaviors are
+\begin{equation}
+  u_+(r)\sim r^{1/2+\nu},
+  \qquad
+  u_-(r)\sim r^{1/2-\nu}
+  \label{eq:inverse-square-frobenius}
+\end{equation}
+for $\nu\ne0$, with a logarithmic replacement at $\nu=0$.  Since
+$\int_0^\epsilon r^{1-2\nu}\rmd r$ converges exactly when $\nu<1$, the
+origin is limit circle for $0\leq\nu<1$ and limit point for $\nu\geq1$.
+For $l(l+1)/r^2$, $\nu=l+1/2$.  Thus the bare $s$-wave endpoint needs the
+regular boundary condition, whereas $l\geq1$ is limit point.  The Langer map
+of Stage V replaces $l(l+1)$ by $(l+1/2)^2$ in the WKB momentum; it does not
+erase this operator-domain analysis.
+
+For a sufficiently short-range potential, $r=\infty$ is limit point.  A
+self-adjoint half-line Hamiltonian therefore uses the origin condition but no
+independent $L^2$ condition at infinity.  Bound-state square integrability
+emerges from the spectral equation.  Outgoing resonance behavior is an
+analytic continuation of a comparison solution, not a second self-adjoint
+boundary condition on the original operator.
+
+\subsection{Fundamental solutions, the Weyl solution, and the Green kernel}
+\label{subsec:weyl-m-green}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectral measure}
+\index{resolvent}
+\index{Sturm--Liouville theory!limit-point/limit-circle}
+\index{Weyl--Titchmarsh function}
+\index{Wronskian}
+% END CURATED SUBJECT INDEX
+\index{Weyl--Titchmarsh function}\index{Green function}
+
+Choose real entire fundamental solutions $\theta(z,r)$ and $\phi(z,r)$ at a
+regular left endpoint so that
+\begin{equation}
+  W[\theta,\phi]
+  :=p(\theta\phi'-\theta'\phi)=1.
+  \label{eq:sl-fundamental-wronskian}
+\end{equation}
+The solution $\phi$ is chosen to obey the left boundary condition.  If the
+right endpoint is limit point, then for $z\notin\real$ there is a unique
+coefficient $m(z)$ such that
+\begin{equation}
+  \psi(z,r)=\theta(z,r)+m(z)\phi(z,r)
+  \label{eq:weyl-solution}
+\end{equation}
+is square integrable near $b$.  The scalar $m(z)$ is the Weyl--Titchmarsh
+function.  With the conventional choice of fundamental solutions it is a
+Herglotz function,
+\begin{equation}
+  \im z>0
+  \quad\Longrightarrow\quad
+  \im m(z)>0,
+  \label{eq:m-herglotz}
+\end{equation}
+and has an integral representation whose measure is the spectral measure of
+the half-line operator.
+
+In the convention used throughout the book, let
+$\Resolvent_H(z)=(z-H)^{-1}$.  If $u_a(z,r)$ obeys the left
+boundary condition and $u_b(z,r)$ is the Weyl solution at the right, then
+\begin{equation}
+  G(z;r,r')
+  =\frac{u_a(z,r_<)u_b(z,r_>)}
+  {W[u_a,u_b](z)}
+  \label{eq:sl-green-kernel}
+\end{equation}
+solves $(z-H)G=\delta(r-r')/w(r')$.  To check the sign, integrate across
+$r=r'$: the jump in $p\partial_rG$ is $+1$, exactly as required by the
+leading term $+(pu')'$ in $z-H$.
+
+Equation~\eqref{eq:sl-green-kernel} is more than a formula for inversion.  It
+shows immediately that a zero of the Wronskian is a pole of the Green
+function and that the numerator factorizes at that zero.  The remaining task
+is to identify $u_b$ on the physical continuum and to continue it.
+
+\subsection{The spectral measure and generalized eigenfunction expansion}
+\label{subsec:sl-eigenfunction-expansion}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{spectral theorem}
+\index{spectral measure}
+\index{direct integral}
+\index{Gamow--Siegert state}
+% END CURATED SUBJECT INDEX
+
+The boundary values of $m$ recover the spectral measure $\rho$.  At an
+absolutely continuous energy one has, in the distributional sense,
+\begin{equation}
+  \frac{\rmd\vsub{\rho}{ac}}{\rmd E}
+  =\frac{1}{\pi}\im m(E+\rmi0),
+  \label{eq:m-spectral-density}
+\end{equation}
+while poles of $m$ on the real axis supply point masses.  If $\phi(E,r)$ is
+the left-regular solution in the same normalization, the spectral transform
+is
+\begin{align}
+  \widehat f(E)
+  &=\int_a^b\phi(E,r)f(r)w(r)\dd r,
+  \label{eq:sl-spectral-transform}\\
+  f(r)
+  &=\int_\real\phi(E,r)\widehat f(E)\dd\rho(E),
+  \label{eq:sl-spectral-inverse}\\
+  \|f\|_w^2
+  &=\int_\real|\widehat f(E)|^2\dd\rho(E).
+  \label{eq:sl-parseval}
+\end{align}
+The continuum normalization is therefore not guessed from a delta function.
+It is determined by the pair consisting of the regular solution and its
+spectral measure.  Rescaling $\phi(E,r)$ rescales $\rmd\rho(E)$ inversely and
+leaves Eqs.~\eqref{eq:sl-spectral-inverse}--\eqref{eq:sl-parseval}
+unchanged.  This is the one-channel realization of the direct integral in
+Section~\ref{subsec:direct-integrals}.
+
+The self-adjoint expansion contains bound states and the physical continuum,
+but no off-axis resonance projection.  Resonance poles appear only after a
+boundary value of the Green kernel or $m$ function has been analytically
+continued.  This clean separation prevents a Gamow vector from being inserted
+as an extra orthogonal term in the physical spectral theorem.
+
+\subsection{Volterra construction of the Jost solution}
+\label{subsec:jost-volterra}
+% BEGIN CURATED SUBJECT INDEX
+\index{Jost function}
+\index{Wronskian}
+\index{boundary condition!incoming and outgoing}
+\index{Riccati equation}
+% END CURATED SUBJECT INDEX
+\index{Volterra equation}\index{Jost solution}
+
+Consider the $s$-wave equation in dimensionless form
+\begin{equation}
+  u''(r)+[k^2-U(r)]u(r)=0.
+  \label{eq:s-wave-jost-equation}
+\end{equation}
+The Jost solution is fixed at infinity by
+\begin{equation}
+  f(k,r)\sim\rme^{\rmi kr}.
+  \label{eq:s-wave-jost-asymptotic}
+\end{equation}
+Variation of constants gives the Volterra equation
+\begin{equation}
+  f(k,r)
+  =\rme^{\rmi kr}
+  +\frac{1}{k}\int_r^\infty
+  \sin[k(r'-r)]U(r')f(k,r')\dd r'.
+  \label{eq:jost-volterra}
+\end{equation}
+Applying $\rmd^2/\rmd r^2+k^2$ verifies the differential equation; the
+upper-triangular integration region enforces the outgoing normalization.
+Successive substitution produces a Neumann series.  Weighted integrability
+of $U$ controls convergence and analyticity in $k$ in the appropriate half
+plane.  For $l>0$, Riccati--Hankel functions replace the exponential and the
+kernel contains the corresponding free radial Green function.
+
+The regular solution follows from the forward Volterra equation
+\begin{equation}
+  \varphi(k,r)
+  =\frac{\sin kr}{k}
+  +\frac{1}{k}\int_0^r
+  \sin[k(r-r')]U(r')\varphi(k,r')\dd r',
+  \label{eq:regular-volterra}
+\end{equation}
+with Eq.~\eqref{eq:regular-solution-initial}.  The Jost function is the
+constant Wronskian
+\begin{equation}
+  F(k)=W[f(k,\cdot),\varphi(k,\cdot)].
+  \label{eq:sl-jost-wronskian-definition}
+\end{equation}
+At $r=0$, this convention gives $F(k)=f(k,0)$ for the $s$ wave.  At infinity,
+the same Wronskian is the incoming coefficient of the regular solution, up to
+the fixed normalization displayed in
+Eq.~\eqref{eq:regular-jost-expansion}.  Constancy of the Wronskian is the
+reason the origin domain and the radiation condition can be tested at
+different ends of the interval.
+
+\subsection{Worked example: the attractive spherical square well}
+\label{subsec:square-well-jost}
+% BEGIN CURATED SUBJECT INDEX
+\index{Jost function}
+\index{boundary condition!incoming and outgoing}
+\index{Riemann sheet}
+\index{branch cut}
+\index{resonance!residue}
+% END CURATED SUBJECT INDEX
+\index{square-well potential}
+
+Take
+\begin{equation}
+  U(r)=
+  \begin{cases}
+    -U_0,&0<r<a,\\
+    0,&r>a,
+  \end{cases}
+  \qquad U_0>0,
+  \label{eq:square-well-potential}
+\end{equation}
+and define $q=(k^2+U_0)^{1/2}$ on a stated branch.  The regular solution is
+\begin{equation}
+  \varphi(k,r)=\frac{\sin qr}{q},
+  \qquad 0<r<a.
+  \label{eq:square-well-regular-inside}
+\end{equation}
+For $r>a$ write
+\begin{equation}
+  \varphi(k,r)=A(k)\rme^{\rmi kr}+B(k)\rme^{-\rmi kr}.
+  \label{eq:square-well-outside}
+\end{equation}
+Continuity at $a$ gives
+\begin{align}
+  2B(k)\rme^{-\rmi ka}
+  &=\frac{\sin qa}{q}+\frac{\rmi}{k}\cos qa,
+  \label{eq:square-well-incoming-coefficient}\\
+  2A(k)\rme^{\rmi ka}
+  &=\frac{\sin qa}{q}-\frac{\rmi}{k}\cos qa.
+  \label{eq:square-well-outgoing-coefficient}
+\end{align}
+A convenient Jost normalization is therefore
+\begin{equation}
+  F(k)=\rme^{\rmi ka}
+  \left[\cos qa-\rmi\frac{k}{q}\sin qa\right].
+  \label{eq:square-well-jost-function}
+\end{equation}
+The purely outgoing condition $B(k)=0$ becomes
+\begin{equation}
+  q\cot(qa)=\rmi k.
+  \label{eq:square-well-resonance-condition}
+\end{equation}
+For $k=\rmi\kappa$ on the physical sheet it gives a decaying bound state;
+continued into the lower half-plane it gives virtual and resonant poles.
+No new differential equation was introduced when the pole changed its name:
+only the sheet and asymptotic behavior changed.
+
+To compute a residue, differentiate Eq.~\eqref{eq:square-well-jost-function}
+on the same branches of $k$ and $q$.  The result enters as
+$F'(k_{\mathrm R})$ in Eq.~\eqref{eq:radial-green-residue}.  Numerically,
+finite differencing $F$ across a branch cut will give the wrong normalization
+even if a root finder happened to locate the pole.
+
+\subsection{Wronskian derivatives and Zel'dovich normalization}
+% BEGIN CURATED SUBJECT INDEX
+\index{GNS construction}
+\index{Jost function}
+\index{Wronskian}
+\index{exact WKB}
+\index{monodromy}
+\index{Zel'dovich regularization}
+\index{Berggren completeness relation}
+% END CURATED SUBJECT INDEX
+\index{Zel'dovich regularization}\index{Jost-function derivative}
+\label{subsec:wronskian-derivative-normalization}
+
+The relation between a Wronskian derivative and a bilinear norm follows from
+Lagrange's identity with two nearby spectral parameters.  For simplicity let
+\begin{equation}
+  [-\partial_r^2+U(r)-k^2]u(k,r)=0.
+  \label{eq:parameter-dependent-radial}
+\end{equation}
+Differentiate with respect to $k$ and subtract the equation multiplied in the
+opposite order.  Integration to $R$ gives
+\begin{equation}
+  2k\int_0^R u(k,r)^2\dd r
+  =W[u,\partial_k u](R)-W[u,\partial_k u](0).
+  \label{eq:wronskian-derivative-integral}
+\end{equation}
+There is no complex conjugation: the resonance normalization is bilinear.
+The origin term is fixed by the regular normalization.  For a bound state the
+term at infinity vanishes after the decaying solution is normalized.  For a
+resonance it diverges on the real axis, but analytic continuation or a
+Zel'dovich Gaussian factor assigns the continued boundary value.  The result
+is proportional to $F'(k_{\mathrm R})$.
+
+Equation~\eqref{eq:wronskian-derivative-integral} is the calculational core of
+Berggren's normalization proof in Section~\ref{subsec:berggren-proof}: the
+regularized integral is not postulated independently of the pole.  It is the
+continued derivative of the same Wronskian that defines the pole.  Complex
+scaling makes the boundary term vanish along a rotated ray; exact WKB
+calculates it by connection and monodromy data.  These are different
+realizations of one analytic identity.
+
+\subsection{Exact WKB computes the Jost Wronskian globally}
+\label{subsec:sl-jost-exact-wkb}
+% BEGIN CURATED SUBJECT INDEX
+\index{Hilbert space}
+\index{Jost function}
+\index{Wronskian}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{exact WKB}
+\index{Langer correction}
+\index{Frobenius solution}
+\index{complex scaling}
+% END CURATED SUBJECT INDEX
+
+Let $\vsub{\psi}{reg}$ denote the exact-WKB solution selected by the origin
+domain, including the Frobenius and Langer data when the endpoint is singular.
+Let $\vsub{\psi}{out}$ be the Borel-resummed branch selected by the outgoing
+sector at infinity.  Then
+\begin{equation}
+  \Cincoming(E,\hbar)
+  \propto
+  W[\vsub{\psi}{out},\vsub{\psi}{reg}]
+  \propto F_l(k(E)).
+  \label{eq:wkb-jost-wronskian}
+\end{equation}
+Local WKB series do not determine this Wronskian.  One must transport the two
+solutions through the Stokes graph, multiply the connection matrices in the
+correct order, and retain the exponentially small entries.  A zero of the
+result removes the incoming component.  Its derivative gives the residue by
+Eqs.~\eqref{eq:radial-green-residue} and
+\eqref{eq:wronskian-derivative-integral}.
+
+This is the novel reorganization used in the rest of the book.  Sturm--
+Liouville theory determines the physical operator and continuum measure;
+Jost theory identifies the analytic Wronskian; exact WKB calculates that
+Wronskian nonperturbatively.  Complex scaling and rigged Hilbert spaces will
+change the realization of the resulting pole but not the connection zero or
+its derivative.
+
+\subsection{Where Coulomb and many-body asymptotics change the construction}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{spectral theorem}
+\index{Jost function}
+\index{Wronskian}
+\index{scattering!Coulomb}
+\index{scattering!three-body Coulomb}
+\index{infrared problem}
+\index{dressing state}
+% END CURATED SUBJECT INDEX
+\index{Coulomb scattering}\index{three-body Coulomb scattering}
+\label{subsec:sl-jost-long-range-limit}
+
+For a two-body Coulomb tail, the half-line differential operator and its
+self-adjoint spectral theorem remain valid, but the comparison solutions are
+not $\rme^{\pm\rmi kr}$.  One uses Coulomb--Hankel functions with the
+logarithmic phase
+\begin{equation}
+  kr-\eta\log(2kr)-\frac{l\pi}{2}+\sigma_l.
+  \label{eq:coulomb-jost-phase}
+\end{equation}
+The Coulomb-modified Jost function is a Wronskian with those reference
+solutions.  Applying Eq.~\eqref{eq:jost-volterra} with the free kernel to the
+full Coulomb potential fails because the integral is not short ranged.
+
+For three charged particles, different cluster regions carry different
+logarithmic phases and no single universally usable scalar asymptotic Jost
+basis is known.  A finite-dimensional coupled equation can still be solved in
+a controlled interaction region, but the global comparison dynamics must be
+declared separately.  This is the same structural difficulty that appears as
+infrared dressing in QED: long-range correlations change the asymptotic state
+space before one asks for a pole.  Section~\ref{sec:long-range-ir} develops
+that obstruction rather than hiding it in a formal plane wave.
+
+\subsection{A reproducible half-line pole calculation}
+\label{subsec:sl-jost-algorithm}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{resolvent}
+\index{Sturm--Liouville theory}
+\index{Sturm--Liouville theory!limit-point/limit-circle}
+\index{Jost function}
+\index{Wronskian}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{scattering!Coulomb}
+% END CURATED SUBJECT INDEX
+
+For later laboratories, the complete calculation can be organized into the
+following steps:
+\begin{enumerate}[label=\arabic*.]
+  \item specify $p,q,w$ and the Hilbert-space measure;
+  \item classify every singular endpoint as limit point or limit circle;
+  \item impose only the boundary conditions required for a self-adjoint
+  physical Hamiltonian;
+  \item construct the regular solution by an initial-value or Volterra
+  equation;
+  \item choose the correct short-range or Coulomb comparison solution at
+  infinity and construct the Jost solution;
+  \item form their Wronskian and verify that it is independent of the matching
+  point;
+  \item declare the momentum sheet before continuing and finding a zero;
+  \item calculate the Wronskian derivative and a tested resolvent residue;
+  \item vary the matching point, integration contour, and numerical basis
+  while tracking the pole as one analytic object.
+\end{enumerate}
+
+\begin{checkpointbox}
+The reader should now be able to derive the Green kernel from its derivative
+jump, explain why an $s$-wave origin condition is domain data rather than a
+numerical convenience, obtain the square-well condition
+Eq.~\eqref{eq:square-well-resonance-condition}, and identify the exact-WKB
+incoming coefficient with a continued Sturm--Liouville Wronskian.
+\end{checkpointbox}

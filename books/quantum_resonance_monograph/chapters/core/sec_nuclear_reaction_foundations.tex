@@ -1,0 +1,524 @@
+\section{Nuclear reaction theory reconstructed from scattering principles}
+\label{sec:nuclear-reaction-foundations}
+% BEGIN CURATED SUBJECT INDEX
+\index{optical potential}
+\index{distorted-wave approximation}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+The usual vocabulary of nuclear reactions---optical potential, channel,
+form factor, distorted wave, compound state, breakup---can appear to be a
+collection of phenomenological devices.  It is more coherent when read as a
+sequence of projections and boundary conditions.  This section derives that
+sequence before any continuum discretization.  The resulting formulas are
+standard; their placement in the book is not.  Each will be tied to one of the
+analytic or operator-theoretic structures already constructed.
+
+\subsection{Translational invariance and Jacobi kinetic energy}
+\label{subsec:nuclear-jacobi-foundations}
+% BEGIN CURATED SUBJECT INDEX
+\index{central decomposition}
+\index{Jacobi coordinate}
+% END CURATED SUBJECT INDEX
+
+For particles with masses $m_i$, positions $\bm r_i$, and momenta $\bm p_i$,
+the laboratory kinetic energy is
+\begin{equation}
+  T=\sum_{i=1}^{A}\frac{\bm p_i^2}{2m_i}.
+  \label{eq:many-body-lab-kinetic}
+\end{equation}
+Introduce the total mass, center of mass, and total momentum,
+\begin{equation}
+  M=\sum_i m_i,
+  \qquad
+  \vsub{\bm R}{cm}=\frac{1}{M}\sum_i m_i\bm r_i,
+  \qquad
+  \bm P=\sum_i\bm p_i.
+  \label{eq:many-body-cm}
+\end{equation}
+A linear canonical transformation to mass-scaled Jacobi coordinates gives
+\begin{equation}
+  T=\frac{\bm P^2}{2M}+
+  \sum_{a=1}^{A-1}\frac{\bm\pi_a^2}{2\mu_a}.
+  \label{eq:jacobi-kinetic-decomposition}
+\end{equation}
+Removing $\vsub{\bm R}{cm}$ is not optional in a basis calculation.  If a
+single-particle basis mixes intrinsic and center-of-mass excitations, spurious
+levels may be misidentified as low-energy channels.
+
+For three particles, one Jacobi set is
+\begin{equation}
+  \bm x=\bm r_2-\bm r_1,
+  \qquad
+  \bm y=\bm r_3-
+  \frac{m_1\bm r_1+m_2\bm r_2}{m_1+m_2},
+  \label{eq:general-three-body-jacobi}
+\end{equation}
+with
+\begin{equation}
+  \mu_x=\frac{m_1m_2}{m_1+m_2},
+  \qquad
+  \mu_y=\frac{m_3(m_1+m_2)}{M}.
+  \label{eq:general-three-body-reduced-masses}
+\end{equation}
+The other two sets are obtained by cyclic permutation.  No set is physically
+preferred, but a particular cluster asymptotic region is simple in one of
+them.  A many-set expansion is therefore a coordinate atlas for correlations,
+not an introduction of new particles.
+
+\subsection{Cluster channels and antisymmetry}
+\label{subsec:cluster-channels-pauli}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{scattering!Coulomb}
+\index{antisymmetrization}
+% END CURATED SUBJECT INDEX
+
+Suppose the asymptotic partition is $a+A$.  A channel state has internal
+states $\phi_a^{I_a}$, $\phi_A^{I_A}$ and relative orbital momentum $L$,
+coupled to total $JM$:
+\begin{equation}
+  \mathcal Y_c^{JM}
+  =\mathcal A
+  \left[
+   [\phi_a^{I_a}\otimes\phi_A^{I_A}]_I
+   \otimes Y_L(\hat R)
+  \right]_{JM},
+  \qquad c=(a,A,I_a,I_A,I,L,\ldots).
+  \label{eq:nuclear-channel-state}
+\end{equation}
+The intercluster antisymmetrizer $\mathcal A$ makes channel states nonorthogonal
+at small $R$.  In a microscopic resonating-group formulation, projection
+therefore gives a norm kernel as well as a Hamiltonian kernel.  In a cluster
+model one often replaces this exact exchange by a Pauli projector
+\begin{equation}
+  \vsub{V}{Pauli}=\lambda_P
+  \sum_f\ket{u_f}\bra{u_f},
+  \qquad \lambda_P\to+\infty,
+  \label{eq:orthogonality-condition-model}
+\end{equation}
+which removes forbidden relative orbits $u_f$.  The limit changes the operator
+domain on the allowed subspace.  It must be held fixed while continuum model
+spaces are compared.
+
+A spectroscopic factor is a norm of a particular projected overlap and hence
+depends on the resolution, interaction, and channel convention.  An
+asymptotic normalization coefficient is more directly tied to the tail fixed
+by a separation energy and Coulomb equation.  Reaction observables probe
+these quantities through kernels; neither is an eigenvalue observable of the
+full many-body Hamiltonian.
+
+\subsection{The optical model as a Feshbach boundary value}
+\label{subsec:optical-model-feshbach}
+% BEGIN CURATED SUBJECT INDEX
+\index{Feshbach projection}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+Let $P$ retain elastic relative motion with the target in its ground state and
+let $Q$ contain every explicit excitation, transfer, breakup, and compound
+configuration not retained.  Stage I gave the exact operator
+\begin{equation}
+  \vsub{H}{opt}(E)
+  =PHP+PHQ\frac{1}{E-QHQ+\rmi0}QHP.
+  \label{eq:exact-optical-H}
+\end{equation}
+In coordinate representation its second term is generally nonlocal,
+energy dependent, angular-momentum dependent, and complex above open
+thresholds.  A local Woods--Saxon or folded $g$-matrix potential is an
+approximation to this object, not a fundamental interaction.
+
+Writing $U=V+\rmi W$ and using the stationary Schr\"odinger equation gives the
+continuity relation
+\begin{equation}
+  \nabla\cdot\bm j
+  =\frac{2}{\hbar}W(\bm R)|\psi(\bm R)|^2.
+  \label{eq:optical-continuity}
+\end{equation}
+An absorptive convention has $W\leq0$.  The lost elastic flux is the flux into
+the eliminated $Q$ space only if the optical model consistently represents
+that space.  When breakup channels are later included explicitly, leaving the
+same phenomenological absorption untouched may count part of them twice.
+
+For spinless elastic scattering,
+\begin{equation}
+  S_L=\eta_L\rme^{2\rmi\delta_L},
+  \qquad 0\leq\eta_L\leq1,
+  \label{eq:optical-SL}
+\end{equation}
+and
+\begin{align}
+  \vsub{\sigma}{el}
+  &=\frac{\pi}{k^2}\sum_L(2L+1)|1-S_L|^2,
+  \label{eq:optical-elastic-xs}\\
+  \sigma_R
+  &=\frac{\pi}{k^2}\sum_L(2L+1)(1-|S_L|^2).
+  \label{eq:optical-reaction-xs}
+\end{align}
+The first measures coherent deflection; the second measures missing open-
+channel flux.  A resonance can be present in either through the analytic
+continuation of $S_L(E)$, but a peak in $\sigma_R$ is not by itself a pole
+definition.
+
+\subsection{Coupled channels from an internal basis}
+\label{subsec:ordinary-coupled-channels}
+% BEGIN CURATED SUBJECT INDEX
+\index{wave packet}
+\index{coupled-channel equation}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+
+Let $h_A\phi_n=\epsilon_n\phi_n$ describe discrete target states.  With
+\begin{equation}
+  H=K_R+h_A+U(\bm R,\xi),
+  \label{eq:discrete-cc-H}
+\end{equation}
+expand
+\begin{equation}
+  \Psi^{JM}
+  =\frac1R\sum_{nIL}\chi_{nIL}^J(R)
+  [\phi_{nI}(\xi)\otimes Y_L(\hat R)]_{JM}.
+  \label{eq:discrete-cc-expansion}
+\end{equation}
+Projection produces
+\begin{align}
+  &\left[-\frac{\hbar^2}{2\mu}
+   \left(\frac{\rmd^2}{\rmd R^2}-\frac{L_c(L_c+1)}{R^2}\right)
+   +\epsilon_c-E\right]\chi_c^J(R)
+  \notag\\
+  &\qquad+\sum_{c'}U_{cc'}^J(R)\chi_{c'}^J(R)=0.
+  \label{eq:ordinary-coupled-equations}
+\end{align}
+Thus the CDCC equation is not a special new dynamical law.  It is the ordinary
+coupled-channel equation after continuum wave packets have been admitted as
+internal states.
+
+Multipole expansion gives
+\begin{equation}
+  U(\bm R,\xi)
+  =\sum_{\lambda\mu}F_{\lambda\mu}(R,\xi)
+  Y_{\lambda\mu}(\hat R),
+  \label{eq:cc-multipole}
+\end{equation}
+and reduced matrix elements of $F_\lambda$ become radial coupling form
+factors.  Angular momentum selection rules can make the coupling matrix
+sparse even when the number of channels is large.  A good implementation
+tests Hermitian symmetry of $U_{cc'}$ before optical absorption is introduced.
+
+\subsection{Distorted waves and first-order transition theory}
+\label{subsec:dwba-foundations}
+% BEGIN CURATED SUBJECT INDEX
+\index{Born approximation}
+\index{boundary condition!incoming and outgoing}
+\index{distorted-wave approximation}
+% END CURATED SUBJECT INDEX
+
+Choose an entrance channel Hamiltonian $H_i=K+U_i+h_i$ and write
+$H=H_i+V_i$.  The exact transition amplitude to an outgoing solution of
+$H_f$ is
+\begin{equation}
+  \vsup{T_{fi}}{prior}
+  =\bra{\Psi_f^{(-)}}V_i\ket{\Phi_i\chi_i^{(+)}}.
+  \label{eq:exact-prior-amplitude}
+\end{equation}
+Alternatively,
+\begin{equation}
+  \vsup{T_{fi}}{post}
+  =\bra{\Phi_f\chi_f^{(-)}}V_f\ket{\Psi_i^{(+)}}.
+  \label{eq:exact-post-amplitude}
+\end{equation}
+The two forms agree for exact wave functions with consistent interactions.
+Distorted-wave Born approximation (DWBA) replaces the complete scattering
+state on the right by the channel product:
+\begin{equation}
+  \vsup{T_{fi}}{DWBA}
+  =\bra{\Phi_f\chi_f^{(-)}}\vsub{V}{tr}\ket{\Phi_i\chi_i^{(+)}}.
+  \label{eq:dwba-amplitude}
+\end{equation}
+Post--prior disagreement then becomes a diagnostic of inconsistent optical
+potentials, remnant terms, nonorthogonality, or truncation.
+
+The distorted waves resum elastic interaction with the target.  The Born
+order refers only to the transition operator $\vsub{V}{tr}$, not to replacing
+all waves by planes.  In a knockout reaction, an impulse approximation further
+replaces the short collision by an embedded two-nucleon $t$ matrix.  This
+separation is valid when the elementary collision is short compared with the
+scale over which the nuclear overlap and distortions vary; it is a scale
+statement to be checked, not a definition.
+
+\subsection{The R-matrix split: an interior connection problem}
+\label{subsec:r-matrix-foundations}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+\index{exact WKB}
+\index{Feshbach projection}
+\index{R-matrix@$R$-matrix}
+% END CURATED SUBJECT INDEX
+
+Choose a channel radius $a$ outside the dominant short-range interaction.
+Inside, expand the wave function in square-integrable functions $X_\lambda$.
+Outside, use known Coulomb or free channel functions.  A Bloch operator
+\begin{equation}
+  \mathcal L_B=
+  \frac{\hbar^2}{2\mu}\delta(r-a)
+  \left(\frac{\rmd}{\rmd r}-\frac{B}{a}\right)
+  \label{eq:bloch-operator}
+\end{equation}
+makes the interior problem Hermitian with the chosen boundary parameter $B$.
+The channel R matrix has the pole expansion
+\begin{equation}
+  R_{cc'}(E)
+  =\sum_\lambda
+  \frac{\gamma_{\lambda c}\gamma_{\lambda c'}}
+       {E_\lambda-E},
+  \label{eq:r-matrix-pole-expansion}
+\end{equation}
+where $\gamma_{\lambda c}$ is a boundary amplitude at $a$
+\cite{LaneThomas1958RMatrix}.
+
+The $E_\lambda$ depend on $a$ and $B$; observed scattering poles do not.  The
+external logarithmic derivative converts the interior R matrix into the
+physical collision matrix.  This is another global connection problem:
+interior basis coefficients are representation data, while the matched
+incoming coefficient is invariant.  Exact WKB replaces the arbitrary
+interior basis by resummed local analytic solutions; the algebra of matching
+is the common element.
+
+For one isolated level and one channel, the denominator becomes
+\begin{equation}
+  D(E)=E_\lambda-E-\gamma_\lambda^2[S(E)-B]
+       -\rmi\gamma_\lambda^2P(E),
+  \label{eq:r-matrix-level-denominator}
+\end{equation}
+where $S$ and $P$ are shift and penetration functions.  The physical pole
+solves $D(\resonantE)=0$, not simply $E=E_\lambda$.  Differentiating $D$ gives the
+same energy-dependent normalization encountered for Feshbach operators.
+
+\subsection{Three-body equations before discretization}
+\label{subsec:faddeev-foundations}
+% BEGIN CURATED SUBJECT INDEX
+\index{Lippmann--Schwinger equation}
+\index{scattering!on-shell}
+\index{Faddeev equation}
+\index{CDCC}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+For three particles with pair interactions $v_1,v_2,v_3$, write
+\begin{equation}
+  H=H_0+v_1+v_2+v_3.
+  \label{eq:three-body-H-faddeev}
+\end{equation}
+The direct Lippmann--Schwinger kernel contains disconnected iterations and is
+not compact in the useful sense.  Decompose
+\begin{equation}
+  \ket{\Psi}=\ket{\psi_1}+\ket{\psi_2}+\ket{\psi_3},
+  \qquad
+  \ket{\psi_\alpha}=G_0v_\alpha\ket{\Psi},
+  \label{eq:faddeev-components}
+\end{equation}
+with $G_0=(E-H_0+\rmi0)^{-1}$.  Using the pair $t$ matrix
+\begin{equation}
+  t_\alpha=v_\alpha+v_\alpha G_0t_\alpha
+  \label{eq:pair-t-matrix}
+\end{equation}
+gives the Faddeev equations
+\begin{equation}
+  \ket{\psi_\alpha}
+  =G_0t_\alpha
+  \sum_{\beta\neq\alpha}\ket{\psi_\beta}.
+  \label{eq:faddeev-equations}
+\end{equation}
+Each component carries the asymptotic behavior of one pair partition, and the
+sum reconstructs the common solution \cite{Faddeev1961,FaddeevMerkuriev:1993}.
+
+The operator form for transition amplitudes is the Alt--Grassberger--Sandhas
+system
+\begin{equation}
+  U_{\beta\alpha}
+  =(1-\delta_{\beta\alpha})G_0^{-1}
+  +\sum_{\gamma\neq\beta}t_\gamma G_0U_{\gamma\alpha}.
+  \label{eq:ags-equations}
+\end{equation}
+Its on-shell matrix elements generate elastic, rearrangement, and breakup
+amplitudes \cite{AltGrassbergerSandhas1967}.  CDCC does not replace the exact
+three-body theory as an identity.  It approximates selected projectile
+continuum and reaction couplings in a basis optimized for high-energy or
+weakly bound projectile scattering.  Comparisons with Faddeev/AGS calculations
+are valuable where both are feasible.
+
+\subsection{Why three-body Coulomb is structurally harder}
+\label{subsec:nuclear-three-body-coulomb}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{scattering!Coulomb}
+\index{scattering!three-body Coulomb}
+\index{infrared problem}
+\index{Jacobi coordinate}
+\index{Faddeev equation}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+
+For short-range pair forces, the channel resolvents separate cleanly at large
+Jacobi coordinates.  Coulomb interactions act in every asymptotic region and
+leave a long-range tail in the Faddeev kernels.  Merkuriev splitting writes
+each Coulomb interaction as a short-range piece adapted to the three-body
+region plus a long-range piece included in the channel Hamiltonian.  The
+splitting function is auxiliary; physical amplitudes must be independent of
+it in a converged calculation \cite{FaddeevMerkuriev:1993}.
+
+This is a precise nuclear version of the infrared lesson from Stage II.  A
+$p+p+{}^7$Be continuum cannot be assigned one plane-wave asymptotic form.
+Different Jacobi sectors carry different Coulomb distortions, and their
+overlap requires matching.  CDCC with Coulomb functions in the
+projectile--target coordinate controls one part of the asymptotics; CSLS or a
+three-body Coulomb construction is needed to resolve fragment correlations in
+the final state.
+
+\subsection{Adiabatic and eikonal limits}
+\label{subsec:adiabatic-eikonal}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering!Coulomb}
+\index{eikonal approximation}
+\index{adiabatic approximation}
+\index{CDCC}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+Two scale separations lead to useful approximations.  If projectile internal
+excitation energies are small compared with the collision energy over the
+interaction time, replace
+\begin{equation}
+  h_P-\epsilon_0\longrightarrow0
+  \label{eq:adiabatic-freezing}
+\end{equation}
+inside the reaction equation while retaining the projectile coordinates in
+the interaction.  This adiabatic or sudden approximation resums breakup
+configurations at degenerate internal energy.  Its failure is largest when
+energy conservation among continuum channels or a narrow resonance is
+important.
+
+At high incident momentum $K$, write
+\begin{equation}
+  \Psi(\bm R,\xi)
+  =\rme^{\rmi KZ}\widehat\Psi(\bm b,Z,\xi)
+  \label{eq:eikonal-factorization}
+\end{equation}
+and neglect $\partial_Z^2\widehat\Psi$ relative to
+$K\partial_Z\widehat\Psi$.  The equation becomes first order,
+\begin{equation}
+  \rmi\hbar v\frac{\partial}{\partial Z}\widehat\Psi
+  =[h_P-\epsilon_0+U(\bm b,Z,\xi)]\widehat\Psi.
+  \label{eq:dynamical-eikonal}
+\end{equation}
+Freezing $h_P$ further gives a path-ordered eikonal phase.  Equation
+\eqref{eq:dynamical-eikonal} is a coupled-channel evolution along the beam
+coordinate; it retains excitation energy and is often called dynamical
+eikonal.
+
+The approximation is checked by increasing energy, restricting scattering
+angle, and comparing with partial-wave CDCC.  Coulomb deflection and the
+logarithmic phase must be corrected explicitly; the straight-line plane-wave
+eikonal is not uniformly valid at arbitrarily large impact parameter.
+
+\subsection{Threshold scales in lithium and beryllium systems}
+\label{subsec:li-be-scales}
+% BEGIN CURATED SUBJECT INDEX
+\index{pseudostate}
+\index{nuclear breakup}
+\index{lithium nuclei}
+\index{beryllium nuclei}
+% END CURATED SUBJECT INDEX
+
+Weak binding creates large spatial scales
+\begin{equation}
+  \ell_B\sim\frac{\hbar}{\sqrt{2\mu S}},
+  \label{eq:weak-binding-length}
+\end{equation}
+where $S$ is a separation energy.  Small $S$ means that low multipoles of the
+target field couple efficiently to continuum states near threshold.  It also
+means that a cluster treated as inert may have its own comparable breakup
+scale.  The sequence
+\begin{equation}
+  {}^9\mathrm C
+  \longleftrightarrow p+{}^8\mathrm B
+  \longleftrightarrow p+p+{}^7\mathrm{Be}
+  \label{eq:9c-threshold-hierarchy}
+\end{equation}
+is the central example in Laboratory VI-B.  A two-body model may reproduce one
+tail but miss polarization of the intermediate $^8$B subsystem.
+
+For $^6$Li, both $\alpha+d$ and $\alpha+p+n$ descriptions can be useful.  The
+former is smaller and resolves deuteron-like breakup; the latter permits
+explicit proton--neutron rearrangement, closed pseudostates, knockout overlaps,
+and transition densities.  Model selection should be made by the observable
+and energy scales, then verified by enlarging the space.  ``More bodies'' is
+not automatically more accurate if their effective interactions and Pauli
+constraints are less controlled.
+
+\subsection{One dictionary for reaction approximations}
+\label{subsec:nuclear-method-dictionary}
+% BEGIN CURATED SUBJECT INDEX
+\index{Wronskian}
+\index{wave packet}
+\index{boundary condition!incoming and outgoing}
+\index{exact WKB}
+\index{complex scaling}
+\index{pseudostate}
+\index{Feshbach projection}
+\index{R-matrix@$R$-matrix}
+\index{distorted-wave approximation}
+\index{Faddeev equation}
+% END CURATED SUBJECT INDEX
+
+\begin{longtable}{@{}p{0.18\linewidth}p{0.24\linewidth}p{0.23\linewidth}p{0.21\linewidth}@{}}
+\toprule
+method & retained object & eliminated object & invariance or check\\
+\midrule
+\endfirsthead
+\toprule
+method & retained object & eliminated object & invariance or check\\
+\midrule
+\endhead
+optical model & elastic channel & excitation and reaction space & elastic
+$S$ matrix and flux deficit\\
+\addlinespace
+DWBA & entrance and exit distorted waves & repeated transition coupling &
+post--prior and potential dependence\\
+\addlinespace
+R matrix & finite interior basis & exact interior continuum & channel-radius
+and boundary-parameter independence\\
+\addlinespace
+Faddeev/\allowbreak AGS & all pair partitions & disconnected overcounting & permutation,
+unitarity, and rearrangement consistency\\
+\addlinespace
+adiabatic and eikonal & slow internal or transverse coordinates & selected time or
+longitudinal derivatives & energy and angle systematics\\
+\addlinespace
+CDCC & finite continuum wave packets & $Q_N$ continuum & model-space and
+smoothing convergence\\
+\addlinespace
+complex scaling & exposed pole plus rotated cut & undeformed outgoing growth &
+angle and contour independence\\
+\addlinespace
+exact WKB & resummed connection datum & divergent local formal series & Stokes,
+Wronskian, and homotopy consistency\\
+\bottomrule
+\end{longtable}
+
+The table prevents a common misuse of comparisons.  Two methods can disagree
+because they approximate different eliminated spaces, not because one is
+simply of higher ``order.''  To compare them, match the retained Hamiltonian,
+asymptotic channels, and observable first.  Only then vary the approximation
+specific regulator or truncation.
+
+\begin{checkpointbox}
+The reader should now be able to derive optical absorption from a Feshbach
+boundary value, obtain ordinary coupled-channel equations, state the
+post--prior test of DWBA, interpret R-matrix levels as interior representation
+data, and explain why Faddeev components are adapted to different asymptotic
+partitions.  CDCC will next be obtained by replacing the discrete internal
+basis of Eq.~\eqref{eq:discrete-cc-expansion} with normalized continuum bins or
+pseudostates.
+\end{checkpointbox}

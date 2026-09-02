@@ -1,0 +1,344 @@
+\section{Step 2: Identify the analytic quantity that can have a resonance}
+\label{sec:resonance-definition}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{Jost function}
+\index{scattering matrix}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+% END CURATED SUBJECT INDEX
+
+\calculationroute
+  {Jost solutions, resolvent boundary values, and the physical-sheet
+  scattering matrix.}
+  {Continue the incoming coefficient through the continuum cut and relate its
+  zero to resolvent and $S$-matrix poles.}
+  {State the sheet, boundary condition, and residue associated with a proposed
+  resonance rather than identifying it only from a complex eigenvalue.}
+
+\subsection{Self-adjoint starting point and resolvent boundary values}
+\label{subsec:resolvent}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{Hilbert space}
+\index{topology}
+\index{spectrum!continuous}
+\index{resolvent}
+\index{GNS construction}
+\index{scattering matrix}
+\index{boundary condition!incoming and outgoing}
+\index{Riemann sheet}
+\index{resonance!residue}
+% END CURATED SUBJECT INDEX
+
+Let $\Hil$ be a separable Hilbert space and let $H$ be a self-adjoint
+Hamiltonian on a dense domain $D(H)\subset\Hil$.  For a complex number
+$z\notin\spectrum(H)$, where $\spectrum(H)$ is the spectrum, define the resolvent
+\begin{equation}
+  \Resolvent(z)=(z-H)^{-1} .
+  \label{eq:resolvent-definition}
+\end{equation}
+The operator-valued resolvent of a self-adjoint $H$ is analytic away from the
+real spectrum.  If $H$ has continuous spectrum on an interval $I\subset
+\real$, the limits $\Resolvent(E\pm\rmi0)$ are generally meaningful only in a
+weighted space or as matrix elements between sufficiently localized test
+vectors.  The two signs are the outgoing and incoming boundary values.
+
+Choose test vectors $\phi,\psi$ from a dense space $\PhiSpace$ with stronger
+topology than $\Hil$.  A resonance is a pole $z=\vsub{z}{R}$ of a
+meromorphic continuation of
+\begin{equation}
+  F_{\phi\psi}(z)
+  =\bra{\phi}\Resolvent(z)\ket{\psi}
+  \label{eq:resolvent-matrix-element}
+\end{equation}
+through the continuous spectrum to an unphysical sheet.  For a simple pole,
+\begin{equation}
+  F_{\phi\psi}(z)
+  =\frac{\dualpair{\phi}{\vsub{\Psi}{R}}
+  \dualpair{\vsub{\widetilde{\Psi}}{R}}{\psi}}
+  {z-\vsub{z}{R}}
+  +\vsup{F_{\phi\psi}}{reg}(z) .
+  \label{eq:resolvent-laurent}
+\end{equation}
+The right and left pole functionals are denoted by
+$\vsub{\Psi}{R}$ and $\vsub{\widetilde{\Psi}}{R}$, respectively, and
+$\vsup{F_{\phi\psi}}{reg}$ is regular at $\vsub{z}{R}$.  For a
+time-reversal-invariant one-channel problem, the pole energy is conventionally
+written
+\begin{equation}
+  \vsub{z}{R}=E_*-\frac{\rmi}{2}\Gamma,
+  \qquad E_*\in\real,
+  \qquad \Gamma>0 .
+  \label{eq:pole-energy}
+\end{equation}
+The pole lifetime is $\tau=\hbar/\Gamma$ when the isolated-pole approximation
+is valid.
+
+Definition~\eqref{eq:resolvent-matrix-element} is deliberately phrased in
+terms of matrix elements.  The continued resolvent need not be a bounded
+operator on the original Hilbert space.  Its poles nevertheless define
+finite-rank residues between weighted spaces or between $\PhiSpace$ and its
+dual.  This distinction becomes central in the rigged-Hilbert-space
+construction of Section~\ref{sec:rigged-hilbert}.
+
+\subsection{Momentum sheets and outgoing boundary conditions}
+\label{subsec:siegert}
+% BEGIN CURATED SUBJECT INDEX
+\index{GNS construction}
+\index{partial-wave expansion}
+\index{boundary condition!incoming and outgoing}
+\index{Riemann sheet}
+\index{Gamow--Siegert state}
+% END CURATED SUBJECT INDEX
+
+Consider a one-dimensional Hamiltonian
+\begin{equation}
+  H=-\frac{\hbar^2}{2m}\frac{\rmd^2}{\rmd x^2}+V(x),
+  \qquad x\in\real,
+  \label{eq:one-dimensional-H}
+\end{equation}
+where $m>0$ is the particle mass and $V(x)$ is real on the real axis.  Assume
+for the moment that $V(x)$ is short ranged.  The energy and momentum are
+related by
+\begin{equation}
+  E=\frac{\hbar^2k^2}{2m} .
+  \label{eq:energy-momentum}
+\end{equation}
+The square root makes the $E$ plane two-sheeted.  On the physical sheet, a
+positive-energy scattering solution has real $k>0$.  Analytic continuation
+through the cut changes the sign of $k$.
+
+With time dependence $\rme^{-\rmi Et/\hbar}$, a purely outgoing solution obeys
+\begin{align}
+  \vsub{\psi}{R}(x)
+  &\sim A_-\rme^{-\rmi \vsub{k}{R}x},
+  &&x\to-\infty,
+  \notag\\
+  \vsub{\psi}{R}(x)
+  &\sim A_+\rme^{+\rmi \vsub{k}{R}x},
+  &&x\to+\infty .
+  \label{eq:siegert-boundary}
+\end{align}
+Here $A_-$ and $A_+$ are nonzero amplitudes.  For a decaying resonance,
+$\vsub{k}{R}$ lies in the fourth quadrant, so
+$\im \vsub{k}{R}<0$.  Both spatial asymptotic forms in
+Eq.~\eqref{eq:siegert-boundary} then grow exponentially.  This is not a
+pathology that should be removed before defining the pole; it is the spatial
+counterpart of temporal decay.  Regularization or analytic deformation is
+introduced only after the outgoing condition has selected the physical
+solution.
+
+For a spherically symmetric problem, the reduced radial function $u_l(r)$ in
+partial wave $l$ satisfies an analogous condition at $r\to\infty$.  The
+regular condition at the origin replaces the left outgoing condition.  With
+several thresholds, each channel momentum has its own square root, producing
+multiple sheets.  A sheet must then be labeled by the signs chosen for all
+channel momenta rather than by a single phrase such as ``the second sheet.''
+
+\subsection{Jost functions, the scattering matrix, and pole residues}
+\label{subsec:jost}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{Fredholm theory}
+\index{Jost function}
+\index{Wronskian}
+\index{scattering matrix}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{Gamow--Siegert state}
+\index{antiresonance}
+\index{Breit--Wigner approximation}
+% END CURATED SUBJECT INDEX
+
+We now continue the textbook construction of
+Section~\ref{subsec:jost-foundation} into the complex momentum plane.  For a
+short-range radial potential, let $f_l(\pm k,r)$ be Jost solutions with
+asymptotic behavior
+\begin{equation}
+  f_l(\pm k,r)\sim\rme^{\pm\rmi kr},
+  \qquad r\to\infty .
+  \label{eq:jost-asymptotic}
+\end{equation}
+Let $\varphi_l(k,r)$ be the solution regular at the origin.  Its expansion in
+the Jost basis defines the Jost function $F_l(k)$:
+\begin{equation}
+  \varphi_l(k,r)
+  =\frac{1}{2\rmi k}
+  \left[F_l(-k)f_l(k,r)-F_l(k)f_l(-k,r)\right] .
+  \label{eq:regular-jost-expansion}
+\end{equation}
+Up to a convention-dependent phase, the partial-wave scattering matrix is
+\begin{equation}
+  S_l(k)=\frac{F_l(-k)}{F_l(k)} .
+  \label{eq:S-jost}
+\end{equation}
+A zero of $F_l(k)$ removes the incoming component and therefore enforces the
+Siegert condition.  The same zero is a pole of $S_l(k)$.  This establishes the
+first two arrows in Eq.~\eqref{eq:intro-dictionary}; rigorous versions use
+analytic Fredholm theory and weighted resolvents
+\cite{Newton:1960,Taylor:1972,Sasakawa:1991,Rakityansky:2022Jost}.
+
+For a real potential, complex conjugation gives the reality relation
+\begin{equation}
+  F_l(-k^*)=F_l(k)^* .
+  \label{eq:jost-reality}
+\end{equation}
+The conventional classification of simple zeros is summarized in
+Table~\ref{tab:jost-zero-classification}.  The terms ``physical'' and
+``unphysical'' refer to sheets of the energy surface, not to whether the
+corresponding pole has observable consequences.
+
+\begin{table}[t]
+  \centering
+  \begin{tabular}{lll}
+    \toprule
+    Position of $k$ & asymptotic behavior & interpretation \\
+    \midrule
+    $k=+\rmi\kappa$, $\kappa>0$ & $\rme^{-\kappa r}$
+      & bound state \\
+\addlinespace
+    $k=-\rmi\kappa$, $\kappa>0$ & $\rme^{+\kappa r}$
+      & virtual or antibound state \\
+\addlinespace
+    $\re k>0$, $\im k<0$ & outgoing and growing
+      & decaying resonance \\
+\addlinespace
+    $\re k<0$, $\im k<0$ & time-reversed partner
+      & antiresonance \\
+    \bottomrule
+  \end{tabular}
+  \caption{Classification of one-channel zeros of $F_l(k)$ for a real
+  short-range potential.  Threshold zeros at $k=0$ require a separate
+  analysis.}
+  \label{tab:jost-zero-classification}
+\end{table}
+
+The outgoing radial Green function makes the relation between a Jost zero and
+a resolvent pole explicit.  With $r_<:=\min(r,r')$ and
+$r_>:=\max(r,r')$, its kernel can be written
+\begin{equation}
+  G_l^{(+)}(k;r,r')
+  =-\frac{2\mu}{\hbar^2}
+  \frac{\varphi_l(k,r_<)f_l(k,r_>)}{F_l(k)} .
+  \label{eq:radial-green-jost}
+\end{equation}
+The coefficient follows by integrating the Green equation across $r=r'$ and
+using the Wronskian.  If $F_l(k_n)=0$ and $F_l'(k_n)\ne0$, then
+\begin{equation}
+  \Res_{k=k_n}G_l^{(+)}(k;r,r')
+  =-\frac{2\mu}{\hbar^2}
+  \frac{\varphi_l(k_n,r_<)f_l(k_n,r_>)}{F_l'(k_n)} .
+  \label{eq:radial-green-residue}
+\end{equation}
+At the zero, $\varphi_l(k_n,r)$ is proportional to $f_l(k_n,r)$, so the
+residue factorizes into a right--left dyad.  Passing from a $k$-plane residue
+to an energy-plane residue introduces
+\begin{equation}
+  \frac{\rmd E}{\rmd k}=\frac{\hbar^2k}{\mu} .
+  \label{eq:k-to-energy-residue}
+\end{equation}
+The derivative $F_l'(k_n)$ therefore fixes the pole normalization.  In
+Section~\ref{sec:rigged-hilbert} the same normalization is recovered from the
+Zel'dovich bilinear integral; the equivalence is a residue identity, not an
+accidental agreement of two prescriptions.
+
+The Jost function can also be computed without matching a rapidly growing
+solution at a distant boundary.  Write the regular solution as a running
+linear combination of incoming and outgoing reference solutions and impose a
+variation-of-constants condition that removes second derivatives of the
+running coefficients.  The radial Schrodinger equation then becomes a pair
+of first-order equations for those coefficients.  Their asymptotic limits are
+$F_l(k)$ and $F_l(-k)$.  This formulation extends directly to Jost matrices,
+complex angular momentum, Coulomb-modified reference functions, and complex
+$k$; it is particularly useful for locating poles numerically
+\cite{Rakityansky:2022Jost}.
+
+Near an isolated one-channel pole, unitarity on the real axis and real
+analyticity imply the factorization
+\begin{equation}
+  S(E)=\rme^{2\rmi\vsub{\delta}{bg}(E)}
+  \frac{E-\vsub{z}{R}^*}{E-\vsub{z}{R}}
+  \vsub{S}{slow}(E) .
+  \label{eq:S-pole-factorization}
+\end{equation}
+The background phase $\vsub{\delta}{bg}$ and the factor
+$\vsub{S}{slow}$ vary slowly only when the pole is well isolated from
+thresholds and other singularities.  Under that approximation, a cross
+section contains the Breit--Wigner denominator
+\begin{equation}
+  \left|E-\vsub{z}{R}\right|^2
+  =(E-E_*)^2+\frac{\Gamma^2}{4} .
+  \label{eq:breit-wigner-denominator}
+\end{equation}
+The residue is as important as the pole position.  It controls excitation
+strength, channel branching, and whether interference makes a peak, a dip, or
+an asymmetric Fano profile.  In black-hole language the analogous quantities
+are excitation factors and residues of the retarded Green function
+\cite{Andersson:1995zk,Oshita:2024wgt,Kubota:2025hjk}.
+
+\subsection{Phase shift and time delay}
+\label{subsec:time-delay}
+% BEGIN CURATED SUBJECT INDEX
+\index{phase shift}
+\index{Wigner time delay}
+\index{scattering!multichannel}
+% END CURATED SUBJECT INDEX
+
+For one elastic channel, write $S(E)=\rme^{2\rmi\delta(E)}$, where
+$\delta(E)$ is the scattering phase shift.  The Wigner--Smith time delay is
+\begin{equation}
+  \vsub{\tau}{W}(E)
+  =2\hbar\frac{\rmd\delta(E)}{\rmd E} .
+  \label{eq:wigner-delay}
+\end{equation}
+For a unitary multichannel matrix $S(E)$, the corresponding Hermitian matrix is
+\begin{equation}
+  Q(E)=-\rmi\hbar S^{\dagger}(E)
+  \frac{\rmd S(E)}{\rmd E} .
+  \label{eq:smith-matrix}
+\end{equation}
+A narrow isolated resonance contributes a positive Lorentzian to
+$\tr Q(E)$, but time delay is not a universal resonance criterion.  Repulsive
+backgrounds can yield negative delays, thresholds create non-Lorentzian
+singularities, and an exceptionally broad pole may leave no identifiable
+maximum.  Pole continuation remains the invariant definition.
+
+\subsection{From poles to time evolution}
+\label{subsec:poles-time}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{wave packet}
+\index{Riemann sheet}
+\index{complex scaling}
+% END CURATED SUBJECT INDEX
+
+Let $\ket{\chi}$ be a normalized wave packet localized in the interaction
+region.  For $t>0$, its survival amplitude can be written as an inverse
+Laplace transform of the resolvent:
+\begin{equation}
+  A_{\chi}(t)
+  =\bra{\chi}\rme^{-\rmi Ht/\hbar}\ket{\chi}
+  =\frac{1}{2\pi\rmi}
+  \int_{\mathcal C}\rmd z\,
+  \rme^{-\rmi zt/\hbar}
+  \bra{\chi}\Resolvent(z)\ket{\chi} .
+  \label{eq:inverse-laplace}
+\end{equation}
+The contour $\mathcal C$ runs above the spectrum before deformation.  Moving
+it onto a nonphysical sheet produces pole terms plus integrals along deformed
+cuts.  A simple pole gives Eq.~\eqref{eq:intro-decay}; a threshold at
+$E=\vsub{E}{th}$ gives a power-law contribution whose exponent depends on
+the threshold density of states.  Thus an operational decomposition is
+\begin{equation}
+  A_{\chi}(t)
+  =\vsub{A}{pole}(t)
+  +\vsub{A}{cut}(t)
+  +\vsub{A}{arc}(t) .
+  \label{eq:time-decomposition}
+\end{equation}
+The arc term depends on the large-energy deformation and is relevant to the
+  short-time expansion.  This contour picture anticipates complex scaling: the
+  rotated continuum is the spectral representation of the deformed cut, rather
+  than numerical debris to be discarded.

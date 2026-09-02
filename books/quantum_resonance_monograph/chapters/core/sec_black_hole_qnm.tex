@@ -1,0 +1,518 @@
+\section{Derive black-hole master equations and their connection data}
+\label{sec:black-hole-qnm}
+% BEGIN CURATED SUBJECT INDEX
+\index{radial equation}
+\index{quasinormal mode}
+\index{Regge--Wheeler equation}
+\index{Zerilli equation}
+\index{horizon boundary condition}
+% END CURATED SUBJECT INDEX
+
+\calculationroute
+  {Linearized field equations, spherical harmonics, and the resonance boundary
+  condition of Stage I.}
+  {Derive the Regge--Wheeler/Zerilli-type radial equation and identify its
+  horizon and asymptotic WKB branches.}
+  {Write the QNM condition as the vanishing of a prohibited horizon or
+  infinity coefficient before choosing a numerical representation.}
+
+\subsection{Master equation and boundary conditions}
+\label{subsec:bh-master}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{Gamow--Siegert state}
+\index{quasinormal mode}
+\index{tortoise coordinate}
+\index{horizon boundary condition}
+% END CURATED SUBJECT INDEX
+
+Consider a static, spherically symmetric metric
+\begin{equation}
+  \rmd s^2
+  =-f(r)\rmd t^2+\frac{\rmd r^2}{f(r)}
+  +r^2\rmd\Omega_2^2 ,
+  \label{eq:static-spherical-metric}
+\end{equation}
+where $\rmd\Omega_2^2$ is the line element on the unit two-sphere.  Introduce
+the tortoise coordinate $r_*$ by
+\begin{equation}
+  \frac{\rmd r_*}{\rmd r}=\frac{1}{f(r)} .
+  \label{eq:tortoise-definition}
+\end{equation}
+After separation into angular harmonics and time dependence
+$\rme^{-\rmi\omega t}$, many perturbation sectors reduce to
+\begin{equation}
+  \left[-\frac{\rmd^2}{\rmd r_*^2}
+  +V_{sl}(r)\right]\psi_{sl}(r_*)
+  =\omega^2\psi_{sl}(r_*) .
+  \label{eq:bh-master}
+\end{equation}
+Here $s$ labels the field or perturbation sector, $l$ is the angular harmonic
+number, and $V_{sl}$ is an effective potential.  Equation~\eqref{eq:bh-master}
+is a one-dimensional scattering problem with spectral energy
+\begin{equation}
+  E=\omega^2 .
+  \label{eq:bh-energy}
+\end{equation}
+
+For an asymptotically flat black hole, the event horizon is at
+$r_*\to-\infty$ and spatial infinity is at $r_*\to+\infty$.  A quasinormal
+mode satisfies
+\begin{align}
+  \psi_{sl}(r_*)&\sim\rme^{-\rmi\omega r_*},
+  &&r_*\to-\infty,
+  \notag\\
+  \psi_{sl}(r_*)&\sim\rme^{+\rmi\omega r_*},
+  &&r_*\to+\infty .
+  \label{eq:qnm-boundary-flat}
+\end{align}
+The first wave is ingoing through the future event horizon; the second is
+outgoing toward infinity.  Relative to the potential barrier, both carry flux
+away from the interaction region.  With the chosen time convention, a stable
+mode has $\im\omega<0$.  Consequently the radial function grows at both ends
+of the real $r_*$ line, exactly like a Gamow--Siegert state.
+
+This identifies a black-hole quasinormal mode with a resonance pole of the
+continued retarded Green function.  The definition does not depend on a
+particular numerical method
+\cite{Kokkotas:1999bd,Berti:2009kk,Hatsuda:2021gtn}.
+
+\subsection{Derivation of the Regge--Wheeler equation}
+\label{subsec:regge-wheeler-derivation}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{Regge--Wheeler equation}
+\index{Schwarzschild black hole}
+% END CURATED SUBJECT INDEX
+
+We now derive the axial gravitational master equation rather than simply
+quoting its potential.  The derivation also explains why a four-dimensional
+gauge theory of metric perturbations reduces to a one-dimensional
+Schrodinger problem.  We use the gauge-invariant $2+2$ formulation of
+Refs.~\cite{Regge:1957td,Moncrief:1974am,Martel:2005ir,Nagar:2005ea}.
+
+Write the Schwarzschild geometry as a warped product
+\begin{equation}
+  \rmd s^2=g_{ab}(x)\rmd x^a\rmd x^b
+  +r^2(x)\Omega_{AB}\rmd\theta^A\rmd\theta^B,
+  \label{eq:schwarzschild-warped-product}
+\end{equation}
+where $x^a=(t,r)$,
+\begin{equation}
+  g_{ab}\rmd x^a\rmd x^b
+  =-f(r)\rmd t^2+f(r)^{-1}\rmd r^2,
+  \qquad f(r)=1-\frac{2M}{r},
+  \label{eq:schwarzschild-2metric}
+\end{equation}
+and $\Omega_{AB}$ is the metric of the unit two-sphere.  Lower-case Latin
+indices refer to the Lorentzian orbit space $\mathcal M^2$, upper-case Latin
+indices to $S^2$, and Greek indices to the full spacetime.  Let $\nabla_a$
+and $D_A$ be the corresponding covariant derivatives, and let
+$\varepsilon_{AB}$ be the volume form on $S^2$.
+
+Scalar harmonics obey
+\begin{equation}
+  D^AD_AY_{lm}=-l(l+1)Y_{lm} .
+  \label{eq:spherical-harmonic-eigenvalue}
+\end{equation}
+From them construct the odd-parity vector and tensor harmonics
+\begin{align}
+  X_A^{lm}&=-\varepsilon_A{}^B D_BY_{lm},
+  \label{eq:odd-vector-harmonic}\\
+  X_{AB}^{lm}
+  &=-\frac{1}{2}
+  \left(\varepsilon_A{}^C D_B+\varepsilon_B{}^C D_A\right)
+  D_CY_{lm} .
+  \label{eq:odd-tensor-harmonic}
+\end{align}
+Writing $L=l(l+1)$ and $\lambda=L-2=(l-1)(l+2)$, the identities needed in
+the projection are
+\begin{align}
+  D^AX_A^{lm}&=0,
+  &D^BD_BX_A^{lm}&=(1-L)X_A^{lm},
+  \label{eq:odd-vector-identities}\\
+  X_{AB}^{lm}&=D_{(A}X_{B)}^{lm},
+  &D^BX_{AB}^{lm}&=-\frac{\lambda}{2}X_A^{lm}.
+  \label{eq:odd-tensor-identities}
+\end{align}
+With unit-normalized scalar harmonics their norms are
+\begin{align}
+  \int_{S^2}\overline{X_A^{lm}}X^{A,l'm'}\dd\Omega
+  &=L\,\delta_{ll'}\delta_{mm'},
+  \label{eq:odd-vector-norm}\\
+  \int_{S^2}\overline{X_{AB}^{lm}}X^{AB,l'm'}\dd\Omega
+  &=\frac{L\lambda}{2}\,\delta_{ll'}\delta_{mm'}.
+  \label{eq:odd-tensor-norm}
+\end{align}
+The factor $\lambda$ explains both why the tensor harmonic vanishes for
+$l=1$ and why the radiative master variable is defined only for $l\geq2$.
+Under the parity map $(\vartheta,\varphi)\mapsto(\pi-\vartheta,
+\varphi+\pi)$, these harmonics transform with parity $(-1)^{l+1}$.
+Orthogonality of spherical harmonics ensures that different $(l,m)$ sectors
+decouple at linear order.
+
+For a fixed $l,m$, the most general odd-parity metric perturbation is
+\begin{align}
+  \vsup{\delta g_{ab}}{odd}&=0,
+  \notag\\
+  \vsup{\delta g_{aB}}{odd}&=h_a(t,r)X_B^{lm},
+  \notag\\
+  \vsup{\delta g_{AB}}{odd}&=h_2(t,r)X_{AB}^{lm} .
+  \label{eq:odd-metric-decomposition}
+\end{align}
+In Schwarzschild coordinates $h_t=h_0$ and $h_r=h_1$ in the original
+Regge--Wheeler notation.  There is no odd $l=0$ harmonic.  The $l=1$ vacuum
+sector changes the angular momentum of the background and is not radiative;
+the wave equation below concerns $l\geq2$.
+
+An infinitesimal odd gauge transformation is generated by
+$\xi_A=\xi(t,r)X_A^{lm}$ and gives
+\begin{align}
+  h_a&\longmapsto h_a-\nabla_a\xi+\frac{2}{r}r_a\xi,
+  \label{eq:odd-gauge-ha}\\
+  h_2&\longmapsto h_2-2\xi,
+  \label{eq:odd-gauge-h2}
+\end{align}
+where $r_a:=\nabla_a r$.  The combination
+\begin{equation}
+  \widetilde h_a
+  =h_a-\frac{1}{2}\nabla_a h_2+\frac{1}{r}r_a h_2
+  \label{eq:odd-gauge-invariant-ha}
+\end{equation}
+is gauge invariant.  Choosing $\xi=h_2/2$ sets $h_2=0$; this is the
+Regge--Wheeler gauge, in which $\widetilde h_a=h_a$.  The gauge choice is a
+convenience, while Eq.~\eqref{eq:odd-gauge-invariant-ha} shows that the final
+master field is not a gauge artifact.
+
+The linearized vacuum equation is $\delta G_{\mu\nu}=0$.  Since the
+Schwarzschild background is Ricci flat, one may begin from
+\begin{equation}
+  \delta R_{\mu\nu}
+  =\frac{1}{2}\left(
+  \nabla^\rho\nabla_\mu h_{\nu\rho}
+  +\nabla^\rho\nabla_\nu h_{\mu\rho}
+  -\nabla^\rho\nabla_\rho h_{\mu\nu}
+  -\nabla_\mu\nabla_\nu h
+  \right),
+  \label{eq:linearized-ricci}
+\end{equation}
+where $h=g^{\mu\nu}h_{\mu\nu}$.  Substitute
+Eq.~\eqref{eq:odd-metric-decomposition}, use
+Eq.~\eqref{eq:spherical-harmonic-eigenvalue}, and project onto
+$X_A^{lm}$ and $X_{AB}^{lm}$.  The independent gauge-invariant equations can
+be written
+\begin{align}
+  0=P_a={}&-\Box_2\widetilde h_a
+  +\nabla_a\nabla_b\widetilde h^b
+  +\frac{2}{r}\left(
+  r_b\nabla_a\widetilde h^b-r_a\nabla_b\widetilde h^b\right)
+  \notag\\
+  &-\frac{2}{r^2}r_ar_b\widetilde h^b
+  +\frac{l(l+1)}{r^2}\widetilde h_a,
+  \label{eq:odd-projected-Pa}\\
+  0=P={}&\nabla_a\widetilde h^a,
+  \label{eq:odd-projected-P}
+\end{align}
+where $\Box_2=g^{ab}\nabla_a\nabla_b$.  The remaining projected equation
+follows from these through the linearized Bianchi identity.  Equations
+\eqref{eq:odd-projected-Pa} and \eqref{eq:odd-projected-P} display the two
+operations hidden when the Regge--Wheeler potential is merely quoted:
+angular derivatives produce $l(l+1)/r^2$, while the warped-sphere curvature
+and radial derivatives produce the $M/r^3$ term.
+
+\subsubsection*{The component equations and their elimination}
+% BEGIN CURATED SUBJECT INDEX
+\index{quasinormal mode}
+\index{Regge--Wheeler equation}
+\index{Schwarzschild black hole}
+\index{Kerr black hole}
+% END CURATED SUBJECT INDEX
+
+The covariant equations can be checked without suppressing the intermediate
+calculation.  In Regge--Wheeler gauge write
+\begin{equation}
+  \widetilde h_a\rmd x^a=h_0(t,r)\rmd t+h_1(t,r)\rmd r .
+  \label{eq:rw-gauge-component-one-form}
+\end{equation}
+Because the determinant of the orbit-space metric is $-1$,
+Eq.~\eqref{eq:odd-projected-P} becomes
+\begin{equation}
+  -\frac{1}{f}\partial_t h_0
+  +\partial_r(fh_1)=0.
+  \label{eq:rw-component-constraint}
+\end{equation}
+Direct evaluation of $P_t=0$ and $P_r=0$ gives
+\begin{align}
+  0={}&f\left(
+  -\partial_r^2h_0+\partial_t\partial_rh_1
+  +\frac{2}{r}\partial_th_1\right)
+  +\left(\frac{L}{r^2}-\frac{4M}{r^3}\right)h_0,
+  \label{eq:rw-component-Pt}\\
+  0={}&\frac{1}{f}\left(
+  \partial_t^2h_1-\partial_t\partial_rh_0
+  +\frac{2}{r}\partial_th_0\right)
+  +\frac{\lambda}{r^2}h_1.
+  \label{eq:rw-component-Pr}
+\end{align}
+Only two of Eqs.~\eqref{eq:rw-component-constraint}--
+\eqref{eq:rw-component-Pr} are independent.  Substitution into the
+linearized Bianchi identity
+\begin{equation}
+  \nabla_aP^a+\frac{2}{r}r_aP^a
+  -\frac{\lambda}{r^2}P=0
+  \label{eq:odd-bianchi-component}
+\end{equation}
+shows which equation is propagated by the other two.
+
+Now define the original Regge--Wheeler variable
+\begin{equation}
+  Q(t,r)=\frac{f(r)}{r}h_1(t,r).
+  \label{eq:rw-Q-component-definition}
+\end{equation}
+The constraint reconstructs the nondynamical component:
+\begin{equation}
+  \partial_th_0=f\partial_r(rQ).
+  \label{eq:rw-h0-reconstruction-time}
+\end{equation}
+Insert $h_1=rQ/f$ and Eq.~\eqref{eq:rw-h0-reconstruction-time} into
+Eq.~\eqref{eq:rw-component-Pr}.  Before simplification one obtains
+\begin{equation}
+  \frac{r}{f}\partial_t^2Q
+  -\partial_r\!\left[f(Q+r\partial_rQ)\right]
+  +\frac{2f}{r}(Q+r\partial_rQ)
+  +\frac{\lambda}{r}Q=0.
+  \label{eq:rw-elimination-intermediate}
+\end{equation}
+Using $f'=2M/r^2$ and $\partial_{r_*}=f\partial_r$, this is exactly
+\begin{equation}
+  \left[-\partial_t^2+\partial_{r_*}^2
+  -f\left(\frac{L}{r^2}-\frac{6M}{r^3}\right)\right]Q=0.
+  \label{eq:rw-component-eliminated}
+\end{equation}
+For a nonzero Fourier frequency,
+Eq.~\eqref{eq:rw-h0-reconstruction-time} also gives the explicit recovery
+formula
+\begin{equation}
+  h_0(r)=\frac{\rmi f(r)}{\omega}
+  \frac{\rmd}{\rmd r}[rQ(r)]
+  \qquad
+  \text{for time dependence }\rme^{-\rmi\omega t}.
+  \label{eq:rw-h0-frequency-reconstruction}
+\end{equation}
+The static sector must be treated before division by $\omega$; for $l=1$ it
+contains the infinitesimal Kerr perturbation rather than radiation.
+
+The Cunningham--Price--Moncrief master scalar is
+\begin{equation}
+  \vsub{\Psi}{odd}
+  =\frac{2r}{\lambda}\varepsilon^{ab}
+  \left(\nabla_a\widetilde h_b
+  -\frac{2}{r}r_a\widetilde h_b\right),
+  \label{eq:cpm-master-variable}
+\end{equation}
+where $\varepsilon^{ab}$ is the volume form on $\mathcal M^2$.  The
+coordinate-free version of the component elimination applies
+$\varepsilon^{ab}\nabla_a$ to Eq.~\eqref{eq:odd-projected-Pa}, uses
+Eq.~\eqref{eq:odd-projected-P}, and uses the Schwarzschild background
+identities
+\begin{equation}
+  \nabla_a\nabla_b r=\frac{M}{r^2}g_{ab},
+  \qquad
+  r_ar^a=f(r) .
+  \label{eq:schwarzschild-orbit-identities}
+\end{equation}
+Collecting the terms gives the explicit identity
+\begin{equation}
+  \varepsilon^{ab}\nabla_aP_b
+  =-\frac{\lambda}{2r}
+  \left[\Box_2-\frac{L}{r^2}+\frac{6M}{r^3}\right]
+  \vsub{\Psi}{odd}.
+  \label{eq:rw-curl-projected-identity}
+\end{equation}
+Thus $P_a=0$ gives the covariant Regge--Wheeler equation
+\begin{equation}
+  \left[\Box_2-\frac{l(l+1)}{r^2}
+  +\frac{6M}{r^3}\right]\vsub{\Psi}{odd}=0 .
+  \label{eq:rw-covariant}
+\end{equation}
+
+For a scalar on the orbit space,
+\begin{equation}
+  \Box_2\Psi
+  =-\frac{1}{f}\partial_t^2\Psi
+  +\partial_r\left(f\partial_r\Psi\right) .
+  \label{eq:orbit-box-schwarzschild}
+\end{equation}
+Multiplying Eq.~\eqref{eq:rw-covariant} by $f$ and using
+$\partial_{r_*}=f\partial_r$ gives
+\begin{equation}
+  \left[-\partial_t^2+\partial_{r_*}^2
+  -\vsup{V_l}{RW}(r)\right]\vsub{\Psi}{odd}=0,
+  \label{eq:rw-time-domain}
+\end{equation}
+with
+\begin{equation}
+  \vsup{V_l}{RW}(r)
+  =f(r)\left[\frac{l(l+1)}{r^2}-\frac{6M}{r^3}\right] .
+  \label{eq:rw-potential-derived}
+\end{equation}
+Finally, $\vsub{\Psi}{odd}(t,r)=\rme^{-\rmi\omega t}\psi_l(r)$
+turns Eq.~\eqref{eq:rw-time-domain} into
+\begin{equation}
+  \left[-\frac{\rmd^2}{\rmd r_*^2}
+  +\vsup{V_l}{RW}(r)\right]\psi_l
+  =\omega^2\psi_l .
+  \label{eq:rw-frequency-derived}
+\end{equation}
+The familiar one-dimensional resonance equation is therefore the gauge-
+invariant curl of the projected linearized Einstein equations.  The original
+Regge--Wheeler master function
+\begin{equation}
+  \vsub{\Psi}{RW}
+  =\frac{1}{r}r^a\widetilde h_a
+  =\frac{f(r)}{r}h_1
+  \label{eq:original-rw-master}
+\end{equation}
+in Regge--Wheeler gauge satisfies the same vacuum equation and is related to
+a time derivative of $\vsub{\Psi}{odd}$.  Different normalizations of the
+master variable therefore produce the same potential and QNM spectrum.
+
+\subsection{Schwarzschild potentials}
+\label{subsec:schwarzschild-potentials}
+% BEGIN CURATED SUBJECT INDEX
+\index{branch cut}
+\index{quasinormal mode}
+\index{Regge--Wheeler equation}
+\index{Zerilli equation}
+\index{tortoise coordinate}
+\index{horizon boundary condition}
+\index{Schwarzschild black hole}
+% END CURATED SUBJECT INDEX
+
+For a Schwarzschild black hole of mass $M>0$,
+\begin{equation}
+  f(r)=1-\frac{2M}{r},
+  \qquad
+  r_*=r+2M\log\left(\frac{r}{2M}-1\right) .
+  \label{eq:schwarzschild-tortoise}
+\end{equation}
+For a scalar field $(s=0)$, electromagnetic axial perturbation $(s=1)$, and
+gravitational axial perturbation $(s=2)$, a compact Regge--Wheeler-type
+potential is
+\begin{equation}
+  \vsup{V_{sl}}{RW}(r)
+  =f(r)\left[
+  \frac{l(l+1)}{r^2}
+  +\frac{2M(1-s^2)}{r^3}
+  \right] .
+  \label{eq:regge-wheeler-family}
+\end{equation}
+For $s=2$, this is the Regge--Wheeler potential
+\cite{Regge:1957td}.  Even-parity gravitational perturbations obey the Zerilli
+equation.  With
+\begin{equation}
+  \Lambda_l=\frac{(l-1)(l+2)}{2},
+  \label{eq:zerilli-lambda}
+\end{equation}
+the Zerilli potential is
+\begin{equation}
+  V_l^{\mathrm Z}(r)
+  =f(r)
+  \frac{
+  2\Lambda_l^2(\Lambda_l+1)r^3
+  +6\Lambda_l^2Mr^2
+  +18\Lambda_lM^2r
+  +18M^3}
+  {r^3(\Lambda_lr+3M)^2} .
+  \label{eq:zerilli-potential}
+\end{equation}
+The axial and polar gravitational spectra are isospectral under the standard
+boundary conditions, although their wave functions and source couplings
+differ
+\cite{Zerilli:1970wzz,Chandrasekhar:book}.
+
+The potentials vanish exponentially at the horizon but only as inverse powers
+at spatial infinity.  The long-range tail produces a branch cut in the
+frequency-domain Green function and a late-time power-law tail.  A pure sum of
+QNMs is therefore not a globally complete time-domain expansion for
+asymptotically flat geometry
+\cite{Leaver:1986gd,Ching:1994bd,Casals:2013mpa}.
+
+\subsection{Reissner--Nordstr\"om backgrounds}
+\label{subsec:rn-potentials}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{exact WKB}
+\index{complex scaling}
+\index{tortoise coordinate}
+\index{horizon boundary condition}
+\index{Reissner--Nordstr\"om black hole}
+% END CURATED SUBJECT INDEX
+
+For electric charge $Q_{\mathrm e}$,
+\begin{equation}
+  f(r)=1-\frac{2M}{r}+\frac{Q_{\mathrm e}^2}{r^2},
+  \qquad
+  r_{\pm}=M\pm\sqrt{M^2-Q_{\mathrm e}^2} .
+  \label{eq:rn-metric-function}
+\end{equation}
+The radii $r_+$ and $r_-$ are the outer and inner horizons when
+$|Q_{\mathrm e}|<M$.  Electromagnetic and gravitational perturbations couple,
+but gauge-invariant combinations reduce the problem to two decoupled master
+equations of the form~\eqref{eq:bh-master}.  Their effective potentials can be
+written schematically as the eigenvalues of a $2\times2$ potential matrix
+\begin{equation}
+  \bm V_l(r)
+  =\begin{pmatrix}
+  \vsup{V_l}{em}(r)&\vsup{V_l}{mix}(r)\\
+  \vsup{V_l}{mix}(r)&\vsup{V_l}{grav}(r)
+  \end{pmatrix} .
+  \label{eq:rn-potential-matrix}
+\end{equation}
+The diagonalizing combinations and parity relations are described by
+Moncrief and Chandrasekhar
+\cite{Moncrief:1974gw,Moncrief:1974ng,Chandrasekhar:book}.
+
+At extremality, $|Q_{\mathrm e}|=M$ and
+\begin{equation}
+  f(r)=\left(1-\frac{M}{r}\right)^2 .
+  \label{eq:extremal-rn-f}
+\end{equation}
+The horizon is a double zero of $f$, so the tortoise coordinate has a pole as
+well as a logarithm.  Near-horizon asymptotics and analytic continuation are
+qualitatively different from the nonextremal case.  This makes extremal
+Reissner--Nordstr\"om a stringent test of both complex scaling and exact WKB
+\cite{Onozawa:1995vu,Ogawa:2026veu,HatsudaShiga:2026}.
+
+\subsection{Green functions, poles, cuts, and excitation}
+\label{subsec:bh-green-function}
+% BEGIN CURATED SUBJECT INDEX
+\index{Wronskian}
+\index{resonance!residue}
+\index{quasinormal mode}
+\index{horizon boundary condition}
+% END CURATED SUBJECT INDEX
+
+Let $\vsub{\psi}{in}(\omega,r_*)$ satisfy the horizon condition and
+$\vsub{\psi}{up}(\omega,r_*)$ satisfy the infinity condition.  The radial
+retarded Green function is
+\begin{equation}
+  \vsub{G}{ret}(\omega;r_*,r_*')
+  =\frac{
+  \vsub{\psi}{in}(\omega,r_<)
+  \vsub{\psi}{up}(\omega,r_>)}
+  {W(\omega)} ,
+  \label{eq:bh-green-function}
+\end{equation}
+where $r_<=\min(r_*,r_*')$, $r_>=\max(r_*,r_*')$, and $W(\omega)$ is the
+Wronskian.  A QNM is a zero of $W(\omega)$, hence a pole of
+$\vsub{G}{ret}$.  The pole residue depends on the derivative
+$W'(\omega_n)$ and on the source and observation points.
+
+After inverse Fourier transformation, the response separates schematically
+into a prompt part, a sum over QNM poles, and branch-cut integrals.  The onset
+time and practical number of modes depend on the source, observer, and
+analytic contour.  This is why identifying accurate frequencies is necessary
+but not sufficient for ringdown reconstruction
+\cite{Baibhav:2023clw,Cheung:2023vki,Mitman:2025hgy,
+Oshita:2025ibu}.

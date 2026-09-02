@@ -1,0 +1,230 @@
+\section{The exact-WKB thesis and the computational spine}
+\label{sec:computational-spine}
+% BEGIN CURATED SUBJECT INDEX
+\index{Wronskian}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{Borel summation}
+\index{Stokes automorphism}
+\index{Riccati equation}
+\index{exact WKB}
+\index{monodromy}
+\index{exceptional point}
+% END CURATED SUBJECT INDEX
+
+The organization of this book follows a claim that is stronger than the
+statement that exact WKB is useful for finding resonance energies.  The claim
+is that a resonance problem is most economically organized around its
+\textit{global analytic connection datum}.  The wave function is first known
+only through local asymptotic representations.  Exact WKB tells us how to
+construct these representations and how they jump; scattering theory tells
+us which global coefficient is physically the incoming amplitude; complex
+scaling and rigged spaces tell us how the resulting pole functional may be
+represented.  This order prevents a useful representation from being
+mistaken for the definition of the resonance.
+
+For a second-order equation
+\begin{equation}
+  \left[-\hbar^2\frac{\rmd^2}{\rmd x^2}+Q(x,E)\right]\psi(x,E)=0,
+  \label{eq:spine-equation}
+\end{equation}
+the calculation begins with the spectral curve
+\begin{equation}
+  y^2=Q(x,E).
+  \label{eq:spine-spectral-curve}
+\end{equation}
+The two sheets of $y=\sqrt{Q}$ label the leading WKB branches.  The Riccati
+recursion promotes them to formal all-order solutions, Borel summation gives
+sectorial analytic functions, and Stokes automorphisms relate neighboring
+sectors.  After transporting a basis from one asymptotic region to another,
+one obtains a connection matrix
+\begin{equation}
+  \bm{\vsub{a}{R}}(E)
+  =\mathcal M(E)\bm{\vsub{a}{L}}(E),
+  \qquad
+  \mathcal M(E)=\mathcal S_N(E)\cdots\mathcal S_2(E)\mathcal S_1(E),
+  \label{eq:spine-global-connection}
+\end{equation}
+where each $\mathcal S_j$ is a local Stokes, branch-cut, or propagation
+matrix.  Wronskian preservation constrains $\det\mathcal M$ and supplies an
+immediate error check.
+
+The boundary condition selects a scalar minor or matrix block of
+$\mathcal M$.  We denote the coefficient multiplying the prohibited incoming
+component by $\Cincoming(E)$.  The resonance condition is
+\begin{equation}
+  \Cincoming(\resonantE)=0,
+  \qquad
+  \resonantE=E_*-\frac{\rmi}{2}\Gamma .
+  \label{eq:spine-resonance-condition}
+\end{equation}
+For a simple zero, a scattering amplitude has the local form
+\begin{equation}
+  S(E)=\frac{\mathcal N(E)}{\Cincoming(E)},
+  \qquad
+  \Res_{E=\resonantE}S(E)
+  =\frac{\mathcal N(\resonantE)}
+  {\partial_E\Cincoming(\resonantE)}.
+  \label{eq:spine-residue}
+\end{equation}
+Thus the pole, decay width, and residue are successive pieces of information
+in one calculation.  A multiple zero anticipates an exceptional point.  A
+branch point in $E$ anticipates a threshold.  A singular endpoint changes
+the monodromy entering $\mathcal M$.  These are not separate subjects added
+to resonance theory; they are different failures of the simplest connection
+problem and therefore have a common diagnostic language.
+
+\subsection{What is novel in this ordering}
+\label{subsec:novel-ordering}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{Gamow--Siegert state}
+\index{exact WKB}
+\index{monodromy}
+\index{Zel'dovich regularization}
+\index{continuum level density}
+\index{exceptional point}
+\index{holonomy}
+\index{quasinormal mode}
+% END CURATED SUBJECT INDEX
+
+The exact-WKB viewpoint produces five conceptual shifts that guide the rest
+of the book.
+
+\begin{enumerate}
+  \item \textbf{The pole condition precedes the pole state.}
+  A Gamow--Siegert function grows on the real axis, but the vanishing incoming
+  coefficient is already well defined by analytic continuation.  One should
+  therefore establish Eq.~\eqref{eq:spine-resonance-condition} before asking
+  in which space the associated state lives.
+
+  \item \textbf{Regularizations are representations of one analytic
+  continuation.}
+  Zel'dovich damping, contour rotation, and a rigged-space pairing appear
+  different when applied directly to a divergent wave function.  Exact WKB
+  shows what they must preserve: the same continued branch, connection
+  coefficient, and residue.  Their equivalence is consequently tested by
+  analytic deformation invariance rather than by a formal equality of
+  divergent integrals.
+
+  \item \textbf{The continuum and the resonance belong to the same global
+  problem.}
+  The continuum is not a disposable background left after a pole has been
+  isolated.  It supplies the boundary values, cuts, Stokes sectors, and
+  completeness contour from which the pole is continued.  This is why
+  continuum level density and pole residue are natural observables alongside
+  the pole position.
+
+  \item \textbf{Monodromy supplies a renormalization condition.}
+  At a radial singularity or a continuum-normalized exceptional point, an
+  auxiliary regulator enters local normalization.  Requiring the global
+  monodromy or holonomy to be independent of that auxiliary choice produces
+  a renormalization-group-type condition.  The invariant is global even when
+  the counterterm is local.
+
+  \item \textbf{Black-hole QNMs are not an analogy but another connection
+  calculation.}
+  Ingoing and outgoing horizon conditions select the prohibited coefficient
+  exactly as in Eq.~\eqref{eq:spine-resonance-condition}.  The difference lies
+  in the singularities and asymptotic regions of the spectral curve, not in a
+  new definition of resonance.
+\end{enumerate}
+
+\subsection{The calculation cycle used in every laboratory}
+\label{subsec:calculation-cycle}
+% BEGIN CURATED SUBJECT INDEX
+\index{topology}
+\index{spectral measure}
+\index{resolvent}
+\index{Wronskian}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{branch cut}
+\index{resonance!residue}
+\index{scattering!Coulomb}
+\index{infrared problem}
+% END CURATED SUBJECT INDEX
+
+Each worked problem follows the same cycle.  The reader should use it as an
+algorithm rather than as a list of topics.
+
+\begin{enumerate}
+  \item Specify the differential operator, its domain before continuation,
+  the time convention, and every asymptotic channel.
+
+  \item Draw or determine the spectral curve, turning points, singular
+  points, branch cuts, and relevant Stokes graph.
+
+  \item Generate the Riccati coefficients and decide which formal quantities
+  require Borel summation or another resummation.
+
+  \item Choose normalized local bases and multiply the connection matrices in
+  path order.  Check the Wronskian or determinant after every multiplication.
+
+  \item Identify $\Cincoming(E)$ from the physical boundary
+  condition.  Locate its zeros on a declared sheet and Borel side.
+
+  \item Differentiate the connection datum to obtain residues or
+  normalization data, and retain the non-pole part when a response function
+  is required.
+
+  \item Only now choose a convenient realization: a complex-scaled $L^2$
+  eigenproblem, a Zel'dovich pairing, a rigged-space functional, a momentum
+  bin, or a direct-integral spectral density.
+
+  \item Vary the representation data---scaling angle, contour, basis size,
+  bin width, regulator, or resummation order---while holding the analytic
+  invariant fixed.  Stability is part of the identification of a resonance,
+  not a cosmetic numerical test.
+\end{enumerate}
+
+\begin{longtable}{@{}p{0.12\linewidth}p{0.33\linewidth}p{0.47\linewidth}@{}}
+\toprule
+stage & new input & calculational capability \\
+\midrule
+\endfirsthead
+\toprule
+stage & new input & calculational capability \\
+\midrule
+\endhead
+I-A & topology, domains, and spectral measures & distinguish norm, weak,
+strong, and resolvent limits and identify the continuum of a self-adjoint
+Hamiltonian \\
+\addlinespace
+I-B & multiplicity fibers, operator algebras, and compact kernels & pass
+between spectral direct integrals, commutants, Fredholm determinants, and
+controlled finite model spaces \\
+\addlinespace
+II & asymptotic channels, flux, and Jost data & construct the physical
+scattering operator and identify when Coulomb, many-charge, QED, or gauge
+sectors require a different asymptotic representation \\
+\addlinespace
+III & turning points and Stokes data & construct $\Cincoming$, find a
+resonance, and calculate its width and residue \\
+\addlinespace
+IV & analytic deformation and test-space topology & represent the same pole
+by continued resolvents, complex scaling, regularized norms, rigged-space
+functionals, and continuum response \\
+\addlinespace
+V & a regular singular endpoint & include Frobenius indices, the Langer term,
+and radial monodromy in exact quantization \\
+\addlinespace
+VI & few-body channels and model-space projections & derive CDCC and connect
+pseudostate convergence, complex-scaled smoothing, and nuclear observables \\
+\addlinespace
+VII & a multiple zero and a continuum partner & calculate Jordan data,
+self-orthogonality, sheet exchange, and regulator-independent holonomy \\
+\addlinespace
+VIII & horizons and tortoise coordinates & derive Regge--Wheeler-type master
+equations and calculate black-hole QNMs and continuum response \\
+\bottomrule
+\end{longtable}
+
+The short-range one-channel problem is the training ground, not the presumed
+universal asymptotic form.  Coulomb and QED examples later show that the first
+step of the cycle can itself fail: if the comparison dynamics or asymptotic
+representation is wrong, no refinement of the later pole calculation repairs
+it.  This is why long-range scattering and operator-algebraic sectors belong
+inside the computational spine of the theory.

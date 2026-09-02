@@ -1,0 +1,274 @@
+\section{Derive the Aguilar--Balslev--Combes mechanism step by step}
+\label{app:abc-sketch}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{spectrum!point}
+\index{resolvent}
+\index{resolvent set}
+\index{resonance!residue}
+\index{scattering!Coulomb}
+\index{Aguilar--Balslev--Combes theorem}
+% END CURATED SUBJECT INDEX
+
+This chapter supplies the functional-analytic chain behind the statement in
+Section~\ref{subsec:abc}.  We first state one precise one-threshold version;
+the following steps prove its mechanism.  Operator-domain and quadratic-form
+variants enlarge the admissible class of potentials
+\cite{Aguilar:1971ve,Balslev:1971vb,Simon1972BalslevCombes,Simon:73}.
+
+\begin{theorem}[Aguilar--Balslev--Combes, type-A one-threshold form]
+Let $H_0=-\hbar^2\Delta/(2\mu)$ on $L^2(\real^d)$ with domain $H^2(\real^d)$,
+and let $H=H_0+V$ be self-adjoint.  Suppose there is $\theta_0>0$ such that
+for $|\im s|<\theta_0$ the dilation
+$V_s=U(s)VU(-s)$ is analytic as an operator from $D(H_0)$ with its graph norm
+to $L^2$, and $V_s(H_0+1)^{-1}$ is compact locally uniformly in $s$.  Assume
+also that $H(s)=\rme^{-2s}H_0+V_s$ is a closed type-A family on the common
+domain $D(H_0)$.
+
+For $0<\theta<\theta_0$, put $H_\theta=H(\rmi\theta)$.  Then
+\begin{enumerate}[label=(\roman*)]
+  \item $\essspectrum(H_\theta)
+  =\rme^{-2\rmi\theta}[0,\infty)$;
+  \item the remaining spectrum away from this ray consists of isolated
+  eigenvalues of finite algebraic multiplicity;
+  \item matrix elements $\dualpair{\phi}{(z-H)^{-1}\psi}$ between
+  dilation-analytic vectors continue meromorphically from the physical
+  resolvent set into the wedge swept by the ray, and their nonzero-residue
+  poles coincide with the discrete eigenvalues of $H_\theta$ there; and
+  \item these eigenvalues and their algebraic multiplicities are independent
+  of $\theta$ while they remain in a common uncovered wedge.  Negative
+  isolated eigenvalues of $H$ remain unchanged.
+\end{enumerate}
+\label{thm:abc-type-A}
+\end{theorem}
+
+The assumptions are deliberately visible.  Coulomb tails, a potential that
+is not analytic in the swept coordinate sector, and threshold accumulation
+require modified theorems rather than an invocation of the displayed result.
+
+\subsection*{Step 1: real dilations and analytic vectors}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+% END CURATED SUBJECT INDEX
+
+For real $s$, the map
+\begin{equation}
+  [U(s)\psi](\bm x)=\rme^{ds/2}\psi(\rme^s\bm x)
+  \label{eq:abc-app-real-dilation}
+\end{equation}
+is unitary on $L^2(\real^d)$ and satisfies
+\begin{equation}
+  U(s)H_0U(-s)=\rme^{-2s}H_0 .
+  \label{eq:abc-app-free-scaling}
+\end{equation}
+The continuation $s\to\rmi\theta$ is not a bounded unitary operation on all
+of $L^2$.  One therefore chooses a dense set $\mathcal A$ of vectors for
+which $s\mapsto U(s)\phi$ is analytic in a strip.  Gaussian functions and
+finite linear combinations of oscillator eigenfunctions provide standard
+examples.  The vector set is used to continue matrix elements; the operator
+$H(\rmi\theta)$ is defined independently as a closed analytic-family member.
+
+Assume that $V_s=U(s)VU(-s)$ continues analytically and that
+\begin{equation}
+  V_s(H_0+1)^{-1}
+  \label{eq:abc-app-relative-compact}
+\end{equation}
+is compact, locally uniformly in the analytic strip.  A common-domain
+construction gives a type-A family
+\begin{equation}
+  H(s)=\rme^{-2s}H_0+V_s,
+  \qquad D(H(s))=D(H_0).
+  \label{eq:abc-app-type-A}
+\end{equation}
+Singular interactions are often better handled by analytic quadratic forms,
+which give a type-B family.  Subsequent resolvent arguments are structurally
+the same.
+
+\subsection*{Step 2: the rotated free spectrum}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{resolvent}
+\index{compact operator}
+\index{Fredholm theory}
+% END CURATED SUBJECT INDEX
+
+For $s=\rmi\theta$,
+\begin{equation}
+  H_{0,\theta}=\rme^{-2\rmi\theta}H_0 .
+  \label{eq:abc-app-free-Htheta}
+\end{equation}
+The spectrum of $H_0$ is $[0,\infty)$, so multiplication by the complex
+number $\rme^{-2\rmi\theta}$ gives
+\begin{equation}
+  \spectrum(H_{0,\theta})
+  =\rme^{-2\rmi\theta}[0,\infty) .
+  \label{eq:abc-app-free-spectrum}
+\end{equation}
+This is the elementary source of the angle $2\theta$: the coordinate scales
+as $\rme^{\rmi\theta}$, momentum as $\rme^{-\rmi\theta}$, and kinetic energy
+as the square of momentum.
+
+For $z$ off the free ray, the second resolvent identity in the convention
+$\Resolvent(z)=(z-H)^{-1}$ gives
+\begin{align}
+  &(z-H_\theta)^{-1}-(z-H_{0,\theta})^{-1}
+  \notag\\
+  &\qquad=(z-H_\theta)^{-1}V_\theta
+  (z-H_{0,\theta})^{-1} .
+  \label{eq:abc-app-resolvent-difference}
+\end{align}
+Under the relative-compactness hypothesis, the right-hand side is compact
+whenever both resolvents exist.  With the Fredholm definition of essential
+spectrum appropriate to a non-self-adjoint operator, compact resolvent
+perturbations do not change that spectrum.  Hence
+\begin{equation}
+  \essspectrum(H_\theta)
+  =\rme^{-2\rmi\theta}[0,\infty) .
+  \label{eq:abc-app-essential-spectrum}
+\end{equation}
+
+\subsection*{Step 3: analytic Fredholm theory}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{Fredholm theory}
+\index{Jordan chain}
+% END CURATED SUBJECT INDEX
+
+Away from the rotated ray, factor
+\begin{equation}
+  z-H_\theta
+  =\left[\identity-V_\theta(z-H_{0,\theta})^{-1}\right]
+  (z-H_{0,\theta}) .
+  \label{eq:abc-app-fredholm-factor}
+\end{equation}
+The operator
+\begin{equation}
+  K_\theta(z)=V_\theta(z-H_{0,\theta})^{-1}
+  \label{eq:abc-app-K}
+\end{equation}
+is compact and analytic in $z$.  For sufficiently negative real $z$, or at
+another point controlled by a resolvent estimate,
+$\identity-K_\theta(z)$ is invertible.  The analytic Fredholm theorem then
+states that
+\begin{equation}
+  [\identity-K_\theta(z)]^{-1}
+  \label{eq:abc-app-fredholm-inverse}
+\end{equation}
+is meromorphic away from the rotated ray.  Its singularities are isolated,
+and the principal parts have finite rank.  By
+Eq.~\eqref{eq:abc-app-fredholm-factor}, these singularities are precisely the
+discrete eigenvalues of $H_\theta$, counted with algebraic multiplicity.
+
+If $\gamma$ is a small contour around one such eigenvalue $z_n$, the Riesz
+projection is
+\begin{equation}
+  P_n(\theta)
+  =\frac{1}{2\pi\rmi}\oint_\gamma
+  (z-H_\theta)^{-1}\rmd z .
+  \label{eq:abc-app-riesz-projection}
+\end{equation}
+Its rank is the algebraic multiplicity.  This formulation includes
+nontrivial Jordan blocks; diagonalizability is not assumed.
+
+\subsection*{Step 4: continuation of physical resolvent matrix elements}
+% BEGIN CURATED SUBJECT INDEX
+\index{Hilbert space}
+\index{spectrum!point}
+\index{resolvent}
+\index{GNS construction}
+\index{resonance!residue}
+% END CURATED SUBJECT INDEX
+
+Let $H(s)=U(s)HU(-s)$ for real $s$.  Unitarity gives, for
+$\phi,\psi\in\mathcal A$,
+\begin{equation}
+  \bra{\phi}(z-H)^{-1}\ket{\psi}
+  =\bra{U(s)\phi}(z-H(s))^{-1}U(s)\ket{\psi} .
+  \label{eq:abc-real-identity}
+\end{equation}
+To continue this identity holomorphically, one must remember that the inner
+product is antilinear in its first argument.  The analytic expression is
+\begin{equation}
+  \Dualpair{U(\overline{s})\phi}
+  {(z-H(s))^{-1}U(s)\psi} .
+  \label{eq:abc-sesquilinear-analytic-expression}
+\end{equation}
+For $z$ initially above the physical spectrum, it extends jointly in $(s,z)$
+to an overlapping complex domain and agrees with the physical matrix element
+for real $s$.  The identity theorem permits continuation to
+$s=\rmi\theta$:
+\begin{equation}
+  \bra{\phi}(z-H)^{-1}\vsub{\ket{\psi}}{continued}
+  =\bra{U(-\rmi\theta)\phi}
+  (z-H_\theta)^{-1}U(\rmi\theta)\ket{\psi} .
+  \label{eq:abc-app-continued-matrix-element}
+\end{equation}
+The left-hand side is notation for a continued scalar matrix element, not a
+bounded resolvent on the original Hilbert space.  The right-hand side is
+meromorphic by Step 3.  Therefore a discrete eigenvalue of $H_\theta$ in the
+uncovered wedge is a pole of the continued physical matrix element.
+
+The opposite signs in the two analytic vectors are forced by sesquilinearity;
+using $U(\rmi\theta)$ in both slots would continue a different expression.
+
+Conversely, a pole that couples to analytic vectors appears as an eigenvalue
+once the rotated ray lies below it.  A particular pair $\phi,\psi$ can have a
+zero residue and fail to see a pole, but the pole is detected by some vectors
+in a dense analytic set.
+
+\subsection*{Step 5: angle independence and bound states}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{spectrum!point}
+\index{Riesz projection}
+% END CURATED SUBJECT INDEX
+
+Take two admissible angles $\theta_1<\theta_2$ and a domain of the energy
+plane uncovered by both rotated rays.  Equation
+\eqref{eq:abc-app-continued-matrix-element} represents the same analytic
+continuation for either angle.  Uniqueness of analytic continuation therefore
+prevents an isolated pole from moving with $\theta$.  Applying the argument
+to matrix elements of the Riesz projection shows that its rank, hence the
+algebraic multiplicity, is also constant until the pole meets the essential
+spectrum or exits the analyticity domain.
+
+A negative-energy bound state is already an isolated eigenvalue of the
+undeformed self-adjoint Hamiltonian.  For real $s$ it is unchanged because
+$H(s)$ is unitarily equivalent to $H$.  Analyticity in $s$ then continues this
+constant eigenvalue to complex $s$.  This is the mathematical origin of the
+stationary real points in a complex-scaling plot.
+
+\subsection*{Step 6: several thresholds and the limits of the theorem}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!essential}
+\index{compact operator}
+\index{Fredholm theory}
+\index{complex scaling}
+\index{complex scaling!exterior}
+\index{tortoise coordinate}
+\index{horizon boundary condition}
+% END CURATED SUBJECT INDEX
+
+For an $N$-body Hamiltonian, cluster decompositions produce thresholds
+$E_a$.  Relative motion in an open cluster channel supplies a kinetic
+continuum, so the corresponding essential spectrum rotates about its own
+threshold:
+\begin{equation}
+  \essspectrum(H_\theta)
+  =\bigcup_a\left[E_a+\rme^{-2\rmi\theta}[0,\infty)\right]
+  \label{eq:abc-app-many-thresholds}
+\end{equation}
+under the hypotheses of the many-body theorem.  A pole must be classified on
+the multi-sheeted surface generated by these thresholds.
+
+The argument also displays its failure modes.  They include a potential with
+no analytic continuation in the swept sector, loss of relative compactness,
+a deformation crossing a singularity, a long-range remainder not separated
+from the asymptotic Hamiltonian, and a threshold at which the Fredholm sheet
+changes.  Exterior complex scaling relaxes interior analyticity by deforming
+only outside a finite radius, but it still requires control of the asymptotic
+operator.  For black-hole equations, logarithmic tortoise coordinates,
+multiple horizons, inverse-power tails, and frequency-dependent or coupled
+potentials must be checked individually.  Successful numerical rotation is
+strong evidence, but it is not by itself a proof that all ABC hypotheses hold.

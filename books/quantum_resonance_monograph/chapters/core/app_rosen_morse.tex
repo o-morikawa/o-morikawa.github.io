@@ -1,0 +1,46 @@
+\section{Step 6: Check the pole equation in the inverted Rosen--Morse barrier}
+\label{app:rosen-morse}
+
+With $\xi=\tanh(\beta x)$, Eq.~\eqref{eq:wkb-schrodinger} for
+Eq.~\eqref{eq:rosen-morse-potential} becomes
+\begin{equation}
+  \frac{\rmd}{\rmd\xi}
+  \left[(1-\xi^2)\frac{\rmd\psi}{\rmd\xi}\right]
+  +\left[
+  s(s+1)
+  -\frac{(\rmi k/\beta)^2}{1-\xi^2}
+  \right]\psi=0 .
+  \label{eq:associated-legendre-rm}
+\end{equation}
+One solution outgoing at $x\to+\infty$ is
+\begin{align}
+  \psi_k(x)
+  &=(1-\xi^2)^{-\rmi k/(2\beta)}
+  \notag\\
+  &\quad\times
+  {}_2F_1\left(
+  -\frac{\rmi k}{\beta}-s,
+  -\frac{\rmi k}{\beta}+s+1;
+  1-\frac{\rmi k}{\beta};
+  \frac{1-\xi}{2}
+  \right) .
+  \label{eq:rm-hypergeometric}
+\end{align}
+The hypergeometric connection formula around $\xi=-1$ yields reflected and
+incident coefficients.  The incident coefficient is
+Eq.~\eqref{eq:rosen-morse-incoming}.  Since the Gamma function has poles at
+nonpositive integers, one resonance branch obeys
+\begin{equation}
+  -\frac{\rmi k}{\beta}+s+1=-n,
+  \qquad n=0,1,2,\ldots .
+  \label{eq:rm-gamma-condition}
+\end{equation}
+Substitution of the branch of $s$ fixed by
+Eq.~\eqref{eq:rosen-morse-parameters} gives
+Eq.~\eqref{eq:rosen-morse-k}.  The other denominator Gamma function produces
+the antiresonant branch.
+
+The same Gamma-function ratio is a resummed Voros connection coefficient.
+Its poles and zeros encode the infinite periodic Stokes graph without the need
+to cross every repeated cell separately.  This is an example of a special
+function acting as a closed-form resurgent connection matrix.

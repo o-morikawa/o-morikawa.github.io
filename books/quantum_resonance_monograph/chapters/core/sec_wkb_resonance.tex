@@ -1,0 +1,230 @@
+\section{Step 5: Turn the no-incoming condition into a pole equation}
+\label{sec:wkb-resonance}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+% END CURATED SUBJECT INDEX
+
+\subsection{Outgoing conditions as subdominance after continuation}
+\label{subsec:wkb-outgoing}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!essential}
+\index{boundary condition!incoming and outgoing}
+\index{exact WKB}
+\index{complex scaling}
+% END CURATED SUBJECT INDEX
+
+On the real axis a resonance wave grows at both spatial ends.  In the complex
+$x$ plane, the same exponential is decaying in appropriate sectors.  Exact
+WKB analysis selects a Borel-summed solution that is subdominant in one such
+sector, transports it across the Stokes graph, and requires it to be
+subdominant in the sector representing the other outgoing end.  Complex
+scaling implements a fixed contour through these sectors; exact WKB records
+the sector changes algebraically.
+
+Suppose $V(x)\to0$ at both ends and define $k$ by
+Eq.~\eqref{eq:energy-momentum}.  Asymptotically,
+$\vsub{S}{odd}\to\rmi k$ or $-\rmi k$.  Rotating the coordinate by
+$x=\rme^{\rmi\theta}y$ changes which exponential is subdominant according to
+Eq.~\eqref{eq:scaled-outgoing}.  The exposure condition of complex scaling is
+therefore a statement that the chosen contour lies inside the exact-WKB
+subdominant sectors.  From this viewpoint, rotation of the essential spectrum
+and deformation of the Stokes graph are complementary descriptions of the
+same analyticity
+\cite{Morikawa:2025xjq,Morikawa:2025vvs}.
+
+\subsection{The inverted Rosen--Morse barrier}
+\label{subsec:rosen-morse}
+% BEGIN CURATED SUBJECT INDEX
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{Stokes curve}
+\index{turning point}
+\index{Rosen--Morse potential}
+% END CURATED SUBJECT INDEX
+
+The inverted Rosen--Morse, or P\"oschl--Teller barrier, is
+\begin{equation}
+  V(x)=\frac{U_0}{\cosh^2(\beta x)},
+  \qquad U_0>0,
+  \qquad \beta>0 .
+  \label{eq:rosen-morse-potential}
+\end{equation}
+It is short ranged and exactly solvable, yet its analytic continuation has an
+infinite periodic structure of poles and turning points.  It therefore tests
+both scattering and exact-WKB descriptions without reducing the problem to a
+polynomial potential
+\cite{PhysRev.42.210,Zhao:1995,Landau:1991wop,Ryaboy:1993}.
+
+Introduce
+\begin{align}
+  \xi&=\tanh(\beta x),
+  &E&=\frac{\hbar^2k^2}{2m},
+  \notag\\
+  s(s+1)&=-\frac{2mU_0}{\beta^2\hbar^2} .
+  \label{eq:rosen-morse-parameters}
+\end{align}
+The Schr\"odinger equation becomes an associated Legendre equation.  A
+solution outgoing at $x\to+\infty$ may be written in terms of a Gauss
+hypergeometric function.  Its incident coefficient at $x\to-\infty$ is,
+up to a nonzero convention-dependent phase,
+\begin{equation}
+  \vsub{A}{in}(k)
+  \propto
+  \frac{\Gamma(1-\rmi k/\beta)
+  \Gamma(-\rmi k/\beta)}
+  {\Gamma(-\rmi k/\beta-s)
+  \Gamma(-\rmi k/\beta+s+1)} .
+  \label{eq:rosen-morse-incoming}
+\end{equation}
+The resonance condition $\vsub{A}{in}(k)=0$ follows from a pole of either
+Gamma function in the denominator.
+
+For a barrier satisfying
+\begin{equation}
+  \frac{8mU_0}{\beta^2\hbar^2}>1,
+  \label{eq:strong-barrier}
+\end{equation}
+define the positive dimensionless number
+\begin{equation}
+  \kappa
+  =\sqrt{\frac{8mU_0}{\beta^2\hbar^2}-1} .
+  \label{eq:kappa-rosen-morse}
+\end{equation}
+The resonance momenta in the fourth quadrant are
+\begin{equation}
+  k_n^{\mathrm R}
+  =\frac{\beta}{2}
+  \left[\kappa-\rmi(2n+1)\right],
+  \qquad n=0,1,2,\ldots ,
+  \label{eq:rosen-morse-k}
+\end{equation}
+and the corresponding energies are
+\begin{equation}
+  E_n^{\mathrm R}
+  =\frac{\hbar^2\beta^2}{8m}
+  \left[\kappa-\rmi(2n+1)\right]^2 .
+  \label{eq:rosen-morse-energy}
+\end{equation}
+The antiresonant partners obey
+$\vsup{k_n}{R}=-(\vsup{k_n}{AR})^*$ for a real potential.
+
+In exact-WKB language, the turning points satisfy
+\begin{equation}
+  \cosh^2(\beta x)=\frac{U_0}{E} .
+  \label{eq:rosen-morse-turning-points}
+\end{equation}
+They repeat under imaginary shifts because $\cosh z$ is periodic up to sign.
+The spectral curve also has double poles at zeros of $\cosh(\beta x)$.  A
+connection path crosses the relevant Stokes curves, changes sheets at branch
+cuts, and returns through infinity.  The exact connection coefficient can be
+identified with Eq.~\eqref{eq:rosen-morse-incoming}; hence the resummed WKB
+condition reproduces Eqs.~\eqref{eq:rosen-morse-k} and
+\eqref{eq:rosen-morse-energy} exactly
+\cite{Morikawa:2025grx,Morikawa:2025xjq}.
+
+The lesson is broader than solvability.  Barrier resonance does not require a
+real-axis potential well.  In complex configuration space, turning points and
+subdominant sectors can trap analytic continuation around a nontrivial cycle.
+The pole measures that global complex geometry.  This statement should not be
+misread as a sufficient criterion based only on visual minima of $\re V(z)$;
+the invariant criterion is the vanishing connection coefficient.
+
+\subsection{Transmission and reflection from connection matrices}
+\label{subsec:wkb-transmission}
+% BEGIN CURATED SUBJECT INDEX
+\index{Wronskian}
+\index{scattering matrix}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{exact WKB}
+% END CURATED SUBJECT INDEX
+
+Choose an incoming wave of unit amplitude from the left.  The asymptotic
+solution is
+\begin{align}
+  \psi(x)&\sim
+  \rme^{\rmi kx}+R(k)\rme^{-\rmi kx},
+  &&x\to-\infty,
+  \notag\\
+  \psi(x)&\sim T(k)\rme^{\rmi kx},
+  &&x\to+\infty .
+  \label{eq:RT-boundary}
+\end{align}
+Let $M(E,\hbar)$ be the exact connection matrix between asymptotic WKB bases.
+With a consistent normalization, $R$ and $T$ are ratios of its entries.  The
+resonance condition is the zero of the entry multiplying the incoming wave
+when the right solution is chosen outgoing.  On the real axis, Wronskian
+conservation gives
+\begin{equation}
+  |R(E)|^2+|T(E)|^2=1
+  \label{eq:unitarity-RT}
+\end{equation}
+for a real one-channel potential with equal asymptotic velocities.  Exact WKB
+therefore reconstructs both the continued poles and the unitary physical
+scattering matrix from the same connection data
+\cite{Morikawa:2025vvs}.
+
+Near a simple pole, the connection coefficient has the local expansion
+\begin{equation}
+  \Cincoming(E)
+  =\Cincoming'(\resonantE)
+  (E-\resonantE)+\order((E-\resonantE)^2) .
+  \label{eq:connection-local-pole}
+\end{equation}
+The derivative $\Cincoming'(\resonantE)$ determines the residue.  This
+is the exact-WKB route to excitation strength, and not only to the pole
+location.
+
+\subsection{Complex scaling as a change of Stokes sector}
+\label{subsec:abc-wkb}
+% BEGIN CURATED SUBJECT INDEX
+\index{unbounded operator}
+\index{spectrum!continuous}
+\index{spectrum!essential}
+\index{resolvent}
+\index{exact WKB}
+\index{complex scaling}
+% END CURATED SUBJECT INDEX
+
+For an asymptotically free problem, the continuous spectrum corresponds to
+oscillatory WKB solutions on the real axis.  Under $x=\rme^{\rmi\theta}y$, the
+classical action is continued to a ray on which one solution decays and the
+other grows.  The energy at which neither is exponentially preferred lies on
+the rotated ray $\arg E=-2\theta$.  Thus the continuum rotation in
+Eq.~\eqref{eq:continuum-rotation} follows directly from the asymptotic WKB
+exponent.  A pole is $\theta$ independent because its global connection
+condition is invariant while the contour remains in the same homology class
+and crosses no singularity.
+
+This gives an alternative geometric reading of the ABC structure.  It does
+not replace the operator theorem: exact WKB controls differential-equation
+solutions and their analytic continuation, while the theorem controls
+operator domains, essential spectrum, and resolvent matrix elements.  Their
+agreement is powerful precisely because the two analyses have different
+failure modes.
+
+\subsection{Continuum states in exact-WKB language}
+\label{subsec:wkb-continuum}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{Borel summation}
+\index{exact WKB}
+\index{complex scaling}
+% END CURATED SUBJECT INDEX
+
+At real $E>0$, a continuum state is specified by a boundary value
+$E\pm\rmi0$ and by incoming channel amplitudes.  In exact WKB, these choices
+select a lateral Borel sum and a side of the Stokes graph.  The continuum is
+therefore not obtained by solving the resonance condition for a dense set of
+energies; it is a family of connection problems parametrized by real $E$.
+
+After complex scaling, the continuum becomes a line of generalized
+eigenvalues $E=\rme^{-2\rmi\theta}\hbar^2q^2/(2m)$ with $q\ge0$.  A finite
+basis discretizes $q$, while exact WKB retains it as a continuous parameter.
+The equivalence between the two descriptions is clearest at the resolvent
+level: both deform the same continuum contour while keeping pole residues
+inside the deformation fixed.

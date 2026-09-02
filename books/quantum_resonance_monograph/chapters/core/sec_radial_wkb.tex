@@ -1,0 +1,245 @@
+\section{Radial exact WKB: add the origin as monodromy data}
+\label{sec:radial-wkb}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering!Coulomb}
+\index{exact WKB}
+\index{exact quantization condition}
+\index{monodromy}
+\index{Langer correction}
+\index{Frobenius solution}
+% END CURATED SUBJECT INDEX
+
+\calculationroute
+  {The global connection algorithm of Stage I and the local Frobenius theory
+  of a regular singular point.}
+  {Include the origin index and Langer contribution in open-path and
+  closed-cycle exact quantization conditions.}
+  {Recover oscillator and Coulomb spectra before introducing a
+  monodromy-preserving deformation or optimization.}
+
+\subsection{Radial equation and the origin}
+\label{subsec:radial-equation}
+% BEGIN CURATED SUBJECT INDEX
+\index{monodromy}
+\index{Langer correction}
+\index{Frobenius solution}
+\index{radial equation}
+% END CURATED SUBJECT INDEX
+
+For a central potential $V(r)$ in three dimensions, write the wave function as
+$u_l(r)Y_{lm}(\Omega)/r$.  The reduced radial function obeys
+\begin{equation}
+  \left[
+  -\frac{\hbar^2}{2m}\frac{\rmd^2}{\rmd r^2}
+  +V(r)
+  +\frac{\hbar^2l(l+1)}{2mr^2}
+  \right]u_l(r)
+  =Eu_l(r),
+  \qquad r>0 .
+  \label{eq:radial-schrodinger}
+\end{equation}
+Here $l\in\naturalnumbers\cup\{0\}$ is the orbital angular momentum.  The
+origin is a regular singular point.  Its Frobenius solutions behave as
+\begin{equation}
+  \vsup{u_l}{reg}(r)\sim r^{l+1},
+  \qquad
+  \vsup{u_l}{sing}(r)\sim r^{-l} .
+  \label{eq:radial-frobenius}
+\end{equation}
+Physical regularity selects the first solution.
+
+The centrifugal term is proportional to $\hbar^2$, but it cannot be treated
+as an innocuous high-order perturbation near $r=0$.  It determines the local
+indices and hence the monodromy.  The Langer organization replaces
+\begin{equation}
+  l(l+1)\longrightarrow\left(l+\frac{1}{2}\right)^2
+  \label{eq:langer-replacement}
+\end{equation}
+inside the leading WKB momentum
+\cite{Langer:PhysRev.51.669}.  The additional $1/4$ is the contribution of the
+WKB half-density near the regular singularity.
+
+\subsection{Open-path and closed-cycle quantization}
+\label{subsec:open-closed}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{turning point}
+\index{exact quantization condition}
+\index{monodromy}
+\index{Frobenius solution}
+% END CURATED SUBJECT INDEX
+
+There are two natural formulations.  In the open-path formulation, transport
+a decaying solution from infinity to the origin and require the coefficient
+of $\vsup{u_l}{sing}$ to vanish.  In the closed-cycle formulation, continue
+the same solution around a contour that encloses the origin and relevant
+turning points, then demand a compatible monodromy.  The two conditions are
+equivalent when all connection matrices and the local origin monodromy are
+included
+\cite{AokiKawaiTakei1991RIMS853,Kawai:2005,
+AokiIwakiTakahashi2019LoopType,Morikawa:2025ezl}.
+
+The equivalence can be stated schematically as
+\begin{equation}
+  \vsub{C}{sing}(E,\hbar)=0
+  \quad\Longleftrightarrow\quad
+  \det\left[M_{\Gamma}(E,\hbar)-\identity\right]=0 ,
+  \label{eq:open-closed-equivalence}
+\end{equation}
+where $\vsub{C}{sing}$ is the open-path coefficient of the singular
+Frobenius solution and $M_{\Gamma}$ is the ordered monodromy matrix around a
+closed contour $\Gamma$.  The determinant notation is schematic because a
+specific quantization condition may select one eigenvalue or one matrix
+element rather than the full determinant.  What is invariant is the vanishing
+of the undesired component.
+
+The change of variables
+\begin{equation}
+  r=\rme^x,
+  \qquad x\in(-\infty,\infty),
+  \label{eq:radial-exponential-map}
+\end{equation}
+makes the equivalence intuitive.  The punctured origin becomes the boundary
+$x\to-\infty$.  A small-circle monodromy in the $r$ plane becomes a boundary
+condition at the left end of the $x$ line, while $r\to\infty$ becomes
+$x\to+\infty$.  The radial spectral problem is thereby converted into a
+two-ended connection problem.
+
+\subsection{Harmonic-oscillator benchmark}
+\label{subsec:radial-oscillator}
+% BEGIN CURATED SUBJECT INDEX
+\index{topology}
+\index{turning point}
+\index{monodromy}
+\index{Langer correction}
+% END CURATED SUBJECT INDEX
+
+For
+\begin{equation}
+  V(r)=\frac{1}{2}m\Omega^2r^2,
+  \qquad \Omega>0,
+  \label{eq:radial-oscillator-potential}
+\end{equation}
+the exact spectrum is
+\begin{equation}
+  E_{n_rl}
+  =\hbar\Omega
+  \left(2n_r+l+\frac{3}{2}\right),
+  \qquad n_r=0,1,2,\ldots .
+  \label{eq:radial-oscillator-spectrum}
+\end{equation}
+A connection using only the two ordinary turning points misses the
+$l$ dependence.  Adding the origin monodromy, or equivalently using the Langer
+momentum from the start, restores the exact result.  This is a clean example
+of an order-$\hbar^2$ term carrying order-one topological data.
+
+\subsection{Coulomb benchmark}
+\label{subsec:radial-coulomb}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering!Coulomb}
+\index{turning point}
+\index{Voros symbol}
+% END CURATED SUBJECT INDEX
+
+For an attractive Coulomb potential
+\begin{equation}
+  V(r)=-\frac{g}{r},
+  \qquad g>0,
+  \label{eq:coulomb-potential}
+\end{equation}
+the bound-state spectrum is
+\begin{equation}
+  E_{n_rl}
+  =-\frac{mg^2}{2\hbar^2(n_r+l+1)^2} .
+  \label{eq:coulomb-spectrum}
+\end{equation}
+Again the origin contribution supplies the $l+1/2$ phase, while the ordinary
+turning point supplies the remaining Maslov half-unit.  The total principal
+quantum number is $n=n_r+l+1$.  Exact evaluation of the closed Voros period
+shows that the open and closed quantization paths agree once the regular
+singularity is treated consistently
+\cite{Morikawa:2025ezl}.
+
+\subsection{Monodromy renormalization}
+\label{subsec:monodromy-rg}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering!Coulomb}
+\index{monodromy}
+\index{renormalization group}
+% END CURATED SUBJECT INDEX
+
+Local WKB integrals around a singular point can contain regulator-dependent
+pieces.  Introduce a small radius $\mu>0$ and a circle $C_0(\mu)$ around the
+origin.  A useful coupling that keeps the origin index at leading order is
+\begin{equation}
+  \lambda=\hbar\left(l+\frac{1}{2}\right) .
+  \label{eq:monodromy-coupling}
+\end{equation}
+After the WKB half-density is included, fix the physical small-circle phase
+to
+\begin{equation}
+  \vsup{\mathcal M_0}{phys}
+  =\rme^{\rmi\pi(2l+1)} .
+  \label{eq:physical-origin-monodromy}
+\end{equation}
+Define a counter-Voros factor $\vsub{Z}{mon}(\mu)$ by
+\begin{equation}
+  \vsup{\mathcal M_0}{phys}
+  =\frac{\vsup{\mathcal M_0}{bare}(\mu)}
+  {\vsub{Z}{mon}(\mu)} .
+  \label{eq:monodromy-Z}
+\end{equation}
+Cutoff independence is summarized by an RG-type equation
+\begin{equation}
+  \mu\frac{\rmd}{\rmd\mu}
+  \log \vsub{Z}{mon}(\mu)
+  =\vsub{\gamma}{mon}(E,\hbar,\lambda) .
+  \label{eq:monodromy-rge}
+\end{equation}
+The function $\vsub{\gamma}{mon}$ is a monodromy anomalous dimension.  A
+closed period may then be split into large and small circles with local
+counterterms chosen so that the sum is finite and independent of $\mu$.
+
+Equations~\eqref{eq:monodromy-Z} and \eqref{eq:monodromy-rge} should be read
+with care.  They organize regulator independence of connection data; they are
+not automatically a Wilsonian coarse graining of spatial degrees of freedom.
+For the harmonic oscillator and Coulomb benchmarks, the proposed scheme has
+$\vsub{\gamma}{mon}=0$, corresponding to fixed monodromy data and the
+termination of higher closed-period corrections in the chosen organization
+\cite{Morikawa:2025ezl}.  For a generic potential, establishing the existence,
+scheme dependence, and physical content of a nonzero
+$\vsub{\gamma}{mon}$ remains an open mathematical problem.
+
+\subsection{Optimized perturbation around monodromy-preserving seeds}
+\label{subsec:optimized-wkb}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering!Coulomb}
+\index{Borel summation}
+\index{monodromy}
+\index{optimized perturbation theory}
+\index{variational perturbation theory}
+% END CURATED SUBJECT INDEX
+
+For a non-solvable radial potential, choose a solvable seed $Q^{(0)}$ that has
+the same local monodromy and introduce an interpolation parameter $\delta$:
+\begin{equation}
+  Q_{\delta}(r,E)
+  =Q^{(0)}(r,E;\bm a)
+  +\delta\left[Q(r,E)-Q^{(0)}(r,E;\bm a)\right] .
+  \label{eq:delta-interpolation}
+\end{equation}
+The vector $\bm a$ contains variational scales.  Expand the Borel-resummed
+Voros data in $\delta$, set $\delta=1$, and choose $\bm a$ by minimal
+sensitivity or fastest apparent convergence.  Because the seed already
+contains the correct origin index, the expansion does not repeatedly rebuild
+the most singular local information.  This is an exact-WKB version of
+optimized or variational perturbation theory
+\cite{Stevenson:1981vj,Duncan:1992ba,Buckley:1992pc,
+Kleinert:1995hc,Zinn-Justin:2010zzb}.
+
+The method is promising for Cornell, screened Coulomb, and other radial
+potentials, but three checks are indispensable: independence of the auxiliary
+parameter at increasing order, compatibility with lateral Borel summation,
+and preservation of the physical origin boundary condition.  Variational
+  stationarity alone does not prove that a selected branch is the physical
+  resurgent continuation.

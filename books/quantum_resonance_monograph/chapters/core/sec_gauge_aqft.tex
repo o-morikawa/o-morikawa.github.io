@@ -1,0 +1,387 @@
+\section{Gauge constraints, observable algebras, and physical Hilbert spaces}
+\label{sec:gauge-aqft}
+% BEGIN CURATED SUBJECT INDEX
+\index{Hilbert space}
+\index{Gauss law}
+\index{BRST cohomology}
+\index{observable algebra}
+\index{algebraic quantum field theory}
+% END CURATED SUBJECT INDEX
+
+Long-range QED exposes a question that is already present in every gauge
+theory: which Hilbert space is physical?  A gauge-fixed field algebra, a
+BRST complex, a gauge-invariant observable algebra, and the Hilbert space used
+by a lattice simulator are related, but they are not the same object.  Direct
+integrals clarify the relation only if they are applied at the correct stage.
+They decompose a representation that has already been selected; they do not
+select the physical representations by themselves.
+
+This section gives an observable-first construction and compares it with the
+BRST route.  It then separates two sources of nonfactorization: generic local
+QFT structure and the additional constraint imposed by Gauss law.  The aim is
+not a nonperturbative construction of Yang--Mills theory.  It is a precise
+list of the data such a construction would have to provide.
+
+\subsection{Three layers that must not be collapsed}
+% BEGIN CURATED SUBJECT INDEX
+\index{Hilbert space}
+\index{GNS construction}
+\index{observable algebra}
+\index{algebraic quantum field theory}
+% END CURATED SUBJECT INDEX
+
+It is useful to keep three mathematical layers visible:
+\begin{enumerate}[label=(\roman*)]
+  \item a kinematical field space, possibly gauge fixed and possibly carrying
+  an indefinite inner product;
+  \item an abstract net or algebra $\vsub{\Alg}{obs}$ of gauge-invariant
+  observables; and
+  \item one or more positive Hilbert-space representations
+  $(\pi,\Hil,\Omega)$ selected by a state, an energy condition, and a charge
+  or asymptotic criterion.
+\end{enumerate}
+Gauge-dependent fields can be invaluable coordinates for calculation, while
+the observable algebra records what can be measured without choosing those
+coordinates.  A Hilbert representation adds the state-dependent meaning of
+expectation values, spectrum, and weak closure.  In systems with infinitely
+many degrees of freedom there need not be one representation containing all
+physically relevant sectors.
+
+For a relativistic theory the observable-first datum is a net
+\begin{equation}
+  \mathcal O\longmapsto\Alg(\mathcal O),
+  \qquad
+  \mathcal O_1\subset\mathcal O_2
+  \Longrightarrow
+  \Alg(\mathcal O_1)\subset\Alg(\mathcal O_2),
+  \label{eq:aqft-isotony}
+\end{equation}
+with locality
+\begin{equation}
+  [A_1,A_2]=0
+  \quad\text{if }\mathcal O_1\text{ and }\mathcal O_2
+  \text{ are spacelike separated}.
+  \label{eq:aqft-locality}
+\end{equation}
+Covariance, a spectrum condition, and an appropriate vacuum or thermal state
+complete the basic data.  The quasilocal $C^*$ algebra is obtained by norm
+completion of the union of local algebras.  A state $\omega$ then constructs
+the Hilbert space through GNS:
+\begin{equation}
+  \omega(A)
+  =\dualpair{\Omega_\omega}{
+  \pi_\omega(A)\Omega_\omega},
+  \qquad
+  \Hil_\omega
+  =\overline{\pi_\omega(\vsub{\Alg}{obs})\Omega_\omega}.
+  \label{eq:gauge-observable-gns}
+\end{equation}
+Thus positivity belongs to the state on observables, not to a particular
+gauge potential.
+
+\subsection{The BRST cohomological route}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!closed}
+\index{Hilbert space}
+\index{topology}
+\index{BRST cohomology}
+\index{Gribov problem}
+% END CURATED SUBJECT INDEX
+
+Covariant gauge fixing enlarges the field space by longitudinal modes,
+ghosts, and auxiliary fields.  Let $\mathcal K$ denote the resulting Krein
+space and $Q$ a nilpotent BRST charge,
+\begin{equation}
+  Q^2=0.
+  \label{eq:brst-nilpotent}
+\end{equation}
+The algebraic physical space is the cohomology
+\begin{equation}
+  \vsupb{\Hil}{alg}{BRST}
+  =\ker Q/\operatorname{im}Q.
+  \label{eq:brst-cohomology}
+\end{equation}
+To obtain a Hilbert space one still has to prove that the induced sesquilinear
+form is positive semidefinite, quotient its null vectors, and complete the
+result.  Observables are represented by BRST-closed operators modulo exact
+ones.  In the Kugo--Ojima framework this implements the quartet mechanism and
+connects color confinement to the global BRST charge under explicit
+assumptions \cite{KugoOjima:1979}.
+
+Equation~\eqref{eq:brst-cohomology} is elegant because local covariant fields
+and positivity are reconciled after taking cohomology.  It is not, however, a
+definition that can simply be assumed in an arbitrary nonperturbative theory.
+One needs a globally defined nilpotent charge, a controlled domain, positivity
+of the quotient, and a state space on which the construction is complete.
+Gribov copies obstruct a global gauge slice, and their topology warns that a
+perturbative BRST complex need not automatically extend to the full
+configuration space \cite{Gribov:1978,Singer:1978}.  Abandoning these global
+questions may be a deliberate approximation, but it must then be identified
+as part of the truncation contract.
+
+\subsection{The observable-first definition}
+% BEGIN CURATED SUBJECT INDEX
+\index{Hilbert space}
+\index{measure theory}
+\index{direct integral}
+\index{factor}
+\index{GNS construction}
+\index{BRST cohomology}
+\index{observable algebra}
+% END CURATED SUBJECT INDEX
+
+If BRST cohomology is not taken as the global starting point, a nonperturbative
+physical Hilbert space should be defined in the following order:
+\begin{enumerate}[label=\arabic*.]
+  \item construct a positive gauge-invariant observable algebra or net,
+  including its dynamics;
+  \item select a class of physical states by positivity, the Gauss constraint,
+  energy and regularity conditions, and the desired vacuum, thermal, charge,
+  or asymptotic behavior;
+  \item apply GNS to each selected state or folium;
+  \item compare the resulting representations by unitary equivalence,
+  quasi-equivalence, or disjointness; and
+  \item only then form direct sums or direct integrals when a specified mixed
+  representation and measure call for them.
+\end{enumerate}
+
+In symbols, a selected family $\{\omega_\xi\}_{\xi\in X}$ can produce
+\begin{equation}
+  \pi_\mu
+  =\int_X^\oplus\pi_\xi\dd\mu(\xi),
+  \qquad
+  \Hil_\mu
+  =\int_X^\oplus\Hil_\xi\dd\mu(\xi),
+  \label{eq:physical-sector-direct-integral}
+\end{equation}
+provided the fields are measurable.  The measure $\mu$ is part of the state
+or ensemble; it is not determined by the abstract algebra alone.  A pure
+sector may require only one factor representation.  A finite compact lattice
+problem more often gives a direct \textit{sum}.  A genuine direct integral is
+natural for continuous charge or flux data, infinite volume, or a central
+decomposition with a nonatomic center.
+
+This answers the apparent dilemma.  Insisting on a direct integral ``on the
+observable side'' is legitimate as a posterior decomposition of a chosen
+representation.  It cannot replace the state-selection problem.  Without the
+selected state class and measure, the phrase ``the physical Hilbert space''
+is underdetermined.
+
+\subsection{Central decomposition is not sector classification}
+% BEGIN CURATED SUBJECT INDEX
+\index{von Neumann algebra@\vN\ algebra}
+\index{central decomposition}
+\index{superselection sector}
+% END CURATED SUBJECT INDEX
+
+Let
+$\vNAlg_\omega=\pi_\omega(\vsub{\Alg}{obs})''$.  Reduction theory gives,
+under the hypotheses of Section~\ref{subsec:central-decomposition},
+\begin{equation}
+  \vNAlg_\omega
+  =\int_X^\oplus\vNAlg_{\omega,\xi}\dd\mu_\omega(\xi),
+  \qquad
+  \Center(\vNAlg_{\omega,\xi})
+  =\complex\identity_\xi
+  \quad\text{a.e.}
+  \label{eq:gauge-central-decomposition}
+\end{equation}
+This decomposes one represented algebra into factors.  A superselection
+theory asks a different question: which representations of the abstract net
+are physically admissible, and how do charges compose?  The DHR criterion
+selects charges indistinguishable from the vacuum outside bounded regions
+\cite{DoplicherHaagRoberts:1971}.  Gauss-law charges are detectable at
+arbitrarily large distances and do not satisfy that compact-localization
+criterion.  Spacelike-cone localization and asymptotic constructions provide
+weaker alternatives in suitable theories
+\cite{BuchholzFredenhagen:1982,Buchholz:1986}.
+
+Consequently, a factor fiber in
+Eq.~\eqref{eq:gauge-central-decomposition} should be called a factor
+component until a physical selection criterion identifies it with a charge
+sector.  Conversely, two charge sectors may be disjoint representations of
+the same simple quasilocal algebra even though the abstract algebra has
+trivial center.  The center appears after representation or after restricting
+to a region with boundary data; it need not be present in the global abstract
+algebra.
+
+\subsection{Solving Gauss law on a lattice}
+% BEGIN CURATED SUBJECT INDEX
+\index{Gauss law}
+\index{tensor product!gauge constraint}
+% END CURATED SUBJECT INDEX
+
+Hamiltonian lattice gauge theory makes the reorganization operational
+\cite{KogutSusskind:1975}.  Before imposing constraints, a finite graph with
+links $e$ has a kinematical tensor product
+\begin{equation}
+  \vsub{\Hil}{kin}
+  =\bigotimes_e\Hil_e
+  \otimes\bigotimes_v\vsup{\Hil_v}{matter}.
+  \label{eq:lattice-kinematical-tensor-product}
+\end{equation}
+At every vertex, the Gauss operator $G_v$ generates a gauge transformation.
+The physical subspace is
+\begin{equation}
+  \vsub{\Hil}{phys}
+  =\{\psi\in\vsub{\Hil}{kin}:
+    \text{$G_v\psi=\psi$ for all $v$}\}
+  \label{eq:lattice-gauss-subspace}
+\end{equation}
+for a finite gauge group, with the corresponding zero-generator condition
+for a Lie group.  The orthogonal projector is the group average
+\begin{equation}
+  P_G=\prod_v\int_G\rmd g_v\,U_v(g_v).
+  \label{eq:lattice-gauss-projector}
+\end{equation}
+Since a vertex transformation acts on all incident links,
+$P_G$ does not factor into independent projectors for arbitrary spatial
+subregions.
+
+One can solve the constraints explicitly by choosing a spanning tree and
+expressing tree-link variables through matter charges and the remaining loop
+variables.  This can reduce the number of degrees of freedom and is valuable
+for quantum simulation \cite{PardoEtAl:2023}.  The price is that an operator
+local in the original link variables may become a string along the chosen
+tree.  The exact shape of that string is encoding dependent.  The need to
+carry boundary flux and the failure of a naive regional tensor product are
+not.
+
+\subsection{Laboratory: the smallest \texorpdfstring{$\mathbb Z_2$}{Z2}
+boundary-flux sector}
+% BEGIN CURATED SUBJECT INDEX
+\index{Hilbert space}
+\index{direct integral}
+\index{central decomposition}
+\index{Gauss law}
+\index{observable algebra}
+\index{tensor product!gauge constraint}
+% END CURATED SUBJECT INDEX
+
+Consider a connected region whose interior is a single link joining two
+vertices.  One external link crosses the boundary at each vertex.  In the
+electric basis write the $\mathbb Z_2$ labels as
+$q_L$, $q$, $q_R\in\{0,1\}$.  With no interior matter charge, Gauss law gives
+\begin{equation}
+  q_L+q=0,
+  \qquad
+  q+q_R=0
+  \pmod 2.
+  \label{eq:z2-two-vertex-gauss}
+\end{equation}
+Hence $q_L=q=q_R$.  If the exterior is not included in the regional Hilbert
+space, the physical regional space has the decomposition
+\begin{equation}
+  \vsup{\Hil_R}{phys}
+  =\Hil_{R,0}\oplus\Hil_{R,1}.
+  \label{eq:z2-boundary-direct-sum}
+\end{equation}
+Each summand has fixed boundary electric flux.  Gauge-invariant operators
+strictly inside the region cannot change that label.  The boundary-flux
+operator therefore lies in the center of the regional observable algebra and
+the projectors onto $\Hil_{R,0}$ and $\Hil_{R,1}$ are central projections.
+
+For this finite compact example the correct structure is a direct sum, not a
+direct integral.  Joining the region to its exterior requires matching the
+left and right boundary representations and contracting their indices.  An
+``extended Hilbert space'' can instead introduce edge variables so that a
+tensor product is restored before imposing the matching condition
+\cite{CasiniHuertaRosabal:2014,DonnellyFreidel:2016}.  These are different
+encodings of the same gauge-invariant content, provided the boundary algebra
+and its center are tracked.
+
+\subsection{Which nonlocality is an artifact?}
+% BEGIN CURATED SUBJECT INDEX
+\index{von Neumann algebra@\vN\ algebra}
+\index{superselection sector}
+\index{dressing state}
+\index{Gauss law}
+\index{observable algebra}
+\index{algebraic quantum field theory}
+\index{tensor product!gauge constraint}
+% END CURATED SUBJECT INDEX
+
+The answer has two parts.
+\begin{description}[style=nextline]
+  \item[Encoding-dependent nonlocality.]
+  A spanning tree, Jordan--Wigner-like ordering, gauge fixing, or choice of
+  edge modes determines where strings are drawn and which qubits store a loop
+  variable.  Changing the encoding can move or shorten those strings.
+
+  \item[Structural nonlocality or nonfactorization.]
+  Gauss law ties charge in a region to flux through its boundary.  Charged
+  fields cannot be both gauge invariant and compactly localized without an
+  accompanying dressing.  Regional observable algebras possess boundary
+  superselection data, and the physical subspace generally fails to equal a
+  tensor product of independently physical subregions.
+\end{description}
+Thus not every long Pauli string seen by a simulator is fundamental, but the
+constraint that makes some boundary or dressing data unavoidable is
+fundamental.
+
+There is also a logically separate AQFT effect.  Local \vN\ algebras
+in continuum relativistic QFT are typically type III and therefore are not
+ordinary tensor factors with density matrices, even in a theory without gauge
+charge.  When nested regions $\mathcal O_1\Subset\mathcal O_2$ satisfy the
+\term{split property}, there exists a type I factor $\mathcal N$ such that
+\begin{equation}
+  \Alg(\mathcal O_1)''
+  \subset\mathcal N
+  \subset\Alg(\mathcal O_2)''.
+  \label{eq:split-inclusion}
+\end{equation}
+The collar between the regions permits an approximate subsystem structure
+\cite{FewsterSplit:2015}.  Type III nonfactorization, failure of the split
+property, and a Gauss-law boundary center should therefore be diagnosed
+separately; calling all three ``nonlocal encoding'' loses the distinction.
+
+\subsection{Connection coefficients sector by sector}
+% BEGIN CURATED SUBJECT INDEX
+\index{Hilbert space}
+\index{topology}
+\index{measure theory}
+\index{direct integral}
+\index{central decomposition}
+\index{GNS construction}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{dressing state}
+% END CURATED SUBJECT INDEX
+
+The observable-first picture meets the analytic strategy of this book when a
+Hamiltonian or radial problem decomposes over a measurable sector variable:
+\begin{equation}
+  \Hil_\mu=\int_X^\oplus\Hil_\xi\dd\mu(\xi),
+  \qquad
+  H=\int_X^\oplus H_\xi\dd\mu(\xi).
+  \label{eq:sectorwise-hamiltonian}
+\end{equation}
+If each fiber has a connection problem, exact WKB produces an incoming
+coefficient $\Cincoming(E,\xi)$.  A fiber resonance satisfies
+\begin{equation}
+  \Cincoming(\resonantE(\xi),\xi)=0.
+  \label{eq:sectorwise-resonance-condition}
+\end{equation}
+But performing this calculation independently in every fiber is not yet an
+operator theorem.  One must prove measurability in $\xi$, choose analytic
+continuation domains uniform on the relevant set of sectors, control residues
+near thresholds, and justify interchanging continuation with the direct
+integral.  If pole curves collide or escape through a sector-dependent cut,
+no single contour need isolate them uniformly.
+
+This is a concrete open interface between exact WKB and operator algebras.
+The connection coefficient supplies analytic information that the measurable
+decomposition alone lacks; the direct integral supplies the topology and
+measure needed to assemble fiber calculations into a physical state space.
+Neither construction subsumes the other.
+
+\begin{checkpointbox}
+A nonperturbative gauge theory is not assigned a physical Hilbert space by
+writing a direct integral.  It is assigned an observable algebra, dynamics,
+and a physically selected state class; GNS constructs the representations.
+Direct sums, direct integrals, and central decompositions then organize those
+representations.  Solving Gauss law can make a chosen encoding nonlocal, while
+boundary flux, charged dressing, and nonfactorization are structural data that
+any faithful encoding must preserve.
+\end{checkpointbox}

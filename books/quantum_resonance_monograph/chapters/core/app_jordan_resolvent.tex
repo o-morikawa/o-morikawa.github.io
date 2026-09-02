@@ -1,0 +1,29 @@
+\section{Derive the resolvent of a second-order Jordan block}
+\label{app:jordan-resolvent}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{exceptional point}
+\index{Jordan chain}
+% END CURATED SUBJECT INDEX
+
+On the two-dimensional root subspace, write
+\begin{equation}
+  J=\vsub{E}{EP}\identity+N,
+  \qquad N^2=0,
+  \qquad N\ne0 .
+  \label{eq:jordan-nilpotent}
+\end{equation}
+Then
+\begin{equation}
+  (z-J)^{-1}
+  =\frac{\identity}{z-\vsub{E}{EP}}
+  +\frac{N}{(z-\vsub{E}{EP})^2} .
+  \label{eq:jordan-resolvent}
+\end{equation}
+The double-pole coefficient is nilpotent.  Under a generic perturbation,
+$N$ and the perturbation matrix combine to split the double pole into the two
+square-root branches in Eq.~\eqref{eq:ep-puiseux}.  Individual rank-one
+projectors diverge as the EP is approached, but their sum tends to the finite
+Riesz projector onto the root subspace.  Numerically, it is therefore more
+stable to track the two-dimensional contour-integral projector than two
+separately normalized eigenvectors.

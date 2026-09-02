@@ -1,0 +1,184 @@
+\section{Keep the continuum: response and numerical complex scaling}
+\label{sec:continuum-response}
+% BEGIN CURATED SUBJECT INDEX
+\index{complex scaling}
+% END CURATED SUBJECT INDEX
+
+\subsection{Continuum level density}
+\label{subsec:cld}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{trace-class operator}
+\index{cross section}
+\index{continuum level density}
+% END CURATED SUBJECT INDEX
+
+The density of states of an unbounded system is infinite and depends on the
+normalization volume.  A finite observable is obtained by subtracting a
+reference Hamiltonian $H_0$ with the same asymptotic channels.  Define the
+continuum level density
+\begin{equation}
+  \Delta\rho(E)
+  =-\frac{1}{\pi}\im\Tr\left[
+  \frac{1}{E+\rmi0-H}
+  -\frac{1}{E+\rmi0-H_0}
+  \right] .
+  \label{eq:cld-physical}
+\end{equation}
+When the resolvent difference is trace class, analytic deformation gives
+\begin{equation}
+  \Delta\rho(E)
+  =-\frac{1}{\pi}\im\Tr\left[
+  \frac{1}{E-H_\theta}
+  -\frac{1}{E-H_{0,\theta}}
+  \right] .
+  \label{eq:cld-csm}
+\end{equation}
+The right-hand side can be evaluated on the real energy axis because the
+deformed poles and continuum lie below it.  In an exact calculation it is
+independent of $\theta$ within the common analyticity domain
+\cite{Myo:2014ypa,Morikawa:2025vvs,Ogawa:2026dSCSM}.
+
+If a finite basis yields complex eigenvalues $E_n^{\theta}$ and reference
+eigenvalues $E_{n,0}^{\theta}$, a useful approximation is
+\begin{align}
+  \Delta\rho_N(E)
+  &=-\frac{1}{\pi}\im
+  \left[
+  \sum_{n=1}^{N}\frac{1}{E-E_n^{\theta}}
+  -\sum_{n=1}^{N}\frac{1}{E-E_{n,0}^{\theta}}
+  \right] .
+  \label{eq:finite-cld}
+\end{align}
+The subtraction must use compatible bases, contours, and asymptotic
+Hamiltonians.  Otherwise large discretization artifacts survive and can be
+mistaken for response.
+
+For one elastic channel, the spectral-shift relation is
+\begin{equation}
+  \Delta\rho(E)=\frac{1}{\pi}
+  \frac{\rmd\delta(E)}{\rmd E} ,
+  \label{eq:cld-phase}
+\end{equation}
+up to the convention for the reference phase and bound-state jumps.  More
+generally, if $\det S(E)=\rme^{2\rmi\vsub{\delta}{tot}(E)}$, then
+\begin{equation}
+  \Delta\rho(E)
+  =\frac{1}{2\pi\rmi}
+  \frac{\rmd}{\rmd E}\log\det S(E)
+  =\frac{1}{\pi}
+  \frac{\rmd\vsub{\delta}{tot}(E)}{\rmd E} .
+  \label{eq:birman-krein-differential}
+\end{equation}
+Thus the CLD retains both pole and nonresonant phase information.  It is not,
+by itself, the transmission probability: channel-resolved amplitudes are
+needed to reconstruct greybody factors or reaction cross sections.
+
+\subsection{Basis expansion and generalized eigenvalue problem}
+\label{subsec:csm-basis}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+% END CURATED SUBJECT INDEX
+
+Choose square-integrable basis functions $\{\phi_n\}_{n=1}^{N}$.  Expanding a
+right eigenvector as $\Psi^{\mathrm R}=\sum_n c_n\phi_n$ gives
+\begin{equation}
+  \sum_{n=1}^{N}H_{mn}^{\theta}c_n
+  =E\sum_{n=1}^{N}N_{mn}c_n ,
+  \label{eq:generalized-eigenproblem}
+\end{equation}
+where
+\begin{align}
+  H_{mn}^{\theta}&=\cprod{\phi_m}{H_\theta\phi_n},
+  &N_{mn}&=\cprod{\phi_m}{\phi_n} .
+  \label{eq:csm-matrices}
+\end{align}
+For an orthonormal basis, $N$ is the identity.  Gaussian bases are convenient
+because kinetic and many potential matrix elements are analytic.  Even and
+odd sectors on the full line can be represented by
+\begin{align}
+  \phi_n^{(+)}(x)&=\rme^{-\alpha_nx^2},
+  &\phi_n^{(-)}(x)&=x\rme^{-\alpha_nx^2},
+  \label{eq:real-gaussian-basis}
+\end{align}
+where every width satisfies $\re\alpha_n>0$.  Complex-range Gaussians replace
+$\alpha_n$ by conjugate pairs $\alpha_n\pm\rmi\beta_n$ and resolve oscillatory
+tails more efficiently
+\cite{Hiyama:2003cu,Myo:2014ypa,Ogawa:2026veu}.
+
+The generalized eigenproblem is ill conditioned when basis functions become
+nearly linearly dependent.  A robust implementation first diagonalizes or
+factorizes the overlap matrix, removes directions below a documented
+tolerance, and only then solves the reduced problem.  Since the matrix is
+non-normal, residuals must be checked for both right and left eigenvectors:
+\begin{align}
+  \epsilon_n^{\mathrm R}
+  &=\frac{\lVert H^\theta\bm c_n
+  -E_nN\bm c_n\rVert_2}
+  {\lVert H^\theta\rVert_2\lVert\bm c_n\rVert_2
+  +|E_n|\lVert N\rVert_2\lVert\bm c_n\rVert_2},
+  \notag\\
+  \epsilon_n^{\mathrm L}
+  &=\frac{\lVert (\bm d_n)^{\dagger}H^\theta
+  -E_n(\bm d_n)^{\dagger}N\rVert_2}
+  {\lVert H^\theta\rVert_2\lVert\bm d_n\rVert_2
+  +|E_n|\lVert N\rVert_2\lVert\bm d_n\rVert_2} .
+  \label{eq:left-right-residuals}
+\end{align}
+Here $\bm c_n$ and $\bm d_n$ are coefficient vectors, and
+$\lVert\cdot\rVert_2$ is the Euclidean or induced matrix norm.
+
+\subsection{Pole-identification protocol}
+\label{subsec:pole-protocol}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{pseudospectrum}
+\index{pseudostate}
+% END CURATED SUBJECT INDEX
+
+A reproducible complex-scaling calculation should separate theorem-level
+invariance from finite-basis evidence.  We recommend the following tests.
+
+First, track eigenvalue trajectories under a range of scaling angles.  A
+continuum pseudostate follows the ray $\arg(E-E_a)\simeq-2\theta$, whereas a
+resonance develops a stationary segment after exposure.  Second, repeat the
+tracking while increasing $N$ and changing the distribution of basis widths.
+Third, compare at least two basis families when possible.  Fourth, monitor the
+condition number of $N$, left--right overlap, and residuals.  Fifth, inspect
+the smallest singular value of $zN-H^\theta$ around a candidate pole.  A large
+pseudospectral cloud warns that small discretization errors can move the
+eigenvalue substantially even when its trajectory looks stationary.
+
+For black-hole problems, a sixth test is available: compare low-lying
+frequencies against a method with different analytic systematics, such as
+Leaver's continued fraction
+\cite{Leaver:1985ax,Ogawa:2026veu}.  Agreement of a few digits is not the end
+of validation; the scaling-angle plateau and basis stability identify why the
+number belongs to the intended pole rather than to a coincidentally accurate
+pseudostate.
+
+\subsection{Complex absorbing potentials and stabilization}
+\label{subsec:cap-stabilization}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{complex scaling}
+\index{complex absorbing potential}
+\index{stabilization method}
+% END CURATED SUBJECT INDEX
+
+An alternative is to add a complex absorbing potential,
+\begin{equation}
+  H(\eta)=H-\rmi\eta W,
+  \qquad \eta>0,
+  \qquad W\succeq0,
+  \label{eq:cap}
+\end{equation}
+with $W$ supported outside the interaction region.  Resonances are inferred
+from stationary eigenvalue trajectories as $\eta$ varies.  The logic is close
+to complex scaling, but a finite absorber changes the operator rather than
+implementing an exact analytic deformation.  Results should be extrapolated
+or optimized in $\eta$ and absorber shape.  Stabilization methods similarly
+identify resonances by weak dependence on box size or nonlinear basis scales.
+These methods are valuable cross-checks but do not replace a definition of
+the continued pole.

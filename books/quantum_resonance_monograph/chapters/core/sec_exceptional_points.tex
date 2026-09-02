@@ -1,0 +1,228 @@
+\section{Exceptional points as multiple zeros of the pole condition}
+\label{sec:exceptional-points}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{exceptional point}
+\index{Jordan chain}
+\index{self-orthogonality}
+% END CURATED SUBJECT INDEX
+
+\calculationroute
+  {A parameter-dependent incoming coefficient and left--right resonance
+  normalization.}
+  {Expand the analytic pole condition at a multiple zero and translate the
+  result into a Jordan chain and self-orthogonality.}
+  {Distinguish an exceptional resonance from an accidental crossing or a
+  discretized-continuum artifact.}
+
+\subsection{Degeneracy, defectiveness, and Jordan chains}
+\label{subsec:ep-definition}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{operator!closed}
+\index{spectrum!point}
+\index{resolvent}
+\index{Feshbach projection}
+\index{self-energy}
+\index{exceptional point}
+\index{Jordan chain}
+\index{exceptional point!defectiveness}
+% END CURATED SUBJECT INDEX
+
+Let $H(\lambda)$ be an analytic family of closed operators or of finite-basis
+approximations, with complex control parameter $\lambda$.  A spectral
+degeneracy at $\lambda=\vsub{\lambda}{EP}$ is an exceptional point if the
+algebraic multiplicity exceeds the geometric multiplicity.  For a second-order
+exceptional point, there is one eigenvector $\ket{\chi_0}$ and one associated
+vector $\ket{\chi_1}$ satisfying
+\begin{align}
+  \left(\vsub{H}{EP}-\vsub{E}{EP}\right)
+  \ket{\chi_0}&=0,
+  \notag\\
+  \left(\vsub{H}{EP}-\vsub{E}{EP}\right)
+  \ket{\chi_1}&=\ket{\chi_0},
+  \label{eq:jordan-chain}
+\end{align}
+where $\vsub{H}{EP}=H(\vsub{\lambda}{EP})$.  The restriction of
+$\vsub{H}{EP}$ to the root subspace is a $2\times2$ Jordan block.  A
+diabolic degeneracy of a self-adjoint family, by contrast, has two independent
+eigenvectors and no Jordan chain.
+
+Near a generic second-order exceptional point, the characteristic equation
+has the local form
+\begin{equation}
+  (E-\vsub{E}{EP})^2
+  -c(\lambda-\vsub{\lambda}{EP})
+  +\text{higher-order terms}=0,
+  \label{eq:ep-characteristic}
+\end{equation}
+where $c\ne0$ is a complex coefficient.  The eigenvalues have Puiseux
+expansions
+\begin{equation}
+  E_{\pm}(\lambda)
+  =\vsub{E}{EP}
+  \pm\alpha(\lambda-\vsub{\lambda}{EP})^{1/2}
+  +\order(\lambda-\vsub{\lambda}{EP}),
+  \label{eq:ep-puiseux}
+\end{equation}
+with $\alpha^2=c$.  Encircling the branch point once exchanges $E_+$ and
+$E_-$; two encirclements return the eigenvalue to its original sheet.
+
+The square root is generic but not universal.  A $p$th-order Jordan block gives
+fractional powers $(\lambda-\vsub{\lambda}{EP})^{1/p}$, while a continuum
+threshold can modify the exponent through the energy dependence of the
+self-energy in Eq.~\eqref{eq:feshbach-H}.  The local singularity must be
+derived from the continued resolvent rather than inferred only from a finite
+matrix fit
+\cite{Ashida2020NonHermitian,Garmon2021AnomalousEP}.
+
+\subsection{Self-orthogonality and eigenvalue condition numbers}
+\label{subsec:self-orthogonality}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{pseudospectrum}
+\index{biorthogonality}
+\index{complex-symmetric operator}
+\index{exceptional point}
+\index{self-orthogonality}
+% END CURATED SUBJECT INDEX
+
+For a simple eigenvalue, choose right and left eigenvectors
+$\ket{\Psi^{\mathrm R}}$ and $\bra{\Psi^{\mathrm L}}$.  First-order
+perturbation theory contains the denominator
+\begin{equation}
+  \braket{\Psi^{\mathrm L}|\Psi^{\mathrm R}} .
+  \label{eq:left-right-overlap}
+\end{equation}
+At an exceptional point, the left eigenvector is orthogonal to the coalesced
+right eigenvector in the biorthogonal pairing:
+\begin{equation}
+  \braket{\chi_0^{\mathrm L}|\chi_0^{\mathrm R}}=0 .
+  \label{eq:ep-self-orthogonality}
+\end{equation}
+If one enforces unit overlap away from the EP, the individual vector norms
+diverge as the EP is approached.  A useful sensitivity measure is
+\begin{equation}
+  \mathcal K_n
+  =\frac{\lVert\Psi_n^{\mathrm R}\rVert
+  \lVert\Psi_n^{\mathrm L}\rVert}
+  {\left|\braket{\Psi_n^{\mathrm L}|\Psi_n^{\mathrm R}}\right|} .
+  \label{eq:eigenvalue-condition-number}
+\end{equation}
+The condition number $\mathcal K_n$ diverges at self-orthogonality.  Large
+$\mathcal K_n$ also means that a small operator perturbation can move the
+eigenvalue substantially.  This links EP physics to pseudospectral
+sensitivity.
+
+For a complex-symmetric representation, the overlap in
+Eq.~\eqref{eq:ep-self-orthogonality} becomes the $c$ product.  A vanishing
+$c$ norm is therefore not evidence that the wave function itself vanishes; it
+is the diagnostic that right and left eigendirections have coalesced.
+
+\subsection{Exceptional points in an open scattering problem}
+\label{subsec:ep-scattering}
+% BEGIN CURATED SUBJECT INDEX
+\index{topology}
+\index{spectrum!point}
+\index{Riemann sheet}
+\index{pseudostate}
+\index{CDCC!bin discretization}
+\index{exceptional point}
+\index{exceptional point!defectiveness}
+% END CURATED SUBJECT INDEX
+
+There are three distinct situations that are sometimes grouped together.
+First, two isolated resonance poles may coalesce on a nonphysical sheet.
+Second, a resonance pole may meet a threshold branch point.  Third, a pole may
+meet the complex-scaled continuum in a particular $L^2$ representation.  Only
+when the analytic family develops a defective root subspace is the event an
+exceptional point in the operator-theoretic sense.  A visual crossing of a
+finite-basis continuum ray is not sufficient.
+
+The complex-scaling method provides a controlled setting for the third
+situation.  An exposed resonance is a discrete eigenvalue of $H_\theta$.  As a
+physical parameter $\lambda$ changes, its pole trajectory can reach the
+rotated continuum.  In a momentum-bin discretization, one can identify a
+particular continuum pseudostate that coalesces with the resonance, verify the
+vanishing discriminant, and follow the resulting branch exchange.  The
+continuum limit must then be taken through smeared states or a specified test
+space
+\cite{Morikawa:2025inx}.
+
+Changing the scaling angle $\theta$ at fixed physical Hamiltonian is different.
+The pole does not move in the exact problem; only the boundary of its $L^2$
+representation moves.  Loss of exposure at a critical angle need not be a
+physical EP.  It becomes an EP problem only if the chosen analytic family and
+root subspace satisfy the defectiveness conditions.  This distinction avoids
+assigning topological charge to a numerical continuum crossing created solely
+by truncation.
+
+\subsection{Feshbach description of pole coalescence}
+\label{subsec:ep-feshbach}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{resonance!residue}
+\index{Feshbach projection}
+\index{effective Hamiltonian}
+\index{exceptional point}
+% END CURATED SUBJECT INDEX
+
+In a two-dimensional $P$ space, the effective Hamiltonian can be written
+\begin{equation}
+  \vsub{H}{eff}(z,\lambda)
+  =H_{PP}(\lambda)+\Sigma(z,\lambda) .
+  \label{eq:ep-effective-H}
+\end{equation}
+The pole equation is
+\begin{equation}
+  D(z,\lambda)
+  =\det\left[z-\vsub{H}{eff}(z,\lambda)\right]=0 .
+  \label{eq:ep-determinant}
+\end{equation}
+A second-order pole coalescence satisfies
+\begin{equation}
+  D(\vsub{z}{EP},\vsub{\lambda}{EP})=0,
+  \qquad
+  \left.\frac{\partial D}{\partial z}\right|_{\mathrm{EP}}=0 .
+  \label{eq:ep-double-root}
+\end{equation}
+Generically, a second control condition is needed if all parameters are
+restricted to be real.  Complex continuation reduces the local geometry to
+the square-root form in Eq.~\eqref{eq:ep-puiseux}.  If
+$\partial_z\Sigma$ diverges at a threshold, the balance in
+Eq.~\eqref{eq:ep-double-root} changes and noninteger orders other than $1/2$
+can appear.
+
+This formulation makes clear that an EP is a statement about both eigenvalues
+and residues.  At a double pole, the resolvent contains
+\begin{equation}
+  \Resolvent(z)
+  =\frac{A_{-2}}{(z-\vsub{z}{EP})^2}
+  +\frac{A_{-1}}{z-\vsub{z}{EP}}
+  +\vsub{\Resolvent}{reg}(z) ,
+  \label{eq:ep-resolvent-laurent}
+\end{equation}
+where $A_{-2}$ and $A_{-1}$ act on the Jordan root subspace.  A fit of pole
+locations without residues cannot distinguish all possible near-degenerate
+line shapes.
+
+\subsection{Dynamics around an exceptional point}
+\label{subsec:ep-dynamics}
+% BEGIN CURATED SUBJECT INDEX
+\index{monodromy}
+\index{adiabatic approximation}
+\index{exceptional point}
+\index{geometric phase}
+% END CURATED SUBJECT INDEX
+
+The spectral monodromy of Eq.~\eqref{eq:ep-puiseux} is independent of how a
+parameter loop is traversed.  Actual time-dependent encircling is more subtle.
+The adiabatic theorem for a non-normal decaying system can fail because decay
+rates select the least lossy branch and exponentially amplify small
+nonadiabatic components.  A geometric phase extracted from analytic
+continuation should therefore be distinguished from a state-transfer protocol
+in real time.  Experiments on dissipative qubits and monitored systems probe
+both aspects but require an explicit unraveling or measurement model
+\cite{Foroozani:2015jfz,Naghiloo:2019dqw,
+Breuer2016NonMarkovian,Gneiting:2020pew}.

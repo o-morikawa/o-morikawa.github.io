@@ -1,0 +1,500 @@
+\section{From finite-dimensional quantum mechanics to spectral analysis}
+\label{sec:quantum-foundations}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+% END CURATED SUBJECT INDEX
+
+Resonance theory does not replace ordinary quantum mechanics.  It asks how
+far the usual structure can be continued when a prepared packet leaks into a
+continuum.  We therefore begin with the pieces that survive unchanged and
+separate them from the pieces that require analytic continuation.  The first
+principle is simple: a closed system is described by a self-adjoint
+Hamiltonian on a declared Hilbert-space domain.  Complex resonance energies
+will emerge from boundary values and continuation of objects constructed from
+that Hamiltonian; they are not complex outcomes of an energy measurement.
+
+\subsection{States, effects, and transition probabilities}
+\label{subsec:states-effects}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{Hilbert space}
+\index{topology}
+\index{measure theory}
+\index{spectral theorem}
+\index{spectral measure}
+\index{trace-class operator}
+% END CURATED SUBJECT INDEX
+
+Let $\Hil$ be a complex separable Hilbert space with inner product linear in
+its second argument.  We write $\BHil$ for the bounded operators.
+For $A\in\BHil$ let
+$|A|=(A^\dagger A)^{1/2}$.  The operator is \term{trace class} when
+\begin{equation}
+  \|A\|_1=\Tr|A|<\infty .
+  \label{eq:trace-class-definition}
+\end{equation}
+Such operators form an ideal $\BHilideal{1}$, and
+$A\mapsto\Tr(\rho A)$ is continuous on $\BHil$ whenever
+$\rho\in\BHilideal{1}$.  A pure state is a ray, not a particular vector:
+$\psi$ and $\rme^{\rmi\alpha}\psi$ represent the same state.  A mixed state is
+a positive trace-class operator $\rho$ with $\Tr\rho=1$.  An effect is a
+bounded operator $F$ satisfying $0\leq F\leq\identity$, and the probability of
+the corresponding event is
+\begin{equation}
+  p(F|\rho)=\Tr(\rho F).
+  \label{eq:born-effect}
+\end{equation}
+A projection is a repeatable sharp effect, but scattering detectors are often
+better represented by positive operator-valued measures because they have
+finite angular, spatial, and energy resolution.
+
+For later use, $A_n$ converges to $A$ in the \term{weak operator topology}
+when
+\begin{equation}
+  \dualpair{\phi}{A_n\psi}\longrightarrow
+  \dualpair{\phi}{A\psi}
+  \quad\text{for every $\phi$, $\psi\in\Hil$} .
+  \label{eq:wot-first-definition}
+\end{equation}
+A positive operator-valued measure $F(\Delta)$ on a measurable outcome space
+$(X,\Sigma)$ satisfies $F(X)=\identity$, $F(\Delta)\geq0$, and countable
+additivity in this topology.  A \term{projection-valued measure} (PVM) is a
+POVM whose values are orthogonal projections.  The probability distribution
+is
+\begin{equation}
+  \mathbb P_\rho(\Delta)=\Tr[\rho F(\Delta)].
+  \label{eq:povm-probability}
+\end{equation}
+For an ideal energy measurement of a self-adjoint Hamiltonian, $F$ is the
+projection-valued spectral measure $P_H$.  Since $P_H$ is supported on the
+real line, no measurement of the closed Hamiltonian returns
+$E_* -\rmi\Gamma/2$.  The pair $(E_*,\Gamma)$ is inferred from the analytic
+shape and time dependence of real measurement probabilities.
+
+For normalized pure states the transition probability is
+\begin{equation}
+  p(\phi|\psi)=|\dualpair{\phi}{\psi}|^2.
+  \label{eq:transition-probability}
+\end{equation}
+Wigner's theorem says that a bijection of rays preserving these probabilities
+is implemented by a unitary or antiunitary operator.  A one-parameter unitary
+group is \term{strongly continuous} if
+$\|(U(t)-\identity)\psi\|\to0$ as $t\to0$ for every $\psi\in\Hil$.
+Stone's theorem says that every strongly continuous one-parameter unitary
+group has a unique self-adjoint generator $H$,
+\begin{equation}
+  U(t)=\rme^{-\rmi tH/\hbar},
+  \qquad U(t+s)=U(t)U(s).
+  \label{eq:stone-evolution}
+\end{equation}
+Self-adjointness, not merely formal symmetry of a differential expression,
+is what guarantees unitarity for all real time.
+
+\subsection{The finite-dimensional model and what fails in the continuum}
+\label{subsec:finite-to-continuum}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{spectrum!continuous}
+\index{spectrum!point}
+\index{resolvent}
+\index{wave packet}
+\index{resonance!residue}
+% END CURATED SUBJECT INDEX
+
+In $\complex^N$, every linear operator is bounded and defined everywhere.
+A Hermitian matrix admits an orthonormal eigenbasis,
+\begin{equation}
+  H=\sum_{n=1}^N E_n P_n,
+  \qquad P_nP_m=\delta_{nm}P_n,
+  \qquad \sum_nP_n=\identity .
+  \label{eq:finite-spectral-resolution}
+\end{equation}
+The resolvent is the rational matrix-valued function
+\begin{equation}
+  \Resolvent(z)=(z-H)^{-1}=\sum_n\frac{P_n}{z-E_n}.
+  \label{eq:finite-resolvent}
+\end{equation}
+Its poles are real and its residues are orthogonal projections.  If a finite
+matrix has a nonreal eigenvalue, then it is not Hermitian.  This elementary
+statement remains true in infinite dimensions, but three new structures
+appear:
+\begin{enumerate}[label=(\roman*)]
+  \item physically important operators are unbounded and their domains
+  determine their adjoints;
+  \item a continuous spectrum is represented by a measure rather than a sum
+  of normalizable eigenvectors; and
+  \item analytic continuation across that continuum can have poles that are
+  not poles of the physical resolvent on $\complex\setminus\real$.
+\end{enumerate}
+Resonance theory is built from item (iii), while keeping (i) and (ii) exact.
+
+The replacement of Eq.~\eqref{eq:finite-spectral-resolution} is
+\begin{equation}
+  H=\int_\real E\dd P_H(E).
+  \label{eq:spectral-theorem-preview}
+\end{equation}
+An atom of $P_H$ is a normalizable eigenstate.  An interval on which the
+measure is absolutely continuous describes continuum wave packets.  The
+formal notation $\ket{E}$ is a distributional coordinate for this integral,
+not a vector of norm one.  Stage I will construct the measure and its direct-integral multiplicity spaces explicitly.
+
+\subsection{Domains through the simplest boundary-value problem}
+\label{subsec:momentum-interval-domain}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{self-adjoint extension}
+\index{spectrum!point}
+\index{exact WKB}
+\index{monodromy}
+\index{Frobenius solution}
+% END CURATED SUBJECT INDEX
+
+The derivative on an interval shows why an operator is more than a formula.
+Let
+\begin{equation}
+  p_0=-\rmi\hbar\frac{\rmd}{\rmd x},
+  \qquad
+  D(p_0)=C_c^\infty(0,L)
+  \subset L^2(0,L).
+  \label{eq:minimal-momentum}
+\end{equation}
+Integration by parts gives no boundary term on this domain, so $p_0$ is
+symmetric.  Its adjoint acts by the same differential expression on the
+larger Sobolev domain $H^1(0,L)$.  Hence $p_0\neq p_0^\dagger$ and the minimal
+operator is not self-adjoint.  The self-adjoint extensions are
+\begin{equation}
+  D(p_\alpha)=\left\{\psi\in H^1(0,L):
+    \psi(L)=\rme^{\rmi\alpha}\psi(0)\right\},
+  \qquad \alpha\in[0,2\pi),
+  \label{eq:momentum-extensions}
+\end{equation}
+with eigenvalues
+\begin{equation}
+  p_n=\frac{\hbar}{L}(2\pi n+\alpha),
+  \qquad n\in\bbZ.
+  \label{eq:momentum-extension-spectrum}
+\end{equation}
+The same formal derivative therefore defines a family of quantum
+observables.  Boundary conditions are spectral data.
+
+For a second-order radial expression the endpoint classification is richer.
+Square-integrability may fix the allowed behavior, or a one-parameter family
+of self-adjoint extensions may remain.  Exact WKB sees this information as a
+Frobenius index and local monodromy.  The radial Stage will not invent a new
+boundary condition; it will translate the operator-domain choice into
+connection data.
+
+\subsection{Quadratic forms and Schr\"odinger Hamiltonians}
+\label{subsec:quadratic-form-hamiltonian}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{spectral theorem}
+\index{complex scaling}
+% END CURATED SUBJECT INDEX
+
+For singular potentials, the energy form is often easier to define than the
+operator.  On $L^2(\real^d)$ consider
+\begin{equation}
+  q[\psi]
+  =\frac{\hbar^2}{2\mu}\int|\nabla\psi|^2\dd^dx
+   +\int V(x)|\psi(x)|^2\dd^dx .
+  \label{eq:schrodinger-form}
+\end{equation}
+If $q$ is densely defined, closed, and bounded below, the representation
+theorem associates a unique self-adjoint operator $H$ such that
+$q[\phi,\psi]=\dualpair{\phi}{H\psi}$ for $\psi\in D(H)$.  A useful
+sufficient condition is that the negative part $V_-$ be form-bounded with
+respect to $-\Delta$ with relative bound smaller than one:
+\begin{equation}
+  \int V_-|\psi|^2
+  \leq a\int|\nabla\psi|^2+b\|\psi\|^2,
+  \qquad 0\leq a<1.
+  \label{eq:form-bound}
+\end{equation}
+This construction makes clear which Hamiltonian is being continued by
+complex scaling.  A basis diagonalization without a specified closed
+operator may still be a useful numerical model, but it cannot by itself
+invoke the spectral theorems proved for $H$.
+
+\subsection{Tensor products, internal coordinates, and channels}
+\label{subsec:tensor-products-channels}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{direct integral}
+\index{tensor product!gauge constraint}
+\index{pseudostate}
+\index{Feshbach projection}
+\index{antisymmetrization}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+
+Composite systems are described by tensor products.  If the degrees of
+freedom are separated into a projectile internal space $\Hil_P$ and a
+relative projectile--target space $\Hil_R$, then
+\begin{equation}
+  \Hil=\Hil_R\otimes\Hil_P,
+  \qquad
+  H=K_R\otimes\identity+
+     \identity\otimes h_P+U.
+  \label{eq:projectile-target-tensor}
+\end{equation}
+An eigenstate $\Phi_i$ of $h_P$ defines a channel.  If $h_P$ has a continuum,
+the channel label includes its energy and degeneracy; mathematically this is
+a direct integral rather than a countable tensor-product basis.  CDCC will
+replace a selected continuum interval by a finite set of normalized bin or
+pseudostates and then test convergence as that discretization is refined.
+
+For identical particles one first projects onto the symmetric or
+antisymmetric subspace.  For a subsystem decomposition the reduced density
+operator is defined by the partial trace,
+\begin{equation}
+  \Tr_{\Hil_A}(\rho_A A)
+  =\Tr_{\Hil_A\otimes\Hil_B}
+    [\rho(A\otimes\identity_B)].
+  \label{eq:partial-trace}
+\end{equation}
+A reduced state may evolve nonunitarily even when the complete state evolves
+unitarily.  This kinematic nonunitarity must not be confused with the
+stationary non-self-adjoint operators produced by Feshbach elimination or
+complex deformation.
+
+\subsection{Projection, elimination, and energy-dependent effective operators}
+\label{subsec:projection-preview}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{boundary condition!incoming and outgoing}
+\index{Feshbach projection}
+\index{self-energy}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+
+Let $P$ be an orthogonal projection and $Q=\identity-P$.  Splitting
+$(E-H)\Psi=0$ gives
+\begin{align}
+  (E-PHP)P\Psi&=PHQ\,Q\Psi,
+  \label{eq:P-projected}\\
+  (E-QHQ)Q\Psi&=QHP\,P\Psi.
+  \label{eq:Q-projected}
+\end{align}
+When the chosen boundary value of $(E-QHQ)^{-1}$ exists, elimination yields
+\begin{equation}
+  [E-\vsub{H}{eff}(E)]P\Psi=0,
+  \qquad
+  \vsub{H}{eff}(E)
+  =PHP+PHQ(E-QHQ)^{-1}QHP.
+  \label{eq:feshbach-preview}
+\end{equation}
+Even though $H$ is self-adjoint, an outgoing boundary value makes
+$\vsub{H}{eff}(E)$ non-self-adjoint.  Its energy dependence also changes
+the normalization: differentiating the secular equation produces a factor
+$\identity-\partial_E\vsub{H}{eff}$.  The eliminated continuum is not
+lost; it is encoded in the analytic self-energy.  CDCC makes a complementary
+choice by retaining a finite set of continuum configurations explicitly.
+
+\subsection{Survival amplitude and the origin of exponential decay}
+\label{subsec:survival-spectral-measure}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectral measure}
+% END CURATED SUBJECT INDEX
+
+For a normalized prepared vector $\psi$, the survival amplitude is the
+Fourier transform of its spectral measure,
+\begin{equation}
+  A_\psi(t)
+  =\dualpair{\psi}{\rme^{-\rmi Ht/\hbar}\psi}
+  =\int_\real\rme^{-\rmi Et/\hbar}\dd\mu_\psi(E).
+  \label{eq:survival-spectral-fourier}
+\end{equation}
+Because the integral is over real $E$, exact decay is compatible with
+unitarity.  Suppose the density has an analytic continuation with a pole at
+$\resonantE=E_*-\rmi\Gamma/2$.  For $t>0$, a contour deformation into the lower
+half-plane gives schematically
+\begin{equation}
+  A_\psi(t)
+  =Z\rme^{-\rmi \resonantE t/\hbar}
+   +\vsub{A}{cut}(t)+\vsub{A}{arc}(t).
+  \label{eq:survival-pole-cut}
+\end{equation}
+The pole term is exponential.  Threshold branch points supply the long-time
+power law, while the large-energy behavior enforces the short-time quadratic
+law.  A resonance pole is therefore a controlled component of unitary
+dynamics, not a literal complex spectral value of $H$.
+
+Expanding at $t=0$ when $\psi\in D(H^2)$ gives
+\begin{align}
+  A_\psi(t)
+  &=1-\frac{\rmi t}{\hbar}\braket{H}
+    -\frac{t^2}{2\hbar^2}\braket{H^2}+O(t^3),\\
+  |A_\psi(t)|^2
+  &=1-\frac{t^2}{\hbar^2}(\Delta H)^2+O(t^3).
+  \label{eq:zeno-quadratic}
+\end{align}
+No strictly exponential law has this derivative at the origin.  At the other
+end, a lower spectral bound prevents a pure exponential for all positive
+time.  These statements locate the pole approximation without diminishing
+its usefulness in the intermediate window.
+
+\subsection{Resolvents as the interface between dynamics and analytic continuation}
+\label{subsec:resolvent-interface}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{operator!closed}
+\index{Hilbert space}
+\index{topology}
+\index{spectral measure}
+\index{spectrum!essential}
+\index{spectrum!point}
+\index{resolvent}
+\index{resolvent set}
+\index{exact WKB}
+% END CURATED SUBJECT INDEX
+
+For a closed operator $H$, the \term{resolvent set} $\resolventset(H)$ consists of
+those $z\in\complex$ for which $z-H:D(H)\to\Hil$ is bijective and has a
+bounded inverse defined on all of $\Hil$.  Its complement
+\begin{equation}
+  \spectrum(H)=\complex\setminus\resolventset(H)
+  \label{eq:spectrum-first-definition}
+\end{equation}
+is the \term{spectrum}.  For a self-adjoint operator it is a closed subset of
+$\real$.  The point spectrum consists of eigenvalues.  The continuous and
+residual parts distinguish failure of surjectivity from failure of dense
+range; the residual spectrum of a self-adjoint operator is empty.  We shall
+also use the self-adjoint \term{essential spectrum}
+$\essspectrum(H)$, obtained by removing isolated eigenvalues of
+finite multiplicity from $\spectrum(H)$.
+
+For $z\in\resolventset(H)$ define
+\begin{equation}
+  \Resolvent(z)=(z-H)^{-1}.
+  \label{eq:resolvent-definition-foundations}
+\end{equation}
+The resolvent identity
+\begin{equation}
+  \Resolvent(z)-\Resolvent(w)=(w-z)\Resolvent(z)\Resolvent(w)
+  \label{eq:resolvent-identity-foundations}
+\end{equation}
+shows that $\Resolvent(z)$ is analytic as a bounded-operator-valued function on the
+resolvent set.  The spectral measure is recovered from its boundary values by
+Stone's formula,
+\begin{equation}
+  \dualpair{\phi}{P_H((a,b))\psi}
+  =\lim_{\epsilon\downarrow0}\frac{1}{2\pi\rmi}
+   \int_a^b\dualpair{\phi}{
+   [\Resolvent(E-\rmi\epsilon)-\Resolvent(E+\rmi\epsilon)]\psi}\dd E,
+  \label{eq:stone-formula-foundations}
+\end{equation}
+with endpoint qualifications.  This formula already contains the continuum
+as a jump across the real axis.
+
+The operator-valued resolvent of a self-adjoint $H$ has no nonreal pole.  A
+resonance appears when selected matrix elements, weighted resolvents, or
+kernel continuations cross the continuous-spectrum cut to another sheet.
+The test vectors and weights are therefore part of the statement.  Complex
+scaling replaces that continuation by a deformed closed operator for which
+the pole becomes a genuine discrete eigenvalue.  Rigged Hilbert spaces keep
+the test-vector topology explicit.  Exact WKB constructs the same
+continuation directly from solutions of the differential equation.
+
+\subsection{Basis truncation: what the Ritz method proves and what it does not}
+\label{subsec:basis-truncation}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{spectrum!essential}
+\index{spectrum!point}
+\index{resolvent}
+\index{pseudospectrum}
+\index{exceptional point}
+\index{self-orthogonality}
+% END CURATED SUBJECT INDEX
+
+A bounded operator $K$ is \term{normal} when
+$K^\dagger K=KK^\dagger$; self-adjoint and unitary operators are normal.
+For a closed, possibly nonnormal operator, the $\epsilon$-pseudospectrum is
+\begin{equation}
+  \pseudospectrum(K)
+  =\spectrum(K)\cup
+   \left\{z\in\resolventset(K):\|(z-K)^{-1}\|>\epsilon^{-1}\right\}.
+  \label{eq:pseudospectrum-definition}
+\end{equation}
+For normal $K$ this is precisely the open $\epsilon$-neighborhood of its
+spectrum.  A nonnormal operator may have much larger pseudospectral regions;
+small perturbations or truncation errors can then move its eigenvalues by far
+more than their norm would suggest.
+
+Let $V_N\subset D(q)$ be an $N$-dimensional trial space with basis
+$\{\varphi_i\}$.  A variational calculation solves
+\begin{equation}
+  \sum_j H_{ij}c_j=E_N\sum_jN_{ij}c_j,
+  \quad
+  H_{ij}=q[\varphi_i,\varphi_j],
+  \quad
+  N_{ij}=\dualpair{\varphi_i}{\varphi_j}.
+  \label{eq:generalized-ritz}
+\end{equation}
+For a semibounded self-adjoint operator, the min--max principle controls
+isolated eigenvalues below the essential spectrum: increasing nested trial
+spaces gives upper bounds that converge under standard density hypotheses.
+No analogous variational ordering identifies arbitrary complex eigenvalues
+of a nonnormal matrix.  In a complex-scaled calculation, convergence must be
+established by the analytic-deformation theorem together with numerical
+stability under basis size, nonlinear basis parameters, and scaling angle.
+
+The residual
+\begin{equation}
+  r_N=(H^\theta-E_N)\psi_N
+  \label{eq:complex-residual}
+\end{equation}
+is necessary but not sufficient: a highly nonnormal operator can have small
+residuals far from its spectrum.  Left and right eigenvectors and the
+condition number
+\begin{equation}
+  \kappa_n=
+  \frac{\|\psi_n^R\|\,\|\psi_n^L\|}
+       {|\dualpair{\psi_n^L}{\psi_n^R}|}
+  \label{eq:foundations-eigenvalue-condition-number}
+\end{equation}
+measure sensitivity.  Its divergence signals self-orthogonality near an
+exceptional point.  The pseudospectrum gives the global version of the same
+warning.
+
+\subsection{Three distinctions used throughout the book}
+\label{subsec:three-foundational-distinctions}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{locally convex space}
+\index{topology}
+\index{measure theory}
+\index{spectrum!point}
+\index{Jost function}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{infrared problem}
+\index{dressing state}
+% END CURATED SUBJECT INDEX
+
+The following distinctions prevent most category errors in resonance
+calculations.
+
+\begin{description}[style=nextline]
+  \item[Closed dynamics versus effective evolution.]
+  $H$ is self-adjoint and generates unitary time evolution.  A reduced,
+  outgoing, absorbing, or deformed generator may be non-self-adjoint for a
+  specific reason that must be stated.
+
+  \item[Spectral value versus continued pole.]
+  The spectrum of $H$ is real.  A resonance energy is a pole of a continued
+  matrix element, $S$ matrix, Jost function, or an eigenvalue of a theorem-
+  controlled deformation.
+
+  \item[Representation choice versus invariant datum.]
+  A contour, scaling angle, test space, basis, bin width, or infrared dressing
+  chooses a representation.  The pole condition, residue after the correct
+  pairing, and measurable response must agree when two representations cover
+  the same analytic sector.
+\end{description}
+
+The remainder of Stage I equips these statements with their precise
+topological, measure-theoretic, and operator-algebraic meaning.  Once that is
+done, later Stages will refer back to this chapter instead of redefining
+``state,'' ``spectrum,'' or ``continuum'' in each application.

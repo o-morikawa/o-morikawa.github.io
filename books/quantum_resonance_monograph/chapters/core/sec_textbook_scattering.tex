@@ -1,0 +1,420 @@
+\section{Step 1: Extract asymptotic coefficients from a scattering problem}
+\label{sec:textbook-scattering}
+% BEGIN CURATED SUBJECT INDEX
+\index{Jost function}
+\index{Wronskian}
+\index{wave packet}
+\index{Lippmann--Schwinger equation}
+\index{cross section}
+\index{partial-wave expansion}
+\index{boundary condition!incoming and outgoing}
+\index{Zel'dovich regularization}
+% END CURATED SUBJECT INDEX
+
+\calculationroute
+  {The Schr\"odinger equation, wave packets, and elementary partial-wave
+  decomposition.}
+  {Define the comparison dynamics, flux normalization, Jost bases, and
+  incoming/outgoing coefficients that will enter the exact-WKB connection
+  problem.}
+  {Given a short-range potential, write the Lippmann--Schwinger and partial-
+  wave problems with consistent sheet, flux, and Wronskian conventions.}
+
+This section fixes the elementary scattering-theory conventions used in the
+rest of the book.  The order of presentation follows the traditional route
+from wave packets and cross sections to partial waves, integral equations,
+scattering matrices, and Jost functions.  Useful complementary treatments are
+given by Sasakawa, Taylor, Perelomov and Zel'dovich, and Rakityansky
+\cite{Sasakawa:1991,Taylor:1972,PerelomovZeldovich:1998,
+Rakityansky:2022Jost}.  These references record provenance and alternative
+conventions; the definitions and derivations needed below are developed here.
+The steps that begin as ordinary collision theory will later become analytic
+continuation, resonance normalization, and complex spectral deformation.
+
+\subsection{Two-body reduction and the class of potentials}
+\label{subsec:two-body-reduction}
+% BEGIN CURATED SUBJECT INDEX
+\index{Jost function}
+\index{wave operator}
+\index{scattering!Coulomb}
+\index{radial equation}
+% END CURATED SUBJECT INDEX
+
+Consider two spinless particles with masses $m_1$ and $m_2$ interacting
+through a translationally invariant potential $V(\bm r_1-\bm r_2)$.  With
+center-of-mass and relative coordinates
+\begin{equation}
+  \bm R=\frac{m_1\bm r_1+m_2\bm r_2}{m_1+m_2},
+  \qquad
+  \bm r=\bm r_1-\bm r_2,
+  \label{eq:cm-relative-coordinates}
+\end{equation}
+the Hamiltonian separates as
+\begin{equation}
+  \vsub{H}{tot}
+  =-\frac{\hbar^2}{2(m_1+m_2)}\nabla_{\bm R}^2+H,
+  \qquad
+  H=H_0+V,
+  \qquad
+  H_0=-\frac{\hbar^2}{2\mu}\nabla_{\bm r}^2,
+  \label{eq:two-body-relative-H}
+\end{equation}
+where $\mu=m_1m_2/(m_1+m_2)$ is the reduced mass.  The center-of-mass
+plane wave is dynamically trivial, so the collision problem is the spectral
+problem for $H$.
+
+We first assume a real, local, central potential $V(r)$ that is nonsingular
+enough at the origin and short ranged at infinity.  A representative
+sufficient condition for the simplest one-channel statements is
+\begin{equation}
+  \int_0^\infty \rmd r\,r\lvert V(r)\rvert<\infty .
+  \label{eq:short-range-condition}
+\end{equation}
+The exact hypotheses vary with the result: existence of wave operators,
+analyticity of Jost functions, and dilation analyticity require different
+weights or regularity.  Coulomb forces violate
+Eq.~\eqref{eq:short-range-condition}; one must then replace free asymptotic
+waves by Coulomb waves and factor out the known Coulomb phase.  Nonlocal,
+coupled-channel, optical, and energy-dependent interactions are introduced
+only after the one-channel structure is clear.
+
+For a central potential, separation in spherical harmonics gives
+\begin{equation}
+  \psi(\bm r)=\sum_{lm}\frac{u_l(r)}{r}Y_{lm}(\widehat{\bm r}),
+  \label{eq:partial-wave-decomposition}
+\end{equation}
+and the reduced radial equation
+\begin{equation}
+  \left[-\frac{\hbar^2}{2\mu}\frac{\rmd^2}{\rmd r^2}
+  +\frac{\hbar^2l(l+1)}{2\mu r^2}+V(r)\right]u_l(r)
+  =E u_l(r) .
+  \label{eq:radial-schrodinger-textbook}
+\end{equation}
+Regularity of the full wave function requires
+$u_l(r)=O(r^{l+1})$ at the origin.  The second boundary condition at infinity
+distinguishes bound, scattering, virtual, and resonant solutions.  This is the
+first indication that these are not four unrelated differential equations,
+but four boundary-value realizations of the same radial equation.
+
+\subsection{Wave packets, asymptotic states, and wave operators}
+\label{subsec:wave-packets-operators}
+% BEGIN CURATED SUBJECT INDEX
+\index{locally convex space}
+\index{wave packet}
+\index{wave operator}
+\index{scattering matrix}
+\index{boundary condition!incoming and outgoing}
+\index{Gamow--Siegert state}
+% END CURATED SUBJECT INDEX
+
+A plane wave is not normalizable and does not by itself describe a collision
+prepared at a finite time.  Begin instead with a free wave packet
+\begin{equation}
+  \phi(\bm r,t)
+  =\int\frac{\rmd^3k}{(2\pi)^3}\,
+  a(\bm k)\rme^{\rmi\bm k\cdot\bm r-\rmi E_k t/\hbar},
+  \qquad
+  E_k=\frac{\hbar^2k^2}{2\mu},
+  \label{eq:free-wave-packet}
+\end{equation}
+with $a(\bm k)$ concentrated near an incident momentum $\bm k_0$.  The
+interacting packet is required to approach a free packet before or after the
+collision.  When the strong limits exist, this statement is encoded by the
+M{\o}ller wave operators
+\begin{equation}
+  \Omega^{(\pm)}
+  =\operatorname*{s-lim}_{t\to\mp\infty}
+  \rme^{\rmi Ht/\hbar}\rme^{-\rmi H_0t/\hbar}\vsub{P}{ac}(H_0) .
+  \label{eq:moller-wave-operators}
+\end{equation}
+Here $\vsub{P}{ac}(H_0)$ projects onto the absolutely continuous
+subspace.  The state $\Omega^{(+)}\phi$ has the prescribed incoming free
+packet in the remote past, whereas $\Omega^{(-)}\phi$ has the prescribed
+outgoing free packet in the remote future.  The scattering operator is
+\begin{equation}
+  \Scattering=\Omega^{(-)\dagger}\Omega^{(+)} .
+  \label{eq:scattering-operator-wave}
+\end{equation}
+If the wave operators are isometric and asymptotically complete,
+$\Scattering$ is unitary on the free scattering space.  Asymptotic
+completeness means that all states orthogonal to bound states eventually
+resolve into scattering channels.  It is a theorem under specified
+hypotheses, not an automatic consequence of writing $H=H_0+V$.
+
+The stationary scattering states used below are distributional limits of
+these packets.  Their delta-function normalization is therefore a shorthand
+for a wave-packet construction.  This distinction matters for resonances:
+neither an exact plane wave nor a Gamow state is an ordinary Hilbert-space
+vector, but both define continuous functionals on a suitable test space.
+
+\subsection{Free resolvent and the Lippmann--Schwinger boundary condition}
+\label{subsec:free-resolvent-ls}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{Lippmann--Schwinger equation}
+\index{scattering!on-shell}
+\index{boundary condition!incoming and outgoing}
+% END CURATED SUBJECT INDEX
+
+Let
+\begin{equation}
+  \Resolvent_0(z)=(z-H_0)^{-1} .
+  \label{eq:free-resolvent-textbook}
+\end{equation}
+For $E=\hbar^2k^2/(2\mu)>0$, the coordinate kernel of its outgoing boundary
+value is
+\begin{equation}
+  \bra{\bm r}\Resolvent_0(E+\rmi0)\ket{\bm r'}
+  =-\frac{\mu}{2\pi\hbar^2}
+  \frac{\rme^{\rmi k\lvert\bm r-\bm r'\rvert}}
+  {\lvert\bm r-\bm r'\rvert} .
+  \label{eq:free-green-outgoing}
+\end{equation}
+The sign $+\rmi0$ is not a formal decoration.  Fourier inversion places the
+radial momentum pole on the side of the contour that produces an outgoing
+spherical wave.  The opposite boundary value produces an incoming wave.
+
+For an incident plane wave $\braket{\bm r\vert\bm k}=\rme^{\rmi\bm
+k\cdot\bm r}$, the outgoing Lippmann--Schwinger equation is
+\begin{equation}
+  \ket{\psi_{\bm k}^{(+)}}
+  =\ket{\bm k}+\Resolvent_0(E_k+\rmi0)V
+  \ket{\psi_{\bm k}^{(+)}} .
+  \label{eq:ls-coordinate-foundation}
+\end{equation}
+Substitution of Eq.~\eqref{eq:free-green-outgoing} and expansion at large
+$r$ give
+\begin{equation}
+  \psi_{\bm k}^{(+)}(\bm r)
+  \sim \rme^{\rmi\bm k\cdot\bm r}
+  +f(\widehat{\bm r},\bm k)\frac{\rme^{\rmi kr}}{r},
+  \qquad r\to\infty,
+  \label{eq:scattering-asymptotic-3d}
+\end{equation}
+where
+\begin{equation}
+  f(\widehat{\bm r},\bm k)
+  =-\frac{\mu}{2\pi\hbar^2}
+  \int\rmd^3r'\,
+  \rme^{-\rmi k\widehat{\bm r}\cdot\bm r'}
+  V(\bm r')\psi_{\bm k}^{(+)}(\bm r') .
+  \label{eq:scattering-amplitude-integral}
+\end{equation}
+Thus the radiation condition is already contained in the resolvent boundary
+value.  Later, analytic continuation of precisely this boundary value turns
+the outgoing solution into a resonance state.
+
+The transition operator
+\begin{equation}
+  T(z)=V+V\Resolvent_0(z)T(z)
+  \label{eq:T-foundation}
+\end{equation}
+packages Eq.~\eqref{eq:scattering-amplitude-integral} as
+\begin{equation}
+  f(\widehat{\bm r},\bm k)
+  =-\frac{\mu}{2\pi\hbar^2}
+  \bra{k\widehat{\bm r}}T(E_k+\rmi0)\ket{\bm k} .
+  \label{eq:f-T-relation}
+\end{equation}
+Normalization-dependent factors change if momentum states are normalized
+differently, but pole positions and on-shell observables do not.
+
+\subsection{Flux, cross sections, and the optical theorem}
+\label{subsec:flux-cross-sections}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{optical theorem}
+\index{cross section}
+\index{boundary condition!incoming and outgoing}
+\index{Feshbach projection}
+\index{effective Hamiltonian}
+\index{optical potential}
+% END CURATED SUBJECT INDEX
+
+For a wave function obeying a real-potential Schrodinger equation, the
+probability current is
+\begin{equation}
+  \bm j[\psi]
+  =\frac{\hbar}{2\mu\rmi}
+  \left(\psi^*\nabla\psi-\psi\nabla\psi^*\right) .
+  \label{eq:probability-current-3d}
+\end{equation}
+The incident plane wave in Eq.~\eqref{eq:scattering-asymptotic-3d} carries
+flux $\hbar\bm k/\mu$, and the outgoing spherical wave carries radial flux
+proportional to $\lvert f\rvert^2/r^2$.  Their ratio gives
+\begin{equation}
+  \frac{\rmd\sigma}{\rmd\Omega}
+  =\lvert f(\widehat{\bm r},\bm k)\rvert^2 .
+  \label{eq:differential-cross-section}
+\end{equation}
+Conservation of total flux and interference between the incident wave and the
+forward part of the scattered wave imply the optical theorem
+\begin{equation}
+  \vsub{\sigma}{tot}
+  =\frac{4\pi}{k}\im f(\widehat{\bm k},\bm k) .
+  \label{eq:optical-theorem}
+\end{equation}
+In operator form it follows from the discontinuity of the free resolvent and
+the identity
+\begin{equation}
+  T(E+\rmi0)-T(E-\rmi0)
+  =-2\pi\rmi\,T(E-\rmi0)\delta(E-H_0)T(E+\rmi0) .
+  \label{eq:T-unitarity-identity}
+\end{equation}
+Equation~\eqref{eq:T-unitarity-identity} is the precise reason that the
+imaginary part of an effective Hamiltonian represents lost flux into open
+channels while the full theory remains unitary.
+
+If $V$ is replaced by a complex optical potential, elastic flux alone is not
+conserved.  The deficit represents channels removed from the reduced model.
+One then has $\lvert S_l\rvert\leq1$ rather than
+$\lvert S_l\rvert=1$, and the reaction cross section measures the missing
+flux.  This elementary example anticipates the Feshbach effective
+Hamiltonian of Section~\ref{sec:scattering}.
+
+\subsection{Partial waves, phase shifts, and threshold data}
+\label{subsec:partial-waves-phase-shifts}
+% BEGIN CURATED SUBJECT INDEX
+\index{cross section}
+\index{partial-wave expansion}
+\index{phase shift}
+\index{threshold law}
+\index{boundary condition!incoming and outgoing}
+% END CURATED SUBJECT INDEX
+
+The plane-wave expansion
+\begin{equation}
+  \rme^{\rmi\bm k\cdot\bm r}
+  =4\pi\sum_{lm}\rmi^l j_l(kr)
+  Y_{lm}(\widehat{\bm r})Y_{lm}^*(\widehat{\bm k})
+  \label{eq:rayleigh-expansion}
+\end{equation}
+reduces central-potential scattering to independent radial channels.  For a
+real short-range potential, the large-$r$ form of the regular radial solution
+can be normalized as
+\begin{equation}
+  u_l(k,r)\sim
+  \frac{1}{2\rmi}
+  \left[S_l(k)\rme^{\rmi(kr-l\pi/2)}
+  -\rme^{-\rmi(kr-l\pi/2)}\right] .
+  \label{eq:partial-wave-asymptotic}
+\end{equation}
+Elastic unitarity gives
+\begin{equation}
+  S_l(k)=\rme^{2\rmi\delta_l(k)},
+  \qquad \delta_l(k)\in\real,
+  \label{eq:S-phase-shift}
+\end{equation}
+and the scattering amplitude becomes
+\begin{equation}
+  f(\vartheta)
+  =\frac{1}{2\rmi k}\sum_{l=0}^{\infty}(2l+1)
+  \left[S_l(k)-1\right]P_l(\cos\vartheta) .
+  \label{eq:partial-wave-amplitude}
+\end{equation}
+Consequently
+\begin{align}
+  \vsub{\sigma}{el}
+  &=\frac{4\pi}{k^2}\sum_{l=0}^{\infty}(2l+1)
+  \sin^2\delta_l,
+  \label{eq:partial-wave-cross-section}\\
+  f_l(k)&=\frac{S_l(k)-1}{2\rmi k}
+  =\frac{1}{k\cot\delta_l(k)-\rmi k}
+  \qquad (l=0) .
+  \label{eq:s-wave-amplitude}
+\end{align}
+
+Near a short-range threshold, the effective-range expansion for the $s$ wave
+is
+\begin{equation}
+  k\cot\delta_0(k)
+  =-\frac{1}{a_0}+\frac{1}{2}r_0k^2+O(k^4),
+  \label{eq:effective-range-expansion}
+\end{equation}
+where $a_0$ and $r_0$ are the scattering length and effective range.  A large
+$\lvert a_0\rvert$ signals a pole close to threshold, but the pole can be a
+shallow bound state or a virtual state depending on its sheet.  This is why a
+large cross section alone does not classify the singularity.
+
+The standing-wave or reactance matrix is particularly useful on the real
+axis.  In one partial wave set $K_l=\tan\delta_l$; then
+\begin{equation}
+  S_l=\frac{1+\rmi K_l}{1-\rmi K_l} .
+  \label{eq:S-K-relation}
+\end{equation}
+For a real potential $K_l$ is real, while $S_l$ is unitary.  The $T$, $K$,
+and $S$ matrices therefore emphasize, respectively, outgoing boundary
+values, principal-value standing waves, and the mapping from incoming to
+outgoing channel amplitudes.  Their singularities are related, but a pole of
+$K_l$ on the real axis is not by itself the invariant definition of a
+resonance.
+
+\subsection{Jost solutions as a common coordinate basis}
+\label{subsec:jost-foundation}
+% BEGIN CURATED SUBJECT INDEX
+\index{Jost function}
+\index{Wronskian}
+\index{scattering!multichannel}
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+% END CURATED SUBJECT INDEX
+
+The regular solution used in Eq.~\eqref{eq:partial-wave-asymptotic} builds the
+origin boundary condition into the differential equation.  Jost solutions
+instead build the asymptotic boundary conditions into it.  Let
+$f_l(k,r)$ and $f_l(-k,r)$ be solutions of
+Eq.~\eqref{eq:radial-schrodinger-textbook} satisfying
+\begin{equation}
+  f_l(\pm k,r)\sim\rme^{\pm\rmi(kr-l\pi/2)},
+  \qquad r\to\infty,
+  \label{eq:jost-foundation-asymptotic}
+\end{equation}
+where an $l$-dependent constant phase has been absorbed into the definition.
+For $k\ne0$ they form a basis of the two-dimensional solution space.  If
+$\varphi_l(k,r)$ is regular at the origin, it has the expansion
+\begin{equation}
+  \varphi_l(k,r)
+  =\frac{1}{2\rmi k}
+  \left[F_l(-k)f_l(k,r)-F_l(k)f_l(-k,r)\right] .
+  \label{eq:jost-basis-foundation}
+\end{equation}
+With the Wronskian convention
+$W[u,v]=uv'-u'v$, the coefficients are
+\begin{equation}
+  F_l(\pm k)=W[f_l(\pm k,\cdot),\varphi_l(k,\cdot)] .
+  \label{eq:jost-wronskian-definition}
+\end{equation}
+The normalization in Eqs.~\eqref{eq:jost-basis-foundation} and
+\eqref{eq:jost-wronskian-definition} is consistent with
+\begin{equation*}
+  W[f_l(k),f_l(-k)]=-2\rmi k.
+\end{equation*}
+
+The Jost function is thus not an auxiliary spectral determinant introduced
+after solving the problem.  It is the coefficient of the incoming Jost basis
+vector in the solution regular at the origin.  The quotient
+\begin{equation}
+  S_l(k)=\frac{F_l(-k)}{F_l(k)}
+  \label{eq:S-Jost-foundation}
+\end{equation}
+follows immediately.  A zero of $F_l(k)$ removes the incoming component,
+leaving a solution that is regular at the origin and outgoing at infinity.
+Depending on the position of the zero in the $k$ plane, the same algebraic
+condition describes a bound, virtual, or resonant state.  This is the central
+unification emphasized in the Jost-function approach
+\cite{Rakityansky:2022Jost}.
+
+For a finite-range potential the Jost solutions and Jost function possess a
+large analytic domain in $k$; for exponentially decreasing potentials the
+domain is restricted by the decay rate.  The point $k=0$ requires separate
+threshold analysis, and Coulomb interactions require Coulomb-modified Jost
+functions.  In an $N$-channel problem, $F_l(k)$ becomes a Jost matrix and
+bound or resonant states satisfy
+\begin{equation}
+  \det F(E)=0 .
+  \label{eq:multichannel-jost-determinant}
+\end{equation}
+Each channel momentum $k_a(E)$ supplies its own square root, so the determinant
+lives on a multi-sheeted energy surface.  Keeping these sheets explicit is
+essential when a resonance crosses a threshold or coalesces with another
+pole.

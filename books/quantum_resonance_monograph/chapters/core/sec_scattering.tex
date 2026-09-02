@@ -1,0 +1,171 @@
+\section{From the connection zero to resolvents and effective Hamiltonians}
+\label{sec:scattering}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{effective Hamiltonian}
+% END CURATED SUBJECT INDEX
+
+\subsection{Lippmann--Schwinger equation and the transition operator}
+\label{subsec:lippmann-schwinger}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{resolvent}
+\index{Jost function}
+\index{Lippmann--Schwinger equation}
+\index{boundary condition!incoming and outgoing}
+% END CURATED SUBJECT INDEX
+
+Write the Hamiltonian as $H=H_0+V$, where $H_0$ is the asymptotic Hamiltonian
+and $V$ is the interaction.  The resolvent identity gives
+\begin{align}
+  \Resolvent(z)
+  &=\Resolvent_0(z)
+  +\Resolvent_0(z)V\Resolvent(z),
+  \label{eq:resolvent-identity}\\
+  \Resolvent_0(z)&=(z-H_0)^{-1} .
+\end{align}
+For a generalized free eigenstate $\ket{\phi_E}$, the incoming and outgoing
+scattering states are the boundary values
+\begin{equation}
+  \ket{\psi_E^{(\pm)}}
+  =\ket{\phi_E}
+  +\Resolvent_0(E\pm\rmi0)V\ket{\psi_E^{(\pm)}} .
+  \label{eq:lippmann-schwinger}
+\end{equation}
+The transition operator $T(z)$ is defined by
+\begin{equation}
+  T(z)=V+V\Resolvent_0(z)T(z) .
+  \label{eq:T-operator}
+\end{equation}
+On shell, matrix elements of $T(E+\rmi0)$ determine scattering amplitudes.  A
+resonance appears as a pole of $T(z)$ and of the full resolvent.  The
+Lippmann--Schwinger equation therefore expresses in operator language what the
+Jost-function construction expressed through differential equations.
+
+For real $E$ above threshold, the discontinuity of the free resolvent is
+\begin{equation}
+  \Resolvent_0(E+\rmi0)-\Resolvent_0(E-\rmi0)
+  =-2\pi\rmi\,\delta(E-H_0) .
+  \label{eq:resolvent-discontinuity}
+\end{equation}
+Together with Eq.~\eqref{eq:T-operator}, this identity yields the optical
+theorem.  It also shows how an imaginary part can arise from an underlying
+self-adjoint theory: the imaginary part is the boundary value of a continuum
+resolvent, not a fundamental violation of probability conservation.
+
+\subsection{Feshbach projection and energy-dependent effective Hamiltonian}
+\label{subsec:feshbach}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{Feshbach projection}
+\index{effective Hamiltonian}
+\index{self-energy}
+\index{exceptional point}
+% END CURATED SUBJECT INDEX
+
+Let $P$ be an orthogonal projection onto a selected subspace and let
+$Q=\identity-P$.  Decompose a stationary state as
+$\ket{\Psi}=P\ket{\Psi}+Q\ket{\Psi}$.  Eliminating the $Q$ component gives
+\begin{equation}
+  \left[z-\vsub{H}{eff}(z)\right]P\ket{\Psi}=0,
+  \label{eq:feshbach-equation}
+\end{equation}
+with
+\begin{equation}
+  \vsub{H}{eff}(z)
+  =PHP+PHQ\frac{1}{z-QHQ}QHP .
+  \label{eq:feshbach-H}
+\end{equation}
+The second term is the self-energy.  For $z=E+\rmi0$ above a $Q$-space
+threshold, it has the decomposition
+\begin{equation}
+  \Sigma(E+\rmi0)
+  =\Delta(E)-\frac{\rmi}{2}W(E),
+  \qquad W(E)\succeq0 .
+  \label{eq:self-energy-decomposition}
+\end{equation}
+Here $\Delta(E)$ is a dispersive energy shift, $W(E)$ is a positive
+semidefinite decay matrix, and $\succeq0$ denotes positive semidefiniteness.
+Thus $\vsub{H}{eff}(E+\rmi0)$ is non-self-adjoint even though $H$ is
+self-adjoint.  Its non-self-adjoint part records probability flux into the
+eliminated continuum
+\cite{Feshbach1958UnifiedI,Feshbach1962UnifiedII,Rotter:2007zng}.
+
+The resonance equation is nonlinear because the operator depends on its own
+spectral parameter:
+\begin{equation}
+  \det\left[z-\vsub{H}{eff}(z)\right]=0 .
+  \label{eq:feshbach-pole-equation}
+\end{equation}
+Replacing $\vsub{H}{eff}(z)$ by a constant matrix near a narrow pole is a
+controlled local approximation only if the self-energy varies slowly.  Near a
+threshold, $\Sigma(z)$ has a branch point, and a finite constant matrix cannot
+reproduce the correct nonanalyticity.  This observation is important for
+exceptional points involving a continuum: the branch order can differ from
+that of a generic finite-dimensional exceptional point
+\cite{Garmon2021AnomalousEP}.
+
+\subsection{Equivalence of the Feshbach and Siegert pictures}
+\label{subsec:feshbach-siegert}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{unbounded operator}
+\index{Hilbert space}
+\index{boundary condition!incoming and outgoing}
+\index{Gamow--Siegert state}
+\index{exact WKB}
+\index{rigged Hilbert space}
+\index{Feshbach projection}
+\index{self-energy}
+% END CURATED SUBJECT INDEX
+
+The Feshbach and outgoing-boundary descriptions impose the same pole
+condition in different coordinates.  In a tight-binding lead, for example,
+eliminating the semi-infinite lead produces a surface Green function in
+$\vsub{H}{eff}(z)$.  Choosing its retarded branch is exactly the choice of
+an outgoing wave in the lead.  Conversely, substituting an outgoing ansatz at
+the boundary reduces the open problem to a finite region with a
+spectral-parameter-dependent boundary operator.  General versions of this
+equivalence are discussed in Ref.~\cite{Hatano:2013nyz}.
+
+This equivalence suggests a useful principle.  Non-self-adjointness is often a
+representation of openness rather than a modification of the microscopic
+theory.  Different representations distribute the analytic continuation
+differently: in $\vsub{H}{eff}(z)$ it resides in a self-energy; in complex
+scaling it resides in a deformed operator domain; in a rigged Hilbert space it
+resides in the dual pairing; and in exact WKB it resides in Borel-summed
+connection data.
+
+\subsection{Resonance expansion and the role of the continuum}
+\label{subsec:berggren-expansion}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{Berggren completeness relation}
+\index{pseudostate}
+% END CURATED SUBJECT INDEX
+
+For suitable finite-range or dilation-analytic problems, one may deform the
+real momentum contour into the complex plane.  The resulting Berggren-type
+completeness relation has the schematic form
+\begin{equation}
+  \identity
+  =\sum_{n\in\mathcal B}\ket{u_n}\bra{\widetilde u_n}
+  +\sum_{r\in\mathcal R}\ket{u_r}\bra{\widetilde u_r}
+  +\int_{L^+}\rmd k\,
+  \ket{u(k)}\bra{\widetilde u(k)} .
+  \label{eq:berggren-completeness}
+\end{equation}
+The set $\mathcal B$ contains bound states, $\mathcal R$ contains resonance
+poles enclosed between the original and deformed contours, and $L^+$ is the
+remaining continuum contour.  Tildes denote the dual system appropriate to
+the non-self-adjoint representation.  Equation~\eqref{eq:berggren-completeness}
+is not a statement that resonance vectors alone form a complete basis.  The
+deformed continuum is indispensable and carries threshold and background
+response
+\cite{Berggren:1968zz,Michel:2009,Myo:2014ypa}.
+
+In a finite numerical basis the continuum integral is replaced by a string of
+discrete points.  The points move when the contour, scaling angle, or basis is
+changed, whereas an exposed isolated pole is stable.  This contrast is the
+first practical diagnostic for distinguishing a resonance from a continuum
+pseudostate.

@@ -1,0 +1,164 @@
+\section{Invariant resonance data versus representations}
+\label{sec:unified-dictionary}
+
+\subsection{The invariant core}
+\label{subsec:invariant-core}
+% BEGIN CURATED SUBJECT INDEX
+\index{unbounded operator}
+\index{Hilbert space}
+\index{spectrum!point}
+\index{resolvent}
+\index{Jost function}
+\index{Wronskian}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+% END CURATED SUBJECT INDEX
+
+Across the constructions in the preceding Stages, the invariant core consists
+of four items:
+an analytically continued singularity, its spectral sheet, its residue or root
+subspace, and the continuum contour relative to which it is exposed.  The
+wave function, norm, and operator domain depend on the representation.  A
+claim of equivalence should therefore compare resolvent matrix elements or
+connection coefficients, not the pointwise form of two regularized wave
+functions.
+
+For a simple resonance, the comparison is most usefully read from the
+connection problem outward:
+\begin{align}
+  \Cincoming(\resonantE,\hbar)=0
+  &\Longleftrightarrow
+  F(k_{\mathrm R})=0
+  \notag\\
+  &\Longleftrightarrow
+  S(k)\text{ has a pole at }k_{\mathrm R}
+  \notag\\
+  &\Longleftrightarrow
+  W(k_{\mathrm R})=0
+  \notag\\
+  &\Longleftrightarrow
+  H_\theta\Psi_\theta
+  =\resonantE\Psi_\theta .
+  \label{eq:full-pole-chain}
+\end{align}
+Here $F$ is a Jost function, $W$ is an incoming/outgoing Wronskian, and
+$\Cincoming$ is an exact-WKB connection coefficient.  The complex-scaled
+eigenvalue relation holds for an angle that exposes the pole.  The rigged
+Hilbert space supplies the pole functional associated with the common residue.
+
+\subsection{A compact dictionary}
+\label{subsec:compact-dictionary}
+% BEGIN CURATED SUBJECT INDEX
+\index{Hilbert space}
+\index{locally convex space}
+\index{topology}
+\index{spectrum!point}
+\index{resolvent}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{lateral Borel sum}
+\index{exact WKB}
+% END CURATED SUBJECT INDEX
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.20\textwidth}
+                  >{\raggedright\arraybackslash}p{0.34\textwidth}
+                  >{\raggedright\arraybackslash}p{0.36\textwidth}}
+\toprule
+Language & Resonance object & Reliability test \\
+\midrule
+\endfirsthead
+\toprule
+Language & Resonance object & Reliability test \\
+\midrule
+\endhead
+Exact WKB & Zero of a Borel-resummed incoming connection coefficient & Stokes
+graph, lateral sum, sheets, and monodromy are documented \\
+\addlinespace
+Scattering theory & Pole of $S$, $T$, or a continued resolvent & Sheet,
+outgoing boundary value, residue, and threshold structure are specified \\
+\addlinespace
+Complex scaling & Isolated eigenvalue of $H_\theta$ & Stability under
+$\theta$ and basis changes; separation from the rotated continuum \\
+\addlinespace
+Feshbach projection & Nonlinear root of
+$\det[z-\vsub{H}{eff}(z)]$ & Retarded branch of the self-energy and its
+energy dependence are retained \\
+\addlinespace
+Rigged Hilbert space & Pole functional in $\PhiSpace^\times$ & Test space and
+dual topology admit the required analytic continuation \\
+\addlinespace
+Zel'dovich method & Gaussian-regularized bilinear residue & The regulator is
+removed by analytic continuation, not by an ordinary real-axis limit \\
+\addlinespace
+Black-hole perturbation & Pole of the retarded radial Green function & Horizon
+and outer boundary conditions match the time convention; cuts and residues
+are included \\
+\bottomrule
+\end{longtable}
+
+The table is deliberately phrased in terms of tests rather than slogans.  For
+example, ``complex eigenvalue'' is absent from the first column because it is
+not by itself a definition.  Likewise, ``normalizable state'' means different
+things before and after deformation.
+
+\subsection{What non-self-adjointness does and does not mean}
+\label{subsec:meaning-nonselfadjoint}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{spectrum!point}
+\index{Riemann sheet}
+\index{complex scaling}
+\index{Feshbach projection}
+% END CURATED SUBJECT INDEX
+
+A non-self-adjoint operator may arise in at least four ways.  It may be a
+fundamental effective generator after environmental degrees of freedom are
+discarded.  It may be an energy-dependent Feshbach operator.  It may be an
+analytic representation, such as $H_\theta$, of a self-adjoint scattering
+problem.  Or it may be a finite numerical approximation whose
+non-self-adjointness includes discretization artifacts.  Physical conclusions
+depend on which situation applies.
+
+Complex scaling belongs primarily to the third category.  It does not claim
+that microscopic quantum mechanics violates unitarity.  Instead, it moves a
+pole from a nonphysical sheet into the point spectrum of a deformed operator.
+The rotated continuum completes the representation and restores the analytic
+information needed to reconstruct real-energy unitary scattering.
+
+An open-system Lindblad generator belongs to the first category after a
+Markovian approximation.  Its eigenvalues describe decay of density-matrix
+modes, not automatically poles of a one-particle $S$ matrix.  Quantum-jump
+unravelings can relate the two in particular models, but complex scaling should
+not be identified with a no-jump Hamiltonian without an explicit derivation
+\cite{Piilo:2008dmi,Breuer2016NonMarkovian,Gneiting:2020pew}.
+
+\subsection{Observables beyond pole positions}
+\label{subsec:beyond-poles}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{Wigner time delay}
+\index{connection coefficient}
+\index{resonance!residue}
+\index{exact WKB}
+\index{complex scaling}
+\index{exceptional point}
+\index{holonomy}
+\index{quasinormal mode!excitation factor}
+% END CURATED SUBJECT INDEX
+
+A mature resonance calculation should aim at more than a table of complex
+energies.  The next layer consists of residues, channel projectors, phase
+shifts, time delays, and continuum level densities.  For black holes, this
+means excitation factors, source-dependent Green functions, greybody factors,
+and branch-cut discontinuities.  For exceptional points, it means the full
+Jordan resolvent and a normalized holonomy, not only the eigenvalue square
+root.
+
+Exact WKB and complex scaling are complementary at this layer.  A derivative
+of the exact connection coefficient gives a pole residue, whereas a
+left--right complex-scaled eigenvector gives the same residue in an $L^2$
+representation.  Establishing this equality numerically in nontrivial models
+would be a stringent test of the unified framework.

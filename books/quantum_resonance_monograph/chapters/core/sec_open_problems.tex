@@ -1,0 +1,260 @@
+\section{Where the connection-first framework is incomplete}
+\label{sec:open-problems}
+
+\subsection{Operator theory for black-hole complex scaling}
+\label{subsec:open-operator-bh}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{complex scaling}
+\index{Aguilar--Balslev--Combes theorem}
+\index{quasinormal mode}
+\index{horizon boundary condition}
+\index{de Sitter spacetime}
+% END CURATED SUBJECT INDEX
+
+The numerical success of complex scaling for black-hole master equations does
+not yet amount to a general ABC theorem for black-hole geometry.  A rigorous
+result should specify weighted spaces, analytic branches of $r(r_*)$, domains
+at horizons, long-range asymptotics at flat infinity, and the relation between
+the deformed operator and the retarded resolvent.  de Sitter static patches,
+with exponential decay at both ends, are likely a cleaner starting point than
+asymptotically flat spacetime.
+
+Exterior deformation may be essential for asymptotically flat tails.  One
+would like a theorem that isolates a finite set of QNM poles while keeping the
+zero-frequency branch point and its cut under control.  The output should be a
+resonance expansion with a quantified remainder, not merely a rotated spectrum.
+
+\subsection{Uniform analysis at thresholds}
+\label{subsec:open-thresholds}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{resonance!residue}
+\index{turning point}
+\index{self-energy}
+\index{exceptional point}
+% END CURATED SUBJECT INDEX
+
+Standard WKB fails when turning points coalesce, while standard pole
+perturbation fails when a pole reaches a branch point.  Uniform local models,
+such as Airy, parabolic-cylinder, or higher catastrophe equations, should be
+matched to the exact-WKB and complex-scaled resolvents.  This would give a
+common treatment of virtual states, anomalous EP orders, zero-damped black-hole
+modes, and long-time tails.
+
+The relevant universal data include the threshold exponent of the density of
+states, the Puiseux order of the pole trajectory, and the scaling of the
+residue.  A finite matrix can reproduce these only if its energy-dependent
+self-energy or continuum limit is retained.
+
+\subsection{Residues and excitation factors from exact WKB}
+\label{subsec:open-residues}
+% BEGIN CURATED SUBJECT INDEX
+\index{measure theory}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{exact WKB}
+\index{biorthogonality}
+\index{quasinormal mode!excitation factor}
+% END CURATED SUBJECT INDEX
+
+Most exact-WKB spectral calculations focus on zeros of a quantization
+condition.  For response theory, one needs derivatives of that condition and
+normalization of left and right solutions.  In the notation of
+Eq.~\eqref{eq:connection-local-pole}, a program for residues requires a
+Borel-resummed evaluation of $\Cincoming'(\resonantE)$ and of the
+source overlap.  Comparing the result with complex-scaled biorthogonal
+projectors would connect resurgence directly to measurable line strengths and
+black-hole ringdown amplitudes.
+
+\subsection{A regulator-independent EP continuum limit}
+\label{subsec:open-ep-limit}
+% BEGIN CURATED SUBJECT INDEX
+\index{topology}
+\index{resolvent}
+\index{Riesz projection}
+\index{wave packet}
+\index{Berggren completeness relation}
+\index{pseudostate}
+\index{exceptional point}
+\index{holonomy}
+\index{momentum-bin regularization}
+% END CURATED SUBJECT INDEX
+
+Momentum bins make the resonance--continuum EP calculable, but they select a
+particular discretization.  The next step is to repeat the construction with
+Gaussian wave packets, a finite box, Berggren contours, and exterior complex
+scaling.  After matching the same physical holonomy, all regulators should
+agree.  If they do not, the discrepancy will identify which part of the
+claimed topology belongs to the test-function choice rather than to the pole.
+
+It is also important to formulate the EP in terms of the continued resolvent
+and its Riesz projection before taking a continuum limit.  This would separate
+a genuine higher-order pole from an avoided crossing with a discretization
+pseudostate.
+
+\subsection{Status of monodromy renormalization}
+\label{subsec:open-monodromy-rg}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{Stokes automorphism}
+\index{monodromy}
+\index{Langer correction}
+\index{renormalization group}
+\index{transseries}
+% END CURATED SUBJECT INDEX
+
+Monodromy renormalization is presently a useful organization principle, not a
+complete universal theory.  To develop it further one should define the class
+of allowed local counter-Voros terms, prove scheme-independent statements,
+and relate the anomalous dimension to Stokes automorphisms.  In radial
+problems, one should test nonintegrable potentials for which higher quantum
+periods do not cancel.  At EPs, one should derive the running from smeared
+resolvent pairings rather than formal symbols such as $\delta(0)$.
+
+A successful theory would explain when the Langer reorganization is a fixed
+point, how monodromy data mix under confluence of singularities, and which
+trans-series parameters act as relevant couplings.  Until then, the phrase
+``renormalization group'' should always be accompanied by the regulator and
+the invariant quantity being held fixed.
+
+\subsection{Kerr, superradiance, and nonlinear spectral problems}
+\label{subsec:open-kerr}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{exact WKB}
+\index{monodromy}
+\index{exceptional point}
+\index{horizon boundary condition}
+\index{Kerr black hole}
+\index{superradiance}
+% END CURATED SUBJECT INDEX
+
+Kerr is the most important gravitational extension.  The angular eigenvalue
+and radial operator depend on $\omega$, and the superradiant threshold
+$\omega=m\Omega_H$ changes the flux interpretation.  A stable numerical
+scheme must solve a nonlinear eigenvalue problem with correct left--right
+derivatives.  Exact WKB additionally faces a moving spectral curve.  A hybrid
+solver combining angular spectral methods, analytic differentiation, complex
+scaling, and quantum periods is a concrete route forward.
+
+Near-extremal Kerr brings coalescing horizons, zero-damped modes, and
+near-horizon conformal structure.  It is a natural laboratory for the joint
+threshold/EP/monodromy analysis outlined above.
+
+\subsection{Coupled channels and many-body resonances}
+\label{subsec:open-manybody}
+% BEGIN CURATED SUBJECT INDEX
+\index{measure theory}
+\index{resolvent}
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+\index{scattering!three-body Coulomb}
+\index{exact WKB}
+\index{monodromy}
+\index{complex scaling}
+\index{Berggren completeness relation}
+\index{coupled-channel equation}
+% END CURATED SUBJECT INDEX
+
+Nuclear complex scaling already treats many-body continua and cluster
+thresholds
+\cite{Myo:2014ypa,Myo:2023heu}.  Exact WKB is most developed for ordinary
+differential equations.  Extending the unified picture to matrix differential
+equations requires non-Abelian Stokes matrices and a careful treatment of
+channel thresholds.  The resulting framework would connect continuum-
+discretized coupled channels, Berggren bases, and resurgent monodromy
+\cite{Yahiro2012CDCC}.
+
+Unscreened Coulomb forces make the problem qualitatively harder.  The
+three-body breakup region and each two-cluster region require different
+asymptotic coordinates and logarithmic phases.  Existing 3C, Redmond, and
+sectorial expansions determine important leading terms, while
+Faddeev--Merkuriev splitting yields well-posed channel equations
+\cite{FaddeevMerkuriev:1993,AltMukhamedzhanov:1993,
+Kadyrov:2003ThreeBody,Mukhamedzhanov:2006Leading}.  What is still missing for
+the present resonance program is a uniform analytic atlas with controlled
+overlap errors, a corresponding global outgoing resolvent, and a continuation
+prescription that follows poles through rearrangement thresholds.  This is a
+more precise target than seeking one formal \textit{three-body Coulomb wave}.
+
+The direct-integral viewpoint suggests how to state the channel problem.
+At each real energy the fiber should contain all open cluster channels, while
+the asymptotic comparison dynamics must be modified by the appropriate
+pairwise Coulomb phases.  The difficult step is to continue this measurable
+fiber description analytically across thresholds without losing the
+cluster-dependent boundary conditions.  A multivariable exact-WKB or
+microlocal construction would have to reproduce the same atlas.
+
+\subsection{Quantum field theory}
+\label{subsec:open-qft}
+% BEGIN CURATED SUBJECT INDEX
+\index{measure theory}
+\index{resolvent}
+\index{direct integral}
+\index{asymptotic completeness}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{infrared problem}
+\index{dressing state}
+\index{observable algebra}
+\index{Borel plane}
+% END CURATED SUBJECT INDEX
+
+In quantum field theory, unstable particles are poles of analytically
+continued correlation functions, while semiclassical saddles and renormalons
+control resurgent large-order behavior.  The one-particle exact-WKB dictionary
+suggests a field-theoretic question: can the pole mass, width, spectral
+density, and Borel singularity data be organized in a common rigged space of
+correlation-function boundary values?  A direct lift is obstructed by
+multiparticle cuts, gauge constraints, and ultraviolet renormalization, so the
+monodromy renormalization introduced here should not be conflated with ordinary
+QFT renormalization.
+
+For a massive theory with isolated one-particle mass shells, Haag--Ruelle or
+LSZ scattering supplies the field-theoretic counterpart of ordinary wave
+operators.  QED violates the decisive premise: Gauss' law and massless photons
+turn a charged particle into an infraparticle, and the coherent soft dressing
+is not a vector in the vacuum Fock representation
+\cite{KulishFaddeev:1970,Buchholz:1986,ChenFrohlichPizzo:2010}.  A resonance
+theory for charged fields must therefore continue correlation functions
+between the correct infrared representations, not add a width to a
+nonexistent sharp Fock particle.
+
+Gauge-invariant charged interpolating operators are nonlocal composites
+carrying an electric dressing to infinity.  Their infrared sensitivity,
+Wilson-line endpoint and cusp renormalization, and multiparticle cross
+correlations must be separated carefully.  A concrete operator-algebraic
+program is to construct an asymptotic observable algebra, classify the
+relevant soft-charge or flux representations, express physically mixed
+preparations as direct integrals over an explicitly chosen measure space, and
+define the scattering map between incoming and outgoing fibers.  Only then
+should one ask which continued resolvent or correlation functional carries an
+unstable pole and how its residue is normalized.
+
+Solvable large-$N$ models, massive theories coupled to a controllable massless
+field, nonrelativistic QED, false-vacuum decay, and semiclassical backgrounds
+with a one-dimensional fluctuation equation provide intermediate tests.  The
+goal is not to replace unitarity or the K\"all\'en--Lehmann representation, but
+to relate their sector-dependent spectral densities to resurgent connection
+data.  A mathematically complete four-dimensional QED scattering theory with
+charged infraparticles and asymptotic completeness remains beyond the present
+framework; this limitation should be stated rather than hidden by an infrared
+regulator.
+
+\subsection{Numerical certification}
+\label{subsec:open-certification}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{Borel summation}
+\index{Pad\'e approximant}
+% END CURATED SUBJECT INDEX
+
+Non-normal eigenvalues require stronger certification than a standard
+Hermitian spectrum.  Promising tools include interval arithmetic for matrix
+elements, validated singular-value bounds, contour-integral eigenprojectors,
+and independent residual estimates in weighted function spaces.  For exact
+WKB, rigorous Borel summability bounds and controlled Pad\'e errors would play
+the analogous role.  Benchmark models should report not only digits but also
+which analytic sheet and deformation domain those digits certify.

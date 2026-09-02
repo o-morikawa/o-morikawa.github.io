@@ -1,0 +1,628 @@
+\section{When Step 1 fails: long-range scattering and infrared sectors}
+\label{sec:long-range-ir}
+% BEGIN CURATED SUBJECT INDEX
+\index{wave operator}
+\index{scattering!Coulomb}
+\index{Dollard comparison dynamics}
+\index{scattering!three-body Coulomb}
+\index{infrared problem}
+\index{dressing state}
+% END CURATED SUBJECT INDEX
+
+The standard scattering construction compares the full dynamics with a free
+reference at large times.  This works for a short-range interaction because
+the phase accumulated on an escaping classical trajectory is finite.  If
+$\bm r(t)\simeq\bm v t$ and $V(r)=O(r^{-1-\epsilon})$, then
+\begin{equation}
+  \int^{\pm\infty}\lvert V(\bm v t)\rvert\dd t<\infty .
+  \label{eq:short-range-trajectory-integral}
+\end{equation}
+For a Coulomb tail, $V_C(r)=g/r$, the same integral grows as
+$g\lvert\bm v\rvert^{-1}\ln|t|$.  The interaction never becomes negligible
+in phase, even though the force tends to zero.  Consequently the ordinary
+wave operators comparing $H$ directly with $H_0$ do not exist in the form
+used for short-range scattering.  The cure is not to discard the phase but to
+put it into the asymptotic dynamics \cite{Dollard:1964,Dollard:1971,
+DerezinskiGerard:1997}.
+
+This observation links three problems that are often taught separately.  The
+two-body Coulomb problem requires Coulomb-distorted plane waves.  The
+three-body Coulomb problem requires different correlated expansions in
+different asymptotic sectors.  QED requires coherent soft-photon dressings and,
+in general, representations inequivalent to the vacuum Fock representation.
+In all three cases a long-range correlation changes the definition of an
+asymptotic state.
+
+\subsection{Two-body Coulomb waves rather than free plane waves}
+\label{subsec:two-body-coulomb}
+% BEGIN CURATED SUBJECT INDEX
+\index{Jost function}
+\index{Lippmann--Schwinger equation}
+\index{cross section}
+\index{partial-wave expansion}
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+% END CURATED SUBJECT INDEX
+
+Consider
+\begin{equation}
+  H=H_0+\frac{g}{r},
+  \qquad
+  H_0=-\frac{\hbar^2}{2\mu}\nabla^2,
+  \qquad
+  E=\frac{\hbar^2k^2}{2\mu},
+  \label{eq:coulomb-hamiltonian-scattering}
+\end{equation}
+and introduce the Sommerfeld parameter
+\begin{equation}
+  \eta=\frac{\mu g}{\hbar^2 k}
+  =\frac{g}{\hbar v}.
+  \label{eq:sommerfeld-parameter}
+\end{equation}
+For repulsion, $g>0$ and $\eta>0$.  A conventionally normalized outgoing
+solution is
+\begin{equation}
+  \psi_{\bm k}^{C(+)}(\bm r)
+  =\rme^{-\pi\eta/2}\Gamma(1+\rmi\eta)
+  \rme^{\rmi\bm k\cdot\bm r}
+  {}_1F_1\left(-\rmi\eta;1;
+  \rmi(kr-\bm k\cdot\bm r)\right).
+  \label{eq:coulomb-hypergeometric-wave}
+\end{equation}
+These formulas and their partial-wave counterparts are standard consequences
+of the confluent hypergeometric representation of the Coulomb problem
+\cite{Taylor:1972,PerelomovZeldovich:1998}.
+At fixed nonforward angle and large $r$, its two pieces have the form
+\begin{align}
+  \psi_{\bm k}^{C(+)}(\bm r)
+  &\sim
+  \underbrace{\rme^{\rmi\left[
+  \bm k\cdot\bm r
+  \eta\ln(kr-\bm k\cdot\bm r)\right]}}
+  _{\text{Coulomb-distorted incident wave}}
+  \notag\\
+  &\quad+
+  f_C(\vartheta)
+  \frac{\rme^{\rmi\left[
+  kr-\eta\ln(2kr)\right]}}{r}.
+  \label{eq:coulomb-full-asymptotic}
+\end{align}
+Thus the incident object is not a plane wave.  Both the incident and outgoing
+parts contain logarithmic phases.  The expansion is nonuniform in the forward
+direction, where the distinction between the two terms itself becomes
+delicate.
+
+With
+\begin{equation}
+  \sigma_l(\eta)=\arg\Gamma(l+1+\rmi\eta),
+  \label{eq:coulomb-phase-shift}
+\end{equation}
+the Coulomb amplitude is
+\begin{equation}
+  f_C(\vartheta)
+  =-\frac{\eta}{2k\sin^2(\vartheta/2)}
+  \rme^{
+  2\rmi\sigma_0
+  -2\rmi\eta\ln\sin(\vartheta/2)},
+  \label{eq:coulomb-amplitude}
+\end{equation}
+and its modulus gives the Rutherford cross section
+\begin{equation}
+  \frac{\rmd\sigma_C}{\rmd\Omega}
+  =\frac{\eta^2}{4k^2\sin^4(\vartheta/2)} .
+  \label{eq:rutherford-cross-section}
+\end{equation}
+The forward divergence is physical for an ideal unscreened infinite-range
+force; a realistic angular resolution or screening prescription is needed for
+an integrated rate.
+
+The radial Coulomb functions make the modified boundary condition especially
+clear.  With $\rho=kr$,
+\begin{equation}
+  H_l^{(\pm)}(\eta,\rho)
+  \sim
+  \rme^{
+  \pm\rmi\left[
+  \rho-\eta\ln(2\rho)-\frac{l\pi}{2}+\sigma_l
+  \right]}.
+  \label{eq:coulomb-H-asymptotic}
+\end{equation}
+If a short-range interaction $W$ is added to $g/r$, the regular solution can
+be written asymptotically as
+\begin{equation}
+  u_l(r)\sim\frac{1}{2\rmi}
+  \left[
+  S_l^{N}(k)H_l^{(+)}(\eta,kr)
+  -H_l^{(-)}(\eta,kr)
+  \right],
+  \label{eq:coulomb-modified-radial-S}
+\end{equation}
+where $S_l^{N}=\rme^{2\rmi\delta_l^N}$ is the Coulomb-modified nuclear
+matrix.  Relative to free partial waves, the full matrix is
+\begin{equation}
+  S_l(k)=\rme^{2\rmi\sigma_l(\eta)}S_l^{N}(k).
+  \label{eq:full-coulomb-nuclear-S}
+\end{equation}
+Likewise, the correct distorted-wave Lippmann--Schwinger equation uses the
+Coulomb Hamiltonian $H_C=H_0+g/r$ as reference:
+\begin{equation}
+  \ket{\psi_{\bm k}^{(+)}}
+  =\ket{\phi_{\bm k}^{C(+)}}
+  +(E+\rmi0-H_C)^{-1}W\ket{\psi_{\bm k}^{(+)}} .
+  \label{eq:coulomb-distorted-LS}
+\end{equation}
+Coulomb-modified Jost functions are coefficients of
+$H_l^{(\pm)}$, not of $\rme^{\pm\rmi kr}$.  Factoring out the known
+$\Gamma$-function and logarithmic structure is essential before searching for
+additional short-range resonance poles.
+
+\subsection{Dollard comparison dynamics}
+\label{subsec:dollard}
+% BEGIN CURATED SUBJECT INDEX
+\index{cross section}
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+\index{Dollard comparison dynamics}
+% END CURATED SUBJECT INDEX
+
+The same modification has a time-dependent formulation.  Along a free
+trajectory the asymptotic Coulomb operator in momentum space is
+\begin{equation}
+  V_D(\bm p)=\frac{g\mu}{|\bm p|}.
+  \label{eq:dollard-asymptotic-potential}
+\end{equation}
+Choose an arbitrary reference time $t_0>0$ and define
+\begin{align}
+  \Phi_D(t,\bm p)
+  &=\frac{\operatorname{sgn}(t)}{\hbar}
+  V_D(\bm p)\ln\frac{|t|}{t_0},
+  \label{eq:dollard-phase}\\
+  U_D(t)
+  &=\rme^{-\rmi H_0t/\hbar}
+  \rme^{-\rmi\Phi_D(t,\bm p)} .
+  \label{eq:dollard-comparison-dynamics}
+\end{align}
+Up to sign conventions for incoming and outgoing labels, the modified wave
+operators are
+\begin{equation}
+  \Omega_D^{(\pm)}
+  =\operatorname*{s-lim}_{t\to\mp\infty}
+  \rme^{\rmi Ht/\hbar}U_D(t)\vsub{P}{ac}(H_0).
+  \label{eq:dollard-wave-operators}
+\end{equation}
+The logarithm removed by $U_D(t)$ is the time-domain version of the logarithm
+in Eq.~\eqref{eq:coulomb-full-asymptotic}.  Changing $t_0$ changes a
+conventional channel phase but not a cross section.  A screened Coulomb
+potential can also be used, but its screening radius cannot simply be sent to
+infinity at the level of the undressed $S$ matrix: a divergent phase must be
+removed first.
+
+For many particles, asymptotic velocities and cluster decompositions enter
+the comparison dynamics.  Pairwise Coulomb phases are correlated because the
+relative momenta share the same particle momenta.  This is the first sign that
+the many-body problem is not obtained by multiplying independent copies of
+the two-body answer.
+
+\subsection{Three charged particles: known sectors and the missing uniform form}
+\label{subsec:three-body-coulomb}
+% BEGIN CURATED SUBJECT INDEX
+\index{compact operator}
+\index{scattering!Coulomb}
+\index{scattering!three-body Coulomb}
+\index{Jacobi coordinate}
+\index{Faddeev equation}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+For three particles,
+\begin{equation}
+  H=H_0+\sum_{1\leq i<j\leq3}\frac{g_{ij}}{r_{ij}} .
+  \label{eq:three-body-coulomb-H}
+\end{equation}
+Choose Jacobi coordinates $(\bm x_\alpha,\bm y_\alpha)$, where
+$\bm x_\alpha$ is the separation inside the pair
+$\alpha=(\beta\gamma)$ and $\bm y_\alpha$ separates the spectator from that
+pair.  Infinity has several geometrically different sectors:
+\begin{align}
+  \Omega_0&:\quad
+  r_{12}\sim r_{23}\sim r_{31}\to\infty,
+  \label{eq:three-body-breakup-sector}\\
+  \Omega_\alpha&:\quad
+  y_\alpha\to\infty,
+  \qquad x_\alpha/y_\alpha\to0 .
+  \label{eq:three-body-cluster-sector}
+\end{align}
+The first is the democratic three-body breakup region.  The second is a
+cluster region in which a pair remains close compared with the spectator
+distance.  Their asymptotic expansions are not uniform limits of one another.
+
+In $\Omega_0$, the Redmond or 3C incident wave incorporates the leading
+Coulomb phase of every pair.  In a common notation,
+\begin{align}
+  \vsub{\Psi}{3C}(\bm X)
+  &=
+  \rme^{\rmi\bm K\cdot\bm X}
+  \prod_{i<j}
+  \left[
+  \rme^{-\pi\eta_{ij}/2}\Gamma(1+\rmi\eta_{ij})
+  {}_1F_1(-\rmi\eta_{ij};1;\rmi\zeta_{ij})
+  \right],
+  \label{eq:three-C-wave}\\
+  \zeta_{ij}
+  &=k_{ij}r_{ij}-\bm k_{ij}\cdot\bm r_{ij},
+  \qquad
+  \eta_{ij}=\frac{\mu_{ij}g_{ij}}{\hbar^2k_{ij}} .
+  \label{eq:three-C-variables}
+\end{align}
+The pair momenta are constrained by the common three-body kinematics.  The
+product reproduces the leading logarithmic phases when all separations are
+large, but it is not an exact factorization of the three-body Schr\"odinger
+equation.  Cross derivatives and correlations generate subleading terms.
+
+In a cluster sector $\Omega_\alpha$, the close pair must instead be described
+by its full two-body state while the spectator feels its net charge and
+multipole corrections.  Sectorial expansions by Alt and Mukhamedzhanov and
+later refinements construct leading terms in these overlap regimes
+\cite{AltMukhamedzhanov:1993,MukhamedzhanovLieber:1996,
+Kadyrov:2003ThreeBody,Mukhamedzhanov:2006Leading,Yakovlev:2022Coulomb}.
+The literature therefore does contain important three-body Coulomb
+asymptotics.  The precise open difficulty is stronger and more useful than
+the slogan that \textit{no asymptotic form is known}: there is no analogue of
+the single two-body Coulomb wave that is elementary, exact, and uniformly
+controlled across all breakup, rearrangement, and coalescence sectors with
+simple matching of every scattering amplitude.  The continuing refinement of
+terms in different sectors is evidence of this nonuniformity.
+
+The original Faddeev kernel is compact for suitable short-range forces but
+loses this property when an unsplit Coulomb potential is inserted.
+Faddeev--Merkuriev theory repairs the integral equations by a configuration-
+space splitting
+\begin{equation}
+  V_\alpha^C(\bm x_\alpha)
+  =V_\alpha^{(s)}(\bm x_\alpha,\bm y_\alpha)
+  +V_\alpha^{(l)}(\bm x_\alpha,\bm y_\alpha),
+  \label{eq:merkuriev-splitting}
+\end{equation}
+chosen so that the short-range part is active in the corresponding two-body
+sector and the long-range parts are included in channel Hamiltonians.  The
+resulting equations have the compactness and channel structure needed for
+analysis and numerical resonance calculations
+\cite{FaddeevMerkuriev:1993,Keller:2009FaddeevMerkuriev}.  This is a powerful
+solution at the operator-equation level, but it does not reduce the global
+coordinate-space boundary condition to a product of three independent
+Coulomb waves.
+
+\subsection{From Coulomb phases to soft photons in QED}
+\label{subsec:qed-infrared}
+% BEGIN CURATED SUBJECT INDEX
+\index{superselection sector}
+\index{GNS construction}
+\index{wave packet}
+\index{cross section}
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+\index{infrared problem}
+\index{dressing state}
+\index{Fock space!infrared limitation}
+\index{observable algebra}
+% END CURATED SUBJECT INDEX
+
+The nonrelativistic Coulomb logarithm has a direct field-theoretic analogue.
+For massive charged particles moving with asymptotic momenta $p_i$, the
+large-time electromagnetic interaction decreases as $1/|t|$, not faster.
+Integrating it produces a logarithmic phase and a coherent displacement of
+soft photon modes.  The leading dressing function for one charge has the
+schematic small-$|\bm k|$ behavior
+\begin{equation}
+  f_{p,\lambda}(\bm k)
+  \sim
+  \frac{e\,p\cdot\epsilon_\lambda(\bm k)}
+  {(p\cdot k)\sqrt{2|\bm k|}},
+  \qquad |\bm k|\to0 ,
+  \label{eq:qed-soft-dressing}
+\end{equation}
+with gauge-dependent longitudinal pieces arranged so that physical
+observables satisfy Gauss' law.  Since $f_{p,\lambda}(\bm k)$ behaves as
+$|\bm k|^{-3/2}$ for generic direction,
+\begin{equation}
+  \sum_\lambda\int_{|\bm k|<\Lambda}
+  \rmd^3k\,|f_{p,\lambda}(\bm k)|^2
+  \sim C\int_0^\Lambda\frac{\rmd|\bm k|}{|\bm k|}
+  =\infty .
+  \label{eq:soft-photon-number-log}
+\end{equation}
+The coherent cloud contains an infinite expected number of arbitrarily soft
+photons.  Its soft energy can nevertheless remain finite because insertion of
+one factor of $|\bm k|$ makes the integral convergent.  The formal Weyl
+displacement is therefore not implemented by a unitary operator on the
+vacuum Fock space when the infrared cutoff is removed.  This is a change of
+representation, not merely a large perturbative coefficient
+\cite{BlochNordsieck:1937,Chung:1965,KulishFaddeev:1970}.
+
+The many-particle soft factor depends on the entire scattering process through
+the eikonal current
+\begin{equation}
+  \vsub{J}{soft}^\mu(k)
+  =
+  \sum_{i\in\mathrm{out}}
+  e_i\frac{p_i^\mu}{p_i\cdot k}
+  -
+  \sum_{j\in\mathrm{in}}
+  e_j\frac{p_j^\mu}{p_j\cdot k}.
+  \label{eq:eikonal-soft-current}
+\end{equation}
+Its squared norm contains pairwise terms for every pair of external charges.
+Adding particles therefore adds correlated infrared data; it does not merely
+tensor another independent one-particle cloud.  Charge conservation removes
+some leading pieces, but velocity-dependent soft correlations remain.
+
+Gauss' law sharpens the statement.  A charged state carries an electric flux
+detectable at arbitrarily large distances.  Under general assumptions such a
+state cannot be a sharp eigenstate of the mass operator
+\cite{Buchholz:1986}.  The isolated one-particle delta function expected by
+the LSZ/Fock picture is replaced by an infraparticle threshold with continuous
+spectral weight.  Thus the phrase \textit{the initial electron state in Fock
+space} already fails before an ordinary scattering amplitude is calculated.
+Rigorous constructions of infraparticle scattering states exist in models of
+nonrelativistic QED and illustrate how much asymptotic information must be
+added \cite{ChenFrohlichPizzo:2010}.
+
+Three standard infrared strategies answer different questions:
+\begin{enumerate}
+  \item Inclusive Bloch--Nordsieck or Yennie--Frautschi--Suura observables sum
+  over experimentally unresolved soft radiation.  Virtual and real
+  divergences cancel in sufficiently inclusive probabilities
+  \cite{YennieFrautschiSuura:1961}.
+
+  \item Chung and Kulish--Faddeev constructions modify the asymptotic states
+  and dynamics by coherent photon dressings.  They aim at an infrared-finite
+  amplitude between dressed sectors rather than between finite-photon Fock
+  vectors \cite{Chung:1965,KulishFaddeev:1970}.
+
+  \item Algebraic approaches retain the observable algebra and describe
+  charged or soft sectors by inequivalent representations, asymptotic flux
+  observables, and superselection data \cite{Haag:1996,Buchholz:1986}.
+\end{enumerate}
+
+The work of Hirai and Sugishita makes the second strategy particularly
+concrete and also explains why it cannot be separated from Gauss' law
+\cite{HiraiSugishita:2019,HiraiSugishita:2021,HiraiSugishita:2023}.
+Write a general asymptotic charged state schematically as
+\begin{equation}
+  \ket{\alpha;F}
+  =\rme^{
+    \sum_\lambda\int\rmd^3k\,
+    \left(
+      F_{\alpha,\lambda}(\bm k)a_\lambda^\dagger(\bm k)
+      -F_{\alpha,\lambda}^*(\bm k)a_\lambda(\bm k)
+    \right)
+  }\vsub{\ket{\alpha}}{hard} .
+  \label{eq:general-qed-dressed-state}
+\end{equation}
+At finite infrared cutoff this is an ordinary coherent state.  Removing the
+cutoff is meaningful only after the incoming and outgoing dressings have been
+matched to the soft current of the hard process.  In a convention-independent
+form, the infrared-safe ``dress code'' is that
+\begin{equation}
+  \vsup{F_{\beta,\lambda}}{out}(\bm k)
+  -\vsup{F_{\alpha,\lambda}}{in}(\bm k)
+  -J_{\beta\alpha,\lambda}(\bm k)
+  \quad\hbox{is square integrable at $\bm k=0$} ,
+  \label{eq:hirai-sugishita-dress-code}
+\end{equation}
+where $J_{\beta\alpha,\lambda}$ is the transverse polarization component of
+the universal eikonal current in Eq.~\eqref{eq:eikonal-soft-current}; signs can
+be moved between $J$ and the definitions of the in/out dressings.  Equivalently,
+the coefficient of the logarithmically divergent norm must vanish.  Terms
+softer than the universal $1/(p\cdot k)$ profile remain genuine choices of the
+asymptotic state rather than infrared counterterms.
+
+This condition has three complementary readings.  Dynamically, it is the
+cancellation of the virtual soft factor by the coherent clouds attached to
+the asymptotic states.  Gauge theoretically, the dressing supplies the
+electric field required by the Gauss constraint, so an arbitrary
+Faddeev--Kulish-like coherent factor is not automatically sufficient.
+Asymptotically, the matching condition is conservation of the large-gauge
+charge and can be read as the electromagnetic memory relation between past
+and future null infinity.  Hirai and Sugishita further show that the choice of
+dressing matters even for inclusive measurements: tracing over unresolved
+photons can erase interference between hard wave packets unless the initial
+and final clouds obey the corresponding dress code.  The dressed-state and
+inclusive prescriptions are therefore compatible but are not interchangeable.
+
+An inclusive cross section can be finite even when no unitary $S$ matrix
+exists between the naive charged Fock vectors.  Conversely, specifying a
+dressed state requires more information than specifying an experimental
+resolution.  Conflating these two statements is a common source of apparent
+contradictions in discussions of the infrared problem.
+
+\subsection{Composite charged operators and long-range correlations}
+\label{subsec:composite-infrared}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering!Coulomb}
+\index{scattering!three-body Coulomb}
+\index{infrared problem}
+\index{dressing state}
+% END CURATED SUBJECT INDEX
+
+A local bare electron field is not gauge invariant.  A gauge-invariant charged
+operator must also create its electric field.  A Dirac-type dressing is
+\begin{equation}
+  \Psi_f(x)
+  =
+  \rme^{
+  \rmi e\int\rmd^3y\,
+  f^i(\bm x-\bm y)A_i(x^0,\bm y)
+  }\psi(x),
+  \qquad
+  \partial_i f^i(\bm z)=\delta^{(3)}(\bm z).
+  \label{eq:dirac-dressed-field}
+\end{equation}
+The Coulomb choice
+$f^i(\bm z)=-\partial^i(4\pi|\bm z|)^{-1}$ extends to spatial infinity and
+creates the Coulomb field together with the charge
+\cite{Dirac:1955GaugeInvariant}.  A Wilson-line dressing chooses a different
+field geometry.  Neither is a compactly supported local composite operator.
+
+It is therefore useful, with a qualification, to describe part of the QED
+infrared problem as an infrared singularity of a composite operator produced
+by long-range correlations.  The qualification is that three structures must
+be distinguished:
+\begin{enumerate}
+  \item soft divergences of amplitudes between inappropriate Fock states;
+  \item the absence of a sharp charged one-particle mass pole, or
+  infraparticle phenomenon;
+  \item infrared sensitivity of nonlocal gauge-invariant dressings and their
+  correlation functions.
+\end{enumerate}
+They have a common origin in massless propagation and Gauss' law, but they are
+not identical divergences.  Wilson-line composites also possess ultraviolet
+endpoint or cusp renormalization, which should not be relabeled as infrared
+merely because the line reaches infinity.
+
+For several charges, a product of individually dressed fields is generally
+not the final asymptotic operator.  Cross terms determined by relative
+velocities and total soft charge correlate the dressings.  This mirrors the
+three-body Coulomb problem: the long-range cloud is a property of the whole
+channel and its cluster limits, not a universal one-body factor attached after
+the calculation.
+
+\subsection{Operator-algebraic interpretation of infrared sectors}
+\label{subsec:operator-algebra-ir}
+% BEGIN CURATED SUBJECT INDEX
+\index{measure theory}
+\index{direct integral}
+\index{von Neumann algebra@\vN\ algebra}
+\index{superselection sector}
+\index{GNS construction}
+\index{wave operator}
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+\index{Dollard comparison dynamics}
+\index{scattering!three-body Coulomb}
+% END CURATED SUBJECT INDEX
+
+Let $\vsub{\Alg}{obs}$ be an abstract algebra of gauge-invariant
+observables.  The vacuum defines a Fock representation
+$\pi_0(\vsub{\Alg}{obs})$ through its GNS state.  A coherent shift by a
+square-integrable one-particle wave function is unitarily implemented in that
+representation.  The infrared displacement in
+Eq.~\eqref{eq:soft-photon-number-log} is not square integrable, so the limiting
+charged state can define a representation $\vsub{\pi}{IR}$ disjoint from
+$\pi_0$.  The abstract observable algebra can remain the same while the
+Hilbert-space representation changes.
+
+Asymptotic electric flux, soft charge, or velocity data may supply central or
+superselection labels for an enlarged asymptotic algebra.  Under appropriate
+separability and measurability assumptions, a mixed representation can be
+organized schematically as
+\begin{align}
+  \vsub{\Hil}{as}
+  &=\int_X^\oplus\Hil_\xi\dd\mu(\xi),
+  \label{eq:ir-sector-direct-integral}\\
+  \vsub{\vNAlg}{as}
+  &=\int_X^\oplus\vNAlg_\xi\dd\mu(\xi).
+  \label{eq:ir-algebra-direct-integral}
+\end{align}
+Here $\xi$ can include soft or flux data and $\mu$ describes the statistical
+mixture.  This direct integral is an organizational theorem, not a cure by
+itself: a choice of measure and measurable field must be supplied, and
+disjoint fibers are not connected by a unitary operator in any one fiber.
+Scattering should instead be formulated as an intertwiner between appropriate
+incoming and outgoing representations or as a map of asymptotic observable
+algebras.
+
+\begin{table}[t]
+  \centering
+  \small
+  \begin{tabular}{>{\raggedright\arraybackslash}p{0.16\textwidth}
+                  >{\raggedright\arraybackslash}p{0.23\textwidth}
+                  >{\raggedright\arraybackslash}p{0.22\textwidth}
+                  >{\raggedright\arraybackslash}p{0.24\textwidth}}
+    \toprule
+    problem & naive comparison state & long-range obstruction &
+    appropriate replacement \\
+    \midrule
+    short-range two-body &
+    free plane wave or packet &
+    none after an integrable phase &
+    ordinary M{\o}ller wave operators \\
+\addlinespace
+    two-body Coulomb &
+    free plane wave &
+    logarithmic phase along a free trajectory &
+    Coulomb wave and Dollard dynamics \\
+\addlinespace
+    three-body Coulomb &
+    product of independent pair waves &
+    incompatible breakup and cluster limits &
+    sectorial asymptotics and Faddeev--Merkuriev channels \\
+\addlinespace
+    QED charged scattering &
+    finite-photon charged Fock vector &
+    non-square-integrable soft cloud and Gauss' law &
+    inclusive observables, dressed states, or non-Fock sectors \\
+    \bottomrule
+  \end{tabular}
+  \caption{The hierarchy of long-range modifications.  Each row changes the
+  asymptotic comparison problem, not the local equations of motion.}
+  \label{tab:long-range-hierarchy}
+\end{table}
+
+\subsection{Consequences for resonances, complex scaling, and exact WKB}
+\label{subsec:long-range-resonances}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{GNS construction}
+\index{Jost function}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{scattering!Coulomb}
+\index{infrared problem}
+\index{dressing state}
+\index{exact WKB}
+\index{complex scaling}
+% END CURATED SUBJECT INDEX
+
+Long-range asymptotics changes the analytic surface on which a resonance is
+defined.  Because $\eta\propto1/k$, the Coulomb factors contain
+$\Gamma(l+1+\rmi\eta)$ and logarithms with an essential threshold structure
+at $k=0$.  A short-range square-root sheet is therefore insufficient.  Pole
+searches should factor the pure Coulomb contribution and continue the
+Coulomb-modified Jost determinant.  Response functions should be compared
+with a reference Hamiltonian carrying the same Coulomb tail.
+
+Complex scaling can be applied to important Coulombic Hamiltonians under
+appropriate dilation-analytic hypotheses, but it does not restore free
+asymptotics.  Exterior scaling, channel-adapted coordinates, and
+Faddeev--Merkuriev decompositions may be required in many-body problems.  A
+rotated eigenvalue must be interpreted relative to the correct Coulomb
+thresholds and reference continuum.
+
+Exact WKB displays the two-body logarithm immediately.  At large $r$,
+\begin{equation}
+  p(r)
+  =\sqrt{2\mu\left(E-\frac{g}{r}\right)}
+  =\hbar k-\frac{\mu g}{\hbar k}\frac{1}{r}
+  +O(r^{-2}),
+  \label{eq:coulomb-WKB-momentum}
+\end{equation}
+so
+\begin{equation}
+  \frac{1}{\hbar}\int^r p(r')\dd r'
+  =kr-\eta\ln r+O(r^{-1}).
+  \label{eq:coulomb-WKB-log}
+\end{equation}
+The Coulomb phase is therefore a global WKB period reaching infinity.  In the
+three-body problem the corresponding Hamilton--Jacobi function is
+multivariable and its cluster limits are nonuniform.  In QED the asymptotic
+phase becomes an operator-valued soft dressing.
+
+A genuinely field-theoretic resonance theory must combine these infrared
+representations with analytic continuation of multiparticle correlation
+functions.  For a charged unstable excitation, an infraparticle cut and a
+resonance pole need not be separable by the elementary pole-plus-background
+ansatz.  Constructing an asymptotic algebra, its incoming and outgoing GNS
+representations, and a continued spectral object carrying widths and residues
+is a central open problem in extending the present program from potential
+scattering to gauge theory.

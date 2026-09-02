@@ -1,0 +1,172 @@
+\section{Two horizons: de Sitter QNMs and continuum response}
+\label{sec:bh-desitter}
+% BEGIN CURATED SUBJECT INDEX
+\index{quasinormal mode}
+\index{horizon boundary condition}
+\index{de Sitter spacetime}
+\index{continuum response}
+% END CURATED SUBJECT INDEX
+
+\subsection{Two-horizon scattering problem}
+\label{subsec:sds-setup}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{complex scaling}
+\index{quasinormal mode}
+\index{tortoise coordinate}
+\index{horizon boundary condition}
+\index{Schwarzschild black hole}
+\index{de Sitter spacetime}
+% END CURATED SUBJECT INDEX
+
+For a four-dimensional Schwarzschild--de Sitter black hole,
+\begin{equation}
+  f(r)=1-\frac{2M}{r}-\frac{\Lambda r^2}{3},
+  \qquad \Lambda>0 .
+  \label{eq:sds-f}
+\end{equation}
+In the static region, $f(r)$ has a black-hole horizon $r_h$ and a cosmological
+horizon $r_c>r_h$.  The tortoise coordinate maps
+\begin{equation}
+  r\to r_h^+\Longrightarrow r_*\to-\infty,
+  \qquad
+  r\to r_c^-\Longrightarrow r_*\to+\infty .
+  \label{eq:sds-tortoise-limits}
+\end{equation}
+The QNM boundary conditions are
+\begin{align}
+  \psi(r_*)&\sim\rme^{-\rmi\omega r_*},
+  &&r_*\to-\infty,
+  \notag\\
+  \psi(r_*)&\sim\rme^{+\rmi\omega r_*},
+  &&r_*\to+\infty .
+  \label{eq:sds-boundary}
+\end{align}
+They have the same two-ended outgoing form as Eq.~\eqref{eq:qnm-boundary-flat},
+with the right end now representing the cosmological horizon.
+
+For scalar, electromagnetic, and axial gravitational sectors, one may again
+use
+\begin{equation}
+  V_{sl}(r)
+  =f(r)\left[
+  \frac{l(l+1)}{r^2}
+  +\frac{f'(r)}{r}\,\delta_{s0}
+  -\frac{6M}{r^3}\,\delta_{s2}
+  \right] ,
+  \label{eq:sds-potentials}
+\end{equation}
+with the sector labels interpreted appropriately.  The potential decays
+exponentially at both horizons for a nonextremal static patch.  This
+short-range behavior makes global complex scaling in $r_*$ particularly
+natural, subject to the analytic branches of $r(r_*)$.
+
+\subsection{Pole motion with the cosmological constant}
+\label{subsec:sds-pole-motion}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{quasinormal mode}
+\index{horizon boundary condition}
+% END CURATED SUBJECT INDEX
+
+Changing $\Lambda$ changes the horizon separation, surface gravities, barrier
+height, and barrier width.  Quasinormal poles therefore move in the complex
+$\omega$ plane.  A complex-scaling calculation follows these pole trajectories
+without changing the outgoing boundary implementation.  The same diagonalized
+spectrum also contains the rotated continuum, allowing pole motion to be
+distinguished from redistribution of background response
+\cite{Ogawa:2026dSCSM}.
+
+Near the Nariai limit, the two horizons approach one another and an appropriate
+rescaled potential approaches a solvable barrier.  This gives an analytic
+benchmark related to the P\"oschl--Teller family.  Away from that limit, a
+numerical comparison should keep fixed a dimensionless convention, such as
+$M\omega$ or a frequency scaled by a surface gravity; otherwise apparent
+motion partly reflects a changing unit.
+
+\subsection{Continuum level density for black-hole response}
+\label{subsec:bh-cld}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering matrix}
+\index{continuum level density}
+\index{horizon boundary condition}
+\index{continuum response}
+% END CURATED SUBJECT INDEX
+
+Choose a reference operator $H_0$ that has the same horizon asymptotics as the
+black-hole master operator but no scattering barrier.  The CLD is
+\begin{equation}
+  \Delta\rho(E)
+  =-\frac{1}{\pi}\im\Tr\left[
+  (E-H_\theta)^{-1}
+  -(E-H_{0,\theta})^{-1}
+  \right],
+  \qquad E=\omega^2 .
+  \label{eq:bh-cld}
+\end{equation}
+A stable peak can be decomposed locally into a pole contribution and a smooth
+background, but the total CLD is the more invariant finite quantity.  Its
+integral measures the total scattering phase relative to the reference.  It
+therefore probes changes in continuum response even when no isolated pole
+crosses the observation window.
+
+For a two-ended one-dimensional potential, the scattering matrix contains
+reflection and transmission amplitudes.  The determinant phase fixes the CLD
+through Eq.~\eqref{eq:birman-krein-differential}, while the greybody factor is
+the transmission probability
+\begin{equation}
+  \mathcal G_l(\omega)=|T_l(\omega)|^2 .
+  \label{eq:greybody-factor}
+\end{equation}
+Knowing $\det S$ does not in general determine $|T|^2$.  Additional symmetry
+or channel-resolved information is required.  The CLD and greybody factor are
+therefore complementary rather than interchangeable observables
+\cite{Harmark:2007jy,Ogawa:2026dSCSM}.
+
+\subsection{Coupled channels and string-inspired backgrounds}
+\label{subsec:bh-coupled-channels}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{scattering matrix}
+\index{boundary condition!incoming and outgoing}
+\index{Riemann sheet}
+\index{resonance!residue}
+\index{complex scaling}
+\index{coupled-channel equation}
+\index{horizon boundary condition}
+% END CURATED SUBJECT INDEX
+
+For $N_c$ coupled perturbation channels, write
+\begin{equation}
+  \left[-\identity_{N_c}\frac{\rmd^2}{\rmd r_*^2}
+  +\bm V(r)\right]\bm\psi(r_*)
+  =\omega^2\bm\psi(r_*) .
+  \label{eq:coupled-bh-equation}
+\end{equation}
+Complex scaling acts on the common coordinate, while $\bm V$ mixes channels.
+The asymptotic channel basis must be chosen so that incoming and outgoing
+directions are defined at each horizon.  If different channels have different
+thresholds or asymptotic wave numbers, the rotated spectrum contains several
+rays and the Riemann sheet must be labeled channel by channel.
+
+String-inspired metric--dilaton systems provide a natural application
+\cite{Bian:2026crb}.  Numerically, the main new issue is matrix-block imbalance:
+one channel or basis sector can acquire exponentially larger matrix elements
+under deformation.  Similarity balancing can improve conditioning without
+changing eigenvalues, but left--right residues must be transformed
+consistently.
+
+\subsection{Higher dimensions}
+\label{subsec:bh-higher-d}
+% BEGIN CURATED SUBJECT INDEX
+\index{horizon boundary condition}
+% END CURATED SUBJECT INDEX
+
+Tensor, vector, and scalar gravitational perturbations of higher-dimensional
+static black holes also reduce to Schr\"odinger-type master equations in many
+sectors
+\cite{Kodama:2003jz,Ishibashi:2003ap,Ishibashi:2011ws}.  When the potential is
+frequency independent and has two asymptotically free ends, the same
+complex-scaling construction applies.  The angular spectrum and near-horizon
+indices change, but the pole/continuum geometry does not.  Scalar-type coupled
+systems and rotating backgrounds require additional work.

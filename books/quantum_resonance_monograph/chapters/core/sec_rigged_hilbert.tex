@@ -1,0 +1,470 @@
+\section{Define the resonance functional and its norm}
+\label{sec:rigged-hilbert}
+
+\subsection{Gaussian regularization of a Gamow state}
+\label{subsec:zeldovich}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{boundary condition!incoming and outgoing}
+\index{Gamow--Siegert state}
+\index{Zel'dovich regularization}
+\index{Gaussian regularization}
+\index{Berggren completeness relation}
+% END CURATED SUBJECT INDEX
+
+Let $\psi_{\mathrm R}(x)$ obey the outgoing condition and grow exponentially
+on the real axis.  Zel'dovich regularization defines a bilinear overlap by
+inserting a Gaussian and analytically removing it:
+\begin{equation}
+  (\psi_{\mathrm R}\mathbin{|}\psi_{\mathrm R})_{\!Z}
+  =\lim_{\eta\to0^+}
+  \int_{-\infty}^{\infty}\rmd x\,
+  \rme^{-\eta x^2}\psi_{\mathrm R}(x)^2 .
+  \label{eq:zeldovich-norm}
+\end{equation}
+The square is not an absolute square.  It is the bilinear pairing appropriate
+to a time-reversal-invariant resonance problem.  The integral is first
+evaluated where $\eta>0$ makes it convergent and is then continued to the
+desired parameter domain
+\cite{Zel'dovich:1961,Berggren:1968zz}.
+
+The regulator can be expressed as a nonunitary multiplication operator
+\begin{equation}
+  G_\eta=\rme^{-\frac{\eta x^2}{2}},
+  \qquad
+  H_\eta=G_\eta H G_\eta^{-1} .
+  \label{eq:zeldovich-transform}
+\end{equation}
+For the kinetic operator, the transformed momentum is
+\begin{equation}
+  G_\eta pG_\eta^{-1}=p-\rmi\hbar\eta x,
+  \qquad p=-\rmi\hbar\frac{\rmd}{\rmd x} .
+  \label{eq:zeldovich-momentum}
+\end{equation}
+Consequently $H_\eta$ is non-self-adjoint.  The transformation and complex
+scaling look different, but both move the asymptotic growth into the operator
+and leave a regularized vector in a square-integrable representation.  Exact
+WKB analysis makes their common analytic content particularly transparent
+\cite{Morikawa:2025xjq}.
+
+\subsection{Berggren's proof: orthogonality, normalization, and completeness}
+\label{subsec:berggren-proof}
+% BEGIN CURATED SUBJECT INDEX
+\index{locally convex space}
+\index{Jost function}
+\index{partial-wave expansion}
+\index{scattering!Coulomb}
+\index{biorthogonality}
+\index{Zel'dovich regularization}
+\index{Berggren completeness relation}
+% END CURATED SUBJECT INDEX
+
+The Gaussian formula in Eq.~\eqref{eq:zeldovich-norm} becomes mathematically
+useful only after three questions are answered: what analytic continuation is
+being taken, why different resonant states are orthogonal in the resulting
+bilinear pairing, and why the resonance sum must be accompanied by a deformed
+continuum.  Berggren's construction answers these questions for radial
+short-range problems
+\cite{Berggren:1968zz,Michel:2009,MichelPloszajczak:2021}.  We give the
+proof in enough detail to expose its assumptions.
+
+\begin{theorem}[Finite-range weak Berggren expansion]
+Fix a partial wave on $L^2(0,\infty)$ with the regular boundary condition at
+the origin.  Let the real potential be locally integrable and vanish for
+$r>R$.  Assume that its Jost function has no threshold zero, spectral
+singularity, or multiple zero in the region swept between the positive real
+$k$ axis and a piecewise smooth contour $L^+$ in the fourth quadrant.  Let
+$\PhiSpace_{L^+}$ consist of radial test functions whose Jost transforms are
+analytic in that region and decrease sufficiently that the closing arcs and
+the small threshold arc vanish.
+
+Then, as a weak identity from $\PhiSpace_{L^+}$ to its antidual,
+\begin{equation}
+  \sum_{n\in b\cup d}
+  \ket{u_n}\bra{\widetilde u_n}
+  +\int_{L^+}\rmd k\,
+  \ket{u(k)}\bra{\widetilde u(k)}
+  =\identity .
+  \label{eq:berggren-theorem-statement}
+\end{equation}
+The set $b$ contains bound-state poles and $d$ contains precisely the simple
+decaying poles between the two contours.  The discrete vectors are normalized
+by the analytic continuation of the bilinear Zel'dovich pairing, and the
+continuum uses the corresponding biorthogonal delta normalization.
+\label{thm:berggren-finite-range}
+\end{theorem}
+
+The finite-range assumption lets the tail and the contour deformation be
+checked directly.  Exponentially decreasing, Coulomb-modified,
+coupled-channel, and nonlocal potentials have useful Berggren extensions, but
+their analytic domains, threshold terms, and test spaces must be restated;
+they are not automatic corollaries of
+Theorem~\ref{thm:berggren-finite-range}.
+
+\subsubsection*{The regulated outgoing integral}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{Stokes curve}
+\index{Zel'dovich regularization}
+% END CURATED SUBJECT INDEX
+
+First consider the elementary tail integral
+\begin{equation}
+  I_\eta(q;R)
+  =\int_R^\infty\rmd r\,
+  \rme^{-\eta r^2+\rmi q r},
+  \qquad \eta>0 .
+  \label{eq:zeldovich-elementary-integral}
+\end{equation}
+Completing the square gives
+\begin{equation}
+  I_\eta(q;R)
+  =\frac{\sqrt{\pi}}{2\sqrt{\eta}}
+  \rme^{-\frac{q^2}{4\eta}}
+  \operatorname{erfc}\left(
+  \sqrt{\eta}R-\frac{\rmi q}{2\sqrt{\eta}}
+  \right) .
+  \label{eq:zeldovich-erfc}
+\end{equation}
+For every fixed $\eta>0$ this is an entire function of $q$.  In the upper
+half-plane $\im q>0$, the regulator can be removed by ordinary dominated
+convergence:
+\begin{equation}
+  \lim_{\eta\to0^+}I_\eta(q;R)
+  =\int_R^\infty\rmd r\,\rme^{\rmi q r}
+  =\frac{\rmi}{q}\rme^{\rmi qR} .
+  \label{eq:zeldovich-tail-upper}
+\end{equation}
+The right-hand side is analytic for $q\ne0$.  Its unique analytic
+continuation defines the Zel'dovich value in a resonance sector where the
+unregulated integral diverges:
+\begin{equation}
+  \left[\int_R^\infty\rmd r\,\rme^{\rmi q r}\right]_{Z}
+  :=\left[\frac{\rmi}{q}\rme^{\rmi qR}\right]_{\mathrm{a.c.}} .
+  \label{eq:zeldovich-tail-definition}
+\end{equation}
+Writing ``take $\eta\to0$'' without the analytic-continuation qualification
+is incomplete: different asymptotic sectors of the complementary error
+function are separated by Stokes lines.  The prescription is fixed by first
+working in the convergent half-plane and then continuing the resulting
+analytic function.
+
+\subsubsection*{Orthogonality on a finite-range $s$-wave model}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{Gamow--Siegert state}
+\index{Riccati equation}
+\index{complex-symmetric operator}
+\index{Berggren completeness relation}
+\index{exceptional point}
+\index{self-orthogonality}
+% END CURATED SUBJECT INDEX
+
+Let $V(r)=0$ for $r>R$ and write the reduced $s$-wave equation as
+\begin{equation}
+  \left[-\frac{\rmd^2}{\rmd r^2}+U(r)\right]u_n(r)
+  =k_n^2u_n(r),
+  \qquad U(r)=\frac{2\mu}{\hbar^2}V(r),
+  \label{eq:berggren-radial-equation}
+\end{equation}
+with $u_n(0)=0$ and the purely outgoing tail
+\begin{equation}
+  u_n(r)=u_n(R)\rme^{\rmi k_n(r-R)},
+  \qquad r\geq R .
+  \label{eq:berggren-outgoing-tail}
+\end{equation}
+For two distinct solutions, Green's identity gives
+\begin{align}
+  &(k_n^2-k_m^2)\int_0^R\rmd r\,u_n(r)u_m(r)
+  \notag\\
+  &\qquad=
+  \left[u_nu_m'-u_mu_n'\right]_{r=R}
+  =\rmi(k_m-k_n)u_n(R)u_m(R) .
+  \label{eq:berggren-green-identity}
+\end{align}
+Consequently
+\begin{equation}
+  \int_0^R\rmd r\,u_nu_m
+  =-\frac{\rmi}{k_n+k_m}u_n(R)u_m(R) .
+  \label{eq:berggren-interior-overlap}
+\end{equation}
+On the other hand, Eq.~\eqref{eq:zeldovich-tail-definition} with
+$q=k_n+k_m$ gives
+\begin{equation}
+  \left[\int_R^\infty\rmd r\,u_nu_m\right]_{Z}
+  =\frac{\rmi}{k_n+k_m}u_n(R)u_m(R) .
+  \label{eq:berggren-tail-overlap}
+\end{equation}
+The interior and exterior terms cancel exactly:
+\begin{equation}
+  (u_n\mathbin{|}u_m)_Z
+  :=\int_0^R\rmd r\,u_nu_m
+  +\left[\int_R^\infty\rmd r\,u_nu_m\right]_{Z}
+  =0,
+  \qquad k_n^2\ne k_m^2 .
+  \label{eq:berggren-orthogonality}
+\end{equation}
+No complex conjugation appears.  The pairing is the $c$ product appropriate
+to a time-reversal-invariant complex-symmetric radial problem.  Ordinary
+Hermitian orthogonality would be incompatible with two outgoing states.
+
+For $m=n$, the same prescription gives the finite Gamow norm
+\begin{equation}
+  \mathcal N_n^2
+  =(u_n\mathbin{|}u_n)_Z
+  =\int_0^R\rmd r\,u_n(r)^2
+  +\frac{\rmi}{2k_n}u_n(R)^2 .
+  \label{eq:berggren-s-wave-norm}
+\end{equation}
+The norm is generally complex before a normalization convention is imposed.
+One may rescale $u_n$ so that $\mathcal N_n^2=1$.  At an exceptional point
+the bilinear norm can vanish; this self-orthogonality signals a higher-order
+pole and cannot be repaired by ordinary rescaling.
+
+For $l>0$, the outgoing tail is a Riccati--Hankel function rather than a
+single exponential.  The proof is unchanged in structure.  If
+\begin{equation}
+  L_l^{(+)}(k;R)
+  :=\frac{\partial_r f_l(k,R)}{f_l(k,R)}
+  \label{eq:outgoing-log-derivative}
+\end{equation}
+is the outgoing logarithmic derivative, the analytically continued exterior
+part of the norm is
+\begin{equation}
+  \left[\int_R^\infty\rmd r\,u_n(r)^2\right]_Z
+  =\frac{u_n(R)^2}{2k_n}
+  \left.\frac{\partial L_l^{(+)}(k;R)}{\partial k}
+  \right|_{k=k_n} .
+  \label{eq:berggren-general-tail-norm}
+\end{equation}
+For $l=0$, $L_0^{(+)}=\rmi k$, and
+Eq.~\eqref{eq:berggren-general-tail-norm} reduces to the surface term in
+Eq.~\eqref{eq:berggren-s-wave-norm}.  Formula
+\eqref{eq:berggren-general-tail-norm} follows either by analytically
+continuing the finite Riccati--Hankel expansion or by taking the coincident
+limit of Green's identity.  This boundary form is often more stable
+numerically than integrating a Gaussian at very small regulator.
+
+\subsubsection*{Connection with the Jost derivative and the pole residue}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{Jost function}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{radial equation}
+\index{Zel'dovich regularization}
+\index{Berggren completeness relation}
+% END CURATED SUBJECT INDEX
+
+At a simple zero $F_l(k_n)=0$, the regular and outgoing solutions are
+proportional.  Differentiate the radial equation with respect to $k$, pair it
+bilinearly with $u_n$, and integrate by parts.  The interior contribution and
+the outgoing surface term combine into Eq.~\eqref{eq:berggren-general-tail-norm}.
+The result relates the regularized norm to the derivative of the incoming
+Jost coefficient:
+\begin{equation}
+  \mathcal N_n^2
+  \propto F_l'(k_n),
+  \label{eq:berggren-jost-derivative}
+\end{equation}
+where the proportionality factor depends only on the chosen normalizations of
+$\varphi_l$ and $f_l$.  Substitution into
+Eq.~\eqref{eq:radial-green-residue} gives
+\begin{equation}
+  \Res_{E=E_n}G_l^{(+)}(E;r,r')
+  =\frac{u_n(r)u_n(r')}{\mathcal N_n^2}
+  \label{eq:berggren-residue-normalization}
+\end{equation}
+in the book's convention $\Resolvent(E)=(E-H)^{-1}$.  Thus Zel'dovich normalization is
+the coordinate-space form of unit residue normalization.  This is the
+mathematical reason it is compatible with scattering theory.
+
+\subsubsection*{Contour deformation and the Berggren completeness relation}
+% BEGIN CURATED SUBJECT INDEX
+\index{Hilbert space}
+\index{locally convex space}
+\index{Jost function}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{Zel'dovich regularization}
+\index{Berggren completeness relation}
+\index{rigged Hilbert space}
+% END CURATED SUBJECT INDEX
+
+Begin with the real-energy radial completeness relation, normalized so that
+the continuum states satisfy a Dirac delta:
+\begin{equation}
+  \sum_{b}\,u_b(r)u_b(r')
+  +\int_0^\infty\rmd k\,u(k,r)u(k,r')
+  =\delta(r-r') .
+  \label{eq:newton-radial-completeness}
+\end{equation}
+The sum contains physical bound states.  For test functions whose momentum
+representatives have sufficient analyticity and decay, the continuum kernel
+can be continued into the fourth quadrant.  Deform the positive real
+$k$ axis to a contour $L^+$ that passes below selected decaying resonance
+poles but avoids threshold and other singularities.  Cauchy's theorem gives
+the residues of every crossed Jost zero.  With the residue normalization of
+Eq.~\eqref{eq:berggren-residue-normalization}, the result is
+\begin{equation}
+  \sum_{b,d}\ket{u_n}\bra{\widetilde u_n}
+  +\int_{L^+}\rmd k\,
+  \ket{u(k)}\bra{\widetilde u(k)}
+  =\identity .
+  \label{eq:berggren-completeness-proof}
+\end{equation}
+Here $b$ labels bound states and $d$ the decaying poles between the real axis
+and $L^+$.  The tilde denotes the bilinear dual, not ordinary complex
+conjugation.  The large arc vanishes only on an appropriate test space; hence
+Eq.~\eqref{eq:berggren-completeness-proof} is naturally a weak identity in a
+rigged Hilbert space.  If $L^+$ is returned to the real axis, the resonance
+residues are reabsorbed into the continuum integral and
+Eq.~\eqref{eq:newton-radial-completeness} is recovered.
+
+This proof explains four features that are sometimes conflated.  First,
+Zel'dovich regularization defines the bilinear norm of an outgoing residue.
+Second, Green's identity proves orthogonality after the regulated tail is
+included.  Third, Jost analyticity identifies the same norm with a pole
+residue.  Fourth, contour deformation proves completeness only for the
+combined set of bound states, enclosed resonances, and the $L^+$ continuum.
+Dropping the continuum destroys the identity and removes threshold and
+background physics.
+
+\subsection{The Gelfand triple}
+\label{subsec:gelfand-triple}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{Hilbert space}
+\index{locally convex space}
+\index{topology}
+\index{spectrum!point}
+\index{resolvent}
+\index{direct integral}
+\index{resonance!residue}
+\index{Gamow--Siegert state}
+\index{rigged Hilbert space}
+% END CURATED SUBJECT INDEX
+
+A rigged Hilbert space, or Gelfand triple, is a nested sequence
+\begin{equation}
+  \PhiSpace\subset\Hil\subset\PhiSpace^{\times} .
+  \label{eq:gelfand-triple}
+\end{equation}
+The space $\PhiSpace$ is dense in $\Hil$ and carries a topology stronger than
+the Hilbert norm.  The antidual $\PhiSpace^{\times}$ consists of continuous
+antilinear functionals on $\PhiSpace$.  Generalized continuum eigenvectors and
+Gamow vectors live in $\PhiSpace^{\times}$ rather than in $\Hil$.  The choice
+of $\PhiSpace$ is part of the physics: it specifies localization, smoothness,
+analyticity, and allowed contour deformations
+\cite{DelaMadrid:2001wwa,DelaMadrid:2001dln,DelaMadrid:2002cz,Rafael:2012}.
+
+The arrows in Eq.~\eqref{eq:gelfand-triple} are continuous embeddings, not
+only set inclusions.  A Hilbert vector $\psi$ is embedded in the antidual by
+$\phi\mapsto\dualpair{\phi}{\psi}$.  In the energy direct integral of
+Eq.~\eqref{eq:spectral-direct-integral}, evaluation of an $L^2$ section at one
+energy is not continuous and is not even defined independently of its
+almost-everywhere representative.  A test topology imposing energy
+regularity makes the evaluation functional continuous.  This elementary fact
+is the rigorous content behind the notation $\braket{E,\alpha|\phi}$.
+Analytic continuation of that evaluation functional can then define a Gamow
+vector at complex energy, provided the chosen seminorms control the required
+continuation.
+
+For a test vector $\phi\in\PhiSpace$, a resonance functional can be defined by
+the pole residue
+\begin{equation}
+  \dualpair{\phi}{\Psi_{\mathrm R}}
+  =\Res_{z=z_{\mathrm R}}
+  \dualpair{\phi}{\Resolvent(z)\chi} ,
+  \label{eq:gamow-functional}
+\end{equation}
+where $\chi\in\PhiSpace$ is chosen so that the residue is nonzero.  The
+functional satisfies a generalized eigenvalue equation
+\begin{equation}
+  \dualpair{H\phi}{\Psi_{\mathrm R}}
+  =z_{\mathrm R}\dualpair{\phi}{\Psi_{\mathrm R}} .
+  \label{eq:generalized-eigenvalue}
+\end{equation}
+No contradiction with self-adjointness arises because
+$\Psi_{\mathrm R}\notin\Hil$ and Eq.~\eqref{eq:generalized-eigenvalue} is an
+identity in the dual pairing, not an ordinary Hilbert-space eigenvalue
+equation.
+
+\subsection{Hardy classes and time direction}
+\label{subsec:hardy-time}
+% BEGIN CURATED SUBJECT INDEX
+\index{locally convex space}
+\index{Gamow--Siegert state}
+\index{Hardy class}
+% END CURATED SUBJECT INDEX
+
+One can choose energy wave functions in Hardy classes analytic in an upper or
+lower half-plane.  Contour closure then produces a semigroup time evolution
+for Gamow vectors: decaying poles contribute for $t>0$, and growing
+time-reversed poles contribute for $t<0$.  This construction gives a clean
+mathematical encoding of preparation and detection, but it is not forced by
+the Hilbert-space Hamiltonian alone.  It depends on the test space and on which
+boundary values are identified with prepared states and observables.  We
+therefore use the rigged-space formalism to define pole functionals without
+claiming that a microscopic arrow of time follows solely from analytic
+continuation.
+
+\subsection{Relation to complex scaling}
+\label{subsec:rhs-csm}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{resonance!residue}
+\index{Gamow--Siegert state}
+\index{complex scaling}
+% END CURATED SUBJECT INDEX
+
+For analytic test vectors, the complex-scaled eigenvector and the Gamow
+functional represent the same resolvent residue.  Schematically,
+\begin{equation}
+  \dualpair{\phi}{\Psi_{\mathrm R}}
+  =\braket{U(\rmi\theta)\phi|
+  \Psi_{\mathrm R}^{\theta}}_{\theta},
+  \label{eq:rhs-csm-pairing}
+\end{equation}
+where $\Psi_{\mathrm R}^{\theta}\in L^2$ is the eigenvector of $H_\theta$ and
+the right-hand side uses the left--right pairing appropriate to the deformed
+operator.  Equation~\eqref{eq:rhs-csm-pairing} is independent of $\theta$ as
+long as the pole remains exposed and the test vector is analytic under the
+deformation.  The equality has been demonstrated explicitly in solvable
+models and in the Friedrichs model
+\cite{Antoniou:2001,Morikawa:2025xjq}.
+
+This relation also explains why the number of discrete resonance eigenvalues
+visible in $H_\theta$ depends on $\theta$ while the underlying pole set does
+not.  Changing $\theta$ changes which poles are represented by $L^2$
+eigenvectors and which remain behind the rotated continuum.  The rigged-space
+functional exists through continuation beyond that particular representation,
+subject to the analytic domain of the problem.
+
+\subsection{Probability, observables, and normalization}
+\label{subsec:resonance-observables}
+% BEGIN CURATED SUBJECT INDEX
+\index{wave packet}
+\index{resonance!residue}
+\index{Gamow--Siegert state}
+\index{biorthogonality}
+\index{exceptional point}
+% END CURATED SUBJECT INDEX
+
+An expectation value formed from a Gamow state can be complex.  This is not a
+probability expectation in a closed system.  It is a pole residue or a
+biorthogonal matrix element that may encode both a central value and a decay
+scale.  Observable probabilities are obtained from real-energy scattering
+states, wave packets, detector models, or a unitary dilation of the open
+dynamics.  Resonance vectors are efficient intermediate objects in those
+calculations.
+
+Three normalizations should therefore be kept distinct.  Hilbert normalization
+uses $\int|\psi|^2=1$ for a bound state or wave packet.  Continuum
+normalization uses a Dirac delta, such as
+$\braket{k|k'}=\delta(k-k')$.  Resonance normalization uses an analytic
+bilinear prescription, a residue condition, or a biorthogonal pairing.  The
+  singular transition between the last two normalizations is precisely what
+  must be controlled when a resonance reaches the complex-scaled continuum at
+  an exceptional point.

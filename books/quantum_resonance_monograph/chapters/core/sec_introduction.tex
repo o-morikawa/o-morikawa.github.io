@@ -1,0 +1,269 @@
+\chapter{The resonance problem}
+\label{sec:introduction}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{Hilbert space}
+\index{topology}
+\index{measure theory}
+\index{spectral theorem}
+\index{spectrum!continuous}
+\index{spectrum!point}
+\index{resolvent}
+\index{Riesz projection}
+\index{direct integral}
+% END CURATED SUBJECT INDEX
+
+An unstable quantum state does not fit comfortably into the spectral theorem
+for a self-adjoint Hamiltonian.  A normalized eigenvector of a self-adjoint
+operator has a real eigenvalue and evolves only by a phase.  A state that loses
+probability from a localized region instead has, over an intermediate time
+window, an amplitude of the form
+\begin{equation}
+  A(t)\simeq Z\rme^{-\frac{\rmi E_* t}{\hbar}
+  -\frac{\Gamma t}{2\hbar}},
+  \qquad t>0 .
+  \label{eq:intro-decay}
+\end{equation}
+Here $E_*$ is the resonance position, $\Gamma>0$ is the decay width, and $Z$
+is the pole residue projected onto the prepared state.  It is tempting to call
+$E_*-\rmi\Gamma/2$ an eigenvalue.  Yet the corresponding outgoing wave grows
+exponentially in space and is not an element of the original Hilbert space.
+The apparent contradiction is resolved only after one specifies which object
+has been analytically continued, which function space is being used, and which
+boundary value of the continuum resolvent is meant.
+
+This issue is older than the modern language of non-Hermitian physics.
+Siegert's outgoing states, Zel'dovich's Gaussian regularization, Berggren's
+completeness relation, Feshbach's energy-dependent effective Hamiltonian, and
+the Aguilar--Balslev--Combes construction all address different parts of the
+same problem
+\cite{Siegert:1939,Zel'dovich:1961,Berggren:1968zz,
+Feshbach1958UnifiedI,Feshbach1962UnifiedII,Aguilar:1971ve,Balslev:1971vb}.
+The language has broadened because non-self-adjoint generators now arise in
+nuclear reactions, atomic and molecular ionization, optical resonators,
+open-system dynamics, topological phases, and black-hole perturbation theory
+\cite{Myo:2014ypa,Rotter:2007zng,Ashida2020NonHermitian,
+Berti:2009kk}.  In all of these settings, complex eigenvalues are useful, but
+they are not by themselves a definition of a resonance.
+
+The resurgence program changes the order in which this problem can be
+understood.  Exact WKB analysis starts from a formal semiclassical solution,
+Borel resums it in sectors of the complex coordinate plane, and imposes global
+consistency through Stokes automorphisms and monodromy.  Stable spectra,
+tunneling splittings, and nonperturbative ambiguities are naturally expressed
+by Voros symbols and exact quantization conditions
+\cite{Voros:1983xx,Delabaere:1999xx,Iwaki:2014vad}.
+The extension to resonances shows that an outgoing boundary condition can be
+read as the vanishing of the prohibited incoming coefficient after analytic
+continuation.  The complex energy then follows from the same connection
+algebra that quantizes a bound state
+\cite{Morikawa:2025grx,Morikawa:2025xjq,Morikawa:2025vvs}.
+This observation is the organizing principle of the book.  It lets
+us construct the analytic resonance condition first and introduce a
+non-self-adjoint eigenvalue problem, a regularized norm, or a generalized
+state only when one of those representations is needed for a subsequent
+calculation.
+
+Our purpose is therefore not to place several resonance formalisms side by
+side.  We derive them in a dependency order.  The
+primary calculational object is a global connection coefficient, or
+equivalently the analytic determinant whose zero removes the incoming wave.
+After continuation this zero is a pole of the resolvent and scattering
+matrix, accompanied by a residue and a nearby continuum.  The resulting
+dictionary is
+\begin{align}
+  &\text{zero of a Jost function}
+  \quad\Longleftrightarrow\quad
+  \text{pole of the scattering matrix}
+  \notag\\
+  &\quad\Longleftrightarrow\quad
+  \text{outgoing Gamow--Siegert vector}
+  \notag\\
+  &\quad\Longleftrightarrow\quad
+  \text{discrete eigenvalue of a complex-scaled operator}
+  \notag\\
+  &\quad\Longleftrightarrow\quad
+  \text{zero of an exact-WKB connection coefficient} .
+  \label{eq:intro-dictionary}
+\end{align}
+The last entry is placed last in the displayed dictionary only for typographic
+convenience; in the derivation it comes first.  Each arrow has hypotheses.
+Thresholds introduce branch points; long-range
+potentials modify asymptotic states; complex scaling requires an analytic
+deformation; a rigged Hilbert space depends on the test-function topology; and
+an exact-WKB relation requires control of Borel summability and Stokes data.
+The textbook aim is to make the reader verify these hypotheses during the
+calculation, rather than encounter them later as qualifications to a formal
+answer.
+
+There is also a useful mathematical lesson behind this qualification.  A
+Hilbert space alone does not specify which limits, generalized vectors, or
+observables are admissible.  Norm, weak, strong-operator, and weak-operator
+topologies answer different physical questions.  The spectral theorem is most
+transparent as a direct integral over energy, with a fiber that records open
+channels and spectral multiplicity.  The \vN\ algebra generated by the
+spectral projections is the algebra of essentially bounded functions on this
+measure space, while operators commuting with the Hamiltonian act fiber by
+fiber.  In that representation the formal statement ``$S$ is diagonal in
+energy'' becomes the precise decomposition
+$\Scattering=\int^\oplus \Scattering(E)\dd\mu(E)$.
+Resonances then appear exactly at the boundary of the self-adjoint theorem:
+they are not additional spectral projections of $H$, but residues obtained
+after analytic continuation or Riesz projections of a deformed operator.
+
+Long-range forces expose a second boundary.  For $V(r)\sim 1/r$, the phase
+accumulated along a free trajectory diverges logarithmically, so the ordinary
+M{\o}ller comparison with a free plane wave fails.  Two-body Coulomb scattering
+is repaired by a known logarithmic phase and Coulomb wave.  For three charged
+particles there are several inequivalent asymptotic regions, and no single
+elementary Coulomb plane wave is uniformly valid across all of them.  In QED,
+the analogous logarithm is carried by infinitely many soft photons: a charged
+asymptotic state generally belongs to a coherent, non-Fock representation of
+the canonical commutation relations.  These facts motivate treating topology,
+measure, representation, and asymptotic dynamics as physical data rather than
+background formalism.
+
+The same dictionary clarifies why black-hole quasinormal modes are quantum
+resonances rather than merely damped normal modes.  With time dependence
+$\rme^{-\rmi\omega t}$, a black-hole perturbation is ingoing at the event
+horizon and outgoing at infinity or at a cosmological horizon.  The resulting
+frequency $\omega$ lies in the lower half-plane.  The radial wave function is
+not square integrable on the original tortoise-coordinate line, but becomes
+normalizable after an admissible complex deformation.  Complex scaling then
+exposes quasinormal poles and rotates the continuum in the variable
+$E=\omega^2$
+\cite{Ogawa:2026veu,Ogawa:2026dSCSM}.  This makes it possible to discuss pole
+frequencies and continuum response in one spectral calculation.
+
+Exceptional points provide a second extension.  When parameters are varied,
+a resonance pole may meet another discrete pole or a state on the rotated
+continuum.  At the coalescence, eigenvalues and eigenvectors merge and the
+operator develops a Jordan chain.  Encircling the branch point exchanges
+spectral sheets and produces a geometric holonomy.  In an unbounded scattering
+problem, however, continuum normalization adds a regulator-dependent factor
+that is absent from a finite matrix.  A momentum-bin construction and a
+monodromy-renormalization condition isolate the physical holonomy~\cite{Morikawa:2025inx,Garmon2021AnomalousEP}.  This is a useful example of how
+non-Hermitian few-level intuition must be amended, rather than discarded, in
+an infinite-dimensional problem.
+
+Figure~\ref{fig:unified-plane} summarizes the spectral geometry used
+throughout the book.  The continuous spectrum on the positive real axis is
+the boundary of different analytic sheets.  A complex deformation rotates
+that spectrum, revealing poles that were hidden behind the cut.  Exact WKB
+analysis reaches the same poles by continuing solutions on the complex
+coordinate plane.  A rigged Hilbert space records the corresponding pole
+functionals without pretending that they are ordinary $L^2$ vectors.
+
+\begin{figure}[t]
+  \centering
+  \begin{tikzpicture}[x=1.05cm,y=1.0cm,>=Latex]
+    \draw[->] (-3.2,0) -- (5.2,0) node[right] {$\re E$};
+    \draw[->] (0,-3.0) -- (0,2.4) node[above] {$\im E$};
+    \draw[very thick,teal!70!black] (0,0) -- (4.7,0)
+      node[pos=0.77,above] {continuum cut};
+    \draw[very thick,blue!65!black,->] (0,0) -- (3.8,-2.2)
+      node[below right] {$\rme^{-2\rmi\theta}[0,\infty)$};
+    \fill[black] (-1.6,0) circle (2.2pt)
+      node[above] {bound state};
+    \fill[red!75!black] (2.0,-0.9) circle (2.4pt)
+      node[below left] {$E_*-\rmi\Gamma/2$};
+    \draw[red!75!black,dashed] (2.0,-0.9) -- (2.0,0);
+    \draw[decorate,decoration={snake,amplitude=0.7mm,segment length=3mm},
+      orange!80!black] (0.15,0.15) -- (0.15,1.65)
+      node[above] {threshold branch point};
+    \node[align=left] at (3.2,1.3)
+      {physical sheet above the cut\\second sheet below the cut};
+  \end{tikzpicture}
+  \caption{Schematic energy-plane geometry for a single threshold at $E=0$.
+  Complex scaling by an angle $\theta>0$ rotates the continuous spectrum by
+  $-2\theta$ and exposes a resonance pole.  The drawing is topological: the
+  precise sheet structure and the number of thresholds depend on the problem.}
+  \label{fig:unified-plane}
+\end{figure}
+
+\section{Scope and terminology}
+\label{subsec:scope}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{unbounded operator}
+\index{Hilbert space}
+\index{spectrum!point}
+\index{resolvent}
+\index{Riemann sheet}
+\index{resonance!residue}
+\index{antiresonance}
+\index{Breit--Wigner approximation}
+% END CURATED SUBJECT INDEX
+
+For a bounded finite-dimensional matrix, ``Hermitian'' and ``self-adjoint''
+are interchangeable.  For a differential operator they are not.  Symmetry of
+the differential expression does not fix the operator domain, and boundary
+conditions can change the adjoint.  We therefore use \textit{self-adjoint} for
+operators on a Hilbert space and reserve \textit{Hermitian} for matrices or
+informal descriptions.  The complex-scaled Hamiltonian is generally
+non-self-adjoint even when the original Hamiltonian is self-adjoint.
+
+We use \textit{resonance} primarily for a pole of the continued resolvent or
+$S$ matrix.  The word \textit{resonant state} denotes the residue vector or
+functional associated with that pole.  A Breit--Wigner peak is evidence for a
+nearby simple pole, but background interference, thresholds, and overlapping
+poles can obscure or even eliminate a visible peak.  Conversely, a complex
+eigenvalue of an arbitrary non-Hermitian truncation need not be a resonance;
+stability under changes of deformation angle, basis, and truncation is
+essential.
+
+We distinguish resonance poles from three neighboring notions.  A bound-state
+pole lies on the physical sheet below threshold and has a square-integrable
+eigenfunction.  A virtual or antibound state lies on a nonphysical sheet on an
+imaginary momentum axis and need not produce a narrow peak.  An antiresonance
+is the time-reversed partner of a resonance, related by the appropriate
+reality symmetry of the potential.  These classifications are simplest in the
+complex momentum plane and become more intricate for multiple channels.
+
+The main construction concerns stationary spectral theory.  A resonance pole
+produces exponential decay only over an intermediate time interval.  The
+short-time survival probability is quadratic, while thresholds generate
+long-time power-law tails
+\cite{GarciaCalderon2017NonExp,Giacosa2012NonExpQFTQM,
+Garmon2017NonExpThreshold}.  These deviations are not failures of the pole
+description; they are contributions from the analytic background and branch
+cuts that accompany the pole.
+
+\section{Organization and the central line of argument}
+\label{subsec:organization}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{complex scaling}
+\index{CDCC}
+\index{lithium nuclei}
+\index{beryllium nuclei}
+\index{exceptional point}
+\index{horizon boundary condition}
+% END CURATED SUBJECT INDEX
+
+Section~\ref{sec:computational-spine} states the algorithm used throughout.
+Eight Stages then add one obstruction at a time.  Stage I constructs the
+spectral and operator-algebraic language; Stage II derives scattering data
+and tests its short-range hypotheses.  Stage III builds the exact-WKB global
+connection datum, while Stage IV proves how the same datum is represented by
+resolvents, regularized states, complex scaling, rigged spaces, and continuum
+response.
+
+Stage V adds a radial singular endpoint.  Stage VI enlarges the projectile to
+a weakly bound few-body system and derives CDCC, including lithium and
+beryllium-core reaction examples.  Stage VII treats an exceptional point as a
+multiple zero of the analytic pole condition.  Stage VIII derives black-hole
+master equations and turns horizon boundary conditions into the same
+connection problem.  The final Part separates invariant data from contour,
+basis, regulator, and representation choices.
+
+Detailed calculations developed in Refs.~\cite{Morikawa:2025grx,
+Morikawa:2025xjq,Morikawa:2025vvs,Morikawa:2025ezl,Morikawa:2025inx,
+Ogawa:2026veu,Ogawa:2026dSCSM} supply seven of the Laboratories.  They have
+been reorganized rather than reproduced as papers: common scattering,
+exact-WKB, complex-scaling, and black-hole preliminaries are established once
+in canonical chapters, and each Laboratory begins at the first calculation
+specific to its model.  The remaining two Laboratories develop complementary
+few-body nuclear branches.  Every one is meant to be read with pencil, paper,
+and a numerical notebook; its closing checkpoint states what must be reproducible before the
+reader proceeds.

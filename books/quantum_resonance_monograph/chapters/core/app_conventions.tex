@@ -1,0 +1,43 @@
+\section{Working conventions before the first calculation}
+\label{app:conventions}
+% BEGIN CURATED SUBJECT INDEX
+\index{GNS construction}
+\index{boundary condition!incoming and outgoing}
+\index{antiresonance}
+\index{quasinormal mode}
+\index{horizon boundary condition}
+% END CURATED SUBJECT INDEX
+
+We use time dependence $\rme^{-\rmi Et/\hbar}$ in quantum mechanics and
+$\rme^{-\rmi\omega t}$ in black-hole perturbation theory.  A decaying pole has
+\begin{equation}
+  \im \resonantE<0,
+  \qquad
+  \im\vsub{\omega}{QNM}<0 .
+  \label{eq:app-decay-signs}
+\end{equation}
+For $E=\hbar^2k^2/(2m)$, the physical scattering rim has $k>0$ for
+$E>0$.  Continuing through the positive-$E$ cut changes the sign of the square
+root.  A resonance is conventionally represented by $\re k>0$ and
+$\im k<0$; its time-reversed antiresonance is obtained using the reality
+symmetry of the potential.
+
+The one-dimensional probability current is
+\begin{equation}
+  j[\psi]
+  =\frac{\hbar}{2m\rmi}
+  \left(\psi^*\partial_x\psi
+  -\psi\partial_x\psi^*\right) .
+  \label{eq:probability-current}
+\end{equation}
+For real $k>0$, $\rme^{+\rmi kx}$ carries positive current and
+$\rme^{-\rmi kx}$ carries negative current.  At a complex resonance momentum,
+the current of a non-normalizable stationary wave is not a conserved
+probability flux in the ordinary Hilbert sense; outgoing/incoming labels are
+defined by analytic continuation from real $k$.
+
+In black-hole coordinates, the group direction is most transparently read
+from null combinations.  Near a horizon, a factor
+$\rme^{-\rmi\omega(t+r_*)}$ is ingoing, while
+$\rme^{-\rmi\omega(t-r_*)}$ is outgoing.  This gives the signs in
+Eq.~\eqref{eq:qnm-boundary-flat}.

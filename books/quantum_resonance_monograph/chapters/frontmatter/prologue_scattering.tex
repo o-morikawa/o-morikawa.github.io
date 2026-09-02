@@ -1,0 +1,227 @@
+\chapter*{Prologue: why scattering still defines quantum dynamics}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!continuous}
+\index{boundary condition!incoming and outgoing}
+% END CURATED SUBJECT INDEX
+\addcontentsline{toc}{chapter}{Prologue: why scattering still defines quantum dynamics}
+\markboth{Prologue}{Why scattering still defines quantum dynamics}
+\label{chap:prologue-scattering}
+
+Quantum mechanics can be taught as finite-dimensional linear algebra.  That
+language is powerful: qubits, spin systems, variational circuits, and
+finite-basis calculations all live naturally in it.  Yet a finite matrix does
+not by itself contain position or momentum as an unbounded observable, a
+continuous spectrum, an infinite-volume limit, an asymptotic particle, or a
+radiation condition.  Those are not decorative complications.  They are the
+structures through which a dynamical theory meets an experiment.
+
+Scattering provides the operational grammar.  One prepares a state in a
+region where a comparison dynamics is understood, lets it traverse an
+interaction region, and detects an outgoing state after another long stretch
+of comparison dynamics.  The idealization involves three limits at once:
+large separation, long time, and increasingly sharp control of the detector.
+The mathematical theory exists to say when these limits define an invariant
+map between preparation and detection data.  Resonance theory begins where
+that map acquires a long-lived intermediate time scale.
+
+\section*{A genealogy of the connection problem}
+% BEGIN CURATED SUBJECT INDEX
+\index{unbounded operator}
+\index{topology}
+\index{spectral theorem}
+\index{spectral measure}
+\index{spectrum!continuous}
+\index{Sturm--Liouville theory}
+\index{wave packet}
+\index{boundary condition!incoming and outgoing}
+\index{Jacobi coordinate}
+% END CURATED SUBJECT INDEX
+\phantomsection
+\addcontentsline{toc}{section}{A genealogy of the connection problem}
+
+The concepts assembled in this book were not invented in a single episode.
+Hamilton--Jacobi theory encoded dynamics in a generating function.  The
+Sturm--Liouville problem tied differential equations to orthogonality,
+completeness, and boundary conditions.  Green functions made an inverse
+operator into a propagation kernel, while Fourier analysis turned translation
+into spectral multiplication.  Classical wave scattering supplied incoming
+and outgoing radiation conditions.  Rutherford scattering then made the
+large-distance deflection law a microscopic probe.  Quantum mechanics
+inherited all of these ideas and forced them to coexist with probability and
+operator domains.
+
+The decisive mathematical step of the 1920s and 1930s was not merely to
+replace observables by matrices.  It was to understand operators that are not
+bounded and spectra that are not discrete.  Position, momentum, and the
+Hamiltonian are specified by their domains as well as their differential
+expressions.  A continuum state is represented by a spectral measure and a
+wave packet, not by an extra normalizable eigenvector.  This is why the
+spectral theorem, projection-valued measures, and the topology of operator
+limits belong near the beginning of a modern account of quantum mechanics.
+
+From this viewpoint, scattering theory is not a specialist's afterthought.
+It is the part of quantum theory that keeps track of continuous spectrum,
+infinite spatial extent, comparison dynamics, and the conversion of a
+Hamiltonian into measured rates.  The same architecture reappears in nuclear
+reactions, atomic ionization, condensed-matter transport, quantum field
+theory, and black-hole perturbations.
+
+\section*{The truncation contract}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!closed}
+\index{Hilbert space}
+\index{topology}
+\index{spectrum!essential}
+\index{resolvent}
+\index{wave operator}
+\index{Gauss law}
+% END CURATED SUBJECT INDEX
+\phantomsection
+\addcontentsline{toc}{section}{The truncation contract}
+
+Every computation is finite.  The important question is therefore not
+whether one truncates, but what statement allows the finite problem to stand
+for an infinite-dimensional one.  We shall call that statement the
+\term{truncation contract}.  A complete contract names five ingredients:
+
+\begin{enumerate}[label=(\roman*)]
+  \item the parent Hilbert space and the closed operator or quadratic form;
+  \item the projection, grid, basis, energy window, or channel selection;
+  \item the topology in which the truncated objects are asserted to converge;
+  \item the observable and error measure to be controlled; and
+  \item the order in which basis, volume, time, regulator, and detector limits
+  are taken.
+\end{enumerate}
+
+For an isolated bound state below the essential spectrum, the min--max
+principle can provide such a contract.  For a scattering amplitude, one also
+needs control of wave operators or resolvent boundary values.  For a
+complex-scaled resonance, a small matrix residual is insufficient unless the
+analytic-deformation hypotheses and stability window are checked.  For a
+quantum simulation of a gauge theory, solving Gauss law can reduce the number
+of qubits but can also reorganize locality and tensor factorization.  The
+finite model becomes physically meaningful only when its contract states
+which of these structures survives the reduction.
+
+The finite-dimensional theory remains genuine dynamics: a unitary matrix can
+generate nontrivial time evolution.  The limitation is more specific.  No
+fixed finite dimension can encode, without a limiting prescription, the
+unbounded observables and asymptotic structures on which scattering depends.
+This book therefore uses finite matrices as controlled representations of a
+declared parent problem, never as a replacement for declaring that problem.
+
+\section*{Preparation, interaction, and detection}
+% BEGIN CURATED SUBJECT INDEX
+\index{Hilbert space}
+\index{scattering matrix}
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+\index{scattering!three-body Coulomb}
+\index{distorted-wave approximation}
+% END CURATED SUBJECT INDEX
+\phantomsection
+\addcontentsline{toc}{section}{Preparation, interaction, and detection}
+
+Let $H_0$ denote the dynamics used to describe separated particles and let
+$H$ contain the interaction.  A packet $\phi$ prepared in the distant past is
+compared with the exact evolution through the strong limit
+\begin{equation}
+  \Omega^{(+)}\phi
+  =\lim_{t\to-\infty}
+  \rme^{\rmi Ht/\hbar}\rme^{-\rmi H_0t/\hbar}\phi,
+  \label{eq:prologue-wave-operator}
+\end{equation}
+when that limit exists.  The analogous future limit defines
+$\Omega^{(-)}$.  The scattering operator
+\begin{equation}
+  \Scattering=\Omega^{(-)\dagger}\Omega^{(+)}
+  \label{eq:prologue-scattering-operator}
+\end{equation}
+maps incoming asymptotic data to outgoing asymptotic data.  The detailed
+hypotheses and derivation are postponed to Stage II; here the formula fixes
+the meaning of the symbol.  In particular, the intertwining relation implies
+that $\Scattering$ commutes strongly with the comparison Hamiltonian $H_0$,
+not with a generic interacting Hamiltonian.
+
+The phrase ``free comparison'' is already conditional.  A short-range force
+permits ordinary plane-wave asymptotics.  Coulomb scattering instead requires
+Coulomb-distorted waves and a logarithmic phase.  With three charged bodies,
+the simultaneous asymptotic regions are considerably more intricate, and no
+single naive product of two-body plane waves solves the full problem.  In QED
+the same long-range obstruction appears as soft radiation: a charged
+asymptotic state generally does not belong to the undressed vacuum Fock
+representation.  Thus the choice of asymptotic Hilbert space is part of the
+physics, not merely a convention at the end of a calculation.
+
+\section*{A diagnostic laboratory before the formalism}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{Wronskian}
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+\index{continuum response}
+% END CURATED SUBJECT INDEX
+\phantomsection
+\addcontentsline{toc}{section}{A diagnostic laboratory before the formalism}
+
+Four elementary calculations will serve as recurring diagnostics.
+
+\begin{description}[style=nextline]
+  \item[A packet in a square well.]
+  Separate the normalizable bound-state sum from the continuum integral and
+  verify norm conservation.  A finite box discretizes the latter; the level
+  spacing must disappear from observables as the box is enlarged.
+
+  \item[A packet crossing a finite barrier.]
+  Compute reflection and transmission from Wronskians.  Continue the incoming
+  coefficient and locate its zeros.  This is the smallest model in which the
+  same analytic datum appears as a scattering pole and an outgoing solution.
+
+  \item[Hydrogenic motion.]
+  Derive the self-adjoint radial problem, keep the Coulomb phase in its
+  asymptotics, and distinguish the discrete spectrum from the continuum.  A
+  plane-wave ansatz at infinity fails for a reason visible in the differential
+  equation itself.
+
+  \item[A finite-basis resonance calculation.]
+  Vary basis size, nonlinear scale, and complex-rotation angle separately.
+  A stable pole and a rotating discretized continuum play different roles;
+  both are needed to reconstruct a response function.
+\end{description}
+
+These are not entrance examinations.  They are compact tests of whether a
+representation still remembers its parent dynamics.  Each will be rebuilt in
+later Stages with enough detail that the reader can reproduce the calculation.
+
+\section*{The organizing claim of this book}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{Hilbert space}
+\index{resolvent}
+\index{Jost function}
+\index{boundary condition!incoming and outgoing}
+\index{exact WKB}
+\index{complex scaling}
+\index{Zel'dovich regularization}
+\index{rigged Hilbert space}
+\index{exceptional point}
+% END CURATED SUBJECT INDEX
+\phantomsection
+\addcontentsline{toc}{section}{The organizing claim of this book}
+
+The central claim is that a quantum resonance is best understood as a global
+connection problem.  A self-adjoint Hamiltonian supplies real spectral and
+probabilistic data.  Local solutions of its differential equation are
+continued between asymptotic sectors.  The coefficient of the prohibited
+incoming branch is an analytic function; its zero defines the resonance.
+Exact WKB makes that construction nonperturbative and calculable.  Resolvent
+continuation, Jost functions, Zel'dovich regularization, complex scaling, and
+rigged Hilbert spaces are then different realizations of the same connection
+datum, with different domains and topologies made explicit.
+
+This order matters pedagogically.  We first define each mathematical object
+where it is needed.  We then construct scattering and its analytic
+continuation.  Only afterward do the Laboratories reuse those results in
+radial motion, weakly bound nuclei, exceptional points, and black-hole
+quasinormal modes.  References document provenance and extensions, but the
+calculational route is contained in the book.

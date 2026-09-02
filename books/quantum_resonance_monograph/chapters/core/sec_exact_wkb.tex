@@ -1,0 +1,246 @@
+\section{Step 3: Construct the local resurgent basis}
+\label{sec:exact-wkb}
+% BEGIN CURATED SUBJECT INDEX
+\index{Riccati equation}
+% END CURATED SUBJECT INDEX
+
+\calculationroute
+  {The spectral curve $y^2=Q(x,E)$ and the asymptotic coefficients fixed in
+  Sec.~\ref{sec:textbook-scattering}.}
+  {Generate the all-order Riccati series, separate odd and even parts, Borel
+  resum in a declared direction, and identify the turning-point Stokes data.}
+  {Produce normalized sectorial WKB branches whose ambiguity and domain of
+  validity are explicit.}
+
+\subsection{Riccati equation and formal WKB solutions}
+\label{subsec:wkb-riccati}
+% BEGIN CURATED SUBJECT INDEX
+\index{Riccati equation}
+\index{exact WKB}
+\index{monodromy}
+\index{Langer correction}
+% END CURATED SUBJECT INDEX
+
+Consider the Schr\"odinger equation in the form
+\begin{equation}
+  \left[-\hbar^2\frac{\rmd^2}{\rmd x^2}+Q(x,E)\right]\psi(x)=0,
+  \qquad
+  Q(x,E)=2m\left[V(x)-E\right] .
+  \label{eq:wkb-schrodinger}
+\end{equation}
+The coordinate $x$ and energy $E$ may be complex.  Introduce the logarithmic
+derivative
+\begin{equation}
+  \psi(x)=\rme^{\int^x S(x',\hbar)\rmd x'} .
+  \label{eq:wkb-log-ansatz}
+\end{equation}
+Then $S$ satisfies the Riccati equation
+\begin{equation}
+  S^2+\frac{\partial S}{\partial x}
+  =\frac{Q}{\hbar^2} .
+  \label{eq:wkb-riccati}
+\end{equation}
+Seek a formal solution
+\begin{equation}
+  S^{(\pm)}(x,\hbar)
+  =\sum_{n=-1}^{\infty}\hbar^nS_n^{(\pm)}(x) .
+  \label{eq:wkb-S-series}
+\end{equation}
+The leading terms are
+\begin{align}
+  S_{-1}^{(\pm)}&=\pm\sqrt{Q},
+  &S_0^{(\pm)}&=-\frac{1}{4}\frac{\partial_xQ}{Q} .
+  \label{eq:wkb-leading}
+\end{align}
+For $n\ge0$, the remaining coefficients obey
+\begin{equation}
+  2S_{-1}^{(\pm)}S_{n+1}^{(\pm)}
+  =-\partial_xS_n^{(\pm)}
+  -\sum_{j=0}^{n}S_j^{(\pm)}S_{n-j}^{(\pm)} .
+  \label{eq:wkb-recursion}
+\end{equation}
+
+Define odd and even parts under exchange of the two leading branches:
+\begin{align}
+  \vsub{S}{odd}
+  &=\frac{1}{2}\left(S^{(+)}-S^{(-)}\right),
+  \notag\\
+  \vsub{S}{even}
+  &=\frac{1}{2}\left(S^{(+)}+S^{(-)}\right)
+  =-\frac{1}{2}\partial_x\log \vsub{S}{odd} .
+  \label{eq:wkb-odd-even}
+\end{align}
+The formal WKB solutions normalized at a reference point $x_0$ are
+\begin{equation}
+  \psi_{\pm}(x)
+  =\frac{1}{\sqrt{\vsub{S}{odd}(x)}}
+  \rme^{
+  \pm\int_{x_0}^{x}\vsub{S}{odd}(x')\rmd x'
+  } .
+  \label{eq:formal-wkb-solutions}
+\end{equation}
+The square root, integration path, and sheet of $\sqrt Q$ are part of the
+definition.  A local asymptotic series becomes a global spectral statement
+only after these data and the Stokes transitions are specified.
+
+If the original differential equation contains a first-derivative term, a
+local gauge transformation first removes it and shifts $Q$ by a term of order
+$\hbar^2$.  Such terms are easily dismissed in leading semiclassics but can
+carry essential monodromy at a regular singular point.  The radial Langer term
+in Section~\ref{sec:radial-wkb} is the principal example.
+
+\subsection{Borel transform and lateral resummation}
+\label{subsec:borel-resummation}
+% BEGIN CURATED SUBJECT INDEX
+\index{Borel transform}
+\index{Borel summation}
+\index{lateral Borel sum}
+\index{Borel plane}
+\index{Stokes automorphism}
+\index{exact WKB}
+\index{monodromy}
+% END CURATED SUBJECT INDEX
+
+The series in Eq.~\eqref{eq:wkb-S-series} is generally divergent.  For a
+formal series
+\begin{equation}
+  f(\hbar)=\sum_{n=0}^{\infty}a_n\hbar^n,
+  \label{eq:formal-series}
+\end{equation}
+define its Borel transform by
+\begin{equation}
+  \mathcal Bf(\xi)
+  =\sum_{n=0}^{\infty}\frac{a_n}{n!}\xi^n .
+  \label{eq:borel-transform}
+\end{equation}
+If $\mathcal Bf$ can be analytically continued with suitable growth along the
+ray $\arg\xi=\varphi$, its directional Borel sum is
+\begin{equation}
+  \mathcal S_{\varphi}f(\hbar)
+  =\frac{1}{\hbar}
+  \int_{0}^{\rme^{\rmi\varphi}\infty}
+  \rmd\xi\,
+  \rme^{-\xi/\hbar}\mathcal Bf(\xi) .
+  \label{eq:borel-sum}
+\end{equation}
+When a Borel singularity lies on the integration ray, define lateral sums
+$\mathcal S_{\varphi\pm}$.  Their difference is exponentially small in
+$\hbar$ and is governed by a Stokes automorphism.  This is the point at which
+nonperturbative saddles enter a perturbative expansion.  In a metastable
+problem, the same analytic discontinuity that resolves a Borel ambiguity
+produces the imaginary part of the resonance energy
+\cite{Bogomolny:1980ur,Zinn-Justin:1981qzi,Dunne:2002rq,
+Dunne:2015eaa}.
+
+The phrase \textit{exact WKB} does not mean truncating the WKB series at high
+order.  It means using Borel-resummed WKB solutions and their exact connection
+formulae.  Truncation may approximate a Borel sum before the least term, but it
+does not determine lateral continuation or global monodromy.
+
+\subsection{Turning points and Stokes geometry}
+\label{subsec:stokes-geometry}
+% BEGIN CURATED SUBJECT INDEX
+\index{Stokes curve}
+\index{turning point}
+\index{monodromy}
+% END CURATED SUBJECT INDEX
+
+A simple turning point $a$ satisfies
+\begin{equation}
+  Q(a,E)=0,
+  \qquad
+  \partial_xQ(a,E)\ne0 .
+  \label{eq:simple-turning-point}
+\end{equation}
+Choose a branch of the classical action
+\begin{equation}
+  W_a(x;E)=\int_a^x\sqrt{Q(x',E)}\rmd x' .
+  \label{eq:classical-action}
+\end{equation}
+In the convention used here, Stokes curves are trajectories on which
+\begin{equation}
+  \im\left[\frac{W_a(x;E)}{\hbar}\right]=0 .
+  \label{eq:stokes-curve}
+\end{equation}
+Some literature interchanges the names Stokes and anti-Stokes curves; the
+connection matrices, rather than the label, fix the convention.  Three curves
+emanate from a simple turning point.  On crossing one of them, the coefficient
+of a subdominant solution changes by a multiple of the dominant solution.
+
+Let the local solution be represented by a coefficient column
+$\bm c=(c_+,c_-)^{\mathsf T}$.  Up to orientation and normalization, simple
+turning-point connections have triangular form
+\begin{align}
+  M_+(\sigma)&=
+  \begin{pmatrix}1&\sigma\\0&1\end{pmatrix},
+  &
+  M_-(\sigma)&=
+  \begin{pmatrix}1&0\\\sigma&1\end{pmatrix},
+  \label{eq:stokes-matrices}
+\end{align}
+where the Stokes multiplier $\sigma$ is $+\rmi$ or $-\rmi$ for the standard
+Airy normalization, depending on the crossing direction.  A global connection
+problem is an ordered product of such matrices, propagation factors, and
+monodromy matrices.  The physical boundary condition states that one component
+of the final coefficient column vanishes.
+
+\subsection{Voros symbols and exact quantization}
+\label{subsec:voros-symbols}
+% BEGIN CURATED SUBJECT INDEX
+\index{Jost function}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{Borel summation}
+\index{Voros symbol}
+% END CURATED SUBJECT INDEX
+
+For a path or cycle $\gamma$ on the spectral curve $y^2=Q(x,E)$, define the
+formal Voros integral and symbol by
+\begin{align}
+  \VorosPeriod_{\gamma}(E,\hbar)
+  &=\int_{\gamma}\vsub{S}{odd}(x,\hbar)\rmd x,
+  \notag\\
+  \VorosExp_{\gamma}(E,\hbar)
+  &=\rme^{\VorosPeriod_{\gamma}(E,\hbar)} .
+  \label{eq:voros-symbol}
+\end{align}
+Both are understood through a specified lateral Borel sum.  For a simple
+two-turning-point bound-state problem, the connection condition often reduces
+to
+\begin{equation}
+  1+\VorosExp_{\gamma}(E,\hbar)=0 .
+  \label{eq:simple-exact-quantization}
+\end{equation}
+At leading order this gives the Bohr--Sommerfeld rule including the Maslov
+phase.  More complicated graphs produce polynomial or cluster-like relations
+among several Voros symbols
+\cite{Voros:1983xx,Delabaere:1999xx,Iwaki:2014vad}.
+
+For a resonance, the algebra is the same but the selected subdominant sectors
+are different.  Let $\Cincoming(E,\hbar)$ be the connection coefficient
+of the incoming asymptotic solution after transporting an outgoing solution
+across the Stokes graph.  The exact resonance condition is
+\begin{equation}
+  \Cincoming(E,\hbar)=0 .
+  \label{eq:exact-resonance-condition}
+\end{equation}
+Thus the last arrow in Eq.~\eqref{eq:intro-dictionary} is not an analogy:
+$\Cincoming$ is a Jost function expressed in resurgent coordinates.
+
+\subsection{Local normalization versus global invariants}
+\label{subsec:wkb-gauge}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{Voros symbol}
+\index{monodromy}
+% END CURATED SUBJECT INDEX
+
+The starting point of a WKB integral, the normalization of local bases, and
+the detailed shape of a connection path are not separately physical.  Changing
+them conjugates connection matrices or multiplies rows and columns by nonzero
+factors.  Zeros of the incoming coefficient, closed Voros periods, and
+monodromy conjugacy classes are invariant.  We will refer to the local choices
+as a connection gauge.  This language is useful in radial problems, where an
+open path from the origin to infinity and a closed contour encircling the
+origin can encode identical quantization data
+\cite{Morikawa:2025ezl}.

@@ -1,0 +1,496 @@
+\section{Calculation laboratory VI-B: Lithium projectiles and beryllium-core breakup}
+\label{lab:lithium-beryllium}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering!Coulomb}
+\index{pseudostate}
+\index{Jacobi coordinate}
+\index{CDCC}
+\index{CDCC!four-body}
+\index{folding interaction}
+\index{nuclear breakup}
+\index{lithium nuclei}
+\index{beryllium nuclei}
+% END CURATED SUBJECT INDEX
+
+\calculationroute
+  {The CDCC projection, three-cluster Jacobi coordinates, Gaussian
+  pseudostates, Coulomb boundary conditions, folding interactions, CSLS
+  smoothing, and overlap functions.}
+  {Build the $\alpha+p+n$ model of $^6$Li, the $p+p+{}^7$Be model of
+  $^9$C, and the $p+{}^5$He overlap used in proton knockout.}
+  {Account separately for elastic, closed-channel, rearrangement-resolved,
+  and overlap-sensitive observables and reproduce the published stability
+  logic without treating pseudostates as physical levels.}
+
+This Laboratory turns the formal CDCC construction into three related nuclear
+calculations.  The first asks how breakup channels of $^6$Li alter nucleon
+elastic scattering.  The second asks how a fragile $^8$B subsystem changes the
+extraction of the astrophysical factor $S_{18}$ from $^9$C breakup.  The third
+asks how a small $s$-wave component of the unbound $^5$He subsystem can have a
+large effect in a kinematically selective knockout observable.  The three
+problems use the same $\alpha+p+n$ or proton-rich three-cluster logic but probe
+different functionals of the wave function.
+
+\subsection{Station A: construct the
+\texorpdfstring{$\alpha+p+n$}{alpha+p+n} Hamiltonian of
+\texorpdfstring{$^6$Li}{6Li}}
+\label{subsec:lab-li6-structure}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{central decomposition}
+\index{cross section}
+\index{partial-wave expansion}
+\index{radial equation}
+\index{pseudostate}
+\index{stabilization method}
+\index{Jacobi coordinate}
+\index{antisymmetrization}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+
+Choose three Jacobi rearrangement sets.  In the set adapted to a deuteron-like
+$p+n$ pair,
+\begin{equation}
+  \bm x_1=\bm r_p-\bm r_n,
+  \qquad
+  \bm y_1=\bm r_\alpha-
+  \frac{m_p\bm r_p+m_n\bm r_n}{m_p+m_n}.
+  \label{eq:li6-jacobi-dalpha}
+\end{equation}
+The other two sets isolate $\alpha+p$ and $\alpha+n$ correlations.  After
+removing the center of mass, take
+\begin{equation}
+  h_6=K_{x_c}+K_{y_c}
+  +V_{\alpha p}+V_{\alpha n}+V_{pn}+V_3,
+  \label{eq:li6-internal-H}
+\end{equation}
+where the equality holds in every Jacobi set after the corresponding kinetic
+coordinates are used.  The cluster potentials must reproduce the two-body
+phase information in the partial waves relevant to the chosen energy window.
+A Pauli-forbidden $\alpha$--nucleon orbit is removed by an orthogonality-
+condition projector or by a phase-equivalent interaction.
+
+Expand a state of spin $I$ as
+\begin{align}
+  \Phi_{nIm_I}(\xi)
+  &=\sum_{c=1}^{3}\sum_{\alpha_c}
+  C_{n\alpha_c}^{(c)}
+  \mathcal A
+  \left[
+    [\varphi_{n_xl_x}^{(c)}(x_c)
+     \otimes\varphi_{n_yl_y}^{(c)}(y_c)]_{\Lambda}
+     \otimes[\chi_p\otimes\chi_n]_S
+  \right]_{Im_I},
+  \label{eq:li6-gem-expansion}
+\end{align}
+where $\mathcal A$ implements the required nucleon antisymmetry.  Gaussian
+ranges are chosen geometrically and enlarged until the ground-state radius,
+binding energy, low-lying resonance stabilization pattern, and transition
+densities are stable.  Diagonalization gives
+\begin{equation}
+  h_6\Phi_{nIm_I}=\epsilon_{nI}\Phi_{nIm_I}.
+  \label{eq:li6-pseudostates}
+\end{equation}
+Positive $\epsilon_{nI}$ label continuum pseudostates.  In the calculation of
+Ref.~\cite{Ogata:2026LiCDCC}, states up to a declared excitation cutoff are
+retained and convergence is checked rather than assigning a physical width to
+each positive eigenvalue.
+
+\begin{figure}[t]
+  \centering
+  \begin{tikzpicture}[node distance=7mm and 12mm,>=Latex,
+    box/.style={draw,rounded corners,align=center,inner sep=4pt,
+                fill=teal!4,text width=0.22\textwidth}]
+    \node[box] (h) {$h_6$ in three\\Jacobi sets};
+    \node[box,right=of h] (ps) {GEM\\pseudostates};
+    \node[box,right=of ps] (rho) {transition\\densities};
+    \node[box,below=of ps] (cc) {four-body CDCC\\radial equations};
+    \node[box,left=of cc] (g) {folded $g$-matrix\\couplings};
+    \node[box,right=of cc] (s) {$S$ matrix, flux,\\cross sections};
+    \draw[->] (h)--(ps);
+    \draw[->] (ps)--(rho);
+    \draw[->] (rho)--(cc);
+    \draw[->] (g)--(cc);
+    \draw[->] (cc)--(s);
+    \draw[->] (ps)--(cc);
+  \end{tikzpicture}
+  \caption{Dependency order for nucleon--$^6$Li four-body CDCC.  A later
+  change of the structure space must propagate through the transition
+  densities and couplings before reaction observables are compared.}
+  \label{fig:li6-cdcc-workflow}
+\end{figure}
+
+\subsection{Station B: derive nucleon--\texorpdfstring{$^6$Li}{6Li}
+four-body CDCC}
+\label{subsec:lab-n-li6-cdcc}
+% BEGIN CURATED SUBJECT INDEX
+\index{CDCC}
+\index{CDCC!four-body}
+\index{folding interaction}
+\index{transition density}
+% END CURATED SUBJECT INDEX
+
+Let $\bm R$ point from $^6$Li to the incident nucleon $N$.  The reaction
+Hamiltonian is
+\begin{equation}
+  H=K_R+h_6+\sum_{i=1}^{6}g_{Ni},
+  \label{eq:n-li6-reaction-H}
+\end{equation}
+where the effective $g_{Ni}$ is folded with the projectile transition density.
+Expand
+\begin{equation}
+  \Psi^{JM}(\bm R,\xi)
+  =\frac{1}{R}\sum_{nIL}
+  \chi_{nIL}^{J}(R)
+  \left[Phi_{nI}(\xi)\otimes Y_L(\hat R)\right]_{JM}.
+  \label{eq:n-li6-channel-expansion}
+\end{equation}
+With $c=(n,I,L)$, projection yields
+\begin{align}
+  &\left[-\frac{\hbar^2}{2\mu}
+   \left(\frac{\rmd^2}{\rmd R^2}-\frac{L(L+1)}{R^2}\right)
+  +\epsilon_{nI}-\vsub{E}{tot}\right]\chi_c^J(R)
+  \notag\\
+  &\qquad=-\sum_{c'}U_{cc'}^J(R)\chi_{c'}^J(R).
+  \label{eq:n-li6-cc}
+\end{align}
+The single-folding coupling is built from proton and neutron transition
+densities,
+\begin{equation}
+  U_{cc'}^J(R)
+  =\sum_{\tau=p,n}\int\rmd^3s\,
+   \rho^{cc'}_\tau(\bm s)
+   g_{N\tau}(\bm R-\bm s;\rho,E).
+  \label{eq:n-li6-folding}
+\end{equation}
+The dependence of $g$ on local density and incident energy must be evaluated
+with one stated prescription throughout the scan.
+
+For the JLM form, write
+\begin{equation}
+  \vsup{g_{N\tau}}{eff}
+  =N_V\re\vsup{g_{N\tau}}{JLM}
+   +\rmi N_W\im\vsup{g_{N\tau}}{JLM}.
+  \label{eq:lab-jlm-renormalization}
+\end{equation}
+The parameter study reported for nucleon--$^6$Li found a constant
+$N_V=1.1$ and a smooth energy dependence of $N_W$; in the quoted energy
+convention the fitted form was
+\begin{equation}
+  N_W(E)=0.213\ln E-0.247.
+  \label{eq:li6-NW-fit}
+\end{equation}
+This calibration gave a common description of proton and neutron elastic and
+integral observables over approximately $7$--$50$ MeV
+\cite{Ogata:2026LiCDCC}.  Equation~\eqref{eq:li6-NW-fit} is not a universal
+interaction: its energy units, density prescription, model space, and fitted
+dataset are part of its definition.
+
+\subsubsection{Open and closed channel test}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+Compute
+\begin{equation}
+  E_{nI}=\vsub{E}{tot}-\epsilon_{nI}.
+  \label{eq:li6-channel-energy}
+\end{equation}
+Use Coulomb incoming/outgoing functions for $E_{nI}>0$ and a decaying
+Whittaker function for $E_{nI}\leq0$.  Then perform three calculations with
+identical potentials and numerical meshes:
+\begin{enumerate}[label=(\alph*)]
+  \item ground state only;
+  \item all retained open projectile channels;
+  \item open plus retained closed channels.
+\end{enumerate}
+The difference between (a) and (c) is the net dynamical breakup coupling.  The
+difference between (b) and (c) is a virtual closed-channel effect.  Because a
+closed channel returns flux to the open sector, it should not be simulated by
+increasing an absorptive strength.  At low incident energy this distinction is
+especially important; at higher energy the closed-channel correction becomes
+smaller in the reported model.
+
+\subsubsection{Convergence table to produce before plotting data}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering!Coulomb}
+% END CURATED SUBJECT INDEX
+
+For each incident energy, record the elastic amplitude or selected cross
+sections while varying
+\begin{equation}
+  (\epsilon_{\max},I_{\max},l_{x,\max},l_{y,\max},
+    L_{\max},J_{\max},\vsub{R}{match}).
+  \label{eq:li6-cutoff-vector}
+\end{equation}
+At least one observable sensitive to the nuclear interior and one sensitive
+to the forward Coulomb region should be tested.  Re-fitting $N_V,N_W$ after
+every model-space change would conceal structural nonconvergence; first hold
+them fixed, establish convergence, and only then reassess calibration.
+
+\subsection{Station C: \texorpdfstring{$^9$C as $p+p+{}^7$Be}
+{9C as p+p+7Be}}
+\label{subsec:lab-9c-structure}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering!Coulomb}
+\index{pseudostate}
+\index{Jacobi coordinate}
+\index{antisymmetrization}
+\index{CDCC}
+\index{CDCC!four-body}
+% END CURATED SUBJECT INDEX
+
+The two-body approximation $^9\mathrm C=p+{}^8\mathrm B$ treats $^8$B as an
+inert core.  Its proton separation energy is only about $137$ keV, so the core
+itself is fragile.  A minimal enlargement uses
+\begin{equation}
+  {}^9\mathrm C=p_1+p_2+{}^7\mathrm{Be}
+  \label{eq:9c-clusters}
+\end{equation}
+and the internal Hamiltonian
+\begin{equation}
+  h_9=K_x+K_y+V_{pp}
+  +V_{p_1{}^7\mathrm{Be}}
+  +V_{p_2{}^7\mathrm{Be}}+V_3.
+  \label{eq:9c-three-body-H}
+\end{equation}
+The two protons are antisymmetrized, and Pauli-forbidden proton--core states
+are projected out.  The three Jacobi sets resolve the two equivalent
+$p+{}^8$B partitions and the $pp+{}^7$Be partition.  GEM diagonalization
+produces $^9$C pseudostates for a four-body CDCC calculation with the target.
+
+For a heavy $^{208}$Pb target at intermediate energy, the reaction Hamiltonian
+contains
+\begin{equation}
+  H=K_R+h_9+U_{p_1T}+U_{p_2T}+U_{{}^7\mathrm{Be}T},
+  \label{eq:9c-Pb-H}
+\end{equation}
+including both nuclear and Coulomb interactions.  The CDCC expansion has the
+same form as Eq.~\eqref{eq:n-li6-channel-expansion}, but each internal state is
+a three-body state.  This is four-body CDCC.
+
+\subsection{Station D: separate sequential and direct breakup with CSLS}
+\label{subsec:lab-9c-csls}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{cross section}
+\index{pseudostate}
+\index{Jacobi coordinate}
+\index{CDCC}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+The experiment used to infer $S_{18}$ is sensitive to the
+$p+{}^8\mathrm B$ arrangement, while the model also contains direct
+$p+p+{}^7\mathrm{Be}$ breakup.  A sum over all $^9$C pseudostates does not by
+itself separate them.  Build the CDCC source
+\begin{equation}
+  \ket{F}=\sum_nT_n\ket{\Phi_n},
+  \label{eq:9c-cdcc-source}
+\end{equation}
+and use a CSLS scattering state adapted to the chosen arrangement.  The
+amplitude for a final $p+{}^8$B relative momentum $\bm k$ and an internal
+$^8$B configuration $\nu$ is
+\begin{equation}
+  T_{p+{}^8\mathrm B}(\bm k,\nu)
+  =\sum_n
+  \braket{\Phi_{\bm k\nu}^{(-)}|\Phi_n}T_n.
+  \label{eq:9c-arrangement-amplitude}
+\end{equation}
+The overlap is calculated with the complex-scaled resolvent as in
+Eq.~\eqref{eq:csls-pseudostate-resolvent}.  A complementary set of Jacobi
+momenta describes direct three-body breakup.  Integrating both contributions
+and their controlled interference recovers the inclusive CDCC strength.
+
+\begin{warningbox}
+The two protons create equivalent $p+{}^8$B partitions.  Symmetrization must
+be implemented before adding amplitudes.  Adding two separately calculated
+cross sections would double count their overlap and erase interference.
+\end{warningbox}
+
+The four-body analysis of Ref.~\cite{Ogawa:2025S18} found that the
+$p+{}^8$B-resolved low-energy line shape describes the breakup data used for
+the ANC extraction, while explicit fragility of $^8$B changes the inferred
+normalization.  The resulting quoted value was
+\begin{equation}
+  S_{18}=38.4\pm1.1\ \mathrm{eV\,b},
+  \label{eq:published-S18}
+\end{equation}
+about $45\%$ below the earlier three-body-CDCC extraction in which $^8$B was
+inert.  The point of the Laboratory is not the numerical shift alone.  It is
+the diagnosis: an omitted low separation scale changes the asymptotic
+configuration whose coefficient is being inferred.
+
+\subsection{Station E: from a breakup ANC to
+\texorpdfstring{$S_{18}$}{S18}}
+\label{subsec:lab-anc-s18}
+% BEGIN CURATED SUBJECT INDEX
+\index{cross section}
+\index{scattering!Coulomb}
+\index{optical potential}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+Let $I_{p{}^8\mathrm B}(r)$ be the radial overlap between the $^9$C ground
+state and the $p+{}^8$B channel.  At large $r$,
+\begin{equation}
+  I_{lj}(r)\longrightarrow
+  C_{lj}\frac{W_{-\eta_B,l+1/2}(2\kappa r)}{r},
+  \qquad
+  \kappa=\sqrt{2\mu S_p}/\hbar.
+  \label{eq:9c-anc-tail}
+\end{equation}
+The coefficient $C_{lj}$ is the ANC.  In a peripheral breakup, the calculated
+cross section in the fitted low-energy region scales approximately as
+\begin{equation}
+  \frac{\rmd\vsub{\sigma}{bu}}{\rmd E}
+  \simeq C^2\mathcal \vsub{R}{bu}(E),
+  \label{eq:breakup-anc-factorization}
+\end{equation}
+where $\vsub{\mathcal R}{bu}$ is computed once with the declared reaction and
+single-particle conventions.  Fit $C^2$ rather than an arbitrary overall
+amplitude if peripherality has been verified by radial and optical-potential
+variations.
+
+The radiative-capture cross section is conventionally written
+\begin{equation}
+  \sigma_{p\gamma}(E)
+  =\frac{S_{18}(E)}{E}\rme^{-2\pi\eta(E)}.
+  \label{eq:S-factor-definition}
+\end{equation}
+At sufficiently low energy, external capture gives
+\begin{equation}
+  S_{18}(0)=C^2\mathcal R_\gamma(0),
+  \label{eq:S18-ANC}
+\end{equation}
+with $\mathcal R_\gamma$ obtained from the Coulomb capture integral and the
+same channel normalization as Eq.~\eqref{eq:9c-anc-tail}.  The ratio
+$\mathcal R_\gamma/\vsub{\mathcal R}{bu}$ converts the measured breakup
+normalization to $S_{18}$ while canceling the arbitrary normalization used for
+the trial overlap.  It does not cancel model dependence from nonperipheral
+contributions, target optical potentials, higher multipoles, or omitted
+three-body configurations; those are separate variations.
+
+\subsection{Station F:
+\texorpdfstring{$^6$Li$(p,2p){}^5$He}{6Li(p,2p)5He} as an overlap measurement}
+\label{subsec:lab-li6-p2p}
+% BEGIN CURATED SUBJECT INDEX
+\index{central decomposition}
+\index{resonance!residue}
+\index{distorted-wave approximation}
+% END CURATED SUBJECT INDEX
+
+The $\alpha+p+n$ wave function can also be regrouped as $p+{}^5$He.  The
+$^5$He subsystem is unbound, so the overlap is energy dependent.  Let
+$\Phi_{{}^5\mathrm{He};\epsilon lj}^{(-)}$ be an $\alpha+n$ scattering state.
+Projecting the $^6$Li ground state gives
+\begin{equation}
+  I_{lj}(\epsilon,\bm r_p)
+  =\braket{
+    \Phi_{{}^5\mathrm{He};\epsilon lj}^{(-)}
+   |\Phi_{{}^6\mathrm{Li}}}_{\alpha n},
+  \label{eq:li6-p5he-overlap}
+\end{equation}
+where $\bm r_p$ is the proton coordinate relative to the $^5$He center of
+mass.  The $p$-wave $^5$He resonance may dominate the integrated norm, while
+an $s$-wave continuum component remains smaller.
+
+In distorted-wave impulse approximation, the knockout transition has the
+schematic factorized form
+\begin{align}
+  T_{p,2p}^{lj}
+  =\Bra{
+  \chi_1^{(-)}\chi_2^{(-)}
+  \Phi_{{}^5\mathrm{He};\epsilon lj}^{(-)}}
+  t_{pp}
+  \Ket{\chi_0^{(+)}\Phi_{{}^6\mathrm{Li}}},
+  \label{eq:dwia-p2p-T}
+\end{align}
+where $t_{pp}$ is the elementary proton--proton transition operator and the
+$\chi$ are distorted waves.  Under a local semiclassical or factorization
+approximation, the structure dependence is concentrated in the Fourier
+transform
+\begin{equation}
+  \widetilde I_{lj}(\epsilon,\bm q)
+  =\int\rmd^3r\,
+  \rme^{-\rmi\bm q\cdot\bm r}I_{lj}(\epsilon,\bm r),
+  \label{eq:li6-overlap-momentum}
+\end{equation}
+sampled at a recoil momentum fixed by the detected protons.
+
+At near-zero recoil, an $s$ wave has no centrifugal zero and can contribute
+strongly to $\widetilde I(\bm q\simeq0)$ even when its integrated probability
+is minor.  A $p$ wave carries a factor proportional to $q$ near the origin in
+a simple smooth model.  Thus ``small component of the norm'' does not imply
+``small contribution to every observable.''  The three-body plus DWIA
+analysis of Ref.~\cite{Ogawa:2024He5} found both $p$- and $s$-wave $^5$He
+components necessary, with the $s$ wave important near zero recoil.
+
+This is the same functional lesson encountered for a resonance residue.  An
+observable probes the wave function through a source and detector kernel; it
+does not measure the coefficient norm in isolation.  Direct-integral fibers
+make the statement precise: $p$ and $s$ waves are different continuum
+channels, and the reaction kernel weights them differently as a function of
+energy and recoil.
+
+\subsection{What the three stations teach about resonance representations}
+\label{subsec:lab-nuclear-resonance-lessons}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{scattering!on-shell}
+\index{pseudostate}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+The calculations can be summarized without collapsing their distinctions:
+\begin{longtable}{@{}p{0.18\linewidth}p{0.23\linewidth}p{0.22\linewidth}p{0.22\linewidth}@{}}
+\toprule
+problem & retained continuum & measured functional & decisive check\\
+\midrule
+\endfirsthead
+\toprule
+problem & retained continuum & measured functional & decisive check\\
+\midrule
+\endhead
+$N+{}^6$Li elastic & $\alpha+p+n$ pseudostates, including closed channels &
+elastic $S$ matrix and integral loss & cutoff, matching-radius, and open/closed comparison\\
+\addlinespace
+$^9$C breakup & $p+p+{}^7$Be pseudostates plus CSLS arrangements &
+low-energy $p+{}^8$B line shape and ANC & inclusive sum and rearrangement consistency\\
+\addlinespace
+$^6$Li$(p,2p)$ & $\alpha+n$ continuum overlap &
+recoil-momentum-weighted $p$ and $s$ amplitudes & distorted-wave and partial-wave stability\\
+\bottomrule
+\end{longtable}
+
+In every row the finite $L^2$ basis is a representation.  The invariant
+object is respectively an on-shell channel amplitude, an arrangement-resolved
+continuum amplitude, or a tested overlap functional.  Stable pseudostate
+eigenvalues may diagnose an intrinsic resonance, but most pseudostates are
+quadrature nodes and should rotate or move when the representation changes.
+
+\subsection*{Laboratory checkpoint}
+% BEGIN CURATED SUBJECT INDEX
+\index{pseudostate}
+\index{Jacobi coordinate}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+Before leaving this Laboratory, the reader should be able to:
+\begin{enumerate}[label=\arabic*.]
+  \item draw all three Jacobi sets for $\alpha+p+n$ and $p+p+{}^7$Be and
+  identify the Pauli projections;
+  \item derive Eq.~\eqref{eq:n-li6-cc} from
+  Eq.~\eqref{eq:n-li6-reaction-H};
+  \item explain why closed $^6$Li pseudostates modify elastic scattering
+  without carrying asymptotic flux;
+  \item construct the CSLS overlap in
+  Eq.~\eqref{eq:9c-arrangement-amplitude} and state the no-double-counting
+  condition for the equivalent protons;
+  \item trace the normalization from the breakup line shape through the ANC
+  to Eq.~\eqref{eq:S18-ANC}; and
+  \item show from the small-$q$ behavior of spherical Bessel transforms why a
+  small $s$-wave component can dominate a selected recoil bin.
+\end{enumerate}

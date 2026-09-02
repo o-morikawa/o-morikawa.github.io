@@ -1,0 +1,170 @@
+\section{Represent black-hole QNMs by complex scaling}
+\label{sec:bh-complex-scaling}
+% BEGIN CURATED SUBJECT INDEX
+\index{complex scaling}
+\index{quasinormal mode}
+% END CURATED SUBJECT INDEX
+
+\subsection{Complex deformation of the tortoise coordinate}
+\label{subsec:bh-csm-map}
+% BEGIN CURATED SUBJECT INDEX
+\index{quasinormal mode}
+\index{tortoise coordinate}
+% END CURATED SUBJECT INDEX
+
+Set
+\begin{equation}
+  r_*=\rme^{\rmi\theta}x,
+  \qquad x\in\real,
+  \qquad \theta>0 .
+  \label{eq:bh-complex-scaling}
+\end{equation}
+The complex-scaled master operator is
+\begin{equation}
+  H_{\theta}
+  =-\rme^{-2\rmi\theta}
+  \frac{\rmd^2}{\rmd x^2}
+  +V_{sl}\!\left(r(\rme^{\rmi\theta}x)\right) .
+  \label{eq:bh-H-theta}
+\end{equation}
+The QNM equation becomes
+\begin{equation}
+  H_\theta\psi_{sl}^{\theta}
+  =\omega^2\psi_{sl}^{\theta} .
+  \label{eq:bh-csm-eigenproblem}
+\end{equation}
+For a mode with $\omega=|\omega|\rme^{-\rmi\varphi}$, both asymptotic waves in
+Eq.~\eqref{eq:qnm-boundary-flat} decay on the deformed line when
+\begin{equation}
+  \theta>\varphi .
+  \label{eq:bh-frequency-exposure}
+\end{equation}
+Equivalently, $E=\omega^2$ lies above the continuum ray rotated by
+$-2\theta$.
+
+The formula is simple, but its analytic implementation is not automatic.
+The inverse map $r(r_*)$ is multivalued because the tortoise coordinate
+contains logarithms.  A deformation must specify branches and avoid metric
+singularities.  One may work directly with an analytically continued
+$V(r_*)$, use exterior scaling where the asymptotic form is controlled, or
+formulate the contour in the complex $r$ plane.  A numerical result without a
+documented branch choice is not reproducible.
+
+\subsection{Why the spectral parameter is
+\texorpdfstring{$\omega^2$}{omega squared}}
+\label{subsec:omega-square}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{complex scaling}
+\index{quasinormal mode}
+\index{horizon boundary condition}
+\index{Kerr black hole}
+% END CURATED SUBJECT INDEX
+
+Complex scaling rotates the continuum of the Schr\"odinger operator in the
+$E$ plane.  Because $E=\omega^2$, the map to the frequency plane is
+two-to-one.  A ray with $\arg E=-2\theta$ corresponds to frequency rays with
+$\arg\omega=-\theta$ and $\arg\omega=\pi-\theta$.  The retarded QNM branch is
+selected by the time convention and the horizon/infinity boundary conditions.
+Plotting eigenvalues directly in the $\omega$ plane without tracking the
+square-root branch can misidentify time-reversed or negative-frequency
+partners.
+
+If the potential depends on $\omega$, as happens after some transformations
+of the Kerr or coupled-channel equations, the problem is a nonlinear
+eigenvalue problem rather than Eq.~\eqref{eq:bh-csm-eigenproblem}.  Linearizing
+it by enlarging the state space is possible only for particular rational or
+polynomial dependence.  This is one reason the extension from static
+spherical backgrounds to Kerr is nontrivial.
+
+\subsection{Basis construction and parity}
+\label{subsec:bh-basis}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{coupled-channel equation}
+\index{quasinormal mode}
+% END CURATED SUBJECT INDEX
+
+The effective barrier is centered in a finite range of $r_*$.  One may use
+even and odd Gaussian functions as in Eq.~\eqref{eq:real-gaussian-basis}, even
+though the black-hole potential itself need not have exact reflection
+symmetry.  Both parity families together span general functions.  Polynomial
+times Gaussian bases,
+\begin{equation}
+  \phi_{np}(x)=x^p\rme^{-\alpha_nx^2},
+  \qquad \text{$p=0$, $1$, \dots, $p_{\max}$} ,
+  \label{eq:polynomial-gaussian}
+\end{equation}
+and complex-range Gaussians improve oscillatory resolution.  Nonorthogonal
+blocks can grow or decay exponentially under scaling, so block balancing and
+overlap truncation are essential for coupled channels
+\cite{Ogawa:2026veu,Ogawa:2026dSCSM}.
+
+The output should be analyzed in $E=\omega^2$ first.  A candidate QNM is an
+isolated eigenvalue stable under $\theta$, $N$, basis widths, integration
+range, and branch conventions.  Only then should a square root be taken to
+quote $\omega$.  Low-lying, weakly damped modes are usually much more stable
+than high overtones because they lie farther from the rotated continuum and
+are represented by less oscillatory scaled wave functions.
+
+\subsection{Schwarzschild and extremal RN benchmarks}
+\label{subsec:bh-csm-benchmarks}
+% BEGIN CURATED SUBJECT INDEX
+\index{pseudostate}
+\index{Regge--Wheeler equation}
+\index{Schwarzschild black hole}
+\index{Reissner--Nordstr\"om black hole}
+% END CURATED SUBJECT INDEX
+
+Leaver's continued-fraction method provides accurate benchmark frequencies
+for Schwarzschild and Reissner--Nordstr\"om backgrounds
+\cite{Leaver:1985ax,Leaver:1986gd,Nollert:1993zz}.  Complex-scaling
+calculations reproduce low-lying Schwarzschild Regge--Wheeler modes and extend
+to scalar, electromagnetic, and gravitational sectors of extremal
+Reissner--Nordstr\"om
+\cite{Ogawa:2026veu}.  The most robust agreement occurs for the fundamental
+modes.  First overtones require broader basis scans, while still higher modes
+can be difficult to distinguish from continuum pseudostates in an unoptimized
+Gaussian basis.
+
+This pattern has a spectral explanation.  For fixed $\theta$, the distance
+between a pole and the rotated continuum controls isolation in the non-normal
+eigenproblem.  Higher overtones have larger negative imaginary parts and lie
+closer to, or below, the accessible ray.  Increasing $\theta$ exposes them but
+also probes a wider complex-coordinate sector where the potential and basis
+may be less well conditioned.  There is therefore no monotonic rule that a
+larger scaling angle is numerically better.
+
+\subsection{Spectral instability and pseudospectra}
+\label{subsec:bh-pseudospectrum}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{resolvent}
+\index{pseudospectrum}
+\index{resonance!residue}
+\index{complex scaling}
+\index{quasinormal mode}
+\index{continuum response}
+% END CURATED SUBJECT INDEX
+
+Black-hole QNM operators can be highly non-normal.  Define the
+$\epsilon$-pseudospectrum of the matrix pencil $(H^\theta,N)$ by
+\begin{equation}
+  \pseudospectrum(H^\theta,N)
+  =\left\{z\in\complex:
+  s_{\min}(H^\theta-zN)<\epsilon\right\},
+  \label{eq:generalized-pseudospectrum}
+\end{equation}
+where $s_{\min}$ is the smallest singular value after a documented basis
+normalization.  Large pseudospectral contours indicate that a small potential
+or discretization perturbation can move eigenvalues far from their unperturbed
+positions
+\cite{Jaramillo:2020tuu,Yang:2024vor}.
+
+Spectral instability does not imply identical instability of all time-domain
+observables.  The resolvent norm, residues, source projection, and duration of
+the observation determine whether a shifted pole has appreciable effect.
+Greybody factors and suitably integrated response functions can be more
+stable than individual high overtones
+\cite{Rosato:2024arw}.  Complex scaling is useful here because it gives access
+to both poles and the deformed continuum resolvent.

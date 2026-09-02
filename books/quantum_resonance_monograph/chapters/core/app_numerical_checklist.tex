@@ -1,0 +1,39 @@
+\section{Reproducibility checklist for every representation}
+\label{app:numerical-checklist}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{branch cut}
+\index{resonance!residue}
+\index{monodromy}
+\index{Pad\'e approximant}
+% END CURATED SUBJECT INDEX
+
+For a complex-scaling calculation, the following information is sufficient to
+reconstruct most systematic choices:
+\begin{enumerate}
+  \item the coordinate contour, scaling angle, and analytic branches of every
+  multivalued function;
+
+  \item the basis functions, nonlinear scales, truncation size, quadrature,
+  and overlap-matrix cutoff;
+
+  \item right and left residuals, matrix condition estimates, and the
+  normalization convention;
+
+  \item eigenvalue trajectories under changes of $\theta$, basis family,
+  nonlinear scales, and precision;
+
+  \item the reference Hamiltonian and matched discretization used for a CLD;
+
+  \item an independent benchmark for representative poles and, when possible,
+  residues;
+
+  \item the square-root branch used to convert $E$ to $\omega$ in a
+  black-hole problem.
+\end{enumerate}
+
+For an exact-WKB calculation, report the spectral curve, branch cuts, Stokes
+graph, Borel direction, lateral prescription, integration cycles, truncation
+order, Borel--Pad\'e order, and stability under changes of resummation
+parameters.  If a monodromy counterterm is used, report the regulator, matching
+condition, and scheme-dependent finite parts.

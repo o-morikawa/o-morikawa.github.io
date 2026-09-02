@@ -1,0 +1,630 @@
+\chapter{Resummation, variational reorganization, and instantons}
+\label{chap:resummation-instantons}
+\index{resummation|textbf}
+\index{divergent series|textbf}
+\index{instanton|textbf}
+
+\begin{readercontract}
+This appendix is a calculation chapter, not a catalogue of summation
+methods.  One benchmark is carried through ordinary truncation, Borel
+summation, Pad\'e and Borel--Pad\'e approximation, optimized and variational
+perturbation theory, and order-dependent mapping.  The same calculation then
+identifies the saddle action which controls large order.  The final section
+translates every object into the exact-WKB language used in Stage III.
+\end{readercontract}
+
+\calculationroute
+{Gaussian integration, analytic continuation, and the Borel transform in
+Sec.~\ref{subsec:borel-resummation}.}
+{Recover a function from its divergent weak-coupling coefficients, diagnose
+the failure of that recovery, and read the missing exponential scale from
+large order.}
+{The reader can reproduce Figs.~or tables of convergence from the supplied
+Wolfram Language file, locate the leading Borel singularity, and explain why
+lateral sums and exact-WKB Stokes data are the same kind of information.}
+
+The perturbative series and the exact-WKB series are not rival
+approximations.  They are two coordinate descriptions of an analytic
+problem.  Ordinary perturbation theory expands a quantity in a coupling;
+exact WKB expands a local solution in a semiclassical parameter.  In both
+cases the coefficients generally grow factorially, the formal series alone
+does not determine a function, and global analytic continuation supplies the
+missing information.  The point of the present calculation is to make that
+statement operational.
+
+\section{A benchmark with an exact answer}
+\label{sec:quartic-zero-dimensional}
+\index{quartic integral}
+\index{zero-dimensional field theory}
+
+For $\re g>0$, define
+\begin{equation}
+  I(g)=\frac{1}{\sqrt{2\pi}}
+  \int_{-\infty}^{\infty}
+  \rme^{-x^2/2-gx^4/4}\dd x .
+  \label{eq:quartic-integral}
+\end{equation}
+This zero-dimensional integral is deliberately elementary.  It has a
+Gaussian perturbative vacuum, a nontrivial saddle after analytic
+continuation, factorial large order, a Borel singularity, and an exact answer.
+It therefore separates the logic of resummation from the numerical and
+domain questions of a differential operator.  The repository accompanying
+the calculations in this appendix uses the same benchmark
+\cite{Morikawa:ResummationRepository}.
+
+The substitution $y=x^2$ and a standard integral representation of the
+modified Bessel function give
+\begin{equation}
+  I(g)=\frac{\rme^{1/(8g)}}{2\sqrt{\pi g}}
+  K_{1/4}\!\left(\frac{1}{8g}\right).
+  \label{eq:quartic-exact}
+\end{equation}
+Equation~\eqref{eq:quartic-exact} is a benchmark, not an input to the
+resummation algorithms.  In a realistic quantum problem the exact answer is
+unknown; one instead compares independent continuations, stability under the
+order, and known asymptotic constraints.
+
+\subsection{Derive the weak-coupling coefficients}
+\label{subsec:quartic-coefficients}
+\index{perturbation series}
+\index{Gaussian moment}
+
+Expand only the quartic exponential:
+\begin{align}
+  I(g)
+  &\sim \sum_{n=0}^{\infty}a_n g^n, \\
+  a_n
+  &=\frac{(-1)^n}{4^n n!\sqrt{2\pi}}
+    \int_{-\infty}^{\infty}x^{4n}\rme^{-x^2/2}\dd x \\
+  &=(-1)^n\frac{\Gamma(2n+1/2)}{\sqrt{\pi}\,n!}.
+  \label{eq:quartic-coefficients}
+\end{align}
+The second line is a Gaussian moment.  No diagrammatic combinatorics has
+been hidden: its rapid growth is the number of Wick contractions in its
+simplest form.
+
+Using Stirling's formula in the ratio $a_{n+1}/a_n$ gives
+\begin{equation}
+  \frac{a_{n+1}}{a_n}
+  =-\frac{(2n+1/2)(2n+3/2)}{n+1}
+  =-4n\left[1+\order(n^{-1})\right].
+  \label{eq:quartic-ratio}
+\end{equation}
+Thus the coefficients have the schematic behavior
+\begin{equation}
+  a_n\sim (-4)^n\Gamma(n)\times
+  \text{a power of }n.
+  \label{eq:quartic-large-order}
+\end{equation}
+The radius of convergence is zero.  This does not mean that the first few
+terms are useless.  It means that truncation is an asymptotic operation whose
+order is part of the approximation.
+
+\subsection{Optimal truncation is the first nonperturbative estimate}
+\label{subsec:optimal-truncation}
+\index{optimal truncation}
+\index{least term}
+
+Let $T_n=a_ng^n$.  From Eq.~\eqref{eq:quartic-ratio}, successive terms have
+comparable magnitude near
+\begin{equation}
+  4|g|n\simeq 1,
+  \qquad
+  n_\star\simeq \frac{1}{4|g|}.
+  \label{eq:least-term-order}
+\end{equation}
+Truncating substantially beyond $n_\star$ makes the approximation worse.
+The size of the least term is exponentially small,
+\begin{equation}
+  |T_{n_\star}|\sim
+  \rme^{-1/(4|g|)}\times \text{a power of }g.
+  \label{eq:least-term-scale}
+\end{equation}
+Already at this stage perturbation theory predicts the scale of the effect
+which it cannot resolve.  Section~\ref{sec:instanton-large-order} will derive
+the same number $1/4$ from a nontrivial saddle.
+
+\begin{checkpointbox}
+A divergent series should never be judged from one fixed truncation order.
+Plot the partial sums against the order.  The useful region is the plateau
+near the least term; the later divergence is part of the prediction, not a
+software failure.
+\end{checkpointbox}
+
+\section{Borel and lateral summation}
+\label{sec:borel-lateral-appendix}
+\index{Borel transform|textbf}
+\index{Borel sum|textbf}
+\index{lateral sum}
+
+For a formal series $F(g)\sim\sum_{n\geq0}a_ng^n$, define the Borel transform
+and a directional Laplace transform by
+\begin{align}
+  \widehat F(t)
+  &=\sum_{n=0}^{\infty}\frac{a_n}{n!}t^n,
+  \label{eq:appendix-borel-transform}\\
+  \mathcal S_\theta F(g)
+  &=\frac{1}{g}\int_{0}^{\rme^{\rmi\theta}\infty}
+    \rme^{-t/g}\widehat F(t)\dd t.
+  \label{eq:appendix-borel-laplace}
+\end{align}
+Termwise integration recovers the original formal series because
+\begin{equation}
+  \frac{1}{g}\int_0^\infty \rme^{-t/g}t^n\dd t=n!g^n.
+  \label{eq:borel-inverse-check}
+\end{equation}
+The factorial division in Eq.~\eqref{eq:appendix-borel-transform} repairs the
+leading divergence, while the Laplace integral restores the coefficients.
+
+For the quartic integral, Eq.~\eqref{eq:quartic-large-order} implies that the
+nearest singularity of $\widehat I(t)$ lies at
+\begin{equation}
+  t=-\frac14.
+  \label{eq:quartic-borel-singularity}
+\end{equation}
+For positive real $g$, this singularity is away from the positive Laplace
+ray, and the perturbative series is Borel summable.  For negative real $g$,
+the relevant ray meets the continued singularity.  One must specify whether
+the contour passes above or below it:
+\begin{equation}
+  \mathcal S_{0^\pm}F(g)
+  =\lim_{\epsilon\downarrow0}
+  \frac{1}{g}\int_{0}^{\rme^{\pm\rmi\epsilon}\infty}
+  \rme^{-t/g}\widehat F(t)\dd t.
+  \label{eq:lateral-borel-sums}
+\end{equation}
+Their difference is exponentially small in $g$.  The two values are not a
+defect of the formalism: they are the analytic record of choosing a side of a
+Stokes ray.  A complete physical problem supplies compensating saddle or
+boundary-condition data so that the final observable has the required
+reality or outgoing property; this is the elementary form of a transseries
+completion \cite{Dorigoni:2014hea,Delabaere:1999xx}.
+
+\subsection{What the Borel plane tells us before integration}
+\label{subsec:borel-diagnostics}
+\index{Borel plane}
+\index{Borel singularity}
+\index{large-order relation}
+
+The Borel plane is a map of competing saddles.  If, locally,
+\begin{equation}
+  \widehat F(t)\sim \frac{C}{(1-t/A)^\beta},
+  \label{eq:borel-local-singularity}
+\end{equation}
+then singularity analysis gives
+\begin{equation}
+  a_n\sim
+  \frac{C}{\Gamma(\beta)}A^{-n}\Gamma(n+\beta).
+  \label{eq:borel-large-order-dictionary}
+\end{equation}
+The position $A$ determines the exponential $\rme^{-A/g}$; the exponent
+$\beta$ determines the power-law prefactor; the discontinuity coefficient
+determines the Stokes multiplier.  Numerical large-order data can therefore
+be used in the reverse direction: coefficient ratios estimate $A$, and
+subleading Richardson-type fits estimate $\beta$ and corrections.
+
+\begin{warningbox}
+A numerical Laplace integral through a Pad\'e pole is not a definition of a
+Borel sum.  First inspect the poles, then choose a direction or a specified
+principal-value prescription.  An integration routine which silently steps
+around a pole has made a physical choice on the user's behalf.
+\end{warningbox}
+
+\section{Pad\'e and Borel--Pad\'e approximation}
+\label{sec:pade-borel-pade}
+\index{Pad\'e approximant|textbf}
+\index{Borel--Pad\'e approximation|textbf}
+
+Given $N+1$ coefficients, the $[L/M]$ Pad\'e approximant is the rational
+function
+\begin{equation}
+  [L/M]_F(g)=\frac{P_L(g)}{Q_M(g)},
+  \qquad L+M=N,
+  \qquad Q_M(0)=1,
+  \label{eq:pade-definition}
+\end{equation}
+whose Taylor expansion agrees with $F$ through order $N$.  Pad\'e
+approximation can represent poles and mimic a branch cut by a sequence of
+zeros and poles.  It does not, by itself, remove factorial divergence.
+
+The robust combination is therefore:
+\begin{enumerate}[label=\arabic*.]
+  \item divide $a_n$ by $n!$ to form a truncated Borel transform;
+  \item replace that polynomial by a near-diagonal Pad\'e approximant;
+  \item inspect its pole pattern in the Borel plane;
+  \item Laplace integrate along a prescribed contour.
+\end{enumerate}
+Explicitly,
+\begin{align}
+  \widehat F_N(t)
+  &=\sum_{n=0}^{N}\frac{a_n}{n!}t^n,
+  \\
+  \widehat F_N^{[L/M]}(t)
+  &= [L/M]_{\widehat F_N}(t),
+  \\
+  \vsup{F_N}{BP}(g)
+  &=\frac{1}{g}\int_0^\infty
+    \rme^{-t/g}\widehat F_N^{[L/M]}(t)\dd t.
+  \label{eq:borel-pade-algorithm}
+\end{align}
+For Eq.~\eqref{eq:quartic-integral}, stable near-diagonal sequences recover
+Eq.~\eqref{eq:quartic-exact} for positive $g$.  Alternating poles and zeros
+accumulate along the negative Borel axis, resolving the branch cut which
+starts at Eq.~\eqref{eq:quartic-borel-singularity}.
+
+\subsection{A convergence protocol rather than one decimal number}
+\label{subsec:resummation-protocol}
+\index{convergence!resummation}
+\index{spurious pole}
+
+For each $g$, calculate a family of $[L/M]$ approximants with
+$|L-M|\leq1$.  Record the result together with the closest pole to the
+integration ray.  A trustworthy digit is one which survives:
+\begin{itemize}
+  \item increasing $N$;
+  \item exchanging $[L/M]$ and $[M/L]$;
+  \item a small contour rotation which crosses no singularity;
+  \item increased working precision;
+  \item comparison with an independent method such as ODM.
+\end{itemize}
+Near-cancelling pole--zero pairs are often finite-order artifacts.  They may
+be diagnosed, but should not be deleted without reporting the criterion.
+
+\section{Optimized and variational perturbation theory}
+\label{sec:opt-vpt}
+\index{optimized perturbation theory|textbf}
+\index{variational perturbation theory|textbf}
+\index{delta expansion}
+\index{principle of minimal sensitivity}
+
+Resummation can also be organized by changing the unperturbed problem.  Add
+and subtract a solvable term containing a trial parameter $\Omega$, insert a
+bookkeeping parameter $\delta$, expand at fixed $\Omega$, set $\delta=1$,
+and only then choose $\Omega$.  For the quartic integral, write
+\begin{equation}
+  \frac{x^2}{2}+\frac{gx^4}{4}
+  =\frac{\Omega x^2}{2}
+  +\delta\left[
+    \frac{(1-\Omega)x^2}{2}+\frac{gx^4}{4}
+  \right].
+  \label{eq:delta-splitting}
+\end{equation}
+At order $N$, expand the second exponential through $\delta^N$ and evaluate
+all moments with the Gaussian of width $\Omega^{-1/2}$.  Denote the result
+after setting $\delta=1$ by $I_N(g,\Omega)$.
+
+The exact integral is independent of $\Omega$, but the truncated result is
+not.  The principle of minimal sensitivity chooses a locally stationary
+approximant,
+\begin{equation}
+  \frac{\partial I_N(g,\Omega)}{\partial\Omega}=0,
+  \label{eq:pms-condition}
+\end{equation}
+while fastest apparent convergence sets a selected highest-order correction
+to zero.  Multiple stationary points are common.  One follows a continuous
+root sequence with $N$ and reports the selection rule; choosing the most
+favorable root after seeing the exact answer is not an algorithm.
+
+Optimized perturbation theory emphasizes the invariance of a complete answer
+under the artificial parameter and uses stationarity as the finite-order
+criterion \cite{Stevenson:1981vj}.  The linear delta expansion makes the
+bookkeeping construction explicit, with convergence results available in
+important model problems \cite{Buckley:1992pc,Duncan:1992ba}.  Variational
+perturbation theory further builds known strong-coupling scaling into the
+reorganization \cite{Kleinert:1995hc}.  The names overlap in the literature;
+the defining data are therefore the splitting, the truncation rule, and the
+optimization condition, not the label.
+
+\subsection{Why optimization can recover strong coupling}
+\label{subsec:vpt-strong-coupling}
+\index{strong-coupling expansion}
+
+Rescale $x=g^{-1/4}y$ in Eq.~\eqref{eq:quartic-integral}.  Then
+\begin{equation}
+  I(g)=g^{-1/4}\frac{1}{\sqrt{2\pi}}
+  \int_{-\infty}^{\infty}
+  \rme^{-y^4/4-y^2/(2\sqrt g)}\dd y,
+  \label{eq:quartic-strong-coupling}
+\end{equation}
+so the leading strong-coupling power is $g^{-1/4}$ and corrections occur in
+powers of $g^{-1/2}$.  A variational mapping which respects these exponents
+has information unavailable to a raw weak-coupling polynomial.  In operator
+problems the analogous information comes from dimensional analysis,
+semiclassical scaling, or a solvable strong-coupling limit.
+
+\begin{checkpointbox}
+Optimization does not make an approximation variational in the sense of an
+upper bound.  Unless a Rayleigh--Ritz theorem applies to the precise
+functional being optimized, stationarity supplies stability, not an
+inequality.
+\end{checkpointbox}
+
+\section{Order-dependent mapping}
+\label{sec:odm-appendix}
+\index{order-dependent mapping|textbf}
+\index{conformal map}
+
+Order-dependent mapping combines analytic continuation with an optimized
+parameter.  Introduce
+\begin{equation}
+  g=\rho\frac{\lambda}{(1-\lambda)^\alpha}.
+  \label{eq:odm-general-map}
+\end{equation}
+The exponent $\alpha$ is chosen from the analytic or strong-coupling
+behavior.  For the present quartic integral a useful map is
+\begin{equation}
+  g=\rho\frac{\lambda}{(1-\lambda)^2}.
+  \label{eq:odm-quartic-map}
+\end{equation}
+Substitute Eq.~\eqref{eq:odm-quartic-map} into the weak-coupling series,
+reexpand in $\lambda$ through order $N$, and write
+\begin{equation}
+  I_N(g;\rho)=\sum_{n=0}^{N}c_n(\rho)\lambda(g,\rho)^n.
+  \label{eq:odm-truncated}
+\end{equation}
+The parameter is allowed to depend on the order.  A common condition is
+\begin{equation}
+  c_N(\rho_N)=0,
+  \label{eq:odm-fac}
+\end{equation}
+or, alternatively, stationarity with respect to $\rho$.  As $N$ grows,
+$\rho_N$ moves so that the finite analytic domain in $\lambda$ resolves a
+larger part of the cut $g$ plane.  The general construction and its
+convergence mechanisms are reviewed in Ref.~\cite{Zinn-Justin:2010zzb}; the
+specific implementation used here follows
+Ref.~\cite{Morikawa:ResummationRepository}.
+
+\subsection{How ODM differs from a fixed conformal Borel map}
+\label{subsec:odm-versus-conformal}
+\index{conformal Borel mapping}
+
+A conformal Borel method maps a known cut Borel domain to a disk using a
+fixed singularity location.  ODM maps the coupling itself and changes the
+scale $\rho_N$ with the order.  The former is strongest when the Borel
+singularity geometry is known; the latter can infer an efficient scale from
+the coefficient sequence and strong-coupling exponent.  They may be
+combined, but then each source of input must be stated to avoid counting the
+same analytic information twice.
+
+\section{Instantons and the origin of large order}
+\label{sec:instanton-large-order}
+\index{instanton action|textbf}
+\index{saddle point}
+\index{large-order behavior}
+
+Continue the quartic coupling to $g=-|g|$.  The exponent can be written as
+\begin{equation}
+  S(x)=\frac{x^2}{2}-\frac{|g|x^4}{4}.
+  \label{eq:continued-quartic-action}
+\end{equation}
+Besides $x=0$, the stationary points satisfy
+\begin{equation}
+  S'(x)=x-|g|x^3=0,
+  \qquad
+  x_\star=\pm\frac{1}{\sqrt{|g|}}.
+  \label{eq:quartic-saddles}
+\end{equation}
+Their action relative to the perturbative saddle is
+\begin{equation}
+  S(x_\star)-S(0)=\frac{1}{4|g|}.
+  \label{eq:quartic-saddle-action}
+\end{equation}
+This is precisely the exponential scale inferred from the least term in
+Eq.~\eqref{eq:least-term-scale}, and its reduced action $A=1/4$ is precisely
+the Borel singularity in Eq.~\eqref{eq:quartic-borel-singularity}.  Three
+calculations have found the same invariant:
+\begin{equation}
+  \text{large-order ratio}
+  \quad\longleftrightarrow\quad
+  \text{Borel singularity}
+  \quad\longleftrightarrow\quad
+  \text{saddle action}.
+  \label{eq:large-order-triangle}
+\end{equation}
+
+In quantum mechanics the nontrivial saddle is a finite-action trajectory in
+Euclidean time rather than a point.  Expanding about it gives a fluctuation
+determinant and zero-mode measure.  Multi-instanton sectors generate powers
+of $\rme^{-A/g}$, possible logarithms, and interactions between saddles
+\cite{Zinn-Justin:1981qzi,Marino:2015Instantons}.  The perturbative coefficients around one saddle
+encode fluctuations around the others.  This is the practical content of
+resurgence, not merely the statement that a divergent series can sometimes
+be summed.
+
+\subsection{Dispersion relation for the coefficients}
+\label{subsec:dispersion-large-order}
+\index{dispersion relation!large order}
+
+Suppose $F(g)$ is analytic in a cut plane and has a discontinuity on the
+negative axis.  Cauchy's formula gives, under the appropriate subtractions,
+\begin{equation}
+  a_n
+  =\frac{(-1)^{n+1}}{\pi}
+  \int_0^\infty
+  \frac{\im F(-s+\rmi0)}{s^{n+1}}\dd s.
+  \label{eq:large-order-dispersion}
+\end{equation}
+If the discontinuity has the semiclassical form
+\begin{equation}
+  \im F(-s+\rmi0)
+  \sim C s^{-b}\rme^{-A/s}
+  \left[1+\order(s)\right],
+  \label{eq:instanton-discontinuity}
+\end{equation}
+then $u=A/s$ in Eq.~\eqref{eq:large-order-dispersion} yields
+\begin{equation}
+  a_n\sim
+  \frac{(-1)^{n+1}C}{\pi}
+  A^{-n-b}\Gamma(n+b)
+  \left[1+\order(n^{-1})\right].
+  \label{eq:instanton-large-order}
+\end{equation}
+Thus the imaginary part of an unstable continuation controls the late terms
+of the stable perturbative problem.  For a resonance, the same imaginary
+part becomes a decay width after the outgoing boundary value has been fixed.
+
+\section{The exact-WKB translation}
+\label{sec:resummation-wkb-dictionary}
+\index{exact WKB!resummation dictionary}
+\index{Voros period}
+\index{Stokes automorphism}
+\index{transseries}
+
+The exact-WKB construction in Sec.~\ref{sec:exact-wkb} begins from a local
+Riccati series, Borel resums it in a direction, and transports the resulting
+basis through Stokes sectors.  The global connection coefficient
+$\Cincoming(E)$ is then an analytic function assembled from local data.  The
+dictionary is exact at the structural level:
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.45\textwidth}
+  >{\raggedright\arraybackslash}X@{}}
+\toprule
+Coupling expansion & Exact-WKB connection problem \\
+\midrule
+formal perturbative coefficients & formal Riccati coefficients \\
+\addlinespace
+Borel singularity at action $A$ & finite action path or WKB cycle \\
+\addlinespace
+lateral Borel sum & directional exact-WKB sum $\mathcal S_{\theta^\pm}$ \\
+\addlinespace
+Stokes discontinuity & change of the resummed WKB basis \\
+\addlinespace
+instanton sector & exponential of a Voros period $\VorosExp_\gamma$ \\
+\addlinespace
+physical transseries parameter & boundary or connection data \\
+\addlinespace
+zero of a continued denominator & zero of $\Cincoming(E)$ \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The last two rows are the reason this appendix belongs in the present book.
+For a generic perturbative observable, a transseries parameter can look like
+an extra constant.  In a scattering problem it is fixed by preparation and
+asymptotic boundary conditions.  The outgoing condition selects a lateral
+continuation and imposes
+\begin{equation}
+  \Cincoming(\resonantE)=0.
+  \label{eq:appendix-resonance-condition}
+\end{equation}
+The resonance is therefore not obtained by adding a complex energy by hand.
+It is the zero of the globally continued coefficient.  Its residue depends
+on $\partial_E\Cincoming$, so the fluctuation and normalization information
+which accompanies the exponential sector remains observable.
+
+\subsection{What ordinary resummation cannot decide}
+\label{subsec:resummation-limit}
+\index{boundary condition!and resummation}
+
+A coefficient list does not specify:
+\begin{itemize}
+  \item the physical sheet of the energy or momentum plane;
+  \item which asymptotic channel is incoming or outgoing;
+  \item the test space on which a continued eigenfunctional acts;
+  \item whether a Borel ambiguity is cancelled, retained as a width, or
+        moved by a change of observable;
+  \item which continuum background accompanies a pole.
+\end{itemize}
+These are connection, domain, and representation data.  Exact WKB is useful
+because it keeps them in the calculation from the beginning.
+
+\section{A reproducible Wolfram Language laboratory}
+\label{sec:wolfram-resummation-lab}
+\index{Wolfram Language}
+\index{reproducibility!resummation}
+
+The file \texttt{notebooks/resummation\_workflow.wl} supplied with the source
+archive implements the coefficient generation, direct truncation,
+Borel--Pad\'e summation, Borel-plane pole inspection, and the ODM map.  It is
+a compact, text-readable companion to the larger public notebook collection
+\cite{Morikawa:ResummationRepository}.  A separate Wolfram Community article
+demonstrates how symbolic and numerical code can accompany the exact-WKB
+resonance analysis itself \cite{Morikawa:2026WolframCommunity}.
+
+The core commands are included here so that the printed book remains
+self-contained:
+\lstinputlisting[
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  columns=fullflexible,
+  frame=single,
+  caption={Minimal Wolfram Language workflow for the quartic integral.},
+  label={lst:resummation-workflow}
+]{notebooks/resummation_workflow.wl}
+
+\subsection{Protocol for comparing methods}
+\label{subsec:method-comparison-protocol}
+\index{method comparison}
+
+Use exactly the same coefficient list and working precision for every method.
+For $g=0.2$ and $g=0.4$, carry out the following steps.
+\begin{enumerate}[label=\arabic*.]
+  \item Evaluate Eq.~\eqref{eq:quartic-exact} at high precision only to create
+        withheld validation data.
+  \item Plot partial sums for all $0\leq N\leq N_{\max}$ and mark the least
+        term predicted by Eq.~\eqref{eq:least-term-order}.
+  \item Compute near-diagonal Borel--Pad\'e sequences and reject no pole
+        without recording its pole--zero distance.
+  \item Follow one continuous PMS or FAC root for OPT/VPT as $N$ changes.
+  \item Follow one continuous positive ODM root $\rho_N$ and record both
+        $\rho_N$ and the mapped variable $\lambda(g,\rho_N)$.
+  \item Compare errors against the exact answer only after all selection
+        rules have been fixed.
+\end{enumerate}
+Representative exact values are
+\begin{align}
+  I(0.2)&=0.9079847774\ldots,\\
+  I(0.4)&=0.8576085854\ldots.
+  \label{eq:quartic-benchmark-values}
+\end{align}
+The purpose is not to declare a universal winner.  Borel--Pad\'e is strongest
+when the Borel geometry is well resolved; VPT is strongest when reliable
+strong-coupling exponents are available; ODM is attractive when a useful map
+and a stable order-dependent root can be identified.  Exact WKB adds the
+global channel geometry needed for spectral and scattering questions.
+
+\begin{derivationbox}{Exercises}
+\begin{enumerate}[label=\textbf{R.\arabic*}]
+  \item Derive Eq.~\eqref{eq:quartic-exact} from
+        Eq.~\eqref{eq:quartic-integral} and verify its $g\downarrow0$
+        asymptotic expansion.
+  \item Use Eq.~\eqref{eq:quartic-coefficients} to estimate the Borel
+        singularity from three successive coefficient ratios.  Determine the
+        leading $1/n$ correction.
+  \item Compare direct Pad\'e and Borel--Pad\'e at $g=0.4$.  Plot all Borel
+        poles and explain which sequences can be integrated on the positive
+        axis without a prescription.
+  \item Derive $I_N(g,\Omega)$ through $N=3$ from
+        Eq.~\eqref{eq:delta-splitting}.  Find all real positive PMS roots and
+        track them from $g=0.05$ to $g=1$.
+  \item Implement Eqs.~\eqref{eq:odm-quartic-map}--\eqref{eq:odm-fac} without
+        using the supplied function.  Explain why selecting a different root
+        independently at each order destroys the meaning of convergence.
+  \item Starting from Eq.~\eqref{eq:large-order-dispersion}, derive
+        Eq.~\eqref{eq:instanton-large-order}, including the overall power of
+        $A$.
+  \item For the inverted Rosen--Morse problem in
+        Sec.~\ref{subsec:rosen-morse}, identify the WKB action which replaces
+        $A=1/4$ and explain how its Stokes multiplier enters
+        $\Cincoming(E)$.
+\end{enumerate}
+\end{derivationbox}
+
+\section{What to retain for the rest of the book}
+\label{sec:resummation-retain}
+\index{resummation!summary}
+
+The reusable lesson is a five-step discipline.
+\begin{enumerate}[label=\arabic*.]
+  \item Determine the domain, coupling variable, and asymptotic boundary
+        condition before manipulating coefficients.
+  \item Diagnose late terms and locate candidate action scales.
+  \item Choose a summation or reorganization whose analytic assumptions are
+        explicit.
+  \item Test order, precision, contour, root, and representation stability.
+  \item Translate the recovered analytic function back into invariant pole,
+        residue, and continuum data.
+\end{enumerate}
+This discipline is the perturbative analogue of the calculation spine in
+Sec.~\ref{sec:computational-spine}: local data are useful only after a global
+connection prescription has been fixed.

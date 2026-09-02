@@ -1,0 +1,313 @@
+\section{Represent the outgoing branch as a square-integrable eigenvector}
+\label{sec:complex-scaling}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!closed}
+\index{spectrum!continuous}
+\index{spectrum!point}
+\index{resolvent}
+\index{Riesz projection}
+\index{boundary condition!incoming and outgoing}
+% END CURATED SUBJECT INDEX
+
+\calculationroute
+  {The continued pole condition, closed operators, analytic families, and
+  the distinction between point and continuous spectrum.}
+  {Choose an admissible coordinate deformation that makes the outgoing branch
+  square integrable while rotating, rather than discarding, the continuum.}
+  {Identify an angle-stable eigenvalue and connect its Riesz projection to the
+  same continued resolvent pole.}
+
+\subsection{Analytic dilation}
+\label{subsec:analytic-dilation}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering!Coulomb}
+\index{complex scaling}
+\index{analytic dilation}
+\index{complex scaling!exterior}
+% END CURATED SUBJECT INDEX
+
+Let the configuration-space dimension be $d$.  For a real dilation parameter
+$s$, define the unitary operator
+\begin{equation}
+  \left[U(s)\psi\right](\bm x)
+  =\rme^{ds/2}\psi(\rme^s\bm x) .
+  \label{eq:real-dilation}
+\end{equation}
+Complex scaling analytically continues $s$ to $s=\rmi\theta$, with a real
+angle $\theta$.  Formally,
+\begin{equation}
+  \left[U(\rmi\theta)\psi\right](\bm x)
+  =\rme^{\rmi d\theta/2}
+  \psi(\rme^{\rmi\theta}\bm x) .
+  \label{eq:complex-dilation}
+\end{equation}
+For $\theta\ne0$, this transformation is not unitary on the original
+$L^2$ space and is generally unbounded.  It should be defined first on a dense
+set of analytic vectors.  This is why it is safer to speak of an analytic
+family of deformed operators than of an everywhere-defined similarity
+transformation.
+
+For the Hamiltonian
+\begin{equation}
+  H=T+V(\bm x),
+  \qquad
+  T=-\frac{\hbar^2}{2m}\nabla^2,
+  \label{eq:H-TV}
+\end{equation}
+the complex-scaled operator is
+\begin{equation}
+  H_{\theta}
+  =U(\rmi\theta)HU(-\rmi\theta)
+  =\rme^{-2\rmi\theta}T
+  +V(\rme^{\rmi\theta}\bm x) .
+  \label{eq:H-theta}
+\end{equation}
+Equation~\eqref{eq:H-theta} requires the potential to admit analytic
+continuation in the sector swept out by the deformation.  Coulomb singularities,
+multiple coordinates, and nonanalytic potentials require refined forms such
+as exterior complex scaling or smooth complex deformation
+\cite{Simon1979ECS,Reinhardt:1982,Moiseyev:2011}.
+
+\subsection{Why an outgoing wave becomes square integrable}
+\label{subsec:outgoing-L2}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{Gamow--Siegert state}
+% END CURATED SUBJECT INDEX
+
+Write the resonance momentum as
+\begin{equation}
+  \vsub{k}{R}=|\vsub{k}{R}|\rme^{-\rmi\varphi},
+  \qquad 0<\varphi<\frac{\pi}{4} .
+  \label{eq:k-polar}
+\end{equation}
+On the positive half-line, the scaled outgoing wave is
+\begin{align}
+  \rme^{\rmi \vsub{k}{R}r\rme^{\rmi\theta}}
+  &=\rme^{
+  \rmi|\vsub{k}{R}|r\cos(\theta-\varphi)
+  }
+  \notag\\
+  &\quad\times
+  \rme^{-|\vsub{k}{R}|r
+  \sin(\theta-\varphi)} .
+  \label{eq:scaled-outgoing}
+\end{align}
+It decays for $\theta>\varphi$.  The same condition regularizes the outgoing
+wave on the negative half-line when the contour is rotated consistently.
+Thus the Siegert state becomes an $L^2$ eigenfunction of $H_\theta$ once the
+rotated continuum has passed below the pole.  The divergent unscaled wave and
+the normalizable scaled wave are analytic continuations of one solution, not
+different physical states.
+
+\subsection{The Aguilar--Balslev--Combes structure}
+\label{subsec:abc}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{unbounded operator}
+\index{operator!closed}
+\index{spectrum!continuous}
+\index{spectrum!essential}
+\index{spectrum!point}
+\index{resolvent}
+\index{Riesz projection}
+\index{pseudospectrum}
+\index{compact operator}
+% END CURATED SUBJECT INDEX
+
+The Aguilar--Balslev--Combes theorem is sometimes quoted only as the rule that
+the continuum rotates.  Its real content is a statement about an analytic
+family of closed operators and the meromorphic continuation of resolvent
+matrix elements
+\cite{Aguilar:1971ve,Balslev:1971vb,Simon1972BalslevCombes,Simon:73}.
+We state a one-threshold version before explaining its proof.
+
+Let $H_0=-\hbar^2\nabla^2/(2m)$ on $L^2(\real^d)$ and assume that $V$ is
+$H_0$-compact, or satisfies a suitable relative-form compactness condition.
+Assume further that
+\begin{equation}
+  s\longmapsto V_s:=U(s)VU(-s)
+  \label{eq:dilation-analytic-V}
+\end{equation}
+has an operator- or form-valued analytic continuation from real $s$ to a
+strip $\lvert\im s\rvert<\theta_{\max}$.  Such a potential is called
+\textit{dilation analytic}.  The deformed Hamiltonian
+\begin{equation}
+  H(s)=\rme^{-2s}H_0+V_s
+  \label{eq:analytic-Hs}
+\end{equation}
+then forms an analytic family, of type A when a common operator domain can be
+used and of type B when the construction is made through quadratic forms.
+For $s=\rmi\theta$ with $0<\theta<\theta_{\max}$, write
+$H_\theta:=H(\rmi\theta)$.
+
+Under these hypotheses, the theorem gives the following spectral picture:
+\begin{enumerate}
+  \item $H_\theta$ is a closed non-self-adjoint operator.  Its essential
+  spectrum is
+  \begin{equation}
+    \essspectrum(H_\theta)
+    =\rme^{-2\rmi\theta}[0,\infty) .
+    \label{eq:abc-essential-spectrum}
+  \end{equation}
+
+  \item Bound-state eigenvalues remain on the real axis and are independent of
+  $\theta$.  Their algebraic multiplicities are unchanged for an admissible
+  deformation that does not encounter another threshold or singularity.
+
+  \item A discrete nonreal eigenvalue in the wedge
+  $-2\theta<\arg z<0$ is independent of $\theta$ while it remains isolated
+  from the rotated essential spectrum.  It coincides with a pole of the
+  continued physical resolvent and is therefore a resonance.
+
+  \item For many-body or coupled-channel problems, each continuum ray starting
+  at a threshold $E_a$ rotates as
+  \begin{equation}
+    E_a+[0,\infty)
+    \longmapsto
+    E_a+\rme^{-2\rmi\theta}[0,\infty) .
+    \label{eq:continuum-rotation}
+  \end{equation}
+
+  Cluster thresholds and channel branch points therefore remain as anchors of
+  the spectral geometry.
+\end{enumerate}
+For a threshold at zero, a pole with energy $\resonantE$ is exposed when
+\begin{equation}
+  -2\theta<\arg \resonantE<0 .
+  \label{eq:exposure-condition}
+\end{equation}
+The bridge to scattering theory is obtained on a dense set $\mathcal A$ of
+analytic vectors.  For real $s$ unitarity of $U(s)$ gives
+\begin{equation}
+  \bra{\phi}(z-H)^{-1}\ket{\psi}
+  =\bra{U(s)\phi}(z-H(s))^{-1}U(s)\ket{\psi},
+  \qquad \text{$\phi$, $\psi\in\mathcal A$} .
+  \label{eq:abc-resolvent-identity-main}
+\end{equation}
+Both sides are analytic in a common initial domain.  Continuing
+Eq.~\eqref{eq:abc-resolvent-identity-main} from real $s$ to
+$s=\rmi\theta$ continues the physical matrix element through the original
+continuous spectrum into the wedge uncovered by the rotated ray.  Analytic
+Fredholm theory makes the right-hand side meromorphic there.  Its poles are
+the isolated eigenvalues of $H_\theta$, with finite-rank Riesz projections.
+This is stronger than a graphical rotation of a cut: it identifies the
+deformed eigenvalue with a pole of the undeformed scattering problem.
+
+The theorem should not be paraphrased as a general completeness theorem for
+arbitrary Gamow states.  It describes the spectrum and resolvent continuation
+under specific analyticity and compactness assumptions.  A resonance
+expansion still contains the rotated continuum, and completeness of a chosen
+eigenfunction expansion is an additional statement.  The Berggren relation
+in Section~\ref{subsec:berggren-proof} is one such statement for radial
+short-range problems.
+
+The phrase ``$\theta$ independent'' has a precise but limited meaning.  In the
+exact operator problem, an isolated exposed pole is invariant under admissible
+changes of $\theta$.  In a truncated basis, every eigenvalue has residual
+angle dependence.  A numerical pole is identified by a stationary trajectory
+or a plateau under simultaneous variation of $\theta$, basis size, nonlinear
+basis scales, and arithmetic precision.  The pseudospectrum provides a more
+honest error diagnostic than eigenvalue motion alone for strongly
+non-normal matrices
+\cite{Davies:2002,Davies:07,Trefethen1999}.
+
+A detailed proof architecture, including the essential-spectrum and
+Fredholm steps, is given in Sec.~\ref{app:abc-sketch}.  That discussion
+also explains why global complex scaling does not immediately provide an ABC
+theorem for black-hole potentials written in tortoise coordinates.
+
+\subsection{Exterior and smooth complex scaling}
+\label{subsec:exterior-scaling}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{complex scaling}
+\index{complex scaling!smooth}
+\index{complex absorbing potential}
+% END CURATED SUBJECT INDEX
+
+Global scaling evaluates $V$ at complex coordinates everywhere.  If the
+interaction has singularities or if one wishes to preserve an inner physical
+region, choose a radius $R_0>0$ and deform only outside it.  A piecewise-linear
+exterior contour may be written
+\begin{equation}
+  z(r)=
+  \begin{cases}
+    r, & 0\le r\le R_0,\\
+    R_0+(r-R_0)\rme^{\rmi\theta}, & r>R_0.
+  \end{cases}
+  \label{eq:ecs-contour}
+\end{equation}
+A smooth contour avoids a derivative discontinuity at $R_0$.  Exterior
+complex scaling is especially useful when the potential is analytic only in
+the asymptotic region or when an inner wave function must retain a direct
+probabilistic interpretation.  Perfectly matched layers and complex absorbing
+potentials are closely related numerical devices, but their finite-parameter
+eigenvalues must be extrapolated to distinguish physical poles from absorber
+modes.
+
+\subsection{Biorthogonality and the complex-symmetric case}
+\label{subsec:biorthogonality}
+% BEGIN CURATED SUBJECT INDEX
+\index{biorthogonality}
+\index{complex-symmetric operator}
+\index{Berggren completeness relation}
+\index{exceptional point}
+\index{self-orthogonality}
+% END CURATED SUBJECT INDEX
+
+Let $H_\theta\ket{\Psi_n^{\mathrm R}}=E_n\ket{\Psi_n^{\mathrm R}}$ and
+$\bra{\Psi_n^{\mathrm L}}H_\theta=E_n\bra{\Psi_n^{\mathrm L}}$.  Away from
+degeneracies, left and right eigenvectors may be normalized by
+\begin{equation}
+  \braket{\Psi_m^{\mathrm L}|\Psi_n^{\mathrm R}}
+  =\delta_{mn} .
+  \label{eq:biorthonormality}
+\end{equation}
+If a real potential and basis make the matrix representation complex
+symmetric, $H_\theta^{\mathsf T}=H_\theta$, the natural bilinear form is the
+$c$ product
+\begin{equation}
+  \cprod{\phi}{\psi}
+  =\int\rmd x\,\phi(x)\psi(x) ,
+  \label{eq:c-product}
+\end{equation}
+without complex conjugation of the first factor.  The $c$ product is not a
+positive norm.  It is a bilinear pairing that implements left--right
+biorthogonality in this representation.  Confusing it with a probability norm
+is a common source of paradoxes concerning complex expectation values
+\cite{Berggren:1996,Moiseyev:2011}.
+
+At an exceptional point, Eq.~\eqref{eq:biorthonormality} cannot be maintained
+with bounded normalization because the eigenvector becomes self-orthogonal.
+The divergent normalization and the vanishing bilinear norm are two sides of
+the same Jordan singularity.  We return to this point in
+Section~\ref{sec:exceptional-points}.
+
+\subsection{Spectral representation of the complex-scaled resolvent}
+\label{subsec:csm-resolvent}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+% END CURATED SUBJECT INDEX
+
+In a formal discrete-plus-continuum notation, the deformed resolvent has the
+expansion
+\begin{align}
+  \Resolvent_\theta(z)
+  &=(z-H_\theta)^{-1}
+  \notag\\
+  &=\sum_{b}\frac{\ket{\Psi_b^{\mathrm R}}
+  \bra{\Psi_b^{\mathrm L}}}{z-E_b}
+  +\sum_{r}\frac{\ket{\Psi_r^{\mathrm R}}
+  \bra{\Psi_r^{\mathrm L}}}{z-E_r}
+  +
+  \int_{L_\theta}\rmd E'
+  \frac{\ket{\Psi_{E'}^{\mathrm R}}
+  \bra{\Psi_{E'}^{\mathrm L}}}{z-E'} .
+  \label{eq:csm-resolvent-expansion}
+\end{align}
+The first sum runs over bound states, the second over exposed resonances, and
+$L_\theta$ is the rotated continuum.  This is the operator counterpart of the
+contour deformation in Eq.~\eqref{eq:inverse-laplace}.  It also explains why a
+finite-basis diagonalization can approximate both pole and continuum
+contributions using one matrix spectrum.

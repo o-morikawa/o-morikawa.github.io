@@ -1,0 +1,90 @@
+\section{What exact WKB changed in the present research program}
+\label{sec:program-development}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{spectrum!point}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{Gamow--Siegert state}
+\index{exact WKB}
+\index{monodromy}
+\index{Langer correction}
+\index{Frobenius solution}
+% END CURATED SUBJECT INDEX
+
+The novelty of the program is not exhausted by obtaining several new pole
+tables.  Exact WKB changed which pieces of the problem are regarded as
+primary.  Before choosing a Hilbert-space realization one can construct an
+analytic incoming coefficient, follow it across Stokes sectors, and ask which
+features survive every admissible representation.  This produces the
+following shifts of emphasis:
+\begin{longtable}{@{}p{0.29\linewidth}p{0.63\linewidth}@{}}
+\toprule
+conventional starting point & connection-first understanding \\
+\midrule
+\endfirsthead
+\toprule
+conventional starting point & connection-first understanding \\
+\midrule
+\endhead
+complex eigenvalue & zero of a globally transported incoming coefficient;
+the eigenvalue is one realization of the zero \\
+\addlinespace
+divergent Gamow norm & derivative or residue of the analytic connection datum;
+regularizations must reproduce it \\
+\addlinespace
+isolated resonance level & pole and continuum as parts of one continued
+spectral resolution \\
+\addlinespace
+Langer correction as a prescription & local singular monodromy required by
+global consistency \\
+\addlinespace
+EP square root of a matrix & multiple zero of a scattering determinant with
+continuum normalization kept explicit \\
+\addlinespace
+black-hole damping boundary condition & horizon-to-horizon connection problem
+on a complex spectral curve \\
+\bottomrule
+\end{longtable}
+
+These shifts have several consequences for how the theory is used.
+
+First, a resonance can be constructed before choosing a non-self-adjoint
+operator.  Exact WKB transports local solutions, produces
+$\Cincoming(E)$, and defines a simple pole by
+$\Cincoming(\resonantE)=0$ together with
+$\Cincoming'(\resonantE)\neq0$.  A complex-scaled eigenvalue is then
+a calculational realization of this datum.  This order prevents an arbitrary
+complex eigenvalue of a truncation from being mistaken for a resonance.
+
+Second, equivalence of regularizations becomes a checkable residue identity.
+The Zel'dovich pairing, the rigged-space functional, and the left--right
+complex-scaled dyad must reproduce the derivative of the same connection
+coefficient.  Agreement of pole positions without agreement of the residue is
+only a partial test.
+
+Third, the continuum is not a background that may be deleted after a pole is
+found.  Rotating the continuum, deforming a Berggren contour, or extracting a
+resonance term reorganizes one spectral response.  Threshold cuts, continuum
+level density, and source-dependent excitation survive that reorganization
+and control where a pole approximation is accurate.
+
+Fourth, new applications are classified by the connection data they add.  A
+radial origin adds Frobenius indices and singular monodromy; an exceptional
+point changes a simple zero into a multiple zero and requires a Jordan chain;
+a black-hole horizon replaces spatial infinity by a second radiation sector.
+The local differential equation may still look Schr\"odinger-like, but the
+global connection problem has changed and must be rebuilt accordingly.
+
+Finally, the same organization separates theorem, representation, and
+numerics.  Analytic dilation supplies the theorem-controlled wedge.  A basis
+and scaling angle supply a representation.  Stability under the parameters
+that should be inessential supplies a numerical falsification test.  The
+three layers cooperate, but none can be substituted silently for another.
+
+The research articles in which these calculations were first developed are
+Refs.~\cite{Morikawa:2025grx,Morikawa:2025xjq,Morikawa:2025vvs,
+Morikawa:2025ezl,Morikawa:2025inx,Ogawa:2026veu,Ogawa:2026dSCSM}.
+Their chronology is bibliographic provenance; the logical order used here is
+the dependency order of the connection problem.

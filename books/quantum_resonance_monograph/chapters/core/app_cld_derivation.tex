@@ -1,0 +1,35 @@
+\section{Derive the continuum level-density relation}
+\label{app:cld-derivation}
+% BEGIN CURATED SUBJECT INDEX
+\index{resolvent}
+\index{trace-class operator}
+\index{spectral shift function}
+% END CURATED SUBJECT INDEX
+
+For a trace-class resolvent difference, define the perturbation determinant
+\begin{equation}
+  \mathcal D(z)
+  =\det\left[(z-H)(z-H_0)^{-1}\right] .
+  \label{eq:perturbation-determinant}
+\end{equation}
+Its logarithmic derivative is
+\begin{equation}
+  \frac{\rmd}{\rmd z}\log\mathcal D(z)
+  =\Tr\left[(z-H)^{-1}-(z-H_0)^{-1}\right] .
+  \label{eq:determinant-resolvent-trace}
+\end{equation}
+Taking the imaginary part of the upper boundary value gives
+Eq.~\eqref{eq:cld-physical}.  The ratio of boundary values of
+$\mathcal D$ is related to $\det S$; with
+$\det S=\rme^{2\rmi\vsub{\delta}{tot}}$, differentiation gives
+Eq.~\eqref{eq:birman-krein-differential}.
+
+Complex deformation does not change $\mathcal D(z)$ in the analytic region
+between the original and rotated contours.  This gives
+Eq.~\eqref{eq:cld-csm}.  In a finite basis, the determinant is a ratio of
+characteristic polynomials, whose logarithmic derivative gives the sum in
+Eq.~\eqref{eq:finite-cld}.
+
+Bound states contribute jumps to the integrated spectral shift.  Care is
+therefore needed when comparing phases at threshold; Levinson-type constants
+depend on half-bound states, dimensions, and long-range tails.

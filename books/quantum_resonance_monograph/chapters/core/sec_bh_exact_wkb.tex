@@ -1,0 +1,150 @@
+\section{Read black-hole spectra from quantum periods and horizon monodromy}
+\label{sec:bh-exact-wkb}
+% BEGIN CURATED SUBJECT INDEX
+\index{monodromy}
+\index{horizon boundary condition}
+% END CURATED SUBJECT INDEX
+
+\subsection{Spectral curve and complex horizons}
+\label{subsec:bh-spectral-curve}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{Stokes curve}
+\index{turning point}
+\index{monodromy}
+\index{quasinormal mode}
+\index{horizon boundary condition}
+% END CURATED SUBJECT INDEX
+
+Equation~\eqref{eq:bh-master} has the exact-WKB form with
+\begin{equation}
+  Q(r_*,\omega)=V(r(r_*))-\omega^2 .
+  \label{eq:bh-Q}
+\end{equation}
+Turning points solve $V(r)=\omega^2$.  In the complex $r$ plane, horizons are
+singular points of the transformation to $r_*$.  Logarithms generate branch
+cuts and Stokes curves that can spiral around a horizon.  An analytic
+continuation from the event horizon to infinity must account for these spirals
+and for the residues of $\vsub{S}{odd}$ at regular singular points
+\cite{Miyachi:2025ptm}.
+
+The QNM condition is again a vanishing incoming coefficient.  Starting with
+an ingoing solution at the event horizon, transport it across the complex
+Stokes graph and require the incoming component at the outer boundary to
+vanish.  This is an open-path connection problem.  Highly damped monodromy
+methods instead use closed contours around horizons and singularities.  The
+two approaches share connection data but organize approximations differently
+\cite{Motl:2003cd}.
+
+\subsection{Quantum periods and Borel--Pad\'e resummation}
+\label{subsec:bh-quantum-periods}
+% BEGIN CURATED SUBJECT INDEX
+\index{Borel transform}
+\index{quasinormal mode}
+\index{Reissner--Nordstr\"om black hole}
+\index{Kerr black hole}
+\index{Pad\'e approximant}
+% END CURATED SUBJECT INDEX
+
+Let $\gamma_i$ be cycles of the black-hole spectral curve.  The quantum
+periods are Borel-resummed Voros integrals
+\begin{equation}
+  \Pi_i(\omega,\hbar)
+  =\mathcal S_{\varphi}
+  \oint_{\gamma_i}\vsub{S}{odd}(r,\omega,\hbar)\rmd r .
+  \label{eq:bh-quantum-period}
+\end{equation}
+In black-hole perturbation theory $\hbar$ is often a bookkeeping parameter and
+is set to one after the WKB coefficients are generated.  A quantization
+condition has the form
+\begin{equation}
+  \mathcal Q\left(
+  \rme^{\Pi_1},\ldots,\rme^{\Pi_g};\omega
+  \right)=0 ,
+  \label{eq:bh-exact-quantization}
+\end{equation}
+where $g$ is the number of independent periods relevant to the connection
+problem.  High-order coefficients can be Borel transformed and approximated
+by Pad\'e rational functions before Laplace integration.  The procedure has
+successfully reproduced black-hole QNMs and has been extended to extremal
+Reissner--Nordstr\"om and Kerr quantum periods
+\cite{Hatsuda:2019eoj,Hatsuda:2023geo,HatsudaShiga:2026}.
+
+\subsection{Relation to complex scaling}
+\label{subsec:bh-wkb-csm-relation}
+% BEGIN CURATED SUBJECT INDEX
+\index{connection coefficient}
+\index{resonance!residue}
+\index{exact WKB}
+\index{complex scaling}
+\index{coupled-channel equation}
+\index{quasinormal mode!excitation factor}
+\index{continuum response}
+% END CURATED SUBJECT INDEX
+
+Complex scaling and exact WKB answer different numerical questions about the
+same analytic object.  Complex scaling converts the boundary problem into a
+matrix eigenproblem and displays the rotated continuum explicitly.  Exact WKB
+reduces the pole condition to a small number of resummed periods and
+connection multipliers.  The former is well suited to coupled channels and
+continuum response; the latter can achieve high precision when the spectral
+curve and its cycles are tractable.
+
+Their agreement can be checked at three levels.  Pole locations should match.
+The scaling angle should select the same subdominant sectors as the WKB
+contour.  Finally, residues computed from left--right eigenvectors should match
+derivatives of the exact connection coefficient.  The third comparison is
+largely unexplored and would connect ringdown excitation factors directly to
+resurgent data.
+
+\subsection{Kerr as the next major test}
+\label{subsec:kerr-outlook}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{GNS construction}
+\index{turning point}
+\index{exact WKB}
+\index{exact quantization condition}
+\index{radial equation}
+\index{horizon boundary condition}
+\index{Kerr black hole}
+\index{superradiance}
+\index{Teukolsky equation}
+% END CURATED SUBJECT INDEX
+
+Kerr perturbations are governed by the Teukolsky equation
+\cite{Teukolsky:1972my}.  Separation introduces the azimuthal number $m$, the
+spin-weighted spheroidal eigenvalue, and a radial equation whose coefficients
+depend on $\omega$.  Superradiance changes flux signs for
+$\omega-m\Omega_H$, where $\Omega_H$ is the horizon angular velocity.  A
+direct CSM implementation must therefore handle a nonlinear, coupled angular--
+radial eigenvalue problem and choose analytic branches consistently.
+
+Exact WKB can work with the associated quantum curve, but turning points and
+periods move with both $\omega$ and the angular eigenvalue.  A promising
+hybrid strategy is to solve the angular problem spectrally, construct its
+analytic derivative with respect to $\omega$, and insert it into either a
+nonlinear complex-scaled solver or a resummed radial quantization condition.
+Cross-validation against Leaver's method remains essential.
+
+\subsection{Late-time tails and branch cuts}
+\label{subsec:bh-tails}
+% BEGIN CURATED SUBJECT INDEX
+\index{topology}
+\index{branch cut}
+\index{resonance!residue}
+\index{exact WKB}
+\index{complex scaling}
+\index{quasinormal mode}
+\index{late-time tail}
+% END CURATED SUBJECT INDEX
+
+In asymptotically flat spacetime, inverse-power tails of $V(r_*)$ produce a
+branch point at $\omega=0$.  The late-time signal is governed by the
+discontinuity across this cut rather than by the least damped QNM at arbitrarily
+late times.  In exact WKB, the threshold appears through coalescing turning
+points and a change of Stokes topology.  In complex scaling, it is the endpoint
+of the rotated continuum.  A uniform treatment should combine pole residues,
+  threshold scaling, and the continuum spectral density rather than attempting
+  to approximate the cut by an ever larger set of overtones.

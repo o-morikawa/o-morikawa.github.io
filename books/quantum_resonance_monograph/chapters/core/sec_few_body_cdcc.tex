@@ -1,0 +1,732 @@
+\section{Few-body continua and CDCC}
+\label{sec:few-body-cdcc}
+% BEGIN CURATED SUBJECT INDEX
+\index{partial-wave expansion}
+\index{scattering!Coulomb}
+\index{tensor product!gauge constraint}
+\index{exact WKB}
+\index{radial equation}
+\index{complex scaling}
+\index{pseudostate}
+\index{Feshbach projection}
+\index{self-energy}
+\index{Jacobi coordinate}
+% END CURATED SUBJECT INDEX
+
+\calculationroute
+  {Tensor-product channels, Jacobi coordinates, partial waves, projection
+  operators, Coulomb asymptotics, and finite-basis diagonalization.}
+  {Derive three- and four-body CDCC, construct bin and pseudostate model
+  spaces, calculate coupling potentials and breakup amplitudes, and smooth
+  discrete spectra with complex scaling.}
+  {Write the coupled radial equations from a declared few-body Hamiltonian,
+  impose open and closed channel conditions, demonstrate model-space
+  convergence, and reconstruct an energy-differential observable.}
+
+A weakly bound projectile turns a two-body collision into a spectral problem
+with many nearby thresholds.  The continuum is not a small correction: tidal
+and Coulomb fields can polarize or break the projectile while it traverses the
+target field.  Continuum-discretized coupled channels (CDCC) is a controlled
+way to keep a finite part of that continuum in the reaction space
+\cite{Kamimura1986CDCC,Austern1987CDCC,Yahiro2012CDCC}.  The method is often
+introduced as a numerical prescription.  Here we derive it as a projection of
+the direct-integral channel decomposition from Stage I.
+
+This perspective also connects CDCC to the resonance program.  A Feshbach
+operator eliminates the continuum and retains its effect in an energy-
+dependent self-energy.  CDCC instead retains a finite-rank approximation to
+the important continuum fibers.  Complex scaling supplies both resonance
+pseudostates and a smoothing representation of the discarded continuum.
+Exact WKB identifies the invariant analytic boundary data that any such finite
+representation must approximate.
+
+\subsection{Two-cluster projectile: coordinates and Hamiltonian}
+\label{subsec:two-cluster-projectile}
+% BEGIN CURATED SUBJECT INDEX
+\index{operator!adjoint and self-adjoint}
+\index{central decomposition}
+\index{analytic dilation}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+
+Let a projectile $P=c+v$ consist of a core $c$ and a valence particle $v$,
+and let it scatter from a target $T$.  After removing the total center of
+mass, choose
+\begin{align}
+  \bm r&=\bm r_v-\bm r_c,
+  \label{eq:cdcc-internal-r}\\
+  \bm R&=\frac{m_c\bm r_c+m_v\bm r_v}{m_P}-\bm r_T,
+  \qquad m_P=m_c+m_v .
+  \label{eq:cdcc-projectile-target-R}
+\end{align}
+The fragment--target coordinates are
+\begin{equation}
+  \bm R_c=\bm R-\frac{m_v}{m_P}\bm r,
+  \qquad
+  \bm R_v=\bm R+\frac{m_c}{m_P}\bm r.
+  \label{eq:cdcc-fragment-target-coordinates}
+\end{equation}
+With intrinsic core and target excitations temporarily frozen, the Hamiltonian
+is
+\begin{equation}
+  H=K_R+h_P+U_{cT}(\bm R_c)+U_{vT}(\bm R_v),
+  \label{eq:three-body-reaction-H}
+\end{equation}
+where
+\begin{equation}
+  h_P=K_r+V_{cv}(\bm r),
+  \qquad
+  K_R=-\frac{\hbar^2}{2\mu_R}\nabla_R^2,
+  \qquad
+  K_r=-\frac{\hbar^2}{2\mu_r}\nabla_r^2.
+  \label{eq:projectile-internal-H}
+\end{equation}
+The optical interactions $U_{xT}$ may be complex because target excitations
+not included explicitly have already been eliminated.  This is an effective
+non-self-adjointness distinct from analytic dilation.  The full microscopic
+Hamiltonian before elimination may still be self-adjoint.
+
+The projectile has a bound ground state $\Phi_0$ and continuum states
+$\Phi_{\epsilon\alpha}$,
+\begin{align}
+  h_P\Phi_0&=\epsilon_0\Phi_0,
+  \qquad \epsilon_0<0,\\
+  h_P\Phi_{\epsilon\alpha}&=\epsilon\Phi_{\epsilon\alpha},
+  \qquad \epsilon\geq0,
+  \label{eq:projectile-spectrum}
+\end{align}
+where $\alpha$ collects orbital angular momentum, spin coupling, and any
+rearrangement label.  The exact projectile resolution is
+\begin{equation}
+  \identity_P
+  =\ket{\Phi_0}\bra{\Phi_0}
+   +\sum_\alpha\int_0^\infty
+    \ket{\Phi_{\epsilon\alpha}}
+    \bra{\Phi_{\epsilon\alpha}}\dd\epsilon
+   +\sum_{b\neq0}\ket{\Phi_b}\bra{\Phi_b},
+  \label{eq:projectile-completeness}
+\end{equation}
+with the normalization and density convention absorbed into
+$\Phi_{\epsilon\alpha}$.  CDCC replaces a physically selected part of the
+integral by a finite orthonormal set.
+
+\subsection{Model-space projection and the CDCC equation}
+\label{subsec:cdcc-projection}
+% BEGIN CURATED SUBJECT INDEX
+\index{CDCC}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+Choose square-integrable projectile states $\{\Phi_i\}_{i=0}^{N}$ and define
+\begin{equation}
+  P_N=\sum_{i=0}^{N}\ket{\Phi_i}\bra{\Phi_i},
+  \qquad Q_N=\identity-P_N.
+  \label{eq:cdcc-model-projector}
+\end{equation}
+The CDCC approximation is not simply $\Psi\approx P_N\Psi$.  It is the
+projected boundary-value problem
+\begin{equation}
+  P_N(H-\vsub{E}{tot})P_N\Psi_N=0
+  \label{eq:cdcc-projected-equation}
+\end{equation}
+with scattering conditions imposed in every retained open channel.  Expand
+for total angular momentum $JM$,
+\begin{equation}
+  \Psi^{JM}_N(\bm R,\xi)
+  =\frac{1}{R}\sum_c
+  \chi_c^J(R)
+  \mathcal Y_c^{JM}(\hat{\bm R},\xi),
+  \label{eq:cdcc-channel-expansion}
+\end{equation}
+where $\xi$ denotes all projectile internal coordinates and
+\begin{equation}
+  \mathcal Y_c^{JM}
+  =\left[\Phi_{iI}(\xi)\otimes Y_L(\hat{\bm R})\right]_{JM},
+  \qquad c=(i,I,L,\ldots).
+  \label{eq:cdcc-channel-function}
+\end{equation}
+Projecting onto $\mathcal Y_c^{JM}$ gives
+\begin{align}
+  &\left[
+  -\frac{\hbar^2}{2\mu_R}
+   \left(\frac{\rmd^2}{\rmd R^2}-\frac{L_c(L_c+1)}{R^2}\right)
+  +\epsilon_c-\vsub{E}{tot}\right]\chi_c^J(R)
+  \notag\\
+  &\hspace{3cm}
+  +\sum_{c'}U^J_{cc'}(R)\chi_{c'}^J(R)=0,
+  \label{eq:cdcc-coupled-radial}
+\end{align}
+with
+\begin{equation}
+  U^J_{cc'}(R)=
+  \Bra{\mathcal Y_c^{JM}}
+  U_{cT}+U_{vT}\Ket{\mathcal Y_{c'}^{JM}}_{\xi,\hat R}.
+  \label{eq:cdcc-coupling-potential}
+\end{equation}
+Equation~\eqref{eq:cdcc-coupled-radial} is the central computational object.
+The off-diagonal matrix elements contain excitation, breakup, de-excitation,
+and continuum--continuum coupling on equal footing.
+
+The discarded space generates the exact correction
+\begin{equation}
+  \Sigma_N(E)=P_NHQ_N
+  \frac{1}{E-Q_NHQ_N+\rmi0}
+  Q_NHP_N.
+  \label{eq:cdcc-discarded-selfenergy}
+\end{equation}
+CDCC neglects $\Sigma_N$ only after moving the dominant configurations into
+$P_N$.  Convergence is therefore a statement that matrix elements of
+$\Sigma_N$ relevant to the desired observables have become small, not that
+the continuum has ceased to exist.
+
+\subsection{Bin discretization}
+\label{subsec:cdcc-bins}
+% BEGIN CURATED SUBJECT INDEX
+\index{Hilbert space}
+\index{wave packet}
+\index{partial-wave expansion}
+\index{CDCC}
+\index{CDCC!bin discretization}
+% END CURATED SUBJECT INDEX
+
+For a two-body projectile, a momentum-bin state in partial wave $\alpha$ is
+\begin{equation}
+  \vsup{\Phi_{n\alpha}}{bin}
+  =\frac{1}{\sqrt{N_{n\alpha}}}
+  \int_{k_{n-1}}^{k_n}
+  f_{n\alpha}(k)\Phi_{k\alpha}\dd k,
+  \label{eq:cdcc-bin-state}
+\end{equation}
+with
+\begin{equation}
+  N_{n\alpha}=
+  \int_{k_{n-1}}^{k_n}|f_{n\alpha}(k)|^2\dd k.
+  \label{eq:cdcc-bin-normalization}
+\end{equation}
+Nonoverlapping bins are orthonormal if the continuum states are delta
+normalized.  A constant $f$ represents a simple average; a phase such as
+$\rme^{-\rmi\delta_\alpha(k)}$ can reduce rapid scattering-phase variation
+within the bin.  Resonant bins may be narrowed around a phase-shift rise, but
+the bin width must remain finite until all continuum-normalized quantities
+have been combined.
+
+The finite resolution has a direct-integral meaning.  The characteristic
+functions of the bins generate a finite-dimensional subspace of
+$L^2([0,k_{\max}],\rmd k)$.  Refining the partition produces strong
+convergence to the identity on square-integrable wave packets.  It does not
+produce norm convergence on the whole continuum Hilbert space.  This is the
+same distinction that makes an individual $\ket{k}$ distributional.
+
+\subsection{Pseudostate discretization and the Gaussian expansion method}
+\label{subsec:cdcc-pseudostates}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{pseudostate}
+\index{Jacobi coordinate}
+\index{CDCC}
+\index{Gaussian expansion method}
+\index{CDCC!four-body}
+% END CURATED SUBJECT INDEX
+
+For a many-body projectile, exact continuum wave functions are expensive and
+carry several momenta.  The pseudostate method diagonalizes $h_P$ in a finite
+$L^2$ basis,
+\begin{equation}
+  \sum_{j=1}^{N_b}
+  \bra{\varphi_i}h_P\ket{\varphi_j}c_j^{(n)}
+  =\epsilon_n
+  \sum_{j=1}^{N_b}\braket{\varphi_i|\varphi_j}c_j^{(n)}.
+  \label{eq:pseudostate-generalized-eigenproblem}
+\end{equation}
+Negative eigenvalues approximate bound states; positive eigenvalues provide
+quadrature-like samples of the continuum as seen by the chosen basis and
+operators.  They are not physical bound levels.  Their density changes with
+the basis and is itself useful information only after smoothing.
+
+The Gaussian expansion method (GEM) uses ranges in geometric progression
+\cite{Hiyama:2003cu},
+\begin{equation}
+  \varphi_{nlm}(\bm r)
+  =N_{nl}r^l\rme^{-(r/r_n)^2}Y_{lm}(\hat{\bm r}),
+  \quad
+  r_n=r_1a^{n-1}.
+  \label{eq:gem-basis}
+\end{equation}
+Short and long ranges are then covered with relatively few functions.  For a
+three-cluster projectile, products of Gaussians in several Jacobi coordinate
+sets efficiently represent both compact correlations and rearrangement tails.
+Complex-range Gaussians can improve oscillatory continuum resolution, but
+their overlap matrices require careful conditioning.
+
+\subsection{Open, closed, and Coulomb-distorted channels}
+\label{subsec:cdcc-boundary-conditions}
+% BEGIN CURATED SUBJECT INDEX
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+
+For a channel with projectile energy $\epsilon_c$, define
+\begin{equation}
+  E_c=\vsub{E}{tot}-\epsilon_c,
+  \qquad
+  K_c=\sqrt{2\mu_RE_c}/\hbar.
+  \label{eq:cdcc-channel-momentum}
+\end{equation}
+If $E_c>0$, the channel is open.  With Coulomb interactions, the asymptotic
+condition for incidence in $c_0$ is
+\begin{equation}
+  \chi_c^J(R)\longrightarrow
+  \frac{\rmi}{2}\left[
+  H_{L_c}^{(-)}(\eta_c,K_cR)\delta_{cc_0}
+  -\sqrt{\frac{K_{c_0}}{K_c}}
+   S^J_{cc_0}H_{L_c}^{(+)}(\eta_c,K_cR)
+  \right].
+  \label{eq:cdcc-open-boundary}
+\end{equation}
+The normalization factor ensures flux normalization.  For a neutral channel,
+$H_L^{(\pm)}$ reduce to spherical Hankel combinations.  This is a concrete
+instance of the Stage II lesson: a charged channel is compared with a Coulomb
+wave, not a plane wave.
+
+If $E_c<0$, write $K_c=\rmi\kappa_c$ with $\kappa_c>0$ and impose the decaying
+Whittaker solution,
+\begin{equation}
+  \chi_c^J(R)\longrightarrow
+  C_cW_{-\eta_c,L_c+1/2}(2\kappa_cR).
+  \label{eq:cdcc-closed-boundary}
+\end{equation}
+Closed channels carry no asymptotic outgoing flux, but they alter open-channel
+scattering through virtual transitions.  Omitting them simply because they
+are not directly detected can be a large error at low collision energy.
+
+Flux conservation supplies a stringent check when all interactions are real:
+\begin{equation}
+  \sum_{c\,\mathrm{open}}|S^J_{cc_0}|^2=1.
+  \label{eq:cdcc-unitarity}
+\end{equation}
+For optical interactions the deficit equals absorption into eliminated
+channels.  Numerically, one must distinguish that physical deficit from loss
+caused by insufficient matching radius or an ill-conditioned basis.
+
+\subsection{Multipole expansion of the coupling}
+\label{subsec:cdcc-multipoles}
+% BEGIN CURATED SUBJECT INDEX
+\index{scattering!Coulomb}
+\index{CDCC}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+The fragment--target potentials depend on both $R$ and internal coordinates.
+For a central fragment potential,
+\begin{equation}
+  U_{xT}(|\bm R+\alpha_x\bm r|)
+  =\sum_{\lambda\mu}
+  \mathcal U_{x\lambda}(R,r)
+  Y_{\lambda\mu}(\hat R)
+  Y_{\lambda\mu}^*(\hat r),
+  \label{eq:cdcc-multipole-expansion}
+\end{equation}
+where $\alpha_v=m_c/m_P$ and $\alpha_c=-m_v/m_P$.  Angular momentum algebra
+reduces Eq.~\eqref{eq:cdcc-coupling-potential} to radial transition densities
+and Clebsch--Gordan, $6j$, and $9j$ coefficients.  The long-range Coulomb
+multipoles behave as
+\begin{equation}
+  \mathcal U^{C}_{\lambda}(R,r)
+  \sim \frac{r^\lambda}{R^{\lambda+1}},
+  \qquad r<R,
+  \label{eq:coulomb-multipole-tail}
+\end{equation}
+so electric dipole or quadrupole breakup can couple to very large $R$.
+Convergence in matching radius and projectile excitation energy must therefore
+be tested together.
+
+The diagonal monopole contains the projectile--target Coulomb comparison
+potential.  Subtracting it before numerical propagation and restoring its
+known Coulomb functions in Eq.~\eqref{eq:cdcc-open-boundary} prevents the
+long-range phase from being mistaken for a short-range coupling.
+
+\subsection{Three-cluster projectiles and four-body CDCC}
+\label{subsec:four-body-cdcc}
+% BEGIN CURATED SUBJECT INDEX
+\index{radial equation}
+\index{pseudostate}
+\index{Jacobi coordinate}
+\index{antisymmetrization}
+\index{CDCC}
+\index{CDCC!four-body}
+% END CURATED SUBJECT INDEX
+
+Now let $P=a+b+c$.  The projectile plus target is a four-body reaction
+system.  A Jacobi set, for example,
+\begin{equation}
+  \bm x=\bm r_b-\bm r_a,
+  \qquad
+  \bm y=\bm r_c-
+  \frac{m_a\bm r_a+m_b\bm r_b}{m_a+m_b},
+  \label{eq:three-cluster-jacobi}
+\end{equation}
+gives
+\begin{equation}
+  h_P=K_x+K_y+V_{ab}+V_{bc}+V_{ca}+V_{3b}.
+  \label{eq:three-cluster-projectile-H}
+\end{equation}
+The optional effective three-body interaction $V_{3b}$ represents correlations
+not reproduced by pairwise cluster interactions and is calibrated only within
+a declared structure model.
+
+There are three Jacobi rearrangement sets.  A basis restricted to one set may
+resolve one clusterization well and another poorly.  GEM therefore uses the
+union
+\begin{equation}
+  \Phi_{nI}=
+  \sum_{c=1}^{3}\sum_{\alpha_c}
+  C_{n\alpha_c}^{(c)}
+  \left[
+  \varphi_{n_xl_x}^{(c)}(\bm x_c)
+  \otimes
+  \varphi_{n_yl_y}^{(c)}(\bm y_c)
+  \right]_{I},
+  \label{eq:gem-rearrangement-expansion}
+\end{equation}
+followed by antisymmetrization or Pauli projection as required.  Diagonalizing
+$h_P$ generates a ground state, physical resonances represented by stabilized
+pseudostates, and nonresonant continuum pseudostates.  Inserting these states
+into Eq.~\eqref{eq:cdcc-channel-expansion} gives four-body CDCC
+\cite{Matsumoto2004FourBodyCDCC,Matsumoto:2010mi}.
+
+The name counts particles in the reaction Hamiltonian, not the number of
+coupled radial equations.  A three-body projectile may yield thousands of
+channels after angular momentum coupling.  Sparsity, selection rules, and
+model-space diagnostics are therefore part of the physics calculation.
+
+\subsection{Folding interactions and transition densities}
+\label{subsec:cdcc-folding}
+% BEGIN CURATED SUBJECT INDEX
+\index{monodromy}
+\index{CDCC}
+\index{folding interaction}
+% END CURATED SUBJECT INDEX
+
+For nucleon scattering from a composite projectile, a semi-microscopic
+coupling can be built by folding an effective nucleon--nucleon interaction
+with projectile transition densities.  Schematically,
+\begin{equation}
+  U^J_{cc'}(R)
+  =\sum_{\tau=p,n}
+   \int\rmd^3s\,
+   \rho^{cc'}_\tau(\bm s)
+   g_{N\tau}(\bm R-\bm s;\rho,E),
+  \label{eq:single-folding-coupling}
+\end{equation}
+where
+\begin{equation}
+  \rho^{cc'}_\tau(\bm s)
+  =\bra{\Phi_c}
+  \sum_{i\in\tau}\delta(\bm s-\bm s_i)
+  \ket{\Phi_{c'}}.
+  \label{eq:transition-density}
+\end{equation}
+The $g$ matrix summarizes in-medium multiple scattering.  A phenomenological
+renormalization
+\begin{equation}
+  g\mapsto N_V\re g+\rmi N_W\im g
+  \label{eq:jlm-renormalization}
+\end{equation}
+must be interpreted as model calibration, not as the monodromy renormalization
+of Stage V.  The identical word ``renormalization'' refers to different
+operations; naming the varied scale and the invariant observable removes the
+ambiguity.  The JLM interaction is a standard example
+\cite{Jeukenne1977JLM}.
+
+\subsection{From discrete breakup strengths to a continuous spectrum}
+\label{subsec:cdcc-smoothing}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!continuous}
+\index{resolvent}
+\index{Lippmann--Schwinger equation}
+\index{complex scaling}
+\index{biorthogonality}
+\index{continuum level density}
+\index{pseudostate}
+\index{CDCC}
+\index{CDCC!four-body}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+The CDCC equations return transition amplitudes $T_n$ to normalized
+pseudostates.  An experiment resolves continuum energy and fragment angles,
+so the discrete amplitudes must be embedded back into the continuum.  If
+$\Phi_{\epsilon\alpha}^{(-)}$ is the exact projectile scattering state, then
+\begin{equation}
+  T_\alpha(\epsilon)
+  \approx\sum_{n=1}^{N}
+  \braket{\Phi_{\epsilon\alpha}^{(-)}|\Phi_n}T_n.
+  \label{eq:cdcc-exact-smoothing}
+\end{equation}
+For a two-cluster projectile these overlaps can be calculated directly.  For
+a three-cluster continuum, that approach is as hard as the original few-body
+scattering problem.
+
+Complex scaling replaces the oscillatory continuum Green function by an
+$L^2$ spectral expansion.  Start from the Lippmann--Schwinger state
+\begin{equation}
+  \ket{\Phi_\epsilon^{(-)}}
+  =\ket{\phi_0}
+  +\frac{1}{\epsilon-h_P-\rmi0}V\ket{\phi_0}.
+  \label{eq:projectile-lippmann-schwinger}
+\end{equation}
+For dilation-analytic interactions,
+\begin{equation}
+  \frac{1}{\epsilon-h_P-\rmi0}
+  =U^{-1}(\theta)
+   \frac{1}{\epsilon-h_P^\theta}
+   U(\theta),
+  \label{eq:csls-resolvent-rotation}
+\end{equation}
+when the rotation exposes the required boundary value.  Expanding the scaled
+resolvent in biorthogonal eigenvectors,
+\begin{equation}
+  \frac{1}{\epsilon-h_P^\theta}
+  \approx\sum_\nu
+  \frac{\ket{\Phi_\nu^\theta}
+        \bra{\widetilde\Phi_\nu^\theta}}
+       {\epsilon-\epsilon_\nu^\theta},
+  \label{eq:csls-pseudostate-resolvent}
+\end{equation}
+turns the smoothing overlap into finite $L^2$ matrix elements.  This is the
+complex-scaled Lippmann--Schwinger (CSLS) construction
+\cite{Kikuchi2009CSLS,Kikuchi2010CSLS}.
+
+For an inclusive energy distribution one may avoid constructing amplitudes
+channel by channel.  If $\ket{F}=\sum_nT_n\ket{\Phi_n}$ is the projectile
+source produced by the reaction, the response is
+\begin{align}
+  \frac{\rmd\sigma}{\rmd\epsilon}
+  &\propto
+  -\frac{1}{\pi}\im
+  \bra{F}(\epsilon-h_P+\rmi0)^{-1}\ket{F}
+  \notag\\
+  &\approx-\frac{1}{\pi}\im\sum_\nu
+  \frac{
+  \bra{F}U^{-1}(\theta)\ket{\Phi_\nu^\theta}
+  \bra{\widetilde\Phi_\nu^\theta}U(\theta)\ket{F}}
+  {\epsilon-\epsilon_\nu^\theta}.
+  \label{eq:complex-scaled-breakup-response}
+\end{align}
+This is the same resolvent identity used for continuum level density.  The
+reaction determines the source $F$; the intrinsic complex-scaled spectrum
+determines how that source is distributed among poles and continuum.
+
+\subsection{Selecting a rearrangement channel}
+\label{subsec:cdcc-rearrangement-selection}
+% BEGIN CURATED SUBJECT INDEX
+\index{cross section}
+\index{scattering!Coulomb}
+\index{scattering!three-body Coulomb}
+\index{pseudostate}
+\index{CDCC}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+For three fragments, ``the breakup cross section'' is not a single asymptotic
+channel.  One may observe sequential breakup through a two-body resonance,
+direct three-body breakup, or a different cluster partition.  Let
+$h_P=h_\alpha+K_\alpha+\vsup{V_\alpha}{rem}$ be adapted to a chosen partition.
+The CSLS state constructed with the corresponding channel Hamiltonian
+$h_\alpha+K_\alpha$ projects the common CDCC source onto that asymptotic
+arrangement.  Symbolically,
+\begin{equation}
+  T_\alpha(\epsilon,\Omega)
+  =\sum_n
+  \braket{\Phi_{\epsilon\Omega,\alpha}^{(-)}|\Phi_n}T_n.
+  \label{eq:arrangement-resolved-amplitude}
+\end{equation}
+Summing mutually orthogonal arrangements is safe only when their asymptotic
+spaces and overlap regions have been defined so that double counting is
+controlled.
+
+This point is where nuclear few-body scattering meets the long-range problem
+of Stage II.  With three charged fragments, different cluster regions have
+different logarithmic Coulomb phases.  A finite internal pseudostate basis can
+calculate observables over a controlled interaction region, but it does not
+constitute a proof of one uniform three-body Coulomb asymptotic formula.  The
+comparison dynamics and channel atlas must be declared separately.
+
+\subsection{Observables from the channel S matrix}
+\label{subsec:cdcc-observables}
+% BEGIN CURATED SUBJECT INDEX
+\index{cross section}
+\index{scattering matrix}
+\index{scattering!Coulomb}
+\index{pseudostate}
+\index{optical potential}
+\index{CDCC}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+
+For spinless notation, the scattering amplitude from $c_0$ to an open channel
+$c$ has the partial-wave form
+\begin{equation}
+  f_{cc_0}(\Omega)
+  =f_C(\Omega)\delta_{cc_0}
+  +\frac{2\pi}{\rmi\sqrt{K_cK_{c_0}}}
+   \sum_{JMLM_L}
+   \mathcal A_{c}^{JM}(\Omega)
+   [S^J_{cc_0}-\delta_{cc_0}],
+  \label{eq:cdcc-scattering-amplitude}
+\end{equation}
+where $\mathcal A$ contains the angular momentum coefficients and Coulomb
+phases.  The differential cross section contains the flux ratio,
+\begin{equation}
+  \frac{\rmd\sigma_{c\leftarrow c_0}}{\rmd\Omega}
+  =\frac{K_c}{K_{c_0}}|f_{cc_0}(\Omega)|^2.
+  \label{eq:cdcc-differential-cross-section}
+\end{equation}
+For pseudostates, summing Eq.~\eqref{eq:cdcc-differential-cross-section} over a
+finite energy interval is meaningful after convergence.  A density per unit
+energy requires Eq.~\eqref{eq:cdcc-exact-smoothing} or
+Eq.~\eqref{eq:complex-scaled-breakup-response}; dividing a discrete value by
+an arbitrary pseudostate spacing is not a basis-independent observable.
+
+The total reaction cross section for entrance wave number $K_0$ is
+\begin{equation}
+  \sigma_R=\frac{\pi}{K_0^2}
+  \sum_J(2J+1)
+  \left[1-\sum_{c\,\mathrm{open}}|S^J_{cc_0}|^2\right]
+  \label{eq:cdcc-reaction-cross-section}
+\end{equation}
+in a simple spin convention.  With real couplings the bracket vanishes after
+all retained open channels are included.  With absorptive optical potentials
+it measures loss into channels outside the explicit CDCC space.
+
+\subsection{CDCC as a spectral quadrature}
+\label{subsec:cdcc-spectral-quadrature}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectral measure}
+\index{spectrum!point}
+\index{complex scaling}
+\index{pseudostate}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+
+The direct-integral view gives a compact mathematical statement of the
+method.  Let $P(\Delta)$ be the projectile spectral measure.  For functions
+of $h_P$ tested between localized form factors,
+\begin{equation}
+  \bra{f}g(h_P)P([0,E_{\max}])\ket{g}
+  =\int_0^{E_{\max}}g(\epsilon)\dd\mu_{fg}(\epsilon).
+  \label{eq:cdcc-spectral-integral}
+\end{equation}
+A pseudostate model replaces this by a quadrature
+\begin{equation}
+  \int_0^{E_{\max}}g(\epsilon)\dd\mu_{fg}(\epsilon)
+  \approx\sum_{n=1}^{N}
+  g(\epsilon_n)
+  \braket{f|\Phi_n}\braket{\Phi_n|g}.
+  \label{eq:cdcc-spectral-quadrature}
+\end{equation}
+Accuracy is therefore operator and source dependent.  A model space that
+converges an elastic amplitude need not resolve a sharply differential
+three-fragment observable.  Conversely, pseudostate eigenvalues need not
+approximate every point of the continuum uniformly for the tested integral to
+converge rapidly.
+
+Complex scaling deforms the quadrature contour.  Stable discrete poles remain
+fixed while the nonresonant quadrature points follow the rotated cut.  This is
+precisely the pole-versus-representation separation established in Stage IV.
+
+\subsection{Connection data and coupled-channel exact WKB}
+\label{subsec:cdcc-exact-wkb-connection}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{scattering matrix}
+\index{scattering!multichannel}
+\index{boundary condition!incoming and outgoing}
+\index{exact WKB}
+\index{adiabatic approximation}
+\index{CDCC}
+\index{holonomy}
+% END CURATED SUBJECT INDEX
+
+For $N$ retained channels, Eq.~\eqref{eq:cdcc-coupled-radial} is a matrix
+Schr\"odinger equation.  Fundamental solution matrices replace scalar WKB
+branches, and the asymptotic coefficients form vectors.  A global transfer
+matrix has blocks
+\begin{equation}
+  \begin{pmatrix}
+  \vsub{\bm a}{out}^{R}\\
+  \vsub{\bm a}{in}^{R}
+  \end{pmatrix}
+  =\mathcal M(E)
+  \begin{pmatrix}
+  \vsub{\bm a}{out}^{L}\\
+  \vsub{\bm a}{in}^{L}
+  \end{pmatrix}.
+  \label{eq:multichannel-transfer}
+\end{equation}
+A resonance satisfies the determinant condition
+\begin{equation}
+  \det\Cincoming(E)=0,
+  \label{eq:multichannel-resonance-determinant}
+\end{equation}
+where $\Cincoming$ is the block multiplying prohibited incoming
+components.  CDCC approximates this matrix connection problem on the real
+axis and can be analytically continued or complex scaled.  Exact WKB supplies
+a nonperturbative construction when the matrix spectral curve and its Stokes
+data can be controlled.  The scalar theory of Stage III is therefore the
+first member of a coupled-channel hierarchy rather than a separate subject.
+
+The eigenvalues of the local potential matrix are sometimes called adiabatic
+surfaces.  Their complex degeneracies generate nonadiabatic connection
+matrices.  At a coalescence of resonant solutions,
+Eq.~\eqref{eq:multichannel-resonance-determinant} has a multiple zero and the
+exceptional-point analysis of Stage VII applies.  Few-body reaction theory,
+exact WKB, and non-Hermitian holonomy meet at the same determinant.
+
+\subsection{A reproducible convergence protocol}
+\label{subsec:cdcc-convergence-protocol}
+% BEGIN CURATED SUBJECT INDEX
+\index{partial-wave expansion}
+\index{scattering!Coulomb}
+\index{pseudostate}
+\index{Jacobi coordinate}
+\index{CDCC}
+\index{folding interaction}
+% END CURATED SUBJECT INDEX
+
+A CDCC result is accepted only after varying independent truncations.  The
+minimum useful record is:
+\begin{enumerate}[label=\arabic*.]
+  \item projectile Hamiltonian, Pauli prescription, and all fitted structure
+  parameters;
+  \item Jacobi sets, internal partial waves, Gaussian ranges, and positive-
+  energy cutoff;
+  \item projectile spins $I$, projectile--target orbital momenta $L$, total
+  $J$, and coupling multipoles retained;
+  \item matching radius and radial mesh or propagator tolerance;
+  \item open and closed channel boundary conditions, including Coulomb
+  functions and branch conventions;
+  \item optical or folding interactions and the density and energy at which
+  they are evaluated;
+  \item convergence tables in $E_{\max}$, internal angular momentum, basis
+  density, $L_{\max}$, $J_{\max}$, and matching radius;
+  \item flux or reaction-cross-section balance;
+  \item smoothing angle, scaled-basis size, and independence of the final
+  continuous response from these auxiliary choices.
+\end{enumerate}
+Vary one family of cutoffs at a time and then repeat selected variations
+jointly, because Coulomb multipoles can correlate the required excitation
+cutoff with the matching radius.  A stable pole, a converged integrated
+strength, and a converged differential line shape are three different claims
+and require three different tests.
+
+\begin{checkpointbox}
+Given a cluster Hamiltonian and fragment--target interactions, the reader
+should now be able to construct $P_N$, derive
+Eq.~\eqref{eq:cdcc-coupled-radial}, distinguish open from closed channels,
+calculate the coupling form factors, and explain why pseudostate strengths
+must be smoothed before comparison with an energy-differential measurement.
+The next Laboratory performs these steps for $^6$Li and for a
+$p+p+{}^7$Be description of $^9$C.
+\end{checkpointbox}

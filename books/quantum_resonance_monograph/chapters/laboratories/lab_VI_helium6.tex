@@ -1,0 +1,708 @@
+\section{Calculation laboratory VI-A: A broad
+\texorpdfstring{$^6$He}{6He} resonance from pole to observable}
+\label{lab:helium6-resonance}
+% BEGIN CURATED SUBJECT INDEX
+\index{Fredholm theory}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{complex scaling}
+\index{pseudostate}
+\index{CDCC}
+\index{helium-6@${}^6$He}
+% END CURATED SUBJECT INDEX
+\index{helium-6@$^6$He}\index{three-body resonance}\index{CDCC}
+
+\calculationroute
+  {The three-body CDCC projection, complex-scaled resolution of the identity,
+  Fredholm/Riesz pole projectors, and source-dependent response derived in
+  Stages I--IV.}
+  {Construct an $\alpha+n+n$ model of $^6$He, isolate its $2^+$ poles without
+  deleting the nonresonant continuum, and propagate the same pole projector
+  into proton inelastic scattering and a two-neutron invariant-mass
+  distribution.}
+  {Distinguish a stable complex pole, fragmented CDCC pseudostates, a coherent
+  resonance doorway, and a measured line shape.}
+
+This Laboratory uses one chain of calculations to connect the mathematical
+structure of resonance to a nuclear observable.  The published steps are the
+analysis of the broad $2_2^+$ contribution in $^6$He$(p,p')$, a model-space-
+independent treatment of a fragmented $2_1^+$ doorway, and a resonance-only
+decay distribution used to diagnose a dineutron correlation
+\cite{arXiv:2003.05123,arXiv:2103.16865,arXiv:2111.04285,
+OgawaThesis:2022}.  Here they are reorganized as one calculation rather than
+three applications.
+
+The exact-WKB viewpoint supplies the organizing invariant.  In a coupled
+radial representation the resonance is a zero of an incoming connection
+determinant.  Complex scaling realizes that zero as a finite-rank Riesz
+eigenspace.  CDCC represents the physical continuum by a quadrature.  The
+reaction supplies a source and the detector selects a functional of the
+resulting state.  Each layer has auxiliary choices, but the pole, its total
+root space, and its tested residue must agree in the converged limit.
+
+\subsection{Station A: choose Jacobi coordinates before choosing a basis}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{central decomposition}
+\index{pseudostate}
+\index{Jacobi coordinate}
+\index{antisymmetrization}
+\index{Gaussian expansion method}
+% END CURATED SUBJECT INDEX
+\index{Jacobi coordinate}\index{Gaussian expansion method}
+\index{orthogonality-condition model}
+\label{subsec:he6-jacobi}
+
+Treat $^6$He as an inert $\alpha$ core and two valence neutrons.  Let
+$\bm r_\alpha,\bm r_1,\bm r_2$ be their laboratory coordinates.  In the
+Jacobi set adapted to the neutron pair define
+\begin{align}
+  \bm x_1&=\bm r_2-\bm r_1,
+  \label{eq:he6-jacobi-nn-x}\\
+  \bm y_1&=\bm r_\alpha-
+  \frac{m_n\bm r_1+m_n\bm r_2}{2m_n}.
+  \label{eq:he6-jacobi-nn-y}
+\end{align}
+The two rearranged sets isolate an $\alpha+n$ pair, for example
+\begin{align}
+  \bm x_2&=\bm r_1-\bm r_\alpha,
+  \label{eq:he6-jacobi-an-x}\\
+  \bm y_2&=\bm r_2-
+  \frac{m_\alpha\bm r_\alpha+m_n\bm r_1}{m_\alpha+m_n},
+  \label{eq:he6-jacobi-an-y}
+\end{align}
+and set 3 is obtained by $1\leftrightarrow2$.  Removing the center of mass
+gives
+\begin{equation}
+  h_6
+  =K_{x_c}+K_{y_c}
+  +V_{\alpha n}^{(1)}+V_{\alpha n}^{(2)}+V_{nn}+V_3+\vsub{V}{Pauli}.
+  \label{eq:he6-internal-hamiltonian}
+\end{equation}
+The equality is coordinate independent; the index $c$ only chooses a useful
+representation of the kinetic energy and correlations.
+
+The $\alpha$ core already occupies the $0s$ neutron orbit.  A common
+orthogonality-condition realization is
+\begin{equation}
+  \vsub{V}{Pauli}
+  =\lambda_{\mathrm P}
+  \sum_{i=1}^{2}\ket{0s;\alpha n_i}
+  \bra{0s;\alpha n_i},
+  \qquad
+  \lambda_{\mathrm P}\gg |E|.
+  \label{eq:he6-ocm-projector}
+\end{equation}
+The large finite value must be varied until physical eigenvalues and
+transition densities are insensitive to it.  Merely deleting a basis vector
+in one Jacobi set does not guarantee that both equivalent $\alpha n$ Pauli
+components have been removed.
+
+Expand a state of total spin $I$ as
+\begin{align}
+  \Phi_{nIm_I}(\xi)
+  &=\sum_{c=1}^{3}\sum_{\alpha_c}
+  C_{n\alpha_c}^{(c)}
+  \mathcal A_{12}\mathcal Y_{\alpha_cIm_I}^{(c)}(\xi),
+  \label{eq:he6-gem-expansion}
+  \\
+  \mathcal Y_{\alpha_cIm_I}^{(c)}
+  &=\left[
+    [\varphi_{n_xl_x}^{(c)}(x_c)
+     \otimes\varphi_{n_yl_y}^{(c)}(y_c)]_{\Lambda}
+    \otimes\chi_S
+  \right]_{Im_I}.
+  \label{eq:he6-gem-channel-function}
+\end{align}
+Here $\chi_S=[\chi_{1/2}(1)\otimes\chi_{1/2}(2)]_S$ and
+$\mathcal A_{12}$ antisymmetrizes the neutrons.  Gaussian ranges in
+each coordinate are placed on geometric meshes,
+\begin{equation}
+  r_n=r_1a^{n-1},
+  \qquad n=1,\ldots,N,
+  \label{eq:he6-gaussian-ranges}
+\end{equation}
+and complex-range pairs may be added when oscillatory continuum structure
+requires them.  Diagonalization of $h_6$ in this $L^2$ space gives the ground
+state and positive-energy pseudostates.
+
+\begin{figure}[t]
+  \centering
+  \begin{tikzpicture}[>=Latex,scale=1.2,
+    particle/.style={circle,draw,minimum size=7mm,inner sep=1pt},
+    lab/.style={font=\small}]
+    \node[particle,fill=blue!10] (n1) at (-3.1,0) {$n_1$};
+    \node[particle,fill=blue!10] (n2) at (-1.2,0) {$n_2$};
+    \node[particle,fill=orange!12] (a1) at (-2.15,1.65) {$\alpha$};
+    \draw[<->,thick] (n1)--node[below,lab] {$\bm x_1$}(n2);
+    \draw[->,thick] (-2.15,0.05)--node[right,lab] {$\bm y_1$}(a1);
+    \node[lab] at (-2.15,-0.85) {dineutron set};
+
+    \node[particle,fill=orange!12] (a2) at (1.0,0) {$\alpha$};
+    \node[particle,fill=blue!10] (n3) at (2.7,0) {$n_1$};
+    \node[particle,fill=blue!10] (n4) at (1.85,1.65) {$n_2$};
+    \draw[<->,thick] (a2)--node[below,lab] {$\bm x_2$}(n3);
+    \draw[->,thick] (1.85,0.05)--node[right,lab] {$\bm y_2$}(n4);
+    \node[lab] at (1.85,-0.85) {$\alpha n$ set};
+  \end{tikzpicture}
+  \caption{Two of the three Jacobi sets for $\alpha+n+n$.  The dineutron
+  invariant mass is simplest in set 1, whereas sequential decay through an
+  $\alpha n$ correlation is simplest in sets 2 and 3.  A converged wave
+  function uses all rearrangements.}
+  \label{fig:he6-jacobi-sets}
+\end{figure}
+
+\subsection{Station B: expose poles with a common complex dilation}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{complex scaling}
+\index{biorthogonality}
+\index{complex-symmetric operator}
+\index{Jacobi coordinate}
+\index{antisymmetrization}
+% END CURATED SUBJECT INDEX
+\index{complex scaling!three-body system}\index{extended completeness relation}
+\label{subsec:he6-complex-scaling}
+
+Apply the same dilation to both internal Jacobi coordinates,
+\begin{equation}
+  \bm x_c\mapsto\bm x_c\rme^{\rmi\theta},
+  \qquad
+  \bm y_c\mapsto\bm y_c\rme^{\rmi\theta},
+  \qquad
+  h_6^\theta=U(\theta)h_6U(\theta)^{-1}.
+  \label{eq:he6-complex-dilation}
+\end{equation}
+Diagonalize the complex-symmetric matrix with the same antisymmetrization and
+Pauli prescription as on the real axis,
+\begin{equation}
+  h_6^\theta\ket{\Phi_\nu^\theta}
+  =E_\nu^\theta\ket{\Phi_\nu^\theta},
+  \qquad
+  \bra{\widetilde\Phi_\nu^\theta}h_6^\theta
+  =E_\nu^\theta\bra{\widetilde\Phi_\nu^\theta}.
+  \label{eq:he6-csm-eigenproblem}
+\end{equation}
+The biorthogonal normalization is
+\begin{equation}
+  \braket{\widetilde\Phi_\nu^\theta
+  |\Phi_{\nu'}^\theta}=\delta_{\nu\nu'}.
+  \label{eq:he6-biorthogonal-normalization}
+\end{equation}
+For a complex-symmetric representation, the left vector is associated with
+the transpose bilinear form, not with an ordinary Hermitian probability
+norm.
+
+In a finite basis the extended resolution is approximated by
+\begin{equation}
+  \identity_N
+  \approx\sum_{\nu=1}^{N}
+  \ket{\Phi_\nu^\theta}
+  \bra{\widetilde\Phi_\nu^\theta}.
+  \label{eq:he6-extended-completeness}
+\end{equation}
+Bound states remain on the real axis, exposed resonance poles remain stable
+as $\theta$ and the basis are varied, and nonresonant eigenvalues follow the
+rotated two- and three-body cuts.  The classification is made by tracking
+clusters under changes of representation, not by drawing a fixed wedge after
+one diagonalization.
+
+The $2_2^+$ pole reported in the $\alpha+n+n$ model used for the proton
+inelastic-scattering analysis was
+\begin{equation}
+  z_{2_2^+}
+  =\resonantE-\frac{\rmi}{2}\Gamma,
+  \qquad
+  \resonantE=2.25\ \mathrm{MeV},
+  \qquad
+  \Gamma=3.75\ \mathrm{MeV}
+  \label{eq:he6-22-published-pole}
+\end{equation}
+relative to the adopted three-body threshold
+\cite{arXiv:2003.05123}.  Since $\Gamma$ is comparable with
+$\resonantE$, this is a broad pole.  A narrow Lorentzian approximation is
+not justified merely because the pole is isolated after complex scaling.
+
+\begin{figure}[t]
+  \centering
+  \begin{tikzpicture}[>=Latex,x=1.15cm,y=1.15cm]
+    \draw[->] (-0.4,0)--(5.3,0) node[right] {$\re E$};
+    \draw[->] (0,0.35)--(0,-3.6) node[below] {$\im E$};
+    \draw[very thick,blue!65!black,->] (0,0)--(4.6,-2.65)
+      node[right,font=\small] {rotated three-body cut};
+    \draw[thick,cyan!65!black,->] (1.0,0)--(4.7,-1.7)
+      node[right,font=\small] {subsystem cut};
+    \fill[red!75!black] (1.25,-0.35) circle (2.2pt)
+      node[above right,font=\small] {$2_1^+$};
+    \fill[red!75!black] (2.25,-1.875) circle (2.2pt)
+      node[above right,font=\small] {$2_2^+$};
+    \node[draw,rounded corners,align=left,font=\small,fill=white] at (3.65,-3.5)
+      {pole: stable in $\theta$\\cut nodes: move with $\theta$};
+  \end{tikzpicture}
+  \caption{Schematic complex-energy classification for $2^+$ states.  The
+  plotted pole labels are conceptual; a calculation must determine each
+  threshold ray and scaling-angle window from its Hamiltonian.}
+  \label{fig:he6-csm-schematic}
+\end{figure}
+
+\subsection{Station C: derive proton--\texorpdfstring{$^6$He}{6He} CDCC from
+the same internal model}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!continuous}
+\index{resolvent}
+\index{boundary condition!incoming and outgoing}
+\index{scattering!Coulomb}
+\index{pseudostate}
+\index{CDCC}
+\index{nuclear breakup}
+\index{helium-6@${}^6$He}
+% END CURATED SUBJECT INDEX
+\index{CDCC!proton--helium-6 breakup}
+\label{subsec:he6-proton-cdcc}
+
+Let $\bm R$ be the proton--projectile separation.  With fragment--proton
+interactions $U_{p\alpha},U_{pn_1},U_{pn_2}$, the reaction Hamiltonian is
+\begin{equation}
+  H=K_R+h_6+U_{p\alpha}+U_{pn_1}+U_{pn_2}.
+  \label{eq:he6-proton-reaction-H}
+\end{equation}
+Use the real-axis pseudostates of $h_6$ to define the CDCC projector
+\begin{equation}
+  P_N=\sum_{nI m_I\in\mathcal M}
+  \ket{\Phi_{nIm_I}}\bra{\Phi_{nIm_I}},
+  \label{eq:he6-cdcc-projector}
+\end{equation}
+where $\mathcal M$ declares excitation, spin, and basis cutoffs.  Expand
+\begin{equation}
+  \Psi^{JM}(\bm R,\xi)
+  =\frac{1}{R}\sum_{nIL}
+  \chi_{nIL}^J(R)
+  [\Phi_{nI}(\xi)\otimes Y_L(\widehat{\bm R})]_{JM}.
+  \label{eq:he6-cdcc-expansion}
+\end{equation}
+Projection of $(H-\vsub{E}{tot})\Psi=0$ gives
+\begin{align}
+  &\left[-\frac{\hbar^2}{2\mu_R}
+  \left(\frac{\rmd^2}{\rmd R^2}-\frac{L(L+1)}{R^2}\right)
+  +\epsilon_{nI}-\vsub{E}{tot}\right]
+  \chi_{nIL}^J(R)
+  \notag\\
+  &\qquad=-\sum_{n'I'L'}
+  U_{nIL,n'I'L'}^J(R)\chi_{n'I'L'}^J(R),
+  \label{eq:he6-cdcc-coupled-equations}
+\end{align}
+with
+\begin{equation}
+  U_{cc'}^J(R)
+  =\Bra{[\Phi_{nI}\otimes Y_L]_J}
+  U_{p\alpha}+U_{pn_1}+U_{pn_2}
+  \Ket{[\Phi_{n'I'}\otimes Y_{L'}]_J}_{\xi,\widehat R}.
+  \label{eq:he6-cdcc-couplings}
+\end{equation}
+Use outgoing Coulomb or free channel functions only for open channels and
+decaying functions for closed channels.  The positive internal energy of a
+pseudostate does not by itself make the relative channel open; the relevant
+quantity is $\vsub{E}{tot}-\epsilon_{nI}$.
+
+Solving Eq.~\eqref{eq:he6-cdcc-coupled-equations} produces discrete
+transition amplitudes $T_n$ to pseudostates.  They are coefficients of the
+finite model-space source
+\begin{equation}
+  \ket{F}=\sum_{n\in\mathcal M}T_n\ket{\Phi_n},
+  \label{eq:he6-reaction-source}
+\end{equation}
+not a continuous spectrum.  A differential energy distribution requires the
+CSLS overlap or the resolvent response of
+Eq.~\eqref{eq:complex-scaled-breakup-response}.
+
+\subsection{Station D: calculate the continuous response before naming a peak}
+\label{subsec:he6-continuous-response}
+% BEGIN CURATED SUBJECT INDEX
+\index{resonance!residue}
+\index{complex scaling}
+% END CURATED SUBJECT INDEX
+
+For a selected spin parity, complex scaling gives
+\begin{align}
+  \frac{\rmd\sigma}{\rmd\epsilon}
+  &\propto-\frac{1}{\pi}\im
+  \bra{F}(\epsilon-h_6+\rmi0)^{-1}\ket{F}
+  \notag\\
+  &\approx-\frac{1}{\pi}\im\sum_\nu
+  \frac{M_\nu^\theta\widetilde M_\nu^\theta}
+  {\epsilon-E_\nu^\theta},
+  \label{eq:he6-csm-energy-response}\\
+  M_\nu^\theta
+  &=\bra{F}U(\theta)^{-1}\ket{\Phi_\nu^\theta},
+  &
+  \widetilde M_\nu^\theta
+  &=\bra{\widetilde\Phi_\nu^\theta}U(\theta)\ket{F}.
+  \label{eq:he6-csm-source-residues}
+\end{align}
+The full sum is independent of $\theta$ and of the $L^2$ representation in
+the converged limit.  A selected isolated term defines the response of one
+Riesz pole to this source,
+\begin{equation}
+  S_{\mathrm R}^{(F)}(\epsilon)
+  =-\frac{1}{\pi}\im
+  \frac{M_{\mathrm R}^\theta
+  \widetilde M_{\mathrm R}^\theta}
+  {\epsilon-z_{\mathrm R}}.
+  \label{eq:he6-pole-response}
+\end{equation}
+The remainder is the nonresonant continuum and all other poles in the chosen
+contour representation.
+
+For the broad $2_2^+$ state, the calculation of
+Ref.~\cite{arXiv:2003.05123} shows why both terms are needed.  The pole
+contributes materially to the $2^+$ energy spectrum, but the nonresonant
+continuum changes the line shape from which that contribution is inferred.
+Equation~\eqref{eq:he6-pole-response} is source dependent and need not be a
+positive Lorentzian by itself.  The observable is the coherent, converged
+total in Eq.~\eqref{eq:he6-csm-energy-response}.
+
+The following checks are distinct and all must be performed:
+\begin{enumerate}[label=(\alph*)]
+  \item $z_{\mathrm R}$ is stable under $\theta$ and scaled-basis changes;
+  \item the product $M_{\mathrm R}^\theta\widetilde M_{\mathrm R}^\theta$
+  is stable in the same window;
+  \item the full real-axis response is stable when rotated-cut states are
+  added;
+  \item the angular and energy integrations match the declared experimental
+  acceptance.
+\end{enumerate}
+A stable complex energy alone establishes only (a).
+
+\subsection{Station E: replace a fragmented energy window by a rank-one pole projector}
+% BEGIN CURATED SUBJECT INDEX
+\index{locally convex space}
+\index{Riesz projection}
+\index{complex scaling}
+\index{pseudostate}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+\index{fragmented resonance}\index{Riesz projection}
+\label{subsec:he6-fragmented-resonance}
+
+In a real $L^2$ diagonalization, a resonance strength is generally spread
+over several pseudostates.  Let $\mathcal I_R$ denote indices in a chosen
+energy window.  The naive one-step quantity
+\begin{equation}
+  \sigma_{R,\mathrm{naive}}^{(1)}
+  \propto\sum_{i\in\mathcal I_R}|T_i^{(1)}|^2
+  \label{eq:he6-naive-window-strength}
+\end{equation}
+depends on the basis density and on the window boundary.  When the basis is
+enlarged, one physical doorway can fragment into more vectors, so the phrase
+``turn off multistep coupling to every resonant state'' becomes
+representation dependent.
+
+Complex scaling supplies the missing invariant.  For an isolated pole define
+the Riesz projector
+\begin{equation}
+  P_R^\theta
+  =\ket{\Phi_R^\theta}
+   \bra{\widetilde\Phi_R^\theta},
+  \qquad
+  \mathcal P_R=U(\theta)^{-1}P_R^\theta U(\theta).
+  \label{eq:he6-resonance-projector}
+\end{equation}
+The pullback is understood between analytic test spaces; it is not an
+orthogonal Hilbert-space probability projector.  Its representation in the
+real pseudostate space is the coherent rank-one matrix
+\begin{equation}
+  (\mathcal P_R^{(N)})_{ij}
+  =\bra{\Phi_i}U^{-1}(\theta)\ket{\Phi_R^\theta}
+   \bra{\widetilde\Phi_R^\theta}U(\theta)\ket{\Phi_j}.
+  \label{eq:he6-resonance-projector-pseudostates}
+\end{equation}
+All fragmented components and their phases are retained.  The resonance
+doorway generated from the entrance channel is
+\begin{equation}
+  \ket{F_R}
+  =\mathcal P_R^{(N)}\ket{F}.
+  \label{eq:he6-resonance-doorway-source}
+\end{equation}
+One-step and multistep comparisons should be made with this doorway held
+fixed while the pseudostate quadrature is refined.  This is the projection
+logic behind the model-space-independent construction used in
+Ref.~\cite{arXiv:2103.16865}.
+
+The full CDCC amplitude includes paths such as
+\begin{equation}
+  \ket{0}\to\ket{F_R},
+  \qquad
+  \ket{0}\to Q_R\ket{F}\to\ket{F_R},
+  \qquad
+  \ket{0}\to\ket{F_R}\to Q_R\ket{F},
+  \label{eq:he6-multistep-paths}
+\end{equation}
+where $Q_R=P_N-\mathcal P_R^{(N)}$ in the tested model space.  Turning the
+second and third paths on and off diagnoses multistep coupling between the
+ground state, the $2_1^+$ doorway, and the nonresonant continuum.  Changing
+the number of basis vectors inside an arbitrary energy window does not.
+
+\begin{warningbox}
+The operator $\mathcal P_R^{(N)}$ is generally non-Hermitian and may not be
+idempotent to machine precision in an incomplete basis.  Check
+$\|(\mathcal P_R^{(N)})^2-\mathcal P_R^{(N)}\|$ together with the stability
+of its tested matrix elements.  Replacing it by an incoherent diagonal sum
+over $i\in\mathcal I_R$ destroys the pole phases and returns to
+Eq.~\eqref{eq:he6-naive-window-strength}.
+\end{warningbox}
+
+\subsection{Station F: construct a resonance-only double-differential breakup distribution}
+% BEGIN CURATED SUBJECT INDEX
+\index{cross section}
+\index{partial-wave expansion}
+\index{resonance!residue}
+\index{Gamow--Siegert state}
+\index{Jacobi coordinate}
+\index{antisymmetrization}
+\index{CDCC}
+\index{nuclear breakup}
+% END CURATED SUBJECT INDEX
+\index{double-differential breakup cross section}\index{dineutron correlation}
+\label{subsec:he6-ddbux}
+
+To study the decay of the $2_1^+$ state, use Jacobi momenta conjugate to
+Fig.~\ref{fig:he6-jacobi-sets}.  In the dineutron set let
+\begin{align}
+  \varepsilon_{nn}
+  &=\frac{\hbar^2k_x^2}{2\mu_x},
+  &
+  \varepsilon_{\alpha,nn}
+  &=\frac{\hbar^2k_y^2}{2\mu_y},
+  \label{eq:he6-jacobi-energies}\\
+  \varepsilon
+  &=\varepsilon_{nn}+\varepsilon_{\alpha,nn}.
+  \label{eq:he6-total-internal-energy}
+\end{align}
+The smoothed breakup amplitude is
+\begin{equation}
+  T(\bm k_x,\bm k_y)
+  =\sum_n
+  \braket{\Psi_{\bm k_x\bm k_y}^{(-)}|\Phi_n}T_n.
+  \label{eq:he6-three-body-breakup-amplitude}
+\end{equation}
+The double-differential breakup cross section has the schematic form
+\begin{equation}
+  \frac{\rmd^2\sigma}
+  {\rmd\varepsilon_{nn}\rmd\varepsilon_{\alpha,nn}}
+  =\int\rmd\Omega_x\rmd\Omega_y\,
+  \mathcal J(k_x,k_y)
+  |T(\bm k_x,\bm k_y)|^2,
+  \label{eq:he6-ddbux-definition}
+\end{equation}
+where $\mathcal J$ contains the declared phase-space and incident-flux
+normalization.  A resonance-only amplitude is constructed coherently by
+inserting $\mathcal P_R^{(N)}$ between the CDCC source and the CSLS detector,
+\begin{equation}
+  T_R(\bm k_x,\bm k_y)
+  =\bra{\Psi_{\bm k_x\bm k_y}^{(-)}}
+  \mathcal P_R^{(N)}\ket{F}.
+  \label{eq:he6-resonance-only-amplitude}
+\end{equation}
+Use $T_R$, not a difference of two separately normalized cross sections, in
+Eq.~\eqref{eq:he6-ddbux-definition} to define the resonance-only DDBUX.
+
+Project the two-neutron spin before squaring,
+\begin{equation}
+  T_R=T_R^{S=0}+T_R^{S=1}.
+  \label{eq:he6-spin-amplitude-decomposition}
+\end{equation}
+Antisymmetry connects spin and spatial parity, so the two amplitudes must be
+constructed with consistent partial waves.  The $S=0$ part of the calculated
+$2_1^+$ resonance distribution develops strength near the shoulder in the
+$\varepsilon_{nn}$ spectrum identified in
+Ref.~\cite{arXiv:2111.04285}.  The inference of a dineutron correlation is
+therefore a statement about a resonance-projected, spin-resolved decay
+functional, not about the expectation value of $r_{nn}$ in an
+unregularized Gamow wave function.
+
+Final-state interaction is essential.  Replacing
+$\bra{\Psi^{(-)}}$ by a plane wave tests how much of the shoulder is
+generated by the decay interaction rather than by the pole residue.  The
+following four curves form a useful diagnostic set:
+\begin{enumerate}[label=(\roman*)]
+  \item full $|T|^2$ with final-state interaction;
+  \item pole-projected $|T_R|^2$ with final-state interaction;
+  \item the $S=0$ component of (ii);
+  \item the plane-wave or interaction-switched counterpart of (ii).
+\end{enumerate}
+Only differences calculated with identical phase space, acceptance, and
+normalization isolate the intended physics.
+
+\subsection{Station G: identify the exact-WKB invariant inside the many-channel calculation}
+\label{subsec:he6-exact-wkb-invariant}
+% BEGIN CURATED SUBJECT INDEX
+\index{spectrum!point}
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{resonance!residue}
+\index{pseudostate}
+\index{adiabatic approximation}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+
+After hyperspherical or channel expansion, the internal three-body equation
+is a coupled radial system.  Let $\Cincoming(E)$ be its incoming
+connection block.  A simple pole satisfies
+\begin{equation}
+  \Cincoming(z_R)u_R=0,
+  \qquad
+  v_R^\dagger\Cincoming(z_R)=0,
+  \label{eq:he6-connection-null-vectors}
+\end{equation}
+and has invariant derivative denominator
+\begin{equation}
+  \mathcal N_R
+  =v_R^\dagger
+  \Cincoming'(z_R)u_R.
+  \label{eq:he6-connection-derivative}
+\end{equation}
+The published $^6$He calculations obtained the pole projector by complex
+scaling rather than by an explicit exact-WKB construction of this large
+matrix connection problem.  Equation~\eqref{eq:he6-connection-derivative}
+nevertheless states what must be representation independent.  The CSM Riesz
+projector, the coherent pseudostate projector in
+Eq.~\eqref{eq:he6-resonance-projector-pseudostates}, and the pole term in
+Eq.~\eqref{eq:he6-csm-energy-response} are numerical realizations of the
+same null space and derivative residue.
+
+This viewpoint suggests a concrete development program rather than a formal
+identification:
+\begin{enumerate}[label=\arabic*.]
+  \item diagonalize the local coupled-channel potential to define adiabatic
+  sheets and locate their complex degeneracies;
+  \item construct matrix exact-WKB transport on a controlled truncation;
+  \item compare its determinant zero and derivative with the CSM pole and
+  Riesz projector;
+  \item increase the hyperspherical/channel space while testing the physical
+  source--detector residue;
+  \item retain the nonresonant contour contribution when forming the real-axis
+  $^6$He response.
+\end{enumerate}
+The exact-WKB core of the book is therefore not an assertion that a scalar
+formula has already solved every few-body reaction.  It is a criterion for
+which objects a many-body approximation must preserve.
+
+\begin{figure}[t]
+  \centering
+  \begin{tikzpicture}[node distance=10mm and 23mm,>=Latex,
+    box/.style={draw,rounded corners,align=center,inner sep=4pt,
+      fill=teal!4,text width=0.34\textwidth,font=\small}]
+    \node[box] (cin) {$\det\Cincoming=0$\\pole and derivative};
+    \node[box,right=of cin] (riesz) {CSM Riesz\\projector};
+    \node[box,below=of riesz] (quad) {CDCC source\\and quadrature};
+    \node[box,left=of quad] (obs) {CSLS detector\\line shape or DDBUX};
+    \draw[->,thick] (cin)--node[above,font=\scriptsize] {same root space}(riesz);
+    \draw[->,thick] (riesz)--node[right,font=\scriptsize] {coherent pullback}(quad);
+    \draw[->,thick] (quad)--node[below,font=\scriptsize] {tested residue}(obs);
+    \draw[->,dashed] (obs)--node[left,font=\scriptsize]
+      {convergence test}(cin);
+  \end{tikzpicture}
+  \caption{The $^6$He calculation as one connection problem realized in
+  several spaces.  The arrows do not identify individual pseudostate
+  eigenvalues with poles; they transport a finite-rank root space and its
+  source--detector residue.}
+  \label{fig:he6-pole-to-observable}
+\end{figure}
+
+\subsection{Station H: convergence ledger}
+\label{subsec:he6-convergence-ledger}
+% BEGIN CURATED SUBJECT INDEX
+\index{resonance!residue}
+\index{complex scaling}
+\index{Jacobi coordinate}
+\index{CDCC}
+% END CURATED SUBJECT INDEX
+
+Record four groups of variations separately.
+
+\paragraph{Structure space.}
+Vary all Jacobi sets, $l_x,l_y,\Lambda,S,I$, Gaussian endpoints and densities,
+the three-body interaction, and $\lambda_{\mathrm P}$.  Check the ground-state
+energy and radius, low-energy transition strengths, and phase-relevant
+subsystem information before starting the reaction calculation.
+
+\paragraph{Complex scaling.}
+Vary $\theta$, complex-range basis parameters, and the maximum radial range.
+Track each pole as a cluster, measure the residual
+$\|h_6^\theta\Phi_R^\theta-z_R\Phi_R^\theta\|$, and test both
+$z_R$ and source--detector residues.  Approaching a rotated cut can make a
+well-converged pole numerically ill conditioned even before it ceases to be
+exposed.
+
+\paragraph{Reaction space.}
+Vary the projectile excitation cutoff, projectile spins, coupling multipoles,
+proton--projectile orbital angular momentum, total $J$, matching radius, and
+radial mesh.  Compare ground-state-only, open-channel, and open-plus-closed
+calculations with identical interactions.
+
+\paragraph{Smoothing and decay.}
+Vary the CSLS scaled basis independently of the CDCC basis, the binning used
+only for plotting, Jacobi rearrangements, final-state interactions, and the
+experimental angular acceptance.  Verify that integrating the smoothed
+distribution reproduces the corresponding converged discrete or inclusive
+strength.
+
+The minimum table for a claimed resonance observable is
+\begin{longtable}{@{}p{0.22\linewidth}p{0.24\linewidth}p{0.25\linewidth}p{0.18\linewidth}@{}}
+\toprule
+object & auxiliary variation & invariant monitored & acceptance criterion\\
+\midrule
+\endfirsthead
+\toprule
+object & auxiliary variation & invariant monitored & acceptance criterion\\
+\midrule
+\endhead
+$2^+$ pole & $\theta$, scaled basis, Jacobi space &
+$z_R$ and Riesz rank & common stability window\\
+\addlinespace
+pole strength & left/right normalization and source basis &
+$M_R\widetilde M_R$ or tested residue & stable complex value\\
+\addlinespace
+CDCC amplitude & $E_{\max}$, $I$, $L$, $J$, $\vsub{R}{match}$ &
+open-channel $S$ matrix and flux & tolerance declared per observable\\
+\addlinespace
+energy spectrum & smoothing basis and plotting bins &
+continuous response and its integral & bin independence\\
+\addlinespace
+dineutron signal & Jacobi set, spin projection, final-state interaction &
+resonance-only DDBUX shoulder & stable under controlled alternatives\\
+\bottomrule
+\end{longtable}
+
+\subsection*{Laboratory checkpoint}
+% BEGIN CURATED SUBJECT INDEX
+\index{connection coefficient}
+\index{boundary condition!incoming and outgoing}
+\index{pseudostate}
+\index{Jacobi coordinate}
+\index{antisymmetrization}
+\index{CDCC}
+\index{lithium nuclei}
+\index{beryllium nuclei}
+% END CURATED SUBJECT INDEX
+
+Before continuing to lithium and beryllium-core reactions, the reader should
+be able to:
+\begin{enumerate}[label=\arabic*.]
+  \item write all three $\alpha+n+n$ Jacobi sets and implement neutron
+  antisymmetry and the $\alpha n$ Pauli projector;
+  \item distinguish a real-axis pseudostate resolution from the
+  complex-scaled resolution in Eq.~\eqref{eq:he6-extended-completeness};
+  \item derive the CDCC equations
+  \eqref{eq:he6-cdcc-coupled-equations} from
+  Eq.~\eqref{eq:he6-proton-reaction-H};
+  \item construct the pole term and nonresonant remainder of
+  Eq.~\eqref{eq:he6-csm-energy-response};
+  \item explain why the coherent projector
+  Eq.~\eqref{eq:he6-resonance-projector-pseudostates} is more stable than an
+  energy-window sum;
+  \item form the resonance-only DDBUX with final-state interaction and a
+  spin projection; and
+  \item state which quantity in the calculation corresponds to
+  $v_R^\dagger\Cincoming'(z_R)u_R$.
+\end{enumerate}

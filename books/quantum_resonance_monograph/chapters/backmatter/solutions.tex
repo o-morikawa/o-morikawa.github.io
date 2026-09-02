@@ -1,0 +1,546 @@
+\chapter{Hints and selected solutions}
+\label{chap:solutions}
+
+The problems are intended to be worked with the conventions and canonical
+definitions of the corresponding Stage.  The following hints give the key
+step or a check; they do not replace the intermediate algebra.  A companion
+volume, built from \texttt{solutions\_ja.tex}, gives complete Japanese
+solutions to all ninety-nine Stage problems and all seven problems in the
+resummation appendix.  The present chapter remains intentionally compact so
+that it can be used while reading the English text without duplicating that
+companion volume.
+
+\section*{Stage I}
+For I.2, the boundary form is
+$-\rmi\hbar[\phi^*(L)\psi(L)-\phi^*(0)\psi(0)]$; the same phase condition on
+$\phi$ and $\psi$ makes it vanish and exhausts the adjoint domain.  For I.4,
+$p^2\rmd p=\mu p\rmd E$, so multiplication by $(\mu p)^{1/2}$ preserves the
+norm.  For I.8, solve the $Q$ equation with the chosen outgoing boundary value
+before substitution; differentiation acts both on the eigenvector and on the
+resolvent inside $\vsub{H}{eff}$.
+For I.11, approximate the image of the unit ball under the compact operator
+by a finite $\varepsilon$-net and use strong convergence on that finite set.
+For I.12, square integrability of the kernel is precisely the
+Hilbert--Schmidt criterion; inspect the diagonal singularity locally before
+estimating the tails.  For I.13, move $V^{1/2}$ through the eigenvalue
+equation and keep the sign convention in the Birman--Schwinger operator.
+For I.14, insert a Laurent ansatz in $A(z)^{-1}A(z)=\identity$ and pair its
+leading equation with the left and right null vectors.  For I.15, choose
+normalized functions with mutually disjoint supports: a nonzero multiplier
+cannot turn that sequence into a norm-convergent one.
+
+\section*{Stage II}
+For II.3, Fourier transform $(E-p^2/2\mu+\rmi0)^{-1}$ and close the radial
+momentum contour on the outgoing pole.  For II.6, the radial Green kernel is a
+product of the solution regular at the origin and the outgoing solution,
+divided by their Wronskian.  For II.7--II.8, the divergent phase is the time
+integral of $1/|\bm v t|$ and is logarithmic; the comparison dynamics must
+carry exactly that term.
+For II.11, integrate the differential expression against a test function
+twice and retain the endpoint Wronskian.  For II.12, the two Frobenius powers
+are $r^{1/2\pm\sqrt{g+1/4}}$; testing both in $L^2(0,1)$ locates the
+limit-point threshold at $g=3/4$.  For II.13, continuity fixes one Green
+kernel coefficient and the derivative jump fixes the other.  For II.14,
+match the sine solution in the well to the two exterior exponentials and
+read the Jost function from the incoming coefficient.  For II.15,
+differentiate the differential equation with respect to momentum, subtract
+the original equation times the differentiated solution, and integrate the
+resulting Wronskian derivative.
+
+\section*{Stage III}
+For III.1, equate powers after inserting
+$S=\sum_{n=-1}^{\infty}\hbar^nS_n$ into $S^2+S'=Q/\hbar^2$.
+For III.2, the Borel transform has a pole at unit Borel time; the two Laplace
+contours differ by $2\pi\rmi$ times its residue.  For III.7, a double zero
+gives a $(E-E_*)^{-2}$ term unless the numerator vanishes simultaneously.
+
+\section*{Stage IV}
+For IV.1, use
+$(x\pm\rmi0)^{-1}=\operatorname{PV}(1/x)\mp\rmi\pi\delta(x)$.
+For IV.3, write $k=|k|\rme^{-\rmi\varphi}$; the scaled wave decays when
+$\theta>\varphi$.  For IV.7, differentiate the Birman--Krein determinant or
+take the imaginary part of the reference-subtracted resolvent trace.
+For IV.11, expand $D(E)=E-E_0-\Sigma(E)$ at its simple zero; the residue is
+$1/D'(\resonantE)=1/[1-\Sigma'(\resonantE)]$.  For IV.12, differentiate the argument of
+the partial-wave $S$ matrix before setting $E=\resonantE$.  For IV.13, combine the
+background and pole terms over the common denominator
+$\epsilon+\rmi$ and complete the modulus square.  For IV.14, put the same
+square-root branch into the self-energy, phase space, and analytic
+continuation; changing only one of the three changes the sheet.
+
+\section*{Stage V}
+For V.3, $u(r)=\rme^{x/2}\chi(x)$ removes the first derivative created by
+$r=\rme^x$.  The $1/4$ from this rescaling completes $l(l+1)$ to
+$(l+1/2)^2$.  For V.5, evaluate the radial momentum contour by residues at
+zero and infinity rather than integrating between turning points directly.
+
+\section*{Stage VI}
+For VI.3, step functions approximate every fixed $L^2$ function, but a unit
+vector supported inside a newly resolved sub-bin keeps the operator-norm
+difference equal to one.  For VI.6, the closed-channel resolvent is real below
+threshold and acquires a discontinuity above it.  For VI.10, use
+$j_l(qr)\sim(qr)^l/(2l+1)!!$.
+For VI.11, write both Jacobi sets explicitly and transform the exchange
+operator before imposing the Pauli projector.  For VI.12, the full extended
+completeness relation restores the positive response even though individual
+rotated-continuum terms need not be positive.  For VI.13, take the outer
+product of the right and left pole vectors and divide by their biorthogonal
+overlap; a fragmented cluster is treated by a contour integral instead.
+For VI.14, begin from the invariant three-body phase-space measure and only
+then change variables to the measured energy pair.  For VI.15, if
+$\Cincoming(\resonantE)=0$ is simple, solve the connection problem for right and
+left null vectors and divide their outer product by
+$v_L^\top\Cincoming'(\resonantE)v_R$.
+
+\section*{Stage VII}
+For VII.1, the discriminant is
+$(\operatorname{tr}H)^2-4\det H$; an EP also requires defectiveness, not only
+equal numerical eigenvalues.  For VII.4, one circuit exchanges sheets and two
+circuits return the eigenvalue labels while leaving a possible geometric
+factor.  For VII.10, solve the determinant and its energy derivative
+simultaneously and verify a rank-one null space.
+
+\section*{Stage VIII}
+For VIII.1, integrate $\rmd r_*/\rmd r=(1-2M/r)^{-1}$ and choose the additive
+constant only after specifying a dimensionless logarithm.  For VIII.5,
+$\rme^{-\rmi\omega(t+r_*)}$ is ingoing at the future horizon and
+$\rme^{-\rmi\omega(t-r_*)}$ outgoing at infinity.  For VIII.10, retain the
+reference-subtracted rotated continuum when reconstructing the response; a
+single Lorentzian pole is not the full level density.
+
+\section*{Worked solutions as calculation templates}
+
+The solutions below are deliberately more explicit than the preceding hints.
+Each one isolates a calculation that recurs in later Stages.  The point is not
+to memorize the final formula, but to make the domain, boundary value, sheet,
+or projection choice visible at the line where it enters.
+
+\subsection*{I.2: self-adjoint momentum on an interval}
+
+Begin with the differential expression $-\rmi\hbar\rmd/\rmd x$ on
+$L^2(0,L)$ and the domain
+\begin{equation}
+  \mathcal D(p_\alpha)=
+  \{\psi\in H^1(0,L):\psi(L)=\rme^{\rmi\alpha}\psi(0)\}.
+\end{equation}
+For $\phi,\psi\in H^1(0,L)$, integration by parts gives the boundary form
+\begin{align}
+  \dualpair{\phi}{p\psi}-\dualpair{p\phi}{\psi}
+  &=-\rmi\hbar
+  \left[\phi^*(L)\psi(L)-\phi^*(0)\psi(0)\right].
+\end{align}
+It vanishes on $\mathcal D(p_\alpha)$.  Conversely, if $\phi$ belongs to the
+adjoint domain, the boundary form must vanish for every admissible $\psi$.
+Using $\psi(L)=\rme^{\rmi\alpha}\psi(0)$ and varying $\psi(0)$ freely yields
+$\phi(L)=\rme^{\rmi\alpha}\phi(0)$.  Thus the adjoint has the same domain and
+$p_\alpha$ is self-adjoint.
+
+The eigenvalue equation gives $\psi_k(x)=C\rme^{\rmi kx}$.  Its boundary
+condition is $\rme^{\rmi kL}=\rme^{\rmi\alpha}$, hence
+\begin{equation}
+  k_n=\frac{2\pi n+\alpha}{L},
+  \qquad
+  p_n=\hbar k_n,
+  \qquad n\in\mathbb Z .
+\end{equation}
+The calculation is a compact model of a rule used throughout the book: a
+differential expression has no spectrum until its domain has been fixed.
+
+\subsection*{I.8: Feshbach reduction and the derivative metric}
+
+Let $P+Q=\identity$, $PQ=0$, and write $(E-H)\Psi=0$ in blocks:
+\begin{align}
+  (E-H_{PP})P\Psi-H_{PQ}Q\Psi&=0,
+  \\
+  -H_{QP}P\Psi+(E-H_{QQ})Q\Psi&=0.
+\end{align}
+With the specified outgoing boundary value of the $Q$ resolvent,
+\begin{equation}
+  Q\Psi=(E-H_{QQ})^{-1}H_{QP}P\Psi .
+\end{equation}
+Substitution gives
+\begin{equation}
+  [E-\vsub{H}{eff}(E)]P\Psi=0,
+  \qquad
+  \vsub{H}{eff}(E)=H_{PP}+H_{PQ}(E-H_{QQ})^{-1}H_{QP}.
+\end{equation}
+For a rank-one $P$ space write the secular function as
+$F(E)=E-E_0-\Sigma(E)$.  At a simple pole $\resonantE$,
+\begin{equation}
+  \frac{1}{F(E)}=
+  \frac{Z_R}{E-\resonantE}+O(1),
+  \qquad
+  Z_R=\frac{1}{1-\Sigma'(\resonantE)}.
+\end{equation}
+The same factor follows before taking rank one.  Differentiate
+$[E-\vsub{H}{eff}(E)]\psi_E=0$, pair with the left pole vector, and evaluate at
+$\resonantE$.  The coefficient of the pole is controlled by
+$\bra{\widetilde\psi_R}[\identity-\partial_E\vsub{H}{eff}(\resonantE)]\ket{\psi_R}$.
+Dropping the derivative would normalize the projected vector as if the
+eliminated continuum carried no probability.
+
+\subsection*{II.3: outgoing free Green function and the Born amplitude}
+
+For $E=\hbar^2k^2/(2\mu)$, the outgoing free kernel is
+\begin{equation}
+  G_0^{(+)}(\bm r;E)
+  =\int\frac{\rmd^3p}{(2\pi\hbar)^3}
+  \frac{\rme^{\rmi\bm p\cdot\bm r/\hbar}}
+  {E-p^2/(2\mu)+\rmi0}.
+\end{equation}
+After the angular integral, extend the radial momentum integral to the whole
+line.  For $r>0$ close the contour in the upper half-plane for the factor
+$\rme^{\rmi pr/\hbar}$.  The $+\rmi0$ prescription selects the outgoing pole,
+and the residue gives
+\begin{equation}
+  G_0^{(+)}(\bm r;E)
+  =-\frac{\mu}{2\pi\hbar^2}\frac{\rme^{\rmi kr}}{r}.
+\end{equation}
+Insert this kernel in
+$\psi^{(+)}=\rme^{\rmi\bm k\cdot\bm r}+G_0^{(+)}V\psi^{(+)}$.
+For $r\gg r'$ use
+$|\bm r-\bm r'|=r-\widehat{\bm r}\cdot\bm r'+O(r^{-1})$.
+The coefficient of $\rme^{\rmi kr}/r$ is
+\begin{equation}
+  f(\bm k',\bm k)
+  =-\frac{\mu}{2\pi\hbar^2}
+  \int\rmd^3r'\,
+  \rme^{-\rmi\bm k'\cdot\bm r'}V(\bm r')\psi^{(+)}(\bm r').
+\end{equation}
+Replacing $\psi^{(+)}$ by the incident plane wave gives the first Born
+amplitude.  The sign is therefore fixed by the time convention and the
+boundary value of the resolvent, not by a remembered scattering formula.
+
+\subsection*{II.6: Jost Green kernel and pole residue}
+
+For a fixed partial wave let $\varphi_l(k,r)$ be regular at the origin and
+$f_l^{(+)}(k,r)$ outgoing at infinity.  Their Wronskian is independent of
+$r$.  Solving the jump condition of the radial Green equation gives
+\begin{equation}
+  G_l^{(+)}(r,r';k)
+  =-\frac{2\mu}{\hbar^2}
+  \frac{\varphi_l(k,r_<)f_l^{(+)}(k,r_>)}
+       {W[\varphi_l,f_l^{(+)}](k)}.
+\end{equation}
+Up to the convention-dependent nonzero factor, the denominator is the Jost
+function $F_l(k)$.  If $F_l(k_R)=0$ and $F_l'(k_R)\ne0$, regular and outgoing
+solutions become proportional, say $\varphi_l(k_R,r)=A_Ru_R(r)$ and
+$f_l^{(+)}(k_R,r)=B_Ru_R(r)$.  Therefore
+\begin{equation}
+  \Res_{k=k_R}G_l^{(+)}(r,r';k)
+  =-\frac{2\mu}{\hbar^2}
+  \frac{A_RB_R}{F_l'(k_R)}u_R(r)u_R(r').
+\end{equation}
+This is the coordinate-space version of ``pole position plus residue.''  The
+state $u_R$ alone is normalization dependent; the full residue is not.
+
+\subsection*{III.1: the exact-WKB Riccati recursion}
+
+Write the Schr"odinger equation as
+$[-\hbar^2\partial_x^2+Q(x)]\psi=0$ and set
+$\psi=\rme^{\int^xS(x',\hbar)\rmd x'}$.  Then
+\begin{equation}
+  S^2+\partial_xS=\frac{Q}{\hbar^2}.
+\end{equation}
+With $S=\sum_{n=-1}^{\infty}\hbar^nS_n$, the first equations are
+\begin{align}
+  S_{-1}^2&=Q,
+  &2S_{-1}S_0+S_{-1}'&=0,
+  \\
+  2S_{-1}S_1+S_0^2+S_0'&=0,
+  &2S_{-1}S_2+2S_0S_1+S_1'&=0.
+\end{align}
+Choosing $S_{-1}^{(\pm)}=\pm\sqrt Q$ gives
+\begin{align}
+  S_0&=-\frac{Q'}{4Q},
+  \\
+  S_1^{(\pm)}&=\pm
+  \left(\frac{Q''}{8Q^{3/2}}
+  -\frac{5(Q')^2}{32Q^{5/2}}\right),
+  \\
+  S_2&=-\frac{Q'''}{16Q^2}
+  +\frac{9Q'Q''}{32Q^3}
+  -\frac{15(Q')^3}{64Q^4}.
+\end{align}
+The coefficients that change sign with the square-root sheet form
+$\vsub{S}{odd}$; the sheet-even coefficients form $\vsub{S}{even}$, with
+$\vsub{S}{even}=-(1/2)\partial_x\log \vsub{S}{odd}$.  This identity fixes the
+all-order prefactor and provides a useful algebraic check on any recursion
+code.
+
+\subsection*{III.7: simple and double zeros of a connection coefficient}
+
+Let $S(E)=N(E)/\Cincoming(E)$ and put $z=E-E_*$.  At a simple zero,
+\begin{align}
+  \Cincoming(E)&=c_1z+\tfrac12c_2z^2+O(z^3),
+  &N(E)&=n_0+n_1z+O(z^2).
+\end{align}
+Long division gives
+\begin{equation}
+  S(E)=\frac{n_0/c_1}{z}
+  +\left(\frac{n_1}{c_1}-\frac{n_0c_2}{2c_1^2}\right)+O(z).
+\end{equation}
+At a double zero, $c_1=0$ and $c_2\ne0$.  Including the cubic coefficient,
+\begin{equation}
+  S(E)=\frac{2n_0/c_2}{z^2}
+  +\frac{2}{c_2}
+   \left(n_1-\frac{n_0c_3}{3c_2}\right)\frac{1}{z}+O(1).
+\end{equation}
+The second-order pole is the scalar shadow of a length-two Jordan chain.
+Notice the necessary caveat: if $N$ vanishes at the same point, cancellation
+can lower the pole order.  A multiple zero of a numerical determinant must
+therefore be checked against the relevant numerator and nullity.
+
+\subsection*{IV.1: a flat-continuum self-energy}
+
+Take one bare state of energy $E_0$, continuum energies
+$\epsilon\in[\vsub{E}{th},E_c]$, constant density $\rho$, and constant coupling
+$g$.  The outgoing self-energy is
+\begin{equation}
+  \Sigma(E+\rmi0)=\rho|g|^2
+  \int_{\vsub{E}{th}}^{E_c}
+  \frac{\rmd\epsilon}{E-\epsilon+\rmi0}.
+\end{equation}
+Using the distribution identity before performing the integral,
+\begin{align}
+  \Sigma(E+\rmi0)
+  &=\rho|g|^2
+  \log\left|\frac{E-\vsub{E}{th}}{E-E_c}\right|
+  -\rmi\pi\rho|g|^2
+  \Theta(E-\vsub{E}{th})\Theta(E_c-E).
+\end{align}
+Thus the real part shifts the level and depends on the ultraviolet model,
+whereas inside the band
+$\Gamma(E)=-2\im\Sigma(E+\rmi0)=2\pi\rho|g|^2$.
+The pole solves $\resonantE-E_0-\vsup{\Sigma}{II}(\resonantE)=0$ on the continued sheet.
+Keeping the logarithm rather than replacing it immediately by a constant
+width also retains the threshold branch point and the nonexponential tail.
+
+\subsection*{IV.5: Berggren--Zel'dovich Gaussian continuation}
+
+The asymptotic contribution to the Gamow pairing contains
+\begin{equation}
+  I_\epsilon(q)=\int_0^\infty
+  \rme^{-\epsilon r^2+\rmi q r}\rmd r,
+  \qquad \re\epsilon>0.
+\end{equation}
+Complete the square and use the complementary error function:
+\begin{equation}
+  I_\epsilon(q)=\frac{\sqrt\pi}{2\sqrt\epsilon}
+  \rme^{-\frac{q^2}{4\epsilon}}
+  \operatorname{erfc}\left(-\frac{\rmi q}{2\sqrt\epsilon}\right).
+\end{equation}
+In a sector where $\im q>0$, the undamped integral already converges and
+$I_\epsilon(q)\to-1/(\rmi q)$ as $\epsilon\downarrow0$.  The right-hand side
+is analytic in $q$ away from the Stokes boundary, so this value defines its
+continuation to the resonance quadrant even though the original undamped
+real-axis integral diverges there.  For a full wave function one performs
+this continuation term by term only after controlling the subleading
+asymptotics.  Berggren's proof is precisely what prevents ``insert a Gaussian
+and discard it'' from becoming a regulator-dependent prescription.
+
+\subsection*{V.3: deriving, not guessing, the Langer term}
+
+For the reduced three-dimensional radial function,
+\begin{equation}
+  -\hbar^2u''(r)+
+  \left[2\mu V(r)+\frac{\hbar^2l(l+1)}{r^2}\right]u(r)
+  =2\mu Eu(r).
+\end{equation}
+Set $r=\rme^x$ and $u(r)=\rme^{x/2}\chi(x)$.  Since
+$\partial_r=\rme^{-x}\partial_x$,
+\begin{equation}
+  u''(r)=\rme^{-3x/2}
+  \left(\chi''-\frac14\chi\right).
+\end{equation}
+Multiplying the equation by $\rme^{3x/2}$ produces
+\begin{equation}
+  -\hbar^2\chi''(x)+
+  \left\{2\mu\rme^{2x}[V(\rme^x)-E]
+  +\hbar^2\left(l+\frac12\right)^2\right\}\chi(x)=0.
+\end{equation}
+The extra $1/4$ is the Jacobian contribution required to remove the first
+derivative.  The replacement $l(l+1)\mapsto(l+1/2)^2$ is therefore a
+coordinate-and-half-density statement; using it without transforming the
+wave function mixes two different differential equations.
+
+\subsection*{V.5: the radial Coulomb action}
+
+For $V(r)=-\kappa/r$ and $E<0$, put
+$K=\sqrt{-2\mu E}$ and $L=\hbar(l+1/2)$.  The Langer radial momentum is
+\begin{equation}
+  p_r(r)=\sqrt{-K^2+\frac{2\mu\kappa}{r}-\frac{L^2}{r^2}}.
+\end{equation}
+The closed contour around the two positive turning points can be deformed to
+small and large circles on the two-sheeted curve.  Expanding at zero and
+infinity, or evaluating the corresponding residues, yields
+\begin{equation}
+  \frac{1}{2\pi}\oint p_r\rmd r
+  =\frac{\mu\kappa}{K}-L.
+\end{equation}
+Bohr--Sommerfeld quantization of the radial oscillation is
+$(2\pi)^{-1}\oint p_r\rmd r=\hbar(n_r+1/2)$.  Hence
+\begin{equation}
+  \frac{\mu\kappa}{K}=\hbar(n_r+l+1),
+  \qquad
+  E=-\frac{\mu\kappa^2}
+  {2\hbar^2(n_r+l+1)^2}.
+\end{equation}
+Keeping the origin residue $-L$ and the turning-point half phase separate
+shows how the Frobenius monodromy and ordinary turning points cooperate.
+
+\subsection*{VI.2: projection to the CDCC equations}
+
+Let $\bm r$ be the projectile internal coordinate and $\bm R$ its
+target separation.  Expand the total wave function in retained projectile
+states and channel angular functions,
+\begin{equation}
+  \Psi^{JM}(\bm R,\bm r)
+  =\sum_c\frac{\chi_c^J(R)}{R}
+  \left[\phi_{nI}(\bm r)\otimes Y_L(\widehat{\bm R})\right]_{JM},
+  \qquad c=(n,I,L).
+\end{equation}
+Insert this expansion in
+$[T_R+h(\bm r)+U_{aA}+U_{bA}-E]\Psi=0$, multiply by the conjugate channel
+function, and integrate over $\bm r$ and $\widehat{\bm R}$.  Orthogonality and
+$h\phi_{nI}=\epsilon_{nI}\phi_{nI}$ give
+\begin{equation}
+  \left[-\frac{\hbar^2}{2\mu_R}
+  \left(\frac{\rmd^2}{\rmd R^2}
+  -\frac{L_c(L_c+1)}{R^2}\right)
+  +\epsilon_c-E\right]\chi_c^J(R)
+  +\sum_{c'}U^J_{cc'}(R)\chi_{c'}^J(R)=0,
+\end{equation}
+where
+\begin{equation}
+  U^J_{cc'}(R)=
+  \Bra{[\phi_{nI}\otimes Y_L]_{JM}}
+  U_{aA}(\bm R_a)+U_{bA}(\bm R_b)
+  \Ket{[\phi_{n'I'}\otimes Y_{L'}]_{JM}} .
+\end{equation}
+Nothing in this derivation makes a positive-energy pseudostate a bound
+state.  It is a basis vector in the finite model-space projection; physical
+breakup information is recovered only after convergence and smoothing.
+
+\subsection*{VI.6: eliminating a closed reaction channel}
+
+For two coupled radial channels write
+\begin{align}
+  (E-H_{11})\chi_1&=V_{12}\chi_2,
+  &(E-H_{22})\chi_2&=V_{21}\chi_1.
+\end{align}
+The boundary condition in channel 2 fixes its Green operator, so
+\begin{equation}
+  \left[E-H_{11}-\vsub{U}{pol}(E)\right]\chi_1=0,
+  \qquad
+  \vsub{U}{pol}(E)=V_{12}(E-H_{22})^{-1}V_{21}.
+\end{equation}
+Below the second threshold, a self-adjoint $H_{22}$ has no on-shell spectral
+weight at $E$.  Its resolvent boundary value is real, and $\vsub{U}{pol}$ shifts
+and distorts the elastic potential without absorbing flux.  Above threshold,
+Stone's formula gives
+\begin{equation}
+  \im \vsub{U}{pol}(E+\rmi0)
+  =-\pi V_{12}\delta(E-H_{22})V_{21},
+\end{equation}
+which is negative semidefinite and supplies the reaction loss.  Omitting
+closed CDCC channels can nevertheless change an elastic observable below
+threshold because their real dispersive contribution remains.
+
+\subsection*{VII.1: the algebraic test for a second-order EP}
+
+For
+\begin{equation}
+  H=\begin{pmatrix}a&b\\b&d\end{pmatrix},
+  \qquad a,b,d\in\mathbb C,
+\end{equation}
+the eigenvalues are
+\begin{equation}
+  \lambda_\pm=\frac{a+d}{2}
+  \pm\frac12\sqrt{(a-d)^2+4b^2}.
+\end{equation}
+They coalesce when the discriminant
+$D=(a-d)^2+4b^2$ vanishes.  This condition is necessary but must be joined to
+a rank test.  If $H=\lambda_*\identity$, the eigenspace is two-dimensional and
+the degeneracy is ordinary.  Otherwise
+$\rank(H-\lambda_*\identity)=1$, the nullity is one, and the algebraic
+multiplicity two exceeds the geometric multiplicity: the point is an EP.
+Near a generic control value $g_*$, $D(g)=D'(g_*)(g-g_*)+\cdots$, so
+\begin{equation}
+  \lambda_+-\lambda_-
+  \sim\sqrt{D'(g_*)}\,(g-g_*)^{1/2}.
+\end{equation}
+The square-root exchange is thus derived from the secular equation.  A plot
+showing close eigenvalues is not an EP diagnostic until defectiveness and the
+local Puiseux law have also been checked.
+
+\subsection*{VII.2: resolvent of a length-two Jordan chain}
+
+Choose right vectors satisfying
+\begin{equation}
+  (H-E_*)\psi_0=0,
+  \qquad
+  (H-E_*)\psi_1=\psi_0,
+\end{equation}
+and a dual chain normalized so that the nilpotent part is represented by
+$N=\ket{\psi_0}\bra{\widetilde\psi_1}$ with $N^2=0$ on the root
+subspace.  There $H=E_*\identity+N$.  For $z\ne E_*$,
+\begin{align}
+  (z-H)^{-1}
+  &=\left[(z-E_*)\identity-N\right]^{-1}
+  \\
+  &=\frac{\identity}{z-E_*}
+  +\frac{N}{(z-E_*)^2},
+\end{align}
+because the geometric series terminates at $N^2=0$.  Restoring the explicit
+root-space identity gives a simple-pole projector assembled from both chain
+vectors and a double-pole coefficient proportional to
+$\ket{\psi_0}\bra{\widetilde\psi_1}$.  This is why solving only for the
+coalesced eigenvector loses information: the associated vector controls the
+principal part of the response.
+
+\subsection*{VIII.1: Schwarzschild tortoise coordinate}
+
+For $f(r)=1-2M/r$, radial null curves suggest defining
+$\rmd r_*/\rmd r=f^{-1}$.  Partial fractions give
+\begin{equation}
+  r_*=r+2M\log\left|\frac{r}{2M}-1\right|+C.
+\end{equation}
+Outside the horizon, $r>2M$.  As $r=2M+\varepsilon$ with
+$\varepsilon\downarrow0$,
+\begin{equation}
+  r_*=2M\log\frac{\varepsilon}{2M}+O(1)\longrightarrow-\infty.
+\end{equation}
+At large radius,
+$r_*=r+2M\log(r/2M)+O(1)\to+\infty$.  The logarithm's argument has been made
+dimensionless; changing its reference scale merely changes $C$.  Under
+complex continuation, however, the logarithm also records a branch choice.
+That branch structure is why an unrestricted rotation of the entire
+$r_*$ plane cannot be assumed to induce a single-valued rotation of $r$.
+
+\subsection*{VIII.5: horizon signs as connection data}
+
+With time dependence $\rme^{-\rmi\omega t}$, introduce
+$v=t+r_*$ and $u=t-r_*$.  Near the future event horizon a smooth ingoing wave
+depends on $v$:
+\begin{equation}
+  \rme^{-\rmi\omega v}
+  =\rme^{-\rmi\omega t}\rme^{-\rmi\omega r_*}.
+\end{equation}
+At spatial infinity an outgoing wave depends on $u$:
+\begin{equation}
+  \rme^{-\rmi\omega u}
+  =\rme^{-\rmi\omega t}\rme^{+\rmi\omega r_*}.
+\end{equation}
+Let $\vsupb{f}{in}{H}$ be the horizon-normalized ingoing solution.  At
+infinity it has the connection expansion
+\begin{equation}
+  \vsupb{f}{in}{H}
+  =\vsub{\mathcal C}{out}(\omega)\vsup{f_\infty}{out}
+  +\Cincoming(\omega)\vsup{f_\infty}{in}.
+\end{equation}
+A QNM satisfies both physical conditions exactly when
+$\Cincoming(\omega)=0$.  For $\im\omega<0$ these exponentials diverge
+on parts of the real $r_*$ axis; that divergence is not a sign error but the
+reason analytic continuation, complex scaling, or a rigged-space pairing is
+needed to represent the same connection zero.

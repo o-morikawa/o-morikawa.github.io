@@ -1,0 +1,35 @@
+\section{Derive the exponential map and the Langer term}
+\label{app:langer-map}
+% BEGIN CURATED SUBJECT INDEX
+\index{Langer correction}
+\index{radial equation}
+% END CURATED SUBJECT INDEX
+
+Set $r=\rme^x$ and write
+\begin{equation}
+  u_l(r)=\rme^{x/2}\phi_l(x) .
+  \label{eq:langer-wave-map}
+\end{equation}
+Using
+\begin{equation}
+  \frac{\rmd^2u_l}{\rmd r^2}
+  =\rme^{-3x/2}
+  \left(\frac{\rmd^2\phi_l}{\rmd x^2}
+  -\frac{1}{4}\phi_l\right),
+  \label{eq:langer-derivative}
+\end{equation}
+the radial equation becomes
+\begin{equation}
+  \left[
+  -\frac{\hbar^2}{2m}\frac{\rmd^2}{\rmd x^2}
+  +\rme^{2x}\bigl(V(\rme^x)-E\bigr)
+  +\frac{\hbar^2}{2m}
+  \left(l+\frac{1}{2}\right)^2
+  \right]\phi_l(x)=0 .
+  \label{eq:langer-transformed-equation}
+\end{equation}
+The $1/4$ shift is exact; it comes from removing the first derivative generated
+by the coordinate change.  The origin condition has become a convergence
+condition at $x\to-\infty$.  Equation~\eqref{eq:langer-transformed-equation}
+therefore gives both an algebraic derivation of the Langer term and a geometric
+derivation of the open-path/closed-cycle equivalence.

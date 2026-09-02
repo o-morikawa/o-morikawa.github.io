@@ -1,0 +1,119 @@
+\chapter*{Preface}
+% BEGIN CURATED SUBJECT INDEX
+\index{unbounded operator}
+\index{Hilbert space}
+\index{spectral measure}
+\index{spectrum!point}
+\index{connection coefficient}
+\index{Breit--Wigner approximation}
+\index{exact WKB}
+\index{Zel'dovich regularization}
+\index{rigged Hilbert space}
+% END CURATED SUBJECT INDEX
+\addcontentsline{toc}{chapter}{Preface}
+This textbook grew out of our studies of quantum resonances at the intersection of resurgence and non-self-adjoint spectral theory. These investigations gradually led us to the scattering-theoretic viewpoint that organizes this book. Our aim is not merely to present this viewpoint, but also to develop the mathematical structures on which it rests and to examine the physical phenomena through which it becomes concrete. The book is therefore intended both as a self-contained introduction to the relevant mathematics and physics and as a systematic account of the scattering-theoretic perspective that emerged from our own research.
+
+
+Resonances are often taught in reverse order.  One first sees a
+Breit--Wigner denominator or a complex eigenvalue, learns several devices for
+making its wave function finite, and only later discovers that each device
+continues a scattering problem across a cut.  That route is efficient when
+one number is required.  It is much less satisfactory when the questions are
+why the number is invariant, what space contains the associated state, how
+the continuum participates, or what changes at a threshold.
+
+This book follows the opposite route.  We begin with standard quantum
+mechanics, including the pieces that are usually suppressed by notation:
+operator domains, limiting procedures, spectral measures, and comparison
+dynamics.  We then build scattering data and analytically continue the
+global connection coefficient.  A resonance is defined there.  Complex
+scaling, Zel'dovich regularization, rigged Hilbert spaces, and effective
+Hamiltonians enter later because they solve particular representation or
+computational problems.  Exact WKB is the thread that keeps these changes of
+representation tied to the same analytic object.
+
+The result is a monograph rather than a survey.  A citation is never meant to
+replace an equation that the reader needs in order to continue a calculation.
+Historical sources and alternative hypotheses are recorded in the
+bibliography, but the main line supplies the definitions, derivations, and
+checks.  Results from our papers have consequently been disassembled and
+rebuilt in prerequisite order.  Introductory material that occurred in more
+than one paper appears once in the canonical chapter; a later Laboratory
+points back to it and starts at the first genuinely new step.
+
+
+%Parts of the exposition, detailed derivations, and figures in this book are based on, and substantially extend, material first presented in our research articles. They have been reorganized and expanded here to form a self-contained pedagogical development. References to the original publications are given in the bibliographical notes and bibliography.
+
+\section*{How to read the Stages}
+
+Each Stage begins with a reader contract and ends with problems.  The contract
+states an operation the reader should be able to perform, not a list of topics
+to have seen.  A first reading may follow Stages I--IV linearly and then choose
+among the nuclear, exceptional-point, and black-hole branches.  A calculation
+oriented reading can instead begin at a Laboratory and use the margin of
+cross-references to retrieve its prerequisites.
+
+The logical dependency is
+\begin{gather*}
+  \boxed{\text{domain and spectrum}}
+  \quad\Downarrow\quad
+  \boxed{\text{scattering boundary data}}
+  \\
+  \boxed{\text{global connection datum}}
+  \quad\Downarrow\quad
+  \boxed{\text{realizations and applications}}.
+\end{gather*}
+The arrows are one-way in the derivation but two-way in practice.  A numerical
+complex-scaled spectrum, for example, can reveal a candidate pole; the
+connection formulation tells us which variations must leave it fixed before
+it is accepted as physical.
+
+\section*{What a Laboratory contains}
+
+A Laboratory is not a paper reprint.  It has four components:
+\begin{enumerate}[label=\arabic*.]
+  \item the input Hamiltonian or master equation and a declared domain;
+  \item a derivation with enough intermediate algebra to reproduce it;
+  \item a stability or conservation check that can falsify the result; and
+  \item a checkpoint stating what has actually been learned.
+\end{enumerate}
+Some Laboratories retain figures and detailed calculations developed in the
+source papers.  Their role here is different: they are worked examples of a
+method already constructed, so paper-specific motivation and repeated mini-
+reviews have been removed.
+
+\section*{Prerequisites and conventions}
+
+The assumed physics is an undergraduate course in quantum mechanics and
+familiarity with ordinary differential equations and complex analysis.
+Functional analysis, scattering theory, resurgence, general relativity, and
+few-body reaction theory are developed when first needed.  A reader already
+fluent in these subjects can use the opening problems of each Stage as a
+diagnostic and skip proofs only after checking the stated hypotheses.
+
+We use the time dependence $\rme^{-\rmi Et/\hbar}$, so a decaying pole has
+$\im E<0$.  A differential expression and the operator defined by it are
+distinguished whenever boundary conditions or domains matter.  The symbol
+$H_\theta$ denotes an analytically deformed operator, not an arbitrary
+non-Hermitian approximation.  These choices are collected once in the
+conventions chapter and are not redefined in later Laboratories.
+
+\section*{Acknowledgment of provenance}
+% BEGIN CURATED SUBJECT INDEX
+\index{CDCC}
+\index{lithium nuclei}
+\index{beryllium nuclei}
+% END CURATED SUBJECT INDEX
+
+The exact-WKB, complex-scaling, continuum, radial, exceptional-point, and
+black-hole calculations build on the authors' research program and retain
+its detailed algebra where that is pedagogically useful.  The few-body
+chapters connect the same spectral viewpoint to CDCC and to calculations of
+weakly bound lithium and beryllium-core systems.  Bibliographic citations
+identify original results; within the book, however, their content is used as
+raw material for one continuous derivation.
+
+
+%This work was partially supported by Japan Society for the Promotion of Science (JSPS) Grant-in-Aid for Scientific Research Grant Numbers JP25K17402 (O.M.), and 25H01267 (S.O.).
+%This work was also supported in part by the COREnet project of RCNP, The University of Osaka.
+%O.M.\ acknowledges the RIKEN Special Postdoctoral Researcher Program and RIKEN FY2025 Incentive Research Projects.
