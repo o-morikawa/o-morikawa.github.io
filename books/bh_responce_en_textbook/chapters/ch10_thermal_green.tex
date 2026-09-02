@@ -1,0 +1,189 @@
+\chapter{Thermal Green Functions}
+\label{chap:thermal-green}
+\chapterepigraph{``The energy of the universe is constant. The entropy of the universe strives toward a maximum.''}{Rudolf Clausius, ``Concerning Several Conveniently Applicable Forms for the Main Equations of the Mechanical Heat Theory'' (1865)}
+
+\section{The KMS condition}
+
+Let $H$ be the Hamiltonian generating time evolution, and let the \term{equilibrium state} at \term{inverse temperature} $\beta$ be
+\begin{equation}
+\rho_\beta
+=
+\frac{\rme^{-\beta H}}{Z},
+\qquad
+Z
+=
+\Tr\rme^{-\beta H}.
+\label{eq:gibbs-state}
+\end{equation}
+For a \term{Hermitian operator} $O(t)$, define
+\begin{align}
+G^>(t)
+&=
+\Tr\left(
+\rho_\beta O(t)O(0)
+\right),
+\\
+G^<(t)
+&=
+\Tr\left(
+\rho_\beta O(0)O(t)
+\right).
+\end{align}
+Cyclicity of the \term{trace}, together with \term{imaginary-time evolution}, gives
+\begin{equation}
+G^>(t)
+=
+G^<(t+\rmi\beta).
+\label{eq:kms-time}
+\end{equation}
+This is the \term{Kubo--Martin--Schwinger (KMS) condition}. Even in field theory, where a finite-dimensional Gibbs matrix cannot be written, analyticity of \term{correlation functions} together with Eq.~\eqref{eq:kms-time} can be taken as the definition of \term{thermal equilibrium}.
+
+Using the Fourier transform
+\begin{equation}
+G(\omega)
+=
+\int_{-\infty}^{\infty}\rmd t\,
+\rme^{+\rmi\omega t}G(t),
+\label{eq:thermal-fourier}
+\end{equation}
+the \term{KMS condition} becomes the \term{detailed-balance} relation
+\begin{equation}
+G^>(\omega)
+=
+\rme^{\beta\omega}G^<(\omega).
+\label{eq:kms-frequency}
+\end{equation}
+
+\section{\term{Lehmann representation}}
+
+Let $H\ket{n}=E_n\ket{n}$ and $O_{mn}=\bra{m}O\ket{n}$. Inserting a \term{complete set} into the two-point functions gives
+\begin{align}
+G^>(\omega)
+&=
+\frac{2\pi}{Z}
+\sum_{m,n}
+\rme^{-\beta E_n}
+|O_{mn}|^2
+\delta\bigl(\omega-E_m+E_n\bigr),
+\label{eq:lehmann-greater}
+\\
+G^<(\omega)
+&=
+\frac{2\pi}{Z}
+\sum_{m,n}
+\rme^{-\beta E_m}
+|O_{mn}|^2
+\delta\bigl(\omega-E_m+E_n\bigr).
+\label{eq:lehmann-less}
+\end{align}
+On the support of the delta function, $E_m-E_n=\omega$, so each term separately satisfies $G^>(\omega)=\rme^{\beta\omega}G^<(\omega)$. At \term{finite volume}, the spectrum is a sum of \term{discrete lines}; in the \term{thermodynamic limit}, or after \term{coarse graining} at finite resolution, it becomes a smooth \term{spectral function}.
+
+This representation shows that a thermal Green function is not merely an abstract analytic function: it is a sum over matrix elements of observables weighted by the \term{density of states}. The ETH of the next chapter assumes a smooth envelope for the individual $O_{mn}$ appearing in Eq.~\eqref{eq:lehmann-greater} and asks under what conditions the same \term{detailed balance} emerges from a single high-energy eigenstate.
+
+\section{Spectral function and fluctuations}
+
+Define the \term{spectral function} and \term{symmetric correlator} by
+\begin{align}
+\rho_O(\omega)
+&=
+G^>(\omega)-G^<(\omega),
+\label{eq:thermal-spectral-density}
+\\
+F_O(\omega)
+&=
+\frac{1}{2}
+\left[
+G^>(\omega)+G^<(\omega)
+\right].
+\label{eq:thermal-symmetric-density}
+\end{align}
+Equation~\eqref{eq:kms-frequency} then gives
+\begin{equation}
+F_O(\omega)
+=
+\frac{1}{2}
+\coth\left(\frac{\beta\omega}{2}\right)
+\rho_O(\omega).
+\label{eq:fdt-rho}
+\end{equation}
+
+The retarded Green function used in this book is
+\begin{equation}
+G_R(t)
+=
+\rmi\theta(t)
+\Tr\left(
+\rho_\beta[O(t),O(0)]
+\right).
+\end{equation}
+For its real-frequency boundary value,
+\begin{equation}
+\rho_O(\omega)
+=
+2\im G_R(\omega),
+\label{eq:spectral-im-retarded}
+\end{equation}
+so the \term{fluctuation--dissipation relation} is
+\begin{equation}
+F_O(\omega)
+=
+\coth\left(\frac{\beta\omega}{2}\right)
+\im G_R(\omega).
+\label{eq:fluctuation-dissipation}
+\end{equation}
+The \term{dissipative part} of the response determines the quantum and thermal fluctuations in equilibrium.
+
+\begin{warningbox}
+The sign in Eq.~\eqref{eq:spectral-im-retarded} depends on the conventions for the retarded function and the Fourier transform. When importing a formula from the literature, check as one package the factor of $\rmi$ in front of $G_R$, the sign in $\rme^{\pm\rmi\omega t}$, and the ordering used in the \term{spectral function}.
+\end{warningbox}
+
+\section{Absorption and emission}
+
+Couple a weak periodic external source $j(t)$ through $-j(t)O(t)$. For $\omega>0$, the absorbed power per unit time is proportional to $\rho_O(\omega)$, equivalently to $\im G_R(\omega)$. By contrast, \term{spontaneous and stimulated emission} from the state is measured by $G^<(\omega)$. The \term{KMS condition} requires
+\begin{equation}
+\frac{G^<(\omega)}{G^>(\omega)}
+=
+\rme^{-\beta\omega}.
+\label{eq:detailed-balance-ratio}
+\end{equation}
+
+For a black hole, the classical \term{absorption cross section} or greybody factor gives the real-axis dissipation contained in $\rho_O$. In the Hartle--Hawking state, the \term{KMS condition} relates absorption to emission. In the Unruh state, the outgoing sector carries the \term{Hawking occupation number}, but the full state is not in global \term{thermal equilibrium}.
+
+\begin{principlebox}
+Classical absorption, quantum emission, and \term{equilibrium noise} are not three unrelated tables of data. The imaginary part of the retarded Green function and the KMS condition organize them into the same spectral function.
+\end{principlebox}
+
+\section{Do not confuse QNMs with thermal poles}
+
+Finite-temperature calculations involve the \term{Euclidean frequencies}
+\begin{equation}
+\omega_n^{E}
+=
+\frac{2\pi n}{\beta},
+\qquad
+n\in\bbZ.
+\label{eq:bosonic-matsubara}
+\end{equation}
+These are \term{Matsubara frequencies} arising from periodicity in imaginary time; they are not QNM frequencies determined by radiation boundary conditions. Appropriate analytic continuation of the \term{Euclidean correlator} gives the retarded function, and QNMs then appear as poles on a different sheet of that real-time object.
+
+Thus, even if a sequence of \term{Matsubara points} resembles a sequence of QNM poles in a plot, the two must not be identified. The former are sampling points associated with a thermal state; the latter are resonances of real-time response. Relating them requires uniqueness of the analytic continuation together with control of the high-frequency behavior.
+
+\section{Thermal equilibrium in a rotating system}
+
+For a stationary rotating system, the density operator has the schematic form
+\begin{equation}
+\rho
+\mathrel{\propto}
+\exp\left[
+-\beta
+\left(
+H-\Omega_H J-\Phi_H Q
+\right)
+\right].
+\label{eq:rotating-gibbs}
+\end{equation}
+The KMS factor depends on the effective frequency $\widetilde\omega$ defined in Eq.~\eqref{eq:horizon-effective-frequency}. In asymptotically flat Kerr spacetime, \term{superradiant modes} obstruct the construction of an ordinary Hartle--Hawking state covering the entire exterior. One must distinguish the local use of a thermal factor from the existence of a global \term{Gibbs state}.
+
+\section{Conclusion of this chapter}
+
+A thermal state is characterized by the KMS condition, and the \term{fluctuation--dissipation relation} connects state-dependent fluctuations to the state-independent retarded response. Classical black-hole absorption and quantum emission lie on opposite sides of this relation. In the next chapter we introduce ETH, which attempts to explain thermal equilibrium in terms of matrix elements within a single energy eigenstate.

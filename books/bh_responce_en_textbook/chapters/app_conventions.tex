@@ -1,0 +1,106 @@
+\chapter{Notation and Conventions}
+\label{app:conventions}
+\chapterepigraph{``The last thing we decide on in writing a book is what shall be the first we put in it.''}{Attributed to Blaise Pascal, \textit{Pens\'ees}, Brunschvicg 19, trans.\ C.\ Kegan Paul}
+
+This appendix collects the conventions used throughout the book. When comparing formulas from different references, one should first check, in order, the \term{time convention} for frequency, the ordering in the \term{Wronskian}, and the sign convention for the \term{resolvent}.
+
+\section{Spacetime and units}
+
+The metric signature is $(-,+,+,+)$, and we use \term{geometrized units} $G=c=1$. A \term{static spherically symmetric metric} is written as
+\begin{equation}
+\rmd s^2
+=
+-f(r)\,\rmd t^2
++f(r)^{-1}\rmd r^2
++r^2\rmd\Omega^2.
+\end{equation}
+The tortoise coordinate is defined by $\rmd\rstar/\rmd r=f(r)^{-1}$.
+
+\section{\term{Fourier convention}}
+
+The time dependence is
+\begin{equation}
+\Psi(t,x)
+=
+\int
+\frac{\rmd\omega}{2\pi}
+\,
+\rme^{-\rmi\omega t}
+\psi(\omega,x).
+\end{equation}
+With this convention, $\im\omega<0$ represents temporal decay. A right-moving wave is $\rme^{-\rmi\omega(t-x)}$, while a left-moving wave is $\rme^{-\rmi\omega(t+x)}$.
+
+\section{Operators and resolvents}
+
+The \term{spatial operator}, \term{frequency operator pencil}, and \term{resolvents} are defined by
+\begin{align}
+H
+&=
+-\frac{\rmd^2}{\rmd x^2}+V(x),
+\\
+\vL(\omega)
+&=
+H-\omega^2,
+\\
+\vR(z)
+&=
+(H-z)^{-1},
+\\
+\vG(\omega)
+&=
+\vL(\omega)^{-1}.
+\end{align}
+Some references define the resolvent as $(z-H)^{-1}$, which reverses the overall sign of the \term{Riesz projection}. To avoid this ambiguity, the \term{contour moments} in this book are defined directly by Eq.~\eqref{eq:contour_moments}.
+
+\section{Jost solutions and the Wronskian}
+
+The left and right \term{Jost solutions} are normalized by
+\begin{align}
+f_-(x,\omega)
+&\sim
+\rme^{-\rmi\omega x},
+&&x\longrightarrow-\infty,
+\\
+f_+(x,\omega)
+&\sim
+\rme^{+\rmi\omega x},
+&&x\longrightarrow+\infty.
+\end{align}
+The \term{Wronskian} is
+\begin{equation}
+\vW(\omega)
+=
+f_-\frac{\partial f_+}{\partial x}
+-
+\frac{\partial f_-}{\partial x}f_+.
+\end{equation}
+With this ordering, the \term{Green kernel} carries the minus sign shown in Eq.~\eqref{eq:green_jost_formula}.
+
+\section{Abbreviations}
+
+In the main text, \term{quasinormal mode} is abbreviated QNM, \term{complex scaling method} as CSM, and \term{exceptional point} as EP. Regge--Wheeler and Zerilli are occasionally abbreviated RW and Z, respectively.
+
+\section{Quantum two-point functions}
+
+The retarded Green function is defined by
+\begin{equation}
+G_R(t)
+=
+\rmi\theta(t)\langle[O(t),O(0)]\rangle.
+\end{equation}
+Its Fourier transform uses $\int\rmd t\,\rme^{+\rmi\omega t}$. With this convention, the \term{spectral function} $\rho_O=G^>-G^<$ satisfies $\rho_O=2\im G_R$. We set $\hbar=1$.
+
+\section{Cautions in complex analysis}
+
+Because $z=\omega^2$, the \term{energy plane} and \term{frequency plane} form a double cover. For square roots, logarithms, and the \term{analytic continuation} of \term{Jost solutions}, one must fix the \term{branch cut} and the \term{sheet}. In numerical calculations it is desirable to record not only the point in the complex plane but also the path of analytic continuation used to reach it.
+
+When encircling an exceptional point, one must specify the path in control-parameter space, the \term{parallel-transport convention} for eigenvectors, and the \term{biorthogonal inner product}. \term{Eigenvalue permutation}, the sign of an eigenvector, and the \term{geometric phase} are related but are not identical statements.
+
+\chapter*{About This Revised Draft}
+\addcontentsline{toc}{chapter}{About This Revised Draft}
+
+This revised edition follows the policy that ``research to be done next belongs in research problems, and material unnecessary to the main line should be removed.'' The main text takes a single path: construct the classical Green function from the tortoise coordinate, read its poles and continuous components, connect the same retarded function to quantum commutators, the KMS condition, and ETH matrix elements, and finally return to response invariants. The intended readership is stated explicitly as senior undergraduates. As a physics minimum, we have added coordinates regular at the future horizon, the non-radiative sectors of gravitational perturbations, one complete chain from a source to a waveform and flux, Kerr radiation conditions and \term{superradiance}, and the \term{area entropy} and \term{first law}. The \term{Ryu--Takayanagi formula} is not used in the main derivation; it appears only as a brief signpost from the area law toward boundary theory.
+
+There are no conventional end-of-chapter exercises. Instead, we pose research problems on extremal horizons, long-range Jost functions, numerical implementation of Kerr QNMs, a uniform approximation joining poles and tails, continuous response in de~Sitter space, higher-order exceptional points, and symmetry-resolved ETH. These are not checks of comprehension but starting points for moving beyond the assumptions of the text.
+
+Future revisions will not aim to add chapters for their own sake. A new result will return to the main text only if it changes the causal response connecting source and observer or separates a new invariant from representation-dependent quantities. Comparisons of numerical methods, tables of known frequencies, and broad surveys will remain in research problems or a separate implementation note unless they alter the main line. Roughly one hundred pages of main text excluding references remains an editorial target, not a strict bound that would justify disrupting the order of definitions.

@@ -1,0 +1,188 @@
+\chapter{Horizon Thermality}
+\label{chap:horizon-thermality}
+\chapterepigraph{``There are more things in heaven and earth, Horatio, than are dreamt of in your philosophy.''}{William Shakespeare, \textit{Hamlet}, Act I, Scene 5}
+\chapterepigraph{``For now we see through a glass, darkly.''}{1 Corinthians 13:12, King James Version}
+
+\section{The near-horizon geometry is Rindler spacetime}
+
+For a \term{simple horizon} $r=r_h$ of a static spherically symmetric metric, define the \term{surface gravity} by
+\begin{equation}
+\kappa
+=
+\frac{1}{2}f'(r_h).
+\label{eq:surface-gravity-static}
+\end{equation}
+Near the horizon, $f(r)\simeq2\kappa(r-r_h)$. Introducing the \term{proper distance} $\rho$ through
+\begin{equation}
+r-r_h
+=
+\frac{\kappa}{2}\rho^2,
+\end{equation}
+the $t$--$r$ part of the metric becomes
+\begin{equation}
+\rmd s^2
+\simeq
+-(\kappa\rho)^2\rmd t^2
++\rmd\rho^2.
+\label{eq:near-horizon-rindler}
+\end{equation}
+Locally this is \term{Rindler spacetime}. The tortoise coordinate behaves as
+\begin{equation}
+\rstar
+\simeq
+\frac{1}{2\kappa}
+\log(r-r_h),
+\end{equation}
+and the \term{outgoing null coordinate} $u=t-\rstar$ diverges at the horizon.
+
+\section{\term{Kruskal coordinates} and analyticity}
+
+Introduce a null coordinate regular on the future horizon,
+\begin{equation}
+U
+=
+-\rme^{-\kappa u}.
+\label{eq:kruskal-U}
+\end{equation}
+In the exterior region, $U<0$. An outgoing \term{positive-frequency mode} with respect to the static time is
+\begin{equation}
+\rme^{-\rmi\omega u}
+=
+(-U)^{\rmi\omega/\kappa},
+\label{eq:rindler-mode-U}
+\end{equation}
+which has a \term{branch point} at $U=0$. In the exterior $U<0$, take
+$(-U)^{\rmi\omega/\kappa}=\exp[(\rmi\omega/\kappa)\operatorname{Log}(-U)]$.
+Analytically continuing the \term{positive-frequency mode} through the lower half of the complex $U$ plane to $U>0$ gives
+\begin{equation}
+(-U)^{\rmi\omega/\kappa}
+\longrightarrow
+\rme^{-\pi\omega/\kappa}
+U^{\rmi\omega/\kappa}.
+\label{eq:horizon-branch-continuation}
+\end{equation}
+Combining this with the \term{negative-frequency component} continued through the upper half-plane and imposing \term{canonical normalization}, one obtains for the ratio of the \term{Bogoliubov coefficients} across the horizon
+\begin{equation}
+\left|
+\frac{\beta_\omega}{\alpha_\omega}
+\right|^2
+=
+\rme^{-2\pi\omega/\kappa}.
+\label{eq:bogoliubov-thermal-ratio}
+\end{equation}
+Here $\alpha_\omega$ and $\beta_\omega$ are the Bogoliubov coefficients mixing positive and negative frequencies. Together with \term{canonical normalization}, this gives the bosonic \term{mean occupation number}
+\begin{equation}
+n_H(\omega)
+=
+\frac{1}{\rme^{\beta_H\omega}-1},
+\qquad
+\beta_H
+=
+\frac{2\pi}{\kappa}.
+\label{eq:hawking-occupation}
+\end{equation}
+The \term{Hawking temperature} is therefore
+\begin{equation}
+T_H
+=
+\frac{\kappa}{2\pi}.
+\label{eq:hawking-temperature}
+\end{equation}
+\cite{Hawking:1975vcx,BirrellDavies:1982}
+
+\begin{principlebox}
+The \term{thermal factor} arises from the near-horizon exponential map $U=-\rme^{-\kappa u}$ together with analyticity of positive-frequency modes. The exterior potential does not change the temperature; it changes the probability that the produced quanta reach infinity.
+\end{principlebox}
+
+\section{The greybody factor reappears}
+
+Outgoing modes thermally populated near the horizon must transmit through the effective potential to reach infinity. Using the transmission probability $\Gamma_\ell(\omega)$ from Chapter~\ref{chap:resolvent}, the energy flux of a massless scalar field is
+\begin{equation}
+\frac{\rmd E}{\rmd t\rmd\omega}
+=
+\frac{1}{2\pi}
+\sum_{\ell=0}^{\infty}
+(2\ell+1)
+\frac{
+\omega\Gamma_\ell(\omega)
+}{
+\rme^{\beta_H\omega}-1
+}.
+\label{eq:hawking-greybody-flux}
+\end{equation}
+The \term{Planck distribution} of a planar blackbody is multiplied by scattering data from the black-hole exterior. Classical response theory is therefore used directly in computing quantum radiation.
+
+For a black hole with angular momentum $a$ or charge $Q$, the frequency entering the \term{thermal factor} is the frequency measured with respect to the \term{horizon generator},
+\begin{equation}
+\widetilde\omega
+=
+\omega-m\Omega_H-q\Phi_H.
+\label{eq:horizon-effective-frequency}
+\end{equation}
+Here $m$ is the \term{azimuthal quantum number}, $q$ is the field charge, $\Omega_H$ is the \term{horizon angular velocity}, and $\Phi_H$ is the \term{horizon electric potential}. In the regime $\widetilde\omega<0$, the flux sign of the transmission coefficient must be treated consistently with \term{superradiance}.
+
+\section{The same temperature from \term{Euclidean time}}
+
+Performing the \term{Wick rotation} $t=-\rmi\tau$ in Eq.~\eqref{eq:near-horizon-rindler} gives
+\begin{equation}
+\rmd s_E^2
+\simeq
+\rmd\rho^2
++\kappa^2\rho^2\rmd\tau^2.
+\end{equation}
+Avoiding a \term{conical singularity} at $\rho=0$ requires
+\begin{equation}
+\tau
+\sim
+\tau+\frac{2\pi}{\kappa}.
+\label{eq:euclidean-period}
+\end{equation}
+The period of \term{imaginary time} is therefore $\beta_H$. The calculation using \term{Bogoliubov coefficients} and the calculation using \term{Euclidean regularity} are distinct, but both read the same near-horizon geometry.
+
+\section{Area entropy and the first law}
+
+In this section we set $G=c=\hbar=k_B=1$. If the event-horizon area is $A_H$, the \term{Bekenstein--Hawking entropy} is
+\begin{equation}
+S_{\mathrm{BH}}
+=
+\frac{A_H}{4}.
+\label{eq:bekenstein-hawking-entropy}
+\end{equation}
+\cite{Bekenstein:1973ur,Hawking:1975vcx} Restoring conventional units gives $S_{\mathrm{BH}}=k_Bc^3A_H/(4G\hbar)$. The \term{first law} relating nearby stationary \term{Kerr--Newman black holes} is
+\begin{equation}
+\delta M
+=
+\frac{\kappa}{8\pi}\delta A_H
++\Omega_H\delta J
++\Phi_H\delta Q
+=
+T_H\delta S_{\mathrm{BH}}
++\Omega_H\delta J
++\Phi_H\delta Q.
+\label{eq:black-hole-first-law}
+\end{equation}
+\cite{Bardeen:1973gs} This is not a derivation of the microscopic number of states. What response theory needs is the conversion between fluxes of energy, angular momentum, and charge entering the horizon and the resulting changes in the stationary solution and its entropy.
+
+\paragraph{A signpost toward the Ryu--Takayanagi formula.}
+When classical gravity in a static \term{asymptotically AdS} spacetime describes a \term{boundary quantum theory}, the \term{entanglement entropy} of a spatial boundary region $A$ is
+\begin{equation}
+S_A
+=
+\frac{\operatorname{Area}(\gamma_A)}{4G_N}.
+\label{eq:ryu-takayanagi-signpost}
+\end{equation}
+Here $\gamma_A$ is a \term{codimension-two minimal surface} in the \term{bulk} with the same boundary as $A$ and \term{homologous} to $A$ \cite{Ryu:2006bv}. This extends Eq.~\eqref{eq:bekenstein-hawking-entropy} in the sense that an area is interpreted as an entropy. Because this book does not construct the \term{AdS/CFT} dictionary, however, the formula is not used in later derivations. Time-dependent versions, quantum corrections, and the \term{entanglement wedge} are deferred to research problems only when a concrete response question requires them.
+
+\section{Differences among quantum states}
+
+The Boulware state contains no particles for static observers at infinity but is singular at the horizon. The Hartle--Hawking state is regular on both future and past horizons and places the exterior in a \term{thermal bath} at temperature $T_H$. The Unruh state corresponds to a black hole formed by collapse: incoming modes from past infinity are in their vacuum state while a Hawking flux emerges at future infinity.
+
+Equation~\eqref{eq:hawking-temperature} gives the local horizon temperature scale, but it does not imply that every two-point function is in the same global thermal-equilibrium state. In particular, the Unruh state is not a thermal equilibrium state of the entire static exterior.
+
+\begin{warningbox}
+The \term{Hawking temperature}, the particle flux at infinity, and the response of a \term{local detector} are not the same observable. The temperature is fixed by the \term{surface gravity}; the flux additionally depends on the \term{greybody factor} and the quantum state; and a \term{detection rate} also depends on the detector trajectory and coupling.
+\end{warningbox}
+
+\section{Conclusion of this chapter}
+
+The exponential relation between horizon-regular and static coordinates mixes positive frequencies and gives the temperature $T_H=\kappa/(2\pi)$. Classical scattering in the exterior filters the resulting thermal occupation numbers through the \term{greybody factor}. In the next chapter we formulate thermality not in terms of particle numbers but through the KMS condition for two-point functions.

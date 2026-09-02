@@ -1,0 +1,201 @@
+\chapter{Quasinormal Modes}
+\label{chap:qnm}
+\chapterepigraph{``Rest, rest, perturb\`ed spirit.''}{William Shakespeare, \textit{Hamlet}, Act I, Scene 5}
+
+\section{Three equivalent definitions}
+
+The Green kernel obtained in the previous chapter is
+\begin{equation}
+G(x,x';\omega)
+=
+-\frac{f_-(x_<,\omega)f_+(x_>,\omega)}{\vW(\omega)}.
+\label{eq:qnm-start-green}
+\end{equation}
+When $\vW(\omega)$ vanishes, the solution satisfying the outgoing condition on the left and the solution satisfying the outgoing condition on the right become the same solution.
+
+\begin{definition}[Quasinormal mode]
+A complex frequency $\omega_n$ satisfying
+\begin{equation}
+\vW(\omega_n)=0
+\label{eq:qnm_wronskian_zero}
+\end{equation}
+is called a \term{QNM frequency}. The corresponding nontrivial homogeneous solution $\psi_n(x)$ satisfies radiation conditions directed out of the system at both asymptotic ends.
+\end{definition}
+
+With the time factor $\rme^{-\rmi\omega t}$, the conditions in the black-hole exterior are
+\begin{align}
+\psi_n(x)
+&\sim
+\rme^{-\rmi\omega_n x},
+&&x\longrightarrow-\infty,
+\label{eq:qnm_bc_left}
+\\
+\psi_n(x)
+&\sim
+\rme^{+\rmi\omega_n x},
+&&x\longrightarrow+\infty.
+\label{eq:qnm_bc_right}
+\end{align}
+Outgoing through the left endpoint means entering the event horizon. Thus a \term{QNM} has three equivalent characterizations: a solution of the \term{radiation boundary-value problem}, a zero of the Jost Wronskian, and a pole of the analytically continued Green function.
+
+\section{Simple poles and residues}
+
+If $\vW'(\omega_n)\ne0$, then $\omega_n$ is a \term{simple pole}, and
+\begin{equation}
+\mathop{\mathrm{Res}}_{\omega=\omega_n}
+G(x,x';\omega)
+=
+-\frac{
+f_-(x_<,\omega_n)f_+(x_>,\omega_n)
+}{
+\vW'(\omega_n)
+}.
+\label{eq:qnm_green_residue}
+\end{equation}
+Multiplying a Jost solution by a constant rescales numerator and denominator by the same factor, so this \term{residue} is independent of normalization.
+
+The \term{QNM} waveform $\psi_n$ itself, however, can be multiplied by an arbitrary constant. Let $\bra{O}$ be the observation operation, $\ket{S}$ the source, and $A_n$ the \term{operator-valued residue}. The observed pole contribution is
+\begin{equation}
+\vA_n(\omega)
+=
+\frac{a_n}{\omega-\omega_n},
+\qquad
+a_n
+=
+\bra{O}A_n\ket{S}.
+\label{eq:qnm-observable-residue}
+\end{equation}
+The background-determined frequency, a normalization-dependent waveform, the operator-valued \term{residue}, and an amplitude specified by a source and observer are not the same quantity \cite{Motohashi:2024fwt}.
+
+\begin{principlebox}
+Frequencies alone do not determine a time-domain waveform. The physical \term{mode strength} is the \term{matrix element} obtained by sandwiching the Green-function residue between the source and the observation operation.
+\end{principlebox}
+
+\section{Spatial divergence and temporal decay}
+
+For a damped QNM of a stable black hole, $\im\omega_n<0$. At a fixed position,
+\begin{equation}
+\left|\rme^{-\rmi\omega_n t}\right|
+=
+\rme^{(\im\omega_n)t}
+\end{equation}
+decays. But at the right endpoint the spatial factor satisfies
+\begin{equation}
+\left|\rme^{+\rmi\omega_n x}\right|
+=
+\rme^{-(\im\omega_n)x},
+\end{equation}
+which grows as $x\to+\infty$; the same happens at the left endpoint. This is the result of extending an outward-propagating wavefront over all space with a single complex frequency. It is not a temporal instability.
+
+\begin{warningbox}
+A QNM is not an ordinary $L^2$ eigenfunction. If its divergence on the real axis is ignored and the QNMs are treated as a \term{complete set} in a \term{Hilbert space}, both normalization and the domain of a mode expansion can be misidentified. The \term{complex scaling} defined in Chapter~\ref{chap:complex-scaling} converts this divergence into decay along an analytically continued coordinate.
+\end{warningbox}
+
+\section{Energy fixes the direction of damping}
+
+For a real potential $V(x)\geq0$ and a real solution of \term{finite energy}, define the energy on $[-R,R]$ by
+\begin{equation}
+E_R(t)
+=
+\frac{1}{2}
+\int_{-R}^{R}\rmd x
+\left[
+(\partial_t\Psi)^2
++(\partial_x\Psi)^2
++V\Psi^2
+\right].
+\label{eq:qnm-energy-estimate}
+\end{equation}
+Using the wave equation and integrating by parts gives
+\begin{equation}
+\frac{\rmd E_R}{\rmd t}
+=
+\left[\partial_t\Psi\,\partial_x\Psi\right]_{-R}^{R}.
+\label{eq:qnm-energy-flux-balance}
+\end{equation}
+If only right-moving waves are allowed at the right endpoint and left-moving waves at the left endpoint, then as $R\to\infty$ the right-hand side is the negative flux escaping through the two ends, and the exterior energy cannot increase.
+
+Suppose there were an outgoing mode with $\im\omega>0$. Its spatial profile would decay at both ends and have finite energy, while its time factor would grow exponentially. This contradicts Eq.~\eqref{eq:qnm-energy-flux-balance}. Hence this positive-energy problem has no \term{unstable QNMs}. The argument does not determine the damping rate and cannot be applied unchanged when $V$ is not positive, when rotation permits negative horizon flux, or when gravitational constraints must be included. Stability is not an empirical pattern in a frequency table; it is a question of proving the sign of an appropriate energy and its \term{boundary flux}.
+
+\section{A solvable barrier}
+
+To see the origin of QNMs in one formula, consider the \term{P\"oschl--Teller barrier}
+\begin{equation}
+V(x)
+=
+\frac{V_0}{\cosh^2(\alpha x)},
+\qquad
+V_0>0,
+\quad
+\alpha>0.
+\label{eq:poschl_teller_potential}
+\end{equation}
+With the change of variable $y=(1+\tanh\alpha x)/2$, the equation becomes a \term{hypergeometric equation}. Imposing the radiation conditions at both ends gives
+\begin{equation}
+\omega_n
+=
+\mathord{\pm}
+\sqrt{V_0-\frac{\alpha^2}{4}}
+-\rmi\alpha\left(n+\frac{1}{2}\right),
+\qquad
+n=0,1,2,\ldots.
+\label{eq:poschl_teller_qnm}
+\end{equation}
+The barrier height controls the real part, while its width controls the spacing of damping rates. This is not the exact black-hole potential, but it shows that open boundary conditions alone generate complex frequencies.
+
+\section{The photon-sphere limit}
+
+For Schwarzschild spacetime with $\ell\gg1$, the leading part of the effective potential is $f(r)\ell(\ell+1)/r^2$, whose maximum lies at the \term{unstable photon orbit} $r=3M$. The angular frequency and \term{Lyapunov exponent} of that orbit are both
+\begin{equation}
+\Omega_c
+=
+\Lambda_c
+=
+\frac{1}{3\sqrt{3}M}.
+\end{equation}
+For fixed \term{overtone} number $n$,
+\begin{equation}
+\omega_{\ell n}
+\simeq
+\Omega_c\left(\ell+\frac{1}{2}\right)
+-\rmi\Lambda_c\left(n+\frac{1}{2}\right).
+\label{eq:eikonal_qnm}
+\end{equation}
+Local ray dynamics explains the slowly damped part of the spectrum, but finite-$\ell$ poles, residues, and the \term{branch cut} are not obtained from this approximation. For example, the fundamental $\ell=2$ gravitational mode is
+\begin{equation}
+M\omega_{20}
+\simeq
+0.37367-0.08896\rmi.
+\label{eq:schwarzschild_fundamental_qnm}
+\end{equation}
+\cite{Berti:2009kk}
+
+\section{Diagnostics for numerical calculations}
+
+Direct integration finds zeros of the Wronskian of the left and right Jost solutions. The \term{continued-fraction method} imposes a \term{minimal-solution condition} on an \term{asymptotic series}. Time evolution estimates poles from the waveform. The complex-scaling method introduced in Chapter~\ref{chap:complex-scaling} converts outgoing waves into decaying boundary conditions. Although the methods differ, their diagnostics are common.
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.8em]
+\item The time convention and the radiation conditions at both ends must be consistent.
+\item The poles must remain stable when the basis size, domain, and numerical precision are varied.
+\item Discretized continuous components must be separated from genuine poles.
+\item If a physical amplitude is required, the residue must converge as well.
+\end{enumerate}
+
+Complex-scaling calculations for Schwarzschild and Reissner--Nordstr\"om are given in Ref.~\cite{Ogawa:2026veu}. In a \term{non-self-adjoint problem}, sensitivity of eigenvalues must be distinguished from sensitivity of the real-frequency response \cite{Jaramillo:2020tuu}.
+
+\section{Conclusion of this chapter}
+
+A QNM is not a material vibration intrinsic to a black hole. It is a resonance pole of a Green function with open boundary conditions. The pole is important, but a response also requires the residue, source, observation operation, and continuous components. In the next chapter we invert the pole and continuous contributions and ask which parts of the time-domain waveform they control.
+
+\begin{researchproblem}[Numerical implementation of Kerr QNMs]
+Solve the angular and radial Teukolsky equations simultaneously and track the fundamental QNM with $s=-2$ and $\ell=m=2$ from $a/M=0$ into the near-extremal regime \cite{Teukolsky:1972my,Leaver:1985ax}. At minimum, construct an implementation satisfying the following requirements.
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.8em]
+\item Determine the angular eigenvalue and $\omega$ in the same iteration or \term{contour method}.
+\item Vary the series order, numerical domain, and precision to separate stable poles from discretized continuous components.
+\item Verify that the Schwarzschild value is recovered as $a\to0$.
+\item If possible, compute the Green-function residue and identify quantities invariant under a change of normalization.
+\end{enumerate}
+
+Reproducing a frequency table is only the entry point. Formulate, from the implementation itself, a research problem concerning at least one of the following: the near-extremal \term{branch structure}, the \term{zero-damped mode}, or the source-dependent \term{excitation amplitude}.
+\end{researchproblem}

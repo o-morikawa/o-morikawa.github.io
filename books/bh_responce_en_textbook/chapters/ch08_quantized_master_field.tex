@@ -1,0 +1,161 @@
+\chapter{Quantization of the Master Field}
+\label{chap:quantized-master-field}
+\chapterepigraph{``What you have inherited from your fathers, earn it, in order to possess it.''}{Johann Wolfgang von Goethe, \textit{Faust I}, ``Night''}
+
+\section{Reading the same action quantum mechanically}
+
+Let $\Psi(t,x)$ be one of the master fields used in the classical theory, with action
+\begin{equation}
+I[\Psi]
+=
+\frac{1}{2}
+\int \rmd t\rmd x
+\left[
+(\partial_t\Psi)^2
+-(\partial_x\Psi)^2
+-V(x)\Psi^2
+\right].
+\label{eq:quantum-master-action}
+\end{equation}
+Angular-momentum labels have been suppressed. The \term{canonical momentum} is
+\begin{equation}
+\Pi(t,x)
+=
+\partial_t\Psi(t,x).
+\end{equation}
+Under \term{quantization}, $\Psi$ and $\Pi$ become operators satisfying the \term{equal-time commutation relations}
+\begin{align}
+[\Psi(t,x),\Pi(t,x')]
+&=
+\rmi\delta(x-x'),
+\label{eq:canonical-master-commutator}
+\\
+[\Psi(t,x),\Psi(t,x')]
+&=
+[\Pi(t,x),\Pi(t,x')]
+=0.
+\end{align}
+We set $\hbar=1$. The \term{Heisenberg equation} is the same as the classical equation,
+\begin{equation}
+\left(
+\partial_t^2-\partial_x^2+V
+\right)\Psi
+=0.
+\label{eq:quantized-master-eom}
+\end{equation}
+For a linear field, the classical \term{propagator} therefore governs the quantum-field \term{commutator} as well.
+
+\section{The retarded Green function is a commutator}
+
+Let the quantum state be described by a \term{density operator} $\rho$. With the sign convention used in this book, define the retarded Green function by
+\begin{equation}
+G_R(t,x;t',x')
+=
+\rmi\theta(t-t')
+\Tr\left(
+\rho[\Psi(t,x),\Psi(t',x')]
+\right).
+\label{eq:quantum-retarded-green}
+\end{equation}
+For a linear equation, the \term{commutator} is a complex-valued \term{c-number} rather than a nontrivial operator, so the free-field $G_R$ is independent of the state $\rho$. The equal-time commutation relations fix the jump in the time derivative, and hence
+\begin{equation}
+\left(
+\partial_t^2-\partial_x^2+V
+\right)G_R(t,x;t',x')
+=
+\delta(t-t')\delta(x-x').
+\label{eq:retarded-green-quantum-eom}
+\end{equation}
+
+If an external source $J$ is coupled through
+\begin{equation}
+H_{\mathrm{int}}(t)
+=
+-\int\rmd x\,J(t,x)\Psi(t,x),
+\end{equation}
+then the linear \term{Kubo response} is
+\begin{equation}
+\delta\langle\Psi(t,x)\rangle
+=
+\int\rmd t'\rmd x'\,
+G_R(t,x;t',x')J(t',x').
+\label{eq:kubo-master-response}
+\end{equation}
+This is the same solution obtained from the classical Green function in Chapter~\ref{chap:resolvent}.
+
+\begin{principlebox}
+The retarded Green function is the quantity that connects classical response to \term{quantum linear response}. For a linear field, its analytically continued QNM poles are the same as in the classical theory. Information about the quantum state enters not through the \term{commutator}, but through the anticommutator sector.
+\end{principlebox}
+
+\section{Two-point functions that contain the state}
+
+To distinguish quantum states, use the \term{Wightman functions}
+\begin{align}
+G^>(1,2)
+&=
+\Tr\left(
+\rho\Psi(1)\Psi(2)
+\right),
+\label{eq:wightman-greater}
+\\
+G^<(1,2)
+&=
+\Tr\left(
+\rho\Psi(2)\Psi(1)
+\right).
+\label{eq:wightman-less}
+\end{align}
+Here $1=(t,x)$ and $2=(t',x')$ abbreviate spacetime points. Define the \term{spectral function} and \term{symmetric correlator} by
+\begin{align}
+\rho_\Psi(1,2)
+&=
+G^>(1,2)-G^<(1,2),
+\label{eq:master-spectral-function}
+\\
+F_\Psi(1,2)
+&=
+\frac{1}{2}
+\left[
+G^>(1,2)+G^<(1,2)
+\right].
+\label{eq:master-symmetric-correlator}
+\end{align}
+Then $G_R=\rmi\theta(t-t')\rho_\Psi$. The function $\rho_\Psi$ measures what the system is capable of responding to, while $F_\Psi$ measures the fluctuations present in the state. In thermal equilibrium, they are related by the \term{fluctuation--dissipation relation} introduced in Chapter~\ref{chap:thermal-green}.
+
+\section{Expansion in \term{scattering modes}}
+
+Let $u_{\omega a}(t,x)$ be normalized real-frequency solutions. The label $a$ distinguishes independent \term{incoming channels}, such as modes incident from infinity or emerging from the past horizon. The field can be expanded as
+\begin{equation}
+\Psi(t,x)
+=
+\sum_a
+\int_0^\infty\rmd\omega
+\left[
+a_{\omega a}u_{\omega a}(t,x)
++a^\dagger_{\omega a}u^*_{\omega a}(t,x)
+\right].
+\label{eq:master-mode-expansion}
+\end{equation}
+With \term{flux normalization},
+\begin{equation}
+[a_{\omega a},a^\dagger_{\omega' b}]
+=
+\delta_{ab}\delta(\omega-\omega').
+\end{equation}
+The reflection and transmission coefficients appear in the same classical scattering matrix; in the quantum theory they describe the transformation between channels of \term{creation and annihilation operators}.
+
+QNMs must not be used as the fundamental operators in this expansion. A QNM is a complex-frequency resonance: a pole obtained by analytically continuing the complete real-frequency \term{scattering basis}. Preserving the \term{canonical commutation relations} of the quantum field requires the continuous components as well as the poles.
+
+\section{Three vacuum states}
+
+For a static black hole, the state depends on the time coordinate with respect to which positive frequency is defined. The vacuum associated with the static exterior time is the \term{Boulware state}; the state with no incoming particles from past infinity but a future \term{Hawking flux} is the \term{Unruh state}; and the state in which the two exteriors of an eternal black hole are in thermal equilibrium is the \term{Hartle--Hawking state}.
+
+The essential point in this classification is to separate the equation of motion from the state. The same $G_R$ and scattering coefficients can be combined with different \term{occupation numbers}. Whether the state is regular at the horizon or carries a thermal flux at infinity is determined by the choice of state.
+
+\begin{warningbox}
+There is no unique ``\term{black-hole vacuum}.'' QNM frequencies are fixed by the background and radiation conditions, whereas particle numbers, noise, and Hawking flux depend on the quantum state and on the observer.
+\end{warningbox}
+
+\section{Conclusion of this chapter}
+
+Canonical quantization of the master action makes the classical retarded Green function reappear as the field commutator. Poles and greybody factors are inherited from the classical theory, while the quantum state enters through the \term{Wightman functions} and \term{occupation numbers}. In the next chapter we show how analyticity near the horizon makes those occupation numbers thermal.

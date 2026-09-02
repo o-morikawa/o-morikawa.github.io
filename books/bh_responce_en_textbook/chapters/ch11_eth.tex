@@ -1,0 +1,131 @@
+\chapter{The Eigenstate Thermalization\\ Hypothesis}
+\label{chap:eth}
+\chapterepigraph{%
+  \jp{井蛙不可以語於海者，拘於虛也；\\
+  夏蟲不可以語於冰者，篤於時也；\\
+  曲士不可以語於道者，束於教也。}%
+}{\textit{Zhuangzi}, Outer Chapters, ``Autumn Floods''}
+
+\section{Can a single eigenstate be thermal?}
+
+The \term{KMS condition} in the previous chapter characterizes correlation functions in thermal equilibrium. An \term{isolated quantum system}, however, evolves \term{unitarily} and remains in a \term{pure state}. The \term{eigenstate thermalization hypothesis} (\term{ETH}) seeks the reason why observables probing only a small number of degrees of freedom can nevertheless approach thermal-equilibrium values in the Hamiltonian eigenstates themselves \cite{Deutsch:1991,Srednicki:1994,Rigol:2008,DAlessio:2016}.
+Let
+\begin{equation}
+H\ket{n}
+=
+E_n\ket{n}
+\end{equation}
+and denote matrix elements of an observable $O$ by $O_{mn}=\bra{m}O\ket{n}$. The standard \term{ETH ansatz} is
+\begin{equation}
+O_{mn}
+=
+\overline O(\overline E)\delta_{mn}
++\rme^{-S(\overline E)/2}
+f_O(\overline E,\omega)R_{mn},
+\label{eq:eth-ansatz}
+\end{equation}
+where
+\begin{equation}
+\overline E
+=
+\frac{E_m+E_n}{2},
+\qquad
+\omega
+=
+E_m-E_n.
+\end{equation}
+Here $S(E)$ is the \term{microcanonical entropy}; $\overline O$ and $f_O$ are smooth functions on macroscopic energy scales; and $R_{mn}$ is an irregular quantity with zero mean and unit variance.
+
+The diagonal term states that the static expectation value in a single eigenstate approaches the \term{microcanonical average}. The factor $\rme^{-S/2}$ in the off-diagonal term makes each individual transition small, but when combined with an exponentially large number of final states it produces a finite dynamical correlation function. \term{ETH} is not a theorem valid for every Hamiltonian and every observable. \term{Integrability}, \term{localization}, \term{quantum many-body scars}, and symmetries all modify its domain of validity.
+
+\section{From matrix elements to the spectral function}
+
+The Wightman function in a single \term{energy eigenstate} $\ket{n}$ is
+\begin{equation}
+G_n^>(t)
+=
+\bra{n}O(t)O(0)\ket{n}
+=
+\sum_m
+\rme^{-\rmi(E_m-E_n)t}
+|O_{nm}|^2.
+\label{eq:eigenstate-wightman}
+\end{equation}
+Fourier transformation gives
+\begin{equation}
+G_n^>(\omega)
+=
+2\pi
+\sum_m
+|O_{nm}|^2
+\delta\left(
+\omega-E_m+E_n
+\right).
+\label{eq:eigenstate-spectral-sum}
+\end{equation}
+Insert Eq.~\eqref{eq:eth-ansatz} and approximate the \term{density of states} smoothly near $E_n$. Using the thermodynamic relation
+\begin{equation}
+\beta(E)
+=
+\frac{\partial S(E)}{\partial E},
+\label{eq:microcanonical-beta}
+\end{equation}
+and expanding the entropy for small $\omega$, the ratio of positive- and negative-frequency components becomes
+\begin{equation}
+\frac{G_n^>(\omega)}{G_n^<(\omega)}
+\simeq
+\rme^{\beta(E_n)\omega}.
+\label{eq:eth-detailed-balance}
+\end{equation}
+Thus a \term{coarse-grained} two-point function in a single high-energy eigenstate can reproduce the KMS \term{detailed-balance} relation of the previous chapter.
+
+\begin{principlebox}
+The place where \term{ETH} enters response theory is not the QNM frequency itself but the matrix elements of the observable. The \term{diagonal elements} determine static thermodynamic behavior, while the envelope $f_O$ of the \term{off-diagonal elements} determines the spectral function and dissipation.
+\end{principlebox}
+
+\section{Resolve symmetries first}
+
+If a \term{conserved charge} $Q$ commutes with the Hamiltonian, the \term{Hilbert space} decomposes into \term{sectors of fixed charge}. Standard ETH must be formulated within a single \term{irreducible sector}, without mixing different charge sectors. If the observable itself carries charge, \term{selection rules} leave only matrix elements between appropriate sectors. Thus the $R_{mn}$ in Eq.~\eqref{eq:eth-ansatz} must not be treated as independent random variables without regard to symmetry.
+
+When several \term{conserved charges} fail to commute, giving a \term{non-Abelian symmetry}, there is no basis that diagonalizes all charges simultaneously, and degeneracies associated with \term{symmetry multiplets} arise. \term{Non-Abelian ETH} incorporates an \term{approximately microcanonical subspace} and the \term{representation structure} of the symmetry into the ansatz in order to compare time averages and thermal averages of \term{local observables} \cite{Murthy:2023naETH}. We do not need the details here; we use only the fact that even the standard prescription ``fix the symmetry sector'' itself requires modification.
+
+\section{Higher-form symmetries change the class of observables}
+
+An ordinary \term{global symmetry} acts on pointlike \term{charged operators}, whereas a $p$-form symmetry acts on charged operators extended over $p$ dimensions. In this situation, thermalization of \term{local operators} does not guarantee that line- or surface-supported operators thermalize to the same ensemble.
+
+Fukushima and Hamazaki showed, under reasonable assumptions, that a $p$-form symmetry in a $(d+1)$-dimensional quantum field theory can violate ETH for many nontrivial $(d-p)$-dimensional observables \cite{Fukushima:2023svf}. In a $(2+1)$-dimensional $\bbZ_2$ \term{lattice gauge theory}, local \term{plaquette operators} thermalize, while \term{extended operators} that excite a \term{magnetic dipole} relax to a \term{generalized Gibbs ensemble} containing the $\bbZ_2$ \term{one-form charge}.
+
+The lesson is that one should not ask a single yes-or-no question, ``Does the system satisfy ETH?'' One must state which symmetries are fixed, what dimensionality and charge the measured observable carries, and which statistical ensemble provides the comparison. The same distinction is required in black-hole systems with \term{gauge fields} and \term{boundary degrees of freedom}; local ETH should not be extrapolated to extended observables without this analysis.
+
+\begin{warningbox}
+Symmetry-induced modifications of ETH do not by themselves establish thermalization or nonthermalization in a particular \term{microscopic black-hole model}. The conserved charges, support of the observable, boundary conditions, and comparison ensemble must first be identified explicitly.
+\end{warningbox}
+
+\section{Where quantum field theory meets black-hole response}
+
+In field theory, ETH for \term{local operators} is not the same statement as ETH for the state of a \term{finite region}. In a \term{conformal field theory}, it has been shown that if \term{local probes} in high-energy \term{primary eigenstates} satisfy ETH, the statement can be extended to observables supported on a finite region and measuring finite energy \cite{Lashkari:2018CFTETH}. This is an example of the additional assumptions needed to move from local matrix elements to the response of a \term{subsystem}.
+
+Black-hole linear response is described by the retarded Green function $G_R$, whose imaginary part on the real axis is the spectral function of the operator $O$. If a \term{microscopic Hamiltonian} and the operator coupled to the external field satisfy ETH in the appropriate symmetry sector, the following correspondences are expected.
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.8em]
+\item The derivative of the entropy $S(E)$ determines an \term{effective temperature}.
+\item $f_O(E,\omega)$ determines the smooth envelope of absorption and emission.
+\item \term{Coarse graining} the discrete lines at \term{finite entropy} produces a smooth spectral function.
+\item Poles of the analytic continuation of the corresponding retarded function can approach the classical response poles.
+\end{enumerate}
+
+This is not a derivation of ETH from classical QNMs. A QNM is a pole in the analytic continuation of a \term{coarse-grained} retarded response, whereas ETH is a hypothesis about microscopic matrix elements. Connecting them requires separate control of symmetry-preserving coarse graining, the operator correspondence, and \term{finite-entropy} errors.
+
+\section{The physics-minimum scope}
+
+The \term{random-matrix models} of ETH, \term{quantum many-body scars}, integrable systems, \term{many-body localization}, and \term{out-of-time-order correlators} are each independent subjects. The main line of this book requires only the ansatz \eqref{eq:eth-ansatz}, the spectral sum \eqref{eq:eigenstate-spectral-sum}, its connection to the KMS condition, and the modifications of the domain of validity caused by symmetries and the choice of observables.
+
+Within this scope, ETH is not a survey of the information problem but the endpoint that connects retarded response to microscopic matrix elements. A new symmetry or microscopic model should return to the main text only when it actually changes the response function or the statistical ensemble against which it is compared.
+
+\section{Conclusion of this chapter}
+
+ETH is a hypothesis about matrix elements that allows thermal two-point functions to emerge from a single high-energy eigenstate. Its meeting point with black-hole response is not the numerical value of a QNM frequency but the spectral function, detailed balance, and symmetry-preserving coarse graining. Commuting charges, noncommuting charges, and \term{higher-form symmetries} change the sectors, observables, and statistical ensembles relevant to any claim of thermalization.
+
+\begin{researchproblem}[Symmetry-resolved ETH response]
+Choose a finite-entropy gauge theory or \term{holographic Hamiltonian}. Identify its ordinary global charges, higher-form charges, and the transformation properties of the local and \term{extended operators} to be measured. Measure matrix elements sector by sector, and distinguish observables for which standard ETH holds from those requiring a \term{generalized Gibbs ensemble}. Then compare the real-axis \term{spectral density} of the coarse-grained retarded Green function with its analytically continued poles. Do not assume agreement with a classical black hole in advance; report as results the frequency window, \term{coarse-graining width}, and entropy dependence of the errors for which the comparison holds.
+\end{researchproblem}

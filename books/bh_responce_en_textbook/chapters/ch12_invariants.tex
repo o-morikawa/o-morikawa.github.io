@@ -1,0 +1,124 @@
+\chapter{Response Invariants}
+\label{chap:response-invariants}
+\chapterepigraph{``In discussion it is not so much weight of authority as force of argument that should be demanded.''}{Marcus Tullius Cicero, \textit{De Natura Deorum}, I.10, trans.\ H.\ Rackham}
+
+\section{What survives a change of representation}
+
+The choice of master field, coordinate, basis, \term{complex-scaling angle}, and eigenvector \term{normalization} is necessary for a calculation, but none of these choices is by itself an observable. We conclude the book by organizing the hierarchy of quantities that make up a response.
+
+Write the frequency-domain equation as
+\begin{equation}
+\vL(\omega)\ket{\Psi}
+=
+\ket{S}.
+\end{equation}
+Under an \term{invertible field transformation} $B(\omega)$ and an invertible recombination $A(\omega)$ of the equations, let
+\begin{align}
+\ket{\Psi'}
+&=
+B\ket{\Psi},
+\\
+\vL'
+&=
+A\vL B^{-1},
+\\
+\ket{S'}
+&=
+A\ket{S}.
+\end{align}
+Then
+\begin{equation}
+\vG'
+=
+B\vG A^{-1}.
+\label{eq:green-field-redefinition}
+\end{equation}
+If the observation operation is transformed as $\bra{O'}=\bra{O}B^{-1}$, then
+\begin{equation}
+\bra{O'}\vG'\ket{S'}
+=
+\bra{O}\vG\ket{S}.
+\label{eq:physical-amplitude-invariant}
+\end{equation}
+Thus, although components of the \term{Green operator} change, the amplitude connecting the same physical source to the same observer does not.
+
+\section{What should be compared}
+
+When comparing results from different calculations, do not mix the following levels.
+
+\paragraph{Representation.}
+To compare $\rstar$, $V$, $\psi_n$, or basis coefficients, match the coordinate, field definition, and \term{normalization}.
+
+\paragraph{Spectrum.}
+To compare QNM poles, branch cuts, or a \term{Riesz cluster}, match the boundary conditions, \term{Riemann surface}, and \term{contour}.
+
+\paragraph{Classical response.}
+To compare $\bra{O}\vG\ket{S}$, the scattering matrix, or a greybody factor, match the physical source, observation operation, and flux normalization.
+
+\paragraph{Quantum state.}
+To compare $G^>$, $G^<$, particle numbers, or noise, match the state, time-evolution generator, and observer.
+
+\paragraph{Thermalization.}
+To compare $S(E)$, $f_O(E,\omega)$, or \term{charge sectors}, match the \term{coarse graining}, symmetries, and statistical ensemble.
+
+QNM frequencies are stable under \term{admissible} field redefinitions, although a pole crossing a \term{branch cut} requires a specification of the \term{sheet}. An \term{operator-valued residue} transforms with the representation, whereas the matrix element in Eq.~\eqref{eq:physical-amplitude-invariant} is invariant. At an exceptional point, do not compare individual residues; compare $M_0$, $M_1$, and sourced \term{Laurent coefficients} defined with the same contour.
+
+\section{Dispersion relations from causality}
+
+A retarded Green function vanishes for $t<0$. This \term{causality} makes $G_R(\omega)$ analytic in the \term{upper half-plane}. For matrix elements that decay sufficiently rapidly at infinity, the real and imaginary parts on the real axis satisfy
+\begin{align}
+\re G_R(\omega)
+&=
+\frac{1}{\pi}
+\mathop{\mathrm{P}}
+\int_{-\infty}^{\infty}
+\frac{\im G_R(\omega')}{\omega'-\omega}
+\,\rmd\omega',
+\label{eq:kramers-kronig-real}
+\\
+\im G_R(\omega)
+&=
+-\frac{1}{\pi}
+\mathop{\mathrm{P}}
+\int_{-\infty}^{\infty}
+\frac{\re G_R(\omega')}{\omega'-\omega}
+\,\rmd\omega'.
+\label{eq:kramers-kronig-imag}
+\end{align}
+Here $\mathrm P$ denotes the \term{Cauchy principal value}. If constants or polynomial terms remain at high frequency, appropriate \term{subtractions} are required.
+
+These \term{dispersion relations} express, directly on the real axis, why poles alone are insufficient and continuous components are also needed. One cannot arbitrarily change dispersion while leaving absorption unchanged. The relations also provide a numerical consistency check comparing the real and imaginary parts of a computed Green function.
+
+\section{One equation from classical response to quantum statistics}
+
+The main line of this book can be summarized by the following \term{causal amplitude}:
+\begin{equation}
+\vA_R(\omega)
+=
+\bra{O}
+\left(
+H-(\omega+\rmi0)^2
+\right)^{-1}
+\ket{S}.
+\label{eq:book-central-amplitude}
+\end{equation}
+The geometry enters through $H$; the horizon through the $+\rmi0$ boundary value and the radiation conditions; and the external forcing and detector through $\ket S$ and $\bra O$. Analytic continuation reveals QNMs and exceptional points, while the imaginary part on the real axis gives absorption. After quantization, the same object becomes a commutator; specifying a state adds the KMS condition and fluctuation--dissipation relation. Returning to microscopic eigenstates, its \term{spectral density} can be represented in terms of ETH matrix elements.
+
+\begin{principlebox}
+Preserve the causal response, not a particular representation. The tortoise coordinate, Jost solutions, QNMs, complex scaling, Riesz clusters, KMS condition, and ETH are tools for reading Eq.~\eqref{eq:book-central-amplitude} in different regimes.
+\end{principlebox}
+
+\newpage
+\section{The boundary of the physics minimum}
+
+The connection from nonlinear merger to ringdown, the \term{self-force}, connections to \term{numerical relativity}, the \term{AdS/CFT} dictionary, \term{microscopic states} of \term{quantum gravity}, and \term{information recovery} are all important subjects. But adding one survey chapter on each would not deepen the causal response developed here. They should enter a future edition only when they can be reduced to a concrete source, observable, Green function, or matrix element.
+
+For the same reason, lists of numerical methods and tables of known QNM frequencies have been kept out of the main text. Necessary calculations are placed in research problems, where the emphasis is on diagnostic criteria rather than on quoted results. When that research is completed, only results that alter the main line should return to the text; the rest should remain as updated research problems.
+
+\section{Conclusion}
+
+A black hole is a scatterer that absorbs classical fields, an open system with resonances, and a horizon that produces thermal fluctuations in quantum fields. These need not be treated as unrelated metaphors. Once the causal Green function is placed at the center, classical-field response, the \term{non-self-adjoint spectrum}, \term{quantum linear response}, and thermalization become successive descriptions of the same problem.
+
+The physics minimum adopted in this book is not merely a restrictive device for keeping the text short. It is a choice designed to keep sight of which calculations actually reach observables.
+
+\chapterepigraph{``And thence we came forth to see again the stars.''}{Dante Alighieri, \textit{Inferno}, Canto XXXIV, line 139}

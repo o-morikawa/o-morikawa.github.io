@@ -1,0 +1,341 @@
+\chapter{The Tortoise Coordinate}
+\label{chap:tortoise}
+\chapterepigraph{``Put off thy shoes from off thy feet, for the place whereon thou standest is holy ground.''}{Exodus 3:5, King James Version}
+
+\section{A black hole is an open wave system}
+
+The purpose of choosing generalized coordinates in mechanics is not merely to rewrite the same motion in different symbols. It is to encode constraints and symmetries directly into the coordinates. The tortoise coordinate plays the same role in \term{black-hole perturbation theory}.
+
+Send a wave packet toward a black hole from far away. Part of it is reflected by the \term{effective potential}, while part crosses the \term{horizon}. Once a signal reaches the \term{horizon}, it does not return to the exterior region. Thus, if the exterior alone is regarded as the system, energy escapes through two \term{asymptotic ends}. This is not a standing-wave problem in a box but a \term{scattering problem} with two ends.
+
+Throughout this chapter we use \term{geometrized units}
+\begin{equation}
+G=c=1
+\label{eq:geometrized_units}
+\end{equation}
+and the metric signature $(-,+,+,+)$. Here $G$ is Newton's constant and $c$ is the speed of light. We first restrict attention to static, spherically symmetric background spacetimes.
+
+\section{Static spherically symmetric spacetimes}
+
+Write the exterior metric as
+\begin{equation}
+\rmd s^2
+=
+-f(r)\,\rmd t^2
++\frac{\rmd r^2}{f(r)}
++r^2\rmd\Omega^2
+\label{eq:sss_metric}
+\end{equation}
+where $t$ is the \term{static time}, $r$ is the \term{areal radius}, and
+\begin{equation}
+\rmd\Omega^2
+=
+\rmd\vartheta^2
++\sin^2\vartheta\,\rmd\varphi^2
+\end{equation}
+is the metric on the unit two-sphere. Assume that $f(r)$ has a simple zero at $r=r_h$:
+\begin{align}
+f(r_h)&=0,
+&
+f'(r_h)&\ne 0.
+\label{eq:simple_horizon}
+\end{align}
+A prime denotes differentiation with respect to $r$. The radius $r_h$ is that of a \term{Killing horizon}.
+
+For the metric \eqref{eq:sss_metric}, $g_{rr}=f^{-1}$ diverges at the horizon. This does not mean that the curvature diverges. Rather, the static coordinates are ill suited to describing light rays that cross the horizon. Before imposing boundary conditions on the wave equation, we must remove this coordinate artifact.
+
+\section{Deriving the tortoise coordinate from radial light rays}
+
+For a \term{radial null geodesic} at fixed angles, $\rmd\Omega=0$ and $\rmd s^2=0$. Equation \eqref{eq:sss_metric} therefore gives
+\begin{equation}
+\frac{\rmd t}{\rmd r}
+=
+\mathord{\pm}\frac{1}{f(r)}.
+\label{eq:null_slope_r}
+\end{equation}
+We now replace the radial coordinate $r$ by $\rstar$, defined through
+\begin{equation}
+\frac{\rmd \rstar}{\rmd r}
+=
+\frac{1}{f(r)}.
+\label{eq:tortoise_definition}
+\end{equation}
+The coordinate $\rstar$ is called the \term{tortoise coordinate}. Its additive constant is arbitrary and corresponds to a phase convention for scattering amplitudes.
+
+Equation \eqref{eq:null_slope_r} becomes
+\begin{equation}
+\frac{\rmd t}{\rmd \rstar}
+=
+\mathord{\pm}1.
+\end{equation}
+Accordingly, define the \term{retarded time} and \term{advanced time}, respectively, by
+\begin{align}
+u&=t-\rstar,
+&
+v&=t+\rstar.
+\label{eq:null_coordinates}
+\end{align}
+Then $u$ is constant along outgoing light rays, while $v$ is constant along ingoing light rays.
+
+Near the horizon, expand $f(r)$ to first order:
+\begin{equation}
+f(r)
+=
+f'(r_h)(r-r_h)
++O\bigl((r-r_h)^2\bigr).
+\end{equation}
+Integrating Eq.~\eqref{eq:tortoise_definition} gives
+\begin{equation}
+\rstar
+=
+\frac{1}{f'(r_h)}
+\log|r-r_h|
++O(1).
+\label{eq:tortoise_near_horizon}
+\end{equation}
+A simple \term{event horizon} is therefore sent to $\rstar=-\infty$ as viewed from the exterior. The tortoise coordinate does not remove the horizon; it moves it to the \term{asymptotic end} where wave boundary conditions should be imposed.
+
+\begin{principlebox}
+The tortoise coordinate translates the \term{causal structure} of the horizon into the asymptotic structure of a one-dimensional scattering problem. Because the horizon sits at $\rstar=-\infty$, a ``wave entering the horizon'' can be defined by the direction of a \term{plane wave}.
+\end{principlebox}
+
+\section{Coordinates that cross the horizon}
+
+The tortoise coordinate sends the horizon to infinity, but to cross the horizon itself we use the advanced time $v=t+\rstar$ as a coordinate. Substituting $\rmd t=\rmd v-f^{-1}\rmd r$ into Eq.~\eqref{eq:sss_metric} yields
+\begin{equation}
+\rmd s^2
+=
+-f(r)\,\rmd v^2
++2\,\rmd v\rmd r
++r^2\rmd\Omega^2.
+\label{eq:ingoing-ef-metric}
+\end{equation}
+This metric remains nondegenerate at $f(r_h)=0$ and defines ingoing \term{Eddington--Finkelstein coordinates} that cross the future horizon. It also makes clear that the divergence of $g_{rr}$ in static coordinates was a coordinate artifact.
+
+With the time factor $\rme^{-\rmi\omega t}$, a wave entering the horizon takes the form
+\begin{equation}
+\rme^{-\rmi\omega t}\rme^{-\rmi\omega\rstar}
+=
+\rme^{-\rmi\omega v},
+\label{eq:ingoing-ef-regular-mode}
+\end{equation}
+which depends only on the regular coordinate $v$. By contrast, an outgoing wave depends on $u=t-\rstar$ and emerges from the static exterior at the future horizon. Thus the condition ``ingoing at the event horizon'' is not a sign to memorize; it is the condition that selects a solution that is regular and causal on the future horizon. In Chapter~\ref{chap:horizon-thermality}, the same regularity will be extended to complex coordinates to obtain the thermal factor.
+
+\section{Schwarzschild spacetime}
+
+For a \term{Schwarzschild black hole} of mass $M>0$,
+\begin{equation}
+f(r)
+=
+1-\frac{2M}{r},
+\label{eq:schwarzschild_f}
+\end{equation}
+and the \term{event horizon} is at $r_h=2M$. Integrating Eq.~\eqref{eq:tortoise_definition} gives
+\begin{equation}
+\rstar
+=
+r
++2M\log\left(\frac{r}{2M}-1\right).
+\label{eq:schwarzschild_tortoise}
+\end{equation}
+The additive constant has been absorbed into the convention used to make the argument of the logarithm dimensionless. The exterior region $2M<r<\infty$ is mapped to
+\begin{equation}
+-\infty<\rstar<\infty.
+\end{equation}
+
+The near-horizon and asymptotically far forms are, respectively,
+\begin{align}
+\rstar
+&=
+2M\log\left(\frac{r-2M}{2M}\right)
++O(1),
+&& r\longrightarrow 2M+0,
+\label{eq:schwarzschild_tortoise_hor}
+\\
+\rstar
+&=
+r+2M\log\left(\frac{r}{2M}\right)
++O(r^{-1}),
+&& r\longrightarrow\infty.
+\label{eq:schwarzschild_tortoise_inf}
+\end{align}
+Even at infinity, $\rstar$ and $r$ differ by a logarithmic term. This long-range phase cannot be ignored in precision scattering amplitudes or asymptotic expansions.
+
+In the $r$ coordinate the horizon lies at a finite location, whereas in the $\rstar$ coordinate the entire exterior becomes the real line. The event horizon and \term{spatial infinity} are the left and right asymptotic regions, respectively.
+
+\section{Reducing the scalar wave equation to one dimension}
+
+Let $\Phi$ be a \term{massless scalar field} on the background metric and let $J$ be an external source. The field equation is
+\begin{equation}
+\nabla_\mu\nabla^\mu\Phi
+=
+J.
+\label{eq:scalar_wave_covariant}
+\end{equation}
+Greek indices run over the four spacetime coordinates. Using \term{spherical harmonics} $Y_{\ell m}$, expand
+\begin{equation}
+\Phi(t,r,\vartheta,\varphi)
+=
+\sum_{\ell=0}^{\infty}
+\sum_{m=-\ell}^{\ell}
+\frac{\Psi_{\ell m}(t,r)}{r}
+Y_{\ell m}(\vartheta,\varphi).
+\label{eq:scalar_decomposition}
+\end{equation}
+The integers $\ell$ and $m$ are \term{angular-momentum quantum numbers}, and
+\begin{equation}
+\Delta_{S^2}Y_{\ell m}
+=
+-\ell(\ell+1)Y_{\ell m}.
+\end{equation}
+Here $\Delta_{S^2}$ is the \term{Laplace operator} on the unit sphere. The factor $1/r$ is extracted in advance in order to eliminate the first-derivative term from the radial equation.
+
+Expanding the source in spherical harmonics in the same way and substituting into Eq.~\eqref{eq:scalar_wave_covariant}, one obtains for each $(\ell,m)$
+\begin{equation}
+\left[
+\frac{\partial^2}{\partial t^2}
+-\frac{\partial^2}{\partial \rstar^2}
++V_\ell(r)
+\right]
+\Psi_{\ell m}(t,r)
+=
+S_{\ell m}(t,r).
+\label{eq:master_wave_time}
+\end{equation}
+Here $S_{\ell m}$ is the one-dimensional source determined by $J$, and the \term{effective potential} is
+\begin{equation}
+V_\ell(r)
+=
+f(r)
+\left[
+\frac{\ell(\ell+1)}{r^2}
++\frac{f'(r)}{r}
+\right].
+\label{eq:scalar_effective_potential}
+\end{equation}
+
+\paragraph{Why the first-derivative term disappears.}
+The radial operator contains the combination
+\begin{equation}
+\frac{1}{r^2}
+\frac{\partial}{\partial r}
+\left(
+r^2f(r)
+\frac{\partial}{\partial r}
+\frac{\Psi}{r}
+\right).
+\end{equation}
+Expanding this expression with $\partial_r=f^{-1}\partial_{\rstar}$ combines the term arising from differentiating $\Psi/r$ with the term arising from differentiating the volume factor $r^2$. The coefficient of $\partial_{\rstar}\Psi$ cancels, leaving the Schr\"odinger form in Eq.~\eqref{eq:master_wave_time}. Thus the field redefinition $\Phi=\Psi/r$ is not merely conventional; it transforms the radial operator into a symmetric form.
+
+For Schwarzschild spacetime, Eq.~\eqref{eq:schwarzschild_f} gives
+\begin{equation}
+V_\ell(r)
+=
+\left(1-\frac{2M}{r}\right)
+\left[
+\frac{\ell(\ell+1)}{r^2}
++\frac{2M}{r^3}
+\right].
+\label{eq:schwarzschild_scalar_potential}
+\end{equation}
+This potential approaches zero both at the horizon and at infinity and has a barrier in between. Exterior perturbations can therefore be understood as one-dimensional barrier scattering.
+
+\section{Time convention and radiation conditions}
+
+To move to the frequency domain, we define the time dependence by
+\begin{equation}
+\Psi_{\ell m}(t,r)
+=
+\rme^{-\rmi\omega t}\psi_{\ell m}(r;\omega).
+\label{eq:time_convention}
+\end{equation}
+Here $\omega\in\bbC$ is a \term{complex frequency}. In asymptotic regions where the potential vanishes, the radial function has the form
+\begin{equation}
+\psi(\rstar;\omega)
+\sim
+\rme^{\mathord{\pm}\rmi\omega \rstar}.
+\label{eq:asymptotic_plane_waves}
+\end{equation}
+Combining this with Eq.~\eqref{eq:time_convention} gives
+\begin{align}
+\rme^{-\rmi\omega t}\rme^{-\rmi\omega \rstar}
+&=
+\rme^{-\rmi\omega v},
+\label{eq:ingoing_wave}
+\\
+\rme^{-\rmi\omega t}\rme^{+\rmi\omega \rstar}
+&=
+\rme^{-\rmi\omega u}.
+\label{eq:outgoing_wave}
+\end{align}
+A function of advanced time $v$ is ingoing, while a function of retarded time $u$ is outgoing. Hence the \term{radiation conditions} of purely ingoing behavior at the event horizon and purely outgoing behavior at infinity are
+\begin{align}
+\psi(\rstar;\omega)
+&\sim
+\rme^{-\rmi\omega \rstar},
+&& \rstar\longrightarrow-\infty,
+\label{eq:bh_ingoing_bc}
+\\
+\psi(\rstar;\omega)
+&\sim
+\rme^{+\rmi\omega \rstar},
+&& \rstar\longrightarrow+\infty.
+\label{eq:infinity_outgoing_bc}
+\end{align}
+
+\begin{warningbox}
+The statement that ``$\rme^{+\rmi\omega\rstar}$ is an outgoing wave'' has no meaning by itself. Ingoing and outgoing are fixed only after specifying both the time factor $\rme^{-\rmi\omega t}$ and the orientation of the coordinate. If the time convention is changed to $\rme^{+\rmi\omega t}$, all of these signs reverse.
+\end{warningbox}
+
+For a \term{quasinormal mode} (QNM) frequency with $\im\omega<0$\footnote{The definition of quasinormal modes and three equivalent characterizations are given in Chapter~\ref{chap:qnm}.}, the spatial waveforms in Eqs.~\eqref{eq:bh_ingoing_bc} and \eqref{eq:infinity_outgoing_bc} diverge on the real axis. This is not pathological. It is the result of representing, with one complex frequency over all space, a resonance of an open system that decays in time while its wavefront propagates toward infinity. Because of this divergence, however, a QNM waveform is not an ordinary square-integrable $L^2$ eigenfunction. This is the first reason why analytic continuation and the complex scaling introduced in Chapter~\ref{chap:complex-scaling} are needed.
+
+\section{The case of two horizons}
+
+In \term{Schwarzschild--de~Sitter spacetime}, the static region lies between the \term{black-hole horizon} $r_b$ and the \term{cosmological horizon} $r_c$:
+\begin{equation}
+r_b<r<r_c.
+\end{equation}
+With a suitable additive constant,
+\begin{align}
+\rstar&\longrightarrow-\infty,
+&&r\longrightarrow r_b+0,
+\\
+\rstar&\longrightarrow+\infty,
+&&r\longrightarrow r_c-0.
+\end{align}
+The QNM \term{radiation conditions} are an ingoing wave at the black-hole horizon and an outgoing wave at the cosmological horizon. Although the formulas have the same form as Eqs.~\eqref{eq:bh_ingoing_bc} and \eqref{eq:infinity_outgoing_bc}, the physical meaning of the right endpoint is now a cosmological horizon rather than spatial infinity.
+
+By contrast, in an \term{extremal black hole} the zeros of $f(r)$ merge, and the logarithmic behavior in Eq.~\eqref{eq:tortoise_near_horizon} changes. If, near a double root $r=r_e$,
+\begin{equation}
+f(r)
+=
+a(r-r_e)^2
++O\bigl((r-r_e)^3\bigr),
+\end{equation}
+then, with $a$ denoting the quadratic coefficient,
+\begin{equation}
+\rstar
+=
+-\frac{1}{a(r-r_e)}
++O\bigl(\log|r-r_e|\bigr).
+\end{equation}
+Simply substituting extremal parameter values into nonextremal formulas can therefore give the wrong asymptotic structure.
+
+\section{Conclusion of this chapter}
+
+The equation obtained in this chapter is
+\begin{equation}
+\left(
+\partial_t^2
+-\partial_{\rstar}^2
++V
+\right)\Psi
+=
+S.
+\label{eq:generic_master_equation}
+\end{equation}
+The type of black hole and the spin of the perturbation enter through the effective potential $V$, while the causal structure enters through the range of $\rstar$ and the asymptotic conditions. This separation turns a geometric problem into a scattering-theory problem. In the next chapter we solve Eq.~\eqref{eq:generic_master_equation} as the response to an external source.
+
+\begin{researchproblem}[Scattering coordinates for an extremal horizon]
+For \term{Reissner--Nordstr\"om spacetime}, with $f(r)=1-2M/r+Q^2/r^2$, construct the tortoise coordinates separately in the nonextremal and extremal cases. Exchange the order of the limits $|Q|\to M$ and $r\to r_+$, and determine where the near-horizon wave equation and \term{Jost normalization} become nonuniform. Do not merely reproduce known formulas: propose a uniform coordinate or a \term{matched asymptotic expansion} suitable for later numerical calculations and estimate its error.
+\end{researchproblem}

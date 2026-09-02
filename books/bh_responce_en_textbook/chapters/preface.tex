@@ -1,0 +1,72 @@
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+\chapterepigraph{\jp{吾生也有涯，而知也無涯。以有涯隨無涯，殆已。}}{\textit{Zhuangzi}, Inner Chapters, ``Nourishing the Lord of Life''}
+
+When an external force acts on a black hole, part of the wave is absorbed by the horizon and part is radiated outward. If only the exterior region is regarded as the system, a black hole is an \term{open system}. Its perturbations therefore cannot be described solely in terms of the normal modes of a closed system. This book develops black-hole linear perturbation theory as a theory of causal response.
+
+The basic object of this book is a \term{causal operator} that maps an external source to a response. Chapters 1 and 2 prepare the geometry and fields, and Chapter 3 defines this operator. We then read the same operator successively in the frequency plane, in the time domain, and in quantum theory. Rather than listing terminology in advance, we first define the quantities that are needed and then explain their physical meaning.
+
+This order connects \term{classical-field scattering}, damped \term{resonances}, \term{quantum-field fluctuations}, and \term{thermalization} in isolated quantum systems within a single response theory. Later concepts are not imported into explanations in the first half of the book. Each chapter is organized so that it can be read using only quantities defined in preceding chapters.
+
+\begin{principlebox}
+The fundamental object in black-hole response theory is not a list of frequencies but a causal operator that maps a physical source to an observable response.
+\end{principlebox}
+
+\section*{Intended readership}
+
+This book is written so that a senior undergraduate can read it sequentially. We assume standard undergraduate courses in analytical mechanics, electromagnetism and wave equations, quantum mechanics, and thermodynamics/statistical mechanics. For \term{general relativity}, we assume familiarity with the metric, covariant differentiation, and the Schwarzschild solution. We do not assume prior knowledge of \term{black-hole perturbation theory}, \term{non-self-adjoint spectra}, \term{quantum fields in curved spacetime}, or the \term{eigenstate thermalization hypothesis} (ETH).
+
+The aim is not to produce a self-contained mathematics textbook. \term{Special functions} and \term{hypergeometric functions} are used as standard solutions of differential equations and are treated as part of elementary calculation. By contrast, techniques whose conclusions depend on how the method is implemented---such as \term{analytic continuation}, \term{contour deformation}, complex scaling, \term{biorthogonal expansions}, and \term{Riesz contour integrals}---are introduced together with their mechanism, conditions of validity, and numerical diagnostics. When a required result is not proved, the assumptions and references are stated explicitly. It is consistency in this sense, rather than formal self-containedness, that we take as the criterion of readability.
+
+As an editorial target, the main text is intended to remain on the order of one hundred pages excluding the references, but this is not a strict upper bound. We do not save a page by breaking the order of definitions or causal logic; instead, length is controlled by removing general material that lies outside the main line of argument.
+
+\section*{The physics minimum}
+
+The editorial principle of this book is a minimum sufficient to preserve the physical line of argument. We do not attempt comprehensive treatments of general relativity, \term{scattering theory}, \term{non-self-adjoint operators}, \term{quantum field theory}, or \term{quantum statistical mechanics}. Each concept is introduced only where it advances the discussion of black-hole response by one step.
+
+Material retained in the main text must satisfy at least one of the following criteria.
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.8em]
+\item It determines the relation between an external source and a response.
+\item It determines the analytic structure governing time evolution.
+\item It separates representation-dependent quantities from observables.
+\item It connects classical response to quantities in quantum statistical mechanics.
+\end{enumerate}
+
+General discussions, lengthy classifications, comparisons of techniques, and prospective extensions that do not meet these criteria are moved to an appendix or to research problems. Even established results are omitted when they are unnecessary to the main line, and incomplete research is not anticipated as though it were a conclusion of the text.
+
+\section*{Research problems}
+
+This book does not include a large collection of routine exercises. Instead, each part contains a small number of research problems to which we send calculations not completed in the text and questions that remain to be studied. Numerical response of rotating black holes, continuous response in systems with a \term{cosmological horizon}, \term{higher-order degeneracies} of resonances, and symmetry-resolved tests of thermalization can each become a research problem.
+
+For every research problem, we distinguish what follows from the main text from what is not yet guaranteed. Even when the answer is known, we give a starting point and diagnostic criteria rather than a complete solution. Solving a research problem is not a check that the text has been understood; it is a way to step beyond the text.
+
+\section*{Organization of the book}
+
+Part I constructs causal response from the tortoise coordinate and master fields. Chapter 4 defines quasinormal modes, and Chapter 5 treats time-domain waveforms, including post-merger ringdown. At that point black-hole perturbation theory has been organized as a theory of classical-field response.
+
+Part II defines in Chapter 6 a numerical framework for handling spatially divergent resonant waves and in Chapter 7 the case in which two resonances coalesce together with their eigenvectors. Part III quantizes the master field and then introduces, in order, horizon thermality, thermal-equilibrium two-point functions, and the \term{eigenstate thermalization hypothesis}.
+
+This book is not intended to survey the black-hole information problem, quantum chaos, or quantum information. We discuss those subjects only where they directly meet the \term{response function}. This restriction lets us use one line of reasoning from classical fields through quantum statistical mechanics and finally return to \term{response invariants} that survive changes of representation.
+
+\section*{Collaboration with Codex}
+
+OpenAI's AI system Codex was used continuously in developing the concept of this book, its chapter structure, the order of exposition, the selection of chapter epigraphs, the preparation of initial drafts, \LaTeX{} typesetting, and checks of global consistency. Codex served not merely as a proofreading tool but as a conversational partner on structure and editing and thus participated in the formation of the book.
+
+The decisions about physical content, the verification of equations and quotations, the final wording, and responsibility for the publication remain with Okuto Morikawa, Shoya Ogawa, and Takuya Hirose.
+
+\vspace{2\baselineskip}
+\begin{flushright}
+Okuto Morikawa, Shoya Ogawa, and Takuya Hirose\\
+August 19, 2026
+\end{flushright}
+
+\chapter*{Before Reading the Notation}
+\addcontentsline{toc}{chapter}{Before Reading the Notation}
+\chapterepigraph{\jp{舉一隅不以三隅反，則不復也。}}{\textit{Analects}, 7.8}
+
+This book introduces equations quickly. The meaning of each symbol is fixed where it first appears, and general theory is not explained in advance. When the same symbol is used in different chapters, it is chosen so that it plays the same role in the classical and quantum discussions whenever possible.
+
+The outline in the Preface is only a map. In the main text, technical terms are in principle not used before they are defined. When a quantity from a later chapter must be mentioned in advance, the chapter in which it is defined is stated explicitly.
+
+Teal boxes state principles that run through the entire book, red boxes give cautions about domains, analytic continuation, and asymptotic conditions, and gray boxes contain research problems. Apart from the research problems, the text is designed to close logically when read in order.

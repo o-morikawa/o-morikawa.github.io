@@ -1,0 +1,303 @@
+\chapter{The Resolvent}
+\label{chap:resolvent}
+\chapterepigraph{``Deep calleth unto deep.''}{Psalm 42:7, King James Version}
+
+\section{Ask for the response first}
+
+Abbreviating $x=\rstar$, write the one-dimensional equation obtained in the previous chapter as
+\begin{equation}
+\left(
+\partial_t^2+H
+\right)\Psi(t,x)
+=
+S(t,x).
+\label{eq:wave_H_form}
+\end{equation}
+Here the \term{spatial operator} $H$ is
+\begin{equation}
+H
+=
+-\frac{\rmd^2}{\rmd x^2}
++V(x),
+\label{eq:H_definition}
+\end{equation}
+where $V(x)$ is a real-valued effective potential and $S(t,x)$ is an external source.
+
+For a closed system, it is natural to find the \term{eigenfunctions} of $H$ and expand in them. In the black-hole exterior, however, energy escapes through the asymptotic ends on both sides. We therefore change the question.
+
+\begin{principlebox}
+Do not begin by asking which complex frequencies are allowed. Ask instead what response is produced by a given source. Then identify poles and the \term{continuous spectrum} as the \term{analytic structure} of that response.
+\end{principlebox}
+
+In this order, the quasinormal modes (QNMs) defined in Chapter~\ref{chap:qnm} are not input data but results read off from the response.
+
+\section{Two resolvents}
+
+First introduce a complex energy variable $z\in\bbC$ and define the \term{resolvent} of $H$ by
+\begin{equation}
+\vR(z)
+=
+(H-z)^{-1}.
+\label{eq:energy_resolvent}
+\end{equation}
+The set of $z$ for which this inverse exists as a bounded operator is the \term{resolvent set} $\rho(H)$, and its complement is the \term{spectrum} $\sigma(H)$.
+
+Because $z=\omega^2$ for the wave equation, it is also useful to introduce the \term{operator pencil} on the frequency plane,
+\begin{equation}
+\vL(\omega)
+=
+H-\omega^2,
+\label{eq:operator_pencil}
+\end{equation}
+and the frequency-domain \term{Green operator}
+\begin{equation}
+\vG(\omega)
+=
+\vL(\omega)^{-1}
+=
+\vR(\omega^2).
+\label{eq:frequency_green_operator}
+\end{equation}
+The $z$ plane makes the spectral theory of a \term{self-adjoint operator} transparent, while the $\omega$ plane makes incoming/outgoing waves and time evolution transparent. We keep the two planes distinct and move between them as needed.
+
+\begin{warningbox}
+The map $z=\omega^2$ is not one-to-one. The square root on the $z$ plane has two \term{Riemann sheets}, and the \term{analytic continuation} of radiation conditions includes a choice of \term{sheet}. It is not enough to say that one ``analytically continues across the real axis''; the sign of $\omega$ and the relevant \term{boundary value} must also be specified.
+\end{warningbox}
+
+\section{\term{Causal Fourier--Laplace transform}}
+
+Assume that the source acts only after some finite time. Choose $\gamma>0$ sufficiently large and write
+\begin{align}
+\Psi(t,x)
+&=
+\int_{\bbR+\rmi\gamma}
+\frac{\rmd\omega}{2\pi}
+\,
+\rme^{-\rmi\omega t}
+\psi(\omega,x),
+\label{eq:inverse_laplace_psi}
+\\
+S(t,x)
+&=
+\int_{\bbR+\rmi\gamma}
+\frac{\rmd\omega}{2\pi}
+\,
+\rme^{-\rmi\omega t}
+s(\omega,x).
+\label{eq:inverse_laplace_source}
+\end{align}
+The \term{integration contour} $\bbR+\rmi\gamma$ is a horizontal line in the upper half-plane. Equation~\eqref{eq:wave_H_form} becomes
+\begin{equation}
+\vL(\omega)\psi(\omega)
+=
+s(\omega),
+\end{equation}
+so that
+\begin{equation}
+\psi(\omega)
+=
+\vG(\omega)s(\omega).
+\label{eq:frequency_response}
+\end{equation}
+Defining the operator in the upper half-plane and analytically continuing downward selects the \term{boundary value} of the \term{retarded Green function}.
+
+Let the observation operation be a \term{linear functional} $\bra{O}$ and the spatial profile of the source be $\ket{S}$. The observed \term{frequency response} is then
+\begin{equation}
+\vA(\omega)
+=
+\bra{O}\vG(\omega)\ket{S}.
+\label{eq:source_observer_amplitude}
+\end{equation}
+The quantity $\vA(\omega)$ is a scalar. Changing the source or the observation point changes the strength with which the same pole appears. The existence of a spectral feature and its strong excitation are separate questions.
+
+For gravitational perturbations, let $\vD_S$ denote the linear map that constructs the master-equation source from the physical matter source $T_{\mu\nu}$, and let $\vD_O$ denote the linear map that constructs the detector observable from the master field. The map from physical source to observed response is then
+\begin{equation}
+\delta O(\omega)
+=
+\vD_O\vG(\omega)\vD_S T.
+\label{eq:physical-response-map}
+\end{equation}
+The operators $\vD_S$ and $\vD_O$ depend on the background, the choice of \term{gauge-invariant variables}, and the observation procedure. But if they are transformed consistently, the final $\delta O$ is independent of the representation. This point will be organized systematically in Chapter~\ref{chap:response-invariants}.
+
+\section{Jost solutions}
+
+Suppose that the effective potential approaches zero sufficiently rapidly as $x\to\pm\infty$. Define the left \term{Jost solution} $f_-(x,\omega)$ and right \term{Jost solution} $f_+(x,\omega)$ by
+\begin{align}
+\vL(\omega)f_-(x,\omega)&=0,
+&
+f_-(x,\omega)&\sim\rme^{-\rmi\omega x},
+&&x\longrightarrow-\infty,
+\label{eq:left_jost}
+\\
+\vL(\omega)f_+(x,\omega)&=0,
+&
+f_+(x,\omega)&\sim\rme^{+\rmi\omega x},
+&&x\longrightarrow+\infty.
+\label{eq:right_jost}
+\end{align}
+If the left endpoint is a black-hole horizon, $f_-$ is the solution entering the horizon; if the right endpoint is spatial infinity, $f_+$ is the solution outgoing to infinity.
+
+Define the \term{Wronskian} of the two solutions by
+\begin{equation}
+\vW(\omega)
+=
+f_-(x,\omega)
+\frac{\partial f_+(x,\omega)}{\partial x}
+-
+\frac{\partial f_-(x,\omega)}{\partial x}
+f_+(x,\omega).
+\label{eq:jost_wronskian}
+\end{equation}
+Because the differential equation contains no first-derivative term, $\vW(\omega)$ is independent of $x$. Indeed, differentiating Eq.~\eqref{eq:jost_wronskian} with respect to $x$ and using the same differential equation for both Jost solutions gives zero.
+
+\section{Constructing the Green kernel}
+
+Define the frequency-domain \term{Green kernel} $G(x,x';\omega)$ by
+\begin{equation}
+\vL(\omega)G(x,x';\omega)
+=
+\delta(x-x').
+\label{eq:green_kernel_equation}
+\end{equation}
+With $x_< =\min(x,x')$ and $x_>=\max(x,x')$, the \term{Green kernel} satisfying the radiation conditions is
+\begin{equation}
+G(x,x';\omega)
+=
+-\frac{
+f_-(x_<,\omega)f_+(x_>,\omega)
+}{
+\vW(\omega)
+}.
+\label{eq:green_jost_formula}
+\end{equation}
+
+\paragraph{Matching conditions for the Green kernel.}
+For $x\ne x'$, the Green kernel satisfies the homogeneous equation, so it is proportional to $f_-$ on the left and to $f_+$ on the right. Continuity at $x=x'$ reduces the two coefficients to one. Integrating Eq.~\eqref{eq:green_kernel_equation} across a neighborhood of $x'$ further gives
+\begin{equation}
+\left.
+\frac{\partial G}{\partial x}
+\right|_{x=x'+0}
+-
+\left.
+\frac{\partial G}{\partial x}
+\right|_{x=x'-0}
+=
+-1.
+\end{equation}
+This jump in the derivative fixes the sign and normalization in Eq.~\eqref{eq:green_jost_formula}.
+
+Equation~\eqref{eq:green_jost_formula} is one of the central formulas of this book. The numerator represents propagation from the source to the observation point, while the denominator measures whether the radiation conditions at the two ends can be satisfied simultaneously. If $\vW(\omega)=0$, the left and right Jost solutions become linearly dependent, and a nontrivial solution satisfying radiation conditions at both ends exists even without an external source. In the next chapter, such complex frequencies will be defined as quasinormal modes (QNMs).
+
+\section{Scattering coefficients and flux}
+
+Consider a real frequency $\omega>0$. Normalize a scattering solution $\psi_{\mathrm{in}}$ incident from the right by
+\begin{align}
+\psi_{\mathrm{in}}
+&\sim
+\rme^{-\rmi\omega x}
++\vS_{\mathrm{R}}(\omega)
+\rme^{+\rmi\omega x},
+&&x\longrightarrow+\infty,
+\label{eq:scatter_right}
+\\
+\psi_{\mathrm{in}}
+&\sim
+\vS_{\mathrm{T}}(\omega)
+\rme^{-\rmi\omega x},
+&&x\longrightarrow-\infty.
+\label{eq:scatter_left}
+\end{align}
+Here $\vS_{\mathrm{R}}$ and $\vS_{\mathrm{T}}$ are the \term{reflection amplitude} and \term{transmission amplitude}, respectively.
+
+Define the \term{flux} associated with a solution $\psi$ by
+\begin{equation}
+j[\psi]
+=
+\frac{1}{2\rmi}
+\left(
+\psi^*\frac{\rmd\psi}{\rmd x}
+-
+\psi\frac{\rmd\psi^*}{\rmd x}
+\right).
+\label{eq:conserved_flux}
+\end{equation}
+For a real potential, $j$ is independent of $x$. If the asymptotic wave numbers on the two sides are equal, \term{flux conservation} gives
+\begin{equation}
+|\vS_{\mathrm{R}}(\omega)|^2
++
+|\vS_{\mathrm{T}}(\omega)|^2
+=
+1.
+\label{eq:unitarity_one_channel}
+\end{equation}
+The fraction absorbed by the black hole, namely the \term{greybody factor}, is
+\begin{equation}
+\Gamma(\omega)
+=
+|\vS_{\mathrm{T}}(\omega)|^2.
+\label{eq:greybody_factor}
+\end{equation}
+When the two asymptotic wave numbers differ, or when several channels are coupled, \term{group velocities} and \term{flux normalization} must also be included.
+
+\section{Analytically continued response}
+
+For a self-adjoint $H$, the physical spectrum lies on the real axis. A \term{resonance} is not added to that spectrum as a new $L^2$ eigenvalue. Instead, it appears as a pole when matrix elements of the \term{Green operator}, initially defined in the upper half-plane, are analytically continued into the lower half-plane while preserving the radiation conditions.
+
+Near a \term{simple pole} $\omega=\omega_n$, one may write
+\begin{equation}
+\vG(\omega)
+=
+\frac{A_n}{\omega-\omega_n}
++\vG_{\mathrm{reg}}(\omega).
+\label{eq:green_simple_pole}
+\end{equation}
+Here $A_n$ is the \term{operator-valued residue}, and $\vG_{\mathrm{reg}}$ is the part \term{regular} at $\omega_n$. Sandwiching this expression between the source and observation operation gives
+\begin{equation}
+\vA(\omega)
+=
+\frac{
+\bra{O}A_n\ket{S}
+}{
+\omega-\omega_n
+}
++\vA_{\mathrm{reg}}(\omega).
+\label{eq:amplitude_simple_pole}
+\end{equation}
+The physically measured strength of the pole is $\bra{O}A_n\ket{S}$, not a QNM waveform with an arbitrarily chosen normalization.
+
+\section{Deforming the contour}
+
+The time-domain response can be analyzed by deforming the \term{integration contour} in Eq.~\eqref{eq:inverse_laplace_psi} downward. Schematically,
+\begin{equation}
+\Psi(t)
+=
+\Psi_{\mathrm{pole}}(t)
++\Psi_{\mathrm{cont}}(t)
++\Psi_{\mathrm{arc}}(t).
+\label{eq:response_decomposition}
+\end{equation}
+The first term contains residues of poles crossed during the deformation, the second contains discontinuities across a \term{branch cut} or the continuous spectrum, and the third contains contributions from a \term{large arc} or the high-frequency region.
+
+A simple pole contributes
+\begin{equation}
+\Psi_{\mathrm{pole}}(t)
+\mathrel{\propto}
+\rme^{-\rmi\omega_n t}
+\bra{O}A_n\ket{S}.
+\label{eq:time_simple_pole}
+\end{equation}
+If $\im\omega_n<0$, this term decays in time. The interval over which Eq.~\eqref{eq:time_simple_pole} dominates, however, is not determined by the pole location alone. One must compare it with the bandwidth of the source, the observation point, the continuous component, and the high-frequency contribution.
+
+\begin{warningbox}
+A ``sum over poles'' obtained by contour deformation is not automatically a complete expansion valid at all times. One must check the region in which the large-arc contribution vanishes, the location of the \term{branch cut}, the regularity of the initial data, and the observation point. \term{Completeness of QNMs} must not be inferred by analogy with an eigenvector expansion of a finite-dimensional matrix.
+\end{warningbox}
+
+For asymptotically flat Schwarzschild spacetime, \term{nonanalyticity} associated with the long-range potential is related to the late-time power-law component defined in Chapter~\ref{chap:time-response}. For de~Sitter black holes bounded by two horizons, the asymptotic structure is different. Time-domain response is discussed in Chapter~\ref{chap:time-response}, while spectral representations of continuous response are treated in Part II.
+
+\section{Conclusion of this chapter}
+
+The basic object constructed here is not a set of allowed frequencies but the Green operator $\vG(\omega)$. The Jost formula \eqref{eq:green_jost_formula} shows that singularities of scattering amplitudes and of externally driven response are governed by the same \term{Wronskian}. In the next chapter we define its poles as quasinormal modes (QNMs) and study them in detail.
+
+\begin{researchproblem}[Long-range Jost functions]
+The Schwarzschild effective potential is not a finite-range potential at infinity. Reconstruct the usual Jost-solution construction based on a \term{Volterra equation} while retaining the logarithmic difference between $\rstar$ and $r$. Identify the location and sheet of the low-frequency \term{branch point}, and design a method that extracts both zeros of the Wronskian and the discontinuity across the branch cut from the same numerical calculation. As a convergence test, require the time-domain response to remain invariant when the placement of the cut is changed.
+\end{researchproblem}

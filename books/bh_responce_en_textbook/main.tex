@@ -1,0 +1,202 @@
+\documentclass[11pt,openany]{book}
+
+% Portable English edition:
+%   pdflatex -> bibtex -> makeindex -> pdflatex -> pdflatex
+\usepackage[
+  paperwidth=6.5in,
+  paperheight=9.5in,
+  inner=0.82in,
+  outer=0.68in,
+  top=0.80in,
+  bottom=0.86in,
+  headheight=24pt,
+  headsep=18pt,
+  footskip=24pt
+]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{CJKutf8}
+\newcommand{\jp}[1]{\begin{CJK*}{UTF8}{ipxm}#1\end{CJK*}}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[nocomments,norevision]{omphys}
+\usepackage{setspace}
+\setstretch{1.08}
+
+\usepackage{amsthm}
+\usepackage{booktabs,array,tabularx}
+\usepackage{enumitem}
+\usepackage[most]{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning,decorations.pathmorphing}
+
+\usepackage[noautomatic]{imakeidx}
+\makeindex[
+  title=Index,
+  intoc,
+  columns=2
+]
+\newcommand{\term}[1]{#1\index{#1}}
+
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[sort&compress,numbers]{natbib}
+\usepackage{hyperref}
+
+\setlength{\emergencystretch}{2em}
+\Urlmuskip=0mu plus 1mu\relax
+\allowdisplaybreaks[2]
+\renewcommand{\contentsname}{Contents}
+\renewcommand{\bibname}{References}
+\hypersetup{
+  pdftitle={Black-Hole Response Theory},
+  pdfauthor={Okuto Morikawa, Shoya Ogawa, Takuya Hirose},
+  colorlinks=true,
+  linkcolor=blue!48!black,
+  citecolor=teal!52!black,
+  urlcolor=blue!60!black,
+  bookmarksnumbered=true
+}
+
+% Running heads and chapter openings follow the monograph style.
+\pagestyle{fancy}
+\newif\ifappendixmode
+\appendixmodefalse
+\let\originalappendix\appendix
+\renewcommand{\appendix}{\originalappendix\appendixmodetrue}
+\fancyhf{}
+\fancyhead[LE]{\small\thepage\quad\nouppercase{\leftmark}}
+\fancyhead[RO]{\small\nouppercase{\rightmark}\quad\thepage}
+\makeatletter
+\renewcommand{\chaptermark}[1]{%
+  \markboth{%
+    \if@mainmatter
+      \ifappendixmode Appendix~\thechapter\quad\else Chapter~\thechapter\quad\fi
+    \fi #1}{%
+    \if@mainmatter
+      \ifappendixmode Appendix~\thechapter\quad\else Chapter~\thechapter\quad\fi
+    \fi #1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\quad #1}}
+\makeatother
+\renewcommand{\headrulewidth}{0.35pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}
+  {\color{teal!55!black}%
+   \ifappendixmode Appendix~\thechapter\else Chapter~\thechapter\fi}
+  {0.55ex}{}
+\titlespacing*{\chapter}{0pt}{-12pt}{24pt}
+
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\renewcommand{\proofname}{Proof}
+
+\newtcolorbox{warningbox}{
+  enhanced,breakable,colback=red!3,colframe=red!60!black,
+  title=Warning,fonttitle=\bfseries}
+\newtcolorbox{principlebox}{
+  enhanced,breakable,colback=teal!4,colframe=teal!60!black,
+  title=Principle,fonttitle=\bfseries}
+\newtcolorbox{researchproblem}[1][]{
+  enhanced,breakable,colback=black!2,colframe=black!65,
+  title={Research Problem\if\relax\detokenize{#1}\relax\else: #1\fi},
+  fonttitle=\bfseries}
+
+\renewcommand{\paragraph}[1]{%
+  \par\medskip
+  \noindent\textbf{#1}\par\nobreak\smallskip\noindent}
+
+\newcommand{\vH}{\mathcal{H}}
+\newcommand{\vL}{\mathcal{L}}
+\newcommand{\vR}{\mathcal{R}}
+\newcommand{\vG}{\mathcal{G}}
+\newcommand{\vP}{\mathcal{P}}
+\newcommand{\vQ}{\mathcal{Q}}
+\newcommand{\vA}{\mathcal{A}}
+\newcommand{\vD}{\mathcal{D}}
+\newcommand{\vS}{\mathcal{S}}
+\newcommand{\vW}{\mathcal{W}}
+\newcommand{\omegaEP}{\omega_{\mathrm{EP}}}
+\newcommand{\rstar}{r_*}
+\newcommand{\chapterepigraph}[2]{%
+  \begin{flushright}
+  \begin{minipage}{0.76\textwidth}
+  \raggedleft
+  \small\textit{#1}\par
+  \vspace{0.35\baselineskip}
+  \footnotesize --- #2
+  \end{minipage}
+  \end{flushright}
+  \vspace{0.6\baselineskip}}
+
+\begin{document}
+
+\frontmatter
+\begin{titlepage}
+\centering
+\vspace*{2.5cm}
+
+{\Huge\bfseries Black-Hole Response Theory\par}
+\vspace{0.8cm}
+{\large\bfseries Revised Draft\par}
+
+\vspace{2.0cm}
+\begin{tabular}{ccc}
+  {\large Okuto Morikawa}
+    & {\large Shoya Ogawa}
+    & {\large Takuya Hirose}
+\end{tabular}
+
+\vspace{0.8cm}
+{\large English translation by ChatGPT (GPT-5.6 Sol, OpenAI)\par}
+
+\vfill
+{\large August 2026\par}
+\end{titlepage}
+
+\input{chapters/author_information_en}
+
+\clearpage
+\input{chapters/review_by_openai}
+\clearpage
+\input{chapters/preface}
+\tableofcontents
+\clearpage
+
+\mainmatter
+\part{Classical-Field Response}
+\input{chapters/ch01_tortoise}
+\input{chapters/ch02_master_field}
+\input{chapters/ch02_resolvent}
+\input{chapters/ch03_qnm}
+\input{chapters/ch05_time_response}
+
+\part{The Spectrum of Resonances}
+\input{chapters/ch06_complex_scaling}
+\input{chapters/ch07_exceptional_points}
+
+\part{Quantized Response}
+\input{chapters/ch08_quantized_master_field}
+\input{chapters/ch09_horizon_thermality}
+\input{chapters/ch10_thermal_green}
+\input{chapters/ch11_eth}
+\input{chapters/ch12_invariants}
+
+\appendix
+\input{chapters/app_conventions}
+
+\backmatter
+\bibliographystyle{utphys}
+\bibliography{ref}
+\printindex
+
+\end{document}

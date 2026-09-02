@@ -1,0 +1,145 @@
+\chapter{Complex Scaling}
+\label{chap:complex-scaling}
+\chapterepigraph{\jp{大音希聲，大象無形。}}{Laozi, \textit{Tao Te Ching}, Chapter 41}
+
+\section{Turning outgoing waves into decaying waves}
+
+In this chapter we define the \term{complex scaling method} (\term{CSM}), which deforms the coordinate into the complex plane so that resonant waves become \term{square integrable}. Consider a QNM waveform at the right endpoint,
+\begin{equation}
+\psi(x)
+\sim
+\rme^{+\rmi\omega x},
+\qquad
+\omega=\omega_R-\rmi\gamma,
+\qquad
+\gamma>0.
+\end{equation}
+On the real axis, $|\psi|\sim\rme^{\gamma x}$ grows. We therefore rotate the coordinate according to
+\begin{equation}
+x
+=
+y\rme^{\rmi\theta},
+\qquad
+0<\theta<\frac{\pi}{2},
+\label{eq:uniform-complex-scaling}
+\end{equation}
+where $y>0$ is real. The magnitude of the wave becomes
+\begin{equation}
+\left|
+\rme^{+\rmi\omega y\rme^{\rmi\theta}}
+\right|
+=
+\exp\left[
+-y\left(
+\omega_R\sin\theta-\gamma\cos\theta
+\right)
+\right].
+\label{eq:complex-scaling-decay}
+\end{equation}
+Thus, if $\omega_R\sin\theta>\gamma\cos\theta$, a resonant wave that diverges on the real axis decays along the \term{complex contour}.
+
+For a black hole, both asymptotic ends are rotated outward. One example of \term{exterior complex scaling}, which leaves the interaction region $|y|\leq R_0$ on the real axis, is
+\begin{equation}
+x_\theta(y)
+=
+\begin{cases}
+y,
+& |y|\leq R_0,
+\\
+\sgn(y)
+\left[
+R_0+(|y|-R_0)\rme^{\rmi\theta}
+\right],
+& |y|>R_0.
+\end{cases}
+\label{eq:exterior-complex-scaling}
+\end{equation}
+
+\section{The rotated operator}
+
+For a \term{uniform rotation}, $\rmd/\rmd x=\rme^{-\rmi\theta}\rmd/\rmd y$, and hence
+\begin{equation}
+H_\theta
+=
+-\rme^{-2\rmi\theta}
+\frac{\rmd^2}{\rmd y^2}
++V\left(y\rme^{\rmi\theta}\right).
+\label{eq:complex-scaled-hamiltonian}
+\end{equation}
+The operator $H_\theta$ is \term{non-self-adjoint}. In the energy plane $z$, the \term{continuous spectrum} of the free operator rotates as
+\begin{equation}
+[0,\infty)
+\longrightarrow
+\rme^{-2\rmi\theta}[0,\infty).
+\label{eq:rotated-continuum}
+\end{equation}
+Resonances exposed between the rotated ray and the real axis become \term{discrete eigenvalues} independent of $\theta$, within the domain permitted by analyticity.
+
+\begin{warningbox}
+Complex scaling requires a region in which the potential can be continued onto the \term{complex contour}. The admissible contours near a horizon, at infinity, and near an extremal horizon need not be the same. Stationarity of an eigenvalue as $\theta$ is varied is a diagnostic, not a substitute for proving analyticity.
+\end{warningbox}
+
+A construction for Schwarzschild and Reissner--Nordstr\"om QNMs is given in Ref.~\cite{Ogawa:2026veu}. Because the radiation conditions are converted into a matrix eigenvalue problem, pole searches and regularization of the resonant waveforms can be carried out within the same computation.
+
+\section{Discrete poles and \term{discretized continuous components}}
+
+Diagonalizing $H_\theta$ in a \term{finite basis} produces isolated resonances together with a sequence of eigenvalues along the rotated ray. Let the \term{right and left eigenvectors} be $\ket{\phi^R_\nu}$ and $\bra{\phi^L_\nu}$, and impose the \term{biorthogonal normalization}
+\begin{equation}
+\langle\phi^L_\mu\mid\phi^R_\nu\rangle
+=
+\delta_{\mu\nu}.
+\end{equation}
+Then the finite-basis resolvent is approximately
+\begin{equation}
+\vR_\theta(z)
+\simeq
+\sum_\nu
+\frac{
+\ket{\phi^R_\nu}\bra{\phi^L_\nu}
+}{
+z_\nu-z
+}.
+\label{eq:csm-finite-resolvent}
+\end{equation}
+The sequence that rotates with $\theta$ is not a numerical error. Its points act as \term{numerical quadrature points} for the \term{continuous-spectrum} integral and carry the non-pole part of the Green function.
+
+\begin{principlebox}
+Not every \term{complex eigenvalue} produced by complex scaling is a QNM. Isolated points that remain stationary as the \term{rotation angle} and basis size are varied are resonances; sequences lying along the rotated ray are a discrete representation of the continuous response. Both are needed to reconstruct the response.
+\end{principlebox}
+
+\section{Continuum level density}
+
+Let $H_\theta$ be the interacting operator and $H_{0,\theta}$ a \term{comparison operator}. For real energy $E$, define from their \term{resolvent difference}
+\begin{equation}
+\Delta\rho(E)
+=
+\frac{1}{\pi}
+\im\Tr\left[
+\vR_\theta(E+\rmi0)
+-\vR_{0,\theta}(E+\rmi0)
+\right].
+\label{eq:continuum-level-density}
+\end{equation}
+Even if the individual \term{traces} diverge, their difference can be finite under appropriate conditions. The quantity $\Delta\rho$ maps back onto the real axis the continuous response that is invisible if one looks only at isolated poles \cite{Suzuki:2005wv}.
+
+In Schwarzschild--de~Sitter spacetime, both ends of the exterior region are horizons and the potential decays exponentially at each end. QNMs and continuous components of scalar, electromagnetic, and gravitational perturbations can be treated within the same complex-scaled representation \cite{Ogawa:2026dSCSM}. Tracking how not only the poles but also $\Delta\rho$ move as the cosmological constant is varied gives a description of changes in the time-domain response that contains more information than a list of poles.
+
+\section{Three checks to retain in numerical work}
+
+A CSM calculation should preserve at least the following diagnostics.
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.8em]
+\item Eigenvalue plots for several values of the \term{rotation angle} $\theta$.
+\item Convergence of poles, residues, and the \term{continuum level density} as the basis size is varied.
+\item Comparison with a Green function computed directly at real frequencies.
+\end{enumerate}
+
+A physical conclusion should not be drawn from a single complex-eigenvalue plot. The third check verifies that the representation on the complex contour reproduces the original scattering response.
+
+\section{Conclusion of this chapter}
+
+Complex scaling converts divergent QNMs into decaying eigenfunctions and places isolated poles and continuous components within a single \term{non-self-adjoint spectrum}. In the next chapter we study what happens when discrete poles themselves coalesce and an individual-mode representation breaks down.
+
+\begin{researchproblem}[Universality of continuous response in de~Sitter systems]
+For several spins or \term{coupled channels} in Schwarzschild--de~Sitter and Reissner--Nordstr\"om--de~Sitter spacetimes, implement the same exterior complex scaling and \term{trace subtraction}. Vary the cosmological constant, charge, and dimension, and determine which combination of poles and $\Delta\rho(E)$ yields a uniform approximation to the time-domain response. The final diagnostic should be convergence of the sourced real-axis response, not the arrangement of the $\theta$-dependent point sequence.
+\end{researchproblem}

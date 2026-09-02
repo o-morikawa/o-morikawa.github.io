@@ -1,0 +1,217 @@
+\chapter{Master Fields}
+\label{chap:master-field}
+\chapterepigraph{\jp{三十輻，共一轂，當其無，有車之用。}}{Laozi, \textit{Tao Te Ching}, Chapter 11}
+
+\section{From geometry to a single field}
+
+The tortoise coordinate maps the exterior region to the real line of a scattering problem. The ten components of a \term{metric perturbation} $h_{\mu\nu}$, however, cannot simply be scattered as they stand. One must separate components removable by coordinate transformations, components fixed by \term{constraint equations}, and components that propagate. A variable---or a small set of variables---that packages the resulting physical content is called a \term{master field}.
+
+We first see the mechanism for a massless scalar field. Take the action to be
+\begin{equation}
+I[\Phi]
+=
+-\frac{1}{2}
+\int \rmd^4x\sqrt{-g}\,
+g^{\mu\nu}\partial_\mu\Phi\partial_\nu\Phi
++\int \rmd^4x\sqrt{-g}\,J\Phi,
+\label{eq:scalar-action}
+\end{equation}
+where $J$ is an external source. Expanding in spherical harmonics and setting $\Phi=r^{-1}\Psi_{\ell m}Y_{\ell m}$, the action after angular integration is, up to boundary terms,
+\begin{equation}
+I_{\ell m}
+=
+\frac{1}{2}
+\int \rmd t\rmd \rstar
+\left[
+(\partial_t\Psi_{\ell m})^2
+-(\partial_{\rstar}\Psi_{\ell m})^2
+-V_\ell\Psi_{\ell m}^2
++2S_{\ell m}\Psi_{\ell m}
+\right].
+\label{eq:reduced-master-action}
+\end{equation}
+Variation gives
+\begin{equation}
+\left(
+\partial_t^2-\partial_{\rstar}^2+V_\ell
+\right)\Psi_{\ell m}
+=
+S_{\ell m}.
+\label{eq:master-action-eom}
+\end{equation}
+We retain not only the one-dimensional equation but also the action because the same field will later be quantized.
+
+\section{The minimum needed for gravitational perturbations}
+
+Let $g_{\mu\nu}$ be the background metric and perturb it as
+\begin{equation}
+g_{\mu\nu}
+\longrightarrow
+g_{\mu\nu}+h_{\mu\nu}.
+\end{equation}
+Under an \term{infinitesimal coordinate transformation} $x^\mu\to x^\mu+\xi^\mu$,
+\begin{equation}
+h_{\mu\nu}
+\longrightarrow
+h_{\mu\nu}
+-\nabla_\mu\xi_\nu
+-\nabla_\nu\xi_\mu.
+\label{eq:linear-gauge-transformation}
+\end{equation}
+Individual components of $h_{\mu\nu}$ therefore cannot by themselves be interpreted as physical response. On a Schwarzschild background, decomposition by \term{parity} on the sphere separates the perturbation into \term{axial} and \term{polar} sectors. After the constraints are solved, one \term{gauge-invariant} master field remains in each sector for every $\ell\geq2$ \cite{Regge:1957td,Zerilli:1970wzz,Moncrief:1974am}.
+
+Under inversion on the sphere, $(\vartheta,\varphi)\mapsto(\pi-\vartheta,\varphi+\pi)$, the \term{polar} (even-parity) components transform as $(-1)^\ell$, while the \term{axial} (odd-parity) components transform as $(-1)^{\ell+1}$. One \term{radiative degree of freedom} appears in each sector only for $\ell\geq2$. The $\ell=0$ polar perturbation represents an infinitesimal change of mass plus gauge, while the $\ell=1$ axial perturbation represents an infinitesimal change of angular momentum---that is, the linearized Kerr direction---plus gauge. The $\ell=1$ polar vacuum perturbation is a gauge mode corresponding to a displacement of the center of mass. In the presence of matter sources, constrained \term{monopole and dipole} fields remain, but they are not \term{gravitational radiation} propagating to infinity \cite{Martel:2005ir}. Thus the restriction $\ell\geq2$ in the \term{Regge--Wheeler--Zerilli wave equations} below reflects the existence of radiative degrees of freedom, not a convenience of the potentials.
+
+For the axial \term{Regge--Wheeler field} $\Psi_{\mathrm{RW}}$,
+\begin{equation}
+\left(
+\partial_t^2-\partial_{\rstar}^2+V_{\mathrm{RW}}
+\right)\Psi_{\mathrm{RW}}
+=
+S_{\mathrm{RW}},
+\label{eq:rw-master}
+\end{equation}
+where
+\begin{equation}
+V_{\mathrm{RW}}(r)
+=
+f(r)
+\left[
+\frac{\ell(\ell+1)}{r^2}
+-\frac{6M}{r^3}
+\right],
+\qquad
+f(r)=1-\frac{2M}{r}.
+\label{eq:rw-potential}
+\end{equation}
+The polar \term{Zerilli field} satisfies an equation of the same form. Defining
+\begin{equation}
+\lambda
+=
+\frac{(\ell-1)(\ell+2)}{2},
+\end{equation}
+its potential is
+\begin{align}
+V_{\mathrm Z}(r)
+&=
+\frac{2f(r)}{r^3(\lambda r+3M)^2}
+\Bigl[
+\lambda^2(\lambda+1)r^3
++3\lambda^2Mr^2
+\nonumber\\
+&\hspace{9em}
++9\lambda M^2r
++9M^3
+\Bigr].
+\label{eq:zerilli-potential-minimum}
+\end{align}
+The two potentials are different, but they are related by an appropriate first-order differential transformation and have the same quasinormal-mode frequencies, to be defined in Chapter~\ref{chap:qnm} \cite{Chandrasekhar:book,Chandrasekhar:1975nkd}.
+
+\begin{principlebox}
+A master field and its effective potential are representations and are not unique. What should be compared across representations are the radiation conditions, the real-frequency \term{scattering matrix}, and the map from physical sources to observables.
+\end{principlebox}
+
+\section{Sources and observables}
+
+Vacuum equations alone do not constitute a response theory. If the matter \term{stress tensor} is $T_{\mu\nu}$, spherical-harmonic components of the \term{linearized Einstein equations} determine $S_{\mathrm{RW}}$ or $S_{\mathrm Z}$. Even for the same physical matter source, changing the definition of the master field changes the form of $S$. The master-field solution itself must therefore not be identified directly with an observable.
+
+Let $O$ denote an \term{observation operation}, such as a far-zone radiative waveform, a flux crossing the horizon, or a local curvature perturbation. Schematically, the relation from source to observable is
+\begin{equation}
+T_{\mu\nu}
+\longrightarrow
+S_{\ell m}
+\longrightarrow
+\Psi_{\ell m}
+\longrightarrow
+\delta O.
+\label{eq:source-master-observable-chain}
+\end{equation}
+The first arrow represents the constraints and projection of the linearized Einstein equations, while the final arrow represents reconstruction of a waveform or flux. In the next chapter, the central arrow will be defined as a solution operator responding to an external source.
+
+\paragraph{One complete chain.}
+With the Martel--Poisson normalization, the gravitational wave at future \term{null infinity} can be reconstructed from the polar field $\Psi^{\mathrm{even}}_{\ell m}$ and axial field $\Psi^{\mathrm{odd}}_{\ell m}$ as
+\begin{equation}
+h_+-\rmi h_\times
+=
+\frac{1}{2r}
+\sum_{\ell m}
+\sqrt{\frac{(\ell+2)!}{(\ell-2)!}}
+\left(
+\Psi^{\mathrm{even}}_{\ell m}
++\rmi\Psi^{\mathrm{odd}}_{\ell m}
+\right)
+{}_{-2}Y_{\ell m}
++O(r^{-2}).
+\label{eq:master-to-strain}
+\end{equation}
+With $u=t-\rstar$, the radiated energy is
+\begin{equation}
+\frac{\rmd E}{\rmd u}
+=
+\frac{1}{64\pi}
+\sum_{\ell m}
+\frac{(\ell+2)!}{(\ell-2)!}
+\left(
+\left|\partial_u\Psi^{\mathrm{even}}_{\ell m}\right|^2
++
+\left|\partial_u\Psi^{\mathrm{odd}}_{\ell m}\right|^2
+\right).
+\label{eq:master-to-energy-flux}
+\end{equation}
+This normalization follows Ref.~\cite{Martel:2005ir}. Other conventions for the RW field insert a time derivative or integral into the odd-parity field and change numerical coefficients. An observable is therefore obtained only by carrying, in one consistent normalization, the projection of the source $T_{\mu\nu}$, the Green-function calculation of $\Psi_{\ell m}$, and the \term{waveform reconstruction} in Eq.~\eqref{eq:master-to-strain}.
+
+\section{What to retain about rotating spacetimes}
+
+Because \term{Kerr spacetime} is not spherically symmetric, it does not reduce to a single Regge--Wheeler-type real potential. Let the mass be $M$ and the angular momentum be $J=aM$, and define
+\begin{align}
+\Delta
+&=
+r^2-2Mr+a^2,
+&
+r_\pm
+&=
+M\mathord{\pm}\sqrt{M^2-a^2},
+&
+\Omega_H
+&=
+\frac{a}{r_+^2+a^2}.
+\label{eq:kerr-horizon-minimum}
+\end{align}
+Here $r_+$ is the event-horizon radius and $\Omega_H$ is its angular velocity. The Kerr tortoise coordinate is defined by
+\begin{equation}
+\frac{\rmd\rstar}{\rmd r}
+=
+\frac{r^2+a^2}{\Delta}.
+\label{eq:kerr-tortoise-minimum}
+\end{equation}
+
+Using curvature components adapted to \term{Petrov type D}, a spin-$s$ \term{Teukolsky variable} can be separated schematically as
+\begin{equation}
+\psi_s
+=
+\rme^{-\rmi\omega t+\rmi m\varphi}
+S_{s\ell m}(\vartheta;a\omega)
+R_{s\ell m}(r).
+\label{eq:teukolsky-separation-minimum}
+\end{equation}
+\cite{Teukolsky:1972my} Here $S_{s\ell m}$ is a \term{spin-weighted spheroidal harmonic}. Because the \term{angular eigenvalue} depends on $a\omega$, the angular and radial equations must be solved together. Suppressing spin-dependent power-law prefactors, the radiation conditions are
+\begin{align}
+R_{s\ell m}
+&\sim
+\rme^{-\rmi(\omega-m\Omega_H)\rstar},
+&&r\longrightarrow r_+,
+\label{eq:kerr-horizon-bc-minimum}
+\\
+R_{s\ell m}
+&\sim
+\rme^{+\rmi\omega\rstar},
+&&r\longrightarrow\infty.
+\label{eq:kerr-infinity-bc-minimum}
+\end{align}
+The \term{Killing-energy flux} crossing the horizon is proportional to $\omega-m\Omega_H$. Consequently, for bosons in the range $0<\omega<m\Omega_H$, the horizon flux is negative and the reflected wave is stronger than the incident wave: \term{superradiance} occurs. The same frequency shift reappears in the thermal factor in Chapter~\ref{chap:horizon-thermality}.
+
+The minimum amount of Kerr physics retained in the main text is the \term{horizon generator}, \term{Teukolsky separation}, radiation conditions at both ends, and \term{superradiance}. We do not survey metric reconstruction or the full taxonomy of numerical methods; implementation and verification are deferred to the research problem in Chapter~\ref{chap:qnm}.
+
+\section{Conclusion of this chapter}
+
+Black-hole perturbations reduce, after gauge and constraints have been removed, to an \term{open wave problem} for master fields. The action \eqref{eq:reduced-master-action} is the common starting point for classical response and quantization, while Eq.~\eqref{eq:source-master-observable-chain} separates representation-dependent quantities from observables. In the next chapter we invert the master equation in the presence of an external source.

@@ -1,0 +1,216 @@
+\chapter{Exceptional Points}
+\label{chap:exceptional-points}
+\chapterepigraph{``The way up and the way down are one and the same.''}{Heraclitus, fragment B60 (Diels--Kranz)}
+
+\section{When two resonances become one}
+
+Suppose that the background or effective potential depends on two real control parameters $\lambda_1$ and $\lambda_2$. A point at which two resonance eigenvalues coincide and their right eigenvectors also coalesce into one is called a second-order \term{exceptional point}. Unlike an ordinary \term{degeneracy}, the dimension of the \term{eigenspace} decreases.
+
+In this chapter we call the subspace containing these two resonances, isolated from the rest of the spectrum, a \term{cluster}. The operator restricted to the cluster subspace can be written as
+\begin{equation}
+H_{\mathrm{cl}}
+=
+z_{\mathrm{EP}}P+N,
+\qquad
+N^2=0,
+\qquad
+N\ne0,
+\label{eq:ep-jordan-form}
+\end{equation}
+where $P$ is the \term{projection} onto the two-dimensional cluster and $N$ is the \term{nilpotent part}. If a single complexified control parameter $\lambda$ is used, the nearby eigenvalues generically take the form
+\begin{equation}
+z_\pm(\lambda)
+=
+z_{\mathrm{EP}}
+\mathord{\pm}
+c\sqrt{\lambda-\lambda_{\mathrm{EP}}}
++O(\lambda-\lambda_{\mathrm{EP}}),
+\label{eq:ep-puiseux}
+\end{equation}
+with a system-dependent constant $c\ne0$. Encircling the exceptional point exchanges the two \term{sheets} of the \term{square root} and swaps the two states.
+
+\section{The minimal two-by-two model}
+
+To see the \term{square-root branch point} and the \term{double pole} simultaneously, consider
+\begin{equation}
+H(\lambda)
+=
+\begin{pmatrix}
+0&1\\
+\lambda&0
+\end{pmatrix}.
+\label{eq:ep-two-by-two-model}
+\end{equation}
+For $\lambda\ne0$, the eigenvalues and right eigenvectors are
+\begin{equation}
+\omega_\pm
+=
+\mathord{\pm}\sqrt{\lambda},
+\qquad
+v_\pm
+=
+\begin{pmatrix}
+1\\
+\omega_\pm
+\end{pmatrix}.
+\end{equation}
+As $\lambda\to0$, not only the two eigenvalues but also the two eigenvectors coalesce into $(1,0)^{\mathrm T}$.
+
+Direct inversion of the \term{frequency resolvent} gives
+\begin{equation}
+\left(\omega I-H(\lambda)\right)^{-1}
+=
+\frac{1}{\omega^2-\lambda}
+\begin{pmatrix}
+\omega&1\\
+\lambda&\omega
+\end{pmatrix},
+\label{eq:ep-two-by-two-resolvent}
+\end{equation}
+and at the exceptional point $\lambda=0$,
+\begin{equation}
+\left(\omega I-H(0)\right)^{-1}
+=
+\begin{pmatrix}
+\omega^{-1}&\omega^{-2}\\
+0&\omega^{-1}
+\end{pmatrix}.
+\label{eq:ep-two-by-two-double-pole}
+\end{equation}
+No choice of eigenvector normalization removes the $\omega^{-2}$ term. The \term{Riesz moments} and \term{Laurent operators} introduced below generalize this coalescence of two poles, visible in the finite-dimensional model, to an isolated resonance cluster of a wave operator.
+
+\section{Failure of individual residues}
+
+Away from the exceptional point, write the Green operator associated with two simple poles as
+\begin{equation}
+\vG_{\mathrm{cl}}(\omega)
+=
+\frac{A_+}{\omega-\omega_+}
++\frac{A_-}{\omega-\omega_-}.
+\label{eq:two-simple-poles}
+\end{equation}
+Here $A_+$ and $A_-$ are the \term{residue operators} of the individual poles. As the exceptional point is approached, \term{self-orthogonality} of the left and right eigenvectors can make $A_+$ and $A_-$ diverge separately. Their sum at fixed $\omega$ can nevertheless remain finite.
+
+This divergence does not imply that the physical response must diverge. The coordinate components have become \term{ill conditioned} because two nearly parallel eigenvectors were chosen as coordinate axes. The object that survives at the exceptional point is not an individual mode label but the isolated two-state cluster as a whole.
+
+\section{\term{Riesz contour moments}}
+
+Let $\Gamma$ be a \term{counterclockwise} closed contour enclosing only the two poles and excluding all other poles and the continuous spectrum. Define two \term{contour moments} by
+\begin{equation}
+M_k
+=
+\frac{1}{2\pi\rmi}
+\oint_\Gamma
+\omega^k\vG(\omega)\,\rmd\omega,
+\qquad
+k=0,1.
+\label{eq:contour_moments}
+\end{equation}
+When the simple poles are separated,
+\begin{align}
+M_0
+&=
+A_++A_-,
+\label{eq:ep-moment-zero}
+\\
+M_1
+&=
+\omega_+A_+
++\omega_-A_-.
+\label{eq:ep-moment-one}
+\end{align}
+Introduce the symmetric pole data
+\begin{equation}
+s_1=\omega_++\omega_- ,
+\qquad
+s_2=\omega_+\omega_-.
+\end{equation}
+Then Eq.~\eqref{eq:two-simple-poles} can be written as
+\begin{equation}
+\vG_{\mathrm{cl}}(\omega)
+=
+\frac{
+M_1+(\omega-s_1)M_0
+}{
+\omega^2-s_1\omega+s_2
+}.
+\label{eq:pair-resolvent-moments}
+\end{equation}
+This representation is invariant under exchange of $+$ and $-$ and contains no divergence associated with the individual residues.
+
+\section{Laurent operators}
+
+At the exceptional point, where $\omega_+=\omega_-=\omegaEP$, the cluster Green operator has the expansion
+\begin{equation}
+\vG_{\mathrm{cl}}(\omega)
+=
+\frac{A_{-2}}{(\omega-\omegaEP)^2}
++\frac{A_{-1}}{\omega-\omegaEP}
++\vG_{\mathrm{reg}}(\omega).
+\label{eq:ep-laurent}
+\end{equation}
+Equation~\eqref{eq:contour_moments} immediately gives
+\begin{align}
+A_{-1}
+&=
+M_0,
+\label{eq:ep-a-minus-one}
+\\
+A_{-2}
+&=
+M_1-\omegaEP M_0.
+\label{eq:ep-a-minus-two}
+\end{align}
+The operators $A_{-1}$ and $A_{-2}$ are defined without choosing a normalization for a \term{Jordan chain}.
+
+Sandwich these operators between an observation operation and a source, and define
+\begin{equation}
+a_{-j}
+=
+\bra{O}A_{-j}\ket{S},
+\qquad
+j=1,2.
+\end{equation}
+The \term{inverse Fourier transform} of a \term{double pole} produces a time-domain response of the form
+\begin{equation}
+\vA_{\mathrm{cl}}(t)
+=
+\left(C_0+C_1t\right)
+\rme^{-\rmi\omegaEP t}.
+\label{eq:ep-time-response}
+\end{equation}
+The constants $C_0$ and $C_1$ are determined by $a_{-1}$, $a_{-2}$, and the transform convention. The term $t\rme^{-\rmi\omegaEP t}$ is not a fitting convenience but an unavoidable consequence of the double pole.
+
+The relation among a double zero of the Jost function, the \term{Riesz--Laurent representation}, and the sourced response in black-hole scattering is given in Ref.~\cite{Morikawa:2026RieszLaurent}.
+
+\begin{principlebox}
+At an exceptional point, the representation in terms of individual modes becomes singular. The \term{contour-integral moments} of an isolated cluster, its Laurent operators, and its response for fixed source and observer remain finite and can be defined independently of mode labels and normalizations.
+\end{principlebox}
+
+\section{Geometric phase}
+
+If the control parameters are varied adiabatically around a closed loop enclosing the exceptional point, the two states are exchanged after one circuit and return to their original labels after two. Rather than comparing only the signs of right eigenvectors, the \term{geometric phase} must be defined using the \term{biorthogonal connection} of left and right eigenvectors.
+
+Resonance states cannot in general be normalized with the ordinary inner product, but complex scaling produces decaying states and allows a connection to be constructed over \term{parameter space}. The \term{geometric phase} and \term{topological invariants} associated with loops around exceptional points of quantum resonances are discussed in Ref.~\cite{Morikawa:2025inx}.
+
+The \term{geometric phase} is not the same object as a local \term{Laurent coefficient}. The former is global information associated with a \term{parameter loop}; the latter is a local singularity in the frequency plane. Both, however, probe the geometry of a cluster rather than the normalization of an individual eigenvector.
+
+\section{The real-frequency response can remain smooth}
+
+Assume the following conditions near the exceptional point.
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.8em]
+\item The two-pole cluster is isolated from the rest of the spectrum.
+\item The resolvent on the \term{complementary subspace} is regular.
+\item The poles do not reach the real frequencies being observed.
+\end{enumerate}
+
+Then Eq.~\eqref{eq:pair-resolvent-moments} is smooth at fixed real $\omega$, and transmission amplitudes and greybody factors can remain smooth as well. A divergence of individual residues or a \term{mode exchange} does not by itself imply an anomalously large scattering response. A separate limiting analysis is required if a pole reaches the real axis, the cluster collides with a continuous component, or the complementary subspace becomes singular.
+
+\section{Conclusion of this chapter}
+
+An exceptional point marks the limit of an individual-mode representation, not the limit of response theory. By moving to Riesz contour integrals and \term{Laurent operators}, one can define the double-pole time response, real-frequency scattering, and geometric phase as regular quantities in their appropriate senses.
+
+\begin{researchproblem}[Higher-order exceptional points and continuous components]
+Study an exceptional point of order three or higher, or the approach of a second-order exceptional point to a rotated continuous component. At minimum, determine the number of contour moments required, the degree of the \term{Laurent operators} and the associated time polynomial, and the conditions under which a contour can be chosen stably in a finite basis. Use the real-frequency response for a fixed source and observer, rather than the \term{condition number} of an individual eigenvector, as the final diagnostic of finiteness.
+\end{researchproblem}
