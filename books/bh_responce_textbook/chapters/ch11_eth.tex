@@ -1,0 +1,182 @@
+\chapter{固有状態熱化仮説}
+\label{chap:eth}
+\chapterepigraph{%
+  井蛙不可以語於海者，拘於虛也；\\
+  夏蟲不可以語於冰者，篤於時也；\\
+  曲士不可以語於道者，束於教也。%
+}{『荘子』外篇「秋水」}
+\section{一つの固有状態は熱いか}
+
+前章の \term{KMS 条件}は熱平衡状態の相関関数を特徴づける。しかし\term{孤立量子系}は\term{ユニタリ}に
+時間発展し、\term{純粋状態}のままである。それでも少数の自由度を測る観測量が熱平衡値へ
+近づく理由を、Hamiltonian の固有状態自身に求めるのが
+\term{固有状態熱化仮説}（eigenstate thermalization hypothesis; \term{ETH}）である
+\cite{Deutsch:1991,Srednicki:1994,Rigol:2008,DAlessio:2016}。
+\begin{equation}
+H\ket{n}
+=
+E_n\ket{n}
+\end{equation}
+とし、観測量 $O$ の行列要素を $O_{mn}=\bra{m}O\ket{n}$ とする。標準的な \term{ETH} の
+\term{仮定形（ansatz）}は
+\begin{equation}
+O_{mn}
+=
+\overline O(\overline E)\delta_{mn}
++\rme^{-S(\overline E)/2}
+f_O(\overline E,\omega)R_{mn}
+\label{eq:eth-ansatz}
+\end{equation}
+である。ここで
+\begin{equation}
+\overline E
+=
+\frac{E_m+E_n}{2},
+\qquad
+\omega
+=
+E_m-E_n
+\end{equation}
+であり、$S(E)$ は\term{ミクロカノニカル・エントロピー}、$\overline O$ と $f_O$ は巨視的な
+エネルギー尺度で滑らかな関数、$R_{mn}$ は平均零、単位分散の不規則な量である。
+
+対角項は、一つの固有状態における静的期待値が\term{ミクロカノニカル平均}へ近づくことを
+述べる。非対角項の $\rme^{-S/2}$ は個々の遷移を小さくするが、指数的に多い終状態と
+組み合わさって有限な動的相関を作る。\term{ETH} は任意の Hamiltonian と任意の観測量に
+成立する定理ではない。\term{可積分性}、\term{局在}、\term{量子多体傷跡}、対称性は成立範囲を変える。
+
+\section{行列要素からスペクトル関数へ}
+
+一つの\term{エネルギー固有状態} $\ket{n}$ における Wightman 関数は
+\begin{equation}
+G_n^>(t)
+=
+\bra{n}O(t)O(0)\ket{n}
+=
+\sum_m
+\rme^{-\rmi(E_m-E_n)t}
+|O_{nm}|^2
+\label{eq:eigenstate-wightman}
+\end{equation}
+である。Fourier 変換すると
+\begin{equation}
+G_n^>(\omega)
+=
+2\pi
+\sum_m
+|O_{nm}|^2
+\delta\left(
+\omega-E_m+E_n
+\right)
+\label{eq:eigenstate-spectral-sum}
+\end{equation}
+を得る。式\eqref{eq:eth-ansatz}を代入し、$E_n$ の近傍で\term{状態密度}を滑らかに近似する。
+熱力学関係
+\begin{equation}
+\beta(E)
+=
+\frac{\partial S(E)}{\partial E}
+\label{eq:microcanonical-beta}
+\end{equation}
+を用いて小さい $\omega$ についてエントロピーを展開すると、正負周波数の比は
+\begin{equation}
+\frac{G_n^>(\omega)}{G_n^<(\omega)}
+\simeq
+\rme^{\beta(E_n)\omega}
+\label{eq:eth-detailed-balance}
+\end{equation}
+となる。したがって、一つの高エネルギー固有状態の\term{粗視化}した二点関数は、前章の
+KMS \term{詳細釣り合い}を再現しうる。
+
+\begin{principlebox}
+\term{ETH} が応答理論へ入る場所は、QNM 周波数そのものではなく観測量の行列要素である。
+\term{対角要素}が静的な状態方程式を、\term{非対角要素}の包絡 $f_O$ がスペクトル関数と散逸を
+与える。
+\end{principlebox}
+
+\section{対称性を先に分ける}
+
+\term{保存電荷} $Q$ が Hamiltonian と可換ならば、\term{Hilbert 空間}は\term{電荷の固有値ごとの部門}へ
+分かれる。標準 ETH は、異なる電荷部門を混ぜず、一つの\term{既約な部門}の内部で述べる
+必要がある。観測量が電荷を運ぶ場合には、\term{選択則}によって部門間の行列要素だけが
+残る。したがって、式\eqref{eq:eth-ansatz}の $R_{mn}$ をすべて独立な乱数とみなしては
+ならない。
+
+複数の\term{保存電荷}が互いに可換しない\term{非可換対称性}では、すべての電荷を同時に対角化する
+基底がなく、\term{対称性多重項}による縮退も生じる。\term{非可換 ETH} は、この状況で\term{局所観測量}の
+時間平均と熱平均を比較するため、\term{近似的なミクロカノニカル部分空間}と対称性の
+\term{表現構造}を仮定形へ組み込む\cite{Murthy:2023naETH}。ここでは、その詳細ではなく、
+「対称性部門を固定する」という標準的な処方自体が修正を要することだけを用いる。
+
+\section{高次形式対称性は観測量の範囲を変える}
+
+通常の\term{大域対称性}が点状の\term{荷電演算子}に作用するのに対し、$p$ 形式対称性は
+$p$ 次元に広がった荷電演算子に作用する。このとき、\term{局所演算子}が熱化しても、線や面に
+広がる演算子が同じ統計集団へ熱化するとは限らない。
+
+Fukushima と Hamazaki は、合理的な仮定の下で、$(d+1)$ 次元量子場理論の $p$ 形式
+対称性が、多くの非自明な $(d-p)$ 次元観測量に対する ETH を破りうることを示した
+\cite{Fukushima:2023svf}。$(2+1)$ 次元 $\bbZ_2$ \term{格子ゲージ理論}では、局所的な
+\term{プラケット演算子}は熱化する一方、\term{磁気双極子}を励起する\term{拡張演算子}は $\bbZ_2$ \term{一形式
+電荷}を含む\term{一般化 Gibbs 統計集団}へ緩和する。
+
+この結果から必要になるのは、「系は ETH を満たすか」という一つの判定ではない。
+どの対称性を固定し、どの次元と荷をもつ観測量を測り、どの統計集団と比較するかを
+明記した判定である。\term{ゲージ場}と\term{境界自由度}を含むブラックホール系でも、この区別を
+行わずに局所 ETH を拡張観測量へ外挿してはならない。
+
+\begin{warningbox}
+対称性による ETH の修正から、特定の\term{ブラックホール微視的模型}の熱化または非熱化を
+直ちに結論することはできない。保存電荷、観測量の支持、境界条件、比較する統計集団を
+具体的に同定して初めて適用できる。
+\end{warningbox}
+
+\section{量子場理論とブラックホール応答の接点}
+
+場の理論では、\term{局所演算子}の ETH と\term{有限領域}の状態の ETH は同じ主張ではない。
+\term{共形場理論}については、高エネルギーの\term{プライマリ固有状態}における\term{局所プローブ}が
+ETH を満たすならば、有限領域に支持をもち有限エネルギーを測る観測量へ拡張できる
+ことが示されている\cite{Lashkari:2018CFTETH}。これは、局所的な行列要素から\term{部分系}の
+応答へ進むために必要な仮定を明確にする例である。
+
+ブラックホールの線形応答は遅延 Green 関数 $G_R$ で記述され、その実軸上の虚部は
+演算子 $O$ のスペクトル関数である。もし\term{微視的 Hamiltonian} と外部場に結合する
+演算子が、適切な対称性部門で ETH を満たすならば、次の対応が期待される。
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.8em]
+\item エントロピー $S(E)$ の微分が\term{有効温度}を定める。
+\item $f_O(E,\omega)$ が吸収と放出の滑らかな包絡を定める。
+\item \term{有限エントロピー}の離散線を\term{粗視化}すると、滑らかなスペクトル関数が現れる。
+\item その遅延関数を解析接続した極が、古典的な応答極へ近づきうる。
+\end{enumerate}
+
+これは古典 QNM から ETH を導く議論ではない。QNM は\term{粗視化}された遅延応答の解析
+接続にある極であり、ETH は微視的行列要素の仮説である。両者を結ぶには、対称性を
+保つ粗視化、演算子の対応、\term{有限エントロピー}誤差を別々に示さなければならない。
+
+\section{物理ミニマムとしての範囲}
+
+ETH の\term{ランダム行列模型}、\term{量子多体傷跡}、可積分系、\term{多体局在}、\term{時間順序外相関関数}は、
+それぞれ独立した主題である。本書の主線に必要なのは、
+式\eqref{eq:eth-ansatz}、スペクトル和\eqref{eq:eigenstate-spectral-sum}、KMS 条件への
+接続、対称性と観測量による成立範囲の修正だけである。
+
+この範囲ならば ETH は情報問題の概説ではなく、遅延応答を微視的行列要素へ接続する
+終端になる。新しい対称性や微視的模型は、応答関数または比較する統計集団を実際に
+変える場合にだけ本文へ戻す。
+
+\section{本章の結論}
+
+ETH は、一つの高エネルギー固有状態から熱的な二点関数を得るための行列要素仮説で
+ある。ブラックホール応答との接点は QNM の数値ではなく、スペクトル関数、詳細
+釣り合い、対称性を保つ粗視化にある。可換電荷、非可換電荷、\term{高次形式対称性}は、
+熱化を判定する部門、観測量、統計集団を変える。
+
+\begin{researchproblem}[対称性を分解した ETH 応答]
+有限エントロピーをもつゲージ理論または \term{holographic Hamiltonian} を一つ選び、通常の
+大域電荷と高次形式電荷、および測定する局所・\term{拡張演算子}の変換則を同定せよ。対称性
+部門ごとに行列要素を測り、標準 ETH が成立する観測量と、\term{一般化 Gibbs 統計集団}を
+必要とする観測量を分けよ。次に、粗視化した遅延 Green 関数の実軸\term{スペクトル密度}と
+解析接続された極を比較せよ。古典ブラックホールへの一致を前提にせず、成立する
+周波数窓、\term{粗視化幅}、エントロピー依存の誤差を結果として示すこと。
+\end{researchproblem}

@@ -1,0 +1,235 @@
+\chapter{準固有振動}
+\label{chap:qnm}
+\chapterepigraph{``Rest, rest, perturb\`ed spirit.''}{William Shakespeare, \textit{Hamlet}, Act I, Scene 5}
+
+\section{三つの同じ定義}
+
+前章の Green 核は
+\begin{equation}
+G(x,x';\omega)
+=
+-\frac{f_-(x_<,\omega)f_+(x_>,\omega)}{\vW(\omega)}
+\label{eq:qnm-start-green}
+\end{equation}
+であった。$\vW(\omega)$ が零になると、左で流出条件を満たす解と右で流出条件を
+満たす解が同じ解になる。
+
+\begin{definition}[準固有振動]
+複素周波数 $\omega_n$ が
+\begin{equation}
+\vW(\omega_n)=0
+\label{eq:qnm_wronskian_zero}
+\end{equation}
+を満たすとき、$\omega_n$ を \term{QNM 周波数}とよぶ。対応する非自明な同次解
+$\psi_n(x)$ は、両方の漸近端で系の外へ向かう放射条件を満たす。
+\end{definition}
+
+時間因子を $\rme^{-\rmi\omega t}$ とすれば、ブラックホール外部の条件は
+\begin{align}
+\psi_n(x)
+&\sim
+\rme^{-\rmi\omega_n x},
+&&x\longrightarrow-\infty,
+\label{eq:qnm_bc_left}
+\\
+\psi_n(x)
+&\sim
+\rme^{+\rmi\omega_n x},
+&&x\longrightarrow+\infty
+\label{eq:qnm_bc_right}
+\end{align}
+である。左端の流出は事象地平面へ入ることを意味する。したがって、\term{QNM} は
+\term{放射境界値問題}の解、Jost Wronskian の零点、解析接続された Green 関数の極という
+三つの同値な定義をもつ。
+
+\section{単純極と留数}
+
+$\vW'(\omega_n)\ne0$ ならば、$\omega_n$ は\term{単純極}であり、
+\begin{equation}
+\mathop{\mathrm{Res}}_{\omega=\omega_n}
+G(x,x';\omega)
+=
+-\frac{
+f_-(x_<,\omega_n)f_+(x_>,\omega_n)
+}{
+\vW'(\omega_n)
+}
+\label{eq:qnm_green_residue}
+\end{equation}
+である。Jost 解を定数倍すると分子と分母が同じ倍率で変わるため、この\term{留数}は
+規格化に依存しない。
+
+一方、\term{QNM} 波形 $\psi_n$ 自身は定数倍できる。観測操作を $\bra{O}$、源を
+$\ket{S}$ とし、\term{演算子値留数}を $A_n$ と書けば、観測される極部分は
+\begin{equation}
+\vA_n(\omega)
+=
+\frac{a_n}{\omega-\omega_n},
+\qquad
+a_n
+=
+\bra{O}A_n\ket{S}
+\label{eq:qnm-observable-residue}
+\end{equation}
+である。背景が定める周波数、規格化に依存する波形、演算子値\term{留数}、源と観測者を
+指定した振幅は同じ量ではない\cite{Motohashi:2024fwt}。
+
+\begin{principlebox}
+周波数だけでは時間波形は決まらない。物理的な\term{モード強度}は、Green 関数の留数に
+源と観測操作を挟んだ\term{行列要素}である。
+\end{principlebox}
+
+\section{空間的発散と時間的減衰}
+
+安定なブラックホールの減衰 QNM では $\im\omega_n<0$ である。固定した位置で
+\begin{equation}
+\left|\rme^{-\rmi\omega_n t}\right|
+=
+\rme^{(\im\omega_n)t}
+\end{equation}
+は減衰する。しかし右端の空間因子は
+\begin{equation}
+\left|\rme^{+\rmi\omega_n x}\right|
+=
+\rme^{-(\im\omega_n)x}
+\end{equation}
+であり、$x\to+\infty$ で増大する。左端でも同様である。これは、外向きへ進む波面を
+一つの複素周波数で全空間に延長した結果であって、時間的不安定性ではない。
+
+\begin{warningbox}
+QNM は通常の $L^2$ 固有関数ではない。実軸上での発散を無視して \term{Hilbert 空間}の
+\term{完全系}とみなすと、規格化と展開範囲を誤る。第\ref{chap:complex-scaling}章で定義する
+\term{複素スケーリング}は、この発散を解析接続された座標上で減衰へ変える。
+\end{warningbox}
+
+\section{減衰の向きを決めるエネルギー}
+
+実ポテンシャル $V(x)\geq0$ と\term{有限エネルギー}の実解について、区間 $[-R,R]$ の
+エネルギーを
+\begin{equation}
+E_R(t)
+=
+\frac{1}{2}
+\int_{-R}^{R}\rmd x
+\left[
+(\partial_t\Psi)^2
++(\partial_x\Psi)^2
++V\Psi^2
+\right]
+\label{eq:qnm-energy-estimate}
+\end{equation}
+とする。波動方程式を用いて部分積分すると、
+\begin{equation}
+\frac{\rmd E_R}{\rmd t}
+=
+\left[\partial_t\Psi\,\partial_x\Psi\right]_{-R}^{R}
+\label{eq:qnm-energy-flux-balance}
+\end{equation}
+を得る。右端で右向き、左端で左向きの波だけを許せば、$R\to\infty$ で右辺は
+二端へ出ていく負の flux となり、外部エネルギーは増えない。
+
+もし $\im\omega>0$ の流出モードがあれば、その空間波形は両端で減衰して有限
+エネルギーをもち、時間因子は指数的に増大する。これは
+式\eqref{eq:qnm-energy-flux-balance}と両立しない。したがって、この正値エネルギーを
+もつ問題では\term{不安定 QNM} はない。この議論は減衰率の値を与えず、$V$ が正でない場合、
+回転により地平面 flux が負になりうる場合、重力の拘束を含む場合には、そのままは
+使えない。安定性とは周波数表の経験則ではなく、適切なエネルギーと\term{境界 flux} の符号を
+示す問題である。
+
+\section{一つの可解な障壁}
+
+QNM の生成を一つの式で見るため、\term{P\"oschl--Teller 障壁}
+\begin{equation}
+V(x)
+=
+\frac{V_0}{\cosh^2(\alpha x)},
+\qquad
+V_0>0,
+\quad
+\alpha>0
+\label{eq:poschl_teller_potential}
+\end{equation}
+を考える。$y=(1+\tanh\alpha x)/2$ と変数変換すると\term{超幾何方程式}になり、両端の
+放射条件から
+\begin{equation}
+\omega_n
+=
+\mathord{\pm}
+\sqrt{V_0-\frac{\alpha^2}{4}}
+-\rmi\alpha\left(n+\frac{1}{2}\right),
+\qquad
+n=0,1,2,\ldots
+\label{eq:poschl_teller_qnm}
+\end{equation}
+を得る。障壁の高さが実部を、幅が減衰率の間隔を支配する。これはブラックホールの
+厳密なポテンシャルではないが、開放境界条件だけで複素周波数が生じることを示す。
+
+\section{光子球極限}
+
+Schwarzschild 時空で $\ell\gg1$ とすると、有効ポテンシャルの主要部は
+$f(r)\ell(\ell+1)/r^2$ であり、その極大は $r=3M$ の\term{不安定光子軌道}にある。
+光子軌道の角振動数と \term{Lyapunov 指数}はともに
+\begin{equation}
+\Omega_c
+=
+\Lambda_c
+=
+\frac{1}{3\sqrt{3}M}
+\end{equation}
+である。固定した \term{overtone} 番号 $n$ に対して
+\begin{equation}
+\omega_{\ell n}
+\simeq
+\Omega_c\left(\ell+\frac{1}{2}\right)
+-\rmi\Lambda_c\left(n+\frac{1}{2}\right)
+\label{eq:eikonal_qnm}
+\end{equation}
+となる。局所的な光線力学が低い減衰率を説明する一方、有限 $\ell$ の極、留数、
+\term{branch cut} はこの近似からは得られない。例えば重力摂動の $\ell=2$ 基本モードは
+\begin{equation}
+M\omega_{20}
+\simeq
+0.37367-0.08896\rmi
+\label{eq:schwarzschild_fundamental_qnm}
+\end{equation}
+である\cite{Berti:2009kk}。
+
+\section{数値計算の判定基準}
+
+直接積分は左右の Jost 解の Wronskian を零にする。\term{continued fraction 法}は\term{漸近級数}の
+\term{最小解条件}を課す。時間発展は波形から極を推定する。第\ref{chap:complex-scaling}章で
+導入する複素スケーリング法は流出波を減衰境界条件へ変える。手法は異なっても、
+判定基準は共通である。
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.8em]
+\item 時間規約と両端の放射条件が一致する。
+\item 基底数、領域、精度を変えて極が安定する。
+\item 離散化された連続成分が極から分離される。
+\item 物理的振幅が必要なら、留数も収束する。
+\end{enumerate}
+
+Schwarzschild と Reissner--Nordstr\"om に対する複素スケーリング計算は
+文献\cite{Ogawa:2026veu}で与えられている。\term{非自己共役問題}では固有値の感度と
+実周波数応答の感度を区別する必要がある\cite{Jaramillo:2020tuu}。
+
+\section{本章の結論}
+
+QNM はブラックホールに固有の物質振動ではなく、開放境界条件をもつ Green 関数の
+共鳴極である。その極は重要だが、応答を決めるには留数、源、観測操作、連続成分が
+要る。次章では、極と連続成分を逆変換し、時間波形のどの部分を支配するかを調べる。
+
+\begin{researchproblem}[Kerr の QNM 数値実装]
+Teukolsky の角方程式と動径方程式を同時に解き、$s=-2$、$\ell=m=2$ の基本 QNM を
+$a/M=0$ から近極限領域まで追跡せよ\cite{Teukolsky:1972my,Leaver:1985ax}。
+最低限、次を満たす実装を作る。
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.8em]
+\item 角固有値と $\omega$ を同じ反復または \term{contour 法}で決定する。
+\item 級数次数、数値領域、精度を変え、安定な極と離散化された連続成分を分ける。
+\item $a\to0$ で Schwarzschild 値へ戻ることを確認する。
+\item 可能ならば Green 関数の留数を求め、規格化を変えたときの不変量を示す。
+\end{enumerate}
+
+周波数表の再現は入口にすぎない。近極限での \term{branch structure}、\term{zero-damped mode}、
+源依存の\term{励起振幅}のいずれかを、実装から得られる研究課題として定式化せよ。
+\end{researchproblem}

@@ -1,0 +1,185 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
+
+\bibitem{Regge:1957td}
+T.~Regge and J.~A. Wheeler, ``{Stability of a Schwarzschild singularity},''
+  \href{http://dx.doi.org/10.1103/PhysRev.108.1063}{{\em Phys. Rev.} {\bfseries
+  108} (1957) 1063--1069}.
+
+\bibitem{Zerilli:1970wzz}
+F.~J. Zerilli, ``{Gravitational field of a particle falling in a schwarzschild
+  geometry analyzed in tensor harmonics},''
+  \href{http://dx.doi.org/10.1103/PhysRevD.2.2141}{{\em Phys. Rev. D}
+  {\bfseries 2} (1970) 2141--2160}.
+
+\bibitem{Moncrief:1974am}
+V.~Moncrief, ``{Gravitational perturbations of spherically symmetric systems.
+  I. The exterior problem},''
+  \href{http://dx.doi.org/10.1016/0003-4916(74)90173-0}{{\em Annals Phys.}
+  {\bfseries 88} (1974) 323--342}.
+
+\bibitem{Martel:2005ir}
+K.~Martel and E.~Poisson, ``{Gravitational perturbations of the Schwarzschild
+  spacetime: A practical covariant and gauge-invariant formalism},''
+  \href{http://dx.doi.org/10.1103/PhysRevD.71.104003}{{\em Phys. Rev. D}
+  {\bfseries 71} (2005) 104003},
+  \href{http://arxiv.org/abs/gr-qc/0502028}{{\ttfamily arXiv:gr-qc/0502028}}.
+
+\bibitem{Chandrasekhar:book}
+S.~Chandrasekhar,
+  \href{http://dx.doi.org/10.1093/oso/9780198503705.001.0001}{{\em The
+  Mathematical Theory of Black Holes}}.
+\newblock Oxford University Press, 09, 1998.
+\newblock \url{https://doi.org/10.1093/oso/9780198503705.001.0001}.
+
+\bibitem{Chandrasekhar:1975nkd}
+S.~Chandrasekhar, ``{On the equations governing the perturbations of the
+  Schwarzschild black hole},''
+  \href{http://dx.doi.org/10.1098/rspa.1975.0066}{{\em Proc. Roy. Soc. Lond. A}
+  {\bfseries 343} no.~1634, (1975) 289--298}.
+
+\bibitem{Teukolsky:1972my}
+S.~A. Teukolsky, ``{Rotating black holes - separable wave equations for
+  gravitational and electromagnetic perturbations},''
+  \href{http://dx.doi.org/10.1103/PhysRevLett.29.1114}{{\em Phys. Rev. Lett.}
+  {\bfseries 29} (1972) 1114--1118}.
+
+\bibitem{Motohashi:2024fwt}
+H.~Motohashi, ``{Resonant Excitation of Quasinormal Modes of Black Holes},''
+  \href{http://dx.doi.org/10.1103/PhysRevLett.134.141401}{{\em Phys. Rev.
+  Lett.} {\bfseries 134} no.~14, (2025) 141401},
+  \href{http://arxiv.org/abs/2407.15191}{{\ttfamily arXiv:2407.15191 [gr-qc]}}.
+
+\bibitem{Berti:2009kk}
+E.~Berti, V.~Cardoso, and A.~O. Starinets, ``{Quasinormal modes of black holes
+  and black branes},''
+  \href{http://dx.doi.org/10.1088/0264-9381/26/16/163001}{{\em Class. Quant.
+  Grav.} {\bfseries 26} (2009) 163001},
+  \href{http://arxiv.org/abs/0905.2975}{{\ttfamily arXiv:0905.2975 [gr-qc]}}.
+
+\bibitem{Ogawa:2026veu}
+S.~Ogawa, T.~Hirose, and O.~Morikawa, ``{Complex scaling approach to
+  quasinormal modes of Schwarzschild and Reissner--Nordstr{\"o}m black
+  holes},'' \href{http://arxiv.org/abs/2604.20442}{{\ttfamily arXiv:2604.20442
+  [hep-th]}}.
+
+\bibitem{Jaramillo:2020tuu}
+J.~L. Jaramillo, R.~Panosso~Macedo, and L.~Al~Sheikh, ``{Pseudospectrum and
+  Black Hole Quasinormal Mode Instability},''
+  \href{http://dx.doi.org/10.1103/PhysRevX.11.031003}{{\em Phys. Rev. X}
+  {\bfseries 11} no.~3, (2021) 031003},
+  \href{http://arxiv.org/abs/2004.06434}{{\ttfamily arXiv:2004.06434 [gr-qc]}}.
+
+\bibitem{Leaver:1985ax}
+E.~W. Leaver, ``{An Analytic representation for the quasi normal modes of Kerr
+  black holes},'' \href{http://dx.doi.org/10.1098/rspa.1985.0119}{{\em Proc.
+  Roy. Soc. Lond. A} {\bfseries 402} (1985) 285--298}.
+
+\bibitem{Leaver:1986gd}
+E.~W. Leaver, ``{Spectral decomposition of the perturbation response of the
+  Schwarzschild geometry},''
+  \href{http://dx.doi.org/10.1103/PhysRevD.34.384}{{\em Phys. Rev. D}
+  {\bfseries 34} (1986) 384--408}.
+
+\bibitem{Suzuki:2005wv}
+R.~Suzuki, T.~Myo, and K.~Kat{\={o}}, ``{Level density in complex scaling
+  method},'' \href{http://dx.doi.org/10.1063/1.1933001}{{\em AIP Conf. Proc.}
+  {\bfseries 768} no.~1, (2005) 455},
+  \href{http://arxiv.org/abs/nucl-th/0502012}{{\ttfamily
+  arXiv:nucl-th/0502012}}.
+
+\bibitem{Ogawa:2026dSCSM}
+S.~Ogawa, O.~Morikawa, and T.~Hirose, ``{Quasinormal modes and continuum
+  response of de Sitter black holes via complex scaling method},''
+  \href{http://arxiv.org/abs/2605.03277}{{\ttfamily arXiv:2605.03277
+  [hep-th]}}.
+
+\bibitem{Morikawa:2026RieszLaurent}
+O.~Morikawa, S.~Ogawa, and T.~Hirose, ``{Riesz--Laurent representation of
+  black-hole scattering and sourced response at exceptional points},''
+  \href{http://arxiv.org/abs/2608.14752}{{\ttfamily arXiv:2608.14752 [gr-qc]}}.
+
+\bibitem{Morikawa:2025inx}
+O.~Morikawa, S.~Ogawa, and S.~Onoda, ``{Geometric phase from encircling an
+  exceptional point of a quantum resonance in the complex-scaling method},''
+  \href{http://dx.doi.org/10.1103/pf6y-lxzp}{{\em Phys. Rev. A} {\bfseries 113}
+  no.~5, (2026) 052225}, \href{http://arxiv.org/abs/2512.24528}{{\ttfamily
+  arXiv:2512.24528 [quant-ph]}}.
+
+\bibitem{Hawking:1975vcx}
+S.~W. Hawking, ``{Particle Creation by Black Holes},''
+  \href{http://dx.doi.org/10.1007/BF02345020}{{\em Commun. Math. Phys.}
+  {\bfseries 43} (1975) 199--220}.
+
+\bibitem{BirrellDavies:1982}
+N.~D. Birrell and P.~C.~W. Davies,
+  \href{http://dx.doi.org/10.1017/CBO9780511622632}{{\em {Quantum Fields in
+  Curved Space}}}.
+\newblock Cambridge University Press, Cambridge, 1982.
+
+\bibitem{Bekenstein:1973ur}
+J.~D. Bekenstein, ``{Black Holes and Entropy},''
+  \href{http://dx.doi.org/10.1103/PhysRevD.7.2333}{{\em Phys. Rev. D}
+  {\bfseries 7} (1973) 2333--2346}.
+
+\bibitem{Bardeen:1973gs}
+J.~M. Bardeen, B.~Carter, and S.~W. Hawking, ``{The Four Laws of Black Hole
+  Mechanics},'' \href{http://dx.doi.org/10.1007/BF01645742}{{\em Commun. Math.
+  Phys.} {\bfseries 31} (1973) 161--170}.
+
+\bibitem{Ryu:2006bv}
+S.~Ryu and T.~Takayanagi, ``{Holographic Derivation of Entanglement Entropy
+  from AdS/CFT},'' \href{http://dx.doi.org/10.1103/PhysRevLett.96.181602}{{\em
+  Phys. Rev. Lett.} {\bfseries 96} (2006) 181602},
+  \href{http://arxiv.org/abs/hep-th/0603001}{{\ttfamily arXiv:hep-th/0603001
+  [hep-th]}}.
+
+\bibitem{Deutsch:1991}
+J.~M. Deutsch, ``{Quantum statistical mechanics in a closed system},''
+  \href{http://dx.doi.org/10.1103/PhysRevA.43.2046}{{\em Phys. Rev. A}
+  {\bfseries 43} (1991) 2046--2049}.
+
+\bibitem{Srednicki:1994}
+M.~Srednicki, ``{Chaos and quantum thermalization},''
+  \href{http://dx.doi.org/10.1103/PhysRevE.50.888}{{\em Phys. Rev. E}
+  {\bfseries 50} (1994) 888--901}.
+
+\bibitem{Rigol:2008}
+M.~Rigol, V.~Dunjko, and M.~Olshanii, ``{Thermalization and its mechanism for
+  generic isolated quantum systems},''
+  \href{http://dx.doi.org/10.1038/nature06838}{{\em Nature} {\bfseries 452}
+  (2008) 854--858}, \href{http://arxiv.org/abs/0708.1324}{{\ttfamily
+  arXiv:0708.1324 [cond-mat.stat-mech]}}.
+
+\bibitem{DAlessio:2016}
+L.~D'Alessio, Y.~Kafri, A.~Polkovnikov, and M.~Rigol, ``{From quantum chaos and
+  eigenstate thermalization to statistical mechanics and thermodynamics},''
+  \href{http://dx.doi.org/10.1080/00018732.2016.1198134}{{\em Adv. Phys.}
+  {\bfseries 65} (2016) 239--362},
+  \href{http://arxiv.org/abs/1509.06411}{{\ttfamily arXiv:1509.06411
+  [cond-mat.stat-mech]}}.
+
+\bibitem{Murthy:2023naETH}
+C.~Murthy, A.~Babakhani, F.~Iniguez, M.~Srednicki, and N.~Yunger~Halpern,
+  ``{Non-Abelian eigenstate thermalization hypothesis},''
+  \href{http://dx.doi.org/10.1103/PhysRevLett.130.140402}{{\em Phys. Rev.
+  Lett.} {\bfseries 130} no.~14, (2023) 140402},
+  \href{http://arxiv.org/abs/2206.05310}{{\ttfamily arXiv:2206.05310
+  [quant-ph]}}.
+
+\bibitem{Fukushima:2023svf}
+O.~Fukushima and R.~Hamazaki, ``{Violation of Eigenstate Thermalization
+  Hypothesis in Quantum Field Theories with Higher-Form Symmetry},''
+  \href{http://dx.doi.org/10.1103/PhysRevLett.131.131602}{{\em Phys. Rev.
+  Lett.} {\bfseries 131} no.~13, (2023) 131602},
+  \href{http://arxiv.org/abs/2305.04984}{{\ttfamily arXiv:2305.04984
+  [cond-mat.stat-mech]}}.
+
+\bibitem{Lashkari:2018CFTETH}
+N.~Lashkari, A.~Dymarsky, and H.~Liu, ``{Eigenstate Thermalization Hypothesis
+  in Conformal Field Theory},''
+  \href{http://dx.doi.org/10.1088/1742-5468/aab020}{{\em J. Stat. Mech.}
+  {\bfseries 1803} no.~3, (2018) 033101},
+  \href{http://arxiv.org/abs/1610.00302}{{\ttfamily arXiv:1610.00302
+  [hep-th]}}.
+
+\end{thebibliography}\endgroup

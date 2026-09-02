@@ -1,0 +1,150 @@
+\chapter{応答の不変量}
+\label{chap:response-invariants}
+\chapterepigraph{``In discussion it is not so much weight of authority as force of argument that should be demanded.''}{Marcus Tullius Cicero, \textit{De Natura Deorum}, I.10, trans.\ H.\ Rackham}
+
+\section{表示を変えても残るもの}
+
+マスター場の選択、座標、基底、\term{複素スケーリング角}、固有ベクトルの\term{規格化}は計算に
+必要だが、単独では観測量ではない。本書の最後に、応答を構成する量の階層を整理する。
+
+周波数領域の方程式を
+\begin{equation}
+\vL(\omega)\ket{\Psi}
+=
+\ket{S}
+\end{equation}
+とする。\term{可逆な場の変換} $B(\omega)$ と方程式の組合せ変換 $A(\omega)$ により
+\begin{align}
+\ket{\Psi'}
+&=
+B\ket{\Psi},
+\\
+\vL'
+&=
+A\vL B^{-1},
+\\
+\ket{S'}
+&=
+A\ket{S}
+\end{align}
+と変える。このとき
+\begin{equation}
+\vG'
+=
+B\vG A^{-1}
+\label{eq:green-field-redefinition}
+\end{equation}
+である。観測操作を $\bra{O'}=\bra{O}B^{-1}$ と変換すれば、
+\begin{equation}
+\bra{O'}\vG'\ket{S'}
+=
+\bra{O}\vG\ket{S}
+\label{eq:physical-amplitude-invariant}
+\end{equation}
+となる。\term{Green 演算子}の成分は変わっても、同じ物理的源と観測者を結ぶ振幅は変わらない。
+
+\section{何を比較するか}
+
+計算結果を比較するときは、次の階層を混ぜない。
+
+\paragraph{表示.}
+$\rstar$、$V$、$\psi_n$、基底係数を比較するには、座標、場の定義、\term{規格化}を
+そろえる。
+
+\paragraph{スペクトル.}
+QNM 極、分岐切断、\term{Riesz クラスター}を比較するには、境界条件、\term{Riemann 面}、
+\term{輪郭積分路}をそろえる。
+
+\paragraph{古典応答.}
+$\bra{O}\vG\ket{S}$、散乱行列、greybody factor を比較するには、物理的な源、
+観測操作、流束規格化をそろえる。
+
+\paragraph{量子状態.}
+$G^>$、$G^<$、粒子数、ノイズを比較するには、状態、時刻生成子、観測者をそろえる。
+
+\paragraph{熱化.}
+$S(E)$、$f_O(E,\omega)$、\term{電荷部門}を比較するには、\term{粗視化}、対称性、統計集団を
+そろえる。
+
+QNM 周波数は \term{admissible} な場の再定義に対して安定だが、極が \term{branch cut} を横切ると
+\term{sheet} の指定が要る。\term{演算子値留数}は表現に従って変換するが、式
+\eqref{eq:physical-amplitude-invariant}の行列要素は不変である。例外点では個別留数を
+比較せず、同じ contour で定めた $M_0$、$M_1$ と源付き \term{Laurent 係数}を比較する。
+
+\section{因果律が与える分散関係}
+
+遅延 Green 関数は $t<0$ で零である。この\term{因果性}により $G_R(\omega)$ は\term{上半平面}で
+解析的になる。無限遠で十分速く減衰する行列要素に対して、実軸上の実部と虚部は
+\begin{align}
+\re G_R(\omega)
+&=
+\frac{1}{\pi}
+\mathop{\mathrm{P}}
+\int_{-\infty}^{\infty}
+\frac{\im G_R(\omega')}{\omega'-\omega}
+\,\rmd\omega',
+\label{eq:kramers-kronig-real}
+\\
+\im G_R(\omega)
+&=
+-\frac{1}{\pi}
+\mathop{\mathrm{P}}
+\int_{-\infty}^{\infty}
+\frac{\re G_R(\omega')}{\omega'-\omega}
+\,\rmd\omega'
+\label{eq:kramers-kronig-imag}
+\end{align}
+で結ばれる。$\mathrm P$ は \term{Cauchy 主値}である。高周波で定数や多項式が残る場合は
+\term{subtraction} を行う。
+
+\term{分散関係}は、極の位置だけでなく連続成分も必要であることを実軸上で表している。
+吸収を変えずに分散だけを任意に変えることはできない。数値 Green 関数の実部と虚部を
+独立に検査する手段にもなる。
+
+\section{古典から量子統計までの一本の式}
+
+本書の主線は、次の\term{因果的振幅}に集約される。
+\begin{equation}
+\vA_R(\omega)
+=
+\bra{O}
+\left(
+H-(\omega+\rmi0)^2
+\right)^{-1}
+\ket{S}
+\label{eq:book-central-amplitude}
+\end{equation}
+幾何学は $H$、地平面は境界値 $+\rmi0$ と放射条件、外力と検出器は $\ket S$ と
+$\bra O$ に入る。解析接続すれば QNM と例外点が現れ、実軸上の虚部は吸収を与える。
+量子化すれば同じ量が交換子になり、状態を指定すれば KMS と揺動散逸関係が加わる。
+微視的固有状態へ戻れば、その\term{スペクトル密度}は ETH の行列要素で表される。
+
+\begin{principlebox}
+一つの表示を守るのではなく、因果的応答を守る。亀座標、Jost 解、QNM、複素
+スケーリング、Riesz cluster、KMS、ETH は、式\eqref{eq:book-central-amplitude}を
+異なる領域で読むための道具である。
+\end{principlebox}
+
+\newpage
+\section{物理ミニマムの境界}
+
+非線形な合体からリングダウンへの接続、\term{自己力}、\term{数値相対論}との接続、\term{AdS/CFT} の辞書、\term{量子重力}の
+\term{微視的状態}、\term{情報回収}は重要である。しかし、それぞれを一章ずつ概説しても、本書の
+因果的応答は深くならない。具体的な源、観測量、Green 関数、または行列要素へ還元
+できたときにだけ、本書の次の版へ入れる。
+
+同じ理由で、数値手法の一覧や既知 QNM 表は本文から外した。必要な計算は研究問題に
+置き、結果ではなく判定基準を示した。研究が完成すれば、そのうち主線を変えるものだけを
+本文へ戻し、残りは研究問題として更新する。
+
+\section{結語}
+
+ブラックホールは、古典場を吸収する散乱体であり、共鳴をもつ開放系であり、量子場に
+熱的揺らぎを与える地平面である。これらを別の比喩として並べる必要はない。因果的
+Green 関数を中心に置けば、古典場の応答、\term{非自己共役スペクトル}、\term{量子線形応答}、熱化は
+同じ問題の連続した記述になる。
+
+本書の物理ミニマムは、短くするための消極的な制限ではない。何を計算すれば観測量へ
+届くかを見失わないための選択である。
+
+\chapterepigraph{``And thence we came forth to see again the stars.''}{Dante Alighieri, \textit{Inferno}, Canto XXXIV, line 139}

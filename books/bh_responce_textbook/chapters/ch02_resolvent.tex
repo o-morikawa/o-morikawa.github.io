@@ -1,0 +1,353 @@
+\chapter{レゾルベント}
+\label{chap:resolvent}
+\chapterepigraph{``Deep calleth unto deep.''}{Psalm 42:7, King James Version}
+
+\section{先に応答を問う}
+
+前章で得た一次元方程式を、$x=\rstar$ と略記して
+\begin{equation}
+\left(
+\partial_t^2+H
+\right)\Psi(t,x)
+=
+S(t,x)
+\label{eq:wave_H_form}
+\end{equation}
+と書く。ここで、\term{空間演算子} $H$ は
+\begin{equation}
+H
+=
+-\frac{\rmd^2}{\rmd x^2}
++V(x)
+\label{eq:H_definition}
+\end{equation}
+であり、$V(x)$ は実数値の有効ポテンシャル、$S(t,x)$ は外部源である。
+
+閉じた系ならば、$H$ の\term{固有関数}を求めて展開する方法が自然である。しかし
+ブラックホール外部では、左右の漸近端からエネルギーが流出する。そこで問いを
+次のように変える。
+
+\begin{principlebox}
+どの複素周波数が許されるかを先に問うのではなく、与えられた源がどの応答を
+生むかを問う。その応答の\term{解析構造}として、極と\term{連続スペクトル}を見いだす。
+\end{principlebox}
+
+この順序では、第\ref{chap:qnm}章で定義する準固有振動（QNM）は入力ではなく
+応答から読み取る結果である。
+
+\section{二つのレゾルベント}
+
+まず、複素エネルギー変数を $z\in\bbC$ とし、$H$ の\term{レゾルベント}を
+\begin{equation}
+\vR(z)
+=
+(H-z)^{-1}
+\label{eq:energy_resolvent}
+\end{equation}
+と定義する。この逆演算子が有界に存在する $z$ の集合を\term{レゾルベント集合}
+$\rho(H)$ とよび、その補集合を\term{スペクトル} $\sigma(H)$ とよぶ。
+
+波動方程式では $z=\omega^2$ であるため、周波数平面上の\term{演算子束}
+\begin{equation}
+\vL(\omega)
+=
+H-\omega^2
+\label{eq:operator_pencil}
+\end{equation}
+と周波数 \term{Green 演算子}
+\begin{equation}
+\vG(\omega)
+=
+\vL(\omega)^{-1}
+=
+\vR(\omega^2)
+\label{eq:frequency_green_operator}
+\end{equation}
+を用いる。$z$ 平面では\term{自己共役作用素}のスペクトル論が明瞭であり、$\omega$ 平面では
+入射・出射波と時間発展が明瞭である。本書では両者を区別し、必要に応じて移る。
+
+\begin{warningbox}
+$z=\omega^2$ は一対一ではない。$z$ 平面の平方根には二つの \term{Riemann sheet} があり、
+放射条件の\term{解析接続}は \term{sheet} の選択を含む。「実軸を越えて\term{解析接続}する」という
+記述だけでは不十分であり、$\omega$ の符号と\term{境界値}を指定しなければならない。
+\end{warningbox}
+
+\section{\term{因果的 Fourier--Laplace 変換}}
+
+源が有限時刻以後に作用するとする。$\gamma>0$ を十分大きく取り、
+\begin{align}
+\Psi(t,x)
+&=
+\int_{\bbR+\rmi\gamma}
+\frac{\rmd\omega}{2\pi}
+\,
+\rme^{-\rmi\omega t}
+\psi(\omega,x),
+\label{eq:inverse_laplace_psi}
+\\
+S(t,x)
+&=
+\int_{\bbR+\rmi\gamma}
+\frac{\rmd\omega}{2\pi}
+\,
+\rme^{-\rmi\omega t}
+s(\omega,x)
+\label{eq:inverse_laplace_source}
+\end{align}
+と書く。\term{積分路} $\bbR+\rmi\gamma$ は上半平面の水平線である。式
+\eqref{eq:wave_H_form}は
+\begin{equation}
+\vL(\omega)\psi(\omega)
+=
+s(\omega)
+\end{equation}
+となるため、
+\begin{equation}
+\psi(\omega)
+=
+\vG(\omega)s(\omega)
+\label{eq:frequency_response}
+\end{equation}
+である。上半平面から定義して下方へ解析接続することにより、\term{遅延 Green 関数}の
+\term{境界値}が選ばれる。
+
+観測操作を\term{線形汎関数} $\bra{O}$、源の空間分布を $\ket{S}$ と書けば、観測される
+\term{周波数応答}は
+\begin{equation}
+\vA(\omega)
+=
+\bra{O}\vG(\omega)\ket{S}
+\label{eq:source_observer_amplitude}
+\end{equation}
+である。$\vA(\omega)$ はスカラーであり、源と観測点を変えれば同じ極に対する強度も
+変わる。スペクトルの存在と、そのスペクトルが強く励起されることは別問題である。
+
+重力摂動では、物理的な物質源 $T_{\mu\nu}$ からマスター方程式の源を作る線形写像を
+$\vD_S$、マスター場から検出器の観測量を作る線形写像を $\vD_O$ と書ける。このとき
+物理的な源から観測応答までの写像は
+\begin{equation}
+\delta O(\omega)
+=
+\vD_O\vG(\omega)\vD_S T
+\label{eq:physical-response-map}
+\end{equation}
+である。$\vD_S$ と $\vD_O$ は背景、\term{ゲージ不変量}の選択、観測方法に依存するが、
+それらを整合して変換した最終的な $\delta O$ は表示の選び方に依存しない。この点は
+第\ref{chap:response-invariants}章で整理する。
+
+\section{Jost 解}
+
+有効ポテンシャルが $x\to\pm\infty$ で十分速く零へ近づく場合を考える。左 \term{Jost 解}
+$f_-(x,\omega)$ と右 \term{Jost 解} $f_+(x,\omega)$ を、それぞれ
+\begin{align}
+\vL(\omega)f_-(x,\omega)&=0,
+&
+f_-(x,\omega)&\sim\rme^{-\rmi\omega x},
+&&x\longrightarrow-\infty,
+\label{eq:left_jost}
+\\
+\vL(\omega)f_+(x,\omega)&=0,
+&
+f_+(x,\omega)&\sim\rme^{+\rmi\omega x},
+&&x\longrightarrow+\infty
+\label{eq:right_jost}
+\end{align}
+によって定める。左端がブラックホール地平面ならば $f_-$ は地平面へ入る解、右端が
+空間的無限遠ならば $f_+$ は無限遠へ出ていく解である。
+
+二つの解の \term{Wronskian} を
+\begin{equation}
+\vW(\omega)
+=
+f_-(x,\omega)
+\frac{\partial f_+(x,\omega)}{\partial x}
+-
+\frac{\partial f_-(x,\omega)}{\partial x}
+f_+(x,\omega)
+\label{eq:jost_wronskian}
+\end{equation}
+と定義する。微分方程式に一階微分項がないので、$\vW(\omega)$ は $x$ に依存しない。
+実際、式\eqref{eq:jost_wronskian}を $x$ で微分し、両方の \term{Jost 解}が同じ方程式を
+満たすことを用いれば零になる。
+
+\section{Green 核の構成}
+
+周波数 \term{Green 核} $G(x,x';\omega)$ を
+\begin{equation}
+\vL(\omega)G(x,x';\omega)
+=
+\delta(x-x')
+\label{eq:green_kernel_equation}
+\end{equation}
+によって定める。$x_< =\min(x,x')$、$x_>=\max(x,x')$ とすると、放射条件を満たす
+\term{Green 核}は
+\begin{equation}
+G(x,x';\omega)
+=
+-\frac{
+f_-(x_<,\omega)f_+(x_>,\omega)
+}{
+\vW(\omega)
+}
+\label{eq:green_jost_formula}
+\end{equation}
+である。
+
+\paragraph{Green 核の接続条件.}
+$x\ne x'$ では同次方程式を満たすため、左側では $f_-$、右側では $f_+$ に比例する。
+$x=x'$ での連続性から両側の係数を一つにまとめられる。さらに
+式\eqref{eq:green_kernel_equation}を $x'$ の近傍で積分すると、
+\begin{equation}
+\left.
+\frac{\partial G}{\partial x}
+\right|_{x=x'+0}
+-
+\left.
+\frac{\partial G}{\partial x}
+\right|_{x=x'-0}
+=
+-1
+\end{equation}
+を得る。この微分の跳びが式\eqref{eq:green_jost_formula}の符号と係数を固定する。
+
+式\eqref{eq:green_jost_formula}は本書で最も重要な公式の一つである。分子は源から
+観測点への伝播を、分母は左右の放射条件が両立するかどうかを表す。$\vW(\omega)$
+が零ならば、左右の Jost 解は一次従属になり、外部源がなくても両端で放射条件を
+満たす解が存在する。このような複素周波数を次章で準固有振動（QNM）と定義する。
+
+\section{散乱係数と流束}
+
+実周波数 $\omega>0$ を考える。右側から入射する散乱解 $\psi_{\mathrm{in}}$ を
+\begin{align}
+\psi_{\mathrm{in}}
+&\sim
+\rme^{-\rmi\omega x}
++\vS_{\mathrm{R}}(\omega)
+\rme^{+\rmi\omega x},
+&&x\longrightarrow+\infty,
+\label{eq:scatter_right}
+\\
+\psi_{\mathrm{in}}
+&\sim
+\vS_{\mathrm{T}}(\omega)
+\rme^{-\rmi\omega x},
+&&x\longrightarrow-\infty
+\label{eq:scatter_left}
+\end{align}
+と規格化する。$\vS_{\mathrm{R}}$ と $\vS_{\mathrm{T}}$ は、それぞれ\term{反射振幅}と\term{透過
+振幅}である。
+
+解 $\psi$ に付随する\term{流束}を
+\begin{equation}
+j[\psi]
+=
+\frac{1}{2\rmi}
+\left(
+\psi^*\frac{\rmd\psi}{\rmd x}
+-
+\psi\frac{\rmd\psi^*}{\rmd x}
+\right)
+\label{eq:conserved_flux}
+\end{equation}
+と定義する。ポテンシャルが実数ならば $j$ は $x$ に依存しない。左右の漸近波数が
+同じ場合、\term{流束保存}から
+\begin{equation}
+|\vS_{\mathrm{R}}(\omega)|^2
++
+|\vS_{\mathrm{T}}(\omega)|^2
+=
+1
+\label{eq:unitarity_one_channel}
+\end{equation}
+を得る。ブラックホールへ吸収される割合、すなわち \term{greybody factor} は
+\begin{equation}
+\Gamma(\omega)
+=
+|\vS_{\mathrm{T}}(\omega)|^2
+\label{eq:greybody_factor}
+\end{equation}
+である。異なる漸近波数や結合チャンネルをもつ場合には、\term{群速度}と\term{流束規格化}を
+含めなければならない。
+
+\section{解析接続された応答}
+
+自己共役な $H$ の物理的スペクトルは実軸上にある。\term{共鳴}は、そのスペクトルへ
+新しい $L^2$ 固有値として追加されるのではない。上半平面で定義した \term{Green 演算子}の
+行列要素を、放射条件を保ったまま下半平面へ解析接続したとき、その極として現れる。
+
+\term{単純極} $\omega=\omega_n$ の近傍では、
+\begin{equation}
+\vG(\omega)
+=
+\frac{A_n}{\omega-\omega_n}
++\vG_{\mathrm{reg}}(\omega)
+\label{eq:green_simple_pole}
+\end{equation}
+と書ける。$A_n$ は\term{演算子値留数}、$\vG_{\mathrm{reg}}$ は $\omega_n$ で\term{正則な部分}で
+ある。源と観測操作を挟むと、
+\begin{equation}
+\vA(\omega)
+=
+\frac{
+\bra{O}A_n\ket{S}
+}{
+\omega-\omega_n
+}
++\vA_{\mathrm{reg}}(\omega)
+\label{eq:amplitude_simple_pole}
+\end{equation}
+となる。物理的に測られる極の強さは $\bra{O}A_n\ket{S}$ であって、任意に規格化
+した QNM 波形そのものではない。
+
+\section{積分路を変形する}
+
+時間領域の応答は式\eqref{eq:inverse_laplace_psi}の\term{積分路}を下方へ変形することで
+解析できる。模式的には
+\begin{equation}
+\Psi(t)
+=
+\Psi_{\mathrm{pole}}(t)
++\Psi_{\mathrm{cont}}(t)
++\Psi_{\mathrm{arc}}(t)
+\label{eq:response_decomposition}
+\end{equation}
+と分かれる。第一項は変形中に横切った極の留数、第二項は\term{分岐切断}または連続
+スペクトルの不連続性、第三項は\term{大円弧}や高周波部分からの寄与を表す。
+
+単純極の寄与は
+\begin{equation}
+\Psi_{\mathrm{pole}}(t)
+\mathrel{\propto}
+\rme^{-\rmi\omega_n t}
+\bra{O}A_n\ket{S}
+\label{eq:time_simple_pole}
+\end{equation}
+である。$\im\omega_n<0$ ならば時間とともに減衰する。しかし、どの時刻範囲で
+式\eqref{eq:time_simple_pole}が支配的かは、極の位置だけでは決まらない。源の帯域、
+観測点、連続成分、高周波成分との大小比較が必要である。
+
+\begin{warningbox}
+積分路変形から得た「極の和」は、条件なしに全時刻の完全展開になるわけではない。
+大円弧が消える領域、\term{分岐切断}の位置、初期データの正則性、観測点の位置を確認する
+必要がある。\term{QNM の完全性}を、有限次元行列の固有ベクトル展開から類推してはならない。
+\end{warningbox}
+
+\term{漸近平坦}な Schwarzschild 時空では、長距離ポテンシャルに由来する\term{非解析性}が、
+第\ref{chap:time-response}章で定義する遅時間の冪減衰成分と関係する。一方、二つの
+地平面に挟まれた de~Sitter ブラックホールでは
+漸近構造が異なる。時間応答は第五章、連続応答のスペクトル表示は第二部で扱う。
+
+\section{本章の結論}
+
+本章で構成した基本対象は、許容周波数の集合ではなく Green 演算子
+$\vG(\omega)$ である。Jost 解による公式\eqref{eq:green_jost_formula}から、
+散乱振幅と外力応答の特異性が同じ \term{Wronskian} によって支配されることが分かった。
+次章では、その極を準固有振動（QNM）として定義し、詳しく調べる。
+
+\begin{researchproblem}[長距離 Jost 関数]
+Schwarzschild の有効ポテンシャルは無限遠で有限範囲ポテンシャルではない。
+\term{Volterra 方程式}による通常の Jost 解の構成を、$\rstar$ と $r$ の対数差を保ったまま
+作り直せ。低周波で生じる \term{branch point} の位置と sheet を同定し、Wronskian の
+零点と分岐切断の不連続性を同じ数値計算から抽出する方法を設計せよ。
+収束判定は、切断の置き方を変えても時間応答が不変であることとする。
+\end{researchproblem}

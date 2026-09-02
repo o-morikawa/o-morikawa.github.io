@@ -1,0 +1,179 @@
+\chapter{マスター場の量子化}
+\label{chap:quantized-master-field}
+\chapterepigraph{``What you have inherited from your fathers, earn it, in order to possess it.''}{Johann Wolfgang von Goethe, \textit{Faust I}, ``Night''}
+
+\section{同じ作用を量子論で読む}
+
+古典論で用いた一つのマスター場を $\Psi(t,x)$ とし、作用を
+\begin{equation}
+I[\Psi]
+=
+\frac{1}{2}
+\int \rmd t\rmd x
+\left[
+(\partial_t\Psi)^2
+-(\partial_x\Psi)^2
+-V(x)\Psi^2
+\right]
+\label{eq:quantum-master-action}
+\end{equation}
+とする。角運動量ラベルは省略した。\term{共役運動量}は
+\begin{equation}
+\Pi(t,x)
+=
+\partial_t\Psi(t,x)
+\end{equation}
+である。\term{量子化}では $\Psi$ と $\Pi$ を演算子にし、\term{等時交換関係}
+\begin{align}
+[\Psi(t,x),\Pi(t,x')]
+&=
+\rmi\delta(x-x'),
+\label{eq:canonical-master-commutator}
+\\
+[\Psi(t,x),\Psi(t,x')]
+&=
+[\Pi(t,x),\Pi(t,x')]
+=0
+\end{align}
+を課す。ここでは $\hbar=1$ とした。\term{Heisenberg 方程式}は古典方程式と同じ
+\begin{equation}
+\left(
+\partial_t^2-\partial_x^2+V
+\right)\Psi
+=0
+\label{eq:quantized-master-eom}
+\end{equation}
+である。線形場では、古典的な\term{伝播演算子}がそのまま量子場の\term{交換子}を支配する。
+
+\section{遅延 Green 関数は交換子である}
+
+量子状態を\term{密度演算子} $\rho$ とする。本書の符号規約では、遅延 Green 関数を
+\begin{equation}
+G_R(t,x;t',x')
+=
+\rmi\theta(t-t')
+\Tr\left(
+\rho[\Psi(t,x),\Psi(t',x')]
+\right)
+\label{eq:quantum-retarded-green}
+\end{equation}
+と定義する。\term{交換子}は線形方程式の下で演算子ではなく複素数値（\term{c-number}）になるため、
+\term{自由場}の $G_R$ は状態 $\rho$ に依存しない。\term{等時交換関係}から時間微分の跳びが決まり、
+\begin{equation}
+\left(
+\partial_t^2-\partial_x^2+V
+\right)G_R(t,x;t',x')
+=
+\delta(t-t')\delta(x-x')
+\label{eq:retarded-green-quantum-eom}
+\end{equation}
+を満たす。
+
+外力 $J$ を
+\begin{equation}
+H_{\mathrm{int}}(t)
+=
+-\int\rmd x\,J(t,x)\Psi(t,x)
+\end{equation}
+で結合すると、一次の \term{Kubo 応答}は
+\begin{equation}
+\delta\langle\Psi(t,x)\rangle
+=
+\int\rmd t'\rmd x'\,
+G_R(t,x;t',x')J(t',x')
+\label{eq:kubo-master-response}
+\end{equation}
+となる。これは第三章の古典 Green 関数による解と同じである。
+
+\begin{principlebox}
+古典的応答と\term{量子線形応答}を結ぶ量は遅延 Green 関数である。線形場では、その解析
+接続の QNM 極も同じである。量子状態の情報は\term{交換子}ではなく、\term{反交換子}側に加わる。
+\end{principlebox}
+
+\section{状態を含む二点関数}
+
+量子状態を識別するには \term{Wightman 関数}
+\begin{align}
+G^>(1,2)
+&=
+\Tr\left(
+\rho\Psi(1)\Psi(2)
+\right),
+\label{eq:wightman-greater}
+\\
+G^<(1,2)
+&=
+\Tr\left(
+\rho\Psi(2)\Psi(1)
+\right)
+\label{eq:wightman-less}
+\end{align}
+を用いる。$1=(t,x)$、$2=(t',x')$ は時空点の略記である。\term{スペクトル関数}と\term{対称相関}を
+\begin{align}
+\rho_\Psi(1,2)
+&=
+G^>(1,2)-G^<(1,2),
+\label{eq:master-spectral-function}
+\\
+F_\Psi(1,2)
+&=
+\frac{1}{2}
+\left[
+G^>(1,2)+G^<(1,2)
+\right]
+\label{eq:master-symmetric-correlator}
+\end{align}
+と定義すれば、$G_R=\rmi\theta(t-t')\rho_\Psi$ である。$\rho_\Psi$ は応答可能性を、
+$F_\Psi$ は状態に存在する揺らぎを表す。熱平衡では両者が第十章の\term{揺動散逸関係}で
+結ばれる。
+
+\section{\term{散乱モード}による展開}
+
+実周波数の正規化された解を $u_{\omega a}(t,x)$ とする。$a$ は、無限遠から入射する
+モード、過去地平面から出るモードなど、独立な\term{入射チャンネル}を表す。場は
+\begin{equation}
+\Psi(t,x)
+=
+\sum_a
+\int_0^\infty\rmd\omega
+\left[
+a_{\omega a}u_{\omega a}(t,x)
++a^\dagger_{\omega a}u^*_{\omega a}(t,x)
+\right]
+\label{eq:master-mode-expansion}
+\end{equation}
+と展開できる。\term{流束規格化}を選べば
+\begin{equation}
+[a_{\omega a},a^\dagger_{\omega' b}]
+=
+\delta_{ab}\delta(\omega-\omega')
+\end{equation}
+である。反射係数と透過係数は同じ古典散乱行列に現れ、量子論では\term{生成消滅演算子}の
+チャンネル変換を与える。
+
+QNM をこの展開の基本演算子にしてはならない。QNM は複素周波数の共鳴であり、
+実周波数の完全な\term{散乱基底}を解析接続した極である。量子場の\term{正準交換関係}を保つには、
+極だけでなく連続成分が必要である。
+
+\section{三つの真空}
+
+静的ブラックホールでは、正周波数をどの時刻に対して定めるかにより状態が変わる。
+外部の静的時刻に関する空状態は \term{Boulware 状態}、過去無限遠からの入射が真空で未来へ
+\term{Hawking 流束}をもつ状態は \term{Unruh 状態}、永遠ブラックホールの両外部が熱平衡にある状態は
+\term{Hartle--Hawking 状態}とよばれる。
+
+この分類で必要なのは、方程式と状態を分けることである。同じ $G_R$ と散乱係数に、
+異なる \term{occupation number} が組み合わさる。地平面で正則か、無限遠で熱流束があるかは、
+状態の選択によって決まる。
+
+\begin{warningbox}
+「\term{ブラックホールの真空}」は一つではない。QNM 周波数は背景と放射条件で決まるが、
+粒子数、ノイズ、Hawking 流束は状態と観測者に依存する。
+\end{warningbox}
+
+\section{本章の結論}
+
+マスター作用を\term{正準量子化}すると、古典的な遅延 Green 関数が場の交換子として再び
+現れる。極と greybody factor は古典論から引き継がれ、量子状態は \term{Wightman 関数}と
+\term{occupation number} に入る。次章では、地平面近傍の解析性がその occupation number を
+熱的にすることを示す。

@@ -1,0 +1,217 @@
+\chapter{熱的 Green 関数}
+\label{chap:thermal-green}
+\chapterepigraph{``The energy of the universe is constant. The entropy of the universe strives toward a maximum.''}{Rudolf Clausius, ``Concerning Several Conveniently Applicable Forms for the Main Equations of the Mechanical Heat Theory'' (1865)}
+
+\section{KMS 条件}
+
+時間発展を生成する Hamiltonian を $H$ とし、\term{逆温度} $\beta$ の\term{平衡状態}を
+\begin{equation}
+\rho_\beta
+=
+\frac{\rme^{-\beta H}}{Z},
+\qquad
+Z
+=
+\Tr\rme^{-\beta H}
+\label{eq:gibbs-state}
+\end{equation}
+とする。\term{Hermite 演算子} $O(t)$ に対して
+\begin{align}
+G^>(t)
+&=
+\Tr\left(
+\rho_\beta O(t)O(0)
+\right),
+\\
+G^<(t)
+&=
+\Tr\left(
+\rho_\beta O(0)O(t)
+\right)
+\end{align}
+を定義する。\term{trace} の巡回性と\term{虚時間発展}から
+\begin{equation}
+G^>(t)
+=
+G^<(t+\rmi\beta)
+\label{eq:kms-time}
+\end{equation}
+を得る。これを \term{Kubo--Martin--Schwinger（KMS）条件}とよぶ。有限系の Gibbs 行列を
+書けない場の理論でも、\term{相関関数}の解析性と式\eqref{eq:kms-time}を\term{熱平衡}の定義に
+できる。
+
+Fourier 変換を
+\begin{equation}
+G(\omega)
+=
+\int_{-\infty}^{\infty}\rmd t\,
+\rme^{+\rmi\omega t}G(t)
+\label{eq:thermal-fourier}
+\end{equation}
+とすれば、\term{KMS 条件}は \term{detailed balance}
+\begin{equation}
+G^>(\omega)
+=
+\rme^{\beta\omega}G^<(\omega)
+\label{eq:kms-frequency}
+\end{equation}
+となる。
+
+\section{\term{Lehmann 表示}}
+
+$H\ket{n}=E_n\ket{n}$ とし、$O_{mn}=\bra{m}O\ket{n}$ とする。\term{完全系}を二点関数へ
+挿入すれば、
+\begin{align}
+G^>(\omega)
+&=
+\frac{2\pi}{Z}
+\sum_{m,n}
+\rme^{-\beta E_n}
+|O_{mn}|^2
+\delta\bigl(\omega-E_m+E_n\bigr),
+\label{eq:lehmann-greater}
+\\
+G^<(\omega)
+&=
+\frac{2\pi}{Z}
+\sum_{m,n}
+\rme^{-\beta E_m}
+|O_{mn}|^2
+\delta\bigl(\omega-E_m+E_n\bigr)
+\label{eq:lehmann-less}
+\end{align}
+を得る。delta 関数の上では $E_m-E_n=\omega$ なので、項ごとに
+$G^>(\omega)=\rme^{\beta\omega}G^<(\omega)$ が成り立つ。\term{有限体積}ではスペクトルは
+\term{離散線}の和であり、\term{熱力学極限}または有限分解能の\term{粗視化}によって滑らかな
+\term{スペクトル関数}になる。
+
+この表示は、熱的 Green 関数が抽象的な解析関数であるだけでなく、観測量の行列要素と
+\term{状態密度}の和であることを示す。次章の ETH は、式\eqref{eq:lehmann-greater}に現れる
+個々の $O_{mn}$ に滑らかな包絡を仮定し、一つの高エネルギー固有状態から同じ\term{詳細
+釣り合い}が現れる条件を問う。
+
+\section{スペクトル関数と揺らぎ}
+
+\term{スペクトル関数}と\term{対称相関関数}を
+\begin{align}
+\rho_O(\omega)
+&=
+G^>(\omega)-G^<(\omega),
+\label{eq:thermal-spectral-density}
+\\
+F_O(\omega)
+&=
+\frac{1}{2}
+\left[
+G^>(\omega)+G^<(\omega)
+\right]
+\label{eq:thermal-symmetric-density}
+\end{align}
+と定義する。式\eqref{eq:kms-frequency}から
+\begin{equation}
+F_O(\omega)
+=
+\frac{1}{2}
+\coth\left(\frac{\beta\omega}{2}\right)
+\rho_O(\omega)
+\label{eq:fdt-rho}
+\end{equation}
+を得る。
+
+本書の遅延 Green 関数は
+\begin{equation}
+G_R(t)
+=
+\rmi\theta(t)
+\Tr\left(
+\rho_\beta[O(t),O(0)]
+\right)
+\end{equation}
+である。実周波数の境界値に対し
+\begin{equation}
+\rho_O(\omega)
+=
+2\im G_R(\omega)
+\label{eq:spectral-im-retarded}
+\end{equation}
+なので、\term{揺動散逸関係}は
+\begin{equation}
+F_O(\omega)
+=
+\coth\left(\frac{\beta\omega}{2}\right)
+\im G_R(\omega)
+\label{eq:fluctuation-dissipation}
+\end{equation}
+となる。応答の\term{散逸部分}が、平衡状態の量子・熱揺らぎを定める。
+
+\begin{warningbox}
+式\eqref{eq:spectral-im-retarded}の符号は遅延関数と Fourier 変換の規約に依存する。
+文献の式を移すときは、$G_R$ の前の $\rmi$、指数 $\rme^{\pm\rmi\omega t}$、
+\term{スペクトル関数}の順序を一組として確認する。
+\end{warningbox}
+
+\section{吸収と放出}
+
+外部の弱い周期源 $j(t)$ を $-j(t)O(t)$ と結合する。単位時間当たりの吸収は、
+$\omega>0$ に対して $\rho_O(\omega)$、すなわち $\im G_R(\omega)$ に比例する。
+一方、状態自身の\term{自発・誘導放出}は $G^<(\omega)$ によって測られる。\term{KMS 条件}は
+\begin{equation}
+\frac{G^<(\omega)}{G^>(\omega)}
+=
+\rme^{-\beta\omega}
+\label{eq:detailed-balance-ratio}
+\end{equation}
+を要求する。
+
+ブラックホールでは、古典的\term{吸収断面積}または greybody factor が $\rho_O$ の実軸上の
+散逸を与える。Hartle--Hawking 状態では \term{KMS 条件}が吸収と放出を結び、Unruh 状態では
+外向き sector に \term{Hawking 占有数}が現れるが、大域的な\term{熱平衡}とはならない。
+
+\begin{principlebox}
+古典吸収、量子放出、\term{平衡ノイズ}は三つの独立な表ではない。遅延 Green 関数の虚部と
+KMS 条件が、それらを同じスペクトル関数へまとめる。
+\end{principlebox}
+
+\section{QNM と熱極を混同しない}
+
+有限温度計算では \term{Euclid 周波数}
+\begin{equation}
+\omega_n^{E}
+=
+\frac{2\pi n}{\beta},
+\qquad
+n\in\bbZ
+\label{eq:bosonic-matsubara}
+\end{equation}
+が現れる。これは虚時間の周期性から生じる \term{Matsubara 周波数}であって、放射境界条件の
+QNM 周波数ではない。\term{Euclid 相関関数}を適切に解析接続すれば遅延関数を得て、その
+別の sheet の極として QNM が現れる。
+
+したがって、\term{Matsubara 点}の列と QNM 極の列が図の上で似ていても同一視してはならない。
+前者は熱状態のサンプリング点、後者は実時間応答の共鳴である。両者を結ぶには解析
+接続の一意性と高周波挙動が必要になる。
+
+\section{回転する熱平衡}
+
+定常回転系では、密度演算子は模式的に
+\begin{equation}
+\rho
+\mathrel{\propto}
+\exp\left[
+-\beta
+\left(
+H-\Omega_H J-\Phi_H Q
+\right)
+\right]
+\label{eq:rotating-gibbs}
+\end{equation}
+となる。KMS 因子には式\eqref{eq:horizon-effective-frequency}の
+$\widetilde\omega$ が入る。漸近平坦 Kerr では \term{superradiant mode} のため、全外部領域を
+覆う通常の Hartle--Hawking 状態の構成には障害がある。熱因子を局所的に用いることと、
+大域的な \term{Gibbs 状態}の存在を区別する。
+
+\section{本章の結論}
+
+熱状態は KMS 条件で特徴づけられ、\term{揺動散逸関係}が状態依存の揺らぎを状態に依存しない
+遅延応答へ結ぶ。ブラックホールの古典吸収と量子放出は、この関係の両側に位置する。
+次章では、熱平衡を一つの固有状態の行列要素から説明しようとする ETH を導入する。

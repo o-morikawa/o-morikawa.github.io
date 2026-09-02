@@ -1,0 +1,206 @@
+\chapter{時間応答}
+\label{chap:time-response}
+\chapterepigraph{``To every thing there is a season, and a time to every purpose under the heaven.''}{Ecclesiastes 3:1, King James Version}
+
+\section{リングダウンとは何か}
+
+連星ブラックホールが合体すると、観測される重力波は振幅の増大する連星運動、
+強い非線形性をもつ合体、合体後の減衰波形を順に示す（図\ref{fig:ringdown-regimes}）。合体後の残骸を一つの定常
+ブラックホールと小さな摂動の和で近似できる時間領域を、ここでは
+\term{リングダウン}（ringdown）とよぶ。これは「波形の最大振幅より後」の同義語では
+ない。最大振幅の直後には非線形な合体の影響が残り、十分遅い時刻には連続成分から
+生じる\term{冪減衰}が優勢になりうる。
+
+準固有振動の孤立極が支配する範囲では、無次元の\term{重力波ストレイン} $h(t)$ を模式的に
+\begin{align}
+h_{\mathrm{RD}}(t)
+&=
+2\re\sum_{n\in C}
+A_n\rme^{-\rmi\omega_n(t-t_0)},
+\label{eq:ringdown-waveform-model}
+\\
+\omega_n
+&=
+\Omega_n-\frac{\rmi}{\tau_n},
+\qquad
+\Omega_n>0,
+\quad
+\tau_n>0
+\label{eq:ringdown-frequency-decay}
+\end{align}
+と書ける。$A_n$ は源と観測操作を含む複素振幅、$\Omega_n$ は振動角周波数、
+$\tau_n$ は減衰時間、$t_0$ は位相と振幅を記述するために選んだ基準時刻である。
+式\eqref{eq:ringdown-waveform-model}はリングダウンの定義ではなく、その一部で有効な
+\term{極近似}である。
+
+\begin{figure}[tbp]
+\centering
+\input{figures/ringdown}
+\caption{連星合体から遅時間までの模式的な波形。$t_{\mathrm{peak}}$ は振幅の最大付近、
+$t_{\mathrm{lin}}$ は指定した精度で線形摂動論が有効になる時刻、$t_{\mathrm{tail}}$ は
+連続成分による冪減衰が無視できなくなる時刻を表す。後二者は普遍的な境界ではなく、
+源、観測量、要求精度によって変わる。}
+\label{fig:ringdown-regimes}
+\end{figure}
+
+したがって、リングダウンの開始時刻を $t_{\mathrm{peak}}$ に固定することも、波形を
+有限個の QNM だけで完全に表すことも一般には正しくない。以下では、この時間領域を
+因果的 Green 関数の逆変換として定め、\term{極近似}がいつ許されるかを調べる。
+
+\section{初期値問題を周波数へ移す}
+
+マスター場の方程式を
+\begin{equation}
+\left(\partial_t^2+H\right)\Psi(t)
+=
+S(t)
+\label{eq:time-response-wave}
+\end{equation}
+とする。$t=0$ における\term{初期値}を $\Psi_0$、$\Pi_0=\partial_t\Psi(0)$ とする。
+\term{片側 Fourier--Laplace 変換}
+\begin{equation}
+\widehat\Psi(\omega)
+=
+\int_0^\infty \rmd t\,
+\rme^{+\rmi\omega t}\Psi(t),
+\qquad
+\im\omega>0
+\label{eq:one-sided-transform}
+\end{equation}
+を用いると、部分積分により
+\begin{equation}
+\left(H-\omega^2\right)\widehat\Psi(\omega)
+=
+\widehat S(\omega)
++\Pi_0
+-\rmi\omega\Psi_0
+\label{eq:initial-data-source}
+\end{equation}
+を得る。したがって\term{初期値}も\term{有効な源}として Green 演算子へ入る。
+\begin{equation}
+\widehat\Psi(\omega)
+=
+\vG(\omega)
+\left[
+\widehat S(\omega)+\Pi_0-\rmi\omega\Psi_0
+\right]
+\label{eq:initial-response-resolvent}
+\end{equation}
+である。QNM の励起が\term{初期データ}に依存することは、この一行ですでに分かる。
+
+\section{積分路が波形を分ける}
+
+$t>0$ の場は上半平面の積分路 $C_+$ から
+\begin{equation}
+\Psi(t)
+=
+\int_{C_+}
+\frac{\rmd\omega}{2\pi}\,
+\rme^{-\rmi\omega t}
+\widehat\Psi(\omega)
+\label{eq:time-inverse-contour}
+\end{equation}
+と戻す。積分路を下方へ変形すると、模式的に
+\begin{equation}
+\Psi(t)
+=
+\Psi_{\mathrm{arc}}(t)
++\Psi_{\mathrm{QNM}}(t)
++\Psi_{\mathrm{cut}}(t)
+\label{eq:prompt-ringdown-tail}
+\end{equation}
+となる。大周波数の弧は波面直後の\term{即時応答}（\term{prompt response}）、孤立極は QNM が
+支配するリングダウン、\term{分岐切断}の\term{不連続性}は\term{遅時間テール}（\term{tail}）を与える。三つは
+別々の解ではなく、一つの積分路を分けた表示である\cite{Leaver:1986gd}。
+
+単純極の和は
+\begin{equation}
+\Psi_{\mathrm{QNM}}(t)
+=
+-\rmi
+\sum_{n\in C}
+\rme^{-\rmi\omega_n t}
+A_n
+\left[
+\widehat S(\omega_n)+\Pi_0-\rmi\omega_n\Psi_0
+\right]
+\label{eq:qnm-time-sum}
+\end{equation}
+である。$C$ は変形中に横切った極の集合を表す。全体符号は積分路の向きによるが、
+極の指数と留数の組は変わらない。
+
+\section{QNM 展開の範囲}
+
+式\eqref{eq:qnm-time-sum}は、いつでも成り立つ\term{完全展開}ではない。QNM の和だけを残す
+には、観測時刻と位置に対して大円弧が消え、\term{分岐切断}の寄与が無視でき、極の和が
+収束する必要がある。とくに波面の到着前に QNM を足しても、\term{因果律}を単独では
+再現できない。
+
+一方、非常に遅い時刻には、下半平面で最も実軸に近い極よりも、原点付近の分岐点が
+作る\term{冪減衰}が優勢になりうる。したがってリングダウンは一般に\term{中間時刻の漸近領域}で
+ある。
+
+\begin{warningbox}
+波形を有限個の減衰正弦波へあてはめられることと、Green 関数がその極だけで表される
+ことは同じではない。あてはめの開始時刻、終了時刻、連続成分、\term{ノイズ模型}を変えて、
+極と振幅の安定性を別々に確認する。
+\end{warningbox}
+
+\section{分岐切断の不連続性}
+
+分岐切断の両側の境界値を $\vG_+$、$\vG_-$ とし、その\term{不連続性}を
+\begin{equation}
+\operatorname{Disc}\vG(\omega)
+=
+\vG_+(\omega)-\vG_-(\omega)
+\label{eq:green-discontinuity}
+\end{equation}
+と定義する。分岐切断を $C_{\mathrm{cut}}$ と書けば、連続成分は
+\begin{equation}
+\Psi_{\mathrm{cut}}(t)
+=
+\int_{C_{\mathrm{cut}}}
+\frac{\rmd\omega}{2\pi}\,
+\rme^{-\rmi\omega t}
+\operatorname{Disc}\vG(\omega)
+\ket{S_{\mathrm{eff}}(\omega)}
+\label{eq:cut-time-response}
+\end{equation}
+となる。$\ket{S_{\mathrm{eff}}}$ は式\eqref{eq:initial-data-source}の右辺をまとめたもので
+ある。遅時間の冪則は、原点近傍における不連続性の\term{小周波展開}から決まる。
+
+二つの地平面に挟まれた時空では、ポテンシャルが両端で指数的に減衰する。そのため、
+漸近平坦時空と同じ分岐切断の構造を仮定してはならない。どの\term{非解析性}が物理的で、
+どの点列が\term{数値離散化}かを、境界条件から決め直す。
+
+\section{源から観測者まで}
+
+検出器が読む信号を $A(t)$ とし、周波数領域で
+\begin{equation}
+\vA(\omega)
+=
+\bra{O}\vG(\omega)\ket{S}
+\label{eq:observable-frequency-response}
+\end{equation}
+とする。極の位置は源と観測者によらないが、ある極が見えるかどうかは
+$\bra{O}A_n\ket{S}$ による。対称性により零になる場合、近接する二極が相殺する場合、
+連続成分が極を覆う場合がある。リングダウンの「\term{モード含有率}」は背景だけの属性では
+ない。
+
+\begin{principlebox}
+時間波形の分解は、周波数 Green 関数の積分路分解である。\term{即時応答}、リングダウン、
+\term{遅時間テール}の境界は絶対的ではないが、それらを生む解析構造は区別できる。
+\end{principlebox}
+
+\section{本章の結論}
+
+初期値と外力は同じ Green 演算子へ入り、極、分岐切断、高周波弧が一つの因果的な
+時間応答を作る。これで古典場の応答理論は閉じた。第二部では、実軸上で扱いにくい
+極と連続成分を複素座標上のスペクトルへ移す。
+
+\begin{researchproblem}[極とテールの一様近似]
+Schwarzschild の固定した $\ell$ について、QNM 極の和と低周波の分岐切断積分を同じ
+\term{初期データ}から数値評価せよ。リングダウンとテールの交差時刻を、最小減衰率だけでなく
+留数と初期データの台を含めて予測する\term{一様近似}を構成せよ。判定基準は、時間発展の
+直接計算に対して波面到着後の誤差を一つの規範で制御できることである。
+\end{researchproblem}

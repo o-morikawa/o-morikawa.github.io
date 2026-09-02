@@ -1,0 +1,168 @@
+\begin{tikzpicture}[
+  scale=1.1,
+  every node/.style={font=\scriptsize},
+  >=Latex
+]
+% 連星、合体、合体後ブラックホール
+\fill[black] (1.00,2.45) circle (.15);
+\fill[black] (1.55,2.45) circle (.15);
+\draw[gray,-{Latex[length=2mm]},line width=.45pt]
+  (1.28,2.74)
+  arc[start angle=90,end angle=360,x radius=.47,y radius=.28];
+\node[gray] at (1.28,2.04) {連星};
+
+\draw[gray,-{Latex[length=2mm]}]
+  (2.00,2.45)--(2.72,2.45);
+
+\fill[black] (3.16,2.45) circle (.23);
+\fill[black] (3.46,2.45) circle (.23);
+\draw[red,line width=.55pt]
+  (3.00,2.45)
+  .. controls (3.18,2.83) and (3.50,2.83) ..
+  (3.66,2.45);
+\node[red] at (3.31,2.04) {合体};
+
+\draw[gray,-{Latex[length=2mm]}]
+  (3.86,2.45)--(4.58,2.45);
+
+\fill[black] (5.02,2.45) circle (.25);
+\draw[blue,line width=.65pt]
+  (4.64,2.45)
+  arc[start angle=180,end angle=0,x radius=.38,y radius=.19];
+\draw[blue!65,line width=.45pt]
+  (4.56,2.45)
+  arc[start angle=180,end angle=0,x radius=.46,y radius=.28];
+\node[blue] at (5.02,2.04) {合体後};
+
+% 理論の適用領域
+\fill[red!7]
+  (3.45,-.92) rectangle (4.45,1.12);
+\fill[blue!5]
+  (4.45,-.92) rectangle (11.15,1.12);
+
+\draw[red,line width=1.4pt]
+  (3.45,1.31)--(4.45,1.31);
+\node[red,above] at (3.95,1.31)
+  {非線形一般相対論};
+
+\draw[blue,line width=1.4pt]
+  (4.45,1.31)--(11.15,1.31);
+\node[blue,above] at (7.80,1.31)
+  {線形ブラックホール摂動論};
+\node[blue,below,align=center] at (7.80,1.31)
+  {$g_{\mu\nu}=g^{\mathrm{BH}}_{\mu\nu}+\delta g_{\mu\nu}$,
+   $|\delta g|\ll|g^{\mathrm{BH}}|$};
+
+% 波形の座標軸
+\draw[gray,-{Latex[length=2mm]}]
+  (.18,0)--(11.42,0)
+  node[right] {$t$};
+\draw[gray,-{Latex[length=2mm]}]
+  (.34,-.92)--(.34,1.02)
+  node[above] {$h(t)$};
+
+\def\tpeak{3.48}
+\def\tlin{4.45}
+\def\ttail{8.10}
+
+% 接続点で振幅と位相を合わせる。
+\pgfmathsetmacro{\Apeak}{.055*exp(.60*\tpeak)}
+\pgfmathsetmacro{\phipeak}{74*\tpeak+25*\tpeak*\tpeak}
+\pgfmathsetmacro{\Alin}{\Apeak*exp(-.10*(\tlin-\tpeak))}
+\pgfmathsetmacro{\philin}{\phipeak+395*(\tlin-\tpeak)}
+\pgfmathsetmacro{\Atail}{
+  \Alin
+  *exp(-.50*(\ttail-\tlin))
+  *sin(\philin+420*(\ttail-\tlin))
+}
+
+% インスパイラル
+\draw[
+  black,line width=.75pt,smooth,
+  domain=.45:\tpeak,samples=220
+]
+  plot
+  (\x,{
+    .055*exp(.60*\x)
+    *sin(74*\x+25*\x*\x)
+  });
+
+% 非線形な合体
+\draw[
+  black,line width=.95pt,smooth,
+  domain=\tpeak:\tlin,samples=100
+]
+  plot
+  (\x,{
+    \Apeak
+    *exp(-.10*(\x-\tpeak))
+    *sin(\phipeak+395*(\x-\tpeak))
+  });
+
+% QNM リングダウンの指数包絡線
+\draw[
+  red!60,dashed,line width=.45pt,smooth,
+  domain=\tlin:\ttail,samples=80
+]
+  plot
+  (\x,{
+    \Alin*exp(-.50*(\x-\tlin))
+  });
+\draw[
+  red!60,dashed,line width=.45pt,smooth,
+  domain=\tlin:\ttail,samples=80
+]
+  plot
+  (\x,{
+    -\Alin*exp(-.50*(\x-\tlin))
+  });
+
+% QNM が支配するリングダウン
+\draw[
+  red,line width=1.05pt,smooth,
+  domain=\tlin:\ttail,samples=220
+]
+  plot
+  (\x,{
+    \Alin
+    *exp(-.50*(\x-\tlin))
+    *sin(\philin+420*(\x-\tlin))
+  });
+
+% 遅時間の冪減衰テール
+\draw[
+  blue,line width=1.05pt,smooth,
+  domain=\ttail:11.15,samples=100
+]
+  plot
+  (\x,{
+    \Atail/pow(1+.62*(\x-\ttail),2.4)
+  });
+
+% 遷移時刻
+\draw[gray,densely dotted]
+  (3.48,-1.02)--(3.48,1.05);
+\draw[blue,densely dashed]
+  (4.45,-1.02)--(4.45,1.12);
+\draw[gray,densely dotted]
+  (8.10,-1.02)--(8.10,1.05);
+
+\node[below,gray] at (3.48,-1.00)
+  {$t_{\mathrm{peak}}$};
+\node[below,blue] at (4.45,-1.00)
+  {$t_{\mathrm{lin}}$};
+\node[below,gray] at (8.10,-1.00)
+  {$t_{\mathrm{tail}}$};
+
+% リングダウンとテール
+\draw[red,line width=1.0pt]
+  (4.58,-1.46)--(7.96,-1.46);
+\node[below,red] at (6.24,-1.46)
+  {QNM が支配するリングダウン};
+
+\draw[blue,line width=1.0pt]
+  (8.24,-1.46)--(11.03,-1.46);
+\node[below,blue,align=center] at (9.64,-1.46)
+  {テール：$h\sim t^{-p}$、$p>0$\\
+   分岐切断・連続成分};
+\end{tikzpicture}

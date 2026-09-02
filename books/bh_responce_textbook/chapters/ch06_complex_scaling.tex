@@ -1,0 +1,173 @@
+\chapter{複素スケーリング}
+\label{chap:complex-scaling}
+\chapterepigraph{大音希聲，大象無形。}{『老子道徳経』第四十一章}
+
+\section{流出波を減衰波へ変える}
+
+本章では、座標を複素方向へ変形して共鳴波を\term{自乗可積分}にする
+\term{複素スケーリング法}（complex scaling method; \term{CSM}）を定義する。右端の
+QNM 波形を
+\begin{equation}
+\psi(x)
+\sim
+\rme^{+\rmi\omega x},
+\qquad
+\omega=\omega_R-\rmi\gamma,
+\qquad
+\gamma>0
+\end{equation}
+とする。実軸上では $|\psi|\sim\rme^{\gamma x}$ と増大する。そこで
+\begin{equation}
+x
+=
+y\rme^{\rmi\theta},
+\qquad
+0<\theta<\frac{\pi}{2}
+\label{eq:uniform-complex-scaling}
+\end{equation}
+と回転する。$y>0$ は実数である。波の絶対値は
+\begin{equation}
+\left|
+\rme^{+\rmi\omega y\rme^{\rmi\theta}}
+\right|
+=
+\exp\left[
+-y\left(
+\omega_R\sin\theta-\gamma\cos\theta
+\right)
+\right]
+\label{eq:complex-scaling-decay}
+\end{equation}
+となる。したがって $\omega_R\sin\theta>\gamma\cos\theta$ ならば、実軸上で発散した
+共鳴波が\term{複素経路}上で減衰する。
+
+ブラックホールでは左右の端を外向きに回す。相互作用領域 $|y|\leq R_0$ を実軸上に
+残す\term{外部複素スケーリング}（\term{exterior complex scaling}）は、例えば
+\begin{equation}
+x_\theta(y)
+=
+\begin{cases}
+y,
+& |y|\leq R_0,
+\\
+\sgn(y)
+\left[
+R_0+(|y|-R_0)\rme^{\rmi\theta}
+\right],
+& |y|>R_0
+\end{cases}
+\label{eq:exterior-complex-scaling}
+\end{equation}
+である。
+
+\section{回転した演算子}
+
+\term{一様回転}では $\rmd/\rmd x=\rme^{-\rmi\theta}\rmd/\rmd y$ である。したがって
+\begin{equation}
+H_\theta
+=
+-\rme^{-2\rmi\theta}
+\frac{\rmd^2}{\rmd y^2}
++V\left(y\rme^{\rmi\theta}\right)
+\label{eq:complex-scaled-hamiltonian}
+\end{equation}
+を得る。$H_\theta$ は\term{非自己共役}である。自由演算子の\term{連続スペクトル}はエネルギー
+$z$ 平面で
+\begin{equation}
+[0,\infty)
+\longrightarrow
+\rme^{-2\rmi\theta}[0,\infty)
+\label{eq:rotated-continuum}
+\end{equation}
+と回転する。回転線と実軸の間に露出した共鳴は、解析性が許す範囲で $\theta$ に
+依存しない\term{離散固有値}になる。
+
+\begin{warningbox}
+複素スケーリングには、ポテンシャルを\term{複素経路}へ延長できる領域が必要である。
+地平面、無限遠、極限地平面で許される経路は同じとは限らない。$\theta$ に対して
+固有値が静止することは診断であって、解析性の確認に代わる証明ではない。
+\end{warningbox}
+
+Schwarzschild と Reissner--Nordstr\"om の QNM に対する構成は
+文献\cite{Ogawa:2026veu}で与えられている。放射条件を行列固有値問題へ移せるため、
+極の探索と波形の正則化を同じ計算で行える。
+
+\section{離散極と\term{離散化された連続成分}}
+
+\term{有限基底}で $H_\theta$ を対角化すると、孤立した共鳴と回転線に沿う固有値点列が
+得られる。\term{右・左固有ベクトル}を $\ket{\phi^R_\nu}$、$\bra{\phi^L_\nu}$ とし、
+\begin{equation}
+\langle\phi^L_\mu\mid\phi^R_\nu\rangle
+=
+\delta_{\mu\nu}
+\end{equation}
+と\term{双直交規格化}すれば、\term{有限基底}のレゾルベントは
+\begin{equation}
+\vR_\theta(z)
+\simeq
+\sum_\nu
+\frac{
+\ket{\phi^R_\nu}\bra{\phi^L_\nu}
+}{
+z_\nu-z
+}
+\label{eq:csm-finite-resolvent}
+\end{equation}
+となる。$\theta$ とともに回転する点列は誤差ではなく、\term{連続スペクトル}積分の\term{数値求積点}
+として Green 関数の非極部分を担う。
+
+\begin{principlebox}
+複素スケーリングで得た\term{複素固有値}をすべて QNM と呼んではならない。\term{回転角}と基底数に
+対して静止する孤立点が共鳴であり、回転線に沿う点列は連続応答の離散表示である。
+応答の再構成には両方が要る。
+\end{principlebox}
+
+\section{連続準位密度}
+
+相互作用をもつ演算子と\term{比較演算子}をそれぞれ $H_\theta$、$H_{0,\theta}$ とする。
+実エネルギー $E$ に対し、\term{レゾルベント差}から
+\begin{equation}
+\Delta\rho(E)
+=
+\frac{1}{\pi}
+\im\Tr\left[
+\vR_\theta(E+\rmi0)
+-\vR_{0,\theta}(E+\rmi0)
+\right]
+\label{eq:continuum-level-density}
+\end{equation}
+を定義する。個々の \term{trace} が発散しても、差は適切な条件の下で有限になりうる。
+$\Delta\rho$ は、孤立極だけでは見えない連続応答を実軸上へ戻す
+\cite{Suzuki:2005wv}。
+
+Schwarzschild--de~Sitter 時空では外部領域の両端が地平面であり、ポテンシャルは
+両端で指数的に減衰する。スカラー、電磁、重力摂動の QNM と連続成分を同じ複素
+スケーリング表示で扱える\cite{Ogawa:2026dSCSM}。宇宙定数を変えたとき、極だけで
+なく $\Delta\rho$ がどう移るかを追うことで、時間応答の変化を極の一覧以上に記述できる。
+
+\section{数値計算で残す三つの検査}
+
+CSM の計算では、少なくとも次を保存する。
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.8em]
+\item \term{回転角} $\theta$ を変えた固有値図。
+\item 基底数を変えた極、留数、\term{連続準位密度}の収束。
+\item 実周波数で直接計算した Green 関数との比較。
+\end{enumerate}
+
+一枚の複素固有値図だけから物理的結論を出してはならない。第三の検査によって、
+複素座標上の表示が元の散乱応答を再現することを確認する。
+
+\section{本章の結論}
+
+複素スケーリングは、発散する QNM を減衰する固有関数へ変え、孤立極と連続成分を
+一つの\term{非自己共役スペクトル}へ置く。次章では、その離散極どうしが合体して個別モード
+表示が壊れる場合を扱う。
+
+\begin{researchproblem}[de~Sitter 連続応答の普遍性]
+Schwarzschild--de~Sitter と Reissner--Nordstr\"om--de~Sitter の複数スピンまたは
+\term{結合チャンネル}について、同一の exterior complex scaling と \term{trace subtraction} を
+実装せよ。宇宙定数、電荷、次元を変えたとき、極と $\Delta\rho(E)$ のどの組合せが
+時間応答を一様に近似するかを調べよ。回転角に依存する点列の配置ではなく、実軸上の
+源付き応答の収束を最終判定とする。
+\end{researchproblem}

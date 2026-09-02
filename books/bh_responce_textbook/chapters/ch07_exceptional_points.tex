@@ -1,0 +1,246 @@
+\chapter{例外点}
+\label{chap:exceptional-points}
+\chapterepigraph{``The way up and the way down are one and the same.''}{Heraclitus, fragment B60 (Diels--Kranz)}
+
+\section{二つの共鳴が一つになる}
+
+背景または有効ポテンシャルが二つの実制御変数 $\lambda_1$、$\lambda_2$ に依存すると
+する。二つの共鳴固有値が一致し、右固有ベクトルも一つに合体する点を二次の
+\term{例外点}とよぶ。通常の\term{縮退}とは異なり、\term{固有空間}の次元が減る。
+
+この二つの共鳴をまとめ、他のスペクトルから孤立させた部分空間を、本章では
+\term{クラスター}（cluster）とよぶ。クラスター部分空間上の演算子は
+\begin{equation}
+H_{\mathrm{cl}}
+=
+z_{\mathrm{EP}}P+N,
+\qquad
+N^2=0,
+\qquad
+N\ne0
+\label{eq:ep-jordan-form}
+\end{equation}
+と書ける。$P$ は二次元クラスターへの\term{射影}、$N$ は\term{冪零部分}である。一つの複素化した
+制御変数 $\lambda$ を用いれば、近傍の固有値は一般に
+\begin{equation}
+z_\pm(\lambda)
+=
+z_{\mathrm{EP}}
+\mathord{\pm}
+c\sqrt{\lambda-\lambda_{\mathrm{EP}}}
++O(\lambda-\lambda_{\mathrm{EP}})
+\label{eq:ep-puiseux}
+\end{equation}
+となる。$c\ne0$ は系に依存する。例外点を一周すると\term{平方根}の \term{sheet} が入れ替わり、
+二つの状態が交換する。
+
+\section{最小の二行列模型}
+
+\term{平方根分岐}と\term{二重極}を同時に見るため、
+\begin{equation}
+H(\lambda)
+=
+\begin{pmatrix}
+0&1\\
+\lambda&0
+\end{pmatrix}
+\label{eq:ep-two-by-two-model}
+\end{equation}
+を考える。$\lambda\ne0$ では固有値と右固有ベクトルは
+\begin{equation}
+\omega_\pm
+=
+\mathord{\pm}\sqrt{\lambda},
+\qquad
+v_\pm
+=
+\begin{pmatrix}
+1\\
+\omega_\pm
+\end{pmatrix}
+\end{equation}
+である。$\lambda\to0$ で二つの固有値だけでなく二つの固有ベクトルも
+$(1,0)^{\mathrm T}$ へ合体する。
+
+\term{周波数レゾルベント}を直接反転すると、
+\begin{equation}
+\left(\omega I-H(\lambda)\right)^{-1}
+=
+\frac{1}{\omega^2-\lambda}
+\begin{pmatrix}
+\omega&1\\
+\lambda&\omega
+\end{pmatrix}
+\label{eq:ep-two-by-two-resolvent}
+\end{equation}
+であり、例外点 $\lambda=0$ では
+\begin{equation}
+\left(\omega I-H(0)\right)^{-1}
+=
+\begin{pmatrix}
+\omega^{-1}&\omega^{-2}\\
+0&\omega^{-1}
+\end{pmatrix}
+\label{eq:ep-two-by-two-double-pole}
+\end{equation}
+となる。固有ベクトルの規格化を工夫しても $\omega^{-2}$ は消えない。以下の \term{Riesz
+moment} と \term{Laurent 演算子}は、この有限次元模型に見える二極の合体を、波動演算子の
+孤立した共鳴クラスターに対して定義する道具である。
+
+\section{個別留数の破綻}
+
+例外点の外で、二つの単純極からなる Green 演算子を
+\begin{equation}
+\vG_{\mathrm{cl}}(\omega)
+=
+\frac{A_+}{\omega-\omega_+}
++\frac{A_-}{\omega-\omega_-}
+\label{eq:two-simple-poles}
+\end{equation}
+とする。$A_+$ と $A_-$ は個別極の\term{留数演算子}である。例外点へ近づくと、左右
+固有ベクトルの\term{自己直交性}により $A_\pm$ はそれぞれ発散しうる。それでも固定した
+$\omega$ における和は有限でありうる。
+
+この発散は、物理的応答が必ず発散することを意味しない。二つのほぼ平行な固有
+ベクトルを座標軸として選んだため、座標成分が\term{悪条件化}したのである。例外点で残る
+対象は、個々のモード標識ではなく二つをまとめた孤立クラスターである。
+
+\section{\term{Riesz contour moment}}
+
+二つの極だけを囲み、他の極と連続スペクトルを囲まない\term{反時計回り}の閉曲線を
+$\Gamma$ とする。二つの \term{contour moment} を
+\begin{equation}
+M_k
+=
+\frac{1}{2\pi\rmi}
+\oint_\Gamma
+\omega^k\vG(\omega)\,\rmd\omega,
+\qquad
+k=0,1
+\label{eq:contour_moments}
+\end{equation}
+と定義する。単純極が分離している領域では
+\begin{align}
+M_0
+&=
+A_++A_- ,
+\label{eq:ep-moment-zero}
+\\
+M_1
+&=
+\omega_+A_+
++\omega_-A_-
+\label{eq:ep-moment-one}
+\end{align}
+である。対称な極データを
+\begin{equation}
+s_1=\omega_++\omega_- ,
+\qquad
+s_2=\omega_+\omega_-
+\end{equation}
+と置くと、式\eqref{eq:two-simple-poles}は
+\begin{equation}
+\vG_{\mathrm{cl}}(\omega)
+=
+\frac{
+M_1+(\omega-s_1)M_0
+}{
+\omega^2-s_1\omega+s_2
+}
+\label{eq:pair-resolvent-moments}
+\end{equation}
+となる。この表示は $+$ と $-$ の交換に不変であり、個別留数の発散を含まない。
+
+\section{Laurent 演算子}
+
+例外点で $\omega_+=\omega_-=\omegaEP$ になると、クラスター Green 演算子は
+\begin{equation}
+\vG_{\mathrm{cl}}(\omega)
+=
+\frac{A_{-2}}{(\omega-\omegaEP)^2}
++\frac{A_{-1}}{\omega-\omegaEP}
++\vG_{\mathrm{reg}}(\omega)
+\label{eq:ep-laurent}
+\end{equation}
+と展開される。式\eqref{eq:contour_moments}から直ちに
+\begin{align}
+A_{-1}
+&=
+M_0,
+\label{eq:ep-a-minus-one}
+\\
+A_{-2}
+&=
+M_1-\omegaEP M_0
+\label{eq:ep-a-minus-two}
+\end{align}
+を得る。$A_{-1}$ と $A_{-2}$ は \term{Jordan 鎖}の規格化を選ばずに定義できる。
+
+観測操作と源を挟み、
+\begin{equation}
+a_{-j}
+=
+\bra{O}A_{-j}\ket{S},
+\qquad
+j=1,2
+\end{equation}
+とする。\term{二重極}を\term{逆 Fourier 変換}すると、時間応答は
+\begin{equation}
+\vA_{\mathrm{cl}}(t)
+=
+\left(C_0+C_1t\right)
+\rme^{-\rmi\omegaEP t}
+\label{eq:ep-time-response}
+\end{equation}
+となる。$C_0$、$C_1$ は $a_{-1}$、$a_{-2}$ と変換規約から定まる。
+$t\rme^{-\rmi\omegaEP t}$ はあてはめの便宜ではなく、二重極の必然である。
+
+ブラックホール散乱における Jost 関数の二重零点、\term{Riesz--Laurent 表示}、源付き応答の
+関係は文献\cite{Morikawa:2026RieszLaurent}で与えられている。
+
+\begin{principlebox}
+例外点では個別モードの表示が特異になる。孤立クラスターの\term{輪郭積分モーメント}、Laurent
+演算子、固定した源と観測者の応答は、モード標識と規格化に依存せず有限に定義できる。
+\end{principlebox}
+
+\section{幾何学的位相}
+
+例外点を囲む閉曲線に沿って制御変数を断熱的に動かすと、一周後に二状態が交換し、
+二周後に元の状態へ戻る。右固有ベクトルだけの符号を比較するのではなく、左・右
+固有ベクトルの\term{双直交接続}から\term{幾何学的位相}を定める必要がある。
+
+共鳴状態は通常の内積で規格化できないが、複素スケーリングは減衰する状態を与え、
+\term{パラメータ空間}上の接続を構成できる。量子共鳴の例外点を周回する\term{幾何学的位相}と
+\term{位相的不変量}は文献\cite{Morikawa:2025inx}で論じられている。
+
+\term{幾何学的位相}は局所 \term{Laurent 係数}と同じ量ではない。前者は \term{parameter loop} の大域的
+情報、後者は周波数平面の局所特異性である。ただし、どちらも個別固有ベクトルの
+規格化ではなくクラスターの幾何を読む。
+
+\section{実周波数応答は滑らかでありうる}
+
+例外点の近傍でも、次の条件を仮定する。
+
+\begin{enumerate}[label=(\roman*),leftmargin=2.8em]
+\item 二極のクラスターが他のスペクトルから孤立している。
+\item \term{補空間}のレゾルベントが正則である。
+\item 極が観測する実周波数へ到達しない。
+\end{enumerate}
+
+このとき式\eqref{eq:pair-resolvent-moments}は固定した実 $\omega$ で滑らかであり、
+透過振幅や greybody factor も滑らかでありうる。個別留数の発散や \term{mode exchange} から、
+巨大な散乱応答を直ちに結論してはならない。極が実軸へ来る、クラスターが連続成分と
+衝突する、または補空間が特異になる場合は、別の極限解析が要る。
+
+\section{本章の結論}
+
+例外点は個別モード表示の限界を示すが、応答理論の限界ではない。Riesz 輪郭積分と
+\term{Laurent 演算子}へ移れば、二重極の時間応答、実周波数散乱、幾何学的位相をそれぞれ
+正則な量として定義できる。
+
+\begin{researchproblem}[高次例外点と連続成分]
+三次以上の例外点または二次例外点と回転した連続成分の接近を扱え。最小限、必要な
+輪郭積分モーメントの個数、\term{Laurent 演算子}と時間多項式の次数、有限基底で輪郭を
+安定に選ぶ条件を決定せよ。個別固有ベクトルの \term{condition number} ではなく、固定した
+源と観測者の実周波数応答を最終的な有限性の判定に用いよ。
+\end{researchproblem}

@@ -1,0 +1,217 @@
+\chapter{地平面の熱性}
+\label{chap:horizon-thermality}
+\chapterepigraph{``There are more things in heaven and earth, Horatio, than are dreamt of in your philosophy.''}{William Shakespeare, \textit{Hamlet}, Act I, Scene 5}
+\chapterepigraph{``For now we see through a glass, darkly.''}{1 Corinthians 13:12, King James Version}
+
+
+\section{近地平面は Rindler 時空である}
+
+静的球対称計量の\term{単純地平面} $r=r_h$ に対し、\term{表面重力}を
+\begin{equation}
+\kappa
+=
+\frac{1}{2}f'(r_h)
+\label{eq:surface-gravity-static}
+\end{equation}
+と定義する。地平面近傍で $f(r)\simeq2\kappa(r-r_h)$ である。\term{固有距離} $\rho$ を
+\begin{equation}
+r-r_h
+=
+\frac{\kappa}{2}\rho^2
+\end{equation}
+で導入すると、$t$--$r$ 部分は
+\begin{equation}
+\rmd s^2
+\simeq
+-(\kappa\rho)^2\rmd t^2
++\rmd\rho^2
+\label{eq:near-horizon-rindler}
+\end{equation}
+となる。局所的には \term{Rindler 時空}である。亀座標は
+\begin{equation}
+\rstar
+\simeq
+\frac{1}{2\kappa}
+\log(r-r_h)
+\end{equation}
+であり、\term{外向き零座標} $u=t-\rstar$ は地平面で発散する。
+
+\section{\term{Kruskal 座標}と解析性}
+
+未来地平面で正則な零座標を
+\begin{equation}
+U
+=
+-\rme^{-\kappa u}
+\label{eq:kruskal-U}
+\end{equation}
+とする。外部領域では $U<0$ である。静的時刻に関する外向き\term{正周波数モード}は
+\begin{equation}
+\rme^{-\rmi\omega u}
+=
+(-U)^{\rmi\omega/\kappa}
+\label{eq:rindler-mode-U}
+\end{equation}
+となり、$U=0$ に \term{branch point} をもつ。外部 $U<0$ で
+$(-U)^{\rmi\omega/\kappa}=\exp[(\rmi\omega/\kappa)\operatorname{Log}(-U)]$ とする。
+\term{正周波数モード}を複素 $U$ 平面の下半面を通って $U>0$ へ\term{解析接続}すると、
+\begin{equation}
+(-U)^{\rmi\omega/\kappa}
+\longrightarrow
+\rme^{-\pi\omega/\kappa}
+U^{\rmi\omega/\kappa}
+\label{eq:horizon-branch-continuation}
+\end{equation}
+となる。上半面を通る\term{負周波数成分}との組合せを\term{正準規格化}すると、地平面の両側の
+\term{Bogoliubov 係数}比に
+\begin{equation}
+\left|
+\frac{\beta_\omega}{\alpha_\omega}
+\right|^2
+=
+\rme^{-2\pi\omega/\kappa}
+\label{eq:bogoliubov-thermal-ratio}
+\end{equation}
+が現れる。$\alpha_\omega$ と $\beta_\omega$ は正・負周波数を混合する Bogoliubov
+係数である。\term{正準規格化}と組み合わせると、boson の\term{平均占有数}は
+\begin{equation}
+n_H(\omega)
+=
+\frac{1}{\rme^{\beta_H\omega}-1},
+\qquad
+\beta_H
+=
+\frac{2\pi}{\kappa}
+\label{eq:hawking-occupation}
+\end{equation}
+となる。したがって \term{Hawking 温度}は
+\begin{equation}
+T_H
+=
+\frac{\kappa}{2\pi}
+\label{eq:hawking-temperature}
+\end{equation}
+である\cite{Hawking:1975vcx,BirrellDavies:1982}。
+
+\begin{principlebox}
+\term{熱因子}は地平面近傍の指数写像 $U=-\rme^{-\kappa u}$ と正周波数の解析性から生じる。
+外部ポテンシャルは温度を変えず、生成された量子が無限遠へ届く確率を変える。
+\end{principlebox}
+
+\section{greybody factor の再登場}
+
+地平面近傍で熱的に占有された外向きモードは、有効ポテンシャルを透過して無限遠へ
+届く。第3章の透過確率 $\Gamma_\ell(\omega)$ を用いると、質量ゼロスカラー場の
+エネルギー流束は
+\begin{equation}
+\frac{\rmd E}{\rmd t\rmd\omega}
+=
+\frac{1}{2\pi}
+\sum_{\ell=0}^{\infty}
+(2\ell+1)
+\frac{
+\omega\Gamma_\ell(\omega)
+}{
+\rme^{\beta_H\omega}-1
+}
+\label{eq:hawking-greybody-flux}
+\end{equation}
+となる。平面黒体の \term{Planck 分布}に、ブラックホール外部の散乱データが掛かる。
+ここで古典応答の計算が量子放射へ直接使われる。
+
+角運動量 $a$ または電荷 $Q$ をもつブラックホールでは、\term{地平面生成子}に対する周波数
+\begin{equation}
+\widetilde\omega
+=
+\omega-m\Omega_H-q\Phi_H
+\label{eq:horizon-effective-frequency}
+\end{equation}
+が\term{熱因子}に入る。$m$ は\term{方位角量子数}、$q$ は場の電荷、$\Omega_H$ は\term{地平面角速度}、
+$\Phi_H$ は\term{地平面電位}である。$\widetilde\omega<0$ の領域では \term{superradiance} と
+整合するよう、透過係数の流束符号も同時に扱う。
+
+\section{\term{Euclid 時間}による同じ温度}
+
+式\eqref{eq:near-horizon-rindler}で $t=-\rmi\tau$ と \term{Wick 回転}すると、
+\begin{equation}
+\rmd s_E^2
+\simeq
+\rmd\rho^2
++\kappa^2\rho^2\rmd\tau^2
+\end{equation}
+となる。$\rho=0$ に\term{円錐特異点}を作らないためには
+\begin{equation}
+\tau
+\sim
+\tau+\frac{2\pi}{\kappa}
+\label{eq:euclidean-period}
+\end{equation}
+でなければならない。\term{虚時間}の周期が $\beta_H$ に一致する。\term{Bogoliubov 係数}と \term{Euclid
+正則性}は別の計算だが、同じ近地平面幾何を読んでいる。
+
+\section{面積エントロピーと第一法則}
+
+ここでは $G=c=\hbar=k_B=1$ とする。事象地平面の面積を $A_H$ とすれば、
+\term{Bekenstein--Hawking エントロピー}は
+\begin{equation}
+S_{\mathrm{BH}}
+=
+\frac{A_H}{4}
+\label{eq:bekenstein-hawking-entropy}
+\end{equation}
+である\cite{Bekenstein:1973ur,Hawking:1975vcx}。一般の単位を戻せば
+$S_{\mathrm{BH}}=k_Bc^3A_H/(4G\hbar)$ である。定常な \term{Kerr--Newman
+ブラックホール}の近接する解を結ぶ\term{第一法則}は
+\begin{equation}
+\delta M
+=
+\frac{\kappa}{8\pi}\delta A_H
++\Omega_H\delta J
++\Phi_H\delta Q
+=
+T_H\delta S_{\mathrm{BH}}
++\Omega_H\delta J
++\Phi_H\delta Q
+\label{eq:black-hole-first-law}
+\end{equation}
+となる\cite{Bardeen:1973gs}。これは微視的状態数の導出ではない。応答理論に必要なのは、
+地平面へ入るエネルギー、角運動量、電荷の flux が、定常解の変化とエントロピー変化へ
+どう換算されるかである。
+
+\paragraph{Ryu--Takayanagi 公式への出口.}
+静的で\term{漸近 AdS} の古典重力が\term{境界量子論}を記述する場合、境界の空間領域 $A$ の
+\term{entanglement entropy} は
+\begin{equation}
+S_A
+=
+\frac{\operatorname{Area}(\gamma_A)}{4G_N}
+\label{eq:ryu-takayanagi-signpost}
+\end{equation}
+と書かれる。$\gamma_A$ は $A$ と同じ境界をもち、$A$ と \term{homologous} な \term{bulk} の
+\term{codimension-two minimal surface} である\cite{Ryu:2006bv}。面積をエントロピーとして
+読む点で式\eqref{eq:bekenstein-hawking-entropy}を拡張するが、本書は \term{AdS/CFT} の辞書を
+構成しないため、この公式を以後の導出には用いない。時間依存版、量子補正、\term{entropy
+wedge} は本筋を変える具体的な応答問題が生じたときに研究問題へ送る。
+
+\section{状態の違い}
+
+Boulware 状態は無限遠の静的観測者にとって粒子を含まないが、地平面で特異である。
+Hartle--Hawking 状態は未来・過去地平面で正則で、外部を温度 $T_H$ の\term{熱浴}に置く。
+Unruh 状態は崩壊で形成されたブラックホールに対応し、過去無限遠からの入射を真空に
+しながら、未来無限遠へ Hawking 流束を出す。
+
+式\eqref{eq:hawking-temperature}は局所地平面の温度尺度を与えるが、すべての二点関数が
+同じ大域的熱平衡状態になるとは限らない。とくに Unruh 状態は静的外部全体の熱平衡
+ではない。
+
+\begin{warningbox}
+\term{Hawking 温度}、遠方の粒子 flux、\term{局所検出器}の応答は同じ観測量ではない。温度は
+\term{表面重力}から、flux はさらに \term{greybody factor} と状態から、\term{検出率}は検出器の軌道と
+結合から決まる。
+\end{warningbox}
+
+\section{本章の結論}
+
+地平面の指数的な座標関係は、正周波数を混合して温度 $T_H=\kappa/(2\pi)$ を与える。
+外部の古典散乱は、その熱的占有数を \term{greybody factor} で濾過する。次章では、熱性を
+粒子数ではなく二点関数の KMS 条件として定式化する。

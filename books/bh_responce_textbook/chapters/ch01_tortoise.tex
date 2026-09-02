@@ -1,0 +1,401 @@
+\chapter{亀座標}
+\label{chap:tortoise}
+\chapterepigraph{``Put off thy shoes from off thy feet, for the place whereon thou standest is holy ground.''}{Exodus 3:5, King James Version}
+
+\section{ブラックホールは開いた波動系である}
+
+力学において一般化座標を選ぶ目的は、同じ運動を別の記号で書くことではない。
+拘束や対称性を座標そのものに反映させることにある。\term{ブラックホール摂動論}で
+同じ役割を果たすのが亀座標である。
+
+遠方からブラックホールへ波束を送る。一部は\term{有効ポテンシャル}で反射され、
+一部は\term{地平面}を通過する。一度\term{地平面}へ達した信号は外部領域へ戻らない。したがって、
+外部領域だけを系とみなすと、エネルギーは二つの\term{漸近端}へ流出する。これは箱の中の
+定常波ではなく、二端点をもつ\term{散乱問題}である。
+
+本章では\term{幾何学単位系}
+\begin{equation}
+G=c=1
+\label{eq:geometrized_units}
+\end{equation}
+を用い、計量の符号を $(-,+,+,+)$ とする。$G$ は Newton 定数、$c$ は光速度で
+ある。必要になる背景時空は、まず静的かつ球対称なものに限る。
+
+\section{静的球対称時空}
+
+外部領域の計量を
+\begin{equation}
+\rmd s^2
+=
+-f(r)\,\rmd t^2
++\frac{\rmd r^2}{f(r)}
++r^2\rmd\Omega^2
+\label{eq:sss_metric}
+\end{equation}
+と書く。$t$ は\term{静的時刻}、$r$ は\term{面積半径}であり、
+\begin{equation}
+\rmd\Omega^2
+=
+\rmd\vartheta^2
++\sin^2\vartheta\,\rmd\varphi^2
+\end{equation}
+は単位二次元球面の計量である。関数 $f(r)$ が単純零点 $r=r_h$ をもつとする。
+すなわち、
+\begin{align}
+f(r_h)&=0,
+&
+f'(r_h)&\ne 0,
+\label{eq:simple_horizon}
+\end{align}
+である。プライムは $r$ による微分を表す。$r_h$ は \term{Killing 地平面}の半径である。
+
+計量\eqref{eq:sss_metric}では $g_{rr}=f^{-1}$ が地平面で発散する。しかし、これは
+曲率が発散するという意味ではない。静的座標が、地平面を横切る光線の記述に適して
+いないのである。波動方程式の境界条件を定める前に、この座標上の見かけを取り除く
+必要がある。
+
+\section{動径光線から亀座標を導く}
+
+角度を固定した\term{動径零測地線}では、$\rmd\Omega=0$ および $\rmd s^2=0$ である。
+したがって、式\eqref{eq:sss_metric}から
+\begin{equation}
+\frac{\rmd t}{\rmd r}
+=
+\mathord{\pm}\frac{1}{f(r)}
+\label{eq:null_slope_r}
+\end{equation}
+を得る。ここで、動径座標 $r$ の代わりに $\rstar$ を
+\begin{equation}
+\frac{\rmd \rstar}{\rmd r}
+=
+\frac{1}{f(r)}
+\label{eq:tortoise_definition}
+\end{equation}
+によって定義する。$\rstar$ を\term{亀座標}とよぶ。加法定数は任意であり、散乱振幅の
+位相規約に対応する。
+
+式\eqref{eq:null_slope_r}は
+\begin{equation}
+\frac{\rmd t}{\rmd \rstar}
+=
+\mathord{\pm}1
+\end{equation}
+となる。したがって、
+\begin{align}
+u&=t-\rstar ,
+&
+v&=t+\rstar
+\label{eq:null_coordinates}
+\end{align}
+をそれぞれ\term{遅延時刻}、\term{先進時刻}と定義すれば、外向き光線では $u$ が一定、内向き
+光線では $v$ が一定である。
+
+地平面の近傍で $f(r)$ を一次まで展開すると、
+\begin{equation}
+f(r)
+=
+f'(r_h)(r-r_h)
++O\bigl((r-r_h)^2\bigr)
+\end{equation}
+である。式\eqref{eq:tortoise_definition}を積分して、
+\begin{equation}
+\rstar
+=
+\frac{1}{f'(r_h)}
+\log|r-r_h|
++O(1)
+\label{eq:tortoise_near_horizon}
+\end{equation}
+を得る。単純な\term{事象地平面}は、外部領域から見れば $\rstar=-\infty$ に移る。
+亀座標は地平面を除去したのではなく、波の境界条件を課すべき\term{漸近端}へ移したのである。
+
+\begin{principlebox}
+亀座標は、地平面の\term{因果構造}を一次元散乱の漸近構造へ翻訳する。地平面が
+$\rstar=-\infty$ に置かれることによって、「地平面へ入る波」は\term{平面波}の向きとして
+定義できる。
+\end{principlebox}
+
+\section{地平面を横切る座標}
+
+亀座標は地平面を無限遠へ送るが、地平面そのものを横切るには先進時刻
+$v=t+\rstar$ を座標として用いる。$\rmd t=\rmd v-f^{-1}\rmd r$ を
+式\eqref{eq:sss_metric}へ代入すると、
+\begin{equation}
+\rmd s^2
+=
+-f(r)\,\rmd v^2
++2\,\rmd v\rmd r
++r^2\rmd\Omega^2
+\label{eq:ingoing-ef-metric}
+\end{equation}
+となる。これは $f(r_h)=0$ でも退化せず、未来地平面を横切る内向き
+\term{Eddington--Finkelstein 座標}である。静的座標における $g_{rr}$ の発散が座標の見かけ
+であったことも、この式から分かる。
+
+時間因子を $\rme^{-\rmi\omega t}$ とすると、地平面へ入る波は
+\begin{equation}
+\rme^{-\rmi\omega t}\rme^{-\rmi\omega\rstar}
+=
+\rme^{-\rmi\omega v}
+\label{eq:ingoing-ef-regular-mode}
+\end{equation}
+であり、正則な座標 $v$ だけの関数である。これに対して外向き波は
+$u=t-\rstar$ の関数で、未来地平面上の静的外部から出てくる。したがって「事象
+地平面で内向き」という条件は、符号の暗記ではなく、未来地平面上で正則かつ因果的な
+解を選ぶ条件である。第\ref{chap:horizon-thermality}章では、同じ正則性を複素座標へ
+延長して熱因子を得る。
+
+\section{Schwarzschild 時空}
+
+質量 $M>0$ の \term{Schwarzschild ブラックホール}では、
+\begin{equation}
+f(r)
+=
+1-\frac{2M}{r}
+\label{eq:schwarzschild_f}
+\end{equation}
+であり、\term{事象地平面}は $r_h=2M$ にある。式\eqref{eq:tortoise_definition}を積分すると、
+\begin{equation}
+\rstar
+=
+r
++2M\log\left(\frac{r}{2M}-1\right)
+\label{eq:schwarzschild_tortoise}
+\end{equation}
+を得る。加法定数は、対数の中を無次元化する規約に含めた。外部領域 $2M<r<\infty$
+は、
+\begin{equation}
+-\infty<\rstar<\infty
+\end{equation}
+へ写る。
+
+地平面近傍と無限遠での漸近形は、それぞれ
+\begin{align}
+\rstar
+&=
+2M\log\left(\frac{r-2M}{2M}\right)
++O(1),
+&& r\longrightarrow 2M+0,
+\label{eq:schwarzschild_tortoise_hor}
+\\
+\rstar
+&=
+r+2M\log\left(\frac{r}{2M}\right)
++O(r^{-1}),
+&& r\longrightarrow\infty
+\label{eq:schwarzschild_tortoise_inf}
+\end{align}
+である。無限遠でも $\rstar$ と $r$ は対数項だけずれる。この長距離の位相は、精密な
+散乱振幅や漸近展開では無視できない。
+
+$r$ 座標では地平面が有限位置にあるが、$\rstar$ 座標では外部領域全体が実直線に
+なる。事象地平面と\term{空間的無限遠}は、それぞれ左端と右端の漸近領域である。
+
+\section{スカラー波動方程式の一次元化}
+
+背景計量上の\term{質量ゼロスカラー場}を $\Phi$ とし、外部源を $J$ とする。場の方程式を
+\begin{equation}
+\nabla_\mu\nabla^\mu\Phi
+=
+J
+\label{eq:scalar_wave_covariant}
+\end{equation}
+とする。ギリシャ添字は四次元時空座標を走る。\term{球面調和関数} $Y_{\ell m}$ を用いて、
+\begin{equation}
+\Phi(t,r,\vartheta,\varphi)
+=
+\sum_{\ell=0}^{\infty}
+\sum_{m=-\ell}^{\ell}
+\frac{\Psi_{\ell m}(t,r)}{r}
+Y_{\ell m}(\vartheta,\varphi)
+\label{eq:scalar_decomposition}
+\end{equation}
+と展開する。整数 $\ell$ と $m$ は\term{角運動量量子数}であり、
+\begin{equation}
+\Delta_{S^2}Y_{\ell m}
+=
+-\ell(\ell+1)Y_{\ell m}
+\end{equation}
+を満たす。$\Delta_{S^2}$ は単位球面上の \term{Laplace 演算子}である。$1/r$ をあらかじめ
+取り出した理由は、動径方程式から一階微分項を消すためである。
+
+同様に源を球面調和展開して式\eqref{eq:scalar_wave_covariant}へ代入すると、各
+$(\ell,m)$ に対して
+\begin{equation}
+\left[
+\frac{\partial^2}{\partial t^2}
+-\frac{\partial^2}{\partial \rstar^2}
++V_\ell(r)
+\right]
+\Psi_{\ell m}(t,r)
+=
+S_{\ell m}(t,r)
+\label{eq:master_wave_time}
+\end{equation}
+を得る。$S_{\ell m}$ は $J$ から定まる一次元の源であり、\term{有効ポテンシャル}は
+\begin{equation}
+V_\ell(r)
+=
+f(r)
+\left[
+\frac{\ell(\ell+1)}{r^2}
++\frac{f'(r)}{r}
+\right]
+\label{eq:scalar_effective_potential}
+\end{equation}
+である。
+
+\paragraph{一階微分項が消える理由.}
+動径部分に現れる組合せは
+\begin{equation}
+\frac{1}{r^2}
+\frac{\partial}{\partial r}
+\left(
+r^2f(r)
+\frac{\partial}{\partial r}
+\frac{\Psi}{r}
+\right)
+\end{equation}
+である。$\partial_r=f^{-1}\partial_{\rstar}$ を用いて展開すると、$\Psi/r$ の微分から
+生じる項と体積要素 $r^2$ の微分から生じる項が組み合わさる。その結果、
+$\partial_{\rstar}\Psi$ に比例する項が消え、式\eqref{eq:master_wave_time}の
+Schr\"odinger 型が得られる。場の再定義 $\Phi=\Psi/r$ は単なる慣習ではなく、
+動径演算子を対称な形へ移す変換である。
+
+Schwarzschild 時空では、式\eqref{eq:schwarzschild_f}を用いて
+\begin{equation}
+V_\ell(r)
+=
+\left(1-\frac{2M}{r}\right)
+\left[
+\frac{\ell(\ell+1)}{r^2}
++\frac{2M}{r^3}
+\right]
+\label{eq:schwarzschild_scalar_potential}
+\end{equation}
+となる。このポテンシャルは地平面と無限遠の両方で零に近づき、その中間に障壁を
+もつ。したがって、外部摂動は一次元の障壁散乱として理解できる。
+
+\section{時間規約と放射条件}
+
+周波数領域へ移るため、時間依存性を
+\begin{equation}
+\Psi_{\ell m}(t,r)
+=
+\rme^{-\rmi\omega t}\psi_{\ell m}(r;\omega)
+\label{eq:time_convention}
+\end{equation}
+と定める。$\omega\in\bbC$ は\term{複素周波数}である。ポテンシャルが消える漸近領域では、
+動径関数は
+\begin{equation}
+\psi(\rstar;\omega)
+\sim
+\rme^{\mathord{\pm}\rmi\omega \rstar}
+\label{eq:asymptotic_plane_waves}
+\end{equation}
+となる。式\eqref{eq:time_convention}と組み合わせると、
+\begin{align}
+\rme^{-\rmi\omega t}\rme^{-\rmi\omega \rstar}
+&=
+\rme^{-\rmi\omega v},
+\label{eq:ingoing_wave}
+\\
+\rme^{-\rmi\omega t}\rme^{+\rmi\omega \rstar}
+&=
+\rme^{-\rmi\omega u}.
+\label{eq:outgoing_wave}
+\end{align}
+先進時刻 $v$ の関数は内向き、遅延時刻 $u$ の関数は外向きである。したがって、
+事象地平面で純粋に内向き、無限遠で純粋に外向きという\term{放射条件}は
+\begin{align}
+\psi(\rstar;\omega)
+&\sim
+\rme^{-\rmi\omega \rstar},
+&& \rstar\longrightarrow-\infty,
+\label{eq:bh_ingoing_bc}
+\\
+\psi(\rstar;\omega)
+&\sim
+\rme^{+\rmi\omega \rstar},
+&& \rstar\longrightarrow+\infty
+\label{eq:infinity_outgoing_bc}
+\end{align}
+となる。
+
+\begin{warningbox}
+「$\rme^{+\rmi\omega \rstar}$ が出射波」という判定は、それだけでは意味をもたない。
+時間因子 $\rme^{-\rmi\omega t}$ と座標の向きを同時に指定して初めて、入射と出射が
+決まる。時間規約を $\rme^{+\rmi\omega t}$ に変えれば、すべての符号が反転する。
+\end{warningbox}
+
+$\im\omega<0$ の\term{準固有振動}（quasinormal mode; \term{QNM}）周波数\footnote{%
+準固有振動の定義と三つの同値な特徴づけは第\ref{chap:qnm}章で与える。}
+を想定すると、式\eqref{eq:bh_ingoing_bc}と
+\eqref{eq:infinity_outgoing_bc}の空間波形は実軸上で発散する。この事実は異常ではない。
+時間的に減衰しながら、波面が無限遠へ進む開放系の共鳴状態を、全空間で同じ複素
+周波数により表した結果である。ただし、この発散のため QNM 波形は通常の
+\term{自乗可積分}な $L^2$ 固有関数にはならない。これが解析接続と、第
+\ref{chap:complex-scaling}章で定義する複素スケーリングを必要とする第一の理由である。
+
+\section{二つの地平面をもつ場合}
+
+\term{Schwarzschild--de~Sitter 時空}では、静的領域が\term{ブラックホール地平面} $r_b$ と
+\term{宇宙論的地平面} $r_c$ の間にある。ここで
+\begin{equation}
+r_b<r<r_c
+\end{equation}
+である。適切な加法定数を選ぶと、
+\begin{align}
+\rstar&\longrightarrow-\infty,
+&&r\longrightarrow r_b+0,
+\\
+\rstar&\longrightarrow+\infty,
+&&r\longrightarrow r_c-0
+\end{align}
+となる。QNM の\term{放射条件}は、ブラックホール地平面へ入る波と、宇宙論的地平面へ
+出ていく波である。式の形は\eqref{eq:bh_ingoing_bc}、
+\eqref{eq:infinity_outgoing_bc}と同じでも、右端の物理的意味は空間的無限遠ではなく
+宇宙論的地平面になる。
+
+一方、\term{極限ブラックホール}では $f(r)$ の零点が重なるため、
+式\eqref{eq:tortoise_near_horizon}の対数則が変わる。重根 $r=r_e$ の近傍で
+\begin{equation}
+f(r)
+=
+a(r-r_e)^2
++O\bigl((r-r_e)^3\bigr)
+\end{equation}
+ならば、$a$ を二次項の係数として
+\begin{equation}
+\rstar
+=
+-\frac{1}{a(r-r_e)}
++O\bigl(\log|r-r_e|\bigr)
+\end{equation}
+となる。非極限系の公式でパラメータを極限値へ代入するだけでは、漸近構造を取り違える
+ことがある。
+
+\section{本章の結論}
+
+本章で得た方程式は
+\begin{equation}
+\left(
+\partial_t^2
+-\partial_{\rstar}^2
++V
+\right)\Psi
+=
+S
+\label{eq:generic_master_equation}
+\end{equation}
+である。ブラックホールの種類と摂動のスピンは有効ポテンシャル $V$ に入り、因果構造は
+$\rstar$ の範囲と漸近条件に入る。この分離によって、幾何学の問題は散乱理論の問題へ
+移された。次章では、式\eqref{eq:generic_master_equation}を外力に対する応答として解く。
+
+\begin{researchproblem}[極限地平面の散乱座標]
+\term{Reissner--Nordstr\"om 時空}の
+$f(r)=1-2M/r+Q^2/r^2$ について、非極限と極限の亀座標を別々に構成せよ。
+$|Q|\to M$ と $r\to r_+$ の順序を交換し、近地平面の波動方程式と \term{Jost 規格化}が
+どこで非一様になるかを決定せよ。既知の式を再現するだけでなく、後の数値計算で
+用いる一様座標または \term{matched asymptotic expansion} を提案し、その誤差を評価せよ。
+\end{researchproblem}

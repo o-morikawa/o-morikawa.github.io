@@ -1,0 +1,131 @@
+\chapter{記法と規約}
+\label{app:conventions}
+\chapterepigraph{``The last thing we decide on in writing a book is what shall be the first we put in it.''}{Attributed to Blaise Pascal, \textit{Pens\'ees}, Brunschvicg 19, trans.\ C.\ Kegan Paul}
+
+本書で用いた規約をまとめる。異なる文献の公式を比較するときは、周波数の\term{時間規約}、
+\term{Wronskian} の順序、\term{レゾルベント}の符号を最初に確認する必要がある。
+
+\section{時空と単位系}
+
+計量の符号は $(-,+,+,+)$、\term{幾何学単位系}は $G=c=1$ である。\term{静的球対称計量}を
+\begin{equation}
+\rmd s^2
+=
+-f(r)\,\rmd t^2
++f(r)^{-1}\rmd r^2
++r^2\rmd\Omega^2
+\end{equation}
+と書く。亀座標は $\rmd\rstar/\rmd r=f(r)^{-1}$ により定義する。
+
+\section{\term{Fourier 規約}}
+
+時間依存性は
+\begin{equation}
+\Psi(t,x)
+=
+\int
+\frac{\rmd\omega}{2\pi}
+\,
+\rme^{-\rmi\omega t}
+\psi(\omega,x)
+\end{equation}
+である。この規約では、$\im\omega<0$ が時間的減衰を表す。右向きの波は
+$\rme^{-\rmi\omega(t-x)}$、左向きの波は $\rme^{-\rmi\omega(t+x)}$ である。
+
+\section{演算子とレゾルベント}
+
+\term{空間演算子}、\term{周波数演算子束}、\term{レゾルベント}を
+\begin{align}
+H
+&=
+-\frac{\rmd^2}{\rmd x^2}+V(x),
+\\
+\vL(\omega)
+&=
+H-\omega^2,
+\\
+\vR(z)
+&=
+(H-z)^{-1},
+\\
+\vG(\omega)
+&=
+\vL(\omega)^{-1}
+\end{align}
+と定めた。文献によっては $(z-H)^{-1}$ をレゾルベントと定義するため、\term{Riesz 射影}の
+全体符号が変わる。本書の \term{contour moment} は式\eqref{eq:contour_moments}で直接定義し、
+この曖昧さを避けた。
+
+\section{Jost 解と Wronskian}
+
+左右の \term{Jost 解}は
+\begin{align}
+f_-(x,\omega)
+&\sim
+\rme^{-\rmi\omega x},
+&&x\longrightarrow-\infty,
+\\
+f_+(x,\omega)
+&\sim
+\rme^{+\rmi\omega x},
+&&x\longrightarrow+\infty
+\end{align}
+で規格化する。\term{Wronskian} は
+\begin{equation}
+\vW(\omega)
+=
+f_-\frac{\partial f_+}{\partial x}
+-
+\frac{\partial f_-}{\partial x}f_+
+\end{equation}
+である。この順序に対して \term{Green 核}には式\eqref{eq:green_jost_formula}の負号が付く。
+
+\section{略号}
+
+本文では、\term{quasinormal mode} を QNM、\term{complex scaling method} を CSM、\term{exceptional
+point} を EP と略記した。Regge--Wheeler と Zerilli は、それぞれ RW、Z と略記する
+場合がある。
+
+\section{量子二点関数}
+
+遅延 Green 関数は
+\begin{equation}
+G_R(t)
+=
+\rmi\theta(t)\langle[O(t),O(0)]\rangle
+\end{equation}
+と定義する。Fourier 変換は $\int\rmd t\,\rme^{+\rmi\omega t}$ であり、この規約では
+\term{スペクトル関数} $\rho_O=G^>-G^<$ と $\rho_O=2\im G_R$ が成り立つ。$\hbar=1$ とする。
+
+\section{複素解析上の注意}
+
+$z=\omega^2$ により、\term{エネルギー平面}と\term{周波数平面}は二重に覆われる。平方根、対数、
+\term{Jost 解}の\term{解析接続}では、\term{切断}と \term{sheet} を固定する必要がある。数値計算では、複素平面
+上の点だけでなく、そこへ至る\term{解析接続}の経路を記録することが望ましい。
+
+例外点を周回するときは、制御パラメータの経路、固有ベクトルの\term{平行移動規約}、
+\term{双直交内積}を指定する。\term{固有値の置換}、固有ベクトルの符号、\term{幾何学的位相}は関連するが、
+同一の主張ではない。
+
+\chapter*{改訂試作版について}
+\addcontentsline{toc}{chapter}{改訂試作版について}
+
+本改訂版は、「これから行う研究は研究問題へ送り、本筋に必要ないものは削る」という
+方針で構成した。本文は、亀座標から古典的 Green 関数を作り、その極と連続成分を読み、
+同じ遅延関数を量子交換子、KMS 条件、ETH の行列要素へ接続するところまでを一つの
+主線とし、最後に応答不変量へ戻した。想定読者を学部四年生と明記し、未来地平面で
+正則な座標、重力摂動の非放射部門、源から波形と flux への一つの完全な鎖、Kerr の
+放射条件と \term{superradiance}、\term{面積エントロピー}と\term{第一法則}を物理ミニマムとして補った。
+\term{Ryu--Takayanagi 公式}は本筋の導出には用いず、面積則から境界理論へ出るための短い
+標識にとどめた。
+
+通常の章末小問は置かない。極限地平面、長距離 Jost 関数、Kerr QNM の数値実装、
+極とテールの一様近似、de~Sitter 連続応答、高次例外点、対称性を分解した ETH を
+研究問題とした。
+これらは本文の理解を確認する問題ではなく、本文の仮定を越えるための出発点である。
+
+今後の改訂では、章を増やすこと自体を目標にしない。新しい結果が、源と観測者を結ぶ
+因果的応答を変えるか、表示依存の量から新しい不変量を分離する場合にだけ本文へ戻す。
+数値手法の比較、既知周波数の表、一般論の網羅は、主線を変えない限り研究問題または
+別冊の実装ノートに置く。参考文献を除く本文百頁程度は編集上の目安であり、定義の順序を
+壊す厳格な上限とはしない。

@@ -1,0 +1,213 @@
+%%
+%% omphys.sty
+%% Personal minimal physics/math macros extracted from ptephy_om.cls.
+%% Usage:
+%%   \usepackage{omphys}
+%%   \usepackage[comments,revision]{omphys}
+%%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{omphys}[2026/05/10 OM physics/math macros]
+
+%% ------------------------------------------------------------
+%% Options
+%% ------------------------------------------------------------
+
+\newif\ifomphys@showcomments
+\newif\ifomphys@showrevision
+
+\omphys@showcommentsfalse
+\omphys@showrevisionfalse
+
+\DeclareOption{comments}{\omphys@showcommentstrue}
+\DeclareOption{nocomments}{\omphys@showcommentsfalse}
+
+\DeclareOption{revision}{\omphys@showrevisiontrue}
+\DeclareOption{norevision}{\omphys@showrevisionfalse}
+
+\ProcessOptions\relax
+
+%% ------------------------------------------------------------
+%% Required packages
+%% ------------------------------------------------------------
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsfonts}
+\RequirePackage{mathtools}
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{bm}
+
+%% ------------------------------------------------------------
+%% Comment mode
+%% ------------------------------------------------------------
+
+\ifomphys@showcomments
+  \newcommand{\omphysCmt}[3]{\textcolor{#1}{[#2: #3]}}
+\else
+  \newcommand{\omphysCmt}[3]{}
+\fi
+
+\newcommand{\cmtOM}[1]{\omphysCmt{teal}{OM}{#1}}
+
+%% Backward-compatible alias with the original class naming.
+\let\pteCmt\omphysCmt
+
+%% ------------------------------------------------------------
+%% Revisions highlighted
+%% ------------------------------------------------------------
+
+\newcount\omphys@revisionnum
+\omphys@revisionnum=1
+
+\newcommand{\revisionnum}[1]{%
+  \omphys@revisionnum=#1\relax
+}
+
+\providecommand{\pteRevColor}{magenta}
+
+\newcommand{\rev}[2]{%
+  \ifomphys@showrevision
+    \ifnum#1=\omphys@revisionnum
+      \textcolor{\pteRevColor}{#2}%
+    \else
+      #2%
+    \fi
+  \else
+    #2%
+  \fi
+}
+
+\newcommand{\revone}[1]{\rev{1}{#1}}
+\newcommand{\revtwo}[1]{\rev{2}{#1}}
+\newcommand{\revthree}[1]{\rev{3}{#1}}
+
+%% ------------------------------------------------------------
+%% Math operators
+%% ------------------------------------------------------------
+
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Erf}{Erf}
+\DeclareMathOperator{\Erfi}{Erfi}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator*{\Res}{Res}
+\DeclareMathOperator{\res}{Res}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\vol}{Vol}
+
+%% ------------------------------------------------------------
+%% Feynman slash
+%% ------------------------------------------------------------
+
+\newcommand{\Slach}[1]{{\ooalign{\hfil/\hfil\crcr$#1$}}}
+
+%% Backward-compatible alias with the original class.
+\let\Slash\Slach
+
+%% ------------------------------------------------------------
+%% Bra-ket
+%% ------------------------------------------------------------
+
+\newcommand{\bra}[1]{\langle #1 \rvert}
+\newcommand{\ket}[1]{\lvert #1 \rangle}
+\newcommand{\braket}[1]{\langle #1 \rangle}
+
+\newcommand{\Bra}[1]{\left\langle #1 \right\rvert}
+\newcommand{\Ket}[1]{\left\lvert #1 \right\rangle}
+\newcommand{\Braket}[1]{\left\langle #1 \right\rangle}
+
+%% ------------------------------------------------------------
+%% Blackboard bold sets
+%% ------------------------------------------------------------
+
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbH}{\mathbb{H}}
+
+%% ------------------------------------------------------------
+%% Roman constants
+%% ------------------------------------------------------------
+
+\newcommand{\rmi}{\mathrm{i}}
+\newcommand{\rmd}{\mathrm{d}}
+\newcommand{\rme}{\mathrm{e}}
+
+%% ------------------------------------------------------------
+%% Scripts and units
+%% ------------------------------------------------------------
+
+\newcommand{\vsub}[2]{#1_{\mathrm{#2}}}
+\newcommand{\vsup}[2]{#1^{\mathrm{#2}}}
+\newcommand{\vsupb}[3]{#1^{\mathrm{#2}}_{\mathrm{#3}}}
+\newcommand{\unit}[2]{#1\,\mathrm{#2}}
+
+%% ------------------------------------------------------------
+%% Personal names
+%% ------------------------------------------------------------
+
+\newcommand{\vN}{von~Neumann}
+\newcommand{\tH}{'t~Hooft}
+
+%% ------------------------------------------------------------
+%% Text colors
+%% ------------------------------------------------------------
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\magenta}[1]{\textcolor{magenta}{#1}}
+\newcommand{\cyan}[1]{\textcolor{cyan}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\teal}[1]{\textcolor{teal}{#1}}
+
+
+
+%% ------------------------------------------------------------
+%% ------------------------------------------------------------
+%% ------------------------------------------------------------
+% Mathematical notation retained from the source papers.
+\DeclareMathOperator{\esssup}{ess\,sup}
+\newcommand{\Hil}{\mathcal{H}}
+\newcommand{\Banach}{\mathcal{B}}
+\newcommand{\PhiSpace}{\mathit{\Phi}}
+\newcommand{\Resolvent}{\mathcal{R}}
+% Reserve calligraphic S for exact-WKB summation operators.  The upright
+% sans-serif symbol is used only for the physical scattering operator.
+\newcommand{\Scattering}{\mathsf{S}}
+\newcommand{\Transmission}{\mathcal{T}}
+\newcommand{\WKB}{\mathcal{W}}
+\newcommand{\VorosPeriod}{V}
+\newcommand{\VorosExp}{\mathcal{V}}
+\newcommand{\identity}{\mathbf{1}}
+% In one channel this is a scalar connection coefficient; in several
+% channels it is the corresponding incoming connection block.
+\newcommand{\Cincoming}{\vsub{\mathcal{C}}{in}}
+\newcommand{\resonantE}{\vsub{E}{R}}
+\newcommand{\complex}{\bbC}
+\newcommand{\real}{\bbR}
+\newcommand{\naturalnumbers}{\bbN}
+\newcommand{\order}{O}
+\newcommand{\dualpair}[2]{\langle #1,#2\rangle}
+\newcommand{\Dualpair}[2]{\left\langle #1,#2\right\rangle}
+\newcommand{\cprod}[2]{(#1\mathbin{|}#2)_{\!c}}
+\newcommand{\BHil}{\Banach(\Hil)}
+\newcommand{\BHilideal}[1]{\Banach_{#1}(\Hil)}
+\newcommand{\resolventset}{\rho}
+\newcommand{\spectrum}{\sigma}
+\newcommand{\essspectrum}{\vsub{\sigma}{ess}}
+\newcommand{\acspectrum}{\vsub{\sigma}{ac}}
+\newcommand{\pseudospectrum}{\sigma_\epsilon}
+\newcommand{\Alg}{\mathfrak{A}}
+\newcommand{\vNAlg}{\mathcal{M}}
+\newcommand{\Center}{\mathcal{Z}}
+\newcommand{\dd}{\,\rmd}
+
+\endinput

@@ -1,0 +1,258 @@
+\chapter{マスター場}
+\label{chap:master-field}
+\chapterepigraph{三十輻，共一轂，當其無，有車之用。}{『老子道徳経』第十一章}
+
+\section{幾何学から一つの場へ}
+
+亀座標は外部領域を散乱の実直線へ移した。しかし、\term{計量摂動}
+$h_{\mu\nu}$ の十成分をそのまま散乱させることはできない。座標変換で消える成分、
+\term{拘束方程式}で決まる成分、伝播する成分を分ける必要がある。その結果を一つまたは
+少数の変数へ集約したものを\term{マスター場}とよぶ。
+
+まず質量ゼロスカラー場で仕組みを見る。作用を
+\begin{equation}
+I[\Phi]
+=
+-\frac{1}{2}
+\int \rmd^4x\sqrt{-g}\,
+g^{\mu\nu}\partial_\mu\Phi\partial_\nu\Phi
++\int \rmd^4x\sqrt{-g}\,J\Phi
+\label{eq:scalar-action}
+\end{equation}
+とする。$J$ は外部源である。球面調和関数で展開し、
+$\Phi=r^{-1}\Psi_{\ell m}Y_{\ell m}$ と置けば、角度を積分した作用は境界項を除いて
+\begin{equation}
+I_{\ell m}
+=
+\frac{1}{2}
+\int \rmd t\rmd \rstar
+\left[
+(\partial_t\Psi_{\ell m})^2
+-(\partial_{\rstar}\Psi_{\ell m})^2
+-V_\ell\Psi_{\ell m}^2
++2S_{\ell m}\Psi_{\ell m}
+\right]
+\label{eq:reduced-master-action}
+\end{equation}
+となる。変分すれば
+\begin{equation}
+\left(
+\partial_t^2-\partial_{\rstar}^2+V_\ell
+\right)\Psi_{\ell m}
+=
+S_{\ell m}
+\label{eq:master-action-eom}
+\end{equation}
+を得る。一次元方程式だけでなく作用まで残しておく理由は、後に同じ場を量子化する
+ためである。
+
+\section{重力摂動の最小限}
+
+背景計量を $g_{\mu\nu}$ とし、摂動を
+\begin{equation}
+g_{\mu\nu}
+\longrightarrow
+g_{\mu\nu}+h_{\mu\nu}
+\end{equation}
+とする。\term{無限小座標変換} $x^\mu\to x^\mu+\xi^\mu$ により、
+\begin{equation}
+h_{\mu\nu}
+\longrightarrow
+h_{\mu\nu}
+-\nabla_\mu\xi_\nu
+-\nabla_\nu\xi_\mu
+\label{eq:linear-gauge-transformation}
+\end{equation}
+と変わる。したがって、個々の $h_{\mu\nu}$ を応答として読むことはできない。
+Schwarzschild 背景では球面上の \term{parity} により\term{軸性}と\term{極性}へ分け、拘束を解くと、
+各 $\ell\geq2$ に一つずつ \term{gauge-invariant} なマスター場が残る
+\cite{Regge:1957td,Zerilli:1970wzz,Moncrief:1974am}。
+
+球面上の反転 $(\vartheta,\varphi)\mapsto(\pi-\vartheta,\varphi+\pi)$ に対し、
+\term{極性}（even-parity）成分は $(-1)^\ell$、\term{軸性}（odd-parity）成分は
+$(-1)^{\ell+1}$ で変換する。\term{放射自由度}が二つの部門に一つずつ現れるのは
+$\ell\geq2$ である。$\ell=0$ の極性摂動は質量の微小変化と gauge、$\ell=1$ の
+軸性摂動は角運動量の微小変化、すなわち線形化した Kerr 方向と gauge を表す。
+$\ell=1$ の極性真空摂動は重心の移動に対応する gauge である。物質源があれば
+\term{単極・双極}の拘束場は残るが、無限遠へ伝播する\term{重力放射}ではない
+\cite{Martel:2005ir}。したがって以下の \term{RW--Zerilli 波動方程式}で
+$\ell\geq2$ とする理由は、ポテンシャルの都合ではなく、\term{放射自由度}の存在である。
+
+軸性の \term{Regge--Wheeler 場}を $\Psi_{\mathrm{RW}}$ とすれば、
+\begin{equation}
+\left(
+\partial_t^2-\partial_{\rstar}^2+V_{\mathrm{RW}}
+\right)\Psi_{\mathrm{RW}}
+=
+S_{\mathrm{RW}},
+\label{eq:rw-master}
+\end{equation}
+ここで、
+\begin{equation}
+V_{\mathrm{RW}}(r)
+=
+f(r)
+\left[
+\frac{\ell(\ell+1)}{r^2}
+-\frac{6M}{r^3}
+\right],
+\qquad
+f(r)=1-\frac{2M}{r}
+\label{eq:rw-potential}
+\end{equation}
+である。極性の \term{Zerilli 場}も同じ形の方程式を満たす。ここで
+\begin{equation}
+\lambda
+=
+\frac{(\ell-1)(\ell+2)}{2}
+\end{equation}
+と置けば、そのポテンシャルは
+\begin{align}
+V_{\mathrm Z}(r)
+&=
+\frac{2f(r)}{r^3(\lambda r+3M)^2}
+\Bigl[
+\lambda^2(\lambda+1)r^3
++3\lambda^2Mr^2
+\nonumber\\
+&\hspace{9em}
++9\lambda M^2r
++9M^3
+\Bigr]
+\label{eq:zerilli-potential-minimum}
+\end{align}
+となる\cite{Chandrasekhar:book}。二つのポテンシャルは異なるが、適切な一次微分変換で
+互いに移り、第\ref{chap:qnm}章で定義する同じ準固有振動周波数をもつ
+\cite{Chandrasekhar:1975nkd}。
+
+\begin{principlebox}
+マスター場と有効ポテンシャルは表示であり、唯一ではない。放射条件、実周波数の
+\term{散乱行列}、および物理的な源から観測量へ至る写像が表示を越えて比較される。
+\end{principlebox}
+
+\section{源と観測量}
+
+真空方程式だけでは応答理論にならない。物質の \term{stress tensor} を $T_{\mu\nu}$ とすれば、
+\term{線形化 Einstein 方程式}の球面調和成分が $S_{\mathrm{RW}}$ または $S_{\mathrm Z}$ を定める。
+同じ物質源でも、マスター場の定義を変えれば $S$ の形は変わる。したがって、
+マスター場の解だけを観測量と同一視してはならない。
+
+遠方の放射波形、地平面を横切る流束、局所的な曲率摂動など、\term{観測操作}を $O$ と書く。
+源から観測量までの関係は模式的に
+\begin{equation}
+T_{\mu\nu}
+\longrightarrow
+S_{\ell m}
+\longrightarrow
+\Psi_{\ell m}
+\longrightarrow
+\delta O
+\label{eq:source-master-observable-chain}
+\end{equation}
+である。第一の矢印は\term{線形化 Einstein 方程式}の拘束と射影、最後の矢印は波形または
+流束の再構成を表す。次章では中央の矢印を外力に対する解演算子として定義する。
+
+\paragraph{一つの完全な鎖.}
+Martel--Poisson の規格化では、極性場 $\Psi^{\mathrm{even}}_{\ell m}$ と軸性場
+$\Psi^{\mathrm{odd}}_{\ell m}$ から、未来 \term{null infinity} における\term{重力波}を
+\begin{equation}
+h_+-\rmi h_\times
+=
+\frac{1}{2r}
+\sum_{\ell m}
+\sqrt{\frac{(\ell+2)!}{(\ell-2)!}}
+\left(
+\Psi^{\mathrm{even}}_{\ell m}
++\rmi\Psi^{\mathrm{odd}}_{\ell m}
+\right)
+{}_{-2}Y_{\ell m}
++O(r^{-2})
+\label{eq:master-to-strain}
+\end{equation}
+と再構成できる。$u=t-\rstar$ とすれば、放射エネルギーは
+\begin{equation}
+\frac{\rmd E}{\rmd u}
+=
+\frac{1}{64\pi}
+\sum_{\ell m}
+\frac{(\ell+2)!}{(\ell-2)!}
+\left(
+\left|\partial_u\Psi^{\mathrm{even}}_{\ell m}\right|^2
++
+\left|\partial_u\Psi^{\mathrm{odd}}_{\ell m}\right|^2
+\right)
+\label{eq:master-to-energy-flux}
+\end{equation}
+である\cite{Martel:2005ir}。別の RW 場を用いると奇パリティ場に時間微分または積分が
+入り、係数も変わる。したがって、源 $T_{\mu\nu}$ の射影、Green 関数による
+$\Psi_{\ell m}$ の計算、式\eqref{eq:master-to-strain}による\term{波形再構成}を、同じ規格化で
+通して初めて観測量になる。
+
+\section{回転時空について何を残すか}
+
+\term{Kerr 時空}では球対称性がないため、Regge--Wheeler 型の実ポテンシャル一つには
+還元されない。質量を $M$、角運動量を $J=aM$ とし、
+\begin{align}
+\Delta
+&=
+r^2-2Mr+a^2,
+&
+r_\pm
+&=
+M\mathord{\pm}\sqrt{M^2-a^2},
+&
+\Omega_H
+&=
+\frac{a}{r_+^2+a^2}
+\label{eq:kerr-horizon-minimum}
+\end{align}
+とする。$r_+$ は事象地平面、$\Omega_H$ はその角速度である。Kerr の亀座標は
+\begin{equation}
+\frac{\rmd\rstar}{\rmd r}
+=
+\frac{r^2+a^2}{\Delta}
+\label{eq:kerr-tortoise-minimum}
+\end{equation}
+で定義する。
+
+\term{Petrov 型 D} の曲率成分を用いると、スピン $s$ の \term{Teukolsky 変数}を模式的に
+\begin{equation}
+\psi_s
+=
+\rme^{-\rmi\omega t+\rmi m\varphi}
+S_{s\ell m}(\vartheta;a\omega)
+R_{s\ell m}(r)
+\label{eq:teukolsky-separation-minimum}
+\end{equation}
+と分離できる\cite{Teukolsky:1972my}。$S_{s\ell m}$ は\term{スピン重み付き回転楕円面
+調和関数}であり、\term{角固有値}が $a\omega$ に依存するため、角方程式と動径方程式を
+同時に解く。スピンに依存する冪の前置因子を省けば、放射条件は
+\begin{align}
+R_{s\ell m}
+&\sim
+\rme^{-\rmi(\omega-m\Omega_H)\rstar},
+&&r\longrightarrow r_+,
+\label{eq:kerr-horizon-bc-minimum}
+\\
+R_{s\ell m}
+&\sim
+\rme^{+\rmi\omega\rstar},
+&&r\longrightarrow\infty
+\label{eq:kerr-infinity-bc-minimum}
+\end{align}
+である。地平面を横切る \term{Killing energy flux} は
+$\omega-m\Omega_H$ に比例する。したがって boson の
+$0<\omega<m\Omega_H$ では地平面 flux が負になり、反射波が入射波より強くなる
+\term{superradiance} が起こる。この周波数のずれは第\ref{chap:horizon-thermality}章の熱因子にも
+同じ形で現れる。
+
+本文に残す Kerr の最小限は、\term{地平面生成子}、\term{Teukolsky 分離}、二端の放射条件、
+\term{superradiance} までである。\term{計量再構成}と数値法の全分類は行わず、第四章の研究問題で
+実装と検証へ送る。
+
+\section{本章の結論}
+
+ブラックホール摂動は、gauge と拘束を除いたマスター場の\term{開放波動問題}へ還元される。
+作用\eqref{eq:reduced-master-action}は古典応答と量子化の共通の出発点であり、
+式\eqref{eq:source-master-observable-chain}は表示依存の量と観測量を分ける。次章では、
+マスター方程式を外力に対して反転する。
