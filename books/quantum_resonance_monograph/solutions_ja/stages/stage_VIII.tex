@@ -1,0 +1,187 @@
+\chapter{Stage VIII：Regge--Wheeler 方程式と black-hole QNM}
+
+\solproblem{VIII.1　Schwarzschild tortoise 座標}{
+Schwarzschild metric から $r_*$ と両端の漸近形を導け。}{
+$f(r)=1-2M/r$ とし radial null line $0=-f\dd t^2+f^{-1}\dd r^2$ を
+$t\mp r_*=\mathrm{const.}$ にするには $\dd r_*/\dd r=f^{-1}$。従って
+\begin{equation}
+ r_*=r+2M\log\left(\frac r{2M}-1\right)+C.
+\end{equation}
+$C=0$ とすると horizon $r=2M+\epsilon$ で
+\begin{equation}
+ r_*=2M\log\frac{\epsilon}{2M}+2M+O(\epsilon)\to-\infty,
+\end{equation}
+infinity で
+$r_*=r+2M\log(r/2M)+O(M^2/r)\to+\infty$。従って外部領域は
+$r_*\in\real$ 全体へ写る。}
+
+\solproblem{VIII.2　spherical harmonics の parity と odd metric 成分}{
+scalar/vector/tensor harmonic の parity を示し odd sector の自由成分を数えよ。}{
+parity map $(\vartheta,\varphi)\mapsto(\pi-\vartheta,\varphi+\pi)$ で
+$Y_{lm}\mapsto(-1)^lY_{lm}$。polar vector $D_AY$ は $(-1)^l$、sphere volume
+formを掛けた axial vector $X_A=-\varepsilon_A{}^BD_BY$ は追加の負号を得て
+$(-1)^{l+1}$。polar/axial tensor もそれぞれ $(-1)^l,(-1)^{l+1}$。
+fixed $(l,m)$ の odd metric は
+$h_tX_A$、$h_rX_A$、$h_2X_{AB}$ の3 scalar amplitude。odd gauge function
+$\xi X_A$ 一つで $h_2=0$ にでき、2 amplitude が残る。Einstein constraint
+が一つを nondynamical にし、最終的な propagating master field は1。
+$l=0$ に odd harmonic はなく、$l=1$ で $X_{AB}=0$ なので別扱い。}
+
+\solproblem{VIII.3　linearized Einstein 方程式から covariant Regge--Wheeler 方程式へ}{
+warped-product identities を用いた projection と elimination を示せ。}{
+$\rmd s^2=g_{ab}\dd x^a\dd x^b+r^2\Omega_{AB}\dd\theta^A\dd\theta^B$ とし、
+odd perturbation を $h_{aB}=h_aX_B$、$h_{AB}=h_2X_{AB}$ と展開する。
+gauge invariant combination は
+\begin{equation}
+ \widetilde h_a=h_a-\frac12\nabla_ah_2+\frac{r_a}{r}h_2.
+\end{equation}
+$D^AX_A=0$、$D^2X_A=[1-l(l+1)]X_A$、
+$D^BX_{AB}=-(l-1)(l+2)X_A/2$ を linearized Ricci tensor へ代入すると
+\begin{align}
+ 0=P_a={}&-\Box_2\widetilde h_a+\nabla_a\nabla_b\widetilde h^b
+ +\frac2r(r_b\nabla_a\widetilde h^b-r_a\nabla_b\widetilde h^b)\\
+ &-\frac2{r^2}r_ar_b\widetilde h^b+\frac{l(l+1)}{r^2}\widetilde h_a,\\
+ 0=P={}&\nabla_a\widetilde h^a.
+\end{align}
+$\lambda=(l-1)(l+2)$ とし
+\begin{equation}
+ \vsub{\Psi}{odd}=\frac{2r}{\lambda}\varepsilon^{ab}
+ \left(\nabla_a\widetilde h_b-\frac2r r_a\widetilde h_b\right)
+\end{equation}
+を定義する。$\varepsilon^{ab}\nabla_aP_b$ を取り、背景 identity
+$\nabla_a\nabla_br=(M/r^2)g_{ab}$、$r_ar^a=f$、constraint $P=0$ を使うと
+\begin{equation}
+ \varepsilon^{ab}\nabla_aP_b=-\frac{\lambda}{2r}
+ \left[\Box_2-\frac{l(l+1)}{r^2}+\frac{6M}{r^3}\right]\vsub{\Psi}{odd}.
+\end{equation}
+従って bracket が0。Bianchi identity は残りの projected equation が従属
+であることを保証する。これが成分を飛ばさない gauge-invariant 導出である。}
+
+\solproblem{VIII.4　Regge--Wheeler potential と低 multipole}{
+potential を導き両端を検査し、$l=0,1$ の例外を説明せよ。}{
+$\Box_2=-f^{-1}\partial_t^2+\partial_r(f\partial_r)$ と
+$\partial_{r_*}=f\partial_r$ を前問へ代入し
+\begin{equation}
+ [-\partial_t^2+\partial_{r_*}^2-\vsup{V_l}{RW}(r)]\vsub{\Psi}{odd}=0,
+ \quad \vsup{V_l}{RW}=f\left[\frac{l(l+1)}{r^2}-\frac{6M}{r^3}\right]
+\end{equation}
+を得る。horizon では $f\to0$ なので $V\to0$ exponentially in $r_*$、
+infinity では $V=l(l+1)/r^2+O(r^{-3})\to0$。$l=0$ には odd vector harmonic
+が存在しない。$l=1$ では $\lambda=0$ で tensor harmonic と radiative
+master definition が消え、vacuum static solution は background の angular
+momentumを変える infinitesimal Kerr perturbation である。従って wave
+potential formula を機械的に $l=0,1$ へ適用しない。}
+
+\solproblem{VIII.5　horizon と infinity の符号}{
+$\rme^{-\rmi\omega t}$ 規約で QNM 条件を vanishing connection coefficient として書け。}{
+horizon の future-regular ingoing wave は advanced time $v=t+r_*$ の関数
+$\rme^{-\rmi\omega v}$ なので radial factor は
+$\rme^{-\rmi\omega r_*}$。infinity の outgoing wave は retarded time
+$u=t-r_*$ の関数で radial factor $\rme^{+\rmi\omega r_*}$。horizon-normalized
+解を $\vsup{f_H}{in}$ とし infinity で
+\begin{equation}
+ \vsup{f_H}{in}=\vsub{\mathcal C}{out}(\omega)
+ \rme^{+\rmi\omega r_*}+\Cincoming(\omega)
+ \rme^{-\rmi\omega r_*}
+\end{equation}
+と展開する。QNM 条件は $\Cincoming(\omega)=0$。$\im\omega<0$ では両端の
+QNM radial factor は実 $r_*$ 上で発散するが、これは符号誤りでなく
+resonance boundary condition である。}
+
+\solproblem{VIII.6　barrier-top WKB による fundamental QNM}{
+Schwarzschild fundamental mode を leading WKB で見積もり $M$ scaling と比較せよ。}{
+frequency equation $[-\partial_{r_*}^2+V]\psi=\omega^2\psi$ の barrier
+maximum $r_0$ で $V\simeq V_0+V_0''(r_*-r_{*0})^2/2$ とすると
+\begin{equation}
+ \omega^2\simeq V_0-
+\rmi(n+1/2)\sqrt{-2V_0''}.
+\end{equation}
+gravitational $l=2$ では
+$r_0/M=(9+\sqrt{17})/4=3.280776\ldots$、
+$M^2V_0=0.1512867$、$M^4V_0''=-0.00991941$。$n=0$ より
+\begin{equation}
+ M\vsup{\omega_{20}}{WKB}\simeq0.39885-0.08829\rmi.
+\end{equation}
+高精度値 $M\omega_{20}\simeq0.37367-0.08896\rmi$ と比べ、damping は良く
+実部は leading order の誤差を示す。metric を $r=M\bar r$、
+$r_*=M\bar r_*$ と scale すれば方程式は $(M\omega)^2$ のみを含むので
+$\omega\propto M^{-1}$。}
+
+\solproblem{VIII.7　tortoise coordinate の complex scaling}{
+QNM exposure 条件と inverse map の branch による制限を導け。}{
+両端で $r_*\mapsto\rme^{\rmi\theta}r_*$ とする。右端 outgoing wave と左端
+ingoing wave（$r_*=-s$）はいずれも magnitude
+\begin{equation}
+ \left|\rme^{\rmi\omega s\rme^{\rmi\theta}}\right|
+ =\rme^{-s\im(\omega\rme^{\rmi\theta})}
+\end{equation}
+を持つので $\im(\omega\rme^{\rmi\theta})>0$、すなわち
+$\theta>-\arg\omega$ が exposure 条件。ただし
+\begin{equation}
+ r=2M\left[1+W\left(\rme^{r_*/(2M)-1}\right)\right]
+\end{equation}
+で inverse map は Lambert $W$ の branch を含む。global straight rotation
+は logarithm/W branch cut、$r=0$ singularity、他 sheet の horizon image を
+横切り得る。従って実際には potential が解析な有限内部区間を保ち、両 tail
+だけを曲げる exterior/smooth complex scaling を用いる。}
+
+\solproblem{VIII.8　Gaussian basis 行列と conditioning}{
+Regge--Wheeler 方程式の overlap/kinetic 行列を作り精度喪失を診断せよ。}{
+一例として中心 $x_j$ と range $b_j$ を持つ
+$\phi_j(r_*)=(r_*-x_j)^{p_j}\rme^{-\alpha_j(r_*-x_j)^2}$ を使う。
+$p=0$、共通中心なら
+\begin{equation}
+ N_{ij}=\sqrt{\frac\pi{\alpha_i+\alpha_j}},\qquad
+ T_{ij}=\frac{2\alpha_i\alpha_j\sqrt\pi}
+ {(\alpha_i+\alpha_j)^{3/2}},\qquad
+ V_{ij}=\int\phi_i\vsub{V}{RW}\phi_j\dd r_*.
+\end{equation}
+complex scaling 後は derivative に $\rme^{-2\rmi\theta}$、potential argument
+に deformation を入れる。geometric range ratio $q$ が1に近すぎると columns
+がほぼ従属、遠すぎると中間 scale が欠落する。polynomial order 増大も
+moment 行列の dynamic range を増やす。
+\begin{checkbox}
+$N$ の smallest eigenvalue と condition number、Cholesky/SVD cutoff、
+generalized residual、左右 overlap、working precision を記録する。precision
+を倍にして安定桁が増えない eigenvalue は物理 pole と認定しない。
+\end{checkbox}}
+
+\solproblem{VIII.9　Schwarzschild--de Sitter の二 horizon と Nariai limit}{
+二 horizon を $r_*\to\pm\infty$ へ写し near-Nariai barrier scaling を求めよ。}{
+$f=1-2M/r-\Lambda r^2/3$ の正根を $r_b<r_c$ とする。各単純根で
+$f\simeq2\kappa_b(r-r_b)$、
+$f\simeq2\kappa_c(r_c-r)$、
+$\kappa_h=|f'(r_h)|/2$。従って
+\begin{align}
+ r_*&\sim\frac1{2\kappa_b}\log(r-r_b)\to-\infty,\\
+ r_*&\sim-\frac1{2\kappa_c}\log(r_c-r)\to+\infty.
+\end{align}
+$\delta=\sqrt{1-9\Lambda M^2}\downarrow0$ と置くと
+\begin{align}
+ r_{b,c}&=3M\left(1\mp\frac{\delta}{\sqrt3}+O(\delta^2)\right),\\
+ r_c-r_b&=2\sqrt3M\delta+O(\delta^2),\\
+ \kappa_{b,c}&\sim\frac{\delta}{3\sqrt3M}.
+\end{align}
+coordinate $r$ では static region が縮むが $r_*$ 幅は
+$\order(\kappa^{-1})\sim M/\delta$ に広がる。master potential の高さは
+$\order(\kappa^2)$、従って near-Nariai QNM frequency も $\order(\kappa)$。}
+
+\solproblem{VIII.10　QNM pole と continuum level density}{
+QNM pole contribution と reference-subtracted cut contribution を比較せよ。}{
+適切な source $F$ と reference operator に対し
+\begin{equation}
+ \Delta_F(E)=-\frac1\pi\im\left[
+ \bra{F}\Resolvent(E+\rmi0)\ket{F}-
+ \bra{F}\vsub{\Resolvent}{ref}(E+\rmi0)\ket{F}\right].
+\end{equation}
+contour を変形すると単純 QNM $z_R=\omega_R^2$ の項は
+\begin{equation}
+ \Delta_R(E)=-\frac1\pi\im\frac{Z_F}{E-z_R},\qquad
+ Z_F=\frac{\mathcal N_F(z_R)}{\partial_E\Cincoming(z_R)},
+\end{equation}
+残りが reference-subtracted branch cut と他 poles。$Z_F$ は複素で cut は
+energy dependent なので、全 response の extremum 条件
+$\partial_E[\Delta_R+\vsub{\Delta}{cut}]=0$ は一般に
+$E=\re z_R$ で満たされない。さらに $E=\omega^2$ の非線形写像により
+frequency plot の peak も $\re\omega_R$ と一致しない。pole position、residue、
+full real-axis peak を別々に報告する。}

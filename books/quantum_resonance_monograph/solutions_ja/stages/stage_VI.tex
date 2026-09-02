@@ -1,0 +1,289 @@
+\chapter{Stage VI：few-body continuum、CDCC、complex scaling}
+
+\solproblem{VI.1　二 cluster projectile の座標と reduced mass}{
+fragment--target 座標と二つの reduced mass を導き kinetic energy を分離せよ。}{
+$P=c+v$ とし
+\begin{equation}
+ \bm r=\bm r_v-\bm r_c,\qquad
+ \bm R=\frac{m_c\bm r_c+m_v\bm r_v}{m_P}-\bm r_T,\quad m_P=m_c+m_v.
+\end{equation}
+projectile 重心 $\bm r_P$ から
+\begin{equation}
+ \bm r_c=\bm r_P-\frac{m_v}{m_P}\bm r,\quad
+ \bm r_v=\bm r_P+\frac{m_c}{m_P}\bm r
+\end{equation}
+なので
+$\bm R_c=\bm R-(m_v/m_P)\bm r$、
+$\bm R_v=\bm R+(m_c/m_P)\bm r$。全重心を除く正準変換により
+\begin{equation}
+ T=\frac{\bm P_R^2}{2\mu_R}+\frac{\bm p_r^2}{2\mu_r},\qquad
+ \mu_R=\frac{m_Pm_T}{m_P+m_T},\quad
+ \mu_r=\frac{m_cm_v}{m_P}.
+\end{equation}
+cross term は mass-weighted 重心の定義により相殺される。}
+
+\solproblem{VI.2　CDCC coupled radial 方程式}{
+三体 reaction Hamiltonian を channel basis へ射影し全項を導け。}{
+\begin{equation}
+ H=K_R+h_P+U_{cT}(\bm R_c)+U_{vT}(\bm R_v),\quad
+ \Psi_N^{JM}=\frac1R\sum_c\chi_c^J(R)\mathcal Y_c^{JM}
+\end{equation}
+とする。$h_P\Phi_i=\epsilon_i\Phi_i$ と angular orthonormality を用いる。
+$K_R$ が $R^{-1}\chi Y_L$ に作用すると
+\begin{equation}
+ K_R\frac{\chi}{R}Y_L=\frac1R\left[-\frac{\hbar^2}{2\mu_R}
+ \left(\frac{\rmd^2}{\rmd R^2}-\frac{L(L+1)}{R^2}\right)\chi\right]Y_L.
+\end{equation}
+$\Bra{\mathcal Y_c}(H-\vsub{E}{tot})\Ket{\Psi_N}=0$ を取れば
+\begin{align}
+ &\left[-\frac{\hbar^2}{2\mu_R}
+ \left(\frac{\rmd^2}{\rmd R^2}-\frac{L_c(L_c+1)}{R^2}\right)
+ +\epsilon_c-\vsub{E}{tot}\right]\chi_c^J(R)\\
+ &\quad+\sum_{c'}U_{cc'}^J(R)\chi_{c'}^J(R)=0,
+\end{align}
+\begin{equation}
+ U_{cc'}^J(R)=\Bra{\mathcal Y_c^{JM}}
+ [U_{cT}(\bm R_c)+U_{vT}(\bm R_v)]\Ket{\mathcal Y_{c'}^{JM}}_{\xi,\hat R}.
+\end{equation}
+diagonal は channel potential、off-diagonal は excitation、breakup、
+continuum--continuum coupling を全て含む。}
+
+\solproblem{VI.3　momentum bin と強収束}{
+bin state を規格化し、step projection の強収束と非 norm 収束を示せ。}{
+$\braket{\Phi_{k\alpha}|\Phi_{k'\alpha'}}=
+\delta_{\alpha\alpha'}\delta(k-k')$ とする。区間 $I_n$ で
+\begin{equation}
+ \ket{\vsup{\Phi_{n\alpha}}{bin}}=
+ \frac1{\sqrt{N_{n\alpha}}}\int_{I_n}f_{n\alpha}(k)
+ \ket{\Phi_{k\alpha}}\dd k,\quad
+ N_{n\alpha}=\int_{I_n}|f_{n\alpha}(k)|^2\dd k
+\end{equation}
+なら非重複 bin は orthonormal。$P_N$ を区分一定関数への直交射影とすると、
+単関数の $L^2$ 稠密性から任意の固定 wave packet $g$ に対して
+$\|P_Ng-g\|_2\to0$。しかし各有限分割に対し、各 bin 内で平均0となる
+規格化関数 $g_N$ を選べば $P_Ng_N=0$、従って
+$\|\identity-P_N\|=1$。これは strong だが operator-norm ではない収束である。}
+
+\solproblem{VI.4　geometric Gaussian basis の pseudostate}{
+短距離 potential を短い Gaussian basis で対角化し、range 依存性を分類せよ。}{
+再現可能な例として $\hbar^2/(2\mu)=1$、
+$V(x)=-V_0\rme^{-x^2/a^2}$、even basis
+$\phi_n(x)=\rme^{-\alpha_nx^2}$、
+$\alpha_n=b_n^{-2}$、$b_n=b_1q^{n-1}$ を取る。行列は解析的に
+\begin{align}
+ N_{ij}&=\sqrt{\frac{\pi}{\alpha_i+\alpha_j}},\\
+ T_{ij}&=\frac{2\alpha_i\alpha_j\sqrt\pi}
+ {(\alpha_i+\alpha_j)^{3/2}},\\
+ V_{ij}&=-V_0\sqrt{\frac{\pi}
+ {\alpha_i+\alpha_j+a^{-2}}}.
+\end{align}
+$Hc=ENc$ を Cholesky orthogonalization 後に解き、$b_N$ を1.3倍ずつ
+増やす。負固有値と内部確率
+$\int_{|x|<3a}|\psi|^2\dd x$ が安定するものが bound state。正固有値で
+内部確率と phase-sensitive observable が plateau を作るものが
+resonance-like stabilized pseudostate。$E\propto b_N^{-2}$ で流れ内部確率が
+減るものが nonresonant box pseudostate である。$N$ の condition number と
+residual $\|Hc-ENc\|$ も同時に報告する。}
+
+\solproblem{VI.5　open/closed Coulomb channel の境界条件}{
+Coulomb open channel と Whittaker closed channel を導き flux factor を検査せよ。}{
+$E_c=\vsub{E}{tot}-\epsilon_c$。$E_c>0$ なら
+$K_c=\sqrt{2\mu_RE_c}/\hbar$、漸近 radial 方程式は Coulomb 方程式なので
+\begin{equation}
+ \chi_c\to\frac{\rmi}{2}\left[
+ H_{L_c}^{(-)}(\eta_c,K_cR)\delta_{cc_0}
+ -\sqrt{\frac{K_{c_0}}{K_c}}S^J_{cc_0}
+ H_{L_c}^{(+)}(\eta_c,K_cR)\right].
+\end{equation}
+$H^{(\pm)}$ の Wronskian から flux は $\pm\hbar K_c/\mu_R$ times 振幅
+二乗。従って square-root factor 後の各 outgoing flux は
+$K_{c_0}|S_{cc_0}|^2$ に比例し、$\sum_c|S_{cc_0}|^2=1$ が得られる。
+$E_c<0$ では $K_c=\rmi\kappa_c$ とし、成長解を捨て
+$\chi_c\propto W_{-\eta_c,L_c+1/2}(2\kappa_cR)$ を選ぶ。}
+
+\solproblem{VI.6　closed channel の消去}{
+二 channel model で closed component を消去し、threshold 上下の polarization potential を求めよ。}{
+\begin{align}
+ (E-H_{11})\chi_1&=V_{12}\chi_2,\\
+ (E-H_{22})\chi_2&=V_{21}\chi_1
+\end{align}
+から
+\begin{equation}
+ [E-H_{11}-\vsub{U}{pol}(E)]\chi_1=0,\qquad
+ \vsub{U}{pol}=V_{12}(E-H_{22})^{-1}V_{21}.
+\end{equation}
+spectral resolution $H_{22}\ket{n}=\epsilon_n\ket{n}$ では
+$\vsub{U}{pol}=\sum_nV_{12}\ket{n}\bra{n}V_{21}/(E-\epsilon_n)$。全て
+$\epsilon_n>E$ の closed 領域では Hermitian coupling に対し実数で、通常
+attractive level shift を与える。continuum threshold 上で
+\begin{equation}
+ (E-H_{22}+\rmi0)^{-1}=\operatorname{PV}(E-H_{22})^{-1}
+ -\rmi\pi\delta(E-H_{22}),
+\end{equation}
+従って $\im \vsub{U}{pol}=-\pi V_{12}\delta(E-H_{22})V_{21}\leq0$ が open
+channel への loss width を表す。}
+
+\solproblem{VI.7　complex-scaled smoothing}{
+complex-scaled resolution から breakup response を導き、$\theta$ 依存の相殺を示せ。}{
+reaction source $\ket{F}=\sum_nT_n\ket{\Phi_n}$ に対し
+\begin{equation}
+ S(E)=-\frac1\pi\im\bra{F}(E-h_P+\rmi0)^{-1}\ket{F}.
+\end{equation}
+analytic test space 上で
+$(E-h_P)^{-1}=U^{-1}(\theta)(E-h_P^\theta)^{-1}U(\theta)$。extended
+resolution を有限基底で近似すると
+\begin{equation}
+ S(E)\simeq-\frac1\pi\im\sum_\nu
+ \frac{\bra{F}U^{-1}\ket{\Phi_\nu^\theta}
+       \bra{\widetilde\Phi_\nu^\theta}U\ket{F}}
+      {E-E_\nu^\theta}.
+\end{equation}
+完全基底なら $\sum_\nu\ket{\Phi_\nu^\theta}
+\bra{\widetilde\Phi_\nu^\theta}=\identity$ で、隣接する $U^{-1}U$ が相殺し
+元の resolvent matrix element に戻る。有限基底の残留 $\theta$ 依存は
+pole と rotated-cut pseudostates の不完全な相殺を測る収束誤差である。}
+
+\solproblem{VI.8　alpha+p+n の Jacobi sets と isospin exchange}{
+三 Jacobi set を作り、$p\leftrightarrow n$ 対称性とその破れを示せ。}{
+粒子を $(p,n,\alpha)=(1,2,3)$ とし、循環置換 $(i,j,k)$ ごとに
+\begin{equation}
+ \bm x_i=\bm r_j-\bm r_k,\qquad
+ \bm y_i=\bm r_i-\frac{m_j\bm r_j+m_k\bm r_k}{m_j+m_k}
+\end{equation}
+を取れば、$p+n$、$n+\alpha$、$\alpha+p$ pair を内部に持つ三 set が得られる。
+isospin limit $m_p=m_n$、$V_{\alpha p}^{N}=V_{\alpha n}^{N}$ では exchange
+$P_{pn}$ が $n\alpha$ set と $p\alpha$ set を入れ替え、basis を
+$[\Phi_{n\alpha}\pm\Phi_{p\alpha}]/\sqrt2$ に組める。Coulomb
+$V_{\alpha p}^{C}$、proton--target Coulomb、電磁 spin-orbit、実際の
+$m_p-m_n$ がこの対称性を破る。核力部分と電磁部分を別々に行列化すれば
+破れの大きさを直接検査できる。}
+
+\solproblem{VI.9　p+p+7Be の二 rearrangement と double counting}{
+同一 proton を反対称化した振幅を作り、inclusive sum の二重計数を検査せよ。}{
+labelled amplitude を
+$A_1=A[p_1+(p_2{}^7\mathrm{Be})]$、
+$A_2=A[p_2+(p_1{}^7\mathrm{Be})]$ とする。proton pair spin $S$ について
+\begin{equation}
+ A_S(1,2)=\frac1{\sqrt2}
+ [A_1(1,2)-(-1)^{S+1}A_2(1,2)]
+\end{equation}
+と組み、isospin $T=1$ の対称性を含め全 wave function を反対称にする。
+物理 phase space を labelled variables で全領域積分するなら $1/2!$ を掛ける。
+数値試験は (i) $|A_S(2,1)|^2=|A_S(1,2)|^2$、(ii) 全領域の $1/2!$ 付き
+積分が $E_1\geq E_2$ の半領域積分と一致、(iii) coupling を切った極限で
+incoherent labelled sum のちょうど半分、を確認する。interference 項を
+落とした上で $1/2$ だけ掛けるのは反対称化ではない。}
+
+\solproblem{VI.10　zero recoil での s-wave enhancement}{
+spherical Bessel transform を小 recoil momentum で展開し、局所 bin の partial-wave hierarchy を示せ。}{
+multipole $l$ の Fourier--Bessel transform は
+\begin{equation}
+ F_l(q)=\int_0^\infty r^2u_l(r)j_l(qr)\dd r,\qquad
+ j_l(z)=\frac{z^l}{(2l+1)!!}[1+\order(z^2)].
+\end{equation}
+従って $F_0(q)=\int r^2u_0\dd r+\order(q^2)$ だが
+$F_1(q)=q\int r^3u_1\dd r/3+\order(q^3)$。$q\simeq0$ の狭い acceptance
+では $p$ wave 強度は $q^2$ で抑えられ、small integrated spectroscopic
+weight の $s$ wave が支配し得る。一方広い $q$ 範囲では phase space と
+大きな $p$ component の積分が勝つ。従って zero-recoil bin の比と全積分
+の比は同じ observable ではない。}
+
+\solproblem{VI.11　alpha+n+n の Jacobi 変換と neutron exchange}{
+三 Jacobi set、reduced mass、$S=0,1$ の交換符号を求めよ。}{
+$m_n=m$、$m_\alpha=M$ とする。$T$ set は
+\begin{equation}
+ \bm x_T=\bm r_1-\bm r_2,\quad
+ \bm y_T=\bm r_\alpha-\frac{\bm r_1+\bm r_2}{2},\quad
+ \mu_{xT}=\frac m2,\quad \mu_{yT}=\frac{2mM}{2m+M}.
+\end{equation}
+二つの $Y$ set は
+\begin{align}
+ \bm x_1&=\bm r_\alpha-\bm r_1,&
+ \bm y_1&=\bm r_2-\frac{M\bm r_\alpha+m\bm r_1}{M+m},\\
+ \bm x_2&=\bm r_\alpha-\bm r_2,&
+ \bm y_2&=\bm r_1-\frac{M\bm r_\alpha+m\bm r_2}{M+m},
+\end{align}
+$\mu_x=mM/(m+M)$、$\mu_y=m(m+M)/(2m+M)$。neutron isospin $T=1$ は
+対称なので、全体反対称性から spin singlet $S=0$（反対称 spin）には
+exchange-even spatial combination、triplet $S=1$ には exchange-odd
+combinationを用いる。$T$ set ではそれぞれ $(-1)^{l_x}=+1,-1$ である。}
+
+\solproblem{VI.12　6He response と pole term の符号}{
+extended complex-scaled resolution から response を導き、単独 pole term が負になり得る理由を述べよ。}{
+$h_6^\theta$ の biorthogonal resolution を挿入して
+\begin{align}
+ S_F(E)&=-\frac1\pi\im\sum_\nu
+ \frac{M_\nu^\theta\widetilde M_\nu^\theta}{E-E_\nu^\theta},\\
+ M_\nu^\theta&=\bra{F}U^{-1}\ket{\Phi_\nu^\theta},\\
+ \widetilde M_\nu^\theta&=\bra{\widetilde\Phi_\nu^\theta}U\ket{F}.
+\end{align}
+を得る。isolated pole の積
+$M_R^\theta\widetilde M_R^\theta$ は一般に複素で、background との干渉を
+含まないため $-\im[M_R\widetilde M_R/(E-z_R)]/\pi$ は局所的に負にもなる。
+一方完全な response は元の自己共役 $h_6$ の spectral measure
+$\bra{F}\delta(E-h_6)\ket{F}\geq0$ であり、全 pole と cut の coherent sum
+後に非負となる。}
+
+\solproblem{VI.13　Riesz projector の pseudostate 表現}{
+complex-scaled pole projector を実 pseudostate basis へ戻し、収束試験を与えよ。}{
+単純 pole で
+\begin{equation}
+ P_R^\theta=\ket{\Phi_R^\theta}\bra{\widetilde\Phi_R^\theta},\qquad
+ \mathcal P_R=U^{-1}P_R^\theta U.
+\end{equation}
+$P_N=\sum_i\ket{\Phi_i}\bra{\Phi_i}$ を両側に挿入すると
+\begin{equation}
+ (\mathcal P_R^{(N)})_{ij}=
+ \bra{\Phi_i}U^{-1}\ket{\Phi_R^\theta}
+ \bra{\widetilde\Phi_R^\theta}U\ket{\Phi_j},
+\end{equation}
+すなわち outer product の coherent rank-one 行列を得る。
+\begin{checkbox}
+基底と $\theta$ を変え、(i) singular value が一つだけ安定、
+(ii) $|\Tr\mathcal P_R^{(N)}-1|$、
+(iii) $\| (\mathcal P_R^{(N)})^2-\mathcal P_R^{(N)}\|$、
+(iv) 物理 source/detector 間の matrix element、を検査する。energy window
+内の対角和は rank と位相を保存しないので代用にならない。
+\end{checkbox}}
+
+\solproblem{VI.14　三体 phase-space Jacobian}{
+Jacobi momentum normalization を宣言して二重微分 breakup strength の Jacobian を導け。}{
+$\braket{\bm k_x,\bm k_y|\bm k_x',\bm k_y'}=
+\delta^3(\bm k_x-\bm k_x')\delta^3(\bm k_y-\bm k_y')$ とする。
+$\epsilon_x=\hbar^2k_x^2/(2\mu_x)$、
+$\epsilon_y=\hbar^2k_y^2/(2\mu_y)$ だから
+\begin{equation}
+ \dd^3k_x\dd^3k_y
+ =\frac{\mu_x\mu_y}{\hbar^4}k_xk_y
+ \dd\epsilon_x\dd\epsilon_y\rmd\Omega_x\rmd\Omega_y.
+\end{equation}
+従って本体の $\mathcal J$ は、状態規格化の $(2\pi)$ factors と incident
+flux を別にすれば $\mu_x\mu_yk_xk_y/\hbar^4$。二重微分式を両 energy と
+両角度で積分すれば元の
+$\int|T(\bm k_x,\bm k_y)|^2\dd^3k_x\dd^3k_y$ が再現される。別 Jacobi set
+を混ぜるときは mass-scaled 変換の unit determinant と同一粒子 $1/2!$ を
+同じ規約で扱う。}
+
+\solproblem{VI.15　二 channel incoming block の pole residue}{
+具体的左右 null vector で matrix inverse の pole を検証し、source/detector overlap を同定せよ。}{
+\begin{equation}
+ \Cincoming(E)=\begin{pmatrix}E-z_R&g\\0&1\end{pmatrix}
+\end{equation}
+を取る。$E=z_R$ で右 null vector $u_R=(1,0)^{\mathsf T}$、左 null vector
+$v_R^\dagger=(1,-g)$、かつ
+$v_R^\dagger\Cincoming'(z_R)u_R=1$。実際
+\begin{equation}
+ \Cincoming(E)^{-1}=
+ \frac{u_Rv_R^\dagger}{E-z_R}+
+ \begin{pmatrix}0&0\\0&1\end{pmatrix}.
+\end{equation}
+一般の場合も pole part は
+$u_Rv_R^\dagger/[(E-z_R)v_R^\dagger\Cincoming'(z_R)u_R]$。CDCC が作る
+channel source column を $s$、CSLS detector row を $d^\dagger$ とすれば
+residue は
+\begin{equation}
+ \frac{(d^\dagger u_R)(v_R^\dagger s)}
+ {v_R^\dagger\Cincoming'(z_R)u_R}.
+\end{equation}
+前二因子がそれぞれ detector と source の overlap、分母が exact-WKB
+connection derivative に対応する。}

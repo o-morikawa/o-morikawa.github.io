@@ -1,0 +1,171 @@
+\chapter{Stage V：radial exact WKB と monodromy}
+
+\solproblem{V.1　d 次元 radial 方程式}{
+第一微分を除き、effective inverse-square 係数を求めよ。}{
+$d$ 次元で
+\begin{equation}
+ \nabla^2=\partial_r^2+\frac{d-1}{r}\partial_r
+ -\frac{L^2}{r^2},\qquad L^2Y_l=l(l+d-2)Y_l.
+\end{equation}
+$\Psi=R_l(r)Y_l$、$u_l=r^{(d-1)/2}R_l$ と置くと
+\begin{equation}
+ -\frac{\hbar^2}{2m}u_l''+\left[V(r)+
+ \frac{\hbar^2}{2mr^2}\left\{l(l+d-2)+\frac{(d-1)(d-3)}4\right\}\right]u_l=Eu_l.
+\end{equation}
+括弧内は
+$[l+(d-2)/2]^2-1/4$。この $-1/4$ と exponential map の Schwarzian が
+組み合わさって Langer の完全平方を作る。}
+
+\solproblem{V.2　origin の Frobenius 分類}{
+$g/r^2$ に対する二指数と square integrability、追加境界条件を論ぜよ。}{
+reduced radial Hilbert space $L^2(\real_+,\dd r)$ で
+$-u''+g u/r^2=0$ とすると
+\begin{equation}
+ \nu_\pm=\frac{1\pm\sqrt{1+4g}}2,\qquad u_\pm\sim r^{\nu_\pm}.
+\end{equation}
+$\nu>-1/2$ が $L^2$ 条件である。$g\geq3/4$ では $u_+$ のみ可積分で
+limit point、境界条件は不要。$-1/4<g<3/4$ では二解とも可積分で limit
+circle、self-adjoint extension を選ぶ一つの境界条件が要る。$g=-1/4$
+では $r^{1/2}$ と $r^{1/2}\log r$、$g<-1/4$ では fall to the centre が
+生じ、下方有界な Hamiltonian のため追加の物理的 renormalization が必要。}
+
+\solproblem{V.3　Langer map の導出}{
+$r=\rme^x$ と wave-function rescaling を行い $(l+1/2)^2$ を導け。}{
+三次元 reduced radial 方程式を
+\begin{equation}
+ \left[-\hbar^2\partial_r^2+2m(V-E)+\frac{\hbar^2l(l+1)}{r^2}\right]u=0
+\end{equation}
+と書く。$r=\rme^x$ では
+$\partial_r^2=\rme^{-2x}(\partial_x^2-\partial_x)$。さらに
+$u(\rme^x)=\rme^{x/2}\phi(x)$ とすれば
+$(\partial_x^2-\partial_x)u=\rme^{x/2}(\phi''-\phi/4)$。従って
+\begin{equation}
+ \left[-\hbar^2\partial_x^2
+ +2m\rme^{2x}(V(\rme^x)-E)
+ +\hbar^2(l+1/2)^2\right]\phi=0.
+\end{equation}
+$1/4$ は Jacobian を unitary に実装した結果であり、経験的置換ではない。}
+
+\solproblem{V.4　三次元 harmonic oscillator の二つの量子化}{
+closed exact-WKB cycle と open path＋origin monodromy で spectrum を導け。}{
+$V=m\omega^2r^2/2$、Langer angular momentum
+$L=\hbar(l+1/2)$ とする。radial momentum
+\begin{equation}
+ p_r(r)=\sqrt{2mE-m^2\omega^2r^2-L^2/r^2}
+\end{equation}
+の二正 turning point 間の積分は留数計算で
+\begin{equation}
+ \int_{r_-}^{r_+}p_r\dd r
+ =\frac{\pi E}{2\omega}-\frac{\pi L}{2}.
+\end{equation}
+二 turning point の Maslov 位相を入れ
+$\int_{r_-}^{r_+}p_r\dd r=\pi\hbar(n_r+1/2)$ とすれば
+\begin{equation}
+ E_{n_rl}=\hbar\omega(2n_r+l+3/2).
+\end{equation}
+closed cycle では左辺を2倍した量を用いる。open path 法では外側
+subdominant 解を origin へ接続し、regular Frobenius 指数 $l+1$ の
+monodromy $\rme^{2\pi\rmi(l+1)}$ を課す。同じ Langer residue が
+turning-point 位相と origin 位相を分けて上式を再現する。}
+
+\solproblem{V.5　Coulomb bound spectrum}{
+radial action から Coulomb spectrum を求め、角運動量位相を最後まで分けよ。}{
+$V=-\kappa/r$、$E<0$、$L=\hbar(l+1/2)$ とする。
+\begin{equation}
+ p_r=\sqrt{2m(E+\kappa/r)-L^2/r^2}.
+\end{equation}
+二 turning point 間の action は $r=0,\infty$ の留数から
+\begin{equation}
+ \int_{r_-}^{r_+}p_r\dd r
+ =\pi\left(\frac{m\kappa}{\sqrt{-2mE}}-L\right).
+\end{equation}
+turning-point 位相だけを右辺
+$\pi\hbar(n_r+1/2)$ に置き、最後に $L=\hbar(l+1/2)$ を入れると
+\begin{equation}
+ \frac{m\kappa}{\sqrt{-2mE}}=\hbar(n_r+l+1),\qquad
+ E=-\frac{m\kappa^2}{2\hbar^2(n_r+l+1)^2}.
+\end{equation}
+角運動量の $1/2$ と二 turning point の $1/2$ が主量子数の整数を作る。}
+
+\solproblem{V.6　small-circle monodromy の regulator independence}{
+$r=\epsilon\rme^{\rmi\phi}$ の局所 monodromy と $\epsilon$ 非依存条件を求めよ。}{
+Frobenius 解 $u\sim r^\nu$ は一周で
+$u\mapsto\rme^{2\pi\rmi\nu}u$。二解の local monodromy 行列の固有値は
+$\rme^{2\pi\rmi\nu_\pm}$ である。WKB では small circle 上の
+$\oint S\dd r$ と connection matrices の積が同じ量を与える。切断計算で
+bare monodromy $\vsup{\mathcal M_0}{bare}(\epsilon)$ が $\epsilon$ に依存する
+なら
+\begin{equation}
+ \vsup{\mathcal M_0}{phys}
+ =\frac{\vsup{\mathcal M_0}{bare}(\epsilon)}{\vsub{Z}{mon}(\epsilon)},
+ \qquad
+ \epsilon\frac{\rmd}{\rmd\epsilon}
+ \log\vsup{\mathcal M_0}{phys}=0
+\end{equation}
+を renormalization 条件とする。従って
+$\epsilon\rmd\log \vsub{Z}{mon}/\rmd\epsilon=
+\epsilon\rmd\log\vsup{\mathcal M_0}{bare}/\rmd\epsilon$。物理入力は
+選んだ self-adjoint domain または regular Frobenius branch である。}
+
+\solproblem{V.7　radial oscillator の quartic 摂動と最適化}{
+weak quartic perturbation を通常摂動論と optimized monodromy で比較せよ。}{
+$H=H_\omega+\lambda r^4$、oscillator length
+$b=(\hbar/m\omega)^{1/2}$、$N=2n_r+l$ とする。一次摂動は
+\begin{equation}
+ E^{(1)}_{n_rl}=\lambda b^4
+ \left[(N+3/2)(N+5/2)+2n_r(n_r+l+1/2)\right].
+\end{equation}
+これは無次元結合 $g=\lambda\hbar/(m^2\omega^3)\ll1$ で有効。
+optimized 法では任意の $\Omega$ を導入して
+\begin{equation}
+ H=H_\Omega+\delta\left[\frac{m}{2}(\omega^2-\Omega^2)r^2+\lambda r^4\right],
+\end{equation}
+$\delta$ で quantum period と origin monodromy を同じ次数まで展開し、
+$\delta=1$ 後に $\partial E_N/\partial\Omega=0$（PMS）または最後の係数0
+（FAC）で $\Omega_N$ を選ぶ。$g\ll1$ では $\Omega_N\to\omega$ で通常摂動と
+一致し、$g\gtrsim1$ では $\Omega\sim(\lambda\hbar/m^2)^{1/3}$ が
+strong-coupling scale を取り込み、固定 $\omega$ 展開より有効である。}
+
+\solproblem{V.8　Cornell potential の turning points}{
+$V(r)=-\kappa/r+\sigma r$ の turning points を求め、contour の homotopy を検査せよ。}{
+Langer 項を含む $p_r^2=2m[E+\kappa/r-\sigma r]-L^2/r^2$ の零点は
+\begin{equation}
+ -2m\sigma r^3+2mEr^2+2m\kappa r-L^2=0
+\end{equation}
+の三根である。係数を scale して companion matrix の固有値として求め、
+各 parameter step で最小距離 matching だけでなく root の analytic
+continuation により label を保つ。物理 cycle は二正実根を囲み、第三根と
+$r=0$ pole を横切らない contour とする。
+\begin{checkbox}
+parameter を小刻みに変え、(i) root の置換を記録、(ii) contour を二通りに
+離散化、(iii) $\oint p_r\dd r$ の差が積分誤差以下、(iv) contour と pole の
+最小距離を記録する。差が $2\pi\rmi$ times residue だけ跳べば singularity を
+横切ったので homotopy class が変わっている。
+\end{checkbox}}
+
+\solproblem{V.9　Yukawa-screened Coulomb の threshold}{
+$V(r)=-\kappa\rme^{-\mu r}/r$ で pole が cut に近づく点を追跡せよ。}{
+turning points は
+\begin{equation}
+ 2m\left[E+\frac{\kappa\rme^{-\mu r}}r\right]-\frac{L^2}{r^2}=0
+\end{equation}
+の複素零点で、transcendental なので Newton 法と argument principle を併用する。
+$\mu=0$ の Coulomb roots から continuation し、同じ sheet の quantum
+period 条件を解く。screening $\mu$ を増やすと最外 bound pole
+$k=\rmi\kappa_b$ が $\kappa_b\downarrow0$ へ動く。臨界値 $\mu_c$ は
+$E=0$ の zero-energy regular 解が infinity で定数項を失う条件、同値に
+scattering length $a_0^{-1}=0$ で決まる。$\mu>\mu_c$ では pole は
+negative imaginary $k$ axis の second sheet へ入り virtual state となる。
+root 数は argument-principle contour で確認する。}
+
+\solproblem{V.10　座標変換が作る見かけの singularity}{
+Jacobian monodromy と物理的 self-adjoint-extension parameter を区別せよ。}{
+自由粒子 $-\partial_r^2$ に $r=\rme^x$、$u=\rme^{x/2}\phi$ を施すと、元の
+potential が正則でも変換後に $+\hbar^2/4$ と $x\to-\infty$ endpoint が
+現れる。同様に $r=y^2$ は $y=0$ に inverse-square 型 Schwarzian 項を作る。
+しかし unitary Jacobian と元の domain を同時に写せば、変換後の Frobenius
+係数比は一意であり新しい物理 parameter はない。これが Jacobian
+monodromy である。これに対し元の differential expression 自体が limit
+circle endpoint を持ち、二可積分解の係数比を外部物理から選ぶ場合、その
+位相または length scale は genuine self-adjoint-extension parameter である。
+判定法は「逆変換で domain が既に一意か」である。}

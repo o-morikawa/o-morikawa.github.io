@@ -1,0 +1,251 @@
+\chapter{Stage II：散乱、Jost 関数、長距離相関}
+
+\solproblem{II.1　二体問題の分離}{
+二粒子の重心・相対運動を分離し、domain が tensor 積に分かれる仮定を述べよ。}{
+$M=m_1+m_2$、$\mu=m_1m_2/M$、
+$\bm R=(m_1\bm r_1+m_2\bm r_2)/M$、$\bm r=\bm r_1-\bm r_2$ と置く。
+共役運動量を $\bm P=\bm p_1+\bm p_2$、
+$\bm p=(m_2\bm p_1-m_1\bm p_2)/M$ とすれば正準変換であり、
+\begin{equation}
+ \frac{\bm p_1^2}{2m_1}+\frac{\bm p_2^2}{2m_2}
+ =\frac{\bm P^2}{2M}+\frac{\bm p^2}{2\mu}.
+\end{equation}
+$V=V(\bm r)$ が並進不変で、相対 kinetic energy に関して相対 form 有界
+（相対 bound $<1$ で十分）なら内部 Hamiltonian
+$h=\bm p^2/(2\mu)+V$ は自己共役となり、
+$H=\vsub{H}{cm}\otimes\identity+\identity\otimes h$ を tensor 積 domain
+（厳密には閉 quadratic form の和）上に定義できる。外場、速度依存相互作用、
+重心に依存する境界条件があればこの分離は成立しない。}
+
+\solproblem{II.2　Lippmann--Schwinger 方程式の符号}{
+本書の resolvent と時間規約から outgoing Lippmann--Schwinger 方程式を導け。}{
+$(H_0+V)\ket{\psi^{(+)}}=E\ket{\psi^{(+)}}$ より
+$(E-H_0)\ket{\psi^{(+)}}=V\ket{\psi^{(+)}}$。自由解を加え、limiting
+absorption を取ると
+\begin{equation}
+ \ket{\psi^{(+)}}=\ket{\phi}
+ +\Resolvent_0(E+\rmi0)V\ket{\psi^{(+)}}.
+\end{equation}
+時間依存を $\rme^{-\rmi Et/\hbar}$ としたので、$+\rmi0$ の kernel は
+\begin{equation}
+ \Resolvent_0(E+\rmi0;\bm r,\bm r')
+ =-\frac{\mu}{2\pi\hbar^2}
+   \frac{\rme^{\rmi k|\bm r-\bm r'|}}{|\bm r-\bm r'|},
+\end{equation}
+すなわち outgoing wave である。$(H_0-E-\rmi0)^{-1}$ を使う文献では
+resolvent 自体に負号が入る。}
+
+\solproblem{II.3　三次元自由 Green 関数と Born 振幅}{
+自由 Green kernel を評価し、第一 Born 振幅を求めよ。}{
+Fourier 積分を角度積分し、$p$ 平面の pole を放射条件に従って閉じると
+\begin{equation}
+ G_0^{(+)}(\bm r-\bm r')
+ =-\frac{\mu}{2\pi\hbar^2}
+ \frac{\rme^{\rmi k|\bm r-\bm r'|}}{|\bm r-\bm r'|}.
+\end{equation}
+$r\to\infty$ では
+$|\bm r-\bm r'|=r-\widehat{\bm r}\cdot\bm r'+\order(r^{-1})$。従って
+\begin{equation}
+ \psi^{(+)}(\bm r)\sim \rme^{\rmi\bm k_i\cdot\bm r}
+ +\frac{\rme^{\rmi k_fr}}{r}f(\bm k_f,\bm k_i),
+\end{equation}
+第一反復で
+\begin{equation}
+ \vsub{f}{B}(\bm k_f,\bm k_i)
+ =-\frac{\mu}{2\pi\hbar^2}
+ \int\rme^{-\rmi\bm k_f\cdot\bm r}
+ V(\bm r)\rme^{\rmi\bm k_i\cdot\bm r}\dd^3r.
+\end{equation}}
+
+\solproblem{II.4　多 channel 断面積の flux}{
+確率流と $k_f/k_i$ factor を導き、flux 規格化した $S$ 行列を説明せよ。}{
+Schrödinger 方程式とその複素共役の差から
+\begin{equation}
+ \bm j=\frac{\hbar}{2\mu\rmi}
+ (\psi^*\bm\nabla\psi-\psi\bm\nabla\psi^*)
+\end{equation}
+を得る。channel $c$ の球面波 $A_c\rme^{\rmi k_cr}/r$ の radial flux は
+$j_r=\hbar k_c|A_c|^2/(\mu_cr^2)$。従って同じ平面波振幅規格化なら
+\begin{equation}
+ \frac{\rmd\sigma_{fi}}{\rmd\Omega}
+ =\frac{v_f}{v_i}|f_{fi}|^2
+ =\frac{k_f\mu_i}{k_i\mu_f}|f_{fi}|^2,
+\end{equation}
+同じ reduced mass なら $k_f/k_i$。一方、基底を
+$\vsub{\ket{c,E}}{flux}=v_c^{-1/2}\ket{c,k_c}$ と規格化すれば速度因子は
+振幅に吸収され、on-shell $S(E)^dagger S(E)=\identity$ は通常の行列積で
+書ける。}
+
+\solproblem{II.5　光学定理と吸収}{
+partial-wave unitarity から光学定理を示し、複素 optical potential の場合を論ぜよ。}{
+弾性一 channel で $S_l=\rme^{2\rmi\delta_l}$ とすると
+\begin{equation}
+ f(\theta)=\frac{1}{2\rmi k}
+ \sum_l(2l+1)(S_l-1)P_l(\cos\theta).
+\end{equation}
+直交性から
+$\vsub{\sigma}{el}=(\pi/k^2)\sum_l(2l+1)|S_l-1|^2$。$|S_l|=1$ を使えば
+\begin{equation}
+ \vsub{\sigma}{tot}=\vsub{\sigma}{el}
+ =\frac{4\pi}{k}\im f(0).
+\end{equation}
+$V=V_R+\rmi W$、$W\leq0$ では $|S_l|\leq1$ となり、欠損 flux は
+\begin{equation}
+ \vsub{\sigma}{reac}=\frac{\pi}{k^2}
+ \sum_l(2l+1)(1-|S_l|^2)
+ =-\frac{2}{\hbar v}\int W(\bm r)|\psi^{(+)}|^2\dd^3r\geq0.
+\end{equation}
+光学定理の全断面積は $\vsub{\sigma}{el}+\vsub{\sigma}{reac}$ である。}
+
+\solproblem{II.6　Jost 解による radial Green 関数}{
+regular 解と outgoing Jost 解から Green 関数を作り、単純零点の留数を求めよ。}{
+reduced radial 方程式を $[E-h_l]u=0$ とし、origin で regular な
+$\varphi_l(k,r)$ と infinity で outgoing な $f_l^{(+)}(k,r)$ を取る。
+Wronskian $W_l(k)=W[\varphi_l,f_l^{(+)}]$ は $r$ に依らない。微分 jump
+を合わせれば
+\begin{equation}
+ G_l^{(+)}(r,r';k)=\frac{2\mu}{\hbar^2}
+ \frac{\varphi_l(k,r_<)f_l^{(+)}(k,r_>)}{W_l(k)}.
+\end{equation}
+規約により Jost 関数は $W_l$ の非零定数倍である。$W_l(k_R)=0$、
+$W_l'(k_R)\neq0$ なら両解は同じ Gamow 解 $u_R$ に比例し、
+\begin{equation}
+ \Res_{k=k_R}G_l^{(+)}(r,r';k)
+ =\frac{2\mu}{\hbar^2}
+ \frac{u_R(r)u_R(r')}{W_l'(k_R)}
+\end{equation}
+（比例定数は採用した Jost 規格化へ吸収）となる。}
+
+\solproblem{II.7　Coulomb 対数位相}{
+Coulomb potential を漸近直線軌道に沿って積分し、plane wave が不適切な理由を示せ。}{
+速度 $v$、impact parameter $b$ の直線 $r(t)=\sqrt{b^2+v^2t^2}$ に沿う
+eikonal 位相は
+\begin{equation}
+ \chi(T)=-\frac{1}{\hbar}\int^T\frac{g}{r(t)}\dd t
+ =-\frac{g}{\hbar v}\operatorname{arsinh}\frac{vT}{b}
+ =-\eta\log\frac{2vT}{b}+o(1).
+\end{equation}
+位相は定数へ収束せず、radial Coulomb 波は
+$\rme^{\rmi[kr-\eta\log(2kr)+\sigma_l]}$ を含む。従って plane wave を
+基準に差を有限定数として定義する通常の散乱振幅は存在しない。Coulomb
+波を comparison state に取った振幅と plane-wave Born 振幅は同じ量では
+ない。}
+
+\solproblem{II.8　Dollard modifier}{
+通常の Møller 極限が Coulomb 位相で失敗することを示し、modifier を構成せよ。}{
+free trajectory 上の相互作用表示の積分は
+$\int^t g/(v|s|)\dd s=(g/v)\operatorname{sgn}(t)\log|t|+O(1)$。
+従って $\rme^{\rmi Ht/\hbar}\rme^{-\rmi H_0t/\hbar}$ は対数的に回転し続け、
+強極限を持たない。運動量表示で $v(p)=p/\mu$ とし
+\begin{equation}
+ U_D(t)=\rme^{-\rmi H_0t/\hbar}
+ \rme^{-\frac{\rmi}{\hbar}\frac{g}{v(p)}
+       \operatorname{sgn}(t)\log|t|}
+\end{equation}
+を comparison dynamics とする。修正 wave operator
+$\Omega_D^{(\pm)}=\operatorname{s-lim}_{t\to\mp\infty}
+\rme^{\rmi Ht/\hbar}U_D(t)$ では発散位相が相殺される。有限定数や
+reference time の違いは asymptotic state の位相規約である。}
+
+\solproblem{II.9　三荷電粒子の漸近領域}{
+三つの cluster 漸近領域を列挙し、pairwise Coulomb 位相が一様でない理由を述べよ。}{
+Jacobi 座標 $(\bm x_\alpha,\bm y_\alpha)$ に対し、(i) 粒子1と2が有限距離で
+cluster を作り粒子3が遠い領域、(ii) 2と3が cluster、(iii) 3と1が
+cluster、に加え三距離が同時に大きい genuine three-body breakup 領域が
+ある。各 cluster 領域では大変数は spectator 座標 $y_\alpha$、内部座標
+$x_\alpha$ は有限である。一方 breakup では hyperradius
+$\rho=(x_\alpha^2+y_\alpha^2)^{1/2}$ が大きく hyperangle も動く。
+各 pair の $\eta_{ij}\log r_{ij}$ を単純に足した形は、cluster 境界で
+$r_{ij}$ の大小が入れ替わると誤差の次数が一様でなく、overlap 領域の
+相関振幅と三体位相を決めない。これが一つの elementary ``Coulomb plane
+wave'' が知られていない核心である。}
+
+\solproblem{II.10　soft-photon coherent dressing}{
+coherent profile $f(\bm k)$ が Fock vector を与える条件を求め、Coulomb field と比較せよ。}{
+coherent state
+$\ket{f}=\rme^{-\|f\|^2/2}\rme^{a^\dagger(f)}\ket{0}$ が Fock 空間に
+属する必要十分条件は
+\begin{equation}
+ \|f\|^2=\sum_\lambda\int|f_\lambda(\bm k)|^2\dd^3k<\infty.
+\end{equation}
+charged particle の long-range field を再現する dressing は soft limit で
+$f(\bm k)\sim |\bm k|^{-3/2}$（角度因子を除く）を持つので
+$\|f\|^2\sim\int_0^\Lambda k^2k^{-3}\dd k=int_0^\Lambda\dd k/k$ と
+対数発散する。従って物理的 charged sector は真空 Fock 表現と unitary
+同値でなく、有限 soft cutoff を外す順序を指定しなければならない。}
+
+\solproblem{II.11　Lagrange 恒等式}{
+一般 Sturm--Liouville 表式の Lagrange 恒等式と endpoint bracket を示せ。}{
+$\tau u=w^{-1}[-(pu')'+qu]$ とし
+$[u,v]=p(u^*v'-u'^*v)$ と定める。積の微分を展開すると
+\begin{equation}
+ \int_a^b\{u^*(\tau v)-(\tau u)^*v\}w\dd x
+ =[u,v](b)-[u,v](a).
+\end{equation}
+regular endpoint $a$ の separated 条件を
+$\cos\alpha\,u(a)+\sin\alpha\,p(a)u'(a)=0$ と書く。同じ $\alpha$ を
+満たす二関数の境界 data は同じ一次元部分空間に属するため、その
+symplectic determinant $[u,v](a)$ は0である。}
+
+\solproblem{II.12　逆二乗 potential の limit-point 閾値}{
+$-u''+g u/r^2=0$ の Frobenius 指数を求めよ。}{
+$u\sim r^\nu$ を代入すると $\nu(\nu-1)=g$、従って
+\begin{equation}
+ \nu_\pm=\frac{1\pm\sqrt{1+4g}}{2}.
+\end{equation}
+$\int_0^\epsilon r^{2\nu}\dd r<\infty$ は $\nu>-1/2$ と同値。
+$\nu_+$ は常に可積分で、$\nu_-$ も可積分なのは
+$\sqrt{1+4g}<2$、すなわち $g<3/4$。従って $g\geq3/4$ では origin は
+limit point、$g<3/4$ では（下方有界性 $g>-1/4$ の範囲で）limit circle
+で境界条件が必要。三次元 physical $s$ wave は $g=0$ だが元の波動関数
+$R=u/r$ の正則性を課し Friedrichs 条件 $u(0)=0$ を選ぶ。}
+
+\solproblem{II.13　Sturm--Liouville Green kernel の jump}{
+Green kernel の符号と規格化を jump 条件から決めよ。}{
+$u_a$ を左境界条件、$u_b$ を右境界条件を満たす解とし、
+$W_p=p(u_a u_b'-u_a'u_b)$ とする。$(z-L)G=\delta/w$ の規約では
+\begin{equation}
+ G(x,x';z)=-\frac{u_a(x_<)u_b(x_>)}{W_p(z)}
+\end{equation}
+（$L=w^{-1}[-(p\partial_x)'+q]$）となる。実際、$x=x'$ をまたいで
+積分すると $p[G'_+-G'_-]=-1$ であり、上式の jump がこれに一致する。
+$(L-z)^{-1}$ を resolvent とすれば右辺の delta と jump の符号が逆転し、
+kernel 全体に負号が付く。}
+
+\solproblem{II.14　球形井戸の Jost 関数}{
+matching により Jost 関数と resonance 条件を求め、bound-state zero を閾値まで追跡せよ。}{
+$U=-U_0$ for $r<a$、$U=0$ for $r>a$ とし
+$q=(k^2+U_0)^{1/2}$。regular 解は $\varphi=\sin(qr)/q$。外側を
+$A\rme^{\rmi kr}+B\rme^{-\rmi kr}$ として $r=a$ で値と微分を合わせると
+\begin{align}
+ 2B\rme^{-\rmi ka}&=\frac{\sin qa}{q}+\frac{\rmi}{k}\cos qa,\\
+ 2A\rme^{\rmi ka}&=\frac{\sin qa}{q}-\frac{\rmi}{k}\cos qa.
+\end{align}
+従って一つの規格化は
+\begin{equation}
+ F(k)=\rme^{\rmi ka}\left(\cos qa-
+ \rmi\frac{k}{q}\sin qa\right),
+ \qquad B=0\Longleftrightarrow q\cot qa=\rmi k.
+\end{equation}
+bound state は $k=\rmi\kappa$、$\kappa>0$ なので
+$q\cot qa=-\kappa$。$U_0$ を下げると最上位の $\kappa$ は0へ近づき、
+$k=0$ で scattering length が発散する。その後零点は負虚軸の非物理
+sheet へ移り virtual state となる。数値追跡では $q$ の branch を連続に
+保つ。}
+
+\solproblem{II.15　Wronskian 微分と Gamow 規格化}{
+radial 方程式を $k$ で微分して積分恒等式を導け。}{
+$[-\partial_r^2+U(r)-k^2]u(k,r)=0$ を $k$ で微分すると
+\begin{equation}
+ [-\partial_r^2+U-k^2]\partial_ku=2ku.
+\end{equation}
+元の式を $\partial_ku$ 倍したものとの差を $[0,R]$ で積分して
+\begin{equation}
+ 2k\int_0^Ru(k,r)^2\dd r
+ =W[u,\partial_ku](R)-W[u,\partial_ku](0)
+\end{equation}
+を得る。複素共役は取らない。regular 規格化なら origin 項は既知で、
+bound state では infinity の減衰により $R\to\infty$ の境界項が消える。
+Gamow state では実軸上で発散するため、$k$ と輪郭を bound-state 領域から
+同じ解析枝で続けるか、Gaussian damping 後に解析接続する。得られる有限値
+は Jost 関数の $F'(k_R)$ と同じ留数規格化である。}

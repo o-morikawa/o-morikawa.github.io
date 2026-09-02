@@ -1,0 +1,168 @@
+\chapter{付録 R：再総和・最適化・instanton}
+
+\solproblem{R.1　quartic integral の厳密式}{
+$I(g)=(2\pi)^{-1/2}\int\rme^{-x^2/2-gx^4/4}\dd x$ を Bessel $K$ で表し、$g\downarrow0$ 展開を検査せよ。}{
+被積分関数は偶関数なので $y=x^2$ と置くと
+\begin{equation}
+ I(g)=\frac1{\sqrt{2\pi}}
+ \int_0^\infty y^{-1/2}\rme^{-y/2-gy^2/4}\dd y.
+\end{equation}
+標準積分
+\begin{equation}
+ \int_0^\infty\rme^{-a x^4-bx^2}\dd x
+ =\frac14\sqrt{\frac ba}\,
+ \rme^{b^2/(8a)}K_{1/4}\left(\frac{b^2}{8a}\right)
+\end{equation}
+へ $a=g/4,b=1/2$ を入れ、負半軸も加えると
+\begin{equation}
+ I(g)=\frac{\rme^{1/(8g)}}{2\sqrt{\pi g}}
+ K_{1/4}\left(\frac1{8g}\right).
+\end{equation}
+$K_\nu(z)\sim\sqrt{\pi/(2z)}\rme^{-z}
+[1+(4\nu^2-1)/(8z)+\cdots]$ を代入すると $I(0^+)=1$、さらに
+\begin{equation}
+ I(g)\sim\sum_{n\geq0}(-1)^n
+ \frac{\Gamma(2n+1/2)}{\sqrt\pi,n!}g^n
+ =1-\frac34g+\frac{105}{32}g^2-\cdots
+\end{equation}
+となり Gaussian moment 展開と一致する。}
+
+\solproblem{R.2　coefficient ratio から Borel singularity}{
+三つの連続比から nearest Borel singularity と leading $1/n$ correction を求めよ。}{
+係数の厳密比は
+\begin{equation}
+ r_n=\frac{a_{n+1}}{a_n}
+ =-\frac{(2n+1/2)(2n+3/2)}{n+1}
+ =-4n-\frac{3}{4(n+1)}.
+\end{equation}
+$a_n\sim C A^{-n}\Gamma(n)[1+c_1/n+\order(n^{-2})]$ と仮定すると
+$A=-1/4$。連続三比 $r_{n-1},r_n,r_{n+1}$ を用いて $A,c_1$ を二 parameter
+fit または Richardson extrapolation すれば
+\begin{equation}
+ a_n\sim C(-4)^n\Gamma(n)
+ \left[1-\frac{3}{16n}+\order(n^{-2})\right].
+\end{equation}
+従って Borel singularity は $t=A=-1/4$、leading $1/n$ coefficient は
+$c_1=-3/16$。比 $r_n/(-4n)$ 自体では $1/n$ 項が相殺して最初の補正が
+$3/(16n^2)$ になる点に注意する。}
+
+\solproblem{R.3　direct Padé と Borel--Padé at g=0.4}{
+両手法を比較し Borel poles と積分可能性を判定せよ。}{
+$2m+1$ 個の係数から direct $[m/m]$ と、$b_n=a_n/n!$ に対する Borel
+$[m/m]$ を作る。後者を
+$g^{-1}\int_0^\infty\rme^{-t/g}P_m(t)/Q_m(t)\dd t$ と積分する。
+厳密値は $I(0.4)=0.857608585344409\ldots$。double precision で得る代表値は
+\begin{center}
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+$m$ & direct Padé & Borel--Padé & Borel--Padé 誤差\\
+\midrule
+2&0.8690245430&0.8593359439&$1.73\times10^{-3}$\\
+3&0.8623081645&0.8578991758&$2.91\times10^{-4}$\\
+4&0.8597745764&0.8576650427&$5.65\times10^{-5}$\\
+5&0.8586885057&0.8576207823&$1.22\times10^{-5}$\\
+6&0.8581795924&0.8576114484&$2.86\times10^{-6}$\\
+8&0.8577902863&0.8576087764&$1.91\times10^{-7}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+$m=2$ の Borel poles は約 $-0.3112,-1.0121$、$m=4$ では
+$-0.2678,-0.3662,-0.7131,-2.9235$。次数とともに負実軸 $(-\infty,-1/4]$
+の cut を模倣し、正実軸上には pole がないので処方なしに積分できる。
+正実 pole が現れる off-diagonal sequence は Froissart pair か真の obstruction
+かを residue と次数安定性で判定し、理由なく避けて積分してはならない。}
+
+\solproblem{R.4　third-order optimized perturbation}{
+$I_N(g,\Omega)$ を導き正の PMS roots を追跡せよ。}{
+$A=1-\Omega$ とし、$\Omega$ Gaussian moment
+$\braket{x^{2m}}_\Omega=(2m-1)!!\Omega^{-m-1/2}$ を使う。$\delta=1$ 後
+\begin{align}
+ I_0={}&\Omega^{-1/2},\\
+ I_1={}&I_0-\frac{A}{2\Omega^{3/2}}-\frac{3g}{4\Omega^{5/2}},\\
+ I_2={}&I_1+\frac{3A^2}{8\Omega^{5/2}}
+ +\frac{15Ag}{8\Omega^{7/2}}+\frac{105g^2}{32\Omega^{9/2}},\\
+ I_3={}&I_2-\frac{5A^3}{16\Omega^{7/2}}
+ -\frac{105A^2g}{32\Omega^{9/2}}
+ -\frac{945Ag^2}{64\Omega^{11/2}}
+ -\frac{3465g^3}{128\Omega^{13/2}}.
+\end{align}
+$\partial_\Omega I_N=0$ の全正実根を走査すると $N=2$ には正根がなく、
+$N=1,3$ には次の連続枝が各一つある。
+\begin{center}
+\begin{tabular}{@{}rcc@{}}
+\toprule
+$g$ & $\vsub{\Omega}{PMS}^{(1)}$ & $\vsub{\Omega}{PMS}^{(3)}$\\
+\midrule
+0.05&1.112372&1.212272\\
+0.10&1.207107&1.374451\\
+0.20&1.366025&1.631074\\
+0.40&1.618034&2.019426\\
+0.60&1.822876&2.327015\\
+1.00&2.158312&2.823067\\
+\bottomrule
+\end{tabular}
+\end{center}
+root tracking は前の $g$ の解を初期値にし、同時に全正根の bracket scan を
+行う。偶数次数で根がないことを隠して complex root を実根として選ばない。}
+
+\solproblem{R.5　ODM の独立実装}{
+$g=\rho\lambda/(1-\lambda)^2$ の ODM を実装し root continuity の意味を説明せよ。}{
+quadratic equation
+$g(1-\lambda)^2=\rho\lambda$ のうち $g\to0$ で $\lambda\to0$ となる枝を
+選ぶ。weak series を代入すると
+\begin{equation}
+ c_0=1,\qquad
+ c_n(\rho)=\sum_{k=1}^{n}a_k\rho^k
+ \binom{n+k-1}{n-k}\quad(n\geq1),
+\end{equation}
+従って $c_N(\rho_N)=0$ の正根を全て求め
+$I_N=\sum_{n=0}^Nc_n(\rho_N)\lambda(g,\rho_N)^n$ を評価する。実装の検算は
+(i) $\lambda$ 展開を再度 $g$ へ戻し $a_0,\dots,a_N$ を再現、
+(ii) polynomial residual $|c_N(\rho_N)|$、(iii) working precision、で行う。
+order $N$ ごとに別の根を最小誤差だけで選ぶと、写像する analytic domain
+自体が不連続に変わり sequence $I_N$ の意味がなくなる。根は $N$ と $g$ の
+homotopy で同じ枝を追い、消滅時にはその事実を報告する。}
+
+\solproblem{R.6　dispersion relation から large order}{
+instanton discontinuity を代入し $A$ の冪を含めて係数漸近を導け。}{
+\begin{align}
+ a_n&=\frac{(-1)^{n+1}}\pi\int_0^\infty
+ \frac{\im F(-s+\rmi0)}{s^{n+1}}\dd s,\\
+ \im F(-s+\rmi0)&\sim Cs^{-b}\rme^{-A/s}.
+\end{align}
+へ代入する。$u=A/s$、$s=A/u$、$\dd s=-A u^{-2}\dd u$ なので
+\begin{align}
+ a_n&\sim\frac{(-1)^{n+1}C}{\pi}
+ \int_0^\infty s^{-n-b-1}\rme^{-A/s}\dd s\\
+ &=\frac{(-1)^{n+1}C}{\pi}
+ A^{-n-b}\int_0^\infty u^{n+b-1}\rme^{-u}\dd u\\
+ &=\frac{(-1)^{n+1}C}{\pi A^{n+b}}\Gamma(n+b).
+\end{align}
+$A^{-n}$ だけでなく fluctuation prefactor $s^{-b}$ が追加の $A^{-b}$ と
+$\Gamma(n+b)$ を作る。}
+
+\solproblem{R.7　Rosen--Morse における instanton action の対応物}{
+inverted Rosen--Morse で $A=1/4$ に代わる WKB action と Stokes multiplier を同定せよ。}{
+spectral curve
+\begin{equation}
+ y^2=2m\left[\frac{U_0}{\cosh^2(\beta x)}-E\right]
+\end{equation}
+の relevant turning points $x_1,x_2$ を、選んだ outgoing sheet 上で結ぶ
+open action
+\begin{equation}
+ A_R(E)=\int_{x_1}^{x_2}y(x,E)\dd x
+\end{equation}
+（または同じ homology class の半 closed Voros period）が zero-dimensional
+例の定数 $1/4$ を置き換える。実際の nonperturbative factor は
+$\rme^{-2A_R(E)/\hbar}$ であり、periodicity
+$x\mapsto x+\rmi\pi/\beta$ による複数 turning-point image も含めて Borel
+singularities を作る。単純 turning point の Stokes multiplier と propagation
+$\rme^{\pm A_R/\hbar}$ を path order で掛けた incoming entry が
+$\Cincoming(E)$。exact solution ではその積が
+\begin{equation}
+ \Cincoming(k)\propto
+ \frac{\Gamma(1-\rmi k/\beta)\Gamma(-\rmi k/\beta)}
+ {\Gamma(-\rmi k/\beta-s)\Gamma(-\rmi k/\beta+s+1)}
+\end{equation}
+へ resummation される。従って Gamma denominator の pole は、quantum
+action と Stokes multiplier を含む exact-WKB incoming coefficient の零点である。}

@@ -1,0 +1,225 @@
+\chapter{Stage IV：pole の諸実現と continuum response}
+
+\solproblem{IV.1　flat continuum の Feshbach 自己 energy}{
+rank-one $P$ state と有限閾値を持つ flat continuum の自己 energy を求めよ。}{
+$H_{PP}=E_d$、$\rho|g|^2=c$ を $\vsub{E}{th}<\epsilon<E_c$ で一定とする。
+本書の規約では
+\begin{equation}
+ \Sigma(z)=c\int_{\vsub{E}{th}}^{E_c}\frac{\dd\epsilon}{z-\epsilon}
+ =c\log\frac{z-\vsub{E}{th}}{z-E_c}.
+\end{equation}
+物理上縁 $z=E+\rmi0$、$\vsub{E}{th}<E<E_c$ では
+\begin{equation}
+ \Sigma(E+\rmi0)=c\,
+ \operatorname{PV}\log\left|\frac{E-\vsub{E}{th}}{E-E_c}\right|
+ -\rmi\pi c.
+\end{equation}
+実部が level shift、$-2\im\Sigma=2\pi c$ が幅である。共鳴 pole は
+$z-E_d-\vsup{\Sigma}{II}(z)=0$ を second sheet で解く。cutoff を外すなら実部
+の発散を $E_d$ に吸収する renormalization 条件が必要である。}
+
+\solproblem{IV.2　実 dilation から complex scaling へ}{
+dilation の $x,p,T$ への作用を導き、解析接続せよ。}{
+一次元で $(U(s)\psi)(x)=\rme^{s/2}\psi(\rme^sx)$、$s\in\real$ とすると
+$U(s)$ は unitary で
+\begin{align}
+ U(s)xU(s)^{-1}&=\rme^sx,\\
+ U(s)pU(s)^{-1}&=\rme^{-s}p,\\
+ U(s)TU(s)^{-1}&=\rme^{-2s}T.
+\end{align}
+$s=\rmi\theta$ へ解析接続すれば
+\begin{equation}
+ H_\theta=U(\rmi\theta)HU(\rmi\theta)^{-1}
+ =\rme^{-2\rmi\theta}T+V(\rme^{\rmi\theta}x).
+\end{equation}
+これは一般には unitary 同値でなく非自己共役である。$V$ の dilation
+analyticity wedge の内側でのみこの式を作用素族として使える。}
+
+\solproblem{IV.3　outgoing wave の square integrability と cut の回転}{
+$\rme^{\rmi kr}$、$\im k<0$ が complex scaling 後に可積分となる角度を求めよ。}{
+$k=|k|\rme^{-\rmi\phi}$、$0<\phi<\pi/2$ と書く。$r\mapsto
+r\rme^{\rmi\theta}$ 後の絶対値は
+\begin{equation}
+ \left|\rme^{\rmi k r\rme^{\rmi\theta}}\right|
+ =\rme^{-|k|r\sin(\theta-\phi)}.
+\end{equation}
+従って $\theta>\phi$、かつ potential の解析 wedge 内なら $L^2$。
+$E\propto k^2$ なので共鳴の偏角は $\arg E_R=-2\phi$、free continuum は
+$\rme^{-2\rmi\theta}[0,\infty)$ へ回転する。pole が cut の上側に露出する
+条件は $-2\theta<\arg E_R<0$ である。}
+
+\solproblem{IV.4　free essential spectrum と ABC の compact step}{
+運動量空間で free spectrum の回転を示し、relative compact perturbation を説明せよ。}{
+Fourier 表示で
+\begin{equation}
+ (H_{0,\theta}\widehat\psi)(\bm p)
+ =\rme^{-2\rmi\theta}\frac{p^2}{2m}\widehat\psi(\bm p).
+\end{equation}
+従って乗算作用素の essential range から
+$\spectrum(H_{0,\theta})=
+\rme^{-2\rmi\theta}[0,\infty)$。さらに
+$V_\theta(H_{0,\theta}-z)^{-1}$ が compact（または $V_\theta$ が
+$H_{0,\theta}$-relative compact）なら Weyl 型安定性により essential
+spectrum は変わらない。解析 Fredholm 定理は
+$\identity-V_\theta\Resolvent_{0,\theta}(z)$ の逆を meromorphic にし、
+回転 cut の外に離散固有値として共鳴を与える。}
+
+\solproblem{IV.5　Berggren--Zel'dovich Gaussian continuation}{
+$u(r)\sim\rme^{\rmi kr}$ の Gaussian regularized integral を解析接続せよ。}{
+基本積分を $q=k+k'$ として
+\begin{equation}
+ I_\epsilon(q)=\int_0^\infty
+ \rme^{-\epsilon r^2+\rmi qr}\dd r
+ =\frac{\sqrt\pi}{2\sqrt\epsilon}
+ \rme^{-q^2/(4\epsilon)}
+ \operatorname{erfc}\left(-\frac{\rmi q}{2\sqrt\epsilon}\right)
+\end{equation}
+と評価する。まず $\im q>0$ では $\epsilon\downarrow0$ を通常の意味で取り
+$I_0(q)=\rmi/q$。右辺は $q$ の解析関数なので、Stokes sector を指定して
+resonance quadrant へ続ける。この continued value を
+$\int u_ku_{k'}\dd r$ の外側寄与に用いる。$q=0$ の distributional
+continuum 規格化と、$\im q<0$ の Gamow 規格化を同じ極限順序で混同しては
+ならない。}
+
+\solproblem{IV.6　Gamow functional の test-space continuity}{
+contour deformation 後に Gamow functional が連続となる test space を選べ。}{
+通常の Schwartz 空間だけでは指数成長を polynomial seminorm で抑えられない。
+そこで Schwartz 空間の核部分空間
+\begin{equation}
+ \begin{aligned}
+ \Phi=\{\phi\in\mathcal S(\real_+):\quad
+ p_{a,m,n}(\phi)&=\sup_{r\geq0}
+ |\rme^{ar}r^m\partial_r^n\phi(r)|<\infty,\\
+ &\hspace{4em}\text{for all }a,m,n\}.
+ \end{aligned}
+\end{equation}
+に countable locally convex topology を入れる。ある admissible ray
+$r=\rme^{\rmi\theta}s$ 上で Gamow 解が減衰するなら
+\begin{equation}
+ \dualpair{u_R^\times}{\phi}
+ =\int_0^{\infty\rme^{\rmi\theta}}
+ u_R(r)\phi(r)\dd r
+\end{equation}
+は $|\dualpair{u_R^\times}{\phi}|\leq C p_{a,0,0}(\phi)$ と評価でき連続。
+Hilbert norm $\|\phi\|_2$ だけでは局所的に同じ norm を持ちながら tail を
+遠方へ移した列を制御できず、この評価が失敗する。}
+
+\solproblem{IV.7　continuum level density と散乱位相}{
+resolvent 差の trace から level density を導き、位相との関係を示せ。}{
+$\Resolvent=(z-H)^{-1}$ の規約で spectral density は
+$-\pi^{-1}\im\Resolvent(E+\rmi0)$。従って
+\begin{equation}
+ \Delta(E)=-\frac1\pi\im\Tr[
+ \Resolvent(E+\rmi0)-\Resolvent_0(E+\rmi0)].
+\end{equation}
+resolvent 差が trace class なら spectral shift function $\xi(E)$ が存在し
+$\Delta(E)=\xi'(E)$。Birman--Krein 公式
+$\det\Scattering(E)=\rme^{-2\pi\rmi\xi(E)}$ と
+$\det\Scattering=\rme^{2\rmi\vsub{\delta}{tot}}$ の位相規約を揃えると
+\begin{equation}
+ \Delta(E)=\frac1\pi\frac{\rmd\vsub{\delta}{tot}}{\rmd E}
+\end{equation}
+（$\xi$ の符号規約を逆にすれば両式とも反転）。積分は端点の全位相変化、
+すなわち束縛状態数と threshold correction を含む。}
+
+\solproblem{IV.8　有限基底の複素固有値の分類}{
+三つの scaling angle の固有値から bound、resonance、rotated continuum を色なしで分類せよ。}{
+各 $\theta_j$ で generalized eigenproblem
+$H_{\theta_j}c=E N c$ を同じ精度で解く。固有値を nearest-neighbor では
+なく左右固有vector overlap と連続 assignment で対応付ける。
+\begin{enumerate}[label=(\alph*)]
+ \item $E$ が実軸上で $\theta$ と基底に不変、かつ projector norm が安定：bound state。
+ \item $\im E<0$ で $|\rmd E/\rmd\theta|$ が誤差以下、左右 residue も安定：resonance。
+ \item $\arg E\simeq-2\theta$、角度差に対し
+ $E(\theta_2)\simeq\rme^{-2\rmi(\theta_2-\theta_1)}E(\theta_1)$：continuum pseudostate。
+\end{enumerate}
+距離だけでなく $\theta$ trajectory、residual norm、condition number、basis
+拡大時の projector overlap を表にして判定する。}
+
+\solproblem{IV.9　complex-symmetric 行列の c product}{
+$c$ product と通常の biorthogonality を比較し、Hermitian conjugation の失敗例を示せ。}{
+$H^{\mathsf T}=H$ なら右固有vector $Hr_n=E_nr_n$ に対する左 vector は
+$r_n^{\mathsf T}$ であり
+\begin{equation}
+ (r_m|r_n)_c=r_m^{\mathsf T}r_n,\qquad
+ (E_n-E_m)r_m^{\mathsf T}r_n=0.
+\end{equation}
+例として
+$H=\begin{pmatrix}1&\rmi\\\rmi&-1\end{pmatrix}$ は $H^2=0$ の二次 EP で、
+零固有vector $r=(-\rmi,1)^{\mathsf T}$ は
+$r^{\mathsf T}r=0$ だが $r^\dagger r=2$。Hermitian norm を使うと EP の
+self-orthogonality を見失い、resolvent residue の分母
+$l^{\mathsf T}H'r$ を $r^\dagger H'r$ に誤置換して pole 強度を誤る。}
+
+\solproblem{IV.10　三つの regularization の同値性}{
+Zel'dovich damping、complex rotation、rigged-space pairing が同じ resonance norm を与える理由を説明せよ。}{
+まず bound-state 領域 $\im k>0$ で
+$I(k)=\int_0^\infty u_k(r)^2\dd r$ を定義する。この領域では
+(i) Gaussian factor を入れてから外す、(ii) 積分 ray を
+$\rme^{\rmi\theta}\real_+$ へ回す、(iii) analytic test function との pairing
+として読む、の三者は Cauchy 変形で同じである。次に integrand、endpoint、
+Jost derivative を同じ branch のまま resonance $k_R$ へ解析接続する。
+変形 wedge 内に singularity が入らなければ値は一意で
+\begin{equation}
+ I_R\propto F'(k_R)
+\end{equation}
+となる。三者は発散実積分を直接等置するのではなく、収束領域で一致する
+一つの解析関数の境界値として一致する。}
+
+\solproblem{IV.11　pole residue の微分公式}{
+$D(z)=z-E_d-\Sigma(z)$ の単純零点を展開し、$Z_R$ が確率でないことを示せ。}{
+$D(z_R)=0$、$D'(z_R)=1-\Sigma'(z_R)\neq0$ だから
+\begin{equation}
+ \frac1{D(z)}=\frac{Z_R}{z-z_R}+\order(1),
+ \qquad Z_R=[1-\Sigma'(z_R)]^{-1}.
+\end{equation}
+continued sheet では $\Sigma'$ は複素数である。局所例
+$\Sigma(z)=(1+\rmi)z+b$ なら $Z_R=1/[-\rmi]=\rmi$。従って $Z_R$ は
+一般に実数でも $[0,1]$ 内でもなく、pole residue または biorthogonal
+wave-function renormalization であって Born probability ではない。}
+
+\solproblem{IV.12　Breit--Wigner 位相と time delay}{
+unitary pole factor から Lorentzian 位相微分と peak time delay を求めよ。}{
+$z_R=E_R-\rmi\Gamma/2$ とし
+\begin{equation}
+ \vsub{S}{pole}(E)=\frac{E-z_R^*}{E-z_R}=\rme^{2\rmi\delta_R(E)}.
+\end{equation}
+logarithmを微分すると
+\begin{equation}
+ \frac{\rmd\delta_R}{\rmd E}
+ =\frac{\Gamma/2}{(E-E_R)^2+(\Gamma/2)^2}.
+\end{equation}
+Wigner--Smith delay は $\tau=2\hbar\rmd\delta/\rmd E$ なので
+\begin{equation}
+ \tau_R(E)=\frac{\hbar\Gamma}{(E-E_R)^2+(\Gamma/2)^2},
+ \qquad \tau_R(E_R)=\frac{4\hbar}{\Gamma}.
+\end{equation}
+background 位相が急変すれば観測 delay はこの単純項との和になる。}
+
+\solproblem{IV.13　Fano line shape}{
+定数 coherent background と単純 pole を加え、maximum と zero を求めよ。}{
+位相と全体規格化を吸収すると振幅は
+$A(\epsilon)=A_0(q+\epsilon)/(\epsilon+\rmi)$、
+$\epsilon=2(E-E_R)/\Gamma$ と書ける。従って
+\begin{equation}
+ \frac{|A|^2}{|A_0|^2}=\frac{|q+\epsilon|^2}{1+\epsilon^2}.
+\end{equation}
+real $q$ なら zero は $\epsilon=-q$、有限 maximum は
+$\epsilon=1/q$ で値 $1+q^2$。$q=q_R+\rmi q_I$ なら分子は
+$(\epsilon+q_R)^2+q_I^2$ なので厳密な zero は消え、
+$\epsilon=-q_R$ で $q_I^2/(1+q_R^2)$ が残る。}
+
+\solproblem{IV.14　threshold 近傍で異なる幅の定義}{
+$\Gamma_l(E)=\gamma k^{2l+1}$ のとき pole、peak、half width を比較せよ。}{
+一 channel model を
+\begin{equation}
+ D(E)=E-E_0-\Delta(E)+\frac{\rmi}{2}\gamma[2\mu E]^{l+1/2}
+\end{equation}
+とする。pole は指定 sheet で $D(z_p)=0$ を解く。実軸 peak は
+$\partial_E|D(E)|^2=2\re[D'(E)D(E)^*]=0$、half-maximum は
+$|D(E_\pm)|^2=2|D(\vsub{E}{peak})|^2$ で定まる。$E_R$ が threshold から十分
+遠く $\Gamma(E)$ がほぼ一定なら三定義は一致する。threshold では
+$k^{2l+1}$ の branch と $\Gamma'(E)$ が大きく、特に $l=0$ で
+$\Gamma\propto\sqrt E$ だから peak は pole の $\re z_p$ からずれ、下側
+half point が $E=0$ に衝突して非対称になる。従って $-2\im z_p$、FWHM、
+peak position を別々に報告する必要がある。}

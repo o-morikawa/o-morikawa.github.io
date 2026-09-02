@@ -1,0 +1,255 @@
+\chapter{Stage I：作用素・直積分・Fredholm 理論}
+
+\solproblem{I.1　effect と POVM}{
+$0\leq F\leq\identity$ に対する Born 則が $[0,1]$ の確率を与えることを示し、射影値でない二値 POVM を作れ。}{
+密度作用素を $\rho\geq0$, $\Tr\rho=1$ とする。正作用素の順序は
+$0\leq \rho^{1/2}F\rho^{1/2}\leq\rho$ を与えるから、
+\begin{equation}
+  0\leq p(F)=\Tr(\rho F)
+  =\Tr(\rho^{1/2}F\rho^{1/2})\leq\Tr\rho=1.
+\end{equation}
+二準位系で $0<\eta<1$ とし
+\begin{equation}
+  F_1=\eta\ket{1}\bra{1},\qquad F_0=\identity-F_1
+\end{equation}
+と置けば、$F_0+F_1=\identity$ だが $F_1^2=\eta F_1\neq F_1$ なので
+PVM ではない。励起状態を効率 $\eta$ でのみ検出する有限効率検出器である。
+より対称な有限分解能測定は、鋭い射影 $P$ を
+$F_\pm=(\identity\pm\eta(2P-\identity))/2$ へぼかして得られる。}
+
+\solproblem{I.2　区間上の運動量の自己共役拡張}{
+$P=-\rmi\hbar\rmd/\rmd x$ on $(0,L)$ に境界条件
+$\psi(L)=\rme^{\rmi\alpha}\psi(0)$ を課し、自己共役性と固有値を求めよ。}{
+最大作用素の関数 $\phi,\psi\in H^1(0,L)$ に対して
+\begin{equation}
+ \dualpair{\phi}{P\psi}-\dualpair{P\phi}{\psi}
+ =-\rmi\hbar[\phi^*(L)\psi(L)-\phi^*(0)\psi(0)].
+\end{equation}
+両者が同じ準周期条件を満たせば右辺は0である。逆に、$P^*$ の定義域に
+属する $\phi$ について右辺が全ての $\psi$ に対して0になるには
+$\phi(L)=\rme^{\rmi\alpha}\phi(0)$ が必要である。したがって
+$D(P^*)=D(P)$ で自己共役である。$P\psi=p\psi$ の解は
+$\psi=C\rme^{\rmi px/\hbar}$ であり、
+\begin{equation}
+  \rme^{\rmi pL/\hbar}=\rme^{\rmi\alpha},\qquad
+  p_n=\frac{\hbar}{L}(2\pi n+\alpha),\quad n\in\bbZ,
+\end{equation}
+$\psi_n=L^{-1/2}\rme^{\rmi p_nx/\hbar}$ となる。境界位相が作用素の
+定義域、したがってスペクトルの一部であることが要点である。}
+
+\solproblem{I.3　弱収束と確率の逃散}{
+正規直交列 $e_n$ が0へ弱収束するがノルム収束しないことを示せ。}{
+任意の $f\in\Hil$ に対し Bessel の不等式
+$\sum_n|\dualpair{f}{e_n}|^2\leq\|f\|^2$ が成り立つので、各項は0へ
+収束する。従って $e_n\rightharpoonup0$。一方 $\|e_n\|=1$ だから
+ノルム収束しない。$e_n(x)=\phi(x-n)$ かつ $\phi\in L^2(\real)$ なら、
+任意の固定コンパクト集合 $K$ について
+\begin{equation}
+ \int_K|e_n(x)|^2\dd x=\int_{K-n}|\phi(y)|^2\dd y\longrightarrow0.
+\end{equation}
+全確率は1のままだが、有限位置の検出器から確率が逃げる。}
+
+\solproblem{I.4　運動量表示からエネルギー直積分へ}{
+$\rmd^3p=p^2\dd p\rmd\Omega$ と $E=p^2/(2\mu)$ からユニタリな
+エネルギー表示を導け。}{
+$\dd E=(p/\mu)\dd p$、従って $p^2\dd p=\mu p\dd E$ である。
+$\psi(\bm p)=\psi(p,\Omega)$ に対し
+\begin{equation}
+ (U\psi)(E,\Omega)=(\mu p)^{1/2}\psi(p,\Omega),
+ \qquad p=\sqrt{2\mu E}
+\end{equation}
+と定めると
+\begin{align}
+ \|U\psi\|^2
+ &=\int_0^\infty\dd E\int\rmd\Omega\,
+     \mu p|\psi(p,\Omega)|^2 \\
+ &=\int_0^\infty p^2\dd p\int\rmd\Omega\,
+     |\psi(p,\Omega)|^2=\|\psi\|^2.
+\end{align}
+従って $U$ は $L^2(\real^3,\rmd^3p)$ から
+$\oplusint_{[0,\infty)}L^2(S^2,\rmd\Omega)\dd E$ へのユニタリ写像で、
+$H_0$ は各 fiber 上で $E$ の乗算になる。}
+
+\solproblem{I.5　multiplicity-one の commutant}{
+全ての乗算作用素と可換な有界作用素を決定せよ。}{
+$A M_f=M_fA$ とする。特に任意の可測集合 $\Delta$ の
+$M_{\chi_\Delta}$ と可換なので、$A$ は $\Delta$ に台を持つ関数を同じ
+$\Delta$ 内へ写す。有限測度の場合 $g=A\identity$ と置くと、単関数
+$s=\sum_jc_j\chi_{\Delta_j}$ に対し
+\begin{equation}
+ As=\sum_jc_jM_{\chi_{\Delta_j}}A\identity=gs.
+\end{equation}
+単関数の稠密性から $A=M_g$、また特性関数で評価して
+$g\in L^\infty$ かつ $\|g\|_\infty\leq\|A\|$。sigma 有限の場合は有限
+測度部分に制限して貼り合わせる。fiber 次元が $m(E)>1$ なら、同じ
+議論がエネルギーを混ぜないことだけを強制し、
+$A=\oplusint A(E)\dd\mu(E)$、$A(E)\in\Banach(\complex^{m(E)})$ となる。}
+
+\solproblem{I.6　スペクトル測度の二例}{
+二準位 Hamiltonian と一次元自由粒子 wave packet のスペクトル測度を求めよ。}{
+$H=E_1P_1+E_2P_2$、$\psi=c_1\ket{1}+c_2\ket{2}$ なら
+\begin{equation}
+ \mu_\psi(\Delta)=\dualpair{\psi}{P_H(\Delta)\psi}
+ =|c_1|^2\chi_\Delta(E_1)+|c_2|^2\chi_\Delta(E_2),
+\end{equation}
+すなわち $\rmd\mu_\psi=|c_1|^2\delta(E-E_1)\dd E+
+|c_2|^2\delta(E-E_2)\dd E$。
+一次元では $E=p^2/(2m)$ に $p=\pm\sqrt{2mE}$ の二枝があり、
+\begin{equation}
+ \frac{\rmd\mu_\psi}{\rmd E}
+ =\frac{m}{\sqrt{2mE}}
+ \left(|\psi(\sqrt{2mE})|^2+|\psi(-\sqrt{2mE})|^2\right).
+\end{equation}
+二枝がエネルギー fiber の multiplicity 2 を表す。}
+
+\solproblem{I.7　resolvent の解析性}{
+resolvent 恒等式から $\Resolvent(z)$ の作用素ノルム解析性を示せ。}{
+直接乗算して
+\begin{equation}
+ \Resolvent(z)-\Resolvent(w)=(w-z)\Resolvent(z)\Resolvent(w)
+\end{equation}
+を得る。$|h|\|\Resolvent(z)\|<1$ なら
+\begin{equation}
+ \Resolvent(z+h)=\Resolvent(z)
+ [\identity+h\Resolvent(z)]^{-1}
+ =\Resolvent(z)-h\Resolvent(z)^2+\order(h^2),
+\end{equation}
+従って $\partial_z\Resolvent(z)=-\Resolvent(z)^2$。ただし連続スペクトル
+上では $z-H$ が有界逆を持たず、この局所級数の円板は切断を越えない。
+解析接続には重み付き空間、解析 vector、Jost 表現など追加構造が要る。}
+
+\solproblem{I.8　Feshbach 作用素と微分 metric}{
+$P+Q=\identity$ を用いて有効 Hamiltonian と極の規格化因子を導け。}{
+$(E-H)\Psi=0$ を $P,Q$ で射影すると
+\begin{align}
+ (E-H_{PP})P\Psi-H_{PQ}Q\Psi&=0,\\
+ -H_{QP}P\Psi+(E-H_{QQ})Q\Psi&=0.
+\end{align}
+$E-H_{QQ}$ が可逆なシートでは
+$Q\Psi=(E-H_{QQ})^{-1}H_{QP}P\Psi$。従って
+\begin{equation}
+ [E-\vsub{H}{eff}(E)]P\Psi=0,
+ \quad \vsub{H}{eff}(E)=H_{PP}+H_{PQ}(E-H_{QQ})^{-1}H_{QP}.
+\end{equation}
+$D(E)=E-\vsub{H}{eff}(E)$ の単純零点 $\resonantE$ 近傍で、右・左零 vector
+$\ket{r},\bra{l}$ を用いると
+\begin{equation}
+ D(E)^{-1}\sim
+ \frac{\ket{r}\bra{l}}
+ {(E-\resonantE)\bra{l}[\identity-\partial_E\vsub{H}{eff}(\resonantE)]\ket{r}}.
+\end{equation}
+分母の微分 metric は、消去した $Q$ 空間成分のエネルギー依存を含めた
+全状態の規格化である。}
+
+\solproblem{I.9　閾値付き Lorentzian の生存振幅}{
+下端閾値を持つ Lorentzian 密度の Fourier 積分を極項と閾値項に分けよ。}{
+例として
+\begin{align}
+ \rho(E)&=\Theta(E-\vsub{E}{th})
+ \frac{\Gamma/(2\pi)}{(E-E_0)^2+(\Gamma/2)^2},\\
+ A(t)&=\int_{\vsub{E}{th}}^\infty
+ \rho(E)\rme^{-\rmi Et/\hbar}\dd E.
+\end{align}
+を取る。$t>0$ で下半平面へ閉じると
+$\resonantE=E_0-\rmi\Gamma/2$ の留数が
+$Z\rme^{-\rmi\resonantE t/\hbar}$ を与える。閾値から延びる輪郭は端点
+積分であり、部分積分により
+\begin{equation}
+ \vsub{A}{th}(t)=
+ \frac{\hbar\rho(\vsub{E}{th})}{\rmi t}
+ \rme^{-\rmi \vsub{E}{th}t/\hbar}+\order(t^{-2}).
+\end{equation}
+密度が $(E-\vsub{E}{th})^\alpha$ で始まれば
+$\vsub{A}{th}\sim t^{-\alpha-1}\rme^{-\rmi \vsub{E}{th}t/\hbar}$。従って
+中間時間は指数減衰、十分長時間は閾値由来の冪減衰となる。}
+
+\solproblem{I.10　四つの収束位相}{
+ノルム、強作用素、弱作用素、強 resolvent 収束の例を一つずつ挙げよ。}{
+次が典型例である。
+\begin{enumerate}[label=(\alph*)]
+ \item $A_n=\identity/n\to0$ は作用素ノルム収束。
+ \item $\ell^2$ の最初の $n$ 成分への射影 $P_n\to\identity$ は強収束
+  だが $\|\identity-P_n\|=1$。
+ \item 片側 shift $S^n\to0$ は弱作用素収束だが
+  $\|S^ne_1\|=1$ なので強収束しない。
+ \item $L^2(\real)$ 上の乗算作用素
+  $H_n(x)=\max(-n,\min(x,n))$ は $H_n$ 自身について一様有界ではないが、
+  任意の $z\notin\real$ で
+  $(z-H_n)^{-1}\to(z-x)^{-1}$ が優収束定理により強収束する。
+\end{enumerate}
+強収束をノルム収束と誤れば有限 detector での収束から全状態一様誤差を
+主張してしまう。弱収束を強収束と誤れば逃散する確率を消失とみなし、強
+resolvent 収束を作用素収束と誤れば非有界 observable の domain 情報を失う。}
+
+\solproblem{I.11　compact 作用素への強収束の一様化}{
+$P_N\to\identity$ strongly、$K$ compact なら
+$\|(\identity-P_N)K\|\to0$ を示せ。}{
+$K$ が単位球を写した集合の閉包は compact なので、任意の $\varepsilon>0$
+に対し有限個の点 $y_1,\dots,y_m$ の $\varepsilon$ 球で覆える。$P_N$ は
+一様有界であり、有限個の $y_j$ について
+$\max_j\|(\identity-P_N)y_j\|\to0$。任意の $\|x\|\leq1$ に対し
+$\|Kx-y_j\|<\varepsilon$ なる $j$ を選べば
+\begin{equation}
+ \|(\identity-P_N)Kx\|
+ \leq\|\identity-P_N\|\varepsilon
+ +\max_j\|(\identity-P_N)y_j\|.
+\end{equation}
+上限を取り $N\to\infty$、次に $\varepsilon\to0$ とする。$K=\identity$
+なら $\|\identity-P_N\|=1$ で反例になる。}
+
+\solproblem{I.12　自由 Green kernel の Hilbert--Schmidt 性}{
+三次元の off-shell 自由 Green kernel と有界 compact support potential から
+作る Birman--Schwinger kernel の二乗可積分性を示せ。}{
+$z=k^2/(2\mu)$、$\im k>0$ とし、定数を除けば
+\begin{equation}
+ G_0(z;\bm x,\bm y)=
+ \frac{\rme^{\rmi k|\bm x-\bm y|}}{|\bm x-\bm y|},\quad
+ K=|V|^{1/2}G_0\operatorname{sgn}(V)|V|^{1/2}.
+\end{equation}
+対角 $r=|\bm x-\bm y|\downarrow0$ では
+$|G_0|^2\sim r^{-2}$ だが体積要素は $4\pi r^2\dd r$ なので局所積分は
+$\int_0^\epsilon\dd r<\infty$。$V$ の台が compact なら両変数は有界領域
+に制限され、残りは連続で有限である。台を緩めても $\im k>0$ なら
+$\rme^{-2\im k r}$ が大距離を抑える。従って $K$ は
+Hilbert--Schmidt、特に compact である。}
+
+\solproblem{I.13　Birman--Schwinger の符号}{
+本書の resolvent 規約で Birman--Schwinger 同値を証明し、逆規約との符号差を示せ。}{
+$(H_0+V-z)\psi=0$ は
+$(z-H_0)\psi=V\psi$、従って
+$\psi=\Resolvent_0(z)V\psi$ と同値である。極分解
+$V=|V|^{1/2}J|V|^{1/2}$ を用い
+$\phi=|V|^{1/2}\psi$ と置けば
+\begin{equation}
+ \phi=K(z)\phi,\qquad
+ K(z)=|V|^{1/2}\Resolvent_0(z)J|V|^{1/2}.
+\end{equation}
+逆向きは $\psi=\Resolvent_0J|V|^{1/2}\phi$ と構成する。
+$\widetilde R_0=(H_0-z)^{-1}=-\Resolvent_0$ を採用すれば
+$\phi=-\widetilde K(z)\phi$、すなわち固有値条件は
+$-1\in\spectrum(\widetilde K)$ になる。}
+
+\solproblem{I.14　解析 Fredholm 逆の留数}{
+$A(z)=\identity-K(z)$ の単純零点における $A(z)^{-1}$ の Laurent 係数を求めよ。}{
+$A(z_0)\ket{r}=0$、$\bra{l}A(z_0)=0$、
+$d=\bra{l}A'(z_0)\ket{r}\neq0$ とする。Ansatz
+$A^{-1}=(z-z_0)^{-1}B_{-1}+B_0+\cdots$ を $AA^{-1}=\identity$ に代入すると
+$A(z_0)B_{-1}=0$ なので $B_{-1}=c\ket{r}\bra{l}$。定数項を左から
+$\bra{l}$ で挟むと $c d\bra{l}=\bra{l}$、従って
+\begin{equation}
+ A(z)^{-1}=\frac{\ket{r}\bra{l}}
+ {(z-z_0)\bra{l}A'(z_0)\ket{r}}+\order(1).
+\end{equation}
+$\ket{r}\mapsto c\ket{r}$、$\bra{l}\mapsto c^{-1}\bra{l}$ では分子・分母
+とも不変である。}
+
+\solproblem{I.15　乗算作用素は compact でない}{
+$L^2([0,1],\dd E)$ 上の非零乗算作用素が compact でないことを示せ。}{
+$f\neq0$ a.e. でないなら、ある $\varepsilon>0$ に対し
+$A=\{|f|\geq\varepsilon\}$ が正測度を持つ。$A$ を互いに素な正測度集合
+$A_n$ に分け、$e_n=\chi_{A_n}/\sqrt{\mu(A_n)}$ とする。$e_n$ は正規直交し、
+$M_fe_n$ の台も互いに素で $\|M_fe_n\|\geq\varepsilon$。従って像列は
+収束部分列を持たず、$M_f$ は compact でない。これに対し局在
+Birman--Schwinger 作用素は積分 kernel により変数を混ぜて平滑化し、
+対角特異性も二乗可積分である。エネルギーごとの乗算と、座標間を結ぶ
+compact kernel は異なる作用素構造であり矛盾しない。}

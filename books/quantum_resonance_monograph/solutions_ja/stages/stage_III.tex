@@ -1,0 +1,205 @@
+\chapter{Stage III：exact WKB と大域接続}
+
+\solproblem{III.1　Riccati 係数}{
+対数 WKB ansatz を代入し最初の4係数と枝の parity を求めよ。}{
+$[-\hbar^2\partial_x^2+Q(x)]\psi=0$ に
+$\psi=\rme^{\hbar^{-1}\int^xS(x',\hbar)\dd x'}$ を代入すると
+\begin{equation}
+ S^2+\hbar S'=Q,
+ \qquad S=\sum_{n\geq0}\hbar^nS_n.
+\end{equation}
+従って $S_0^2=Q$ と
+\begin{equation}
+ S_n=-\frac{1}{2S_0}
+ \left(S_{n-1}'+\sum_{j=1}^{n-1}S_jS_{n-j}\right)
+\end{equation}
+を得る。$S_0^\pm=\pm\sqrt Q$ とすれば
+\begin{align}
+ S_1&=-\frac{Q'}{4Q},\\
+ S_2^\pm&=\pm\left(
+ \frac{Q''}{8Q^{3/2}}-\frac{5(Q')^2}{32Q^{5/2}}\right),\\
+ S_3&=-\frac{Q'''}{16Q^2}
+ +\frac{9Q'Q''}{32Q^3}-\frac{15(Q')^3}{64Q^4}.
+\end{align}
+sheet 交換で $S_{2j}$ は符号を変え、$S_{2j+1}$ は不変。
+$\vsub{S}{odd}=(S^+-S^-)/2$ が偶数次数、
+$\vsub{S}{even}=(S^++S^-)/2$ が奇数次数を含み、
+$\vsub{S}{even}=-(\hbar/2)\partial_x\log\vsub{S}{odd}$ である。}
+
+\solproblem{III.2　最も単純な lateral Borel 和}{
+$\sum_{n\geq0}n!\hbar^{n+1}$ の Borel 変換、二つの lateral 和、差を求めよ。}{
+Borel 変換は
+\begin{equation}
+ \widehat F(t)=\sum_{n\geq0}\frac{n!}{n!}t^n=\frac{1}{1-t}.
+\end{equation}
+正実軸上の $t=1$ に pole があるので
+\begin{equation}
+ \mathcal S_{0\pm}F(\hbar)
+ =\int_{0}^{\infty\rme^{\pm\rmi0}}
+ \frac{\rme^{-t/\hbar}}{1-t}\dd t
+\end{equation}
+と処方する。実部は principal value、虚部は半留数である。上側 minus
+下側を本問の規約とすれば
+\begin{equation}
+ \mathcal S_{0+}F-\mathcal S_{0-}F
+ =2\pi\rmi\rme^{-1/\hbar}.
+\end{equation}
+符号は lateral path の命名を逆にすれば反転するが、ambiguity の大きさと
+action $A=1$ は不変である。}
+
+\solproblem{III.3　単純 turning point と Airy 接続}{
+単純 turning point を Airy 方程式へ写し、局所接続行列を求めよ。}{
+$Q(x_0)=0$、$Q'(x_0)\neq0$ とし
+\begin{equation}
+ \zeta(x)=\left[\frac32\int_{x_0}^x\sqrt{Q(t)}\dd t\right]^{2/3},
+ \qquad \psi=(\zeta/Q)^{1/4}w
+\end{equation}
+と置く。leading order では
+$\hbar^2w_{\zeta\zeta}=\zeta w$、解は
+$\operatorname{Ai}(\zeta/\hbar^{2/3})$ と $\operatorname{Bi}$ である。
+dominant/subdominant の係数列を $(\vsub{a}{dom},\vsub{a}{sub})^{\mathsf T}$ と
+し、Stokes 線を正向きに横切る規約では dominant 係数は不変で
+subdominant 係数が $\pm\rmi$ 倍だけ跳ぶ：
+\begin{equation}
+ \binom{\vsub{a}{dom}}{\vsub{a}{sub}}_{\!\mathrm{after}}
+ =\begin{pmatrix}1&0\\ \pm\rmi&1\end{pmatrix}
+ \binom{\vsub{a}{dom}}{\vsub{a}{sub}}_{\!\mathrm{before}}.
+\end{equation}
+符号は $\sqrt Q$ の sheet と横断方向で決まる。ordering を
+(sub,dom) に変えれば転置位置へ移る。いずれも determinant 1 で
+Wronskian を保存する。}
+
+\solproblem{III.4　Stokes 行列の path ordering}{
+三つの triangular Stokes 行列と propagation 行列を掛け、非可換性を示せ。}{
+\begin{equation}
+ U(a)=\begin{pmatrix}1&a\\0&1\end{pmatrix},\quad
+ L(b)=\begin{pmatrix}1&0\\b&1\end{pmatrix},\quad
+ P(p)=\begin{pmatrix}p&0\\0&p^{-1}\end{pmatrix}
+\end{equation}
+とする。各 determinant は1なので、任意の path-ordered product も
+determinant 1 で Wronskian を保存する。しかし
+\begin{equation}
+ U(a)L(b)=\begin{pmatrix}1+ab&a\\b&1\end{pmatrix},\qquad
+ L(b)U(a)=\begin{pmatrix}1&a\\b&1+ab\end{pmatrix},
+\end{equation}
+また $PUP^{-1}=U(p^2a)$ である。従って、例えば
+$U(a_3)L(a_2)P(p)U(a_1)$ は横断順序を入れ替えた積と異なる。
+determinant だけでは順序誤りを検出できないため、各 crossing の sheet、
+向き、basis ordering を ledger に記録する必要がある。}
+
+\solproblem{III.5　barrier resonance と Gamow 幅}{
+二 turning point barrier の leading outgoing 条件と幅を導け。}{
+classically allowed well の一周期 action を $I(E)$、escape barrier の
+Euclidean action を
+$K(E)=\int_{x_1}^{x_2}\sqrt{2m(V-E)}\dd x>0$ とする。Airy 接続を一周
+掛けると、leading real quantization は
+\begin{equation}
+ I(E_n)=2\pi\hbar(n+1/2).
+\end{equation}
+barrier の小さい transmission probability は
+$T(E)=\rme^{-2K(E)/\hbar}$。classical period
+$\vsub{T}{cl}=\partial I/\partial E$ ごとに一回 escape を試みるなら
+decay rate は $T(E_n)/\vsub{T}{cl}$、従って
+\begin{equation}
+ \Gamma_n=\frac{\hbar}{\vsub{T}{cl}(E_n)}
+ \rme^{-2K(E_n)/\hbar}
+\end{equation}
+（左右二出口なら各寄与を加える）。all-order exact WKB では $K$ を
+Borel resummed open Voros period、$I$ を closed quantum period に置き換え、
+Stokes multiplier も含む $\Cincoming(E)=0$ を解く。}
+
+\solproblem{III.6　inverted Rosen--Morse の pole}{
+hypergeometric 接続から incoming 係数と共鳴・反共鳴枝を求めよ。}{
+$V=U_0/\cosh^2(\beta x)$、$E=\hbar^2k^2/(2m)$、
+$s(s+1)=-2mU_0/(\beta^2\hbar^2)$ とする。$\xi=\tanh\beta x$ により
+associated Legendre 方程式となり、$x\to+\infty$ で outgoing な解を
+$x\to-\infty$ へ接続すると、非零位相を除き
+\begin{equation}
+ \vsub{A}{in}(k)=
+ \frac{\Gamma(1-\rmi k/\beta)\Gamma(-\rmi k/\beta)}
+ {\Gamma(-\rmi k/\beta-s)
+  \Gamma(-\rmi k/\beta+s+1)}.
+\end{equation}
+Gamma 関数は零を持たないので、分母の pole が $\vsub{A}{in}=0$ を与える。
+$\kappa=[8mU_0/(\beta^2\hbar^2)-1]^{1/2}$ とすれば resonance branch は
+\begin{equation}
+ \vsup{k_n}{R}=\frac{\beta}{2}[\kappa-
+ \rmi(2n+1)],\quad
+ \vsup{E_n}{R}=\frac{\hbar^2\beta^2}{8m}
+ [\kappa-
+ \rmi(2n+1)]^2.
+\end{equation}
+real potential の反共鳴は
+$\vsup{k_n}{AR}=-(\vsup{k_n}{R})^*$。どちらも同じ解析式の別 sheet である。}
+
+\solproblem{III.7　単純零点と二重零点の Laurent 展開}{
+$S(E)=N(E)/\Cincoming(E)$ を単純零点と二重零点の周りで展開せよ。}{
+$x=E-E_*$ とする。単純零点
+$\Cincoming=c_1x+c_2x^2/2+\cdots$、
+$N=N_0+N_1x+\cdots$ なら
+\begin{equation}
+ S(E)=\frac{N_0}{c_1}\frac1x
+ +\left(\frac{N_1}{c_1}-\frac{N_0c_2}{2c_1^2}\right)+\order(x).
+\end{equation}
+二重零点
+$\Cincoming=c_2x^2/2+c_3x^3/6+\cdots$ なら
+\begin{equation}
+ S(E)=\frac{2N_0}{c_2}\frac1{x^2}
+ +\left(\frac{2N_1}{c_2}-\frac{2N_0c_3}{3c_2^2}\right)\frac1x
+ +\order(1).
+\end{equation}
+Stage VII の Jordan resolvent の $x^{-2}$ 項と $x^{-1}$ 項がこの二係数に
+対応する。ただし行列問題では determinant だけでなく左右 null vector
+を含む residue を計算する。}
+
+\solproblem{III.8　cubic metastable potential の Stokes graph}{
+二枚の $\sqrt Q$ sheet 上で Stokes graph と outgoing path を構成せよ。}{
+例 $Q(x,E)=x^2-gx^3-2E$ の三つの turning point $x_j$ を求め、各点から
+\begin{equation}
+ \im\int_{x_j}^{x}\sqrt{Q(t,E)}\dd t=0
+\end{equation}
+を満たす三本の Stokes 曲線を数値積分する。branch cut を turning point
+間に置き、sheet $+$ では $S_0=+\sqrt Q$、cut 横断後は sheet $-$ と記録する。
+origin 側の regular/subdominant 解から metastable well を通り、barrier
+turning points の Airy 行列、cut 交換、外側の Stokes jump を順に掛け、
+外側で incoming 係数を0にする path を選ぶ。正解の検査は
+(i) 各 crossing の順序が連続、(ii) branch 交換が偶数回なら元 sheet、
+(iii) 総行列 determinant が1、(iv) contour の小変形で $\Cincoming$ が不変、
+の四点である。図の見た目だけで sheet を判定してはならない。}
+
+\solproblem{III.9　analytic coordinate rotation と Voros period}{
+turning points、cycle、積分路を同時に回転したとき quantum period が不変であることを示せ。}{
+$x=\rme^{\rmi\theta}y$ と同時に potential parameter と turning points を
+解析的に移し、cycle $\gamma$ を $\gamma_\theta$ へ写す。Riccati 1-form は
+座標変換則により
+\begin{equation}
+ S_x(x,E;\hbar)\dd x=S_y(y,E;\hbar)\dd y+dd F
+\end{equation}
+となる。closed cycle では exact differential の積分は0なので
+\begin{equation}
+ \VorosPeriod_\gamma=oint_\gamma\vsub{S}{odd}\dd x
+ =\oint_{\gamma_\theta}\vsub{S}{odd,\theta}\dd y.
+\end{equation}
+open path でも endpoint 規格化を同時に変換すれば同じである。変形領域を
+pole、turning point、branch cut、Borel singular direction が横切ると
+homotopy class または lateral sum が変わり、留数あるいは Stokes
+automorphism を追加しなければならない。}
+
+\solproblem{III.10　piecewise constant barrier の transfer matrix}{
+transfer-matrix pole と WKB 接続条件を比較せよ。}{
+区間 $j$ の波を $A_j\rme^{\rmi k_jx}+B_j\rme^{-\rmi k_jx}$ と書く。
+幅 $d_j$ の propagation と境界 matching は
+\begin{equation}
+ P_j=\begin{pmatrix}\rme^{\rmi k_jd_j}&0\\0&\rme^{-\rmi k_jd_j}\end{pmatrix},
+\quad
+ I_{j,j+1}=\frac12
+ \begin{pmatrix}1+k_j/k_{j+1}&1-k_j/k_{j+1}\\
+                 1-k_j/k_{j+1}&1+k_j/k_{j+1}\end{pmatrix}.
+\end{equation}
+$M=I_{N,N+1}P_N\cdots P_1I_{0,1}$ を path order で作る。左右とも
+outgoing の条件を課すと、採用した係数順序に応じて $M_{22}(E)=0$
+（または等価な minor）が pole 条件である。電流規格化した interface
+行列では $\det M=1$ となり、$|\det M-1|$ を丸め誤差 monitor にする。
+smooth barrier の区間数を増やすと、$\log P_j$ の和は WKB propagation
+action へ、interface 行列は turning-point connection へ収束する。
+pole の比較は同じ $k_j$ branch と outgoing convention で行う。}

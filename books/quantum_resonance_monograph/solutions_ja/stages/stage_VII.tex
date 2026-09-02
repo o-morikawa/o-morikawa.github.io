@@ -1,0 +1,162 @@
+\chapter{Stage VII：exceptional point と幾何学的 holonomy}
+
+\solproblem{VII.1　2-by-2 complex-symmetric EP}{
+一般 complex-symmetric 行列を対角化し二次 EP 条件を求めよ。}{
+\begin{equation}
+ H=\begin{pmatrix}a&b\\b&d\end{pmatrix},\qquad
+ E_\pm=\frac{a+d}{2}\pm\frac12\sqrt{(a-d)^2+4b^2}.
+\end{equation}
+従って discriminant
+\begin{equation}
+ \Delta=(a-d)^2+4b^2=0
+\end{equation}
+で固有値が合流する。さらに $b=0$ かつ $a=d$ なら $H=a\identity$ で二本の
+固有vector が残る ordinary degeneracy である。EP には
+$H-\vsub{E}{EP}\identity\neq0$、rank 1 が必要。例えば
+$r=(b,E-a)^{\mathsf T}$ の二枝は $\Delta\to0$ で同一直線へ合流する。}
+
+\solproblem{VII.2　Jordan chain と resolvent の二重 pole}{
+長さ2の Jordan chain を作り resolvent の $x^{-2},x^{-1}$ 項を求めよ。}{
+$(H-z_0)r_0=0$、$(H-z_0)r_1=r_0$ とし、Jordan block 上で
+$H=z_0\identity+N$、$N^2=0$。$x=z-z_0$ なら本書の resolvent は
+\begin{equation}
+ (z-H)^{-1}=(x\identity-N)^{-1}
+ =\frac{\identity}{x}+\frac{N}{x^2}.
+\end{equation}
+dual Jordan basis $l_0,l_1$ を
+$\dualpair{l_i}{r_j}=\delta_{ij}$ と取れば
+$\identity_J=\ket{r_0}\bra{l_0}+\ket{r_1}\bra{l_1}$、
+$N=\ket{r_0}\bra{l_1}$。従って
+\begin{equation}
+ \Resolvent_J(z)=\frac{\ket{r_0}\bra{l_1}}{x^2}
+ +\frac{\ket{r_0}\bra{l_0}+\ket{r_1}\bra{l_1}}{x}.
+\end{equation}
+$\Cincoming(E)$ の二重零点の逆に現れる二係数と同じ pole order である。}
+
+\solproblem{VII.3　EP の self-orthogonality}{
+coalesced 右 vector と左 partner の内積が0になることを示せ。}{
+EP で右 Jordan chain を
+$(H-E_*)r_0=0$、$(H-E_*)r_1=r_0$、左固有vectorを
+$l_0(H-E_*)=0$ とする。第二式を左から掛ければ直ちに
+\begin{equation}
+ \dualpair{l_0}{r_0}=\dualpair{l_0}{(H-E_*)r_1}=0.
+\end{equation}
+parameter 微分でも同じ結果が見える。
+$(H-E)r=0$ を $\lambda$ で微分して左固有vectorを掛けると
+$E'\dualpair l r=\dualpair l{H'r}$。EP 近傍で
+$E'\sim(\lambda-\lambda_*)^{-1/2}$ が発散する一方、右辺が有限なら
+$\dualpair l r\to0$ が必要である。}
+
+\solproblem{VII.4　branch point の一周と二周}{
+square-root EP を周回して固有値・固有vector・gauge を追跡せよ。}{
+局所 normal form $H(\lambda)=\begin{pmatrix}0&1\\\lambda&0\end{pmatrix}$ を
+用いる。$\lambda=\rho\rme^{\rmi\varphi}$ とすると
+$E_\pm=\pm\sqrt\rho\rme^{\rmi\varphi/2}$、
+$r_\pm=(1,E_\pm)^{\mathsf T}$。$\varphi:0\to2\pi$ で
+$E_+\to E_-$、$r_+\to r_-$、すなわち label が交換する。二周で固有値は
+元へ戻る。vector の比較には各 step で biorthogonal overlap を正実にする
+parallel-transport gauge を選び、最後だけ初期 gauge と比較する。任意に
+各点の第一成分を実にする gauge は途中で不連続となり位相を捏造する。
+二周後の符号または位相は、この連続 gauge で初めて幾何学的 holonomy と
+して定義される。}
+
+\solproblem{VII.5　biorthogonal Berry connection}{
+二準位 model の Berry connection と gauge 変換部分を求めよ。}{
+上の model で右 vector $r=(1,E)^{\mathsf T}$、左 vector を
+$l^{\mathsf T}=(E,1)/(2E)$ とすれば $l^{\mathsf T}r=1$。従って
+\begin{equation}
+ \mathcal A=\rmi l^{\mathsf T}\rmd r
+ =\frac{\rmi}{2}\frac{\rmd E}{E}
+ =\frac{\rmi}{4}\frac{\rmd\lambda}{\lambda}.
+\end{equation}
+$r\mapsto\rme^{f}r$、$l\mapsto\rme^{-f}l$ では
+$\mathcal A\mapsto\mathcal A+
+\rmi\rmd f$。従って局所 connection は gauge
+依存だが、閉路積分の exponential は $f$ が一価なら不変。EP の一周では
+state 自体が相手の sheet へ移るので、二周または permutation matrix を
+含む non-Abelian transport として比較する。}
+
+\solproblem{VII.6　momentum bin と continuum normalization}{
+delta-normalized state を幅 $\Delta k$ の bin に置き換え、発散 normalization と有限 holonomy を分離せよ。}{
+$\braket{k|k'}=\delta(k-k')$ とし
+\begin{equation}
+ \ket{n}=\frac1{\sqrt{\Delta k}}
+ \int_{k_0-\Delta k/2}^{k_0+\Delta k/2}\ket{k}\dd k.
+\end{equation}
+なら $\braket{n|n}=1$。一方、中央の generalized state に戻す係数は
+$\ket{n}\simeq\sqrt{\Delta k}\ket{k_0}$、従って
+$\ket{k_0}\simeq(\Delta k)^{-1/2}\ket{n}$ と発散する。parameter-dependent
+bin の Berry connection は
+\begin{equation}
+ \dualpair{\widetilde n}{\rmd n}
+ =-\frac12\rmd\log\Delta k+\vsub{\mathcal A}{shape}+\vsub{\mathcal A}{phys}.
+\end{equation}
+最初の exact differential は normalization artifact。閉路で bin の幅と
+端点を同じ値へ戻し、shape 項を同一規約で差し引けば
+$\oint\mathcal \vsub{A}{phys}$ が有限 holonomy として残る。}
+
+\solproblem{VII.7　bin-width independence の RG 方程式}{
+renormalized geometric phase の $\Delta k$ 非依存条件と積分定数を求めよ。}{
+bare phase を $\gamma_B(\Delta k)$、counterterm を $C(\Delta k,\mu)$ とし
+\begin{equation}
+ \gamma_R(\mu)=\gamma_B(\Delta k)+C(\Delta k,\mu),\qquad
+ \Delta k\frac{\rmd\gamma_R}{\rmd\Delta k}=0
+\end{equation}
+を課す。もし $\Delta k\rmd\gamma_B/\rmd\Delta k=c+o(1)$ なら
+\begin{equation}
+ C=-c\log\frac{\Delta k}{\mu}+C_0,\qquad
+ \mu\frac{\rmd\gamma_R}{\rmd\mu}=c.
+\end{equation}
+$C_0$ は局所発散からは決まらない。reference loop の phase を0とする、
+detector の asymptotic phase convention を固定する、または一つの実測値へ
+match する、といった物理的 convention/data がこれを決める。}
+
+\solproblem{VII.8　EP と continuum threshold の競合}{
+EP が threshold へ近づくとき二つの branch をどう扱うべきか説明せよ。}{
+threshold $\vsub{E}{th}$ では resolvent 自己 energy が
+$\Sigma(E)\sim a+b(E-\vsub{E}{th})^{l+1/2}$ を持つ。一方孤立 EP は
+$E_\pm-E_*\sim\pm c\sqrt{\lambda-\lambda_*}$。両者が近いと局所 determinant
+は例えば
+\begin{equation}
+ D(E,\lambda)=A(E-E_*)^2+B(\lambda-\lambda_*)
+ +C(E-\vsub{E}{th})^{l+1/2}+\cdots
+\end{equation}
+となり、単純な二次多項式 normal form は一様でない。$s$ wave なら
+$k=\sqrt{E-\vsub{E}{th}}$ で uniformize し、$D(k,\lambda)=0$ と
+$\partial_kD=0$ を同じ sheet で解く。EP sheet exchange と $k\mapsto-k$ の
+threshold exchange が合成され、周回 permutation は経路がどの branch
+point を囲むかに依存する。}
+
+\solproblem{VII.9　condition number と pseudospectrum}{
+EP 周回上の eigenvalue condition number を計算し pseudospectral sensitivity と結べ。}{
+単純固有値の condition number は
+\begin{equation}
+ \kappa_n=\frac{\|r_n\|\|l_n\|}{|\dualpair{l_n}{r_n}|}.
+\end{equation}
+biorthonormal gauge でも vector norm の積として同じ値が残る。二次 EP から
+距離 $\rho=|\lambda-\lambda_*|$ では左右 overlap が
+$\order(\sqrt\rho)$ なので $\kappa\sim\rho^{-1/2}$。摂動 $\delta H$ に対し
+$|\delta E_n|\lesssim\kappa_n\|\delta H\|$。従って周回上で $\kappa$ が大きい
+点は $\epsilon$-pseudospectrum の等高線が膨らむ点と一致する。数値的には
+左右 residual を一定に保って $\kappa(\varphi)$ と最小 singular value
+$s_{\min}(E-H)$ を同時に plot する。}
+
+\solproblem{VII.10　multiple-zero continuation test}{
+$\mathcal C=\partial_E\mathcal C=0$ を用いる探索と near crossing との識別法を設計せよ。}{
+scalar determinant または適切な incoming minor について
+\begin{equation}
+ F_1(E,\lambda)=\mathcal C(E,\lambda)=0,\qquad
+ F_2(E,\lambda)=\partial_E\mathcal C(E,\lambda)=0
+\end{equation}
+を complex Newton 法で同時に解く。Jacobian は
+$\partial(E,\lambda)(F_1,F_2)$、必要なら complex-step/automatic
+differentiationを使う。候補点の検証は
+\begin{enumerate}[label=(\alph*)]
+ \item operator の geometric multiplicity が1、Jordan residual が小さい；
+ \item 小円周回で二 pole が交換し、二周で戻る；
+ \item splitting が radius の平方根に比例；
+ \item basis・contour・complex-scaling angle を変えて点と Riesz projector が安定；
+ \item $\mathcal C_{EE}\neq0$、$\mathcal C_\lambda\neq0$。
+\end{enumerate}
+near crossing は有限最小 gap を持ち、一周で label 交換せず、Newton 解が
+discretization とともに漂う。}
