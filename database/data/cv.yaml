@@ -1,0 +1,819 @@
+- id: cv-profile
+  type: cv
+  kind: profile
+  title_en: Okuto Morikawa
+  title_ja: null
+  email: okuto.morikawa@riken.jp
+  website: https://sites.google.com/view/o-morikawa
+  orcid: 0000-0002-0044-4491
+  github: https://github.com/o-morikawa
+  inspire: https://inspirehep.net/authors/1790648
+  researchmap: https://researchmap.jp/o-morikawa
+  source: cv(1).tex
+- id: cv-career-2025-ithems-special-postdoc
+  type: cv
+  kind: career
+  title_en: Special Postdoctoral Researcher
+  title_ja: null
+  start_date: 2025-04
+  organization_en: Center for Interdisciplinary Theoretical and Mathematical Sciences (iTHEMS), RIKEN
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-career-2025-takushoku-lecturer
+  type: cv
+  kind: career
+  title_en: Part-time Lecturer
+  title_ja: null
+  start_date: 2025-04
+  organization_en: Takushoku University
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-career-2025-durham-visiting
+  type: cv
+  kind: career
+  title_en: Visiting Researcher
+  title_ja: null
+  start_date: 2025-02
+  end_date: 2025-03
+  organization_en: Department of Mathematical Sciences, Durham University
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-career-2024-ithems-special-postdoc
+  type: cv
+  kind: career
+  title_en: Special Postdoctoral Researcher
+  title_ja: null
+  start_date: 2024-04
+  end_date: 2025-03
+  organization_en: Interdisciplinary Theoretical and Mathematical Sciences Program (iTHEMS), RIKEN
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-career-2023-osaka-special
+  type: cv
+  kind: career
+  title_en: Specially Appointed Researcher
+  title_ja: null
+  start_date: 2023-10
+  end_date: 2024-03
+  organization_en: Department of Physics, Osaka University
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-career-2021-jsps-pd
+  type: cv
+  kind: career
+  title_en: Postdoctoral Fellow of Japan Society for the Promotion of Science
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2024-03
+  organization_en: Department of Physics, Osaka University
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-career-2018-jsps-dc
+  type: cv
+  kind: career
+  title_en: Research Fellow of Japan Society for the Promotion of Science
+  title_ja: null
+  start_date: 2018-04
+  end_date: 2021-03
+  organization_en: Department of Physics, Kyushu University
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-education-2021-phd
+  type: cv
+  kind: education
+  title_en: Ph.D. (Doctor of Science)
+  title_ja: null
+  start_date: '2021-03-24'
+  end_date: '2021-03-24'
+  organization_en: Department of Physics, Kyushu University
+  degree: Ph.D.
+  thesis_title_en: Numerical study of infrared criticality of the supersymmetric Landau–Ginzburg model
+  thesis_title_ja: null
+  advisor: Hiroshi Suzuki
+  doi: 10.13140/RG.2.2.36216.42246
+  hdl: 2324/4474929
+  source: cv(1).tex
+- id: cv-education-2018-ms
+  type: cv
+  kind: education
+  title_en: M.S.
+  title_ja: null
+  start_date: '2018-03-20'
+  end_date: '2018-03-20'
+  organization_en: Department of Physics, Kyushu University
+  degree: M.S.
+  source: cv(1).tex
+- id: cv-education-2016-bs
+  type: cv
+  kind: education
+  title_en: B.S.
+  title_ja: null
+  start_date: '2016-03-25'
+  end_date: '2016-03-25'
+  organization_en: Department of Physics, Kyushu University
+  degree: B.S.
+  source: cv(1).tex
+- id: cv-particle-physics-medal-2026
+  type: cv
+  kind: award
+  title_en: 'Particle Physics Medal: Young Scientist Award in Theoretical Particle Physics'
+  title_ja: null
+  start_date: 2026-09
+  end_date: 2026-09
+  organization_en: Japan Particle and Nuclear Theory Forum
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-wolfram-staff-picks
+  type: cv
+  kind: award
+  title_en: Wolfram Community Staff Picks (Featured Contributor Badge)
+  title_ja: null
+  start_date: 2026-02
+  end_date: 2026-02
+  organization_en: Wolfram Research
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-seitaro-nakamura
+  type: cv
+  kind: award
+  title_en: Seitaro Nakamura Prize
+  title_ja: null
+  start_date: 2024-09
+  end_date: 2024-09
+  organization_en: Soryushi Shogakukai
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-jps-young-scientist
+  type: cv
+  kind: award
+  title_en: Young Scientist Award of the Physical Society of Japan
+  title_ja: null
+  start_date: 2024-03
+  end_date: 2024-03
+  organization_en: The Physical Society of Japan
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-ptep-editors-choice
+  type: cv
+  kind: award
+  title_en: PTEP Editors’ Choice Award
+  title_ja: null
+  start_date: 2023-03
+  end_date: 2023-03
+  organization_en: The Physical Society of Japan
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-particle-physics-medal-2021
+  type: cv
+  kind: award
+  title_en: 'Particle Physics Medal: Young Scientist Award in Theoretical Particle Physics'
+  title_ja: null
+  start_date: 2021-09
+  end_date: 2021-09
+  organization_en: Japan Particle and Nuclear Theory Forum
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-phd-representative
+  type: cv
+  kind: award
+  title_en: Representative of the graduates (Ph.D.)
+  title_ja: null
+  start_date: 2021-03
+  end_date: 2021-03
+  organization_en: Kyushu University
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-ikushi-prize
+  type: cv
+  kind: award
+  title_en: 11th Ikushi Prize
+  title_ja: null
+  start_date: 2021-03
+  end_date: 2021-03
+  organization_en: Japan Society for the Promotion of Science
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-bs-representative
+  type: cv
+  kind: award
+  title_en: Representative of the graduates (Bachelor of Science)
+  title_ja: null
+  start_date: 2016-03
+  end_date: 2016-03
+  organization_en: Kyushu University
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-shinkawa-excellence
+  type: cv
+  kind: award
+  title_en: Excellence Award of Shinkawa High School
+  title_ja: null
+  start_date: 2012-03
+  end_date: 2012-03
+  organization_en: Shinkawa High School, Aichi
+  organization_ja: null
+  source: cv(1).tex
+- id: cv-corenet-rcnp
+  type: cv
+  kind: grant
+  title_en: COREnet project of RCNP, The University of Osaka
+  title_ja: null
+  start_date: 2026-04
+  end_date: 2028-03
+  grant_number: null
+  source: cv(1).tex
+- id: cv-kakenhi-25k17402
+  type: cv
+  kind: grant
+  title_en: JSPS Grant-in-Aid for Scientific Research (KAKENHI)
+  title_ja: null
+  start_date: 2025-04
+  end_date: 2030-03
+  grant_number: JP25K17402
+  source: cv(1).tex
+- id: cv-riken-incentive-2025
+  type: cv
+  kind: grant
+  title_en: RIKEN FY2025 Incentive Research Projects
+  title_ja: null
+  start_date: 2025-04
+  end_date: 2027-03
+  grant_number: null
+  source: cv(1).tex
+- id: cv-riken-spdr
+  type: cv
+  kind: grant
+  title_en: RIKEN Special Postdoctoral Researcher Program
+  title_ja: null
+  start_date: 2024-04
+  end_date: 2027-03
+  grant_number: null
+  source: cv(1).tex
+- id: cv-kakenhi-21j30003
+  type: cv
+  kind: grant
+  title_en: JSPS Grant-in-Aid for Scientific Research (KAKENHI)
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2024-03
+  grant_number: JP21J30003 (2021-2022), JP22KJ2096 (2023)
+  source: cv(1).tex
+- id: cv-kakenhi-18j20935
+  type: cv
+  kind: grant
+  title_en: JSPS Grant-in-Aid for Scientific Research (KAKENHI)
+  title_ja: null
+  start_date: 2018-04
+  end_date: 2021-03
+  grant_number: JP18J20935
+  source: cv(1).tex
+- id: cv-jasso
+  type: cv
+  kind: grant
+  title_en: JASSO Scholarship
+  title_ja: null
+  start_date: 2016-04
+  end_date: 2018-03
+  grant_number: null
+  source: cv(1).tex
+- id: cv-kyushu-honors-2014b
+  type: cv
+  kind: grant
+  title_en: Kyushu University Honors Scholarship
+  title_ja: null
+  start_date: 2014-10
+  end_date: 2015-03
+  grant_number: null
+  source: cv(1).tex
+- id: cv-kyushu-honors-2014a
+  type: cv
+  kind: grant
+  title_en: Kyushu University Honors Scholarship
+  title_ja: null
+  start_date: 2014-04
+  end_date: 2014-09
+  grant_number: null
+  source: cv(1).tex
+- id: cv-membership-particle-forum
+  type: cv
+  kind: membership
+  title_en: Japan Particle and Nuclear Theory Forum
+  title_ja: null
+  start_date: '2017'
+  source: cv(1).tex
+- id: cv-membership-jps
+  type: cv
+  kind: membership
+  title_en: The Physical Society of Japan
+  title_ja: null
+  start_date: '2016'
+  source: cv(1).tex
+- id: cv-organizer-qft-2025
+  type: cv
+  kind: organizer
+  title_en: Organizer, chair and editor
+  title_ja: null
+  start_date: '2025-03-10'
+  end_date: '2025-03-14'
+  event_en: 'Kyushu IAS-iTHEMS conference: Non-perturbative methods in QFT'
+  event_ja: null
+  organization_en: Institute for Advanced Study, Kyushu University
+  source: cv(1).tex
+- id: cv-organizer-grappa-qft
+  type: cv
+  kind: organizer
+  title_en: Organizer and chair
+  title_ja: null
+  start_date: 2024-11
+  event_en: GRAPPA-QFT Seminar Series
+  event_ja: null
+  url: https://sites.google.com/view/grappa-qft
+  source: cv(1).tex
+- id: cv-service-mathscinet
+  type: cv
+  kind: professional_service
+  title_en: Reviewer for Mathematical Reviews
+  title_ja: null
+  start_date: '2026'
+  organization_en: MathSciNet, American Mathematical Society
+  source: cv(1).tex
+- id: cv-service-scipost
+  type: cv
+  kind: professional_service
+  title_en: Referee
+  title_ja: null
+  start_date: '2026'
+  organization_en: SciPost Physics Core, SciPost Foundation
+  source: cv(1).tex
+- id: cv-service-jhep
+  type: cv
+  kind: professional_service
+  title_en: Referee
+  title_ja: null
+  start_date: '2026'
+  organization_en: Journal of High Energy Physics, Springer
+  source: cv(1).tex
+- id: cv-service-next-research
+  type: cv
+  kind: professional_service
+  title_en: Referee
+  title_ja: null
+  start_date: '2026'
+  organization_en: Next Research, Elsevier
+  source: cv(1).tex
+- id: cv-service-riken-scientists
+  type: cv
+  kind: professional_service
+  title_en: Reviewer
+  title_ja: null
+  start_date: '2026'
+  organization_en: RIKEN Scientists’ Assembly Steering Committee
+  source: cv(1).tex
+- id: cv-service-ijmpa
+  type: cv
+  kind: professional_service
+  title_en: Editor
+  title_ja: null
+  start_date: '2025'
+  end_date: '2026'
+  organization_en: International Journal of Modern Physics A, World Scientific
+  source: cv(1).tex
+- id: cv-science-lab-2026b
+  type: cv
+  kind: teaching
+  title_en: Science Laboratory
+  title_ja: null
+  start_date: 2026-10
+  end_date: 2027-03
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+- id: cv-physics2-2026b
+  type: cv
+  kind: teaching
+  title_en: Physics II
+  title_ja: null
+  start_date: 2026-10
+  end_date: 2027-03
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+- id: cv-science-lab-2026a
+  type: cv
+  kind: teaching
+  title_en: Science Laboratory
+  title_ja: null
+  start_date: 2026-04
+  end_date: 2026-09
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+- id: cv-physics1-2026a
+  type: cv
+  kind: teaching
+  title_en: Physics I
+  title_ja: null
+  start_date: 2026-04
+  end_date: 2026-09
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+- id: cv-science-lab-2025b
+  type: cv
+  kind: teaching
+  title_en: Science Laboratory
+  title_ja: null
+  start_date: 2025-10
+  end_date: 2026-03
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+- id: cv-physics2-2025b
+  type: cv
+  kind: teaching
+  title_en: Physics II
+  title_ja: null
+  start_date: 2025-10
+  end_date: 2026-03
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+- id: cv-science-lab-2025a
+  type: cv
+  kind: teaching
+  title_en: Science Laboratory
+  title_ja: null
+  start_date: 2025-04
+  end_date: 2025-09
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+- id: cv-physics1-2025a
+  type: cv
+  kind: teaching
+  title_en: Physics I
+  title_ja: null
+  start_date: 2025-04
+  end_date: 2025-09
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+- id: cv-ta-mechanics-2017
+  type: cv
+  kind: teaching
+  title_en: Exercise in Mechanics
+  title_ja: null
+  start_date: 2017-04
+  end_date: 2017-09
+  role: teaching_assistant
+  organization_en: Department of Physics, Kyushu University
+  source: cv(1).tex
+- id: cv-ta-fundamental-physics
+  type: cv
+  kind: teaching
+  title_en: Exercise in Fundamental Physics
+  title_ja: null
+  start_date: 2016-10
+  end_date: 2017-03
+  role: teaching_assistant
+  organization_en: Department of Physics, Kyushu University
+  source: cv(1).tex
+- id: cv-ta-mechanics-2016
+  type: cv
+  kind: teaching
+  title_en: Exercise in Mechanics
+  title_ja: null
+  start_date: 2016-04
+  end_date: 2016-09
+  role: teaching_assistant
+  organization_en: Department of Physics, Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-onoda
+  type: cv
+  kind: mentorship
+  title_en: Soma Onoda
+  title_ja: null
+  start_date: 2022-04
+  level: Master & PhD
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-abe
+  type: cv
+  kind: mentorship
+  title_en: Motokazu Abe
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2026-03
+  level: Master & PhD
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-honda
+  type: cv
+  kind: mentorship
+  title_en: Yamato Honda
+  title_ja: null
+  start_date: 2023-04
+  end_date: 2024-03
+  level: Master
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-nagoya
+  type: cv
+  kind: mentorship
+  title_en: Yuta Nagoya
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2024-03
+  level: PhD
+  organization_en: Osaka University
+  source: cv(1).tex
+- id: cv-mentorship-wada
+  type: cv
+  kind: mentorship
+  title_en: Hiroki Wada
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2024-03
+  level: Master & PhD
+  organization_en: Osaka University
+  source: cv(1).tex
+- id: cv-mentorship-tanaka
+  type: cv
+  kind: mentorship
+  title_en: Mizuki Tanaka
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2022-03
+  level: Master
+  organization_en: Osaka University
+  source: cv(1).tex
+- id: cv-mentorship-ashie
+  type: cv
+  kind: mentorship
+  title_en: Masahiro Ashie
+  title_ja: null
+  start_date: 2019-04
+  end_date: 2021-03
+  level: Master
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-takeuchi
+  type: cv
+  kind: mentorship
+  title_en: Kengo Takeuchi
+  title_ja: null
+  start_date: 2019-04
+  end_date: 2021-03
+  level: Master
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-ishikawa
+  type: cv
+  kind: mentorship
+  title_en: Kosuke Ishikawa
+  title_ja: null
+  start_date: 2018-04
+  end_date: 2020-03
+  level: Master
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-nakayama
+  type: cv
+  kind: mentorship
+  title_en: Akira Nakayama
+  title_ja: null
+  start_date: 2018-04
+  end_date: 2020-03
+  level: Master
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-shibata
+  type: cv
+  kind: mentorship
+  title_en: Kazuya Shibata
+  title_ja: null
+  start_date: 2018-04
+  end_date: 2020-03
+  level: Master
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-goto
+  type: cv
+  kind: mentorship
+  title_en: Kiichi Goto
+  title_ja: null
+  start_date: 2016-04
+  end_date: 2018-03
+  level: Undergraduate
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-kanno
+  type: cv
+  kind: mentorship
+  title_en: Hayato Kanno
+  title_ja: null
+  start_date: 2016-04
+  end_date: 2018-03
+  level: Undergraduate
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-toita
+  type: cv
+  kind: mentorship
+  title_en: Shintaro Toita
+  title_ja: null
+  start_date: 2016-04
+  end_date: 2018-03
+  level: Undergraduate
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-visit-durham
+  type: cv
+  kind: visit
+  title_en: Durham University, UK
+  title_ja: null
+  start_date: 2025-02
+  end_date: 2025-03
+  source: cv(1).tex
+- id: cv-visit-yitp-2024
+  type: cv
+  kind: visit
+  title_en: YITP, Kyoto University, Japan
+  title_ja: null
+  start_date: 2024-10
+  end_date: 2024-11
+  source: cv(1).tex
+- id: cv-visit-ncts
+  type: cv
+  kind: visit
+  title_en: NCTS, National Taiwan University, Taiwan
+  title_ja: null
+  start_date: 2024-08
+  end_date: 2024-08
+  source: cv(1).tex
+- id: cv-visit-yitp-2020
+  type: cv
+  kind: visit
+  title_en: YITP, Kyoto University, Japan
+  title_ja: null
+  start_date: 2020-09
+  end_date: 2020-09
+  source: cv(1).tex
+- id: cv-visit-sogang
+  type: cv
+  kind: visit
+  title_en: Sogang University, Korea
+  title_ja: null
+  start_date: 2019-01
+  end_date: 2019-01
+  source: cv(1).tex
+- id: cv-language-japanese
+  type: cv
+  kind: language
+  title_en: Japanese
+  title_ja: null
+  level: Native
+  source: cv(1).tex
+- id: cv-language-english
+  type: cv
+  kind: language
+  title_en: English
+  title_ja: null
+  source: cv(1).tex
+- id: cv-skill-programming
+  type: cv
+  kind: skill
+  title_en: Programming / scientific computing
+  title_ja: null
+  skills:
+  - C
+  - C++
+  - FORTRAN 77
+  - Fortran 90/95
+  - Python
+  - Julia
+  - Maxima
+  - SageMath
+  - Mathematica
+  - Emacs Lisp
+  source: cv(1).tex
+- id: cv-social-wolfram-2026
+  type: cv
+  kind: social_service
+  title_en: Wolfram Community, Contributor
+  title_ja: null
+  start_date: '2026'
+  end_date: '2026'
+  work_title_en: Nonperturbative formulation of resonances in quantum mechanics based on exact WKB method
+  url: https://community.wolfram.com/groups/-/m/t/3635564
+  source: cv(1).tex
+- id: cv-social-macs-2025
+  type: cv
+  kind: social_service
+  title_en: Mathematical Exchange Platform Bridging RIKEN and Kyoto University MACS, Lecturer
+  title_ja: null
+  start_date: '2025'
+  end_date: '2025'
+  source: cv(1).tex
+- id: cv-social-ikushi-2022
+  type: cv
+  kind: social_service
+  title_en: Interview Survey of JSPS Ikushi Prize, Filming support, Consultant, and Official expert
+  title_ja: null
+  start_date: '2022'
+  end_date: '2022'
+  source: cv(1).tex
+- id: cv-referee-report-winding
+  type: cv
+  kind: activity
+  title_en: Referee Report on “A discrete formulation for three-dimensional winding number”
+  title_ja: null
+  start_date: '2026-04-09'
+  end_date: '2026-04-09'
+  source: cv(1).tex
+- id: cv-organizer-ithems-mathphys
+  type: cv
+  kind: activity
+  title_en: Organizer, iTHEMS Math-Phys Study Group Seminar Series, RIKEN
+  title_ja: null
+  start_date: 2026-04
+  source: cv(1).tex
+- id: cv-chair-jps-2025
+  type: cv
+  kind: activity
+  title_en: Session chair, 2025 Annual (80th) Meeting of the Physical Society of Japan, Hiroshima University
+  title_ja: null
+  start_date: '2025-09-16'
+  end_date: '2025-09-19'
+  source: cv(1).tex
+- id: cv-chair-strings-2025
+  type: cv
+  kind: activity
+  title_en: Session chair, Strings and Fields 2025, YITP
+  title_ja: null
+  start_date: '2025-07-28'
+  end_date: '2025-08-01'
+  source: cv(1).tex
+- id: cv-organizer-ithems-phys
+  type: cv
+  kind: activity
+  title_en: Organizer, iTHEMS-phys Study Group Seminar Series, RIKEN
+  title_ja: null
+  start_date: 2025-04
+  source: cv(1).tex
+- id: cv-chair-jps-2024
+  type: cv
+  kind: activity
+  title_en: Session chair, 2024 Annual (79th) Meeting of the Physical Society of Japan, Hokkaido University
+  title_ja: null
+  start_date: '2024-09-16'
+  end_date: '2024-09-19'
+  source: cv(1).tex
+- id: cv-chair-lattice2023
+  type: cv
+  kind: activity
+  title_en: Session chair, The 40th International Symposium on Lattice Field Theory (Lattice2023), Fermilab, US
+  title_ja: null
+  start_date: '2023-07-31'
+  end_date: '2023-08-04'
+  source: cv(1).tex
+- id: cv-organizer-osaka-seminar-2022
+  type: cv
+  kind: activity
+  title_en: Organizer, Particle Physics Theory Group Seminar Series, Osaka University
+  title_ja: null
+  start_date: 2022-10
+  end_date: 2023-10
+  source: cv(1).tex
+- id: cv-chair-jps-2021
+  type: cv
+  kind: activity
+  title_en: Session chair, 2021 Autumn Meeting of the Physical Society of Japan, Online
+  title_ja: null
+  start_date: '2021-09-14'
+  end_date: '2021-09-17'
+  source: cv(1).tex
+- id: cv-organizer-osaka-seminar-2021
+  type: cv
+  kind: activity
+  title_en: Organizer, Particle Physics Theory Group Seminar Series, Osaka University
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2021-10
+  source: cv(1).tex
+- id: cv-chair-yonupa-2020
+  type: cv
+  kind: activity
+  title_en: Session chair, YONUPA Summer School 2020, Online
+  title_ja: null
+  start_date: '2020-08-26'
+  end_date: '2020-08-28'
+  source: cv(1).tex
+- id: cv-organizer-kyushu-seminar
+  type: cv
+  kind: activity
+  title_en: Organizer, Particle Physics Theory Group Seminar Series, Kyushu University
+  title_ja: null
+  start_date: 2017-04
+  end_date: 2021-03
+  source: cv(1).tex

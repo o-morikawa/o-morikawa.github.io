@@ -1,0 +1,159 @@
+- id: software-csmqnm-jl
+  type: software
+  kind: repository
+  authors:
+  - Shoya Ogawa
+  - Okuto Morikawa
+  title_en: CSMQNM.jl
+  title_ja: null
+  description_en: skeleton for computing black-hole quasinormal-mode candidates with the complex scaling method (CSM)
+  description_ja: null
+  year: 2026
+  url: https://github.com/o-morikawa/CSMQNM.jl
+  topics:
+  - black holes
+  - quasinormal modes
+  - complex scaling method
+  source: publication(1).tex
+- id: software-autotortoise-jl
+  type: software
+  kind: repository
+  authors:
+  - Okuto Morikawa
+  title_en: AutoTortoise.jl
+  title_ja: null
+  description_en: horizon-aware tortoise-coordinate construction for static spherically symmetric black-hole metrics
+  description_ja: null
+  year: 2026
+  url: https://github.com/o-morikawa/AutoTortoise.jl
+  topics:
+  - black holes
+  - symbolic computation
+  source: publication(1).tex
+- id: software-errorest-jl
+  type: software
+  kind: repository
+  authors:
+  - Okuto Morikawa
+  title_en: ErrorEst.jl
+  title_ja: null
+  description_en: Tools for Julia programming of statistical analysis
+  description_ja: null
+  year: 2024
+  url: https://github.com/o-morikawa/ErrorEst.jl
+  topics:
+  - statistics
+  - Julia
+  source: publication(1).tex
+- id: software-highercup
+  type: software
+  kind: repository
+  authors:
+  - Okuto Morikawa
+  title_en: HigherCup
+  title_ja: null
+  description_en: Symbolic manipulation of Steenrod higher cups
+  description_ja: null
+  year: 2024
+  url: https://github.com/o-morikawa/HigherCup
+  topics:
+  - topology
+  - generalized symmetry
+  - symbolic computation
+  source: publication(1).tex
+- id: software-wind3d
+  type: software
+  kind: repository
+  authors:
+  - Okuto Morikawa
+  title_en: Wind3D
+  title_ja: null
+  description_en: Discrete approximation to 3D winding number mapping T^3 -> U(N)
+  description_ja: null
+  year: 2024
+  url: https://github.com/o-morikawa/Wind3D
+  topics:
+  - topology
+  - lattice field theory
+  source: publication(1).tex
+- id: software-gaugefields-upstream
+  type: software
+  kind: repository
+  authors:
+  - Akio Tomiya
+  - Yuki Nagai et al.
+  title_en: akio-tomiya/Gaugefields.jl v0.4.0
+  title_ja: null
+  description_en: Julia package for utilities of gauge fields
+  description_ja: null
+  year: 2024
+  url: https://github.com/akio-tomiya/Gaugefields.jl
+  topics:
+  - lattice gauge theory
+  - Julia
+  source: publication(1).tex
+- id: software-higherbfields-jl
+  type: software
+  kind: repository
+  authors:
+  - Okuto Morikawa
+  title_en: HigherBfields.jl
+  title_ja: null
+  description_en: Julia package for utilities of gauge fields coupled with higher-form gauge fields; forked from akio-tomiya/Gaugefields.jl
+  description_ja: null
+  year: 2024
+  url: https://github.com/o-morikawa/HigherBfields.jl
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+  - Julia
+  source: publication(1).tex
+- id: software-gaugefields-jl
+  type: software
+  kind: repository
+  authors:
+  - Okuto Morikawa
+  title_en: Gaugefields.jl
+  title_ja: null
+  description_en: Julia package for utilities of quantum theory of (higher-form) general gauge fields
+  description_ja: null
+  year: 2024
+  url: https://github.com/o-morikawa/Gaugefields.jl
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+  - Julia
+  source: publication(1).tex
+- id: software-resummation
+  type: software
+  kind: repository
+  authors:
+  - Okuto Morikawa
+  title_en: Resummation
+  title_ja: null
+  description_en: Mathematica codes for resummation techniques based on perturbation theory
+  description_ja: null
+  year: 2022
+  url: https://github.com/o-morikawa/Resummation
+  topics:
+  - resurgence
+  - perturbation theory
+  - Mathematica
+  source: publication(1).tex
+- id: software-landauginzburg
+  type: software
+  kind: repository
+  authors:
+  - Okuto Morikawa
+  title_en: LandauGinzburg
+  title_ja: null
+  description_en: C++ and Julia codeset for simulation of the N=2 Landau-Ginzburg model
+  description_ja: null
+  year: 2021
+  url: https://github.com/o-morikawa/LandauGinzburg
+  topics:
+  - Landau–Ginzburg model
+  - lattice field theory
+  - Julia
+  - C++
+  source: publication(1).tex
