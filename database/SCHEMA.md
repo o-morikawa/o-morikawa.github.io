@@ -53,3 +53,17 @@ Bilingual/provenance policy:
 3. If ResearchMap's English text differs materially, retain it in a separate `researchmap_*_en` field.
 4. Do not silently resolve disagreements between sources; store the conflicting source value separately.
 5. Do not invent Japanese translations when the source does not supply them.
+
+## Source-native ID policy (v7)
+
+IDs are generated from the most stable canonical external record when one exists.
+
+1. **INSPIRE-backed scholarly publications**: use the INSPIRE BibTeX key verbatim, e.g. `Morikawa:2025xjq`.
+2. **ResearchMap-backed presentations**: derive the ID from the public ResearchMap record URL:
+   `https://researchmap.jp/o-morikawa/presentations/54946770`
+   -> `researchmap:presentations:54946770`.
+3. The previous locally generated slug is retained in `legacy_ids`, so existing references can be migrated safely.
+4. Presentation slide URLs are metadata, not the identity source. They are stored in `slides_url`, `slides_file`, and `slides_repo_url`.
+5. Records without a canonical external record keep their local ID until such a record becomes available.
+
+The same ResearchMap convention can later be extended to other record collections (`awards`, `research_projects`, `teaching_experience`, etc.) without changing the basic scheme.

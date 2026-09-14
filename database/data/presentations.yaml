@@ -38,7 +38,7 @@
   - quasinormal modes
   - complex scaling method
   source: presentation.tex
-- id: presentation-2026-09-14-complex-scaling-approach-to-quasinormal-modes-of-schwarzschi
+- id: researchmap:presentations:54946770
   type: presentations
   kind: talk
   role: self
@@ -57,7 +57,13 @@
   - quasinormal modes
   - complex scaling method
   source: presentation.tex
-- id: presentation-2026-08-18-complex-scaling-approach-to-black-hole-quasinormal-modes-and
+  researchmap_id: '54946770'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/54946770
+  legacy_ids:
+  - presentation-2026-09-14-complex-scaling-approach-to-quasinormal-modes-of-schwarzschi
+- id: researchmap:presentations:54670934
   type: presentations
   kind: talk
   role: self
@@ -90,6 +96,8 @@
   slides_url: https://o-morikawa.github.io/slides/yitp260818.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/yitp260818.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54670934/attachment_file.pdf
+  legacy_ids:
+  - presentation-2026-08-18-complex-scaling-approach-to-black-hole-quasinormal-modes-and
 - id: presentation-2026-07-29-gradient-flow-actions-integerness-and-gluonic-fermionic-topo
   type: presentations
   kind: talk
@@ -108,7 +116,7 @@
   - lattice gauge theory
   - topology
   source: presentation.tex
-- id: presentation-2026-07-29-dyon-condensation-at-theta-2pi-from-wilson-t-hooft-loops-in
+- id: researchmap:presentations:54511473
   type: presentations
   kind: talk
   role: self
@@ -152,7 +160,9 @@
   slides_url: https://o-morikawa.github.io/slides/lattice260729.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/lattice260729.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54511473/attachment_file.pdf
-- id: presentation-2026-07-20-towards-a-nonperturbative-formulation-of-non-hermitian-quant
+  legacy_ids:
+  - presentation-2026-07-29-dyon-condensation-at-theta-2pi-from-wilson-t-hooft-loops-in
+- id: researchmap:presentations:54433010
   type: presentations
   kind: talk
   role: self
@@ -182,7 +192,9 @@
   slides_url: https://o-morikawa.github.io/slides/kyushu260720.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kyushu260720.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54433010/attachment_file.pdf
-- id: presentation-2026-07-02-lattice-2d-u-1-chiral-gauge-theory-and-magnetically-charged
+  legacy_ids:
+  - presentation-2026-07-20-towards-a-nonperturbative-formulation-of-non-hermitian-quant
+- id: researchmap:presentations:54312459
   type: presentations
   kind: talk
   role: self
@@ -217,7 +229,9 @@
   slides_url: https://o-morikawa.github.io/slides/yitp260702.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/yitp260702.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54312459/attachment_file.pdf
-- id: presentation-2026-03-17-infrared-renormalons-bion-ambiguities-and-resurgence-in-comp
+  legacy_ids:
+  - presentation-2026-07-02-lattice-2d-u-1-chiral-gauge-theory-and-magnetically-charged
+- id: researchmap:presentations:52960528
   type: presentations
   kind: seminar
   role: self
@@ -247,6 +261,8 @@
   - Okuto Morikawa
   presenters_ja:
   - 森川億人
+  legacy_ids:
+  - presentation-2026-03-17-infrared-renormalons-bion-ambiguities-and-resurgence-in-comp
 - id: presentation-2026-03-26-t-hooft-loop-in-su-2-yang-mills-theory-revisited
   type: presentations
   kind: talk
@@ -265,7 +281,7 @@
   - lattice gauge theory
   - confinement
   source: presentation.tex
-- id: presentation-2026-03-23-geometric-phase-of-exceptional-point-as-quantum-resonance-in
+- id: researchmap:presentations:53028761
   type: presentations
   kind: talk
   role: self
@@ -301,7 +317,9 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai260323_2.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai260323_2.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/53028761/attachment_file.pdf
-- id: presentation-2026-03-23-complex-analytic-structure-and-resurgence-in-the-radial-schr
+  legacy_ids:
+  - presentation-2026-03-23-geometric-phase-of-exceptional-point-as-quantum-resonance-in
+- id: researchmap:presentations:53028747
   type: presentations
   kind: talk
   role: self
@@ -333,7 +351,9 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai260323_1.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai260323_1.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/53028747/attachment_file.pdf
-- id: presentation-2026-01-21-towards-a-nonperturbative-formulation-of-non-hermitian-quant
+  legacy_ids:
+  - presentation-2026-03-23-complex-analytic-structure-and-resurgence-in-the-radial-schr
+- id: researchmap:presentations:52079555
   type: presentations
   kind: seminar
   role: self
@@ -367,7 +387,9 @@
   slides_url: https://o-morikawa.github.io/slides/takushoku260121.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/takushoku260121.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/52079555/attachment_file.pdf
-- id: presentation-2025-12-16-unified-exact-wkb-framework-for-quantum-resonance-and-scatte
+  legacy_ids:
+  - presentation-2026-01-21-towards-a-nonperturbative-formulation-of-non-hermitian-quant
+- id: researchmap:presentations:51870559
   type: presentations
   kind: talk
   role: self
@@ -401,7 +423,9 @@
   slides_url: https://o-morikawa.github.io/slides/kek251216.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek251216.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51870559/attachment_file.pdf
-- id: presentation-2025-11-28-study-of-confinement-phase-based-on-lattice-qcd-simulation
+  legacy_ids:
+  - presentation-2025-12-16-unified-exact-wkb-framework-for-quantum-resonance-and-scatte
+- id: researchmap:presentations:51761406
   type: presentations
   kind: talk
   role: self
@@ -428,7 +452,9 @@
   presenters_ja:
   - 森川億人
   researchmap_presentation_type: poster_presentation
-- id: presentation-2025-11-26-what-is-quantum-resonance-a-viewpoint-from-resurgence-theory
+  legacy_ids:
+  - presentation-2025-11-28-study-of-confinement-phase-based-on-lattice-qcd-simulation
+- id: researchmap:presentations:51742199
   type: presentations
   kind: seminar
   role: self
@@ -461,7 +487,9 @@
   slides_url: https://o-morikawa.github.io/slides/kobe251126.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kobe251126.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51742199/attachment_file.pdf
-- id: presentation-2025-11-21-exact-wkb-framework-for-quantum-resonance-and-spectral-theor
+  legacy_ids:
+  - presentation-2025-11-26-what-is-quantum-resonance-a-viewpoint-from-resurgence-theory
+- id: researchmap:presentations:51712255
   type: presentations
   kind: seminar
   role: self
@@ -495,7 +523,9 @@
   slides_url: https://o-morikawa.github.io/slides/tohoku251121.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/tohoku251121.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51712255/attachment_file.pdf
-- id: presentation-2025-11-04-direct-numerical-simulation-of-t-hooft-partition-function-an
+  legacy_ids:
+  - presentation-2025-11-21-exact-wkb-framework-for-quantum-resonance-and-spectral-theor
+- id: researchmap:presentations:51598677
   type: presentations
   kind: talk
   role: self
@@ -530,7 +560,9 @@
   slides_url: https://o-morikawa.github.io/slides/lattice251104.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/lattice251104.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51598677/attachment_file.pdf
-- id: presentation-2025-10-29-non-perturbative-confirmation-of-the-wilson-fisher-fixed-poi
+  legacy_ids:
+  - presentation-2025-11-04-direct-numerical-simulation-of-t-hooft-partition-function-an
+- id: researchmap:presentations:51558533
   type: presentations
   kind: seminar
   role: self
@@ -564,7 +596,9 @@
   slides_url: https://o-morikawa.github.io/slides/kyoto251029.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kyoto251029.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51558533/attachment_file.pdf
-- id: presentation-2025-09-23-resonances-spectral-theory-and-the-resurgent-structure
+  legacy_ids:
+  - presentation-2025-10-29-non-perturbative-confirmation-of-the-wilson-fisher-fixed-poi
+- id: researchmap:presentations:51239096
   type: presentations
   kind: talk
   role: self
@@ -597,7 +631,9 @@
   slides_url: https://o-morikawa.github.io/slides/riken-durham250923.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/riken-durham250923.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51239096/attachment_file.pdf
-- id: presentation-2025-09-19-unified-exact-wkb-framework-for-quantum-mechanical-resonance
+  legacy_ids:
+  - presentation-2025-09-23-resonances-spectral-theory-and-the-resurgent-structure
+- id: researchmap:presentations:51221938
   type: presentations
   kind: talk
   role: self
@@ -632,6 +668,8 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai250919.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai250919.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51221938/attachment_file.pdf
+  legacy_ids:
+  - presentation-2025-09-19-unified-exact-wkb-framework-for-quantum-mechanical-resonance
 - id: presentation-2025-09-18-lattice-gradient-flows-de-stabilizing-topological-sectors-fo
   type: presentations
   kind: talk
@@ -705,7 +743,7 @@
   - topology
   - gradient flow
   source: presentation.tex
-- id: presentation-2025-09-03-non-perturbative-analysis-of-resonance-physics-by-exact-wkb
+- id: researchmap:presentations:51060012
   type: presentations
   kind: talk
   role: self
@@ -738,7 +776,9 @@
   slides_url: https://o-morikawa.github.io/slides/tqft250905.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/tqft250905.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51060012/attachment_file.pdf
-- id: presentation-2025-08-01-non-perturbative-understanding-of-resonant-phenomena-based-o
+  legacy_ids:
+  - presentation-2025-09-03-non-perturbative-analysis-of-resonance-physics-by-exact-wkb
+- id: researchmap:presentations:50751986
   type: presentations
   kind: talk
   role: self
@@ -769,7 +809,9 @@
   slides_url: https://o-morikawa.github.io/slides/yitp250801.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/yitp250801.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50751986/attachment_file.pdf
-- id: presentation-2025-07-24-lattice-simulation-of-wilson-t-hooft-classification-in-su-2
+  legacy_ids:
+  - presentation-2025-08-01-non-perturbative-understanding-of-resonant-phenomena-based-o
+- id: researchmap:presentations:50705810
   type: presentations
   kind: poster
   role: self
@@ -811,7 +853,9 @@
   languages:
   - eng
   researchmap_presentation_type: poster_presentation
-- id: presentation-2025-06-27-exact-wkb-as-unified-analytic-structure-for-resonance-physic
+  legacy_ids:
+  - presentation-2025-07-24-lattice-simulation-of-wilson-t-hooft-classification-in-su-2
+- id: researchmap:presentations:50495186
   type: presentations
   kind: seminar
   role: self
@@ -845,7 +889,9 @@
   slides_url: https://o-morikawa.github.io/slides/ithems250627.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems250627.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50495186/attachment_file.pdf
-- id: presentation-2025-05-28-non-perturbative-formulation-of-resonant-quantum-mechanics-w
+  legacy_ids:
+  - presentation-2025-06-27-exact-wkb-as-unified-analytic-structure-for-resonance-physic
+- id: researchmap:presentations:50266647
   type: presentations
   kind: seminar
   role: self
@@ -880,7 +926,9 @@
   slides_url: https://o-morikawa.github.io/slides/ithems250528.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems250528.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50266647/attachment_file.pdf
-- id: presentation-2025-05-16-winding-number-on-3d-lattice
+  legacy_ids:
+  - presentation-2025-05-28-non-perturbative-formulation-of-resonant-quantum-mechanics-w
+- id: researchmap:presentations:50179324
   type: presentations
   kind: talk
   role: self
@@ -906,7 +954,9 @@
   - Okuto Morikawa
   presenters_ja:
   - 森川億人
-- id: presentation-2025-05-02-winding-number-on-3d-lattice
+  legacy_ids:
+  - presentation-2025-05-16-winding-number-on-3d-lattice
+- id: researchmap:presentations:50053094
   type: presentations
   kind: seminar
   role: self
@@ -940,6 +990,8 @@
   slides_url: https://o-morikawa.github.io/slides/crest250502.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/crest250502.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50053094/attachment_file.pdf
+  legacy_ids:
+  - presentation-2025-05-02-winding-number-on-3d-lattice
 - id: presentation-2025-03-18-hybrid-monte-carlo-simulation-of-the-su-2-z-2-yang-mills-the
   type: presentations
   kind: talk
@@ -958,7 +1010,7 @@
   - lattice gauge theory
   - theoretical physics
   source: presentation.tex
-- id: presentation-2025-03-18-lattice-non-perturbative-understanding-of-generalized-symmet
+- id: researchmap:presentations:49465631
   type: presentations
   kind: talk
   role: self
@@ -991,7 +1043,9 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai250318.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai250318.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/49465631/attachment_file.pdf
-- id: presentation-2024-11-22-computational-lattice-foundation-of-generalized-symmetry-and
+  legacy_ids:
+  - presentation-2025-03-18-lattice-non-perturbative-understanding-of-generalized-symmet
+- id: researchmap:presentations:48519655
   type: presentations
   kind: seminar
   role: self
@@ -1021,7 +1075,9 @@
   languages:
   - eng
   researchmap_presentation_type: public_discourse
-- id: presentation-2024-11-19-lattice-non-perturbative-foundation-of-generalized-symmetry
+  legacy_ids:
+  - presentation-2024-11-22-computational-lattice-foundation-of-generalized-symmetry-and
+- id: researchmap:presentations:48487432
   type: presentations
   kind: seminar
   role: self
@@ -1055,7 +1111,9 @@
   slides_url: https://o-morikawa.github.io/slides/shinshu241119.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/shinshu241119.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/48487432/attachment_file.pdf
-- id: presentation-2024-09-18-non-perturbative-formulation-of-quasi-stationary-resonant-st
+  legacy_ids:
+  - presentation-2024-11-19-lattice-non-perturbative-foundation-of-generalized-symmetry
+- id: researchmap:presentations:47845715
   type: presentations
   kind: talk
   role: self
@@ -1086,6 +1144,8 @@
   languages:
   - jpn
   researchmap_presentation_type: oral_presentation
+  legacy_ids:
+  - presentation-2024-09-18-non-perturbative-formulation-of-quasi-stationary-resonant-st
 - id: presentation-2024-09-16-yet-another-lattice-formulation-of-2d-u-1-chiral-gauge-theor
   type: presentations
   kind: talk
@@ -1123,7 +1183,7 @@
   - topology
   - theoretical physics
   source: presentation.tex
-- id: presentation-2024-09-03-complete-implementation-of-generalized-symmetries-on-the-lat
+- id: researchmap:presentations:47621210
   type: presentations
   kind: talk
   role: self
@@ -1155,7 +1215,9 @@
   slides_url: https://o-morikawa.github.io/slides/discconf240903.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/discconf240903.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47621210/attachment_file.pdf
-- id: presentation-2024-08-29-lattice-implementation-of-generalized-symmetry-and-t-hooft-a
+  legacy_ids:
+  - presentation-2024-09-03-complete-implementation-of-generalized-symmetries-on-the-lat
+- id: researchmap:presentations:47564959
   type: presentations
   kind: talk
   role: self
@@ -1190,6 +1252,8 @@
   slides_url: https://o-morikawa.github.io/slides/ncts240829.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ncts240829.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47564959/attachment_file.pdf
+  legacy_ids:
+  - presentation-2024-08-29-lattice-implementation-of-generalized-symmetry-and-t-hooft-a
 - id: presentation-2024-08-02-novel-lattice-formulation-of-2d-chiral-gauge-theory-via-boso
   type: presentations
   kind: talk
@@ -1228,7 +1292,7 @@
   - generalized symmetry
   - topology
   source: presentation.tex
-- id: presentation-2024-07-30-lattice-study-of-rg-fixed-point-based-on-gradient-flow-in-3d
+- id: researchmap:presentations:47264837
   type: presentations
   kind: talk
   role: self
@@ -1269,7 +1333,9 @@
   slides_url: https://o-morikawa.github.io/slides/lattice240730.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/lattice240730.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47264837/attachment_file.pdf
-- id: presentation-2024-07-19-symmetry-and-anomaly-in-lattice-gauge-theory
+  legacy_ids:
+  - presentation-2024-07-30-lattice-study-of-rg-fixed-point-based-on-gradient-flow-in-3d
+- id: researchmap:presentations:47151001
   type: presentations
   kind: poster
   role: self
@@ -1303,7 +1369,9 @@
   slides_url: https://o-morikawa.github.io/slides/ithems240719.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems240719.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47151001/attachment_file.pdf
-- id: presentation-2024-04-26-towards-computational-foundations-of-generalized-symmetries
+  legacy_ids:
+  - presentation-2024-07-19-symmetry-and-anomaly-in-lattice-gauge-theory
+- id: researchmap:presentations:46308405
   type: presentations
   kind: seminar
   role: self
@@ -1337,7 +1405,9 @@
   slides_url: https://o-morikawa.github.io/slides/riken-rccs240426.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/riken-rccs240426.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/46308405/attachment_file.pdf
-- id: presentation-2024-03-30-generalized-symmetries-and-topological-phenomena-in-lattice
+  legacy_ids:
+  - presentation-2024-04-26-towards-computational-foundations-of-generalized-symmetries
+- id: researchmap:presentations:45954847
   type: presentations
   kind: talk
   role: self
@@ -1368,6 +1438,8 @@
   slides_url: https://o-morikawa.github.io/slides/komaba240330.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/komaba240330.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/45954847/attachment_file.pdf
+  legacy_ids:
+  - presentation-2024-03-30-generalized-symmetries-and-topological-phenomena-in-lattice
 - id: presentation-2024-03-19-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
   type: presentations
   kind: talk
@@ -1386,7 +1458,7 @@
   - lattice gauge theory
   - theoretical physics
   source: presentation.tex
-- id: presentation-2024-03-18-studies-on-generalized-symmetries-in-lattice-field-theory
+- id: researchmap:presentations:45836747
   type: presentations
   kind: talk
   role: self
@@ -1419,7 +1491,9 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai240318.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai240318.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/45836747/attachment_file.pdf
-- id: presentation-2024-02-16-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
+  legacy_ids:
+  - presentation-2024-03-18-studies-on-generalized-symmetries-in-lattice-field-theory
+- id: researchmap:presentations:45606945
   type: presentations
   kind: seminar
   role: self
@@ -1454,7 +1528,9 @@
   slides_url: https://o-morikawa.github.io/slides/yitp20240216.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/yitp20240216.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/45606945/attachment_file.pdf
-- id: presentation-2023-11-30-lattice-study-of-rg-fixed-point-based-on-gradient-flow-in-3d
+  legacy_ids:
+  - presentation-2024-02-16-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
+- id: researchmap:presentations:44159800
   type: presentations
   kind: talk
   role: self
@@ -1488,7 +1564,9 @@
   slides_url: https://o-morikawa.github.io/slides/kek231130.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek231130.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/44159800/attachment_file.pdf
-- id: presentation-2023-11-09-topological-charge-fractionality-and-higher-group-of-lattice
+  legacy_ids:
+  - presentation-2023-11-30-lattice-study-of-rg-fixed-point-based-on-gradient-flow-in-3d
+- id: researchmap:presentations:43998769
   type: presentations
   kind: seminar
   role: self
@@ -1519,7 +1597,9 @@
   languages:
   - eng
   researchmap_presentation_type: public_discourse
-- id: presentation-2023-10-03-lattice-description-of-generalized-symmetries-and-topologica
+  legacy_ids:
+  - presentation-2023-11-09-topological-charge-fractionality-and-higher-group-of-lattice
+- id: researchmap:presentations:43635383
   type: presentations
   kind: seminar
   role: self
@@ -1553,7 +1633,9 @@
   slides_url: https://o-morikawa.github.io/slides/kek231003.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek231003.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/43635383/attachment_file.pdf
-- id: presentation-2023-09-26-how-to-construct-generalized-symmetries-and-t-hooft-anomaly
+  legacy_ids:
+  - presentation-2023-10-03-lattice-description-of-generalized-symmetries-and-topologica
+- id: researchmap:presentations:43584104
   type: presentations
   kind: talk
   role: self
@@ -1584,7 +1666,9 @@
   languages:
   - eng
   researchmap_presentation_type: oral_presentation
-- id: presentation-2023-09-16-higher-group-symmetry-in-lattice-gauge-theories-with-restric
+  legacy_ids:
+  - presentation-2023-09-26-how-to-construct-generalized-symmetries-and-t-hooft-anomaly
+- id: researchmap:presentations:43467567
   type: presentations
   kind: talk
   role: self
@@ -1627,6 +1711,8 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai230916.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai230916.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/43467567/attachment_file.pdf
+  legacy_ids:
+  - presentation-2023-09-16-higher-group-symmetry-in-lattice-gauge-theories-with-restric
 - id: presentation-2023-09-16-lattice-formulation-of-magnetic-operators-in-2d-compact-scal
   type: presentations
   kind: talk
@@ -1663,7 +1749,7 @@
   - lattice gauge theory
   - topology
   source: presentation.tex
-- id: presentation-2023-07-31-higher-group-symmetry-in-lattice-gauge-theories-with-restric
+- id: researchmap:presentations:42961466
   type: presentations
   kind: talk
   role: self
@@ -1706,6 +1792,8 @@
   slides_url: https://o-morikawa.github.io/slides/lattice230731.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/lattice230731.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/42961466/attachment_file.pdf
+  legacy_ids:
+  - presentation-2023-07-31-higher-group-symmetry-in-lattice-gauge-theories-with-restric
 - id: presentation-2023-07-31-lattice-construction-of-mixed-t-hooft-anomaly-with-higher-fo
   type: presentations
   kind: talk
@@ -1781,7 +1869,7 @@
   - gradient flow
   - theoretical physics
   source: presentation.tex
-- id: presentation-2021-09-14-numerical-study-of-deformation-of-target-space-for-the-n-2-l
+- id: researchmap:presentations:33710917
   type: presentations
   kind: talk
   role: self
@@ -1816,6 +1904,8 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai210914.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai210914.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/33710917/attachment_file.pdf
+  legacy_ids:
+  - presentation-2021-09-14-numerical-study-of-deformation-of-target-space-for-the-n-2-l
 - id: presentation-2021-03-12-counterargument-to-the-expected-resurgence-structure-concern
   type: presentations
   kind: talk
@@ -1834,7 +1924,7 @@
   - resurgence
   - semiclassical field theory
   source: presentation.tex
-- id: presentation-2021-01-20-perturbative-ambiguities-and-resurgence-in-circle-compactifi
+- id: researchmap:presentations:31493460
   type: presentations
   kind: seminar
   role: self
@@ -1868,7 +1958,9 @@
   slides_url: https://o-morikawa.github.io/slides/toukou210120.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/toukou210120.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/31493460/attachment_file.pdf
-- id: presentation-2020-09-24-perturbative-ambiguities-in-compactified-spacetime-and-resur
+  legacy_ids:
+  - presentation-2021-01-20-perturbative-ambiguities-and-resurgence-in-circle-compactifi
+- id: researchmap:presentations:30158072
   type: presentations
   kind: talk
   role: self
@@ -1901,7 +1993,9 @@
   slides_url: https://o-morikawa.github.io/slides/resurgence200924.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/resurgence200924.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/30158072/attachment_file.pdf
-- id: presentation-2020-09-16-renormalon-in-su-n-qcd-adj-on-compactified-spacetime
+  legacy_ids:
+  - presentation-2020-09-24-perturbative-ambiguities-in-compactified-spacetime-and-resur
+- id: researchmap:presentations:30091767
   type: presentations
   kind: talk
   role: self
@@ -1941,7 +2035,9 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai200916.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai200916.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/30091767/attachment_file.pdf
-- id: presentation-2020-09-14-identification-of-perturbative-ambiguity-canceled-against-bi
+  legacy_ids:
+  - presentation-2020-09-16-renormalon-in-su-n-qcd-adj-on-compactified-spacetime
+- id: researchmap:presentations:30072791
   type: presentations
   kind: talk
   role: self
@@ -1976,7 +2072,9 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai200914.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai200914.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/30072791/attachment_file.pdf
-- id: presentation-2020-08-28-resurgence-structure-in-s-1-compactified-spacetime
+  legacy_ids:
+  - presentation-2020-09-14-identification-of-perturbative-ambiguity-canceled-against-bi
+- id: researchmap:presentations:29720697
   type: presentations
   kind: talk
   role: self
@@ -2010,7 +2108,9 @@
   slides_url: https://o-morikawa.github.io/slides/wakate200828.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/wakate200828.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/29720697/attachment_file.pdf
-- id: presentation-2020-08-25-perturbative-ambiguity-in-compactified-spacetime-and-resurge
+  legacy_ids:
+  - presentation-2020-08-28-resurgence-structure-in-s-1-compactified-spacetime
+- id: researchmap:presentations:29555725
   type: presentations
   kind: poster
   role: self
@@ -2043,7 +2143,9 @@
   slides_url: https://o-morikawa.github.io/slides/tqft200825.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/tqft200825.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/29555725/attachment_file.pdf
-- id: presentation-2020-08-04-resurgence-structure-on-compactified-spacetime-with-twisted
+  legacy_ids:
+  - presentation-2020-08-25-perturbative-ambiguity-in-compactified-spacetime-and-resurge
+- id: researchmap:presentations:29367543
   type: presentations
   kind: talk
   role: self
@@ -2076,7 +2178,9 @@
   slides_url: https://o-morikawa.github.io/slides/aplat200807.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/aplat200807.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/29367543/attachment_file.pdf
-- id: presentation-2020-06-09-computer-simulation-of-the-n-2-landau-ginzburg-model
+  legacy_ids:
+  - presentation-2020-08-04-resurgence-structure-on-compactified-spacetime-with-twisted
+- id: researchmap:presentations:27686342
   type: presentations
   kind: seminar
   role: self
@@ -2112,7 +2216,9 @@
   slides_url: https://o-morikawa.github.io/slides/osaka200609.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/osaka200609.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/27686342/attachment_file.pdf
-- id: presentation-2020-03-16-ir-renormalon-in-the-p-n-1-model-on-s-1
+  legacy_ids:
+  - presentation-2020-06-09-computer-simulation-of-the-n-2-landau-ginzburg-model
+- id: researchmap:presentations:26018806
   type: presentations
   kind: talk
   role: self
@@ -2157,6 +2263,8 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai200316.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai200316.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018806/attachment_file.pdf
+  legacy_ids:
+  - presentation-2020-03-16-ir-renormalon-in-the-p-n-1-model-on-s-1
 - id: presentation-2020-03-16-ir-renormalon-in-su-n-qcd-adj-on-3-s-1
   type: presentations
   kind: talk
@@ -2176,7 +2284,7 @@
   - resurgence
   - compactified field theory
   source: presentation.tex
-- id: presentation-2020-01-23-vacuum-energy-of-the-susy-p-n-1-model-on-s-1
+- id: researchmap:presentations:26018930
   type: presentations
   kind: talk
   role: self
@@ -2211,7 +2319,9 @@
   slides_url: https://o-morikawa.github.io/slides/keio200123.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/keio200123.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018930/attachment_file.pdf
-- id: presentation-2019-12-23-infrared-renormalon-in-the-p-n-1-model-on-s-1
+  legacy_ids:
+  - presentation-2020-01-23-vacuum-energy-of-the-susy-p-n-1-model-on-s-1
+- id: researchmap:presentations:26018801
   type: presentations
   kind: talk
   role: self
@@ -2246,7 +2356,9 @@
   slides_url: https://o-morikawa.github.io/slides/kyushu-riken191223.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kyushu-riken191223.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018801/attachment_file.pdf
-- id: presentation-2019-12-05-infrared-renormalon-in-the-supersymmetric-p-n-1-model-on-s-1
+  legacy_ids:
+  - presentation-2019-12-23-infrared-renormalon-in-the-p-n-1-model-on-s-1
+- id: researchmap:presentations:26018906
   type: presentations
   kind: poster
   role: self
@@ -2282,7 +2394,9 @@
   slides_url: https://o-morikawa.github.io/slides/kek191205.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek191205.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018906/attachment_file.pdf
-- id: presentation-2019-09-18-continuum-extrapolation-and-precision-measurement-of-the-sca
+  legacy_ids:
+  - presentation-2019-12-05-infrared-renormalon-in-the-supersymmetric-p-n-1-model-on-s-1
+- id: researchmap:presentations:26018778
   type: presentations
   kind: talk
   role: self
@@ -2318,7 +2432,9 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai190918.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai190918.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018778/attachment_file.pdf
-- id: presentation-2019-06-23-numerical-study-of-ade-type-n-2-landau-ginzburg-models
+  legacy_ids:
+  - presentation-2019-09-18-continuum-extrapolation-and-precision-measurement-of-the-sca
+- id: researchmap:presentations:26018897
   type: presentations
   kind: talk
   role: self
@@ -2353,7 +2469,9 @@
   slides_url: https://o-morikawa.github.io/slides/lattice190621.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/lattice190621.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018897/attachment_file.pdf
-- id: presentation-2019-03-17-gradient-flow-representation-of-the-4d-n-2-sym-supercurrent
+  legacy_ids:
+  - presentation-2019-06-23-numerical-study-of-ade-type-n-2-landau-ginzburg-models
+- id: researchmap:presentations:26018759
   type: presentations
   kind: talk
   role: self
@@ -2391,7 +2509,9 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai190317.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai190317.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018759/attachment_file.pdf
-- id: presentation-2019-02-21-numerical-study-of-the-n-2-landau-ginzburg-model
+  legacy_ids:
+  - presentation-2019-03-17-gradient-flow-representation-of-the-4d-n-2-sym-supercurrent
+- id: researchmap:presentations:26018871
   type: presentations
   kind: poster
   role: self
@@ -2426,7 +2546,9 @@
   slides_url: https://o-morikawa.github.io/slides/osaka190218.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/osaka190218.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018871/attachment_file.pdf
-- id: presentation-2018-12-19-numerical-study-of-the-n-2-landau-ginzburg-model
+  legacy_ids:
+  - presentation-2019-02-21-numerical-study-of-the-n-2-landau-ginzburg-model
+- id: researchmap:presentations:26018858
   type: presentations
   kind: poster
   role: self
@@ -2461,7 +2583,9 @@
   slides_url: https://o-morikawa.github.io/slides/kek181217.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek181217.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018858/attachment_file.pdf
-- id: presentation-2018-11-21-numerical-study-of-the-n-2-landau-ginzburg-model
+  legacy_ids:
+  - presentation-2018-12-19-numerical-study-of-the-n-2-landau-ginzburg-model
+- id: researchmap:presentations:26018733
   type: presentations
   kind: talk
   role: self
@@ -2497,7 +2621,9 @@
   slides_url: https://o-morikawa.github.io/slides/riken181221.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/riken181221.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018733/attachment_file.pdf
-- id: presentation-2018-09-15-numerical-study-of-n-2-landau-ginzburg-models-with-multiple
+  legacy_ids:
+  - presentation-2018-11-21-numerical-study-of-the-n-2-landau-ginzburg-model
+- id: researchmap:presentations:26018718
   type: presentations
   kind: talk
   role: self
@@ -2532,7 +2658,9 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai180915.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai180915.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018718/attachment_file.pdf
-- id: presentation-2018-05-20-gradient-flow-and-the-wilsonian-renormalization-group-flow
+  legacy_ids:
+  - presentation-2018-09-15-numerical-study-of-n-2-landau-ginzburg-models-with-multiple
+- id: researchmap:presentations:26018984
   type: presentations
   kind: seminar
   role: self
@@ -2567,7 +2695,9 @@
   slides_url: https://o-morikawa.github.io/slides/kek180522.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek180522.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018984/attachment_file.pdf
-- id: presentation-2018-03-23-numerical-study-of-n-2-landau-ginzburg-models
+  legacy_ids:
+  - presentation-2018-05-20-gradient-flow-and-the-wilsonian-renormalization-group-flow
+- id: researchmap:presentations:26018709
   type: presentations
   kind: talk
   role: self
@@ -2604,6 +2734,8 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai180323.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai180323.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018709/attachment_file.pdf
+  legacy_ids:
+  - presentation-2018-03-23-numerical-study-of-n-2-landau-ginzburg-models
 - id: presentation-2018-03-23-gravitational-axial-u-1-anomaly-via-the-gradient-flow
   type: presentations
   kind: talk
@@ -2640,7 +2772,7 @@
   - gradient flow
   - theoretical physics
   source: presentation.tex
-- id: presentation-2017-12-09-numerical-study-of-the-two-dimensional-supersymmetric-landau
+- id: researchmap:presentations:26018696
   type: presentations
   kind: talk
   role: self
@@ -2671,7 +2803,9 @@
   languages:
   - jpn
   researchmap_presentation_type: oral_presentation
-- id: presentation-2017-11-17-conformal-field-theory-and-the-landau-ginzburg-description
+  legacy_ids:
+  - presentation-2017-12-09-numerical-study-of-the-two-dimensional-supersymmetric-landau
+- id: researchmap:presentations:26018946
   type: presentations
   kind: seminar
   role: self
@@ -2703,7 +2837,9 @@
   languages:
   - jpn
   researchmap_presentation_type: public_discourse
-- id: presentation-2017-11-17-numerical-study-of-n-2-landau-ginzburg-models
+  legacy_ids:
+  - presentation-2017-11-17-conformal-field-theory-and-the-landau-ginzburg-description
+- id: researchmap:presentations:26018940
   type: presentations
   kind: seminar
   role: self
@@ -2739,7 +2875,9 @@
   slides_url: https://o-morikawa.github.io/slides/hokudai171117.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/hokudai171117.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018940/attachment_file.pdf
-- id: presentation-2017-09-28-numerical-simulation-of-the-n-2-landau-ginzburg-model
+  legacy_ids:
+  - presentation-2017-11-17-numerical-study-of-n-2-landau-ginzburg-models
+- id: researchmap:presentations:26018670
   type: presentations
   kind: talk
   role: self
@@ -2774,7 +2912,9 @@
   slides_url: https://o-morikawa.github.io/slides/ssi170928.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ssi170928.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018670/attachment_file.pdf
-- id: presentation-2017-09-14-numerical-simulation-of-n-2-landau-ginzburg-model
+  legacy_ids:
+  - presentation-2017-09-28-numerical-simulation-of-the-n-2-landau-ginzburg-model
+- id: researchmap:presentations:26018662
   type: presentations
   kind: talk
   role: self
@@ -2811,6 +2951,8 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai170914.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai170914.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018662/attachment_file.pdf
+  legacy_ids:
+  - presentation-2017-09-14-numerical-simulation-of-n-2-landau-ginzburg-model
 - id: presentation-2017-09-14-gradient-flow-and-the-wilsonian-renormalization-group-flow
   type: presentations
   kind: talk
@@ -2848,7 +2990,7 @@
   - chiral gauge theory
   - theoretical physics
   source: presentation.tex
-- id: presentation-2017-06-23-one-loop-perturbative-coupling-of-a-and-a-through-the-chiral
+- id: researchmap:presentations:26018834
   type: presentations
   kind: talk
   role: self
@@ -2886,7 +3028,9 @@
   slides_url: https://o-morikawa.github.io/slides/lat2017_0623.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/lat2017_0623.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018834/attachment_file.pdf
-- id: presentation-2017-03-17-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
+  legacy_ids:
+  - presentation-2017-06-23-one-loop-perturbative-coupling-of-a-and-a-through-the-chiral
+- id: researchmap:presentations:26018638
   type: presentations
   kind: talk
   role: self
@@ -2921,7 +3065,9 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai170317.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai170317.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018638/attachment_file.pdf
-- id: presentation-2016-12-10-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
+  legacy_ids:
+  - presentation-2017-03-17-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
+- id: researchmap:presentations:26018623
   type: presentations
   kind: talk
   role: self
@@ -2952,7 +3098,9 @@
   languages:
   - jpn
   researchmap_presentation_type: oral_presentation
-- id: presentation-2016-12-07-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
+  legacy_ids:
+  - presentation-2016-12-10-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
+- id: researchmap:presentations:26018827
   type: presentations
   kind: poster
   role: self
@@ -2987,7 +3135,9 @@
   slides_url: https://o-morikawa.github.io/slides/kek_poster20161207_ign.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek_poster20161207_ign.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018827/attachment_file.pdf
-- id: presentation-2025-12-12-aspects-of-quantum-resonance-revisited
+  legacy_ids:
+  - presentation-2016-12-07-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
+- id: researchmap:presentations:51847073
   type: presentations
   kind: informal_talk
   role: self
@@ -3021,7 +3171,9 @@
   slides_url: https://o-morikawa.github.io/slides/ithems251212.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems251212.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51847073/attachment_file.pdf
-- id: presentation-2025-02-17-lattice-implementation-of-gauge-field-topology-and-generaliz
+  legacy_ids:
+  - presentation-2025-12-12-aspects-of-quantum-resonance-revisited
+- id: researchmap:presentations:49252473
   type: presentations
   kind: journal_club
   role: self
@@ -3052,7 +3204,9 @@
   languages:
   - eng
   researchmap_presentation_type: public_discourse
-- id: presentation-2024-09-13-gauge-field-topology-on-the-lattice
+  legacy_ids:
+  - presentation-2025-02-17-lattice-implementation-of-gauge-field-topology-and-generaliz
+- id: researchmap:presentations:47795057
   type: presentations
   kind: informal_talk
   role: self
@@ -3085,6 +3239,8 @@
   slides_url: https://o-morikawa.github.io/slides/ithems240913.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems240913.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47795057/attachment_file.pdf
+  legacy_ids:
+  - presentation-2024-09-13-gauge-field-topology-on-the-lattice
 - id: presentation-2024-01-18-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
   type: presentations
   kind: journal_club

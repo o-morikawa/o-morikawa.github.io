@@ -1,4 +1,4 @@
-# O. Morikawa research database (v6)
+# O. Morikawa research database (v7)
 
 Static, machine-readable research/CV database with a single-file searchable viewer.
 
@@ -53,3 +53,23 @@ The default view is `?kind=profile`. Opening `index.html` without a query select
 Filters: `type`, `kind`, and display language (`EN + JA`, `English`, `Japanese`). The search box recursively searches every field in every record.
 
 Grant records expose KAKEN project links where supplied. Award records expose the official award/source links supplied by the author; the PTEP Editors' Choice record also links the JPS Hot Topics and BUTSURI coverage.
+
+## v7: source-native identifiers
+
+The database now prefers source-native IDs instead of hand-built presentation slugs.
+
+- Publications: INSPIRE BibTeX key.
+- Presentations with a ResearchMap record: `researchmap:presentations:<ResearchMap numeric id>`.
+- Old generated IDs are preserved in `legacy_ids`.
+
+For a newly created ResearchMap presentation that is newer than the latest JSONL export, attach the URL immediately:
+
+```bash
+python scripts/attach_researchmap.py data/presentations.yaml \
+  --match-id <current-or-legacy-id> \
+  --researchmap-url https://researchmap.jp/o-morikawa/presentations/<id> \
+  --slides-url https://o-morikawa.github.io/slides/<file>.pdf
+python scripts/build.py
+```
+
+If `--slides-url` is omitted, only the ResearchMap identity/link is attached; the slide can be added later without changing the record ID.

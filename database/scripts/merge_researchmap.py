@@ -5,6 +5,7 @@ from pathlib import Path
 from difflib import SequenceMatcher
 from collections import defaultdict
 import yaml
+from id_utils import promote_id
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data'
@@ -111,6 +112,7 @@ for r,x,sc in matched:
     e=x['entry'];ins,m=e['insert'],e['merge']; rid=str(ins['id'])
     add_rm_meta(r,ins,'presentations')
     r['researchmap_url']=rm_url_presentations(rid)
+    promote_id(r, f'researchmap:presentations:{rid}')
     rm_title=m.get('presentation_title') or {}; rm_event=m.get('event') or {}
     set_if(r,'title_ja',bi(rm_title,'ja'))
     # preserve exact source values when they differ from canonical display fields
