@@ -1,0 +1,1229 @@
+- id: cv-career-2025-ithems-special-postdoc
+  type: cv
+  kind: career
+  title_en: Special Postdoctoral Researcher
+  title_ja: 基礎科学特別研究員
+  start_date: 2025-04
+  organization_en: Center for Interdisciplinary Theoretical and Mathematical Sciences (iTHEMS), RIKEN
+  organization_ja: 特定国立研究開発法人理化学研究所 数理創造研究センター(iTHEMS)
+  source: cv(1).tex
+  researchmap_id: '49641738'
+  researchmap_type: research_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  affiliation_ja: 特定国立研究開発法人理化学研究所
+  section_ja: 数理創造研究センター(iTHEMS)
+  affiliation_en: RIKEN
+  section_en: Center for Interdisciplinary Theoretical and Mathematical Sciences (iTHEMS)
+- id: cv-career-2025-takushoku-lecturer
+  type: cv
+  kind: career
+  title_en: Part-time Lecturer
+  title_ja: 非常勤講師
+  start_date: 2025-04
+  organization_en: Takushoku University
+  organization_ja: 拓殖大学 工学部
+  source: cv(1).tex
+  researchmap_id: '53852410'
+  researchmap_type: research_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  affiliation_ja: 拓殖大学
+  section_ja: 工学部
+  affiliation_en: Takushoku University
+  section_en: Faculty of Engineering
+- id: cv-career-2025-durham-visiting
+  type: cv
+  kind: career
+  title_en: Visiting Researcher
+  title_ja: Visiting Researcher
+  start_date: 2025-02
+  end_date: 2025-03
+  organization_en: Department of Mathematical Sciences, Durham University
+  organization_ja: Durham University Department of Mathematical Sciences
+  source: cv(1).tex
+  researchmap_id: '49252399'
+  researchmap_type: research_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  affiliation_ja: Durham University
+  section_ja: Department of Mathematical Sciences
+  affiliation_en: Durham University
+  section_en: Department of Mathematical Sciences
+- id: cv-career-2024-ithems-special-postdoc
+  type: cv
+  kind: career
+  title_en: Special Postdoctoral Researcher
+  title_ja: 基礎科学特別研究員
+  start_date: 2024-04
+  end_date: 2025-03
+  organization_en: Interdisciplinary Theoretical and Mathematical Sciences Program (iTHEMS), RIKEN
+  organization_ja: 特定国立研究開発法人理化学研究所 数理創造プログラム(iTHEMS)
+  source: cv(1).tex
+  researchmap_id: '45962096'
+  researchmap_type: research_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  affiliation_ja: 特定国立研究開発法人理化学研究所
+  section_ja: 数理創造プログラム(iTHEMS)
+  affiliation_en: RIKEN
+  section_en: Interdisciplinary Theoretical and Mathematical Sciences Program (iTHEMS)
+- id: cv-career-2023-osaka-special
+  type: cv
+  kind: career
+  title_en: Specially Appointed Researcher
+  title_ja: 特任研究員
+  start_date: 2023-10
+  end_date: 2024-03
+  organization_en: Department of Physics, Osaka University
+  organization_ja: 大阪大学 大学院理学研究科
+  source: cv(1).tex
+  researchmap_id: '43635431'
+  researchmap_type: research_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  affiliation_ja: 大阪大学
+  section_ja: 大学院理学研究科
+  affiliation_en: Osaka University
+  section_en: Graduate School of Science
+- id: cv-career-2021-jsps-pd
+  type: cv
+  kind: career
+  title_en: Postdoctoral Fellow of Japan Society for the Promotion of Science
+  title_ja: 日本学術振興会特別研究員(PD)
+  start_date: 2021-04
+  end_date: 2024-03
+  organization_en: Department of Physics, Osaka University
+  organization_ja: 大阪大学 大学院理学研究科
+  source: cv(1).tex
+  researchmap_id: '32076759'
+  researchmap_type: research_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  affiliation_ja: 大阪大学
+  section_ja: 大学院理学研究科
+  affiliation_en: Osaka University
+  section_en: Graduate School of Science
+- id: cv-career-2018-jsps-dc
+  type: cv
+  kind: career
+  title_en: Research Fellow of Japan Society for the Promotion of Science
+  title_ja: 日本学術振興会特別研究員(DC1)
+  start_date: 2018-04
+  end_date: 2021-03
+  organization_en: Department of Physics, Kyushu University
+  organization_ja: 九州大学 大学院理学府
+  source: cv(1).tex
+  researchmap_id: '32204121'
+  researchmap_type: research_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  affiliation_ja: 九州大学
+  section_ja: 大学院理学府
+  affiliation_en: Kyushu University
+  section_en: Graduate School of Science
+- id: cv-education-2021-phd
+  type: cv
+  kind: education
+  title_en: Ph.D. (Doctor of Science)
+  title_ja: 博士（理学）
+  start_date: '2021-03-24'
+  end_date: '2021-03-24'
+  organization_en: Department of Physics, Kyushu University
+  degree: Ph.D.
+  thesis_title_en: Numerical study of infrared criticality of the supersymmetric Landau–Ginzburg model
+  thesis_title_ja: null
+  advisor: Hiroshi Suzuki
+  doi: 10.13140/RG.2.2.36216.42246
+  hdl: 2324/4474929
+  source: cv(1).tex
+  researchmap_id: '26018398'
+  researchmap_type: education
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  affiliation_ja: 九州大学
+  department_ja: 大学院理学府
+  course_ja: 物理学専攻
+  stage_ja: 博士課程
+  stage_en: Ph.D. student
+  education_period_start: 2018-04
+  education_period_end: 2021-03
+- id: cv-education-2018-ms
+  type: cv
+  kind: education
+  title_en: M.S.
+  title_ja: null
+  start_date: '2018-03-20'
+  end_date: '2018-03-20'
+  organization_en: Department of Physics, Kyushu University
+  degree: M.S.
+  source: cv(1).tex
+  researchmap_id: '26018393'
+  researchmap_type: education
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  affiliation_ja: 九州大学
+  department_ja: 大学院理学府
+  course_ja: 物理学専攻
+  stage_ja: 修士課程
+  stage_en: Master student
+  education_period_start: 2016-04
+  education_period_end: 2018-03
+- id: cv-education-2016-bs
+  type: cv
+  kind: education
+  title_en: B.S.
+  title_ja: null
+  start_date: '2016-03-25'
+  end_date: '2016-03-25'
+  organization_en: Department of Physics, Kyushu University
+  degree: B.S.
+  source: cv(1).tex
+  researchmap_id: '26018372'
+  researchmap_type: education
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  affiliation_ja: 九州大学
+  department_ja: 理学部
+  course_ja: 物理学科
+  education_period_start: 2012-04
+  education_period_end: 2016-03
+- id: cv-particle-physics-medal-2026
+  type: cv
+  kind: award
+  title_en: 'Particle Physics Medal: Young Scientist Award in Theoretical Particle Physics'
+  title_ja: 第21回素粒子メダル奨励賞
+  start_date: 2026-09
+  end_date: 2026-09
+  organization_en: Japan Particle and Nuclear Theory Forum
+  organization_ja: 素粒子論グループ
+  source: cv(1).tex
+  urls:
+    award: http://www2.yukawa.kyoto-u.ac.jp/~sg.www/syorei_s/
+  researchmap_id: '33710967'
+  researchmap_type: awards
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  winners_ja:
+  - 森川億人
+  - 高浦大雅
+  winners_en:
+  - Okuto Morikawa
+  - Hiromasa Takaura
+  researchmap_date: 2021-09
+- id: cv-wolfram-staff-picks
+  type: cv
+  kind: award
+  title_en: Wolfram Community Staff Picks (Featured Contributor Badge)
+  title_ja: null
+  start_date: 2026-02
+  end_date: 2026-02
+  organization_en: Wolfram Research
+  organization_ja: null
+  source: cv(1).tex
+  urls:
+    award: https://community.wolfram.com/groups/-/m/t/3635564
+- id: cv-seitaro-nakamura
+  type: cv
+  kind: award
+  title_en: Seitaro Nakamura Prize
+  title_ja: 第19回中村誠太郎賞
+  start_date: 2024-09
+  end_date: 2024-09
+  organization_en: Soryushi Shogakukai
+  organization_ja: 素粒子奨学会
+  source: cv(1).tex
+  researchmap_id: '47869164'
+  researchmap_type: awards
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  description_ja: Non-perturbative foundation of generalized symmetries -Wilsonian lattice regularized point of view-
+  description_en: Non-perturbative foundation of generalized symmetries -Wilsonian lattice regularized point of view-
+  winners_ja:
+  - 森川億人
+  winners_en:
+  - Okuto Morikawa
+  urls:
+    award: https://www2.yukawa.kyoto-u.ac.jp/~soryushi.shogakukai/
+- id: cv-jps-young-scientist
+  type: cv
+  kind: award
+  title_en: Young Scientist Award of the Physical Society of Japan
+  title_ja: 第18回日本物理学会若手奨励賞
+  start_date: 2024-03
+  end_date: 2024-03
+  organization_en: The Physical Society of Japan
+  organization_ja: 日本物理学会
+  source: cv(1).tex
+  researchmap_id: '43843146'
+  researchmap_type: awards
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  description_ja: 格子場の理論におけるgeneralized symmetryの研究
+  description_en: Studies on generalized symmetries in lattice field theory
+  winners_ja:
+  - 森川億人
+  winners_en:
+  - Okuto Morikawa
+  urls:
+    award: https://www.jps.or.jp/activities/awards/jusyosya/wakate2024.php
+- id: cv-ptep-editors-choice
+  type: cv
+  kind: award
+  title_en: PTEP Editors’ Choice Award
+  title_ja: null
+  start_date: 2023-03
+  end_date: 2023-03
+  organization_en: The Physical Society of Japan
+  organization_ja: null
+  source: cv(1).tex
+  researchmap_id: '41604926'
+  researchmap_type: awards
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  description_en: Picked up in JPS Hot Topics and JPS Magazine BUTSURI.
+  winners_en:
+  - Motokazu Abe
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  urls:
+    jps_hot_topics: https://doi.org/10.7566/JPSHT.3.010
+    jps_butsuri: https://doi.org/10.11316/butsuri.78.7_419
+  related_publication:
+    authors:
+    - M. Abe
+    - O. Morikawa
+    - H. Suzuki
+    title: Fractional topological charge in lattice Abelian gauge theory
+    journal: PTEP 2023, no.2, 023B03 (2023)
+  description_ja: JPS Hot Topicsおよび日本物理学会誌「日本物理学会誌」に紹介記事掲載。
+- id: cv-particle-physics-medal-2021
+  type: cv
+  kind: award
+  title_en: 'Particle Physics Medal: Young Scientist Award in Theoretical Particle Physics'
+  title_ja: 第16回素粒子メダル奨励賞
+  start_date: 2021-09
+  end_date: 2021-09
+  organization_en: Japan Particle and Nuclear Theory Forum
+  organization_ja: 素粒子論グループ
+  source: cv(1).tex
+  urls:
+    award: http://www2.yukawa.kyoto-u.ac.jp/~sg.www/syorei_s/
+  researchmap_id: '33710967'
+  researchmap_type: awards
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  winners_ja:
+  - 森川億人
+  - 高浦大雅
+  winners_en:
+  - Okuto Morikawa
+  - Hiromasa Takaura
+  researchmap_date: 2021-09
+- id: cv-phd-representative
+  type: cv
+  kind: award
+  title_en: Representative of the graduates (Ph.D.)
+  title_ja: 九州大学大学院学位記授与式 修了生総代（博士）
+  start_date: 2021-03
+  end_date: 2021-03
+  organization_en: Kyushu University
+  organization_ja: null
+  source: cv(1).tex
+  researchmap_id: '31987121'
+  researchmap_type: others
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  description_ja: '博士総代答辞
+
+    https://youtu.be/DaorDMritQs'
+  description_en: 'Valedictory speech (in Japanese only)
+
+    https://youtu.be/DaorDMritQs'
+- id: cv-ikushi-prize
+  type: cv
+  kind: award
+  title_en: 11th Ikushi Prize
+  title_ja: 第11回育志賞
+  start_date: 2021-03
+  end_date: 2021-03
+  organization_en: Japan Society for the Promotion of Science
+  organization_ja: 日本学術振興会
+  source: cv(1).tex
+  researchmap_id: '31535711'
+  researchmap_type: awards
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  winners_ja:
+  - 森川億人
+  winners_en:
+  - Okuto Morikawa
+  researchmap_date: 2021-01
+  urls:
+    award: https://www.jsps.go.jp/j-ikushi-prize/
+- id: cv-bs-representative
+  type: cv
+  kind: award
+  title_en: Representative of the graduates (Bachelor of Science)
+  title_ja: 九州大学学位記授与式 卒業生総代（理学）
+  start_date: 2016-03
+  end_date: 2016-03
+  organization_en: Kyushu University
+  organization_ja: null
+  source: cv(1).tex
+  researchmap_id: '31987116'
+  researchmap_type: others
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+- id: cv-shinkawa-excellence
+  type: cv
+  kind: award
+  title_en: Excellence Award of Shinkawa High School
+  title_ja: 新川高等学校学校賞
+  start_date: 2012-03
+  end_date: 2012-03
+  organization_en: Shinkawa High School, Aichi
+  organization_ja: 愛知県立新川高等学校
+  source: cv(1).tex
+  researchmap_id: '46792620'
+  researchmap_type: awards
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  winners_ja:
+  - 森川億人
+  winners_en:
+  - Okuto Morikawa
+- id: cv-corenet-rcnp
+  type: cv
+  kind: grant
+  title_en: COREnet project of RCNP, The University of Osaka
+  title_ja: null
+  start_date: 2026-04
+  end_date: 2028-03
+  grant_number: null
+  source: cv(1).tex
+  researchmap_id: '53852324'
+  researchmap_type: research_projects
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  project_title_ja: 'Exceptional Points in Nuclear Reactions: From Resonance Poles to Observable Line Shapes'
+  project_title_en: 'Exceptional Points in Nuclear Reactions: From Resonance Poles to Observable Line Shapes'
+  funding_organization_ja: 大阪大学
+  funding_organization_en: The University of Osaka
+  system_name_ja: COREnet project of RCNP
+  system_name_en: COREnet project of RCNP
+  role: coinvestigator
+- id: cv-kakenhi-25k17402
+  type: cv
+  kind: grant
+  title_en: JSPS Grant-in-Aid for Scientific Research (KAKENHI)
+  title_ja: null
+  start_date: 2025-04
+  end_date: 2030-03
+  grant_number: JP25K17402
+  source: cv(1).tex
+  researchmap_id: '49716253'
+  researchmap_type: research_projects
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  project_title_ja: 一般化対称性の格子ゲージ理論の観点からの厳密な定式化
+  project_title_en: Rigorous formulation of the generalized symmetries from the viewpoint of lattice gauge theory
+  funding_organization_ja: 日本学術振興会
+  funding_organization_en: Japan Society for the Promotion of Science
+  system_name_ja: 科学研究費助成事業
+  system_name_en: Grants-in-Aid for Scientific Research Grant-in-Aid for Early-Career Scientists
+  role: principal_investigator
+  amount:
+    total_cost: '4810000'
+    direct_cost: '3700000'
+    indirect_cost: '1110000'
+  urls:
+    kaken: https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25K17402
+- id: cv-riken-incentive-2025
+  type: cv
+  kind: grant
+  title_en: RIKEN FY2025 Incentive Research Projects
+  title_ja: null
+  start_date: 2025-04
+  end_date: 2027-03
+  grant_number: null
+  source: cv(1).tex
+  researchmap_id: '49716188'
+  researchmap_type: research_projects
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  project_title_ja: Gradient flow for solving the over-smearing problem of topological charge
+  project_title_en: Gradient flow for solving the over-smearing problem of topological charge
+  funding_organization_ja: 筑波大学
+  funding_organization_en: University of Tsukuba
+  system_name_ja: 2025年度学際共同利用プログラム
+  system_name_en: Multidisciplinary Cooperative Research Program 2025
+  role: principal_investigator
+  amount:
+    total_cost: '3000000'
+- id: cv-riken-spdr
+  type: cv
+  kind: grant
+  title_en: RIKEN Special Postdoctoral Researcher Program
+  title_ja: null
+  start_date: 2024-04
+  end_date: 2027-03
+  grant_number: null
+  source: cv(1).tex
+  researchmap_id: '49716172'
+  researchmap_type: research_projects
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  project_title_ja: 一般化された対称性の格子ゲージ理論の観点からの厳密な定式化
+  project_title_en: Rigorous formulation of the generalized symmetries from the viewpoint of lattice gauge theory
+  funding_organization_ja: 理化学研究所
+  funding_organization_en: RIKEN
+  system_name_ja: 基礎科学特別研究員制度
+  system_name_en: Special Postdoctoral Researcher Program
+  role: principal_investigator
+  amount:
+    total_cost: '3000000'
+- id: cv-kakenhi-21j30003
+  type: cv
+  kind: grant
+  title_en: JSPS Grant-in-Aid for Scientific Research (KAKENHI)
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2024-03
+  grant_number: JP21J30003
+  source: cv(1).tex
+  researchmap_id: '33074245'
+  researchmap_type: research_projects
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  project_title_ja: 場の量子論に対する非摂動論的手法とその超弦理論への応用
+  project_title_en: Nonperturbative method for quantum field theory and its application to superstring theory
+  funding_organization_ja: 日本学術振興会
+  funding_organization_en: Japan Society for the Promotion of Science
+  system_name_ja: 科学研究費助成事業 特別研究員奨励費
+  system_name_en: Grants-in-Aid for Scientific Research Grant-in-Aid for JSPS Fellows
+  amount:
+    total_cost: '4030000'
+    direct_cost: '3100000'
+    indirect_cost: '930000'
+  urls:
+    kaken: https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-21J30003
+  source_note: Grant-number period and KAKEN URL supplied by the author; ResearchMap metadata corresponds to the related JSPS
+    Fellows project.
+- id: cv-kakenhi-22kj2096
+  type: cv
+  kind: grant
+  title_en: JSPS Grant-in-Aid for Scientific Research (KAKENHI)
+  title_ja: 科学研究費助成事業 特別研究員奨励費
+  start_date: 2023-04
+  end_date: 2024-03
+  grant_number: JP22KJ2096
+  project_title_ja: 場の量子論に対する非摂動論的手法とその超弦理論への応用
+  project_title_en: Nonperturbative method for quantum field theory and its application to superstring theory
+  funding_organization_ja: 日本学術振興会
+  funding_organization_en: Japan Society for the Promotion of Science
+  system_name_ja: 科学研究費助成事業 特別研究員奨励費
+  system_name_en: Grants-in-Aid for Scientific Research Grant-in-Aid for JSPS Fellows
+  researchmap_parent_id: '33074245'
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  urls:
+    kaken: https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-22KJ2096
+  source: author-supplied KAKEN metadata; related ResearchMap project retained via researchmap_parent_id
+  researchmap_id: '42217777'
+  researchmap_type: research_projects
+  amount:
+    total_cost: '1300000'
+    direct_cost: '1000000'
+    indirect_cost: '300000'
+- id: cv-kakenhi-18j20935
+  type: cv
+  kind: grant
+  title_en: JSPS Grant-in-Aid for Scientific Research (KAKENHI)
+  title_ja: null
+  start_date: 2018-04
+  end_date: 2021-03
+  grant_number: JP18J20935
+  source: cv(1).tex
+  researchmap_id: '26388540'
+  researchmap_type: research_projects
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  project_title_ja: 場の理論と超弦理論に対する非摂動論的アプローチ
+  project_title_en: Nonperturbative approach to field theory and superstring theory
+  funding_organization_ja: 日本学術振興会
+  funding_organization_en: Japan Society for the Promotion of Science
+  system_name_ja: 科学研究費助成事業 特別研究員奨励費
+  system_name_en: Grants-in-Aid for Scientific Research Grant-in-Aid for JSPS Fellows
+  amount:
+    total_cost: '2200000'
+    direct_cost: '2200000'
+    indirect_cost: '0'
+  urls:
+    kaken: https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-18J20935/
+- id: cv-jasso
+  type: cv
+  kind: grant
+  title_en: JASSO Scholarship
+  title_ja: null
+  start_date: 2016-04
+  end_date: 2018-03
+  grant_number: null
+  source: cv(1).tex
+- id: cv-kyushu-honors-2014b
+  type: cv
+  kind: grant
+  title_en: Kyushu University Honors Scholarship
+  title_ja: 九州大学特別枠奨学金、九州大学
+  start_date: 2014-10
+  end_date: 2015-03
+  grant_number: null
+  source: cv(1).tex
+  researchmap_id: '46978750'
+  researchmap_type: others
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+- id: cv-kyushu-honors-2014a
+  type: cv
+  kind: grant
+  title_en: Kyushu University Honors Scholarship
+  title_ja: null
+  start_date: 2014-04
+  end_date: 2014-09
+  grant_number: null
+  source: cv(1).tex
+- id: cv-membership-particle-forum
+  type: cv
+  kind: membership
+  title_en: Japan Particle and Nuclear Theory Forum
+  title_ja: 素粒子論グループ
+  start_date: '2017'
+  source: cv(1).tex
+  researchmap_id: '32007992'
+  researchmap_type: association_memberships
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+- id: cv-membership-jps
+  type: cv
+  kind: membership
+  title_en: The Physical Society of Japan
+  title_ja: 日本物理学会
+  start_date: '2016'
+  source: cv(1).tex
+  researchmap_id: '26018555'
+  researchmap_type: association_memberships
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+- id: cv-organizer-qft-2025
+  type: cv
+  kind: organizer
+  title_en: Organizer, chair and editor
+  title_ja: null
+  start_date: '2025-03-10'
+  end_date: '2025-03-14'
+  event_en: 'Kyushu IAS-iTHEMS conference: Non-perturbative methods in QFT'
+  event_ja: null
+  organization_en: Institute for Advanced Study, Kyushu University
+  source: cv(1).tex
+- id: cv-organizer-grappa-qft
+  type: cv
+  kind: organizer
+  title_en: Organizer and chair
+  title_ja: null
+  start_date: 2024-11
+  event_en: GRAPPA-QFT Seminar Series
+  event_ja: null
+  url: https://sites.google.com/view/grappa-qft
+  source: cv(1).tex
+- id: cv-service-mathscinet
+  type: cv
+  kind: professional_service
+  title_en: Reviewer for Mathematical Reviews
+  title_ja: Reviewer for Mathematical Reviews (MathSciNet)
+  start_date: '2026'
+  organization_en: MathSciNet, American Mathematical Society
+  source: cv(1).tex
+  researchmap_id: '54704153'
+  researchmap_type: committee_memberships
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: American Mathematical Society
+- id: cv-service-scipost
+  type: cv
+  kind: professional_service
+  title_en: Referee
+  title_ja: null
+  start_date: '2026'
+  organization_en: SciPost Physics Core, SciPost Foundation
+  source: cv(1).tex
+- id: cv-service-jhep
+  type: cv
+  kind: professional_service
+  title_en: Referee
+  title_ja: null
+  start_date: '2026'
+  organization_en: Journal of High Energy Physics, Springer
+  source: cv(1).tex
+- id: cv-service-next-research
+  type: cv
+  kind: professional_service
+  title_en: Referee
+  title_ja: null
+  start_date: '2026'
+  organization_en: Next Research, Elsevier
+  source: cv(1).tex
+- id: cv-service-riken-scientists
+  type: cv
+  kind: professional_service
+  title_en: Reviewer
+  title_ja: Reviewer
+  start_date: '2026'
+  organization_en: RIKEN Scientists’ Assembly Steering Committee
+  source: cv(1).tex
+  researchmap_id: '51832268'
+  researchmap_type: committee_memberships
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: RIKEN Scientists’ Assembly Steering Committee
+- id: cv-service-ijmpa
+  type: cv
+  kind: professional_service
+  title_en: Editor
+  title_ja: Guest Editor
+  start_date: '2025'
+  end_date: '2026'
+  organization_en: International Journal of Modern Physics A, World Scientific
+  source: cv(1).tex
+  researchmap_id: '50214710'
+  researchmap_type: committee_memberships
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: International Journal of Modern Physics A
+- id: cv-science-lab-2026b
+  type: cv
+  kind: teaching
+  title_en: Science Laboratory
+  title_ja: 基礎科学実験
+  start_date: 2026-10
+  end_date: 2027-03
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+- id: cv-physics2-2026b
+  type: cv
+  kind: teaching
+  title_en: Physics II
+  title_ja: 物理学II
+  start_date: 2026-10
+  end_date: 2027-03
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+- id: cv-science-lab-2026a
+  type: cv
+  kind: teaching
+  title_en: Science Laboratory
+  title_ja: 基礎科学実験
+  start_date: 2026-04
+  end_date: 2026-09
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+  researchmap_id: '53029300'
+  researchmap_type: teaching_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: 拓殖大学
+- id: cv-physics1-2026a
+  type: cv
+  kind: teaching
+  title_en: Physics I
+  title_ja: 物理学I
+  start_date: 2026-04
+  end_date: 2026-09
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+  researchmap_id: '53029290'
+  researchmap_type: teaching_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: 拓殖大学
+- id: cv-science-lab-2025b
+  type: cv
+  kind: teaching
+  title_en: Science Laboratory
+  title_ja: 基礎科学実験
+  start_date: 2025-10
+  end_date: 2026-03
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+  researchmap_id: '50418358'
+  researchmap_type: teaching_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: 拓殖大学
+- id: cv-physics2-2025b
+  type: cv
+  kind: teaching
+  title_en: Physics II
+  title_ja: 物理学II
+  start_date: 2025-10
+  end_date: 2026-03
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+  researchmap_id: '50418357'
+  researchmap_type: teaching_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: 拓殖大学
+- id: cv-science-lab-2025a
+  type: cv
+  kind: teaching
+  title_en: Science Laboratory
+  title_ja: 基礎科学実験
+  start_date: 2025-04
+  end_date: 2025-09
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+  researchmap_id: '49641963'
+  researchmap_type: teaching_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: 拓殖大学
+- id: cv-physics1-2025a
+  type: cv
+  kind: teaching
+  title_en: Physics I
+  title_ja: 物理学I
+  start_date: 2025-04
+  end_date: 2025-09
+  role: lecturer
+  organization_en: Takushoku University
+  source: cv(1).tex
+  researchmap_id: '49641953'
+  researchmap_type: teaching_experience
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: 拓殖大学
+- id: cv-ta-mechanics-2017
+  type: cv
+  kind: teaching
+  title_en: Exercise in Mechanics
+  title_ja: null
+  start_date: 2017-04
+  end_date: 2017-09
+  role: teaching_assistant
+  organization_en: Department of Physics, Kyushu University
+  source: cv(1).tex
+- id: cv-ta-fundamental-physics
+  type: cv
+  kind: teaching
+  title_en: Exercise in Fundamental Physics
+  title_ja: null
+  start_date: 2016-10
+  end_date: 2017-03
+  role: teaching_assistant
+  organization_en: Department of Physics, Kyushu University
+  source: cv(1).tex
+- id: cv-ta-mechanics-2016
+  type: cv
+  kind: teaching
+  title_en: Exercise in Mechanics
+  title_ja: null
+  start_date: 2016-04
+  end_date: 2016-09
+  role: teaching_assistant
+  organization_en: Department of Physics, Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-onoda
+  type: cv
+  kind: mentorship
+  title_en: Soma Onoda
+  title_ja: null
+  start_date: 2022-04
+  level: Master & PhD
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-abe
+  type: cv
+  kind: mentorship
+  title_en: Motokazu Abe
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2026-03
+  level: Master & PhD
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-honda
+  type: cv
+  kind: mentorship
+  title_en: Yamato Honda
+  title_ja: null
+  start_date: 2023-04
+  end_date: 2024-03
+  level: Master
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-nagoya
+  type: cv
+  kind: mentorship
+  title_en: Yuta Nagoya
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2024-03
+  level: PhD
+  organization_en: Osaka University
+  source: cv(1).tex
+- id: cv-mentorship-wada
+  type: cv
+  kind: mentorship
+  title_en: Hiroki Wada
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2024-03
+  level: Master & PhD
+  organization_en: Osaka University
+  source: cv(1).tex
+- id: cv-mentorship-tanaka
+  type: cv
+  kind: mentorship
+  title_en: Mizuki Tanaka
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2022-03
+  level: Master
+  organization_en: Osaka University
+  source: cv(1).tex
+- id: cv-mentorship-ashie
+  type: cv
+  kind: mentorship
+  title_en: Masahiro Ashie
+  title_ja: null
+  start_date: 2019-04
+  end_date: 2021-03
+  level: Master
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-takeuchi
+  type: cv
+  kind: mentorship
+  title_en: Kengo Takeuchi
+  title_ja: null
+  start_date: 2019-04
+  end_date: 2021-03
+  level: Master
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-ishikawa
+  type: cv
+  kind: mentorship
+  title_en: Kosuke Ishikawa
+  title_ja: null
+  start_date: 2018-04
+  end_date: 2020-03
+  level: Master
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-nakayama
+  type: cv
+  kind: mentorship
+  title_en: Akira Nakayama
+  title_ja: null
+  start_date: 2018-04
+  end_date: 2020-03
+  level: Master
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-shibata
+  type: cv
+  kind: mentorship
+  title_en: Kazuya Shibata
+  title_ja: null
+  start_date: 2018-04
+  end_date: 2020-03
+  level: Master
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-goto
+  type: cv
+  kind: mentorship
+  title_en: Kiichi Goto
+  title_ja: null
+  start_date: 2016-04
+  end_date: 2018-03
+  level: Undergraduate
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-kanno
+  type: cv
+  kind: mentorship
+  title_en: Hayato Kanno
+  title_ja: null
+  start_date: 2016-04
+  end_date: 2018-03
+  level: Undergraduate
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-mentorship-toita
+  type: cv
+  kind: mentorship
+  title_en: Shintaro Toita
+  title_ja: null
+  start_date: 2016-04
+  end_date: 2018-03
+  level: Undergraduate
+  organization_en: Kyushu University
+  source: cv(1).tex
+- id: cv-visit-durham
+  type: cv
+  kind: visit
+  title_en: Durham University, UK
+  title_ja: null
+  start_date: 2025-02
+  end_date: 2025-03
+  source: cv(1).tex
+- id: cv-visit-yitp-2024
+  type: cv
+  kind: visit
+  title_en: YITP, Kyoto University, Japan
+  title_ja: null
+  start_date: 2024-10
+  end_date: 2024-11
+  source: cv(1).tex
+- id: cv-visit-ncts
+  type: cv
+  kind: visit
+  title_en: NCTS, National Taiwan University, Taiwan
+  title_ja: null
+  start_date: 2024-08
+  end_date: 2024-08
+  source: cv(1).tex
+- id: cv-visit-yitp-2020
+  type: cv
+  kind: visit
+  title_en: YITP, Kyoto University, Japan
+  title_ja: null
+  start_date: 2020-09
+  end_date: 2020-09
+  source: cv(1).tex
+- id: cv-visit-sogang
+  type: cv
+  kind: visit
+  title_en: Sogang University, Korea
+  title_ja: null
+  start_date: 2019-01
+  end_date: 2019-01
+  source: cv(1).tex
+- id: cv-language-japanese
+  type: cv
+  kind: language
+  title_en: Japanese
+  title_ja: null
+  level: Native
+  source: cv(1).tex
+- id: cv-language-english
+  type: cv
+  kind: language
+  title_en: English
+  title_ja: null
+  source: cv(1).tex
+- id: cv-skill-programming
+  type: cv
+  kind: skill
+  title_en: Programming / scientific computing
+  title_ja: null
+  skills:
+  - C
+  - C++
+  - FORTRAN 77
+  - Fortran 90/95
+  - Python
+  - Julia
+  - Maxima
+  - SageMath
+  - Mathematica
+  - Emacs Lisp
+  source: cv(1).tex
+- id: cv-social-wolfram-2026
+  type: cv
+  kind: social_service
+  title_en: Wolfram Community, Contributor
+  title_ja: null
+  start_date: '2026'
+  end_date: '2026'
+  work_title_en: Nonperturbative formulation of resonances in quantum mechanics based on exact WKB method
+  url: https://community.wolfram.com/groups/-/m/t/3635564
+  source: cv(1).tex
+- id: cv-social-macs-2025
+  type: cv
+  kind: social_service
+  title_en: Mathematical Exchange Platform Bridging RIKEN and Kyoto University MACS, Lecturer
+  title_ja: 理化学研究所と京大MACSで築く数理交流プラットフォーム
+  start_date: '2025'
+  end_date: '2025'
+  source: cv(1).tex
+  researchmap_id: '51519789'
+  researchmap_type: social_contribution
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: 京都大学MACS
+  organization_en: Kyoto University MACS
+- id: cv-social-ikushi-2022
+  type: cv
+  kind: social_service
+  title_en: Interview Survey of JSPS Ikushi Prize, Filming support, Consultant, and Official expert
+  title_ja: null
+  start_date: '2022'
+  end_date: '2022'
+  source: cv(1).tex
+- id: cv-referee-report-winding
+  type: cv
+  kind: activity
+  title_en: Referee Report on “A discrete formulation for three-dimensional winding number”
+  title_ja: Referee Report on "A discrete formulation for three-dimensional winding number," SciPost Phys. Core 9, 026 (2026)
+  start_date: '2026-04-09'
+  end_date: '2026-04-09'
+  source: cv(1).tex
+  researchmap_id: '53574196'
+  researchmap_type: academic_contribution
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: SciPost Foundation
+  organization_en: SciPost Foundation
+- id: cv-organizer-ithems-mathphys
+  type: cv
+  kind: activity
+  title_en: Organizer, iTHEMS Math-Phys Study Group Seminar Series, RIKEN
+  title_ja: null
+  start_date: 2026-04
+  source: cv(1).tex
+- id: cv-chair-jps-2025
+  type: cv
+  kind: activity
+  title_en: Session chair, 2025 Annual (80th) Meeting of the Physical Society of Japan, Hiroshima University
+  title_ja: 日本物理学会第80回年次大会 座長
+  start_date: '2025-09-16'
+  end_date: '2025-09-19'
+  source: cv(1).tex
+  researchmap_id: '50783363'
+  researchmap_type: academic_contribution
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: 日本物理学会
+  organization_en: The Physical Society of Japan
+- id: cv-chair-strings-2025
+  type: cv
+  kind: activity
+  title_en: Session chair, Strings and Fields 2025, YITP
+  title_ja: 場の理論と弦理論2025 座長
+  start_date: '2025-07-28'
+  end_date: '2025-08-01'
+  source: cv(1).tex
+  researchmap_id: '50638884'
+  researchmap_type: academic_contribution
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: 京都大学基礎物理学研究所
+  organization_en: YITP, Kyoto University
+- id: cv-organizer-ithems-phys
+  type: cv
+  kind: activity
+  title_en: Organizer, iTHEMS-phys Study Group Seminar Series, RIKEN
+  title_ja: null
+  start_date: 2025-04
+  source: cv(1).tex
+- id: cv-chair-jps-2024
+  type: cv
+  kind: activity
+  title_en: Session chair, 2024 Annual (79th) Meeting of the Physical Society of Japan, Hokkaido University
+  title_ja: 日本物理学会第79回年次大会 座長
+  start_date: '2024-09-16'
+  end_date: '2024-09-19'
+  source: cv(1).tex
+  researchmap_id: '48179055'
+  researchmap_type: academic_contribution
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: 日本物理学会
+  organization_en: The Physical Society of Japan
+- id: cv-chair-lattice2023
+  type: cv
+  kind: activity
+  title_en: Session chair, The 40th International Symposium on Lattice Field Theory (Lattice2023), Fermilab, US
+  title_ja: Session chair, the 40th International Symposium on Lattice Field Theory (Lattice2023)
+  start_date: '2023-07-31'
+  end_date: '2023-08-04'
+  source: cv(1).tex
+  researchmap_id: '42961529'
+  researchmap_type: academic_contribution
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+- id: cv-organizer-osaka-seminar-2022
+  type: cv
+  kind: activity
+  title_en: Organizer, Particle Physics Theory Group Seminar Series, Osaka University
+  title_ja: null
+  start_date: 2022-10
+  end_date: 2023-10
+  source: cv(1).tex
+- id: cv-chair-jps-2021
+  type: cv
+  kind: activity
+  title_en: Session chair, 2021 Autumn Meeting of the Physical Society of Japan, Online
+  title_ja: 日本物理学会2021年秋季大会 座長
+  start_date: '2021-09-14'
+  end_date: '2021-09-17'
+  source: cv(1).tex
+  researchmap_id: '42195016'
+  researchmap_type: academic_contribution
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  organization_ja: 日本物理学会
+  organization_en: The Physical Society of Japan
+- id: cv-organizer-osaka-seminar-2021
+  type: cv
+  kind: activity
+  title_en: Organizer, Particle Physics Theory Group Seminar Series, Osaka University
+  title_ja: null
+  start_date: 2021-04
+  end_date: 2021-10
+  source: cv(1).tex
+- id: cv-chair-yonupa-2020
+  type: cv
+  kind: activity
+  title_en: Session chair, YONUPA Summer School 2020, Online
+  title_ja: 素粒子若手オンライン研究会2020 座長
+  start_date: '2020-08-26'
+  end_date: '2020-08-28'
+  source: cv(1).tex
+  researchmap_id: '42195023'
+  researchmap_type: academic_contribution
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+- id: cv-organizer-kyushu-seminar
+  type: cv
+  kind: activity
+  title_en: Organizer, Particle Physics Theory Group Seminar Series, Kyushu University
+  title_ja: null
+  start_date: 2017-04
+  end_date: 2021-03
+  source: cv(1).tex
+- id: cv-research-interest-26019735
+  type: cv
+  kind: research_interest
+  title_en: Lattice field theory
+  title_ja: 格子場の理論
+  researchmap_id: '26019735'
+  researchmap_type: research_interests
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  source: researchmap
+- id: cv-research-interest-26019614
+  type: cv
+  kind: research_interest
+  title_en: Conformal field theory
+  title_ja: 共形場理論
+  researchmap_id: '26019614'
+  researchmap_type: research_interests
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  source: researchmap
+- id: cv-research-interest-26018297
+  type: cv
+  kind: research_interest
+  title_en: Quantum field theory
+  title_ja: 場の量子論
+  researchmap_id: '26018297'
+  researchmap_type: research_interests
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  source: researchmap
+- id: cv-research-interest-26018281
+  type: cv
+  kind: research_interest
+  title_en: Theoretical particle physics
+  title_ja: 素粒子論
+  researchmap_id: '26018281'
+  researchmap_type: research_interests
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  source: researchmap
+- id: cv-research-area-26018344
+  type: cv
+  kind: research_area
+  title_en: Theoretical studies related to particle-, nuclear-, cosmic ray and astro-physics
+  title_ja: 素粒子、原子核、宇宙線、宇宙物理に関する理論
+  discipline_en: Natural sciences
+  discipline_ja: 自然科学一般
+  researchmap_id: '26018344'
+  researchmap_type: research_areas
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  source: researchmap
+- id: cv-media-42730164
+  type: cv
+  kind: media_coverage
+  title_en: Fractional Topological Charge in Abelian Lattice Gauge Theory
+  title_ja: アーベル的格子ゲージ理論における分数トポロジカル電荷
+  start_date: 2023-07
+  organization_en: The Physical Society of Japan
+  organization_ja: 日本物理学会
+  event_en: JPS Magazine BUTSURI
+  event_ja: 日本物理学会誌
+  researchmap_id: '42730164'
+  researchmap_type: media_coverage
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  source: researchmap
