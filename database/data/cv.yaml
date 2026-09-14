@@ -1,17 +1,3 @@
-- id: cv-profile
-  type: cv
-  kind: profile
-  title_en: Okuto Morikawa
-  title_ja: 森川億人
-  email: okuto.morikawa@riken.jp
-  website: https://sites.google.com/view/o-morikawa
-  orcid: 0000-0002-0044-4491
-  github: https://github.com/o-morikawa
-  inspire: https://inspirehep.net/authors/1790648
-  researchmap: https://researchmap.jp/o-morikawa
-  source: cv(1).tex
-  name_kana: モリカワオクト
-  researchmap_id: R000002168
 - id: cv-career-2025-ithems-special-postdoc
   type: cv
   kind: career
@@ -202,16 +188,8 @@
   organization_en: Japan Particle and Nuclear Theory Forum
   organization_ja: 素粒子論グループ
   source: cv(1).tex
-  researchmap_id: '33710967'
-  researchmap_type: awards
-  researchmap_profile_url: https://researchmap.jp/o-morikawa
-  winners_ja:
-  - 森川億人
-  - 高浦大雅
-  winners_en:
-  - Okuto Morikawa
-  - Hiromasa Takaura
-  researchmap_date: 2021-09
+  urls:
+    award: http://www2.yukawa.kyoto-u.ac.jp/~sg.www/syorei_s/
 - id: cv-wolfram-staff-picks
   type: cv
   kind: award
@@ -222,6 +200,8 @@
   organization_en: Wolfram Research
   organization_ja: null
   source: cv(1).tex
+  urls:
+    award: https://community.wolfram.com/groups/-/m/t/3635564
 - id: cv-seitaro-nakamura
   type: cv
   kind: award
@@ -241,6 +221,8 @@
   - 森川億人
   winners_en:
   - Okuto Morikawa
+  urls:
+    award: https://www2.yukawa.kyoto-u.ac.jp/~soryushi.shogakukai/
 - id: cv-jps-young-scientist
   type: cv
   kind: award
@@ -260,6 +242,8 @@
   - 森川億人
   winners_en:
   - Okuto Morikawa
+  urls:
+    award: https://www.jps.or.jp/activities/awards/jusyosya/wakate2024.php
 - id: cv-ptep-editors-choice
   type: cv
   kind: award
@@ -273,21 +257,44 @@
   researchmap_id: '41604926'
   researchmap_type: awards
   researchmap_profile_url: https://researchmap.jp/o-morikawa
-  description_en: Picked up in JPS Hot Topics, https://doi.org/10.7566/JPSHT.3.010
+  description_en: Picked up in JPS Hot Topics and JPS Magazine BUTSURI.
   winners_en:
   - Motokazu Abe
   - Okuto Morikawa
   - Hiroshi Suzuki
+  urls:
+    jps_hot_topics: https://doi.org/10.7566/JPSHT.3.010
+    jps_butsuri: https://doi.org/10.11316/butsuri.78.7_419
+  related_publication:
+    authors:
+    - M. Abe
+    - O. Morikawa
+    - H. Suzuki
+    title: Fractional topological charge in lattice Abelian gauge theory
+    journal: PTEP 2023, no.2, 023B03 (2023)
+  description_ja: JPS Hot Topicsおよび日本物理学会誌「日本物理学会誌」に紹介記事掲載。
 - id: cv-particle-physics-medal-2021
   type: cv
   kind: award
   title_en: 'Particle Physics Medal: Young Scientist Award in Theoretical Particle Physics'
-  title_ja: null
+  title_ja: 第16回素粒子メダル奨励賞
   start_date: 2021-09
   end_date: 2021-09
   organization_en: Japan Particle and Nuclear Theory Forum
-  organization_ja: null
+  organization_ja: 素粒子論グループ
   source: cv(1).tex
+  urls:
+    award: http://www2.yukawa.kyoto-u.ac.jp/~sg.www/syorei_s/
+  researchmap_id: '33710967'
+  researchmap_type: awards
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  winners_ja:
+  - 森川億人
+  - 高浦大雅
+  winners_en:
+  - Okuto Morikawa
+  - Hiromasa Takaura
+  researchmap_date: 2021-09
 - id: cv-phd-representative
   type: cv
   kind: award
@@ -325,6 +332,8 @@
   winners_en:
   - Okuto Morikawa
   researchmap_date: 2021-01
+  urls:
+    award: https://www.jsps.go.jp/j-ikushi-prize/
 - id: cv-bs-representative
   type: cv
   kind: award
@@ -397,6 +406,8 @@
     total_cost: '4810000'
     direct_cost: '3700000'
     indirect_cost: '1110000'
+  urls:
+    kaken: https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-25K17402
 - id: cv-riken-incentive-2025
   type: cv
   kind: grant
@@ -446,7 +457,7 @@
   title_ja: null
   start_date: 2021-04
   end_date: 2024-03
-  grant_number: JP21J30003 (2021-2022), JP22KJ2096 (2023)
+  grant_number: JP21J30003
   source: cv(1).tex
   researchmap_id: '33074245'
   researchmap_type: research_projects
@@ -461,6 +472,29 @@
     total_cost: '4030000'
     direct_cost: '3100000'
     indirect_cost: '930000'
+  urls:
+    kaken: https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-21J30003
+  source_note: Grant-number period and KAKEN URL supplied by the author; ResearchMap metadata corresponds to the related JSPS
+    Fellows project.
+- id: cv-kakenhi-22kj2096
+  type: cv
+  kind: grant
+  title_en: JSPS Grant-in-Aid for Scientific Research (KAKENHI)
+  title_ja: 科学研究費助成事業 特別研究員奨励費
+  start_date: 2023-04
+  end_date: 2024-03
+  grant_number: JP22KJ2096
+  project_title_ja: 場の量子論に対する非摂動論的手法とその超弦理論への応用
+  project_title_en: Nonperturbative method for quantum field theory and its application to superstring theory
+  funding_organization_ja: 日本学術振興会
+  funding_organization_en: Japan Society for the Promotion of Science
+  system_name_ja: 科学研究費助成事業 特別研究員奨励費
+  system_name_en: Grants-in-Aid for Scientific Research Grant-in-Aid for JSPS Fellows
+  researchmap_parent_id: '33074245'
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  urls:
+    kaken: https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-22KJ2096
+  source: author-supplied KAKEN metadata; related ResearchMap project retained via researchmap_parent_id
 - id: cv-kakenhi-18j20935
   type: cv
   kind: grant
@@ -483,6 +517,8 @@
     total_cost: '2200000'
     direct_cost: '2200000'
     indirect_cost: '0'
+  urls:
+    kaken: https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-18J20935/
 - id: cv-jasso
   type: cv
   kind: grant

@@ -5,13 +5,26 @@ All YAML files contain a top-level list of records.
 Common fields:
 
 - `id`: stable public identifier. INSPIRE-backed scholarly publications use the INSPIRE BibTeX key verbatim.
-- `type`: top-level entity class (`publications`, `presentations`, `cv`, `books`, `software`).
+- `type`: top-level entity class (`profile`, `publications`, `presentations`, `cv`, `books`, `software`).
 - `kind`: subtype within the entity class.
 - `title_en`, `title_ja`: English and Japanese title/name.
 - `event_en`, `event_ja`: bilingual meeting/seminar/event name.
 - `organization_en`, `organization_ja`: bilingual institution/organization name where relevant.
 - `source`: provenance of the base record.
 - `researchmap_id`, `researchmap_type`: ResearchMap provenance when a record was matched/imported.
+
+Profile/root-entity fields:
+
+- `type: profile`, `kind: profile`: the single root person entity.
+- `identifiers`: machine-readable stable identifiers (ORCID, INSPIRE author id, researchmap slug/internal id).
+- `urls`: canonical public links (Website, ORCID resolver, GitHub, INSPIRE, researchmap).
+- Flat compatibility fields (`website`, `orcid`, `github`, `inspire`, `researchmap`) are retained for simple consumers.
+
+Grant/award link fields:
+
+- `urls.kaken`: KAKEN project page for the corresponding grant number.
+- `urls.award`: official award/source page when supplied.
+- `urls.jps_hot_topics`, `urls.jps_butsuri`: article coverage associated with the PTEP Editors' Choice record.
 
 Presentation-specific fields:
 
