@@ -1,17 +1,1307 @@
-- id: morikawa-ogawa-2026-qft-tunneling
+- id: Morikawa:2026nzp
   type: publications
   kind: paper
-  authors:
-    - O. Morikawa
-    - S. Ogawa
-  title: A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling
-  year: 2026
   status: preprint
-  affiliation_period: RIKEN
-  arxiv: null
-  doi: null
-  inspire: null
+  authors:
+  - Okuto Morikawa
+  title: 'Two Languages for the Same Resonance: From Nuclear Decay to Black-Hole Ringdown'
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2608.29806
+  arxiv: '2608.29806'
+  arxiv_url: https://arxiv.org/abs/2608.29806
+  arxiv_date: 2026-08
+  arxiv_class: gr-qc
+  report_number: RIKEN-iTHEMS-Report-26
+  inspire_bibkey: Morikawa:2026nzp
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2026nzp
   topics:
-    - quantum resonance
-    - scattering
-    - QFT
+  - black holes
+  - quasinormal modes
+  - nuclear reactions
+  - quantum resonance
+- id: Morikawa:2026fzn
+  type: publications
+  kind: paper
+  status: preprint
+  authors:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  - Takuya Hirose
+  title: Riesz–Laurent representation of black-hole scattering and sourced response at exceptional points
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2608.14752
+  title_bibtex: Riesz--Laurent representation of black-hole scattering and sourced response at exceptional points
+  arxiv: '2608.14752'
+  arxiv_url: https://arxiv.org/abs/2608.14752
+  arxiv_date: 2026-08
+  arxiv_class: gr-qc
+  report_number: RIKEN-iTHEMS-Report-26
+  inspire_bibkey: Morikawa:2026fzn
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2026fzn
+  topics:
+  - black holes
+  - quasinormal modes
+  - exceptional points
+  - scattering theory
+- id: Watanabe:2026ymb
+  type: publications
+  kind: paper
+  status: preprint
+  authors:
+  - Hiromasa Watanabe
+  - Issaku Kanamori
+  - Okuto Morikawa
+  - Yuki Nagai
+  - Yuya Tanizaki
+  - Akio Tomiya
+  title: Numerical Hints for Dyon Condensation at θ=2π via Wilson–'t Hooft Loops in SU(2) Yang–Mills Theory
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2606.13428
+  title_bibtex: Numerical Hints for Dyon Condensation at $\theta=2\pi$ via Wilson--'t~Hooft Loops in $SU(2)$ Yang--Mills Theory
+  arxiv: '2606.13428'
+  arxiv_url: https://arxiv.org/abs/2606.13428
+  arxiv_date: 2026-06
+  arxiv_class: hep-lat
+  report_number: YITP-26-11, RIKEN-iTHEMS-Report-26
+  inspire_bibkey: Watanabe:2026ymb
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AWatanabe%3A2026ymb
+  topics:
+  - lattice gauge theory
+  - confinement
+  - lattice field theory
+- id: Ogawa:2026opj
+  type: publications
+  kind: paper
+  status: preprint
+  authors:
+  - Shoya Ogawa
+  - Okuto Morikawa
+  - Takuya Hirose
+  title: Quasinormal modes and continuum response of de Sitter black holes via complex scaling method
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2605.03277
+  arxiv: '2605.03277'
+  arxiv_url: https://arxiv.org/abs/2605.03277
+  arxiv_date: 2026-05
+  arxiv_class: hep-th
+  report_number: RIKEN-iTHEMS-Report-26
+  inspire_bibkey: Ogawa:2026opj
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AOgawa%3A2026opj
+  topics:
+  - black holes
+  - quasinormal modes
+  - complex scaling method
+- id: Ogawa:2026veu
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Shoya Ogawa
+  - Takuya Hirose
+  - Okuto Morikawa
+  title: Complex scaling approach to quasinormal modes of Schwarzschild and Reissner–Nordström black holes
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2604.20442
+  title_bibtex: Complex scaling approach to quasinormal modes of Schwarzschild and Reissner--Nordstr{\"o}m black holes
+  arxiv: '2604.20442'
+  arxiv_url: https://arxiv.org/abs/2604.20442
+  arxiv_date: 2026-04
+  arxiv_class: hep-th
+  doi: 10.1093/ptep/ptag160
+  doi_url: https://doi.org/10.1093/ptep/ptag160
+  journal: PTEP
+  report_number: RIKEN-iTHEMS-Report-26
+  inspire_bibkey: Ogawa:2026veu
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AOgawa%3A2026veu
+  topics:
+  - black holes
+  - quasinormal modes
+  - complex scaling method
+- id: Morikawa:2026wdx
+  type: publications
+  kind: proceedings
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: Direct numerical simulation of 't Hooft partition function and (de)confining phase
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2601.20159
+  arxiv: '2601.20159'
+  arxiv_url: https://arxiv.org/abs/2601.20159
+  arxiv_date: 2026-01
+  arxiv_class: hep-lat
+  doi: 10.22323/1.518.0182
+  doi_url: https://doi.org/10.22323/1.518.0182
+  journal: PoS
+  volume: LATTICE2025
+  pages: '182'
+  report_number: RIKEN-iTHEMS-Report-26, KYUSHU-HET-351
+  inspire_bibkey: Morikawa:2026wdx
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2026wdx
+  topics:
+  - confinement
+  - lattice field theory
+- id: Morikawa:2025inx
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  - Soma Onoda
+  title: Geometric phase from encircling an exceptional point of a quantum resonance in the complex-scaling method
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2512.24528
+  arxiv: '2512.24528'
+  arxiv_url: https://arxiv.org/abs/2512.24528
+  arxiv_date: 2025-12
+  arxiv_class: quant-ph
+  doi: 10.1103/pf6y-lxzp
+  doi_url: https://doi.org/10.1103/pf6y-lxzp
+  journal: Phys. Rev. A
+  volume: '113'
+  number: '5'
+  pages: '052225'
+  report_number: RIKEN-iTHEMS-Report-25, KYUSHU-HET-348
+  inspire_bibkey: Morikawa:2025inx
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2025inx
+  topics:
+  - quantum resonance
+  - exceptional points
+  - quantum mechanics
+- id: Morikawa:2025ezl
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  title: Exact WKB method for radial Schrödinger equation
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2510.11766
+  title_bibtex: Exact WKB method for radial Schr{\"o}dinger equation
+  arxiv: '2510.11766'
+  arxiv_url: https://arxiv.org/abs/2510.11766
+  arxiv_date: 2025-10
+  arxiv_class: quant-ph
+  doi: 10.1088/1751-8121/ae57ec
+  doi_url: https://doi.org/10.1088/1751-8121/ae57ec
+  journal: 'J. Phys. A: Math. Theor.'
+  volume: '59'
+  pages: '145202'
+  report_number: RIKEN-iTHEMS-Report-25
+  inspire_bibkey: Morikawa:2025ezl
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2025ezl
+  topics:
+  - exact WKB
+  - quantum resonance
+  - quantum mechanics
+- id: Onoda:2025yue
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Soma Onoda
+  - Osamu Fukushima
+  - Ryusuke Hamazaki
+  - Okuto Morikawa
+  title: Eigenstate Thermalization Hypothesis with projective representation
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2509.01931
+  arxiv: '2509.01931'
+  arxiv_url: https://arxiv.org/abs/2509.01931
+  arxiv_date: 2025-09
+  arxiv_class: hep-th
+  doi: 10.1007/JHEP06(2026)138
+  doi_url: https://doi.org/10.1007/JHEP06(2026)138
+  journal: JHEP
+  volume: '06'
+  pages: '138'
+  report_number: KYUSHU-HET-337, RIKEN-iTHEMS-Report-25
+  inspire_bibkey: Onoda:2025yue
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AOnoda%3A2025yue
+  topics:
+  - eigenstate thermalization hypothesis
+  - quantum many-body theory
+  - projective symmetry
+- id: Morikawa:2025vvs
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  title: On continuum and resonant spectra from exact WKB analysis
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2508.09211
+  arxiv: '2508.09211'
+  arxiv_url: https://arxiv.org/abs/2508.09211
+  arxiv_date: 2025-08
+  arxiv_class: quant-ph
+  doi: 10.1088/1751-8121/ae7224
+  doi_url: https://doi.org/10.1088/1751-8121/ae7224
+  journal: 'J. Phys. A: Math. Theor.'
+  volume: '59'
+  pages: '225306'
+  report_number: RIKEN-iTHEMS-Report-25
+  inspire_bibkey: Morikawa:2025vvs
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2025vvs
+  topics:
+  - quantum resonance
+  - exact WKB
+  - quantum mechanics
+- id: Morikawa:2025xjq
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  title: Unified exact WKB framework for resonance – Zel'dovich/complex-scaling regularization and rigged Hilbert space
+  year: 2025
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2505.02301
+  title_bibtex: Unified exact WKB framework for resonance -- Zel'dovich/complex-scaling regularization and rigged Hilbert space
+  arxiv: '2505.02301'
+  arxiv_url: https://arxiv.org/abs/2505.02301
+  arxiv_date: 2025-05
+  arxiv_class: hep-th
+  doi: 10.1007/JHEP10(2025)049
+  doi_url: https://doi.org/10.1007/JHEP10(2025)049
+  journal: JHEP
+  volume: '10'
+  pages: 049
+  report_number: RIKEN-iTHEMS-Report-25
+  inspire_bibkey: Morikawa:2025xjq
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2025xjq
+  topics:
+  - quantum resonance
+  - exact WKB
+  - rigged Hilbert space
+  - spectral theory
+- id: Morikawa:2025grx
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  title: Nonperturbative Formulation of Resonances in Quantum Mechanics Based on Exact WKB Method
+  year: 2025
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2503.18741
+  arxiv: '2503.18741'
+  arxiv_url: https://arxiv.org/abs/2503.18741
+  arxiv_date: 2025-03
+  arxiv_class: hep-th
+  doi: 10.1093/ptep/ptaf120
+  doi_url: https://doi.org/10.1093/ptep/ptaf120
+  journal: PTEP
+  volume: '2025'
+  number: '10'
+  pages: 103B01
+  report_number: RIKEN-iTHEMS-Report-25
+  inspire_bibkey: Morikawa:2025grx
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2025grx
+  topics:
+  - quantum resonance
+  - exact WKB
+  - quantum mechanics
+- id: Morikawa:2025ldq
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: Direct Monte Carlo computation of the 't Hooft partition function
+  year: 2025
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2501.07042
+  title_bibtex: Direct Monte Carlo computation of the 't~Hooft partition function
+  arxiv: '2501.07042'
+  arxiv_url: https://arxiv.org/abs/2501.07042
+  arxiv_date: 2025-01
+  arxiv_class: hep-lat
+  doi: 10.1093/ptep/ptaf072
+  doi_url: https://doi.org/10.1093/ptep/ptaf072
+  journal: PTEP
+  volume: '2025'
+  number: '6'
+  pages: 063B04
+  report_number: RIKEN-iTHEMS-Report-25, KYUSHU-HET-308
+  inspire_bibkey: Morikawa:2025ldq
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2025ldq
+  topics:
+  - confinement
+  - lattice field theory
+- id: Morikawa:2025ieh
+  type: publications
+  kind: proceedings
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Soma Onoda
+  - Hiroshi Suzuki
+  title: Novel Lattice Formulation of 2D Chiral Gauge Theory via Bosonization
+  year: 2025
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2501.18949
+  arxiv: '2501.18949'
+  arxiv_url: https://arxiv.org/abs/2501.18949
+  arxiv_date: 2025-01
+  arxiv_class: hep-lat
+  doi: 10.22323/1.466.0363
+  doi_url: https://doi.org/10.22323/1.466.0363
+  journal: PoS
+  volume: LATTICE2024
+  pages: '363'
+  report_number: KYUSHU-HET-310, RIKEN-iTHEMS-Report-25
+  inspire_bibkey: Morikawa:2025ieh
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2025ieh
+  topics:
+  - lattice gauge theory
+  - chiral gauge theory
+  - bosonization
+  - lattice field theory
+- id: Abe:2025bvr
+  type: publications
+  kind: proceedings
+  status: published
+  authors:
+  - Motokazu Abe
+  - Okuto Morikawa
+  title: Numerical simulation of fractional topological charge in SU(N) gauge theory coupled with ℤ_N 2-form gauge fields
+  year: 2025
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2501.11438
+  title_bibtex: Numerical simulation of fractional topological charge in $SU(N)$ gauge theory coupled with $\mathbb{Z}_N$ 2-form gauge fields
+  arxiv: '2501.11438'
+  arxiv_url: https://arxiv.org/abs/2501.11438
+  arxiv_date: 2025-01
+  arxiv_class: hep-lat
+  doi: 10.22323/1.466.0380
+  doi_url: https://doi.org/10.22323/1.466.0380
+  journal: PoS
+  volume: LATTICE2024
+  pages: '380'
+  report_number: KYUSHU-HET-309, RIKEN-iTHEMS-Report-25
+  inspire_bibkey: Abe:2025bvr
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AAbe%3A2025bvr
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+  - topology
+  - lattice field theory
+- id: Abe:2024fpt
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Motokazu Abe
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: Monte Carlo simulation of the SU(2)/ℤ_2 Yang–Mills theory
+  year: 2025
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2501.00286
+  title_bibtex: Monte Carlo simulation of the $SU(2)/\mathbb{Z}_2$ Yang--Mills theory
+  arxiv: '2501.00286'
+  arxiv_url: https://arxiv.org/abs/2501.00286
+  arxiv_date: 2025-01
+  arxiv_class: hep-lat
+  doi: 10.1093/ptep/ptaf075
+  doi_url: https://doi.org/10.1093/ptep/ptaf075
+  journal: PTEP
+  volume: '2025'
+  number: '6'
+  pages: 063B03
+  report_number: KYUSHU-HET-307, RIKEN-iTHEMS-Report-25
+  inspire_bibkey: Abe:2024fpt
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AAbe%3A2024fpt
+  topics:
+  - lattice gauge theory
+  - lattice field theory
+- id: Morikawa:2024ucd
+  type: publications
+  kind: paper
+  status: preprint
+  authors:
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: Winding number on 3D lattice
+  year: 2024
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2412.03888
+  arxiv: '2412.03888'
+  arxiv_url: https://arxiv.org/abs/2412.03888
+  arxiv_date: 2024-12
+  arxiv_class: hep-lat
+  report_number: RIKEN-iTHEMS-Report-24, KYUSHU-HET-303
+  inspire_bibkey: Morikawa:2024ucd
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2024ucd
+  topics:
+  - lattice gauge theory
+  - topology
+  - lattice field theory
+- id: Morikawa:2024nrp
+  type: publications
+  kind: proceedings
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Mizuki Tanaka
+  - Masakiyo Kitazawa
+  - Hiroshi Suzuki
+  title: Lattice study of RG fixed point based on gradient flow in 3D O(N) sigma model
+  year: 2025
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2410.19425
+  title_bibtex: Lattice study of RG fixed point based on gradient flow in $3$D $O(N)$ sigma model
+  arxiv: '2410.19425'
+  arxiv_url: https://arxiv.org/abs/2410.19425
+  arxiv_date: 2024-10
+  arxiv_class: hep-lat
+  doi: 10.22323/1.466.0349
+  doi_url: https://doi.org/10.22323/1.466.0349
+  journal: PoS
+  volume: LATTICE2024
+  pages: '349'
+  report_number: KYUSHU-HET-300, RIKEN-iTHEMS-Report-24, J-PARC-TH-0310
+  inspire_bibkey: Morikawa:2024nrp
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2024nrp
+  topics:
+  - lattice gauge theory
+  - gradient flow
+  - renormalization group
+  - lattice field theory
+- id: Morikawa:2024zyd
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Soma Onoda
+  - Hiroshi Suzuki
+  title: Yet Another Lattice Formulation of 2D U(1) Chiral Gauge Theory via Bosonization
+  year: 2024
+  affiliation_period: Osaka University
+  affiliation_basis: arXiv:2403.03420
+  title_bibtex: Yet Another Lattice Formulation of 2D $U(1)$ Chiral Gauge Theory via Bosonization
+  arxiv: '2403.03420'
+  arxiv_url: https://arxiv.org/abs/2403.03420
+  arxiv_date: 2024-03
+  arxiv_class: hep-lat
+  doi: 10.1093/ptep/ptae075
+  doi_url: https://doi.org/10.1093/ptep/ptae075
+  journal: PTEP
+  volume: '2024'
+  number: '6'
+  pages: 063B01
+  report_number: KYUSHU-HET-283, OU-HET-1224
+  inspire_bibkey: Morikawa:2024zyd
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2024zyd
+  topics:
+  - lattice gauge theory
+  - chiral gauge theory
+  - bosonization
+  - lattice field theory
+- id: Honda:2024yte
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Yamato Honda
+  - Okuto Morikawa
+  - Soma Onoda
+  - Hiroshi Suzuki
+  title: Lattice Realization of the Axial U(1) Noninvertible Symmetry
+  year: 2024
+  affiliation_period: Osaka University
+  affiliation_basis: arXiv:2401.01331
+  arxiv: '2401.01331'
+  arxiv_url: https://arxiv.org/abs/2401.01331
+  arxiv_date: 2024-01
+  arxiv_class: hep-lat
+  doi: 10.1093/ptep/ptae040
+  doi_url: https://doi.org/10.1093/ptep/ptae040
+  journal: PTEP
+  volume: '2024'
+  number: '4'
+  pages: 043B04
+  report_number: KYUSHU-HET-279, OU-HET-1215
+  inspire_bibkey: Honda:2024yte
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AHonda%3A2024yte
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+  - lattice field theory
+- id: Abe:2023atv
+  type: publications
+  kind: proceedings
+  status: published
+  authors:
+  - Motokazu Abe
+  - Okuto Morikawa
+  - Soma Onoda
+  - Hiroshi Suzuki
+  - Yuya Tanizaki
+  title: Lattice construction of mixed 't Hooft anomaly with higher-form symmetry
+  year: 2024
+  affiliation_period: Osaka University
+  affiliation_basis: arXiv:2401.00495
+  arxiv: '2401.00495'
+  arxiv_url: https://arxiv.org/abs/2401.00495
+  arxiv_date: 2024-01
+  arxiv_class: hep-lat
+  doi: 10.22323/1.453.0361
+  doi_url: https://doi.org/10.22323/1.453.0361
+  journal: PoS
+  volume: LATTICE2023
+  pages: '361'
+  report_number: KYUSHU-HET-278, OU-HET-1213
+  inspire_bibkey: Abe:2023atv
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AAbe%3A2023atv
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+  - confinement
+  - anomalies
+  - lattice field theory
+- id: Abe:2023tuf
+  type: publications
+  kind: proceedings
+  status: published
+  authors:
+  - Motokazu Abe
+  - Naoto Kan
+  - Okuto Morikawa
+  - Yuta Nagoya
+  - Soma Onoda
+  - Hiroki Wada
+  title: Higher-group symmetry in lattice gauge theories with restricted topological sectors
+  year: 2024
+  affiliation_period: Osaka University
+  affiliation_basis: arXiv:2310.01787
+  arxiv: '2310.01787'
+  arxiv_url: https://arxiv.org/abs/2310.01787
+  arxiv_date: 2023-10
+  arxiv_class: hep-lat
+  doi: 10.22323/1.453.0365
+  doi_url: https://doi.org/10.22323/1.453.0365
+  journal: PoS
+  volume: LATTICE2023
+  pages: '365'
+  report_number: KYUSHU-HET-269, OU-HET-1205
+  inspire_bibkey: Abe:2023tuf
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AAbe%3A2023tuf
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+  - lattice field theory
+- id: Abe:2023ubg
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Motokazu Abe
+  - Okuto Morikawa
+  - Soma Onoda
+  title: Note on lattice description of generalized symmetries in SU(N)/ℤ_N gauge theories
+  year: 2023
+  affiliation_period: Osaka University
+  affiliation_basis: arXiv:2304.11813
+  title_bibtex: Note on lattice description of generalized symmetries in $SU(N)/\mathbb{Z}_N$ gauge theories
+  arxiv: '2304.11813'
+  arxiv_url: https://arxiv.org/abs/2304.11813
+  arxiv_date: 2023-04
+  arxiv_class: hep-th
+  doi: 10.1103/PhysRevD.108.014506
+  doi_url: https://doi.org/10.1103/PhysRevD.108.014506
+  journal: Phys. Rev. D
+  volume: '108'
+  number: '1'
+  pages: '014506'
+  report_number: KYUSHU-HET-259, OU-HET-1184
+  inspire_bibkey: Abe:2023ubg
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AAbe%3A2023ubg
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+- id: Abe:2023uan
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Motokazu Abe
+  - Okuto Morikawa
+  - Soma Onoda
+  - Hiroshi Suzuki
+  - Yuya Tanizaki
+  title: Magnetic operators in 2D compact scalar field theories on the lattice
+  year: 2023
+  affiliation_period: Osaka University
+  affiliation_basis: arXiv:2304.14815
+  arxiv: '2304.14815'
+  arxiv_url: https://arxiv.org/abs/2304.14815
+  arxiv_date: 2023-04
+  arxiv_class: hep-lat
+  doi: 10.1093/ptep/ptad078
+  doi_url: https://doi.org/10.1093/ptep/ptad078
+  journal: PTEP
+  volume: '2023'
+  number: '7'
+  pages: 073B01
+  report_number: KYUSHU-HET-260, OU-HET-1185, YITP-23-58
+  inspire_bibkey: Abe:2023uan
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AAbe%3A2023uan
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+  - lattice field theory
+- id: Abe:2023ncy
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Motokazu Abe
+  - Okuto Morikawa
+  - Soma Onoda
+  - Hiroshi Suzuki
+  - Yuya Tanizaki
+  title: Topology of SU(N) lattice gauge theories coupled with ℤ_N 2-form gauge fields
+  year: 2023
+  affiliation_period: Osaka University
+  affiliation_basis: arXiv:2303.10977
+  title_bibtex: Topology of $SU(N)$ lattice gauge theories coupled with $\mathbb{Z}_N$ 2-form gauge fields
+  arxiv: '2303.10977'
+  arxiv_url: https://arxiv.org/abs/2303.10977
+  arxiv_date: 2023-03
+  arxiv_class: hep-lat
+  doi: 10.1007/JHEP08(2023)118
+  doi_url: https://doi.org/10.1007/JHEP08(2023)118
+  journal: JHEP
+  volume: 08
+  pages: '118'
+  report_number: KYUSHU-HET-258, OU-HET-1177, YITP-23-37, OU-HET-1177,
+  inspire_bibkey: Abe:2023ncy
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AAbe%3A2023ncy
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+  - topology
+  - lattice field theory
+- id: Kan:2023yhz
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Naoto Kan
+  - Okuto Morikawa
+  - Yuta Nagoya
+  - Hiroki Wada
+  title: Higher-group structure in lattice Abelian gauge theory under instanton-sum modification
+  year: 2023
+  affiliation_period: Osaka University
+  affiliation_basis: arXiv:2302.13466
+  arxiv: '2302.13466'
+  arxiv_url: https://arxiv.org/abs/2302.13466
+  arxiv_date: 2023-02
+  arxiv_class: hep-th
+  doi: 10.1140/epjc/s10052-023-11616-6
+  doi_url: https://doi.org/10.1140/epjc/s10052-023-11616-6
+  journal: Eur. Phys. J. C
+  volume: '83'
+  number: '6'
+  pages: '481'
+  report_number: OU-HET-1173
+  note: '[Erratum: Eur.Phys.J.C 84, 22 (2024)]'
+  inspire_bibkey: Kan:2023yhz
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AKan%3A2023yhz
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+- id: Morikawa:2022liz
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Hiroki Wada
+  - Satoshi Yamaguchi
+  title: Phase structure of linear quiver gauge theories from anomaly matching
+  year: 2023
+  affiliation_period: Osaka University
+  affiliation_basis: arXiv:2211.12079
+  arxiv: '2211.12079'
+  arxiv_url: https://arxiv.org/abs/2211.12079
+  arxiv_date: 2022-11
+  arxiv_class: hep-th
+  doi: 10.1103/PhysRevD.107.045020
+  doi_url: https://doi.org/10.1103/PhysRevD.107.045020
+  journal: Phys. Rev. D
+  volume: '107'
+  number: '4'
+  pages: '045020'
+  report_number: OU-HET 1157
+  inspire_bibkey: Morikawa:2022liz
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2022liz
+  topics:
+  - lattice gauge theory
+  - anomalies
+  - gauge theory
+  - anomaly matching
+- id: Abe:2022nfq
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Motokazu Abe
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: Fractional topological charge in lattice Abelian gauge theory
+  year: 2023
+  affiliation_period: Osaka University
+  affiliation_basis: arXiv:2210.12967
+  arxiv: '2210.12967'
+  arxiv_url: https://arxiv.org/abs/2210.12967
+  arxiv_date: 2022-10
+  arxiv_class: hep-th
+  doi: 10.1093/ptep/ptad009
+  doi_url: https://doi.org/10.1093/ptep/ptad009
+  journal: PTEP
+  volume: '2023'
+  number: '2'
+  pages: 023B03
+  report_number: KYUSHU-HET-248, OU-HET-1155
+  inspire_bibkey: Abe:2022nfq
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AAbe%3A2022nfq
+  topics:
+  - lattice gauge theory
+  - topology
+- id: Morikawa:2021lmb
+  type: publications
+  kind: thesis
+  status: thesis
+  authors:
+  - Okuto Morikawa
+  title: Numerical study of infrared criticality of the supersymmetric Landau–Ginzburg model
+  year: 2021
+  affiliation_period: Kyushu University
+  affiliation_basis: thesis institution/year
+  title_bibtex: Numerical study of infrared criticality of the supersymmetric Landau--Ginzburg model
+  school: Kyushu U.
+  inspire_bibkey: Morikawa:2021lmb
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2021lmb
+  topics:
+  - Landau–Ginzburg model
+  - supersymmetry
+  - conformal field theory
+- id: Makino:2021edc
+  type: publications
+  kind: erratum
+  status: published
+  authors:
+  - Hiroki Makino
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: Gradient flow and the Wilsonian renormalization group flow
+  year: 2021
+  affiliation_period: Kyushu University
+  affiliation_basis: erratum of arXiv:1802.07897
+  doi: 10.1093/ptep/ptab096
+  doi_url: https://doi.org/10.1093/ptep/ptab096
+  journal: PTEP
+  volume: '2021'
+  number: '9'
+  pages: 099201
+  inspire_bibkey: Makino:2021edc
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMakino%3A2021edc
+  topics:
+  - gradient flow
+  - renormalization group
+  - Wilsonian renormalization group
+- id: Ashie:2020bvw
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Masahiro Ashie
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  - Hiromasa Takaura
+  title: More on the infrared renormalon in SU(N) QCD(adj.) on ℝ^3 × S^1
+  year: 2020
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:2005.07407
+  title_bibtex: More on the infrared renormalon in $SU(N)$ QCD(adj.) on $\mathbb{R}^3\times S^1$
+  arxiv: '2005.07407'
+  arxiv_url: https://arxiv.org/abs/2005.07407
+  arxiv_date: 2020-05
+  arxiv_class: hep-th
+  doi: 10.1093/ptep/ptaa096
+  doi_url: https://doi.org/10.1093/ptep/ptaa096
+  journal: PTEP
+  volume: '2020'
+  number: '9'
+  pages: 093B02
+  report_number: KYUSHU-HET-212, KEK-TH-2216
+  inspire_bibkey: Ashie:2020bvw
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AAshie%3A2020bvw
+  topics:
+  - renormalons
+  - resurgence
+  - compactified field theory
+- id: Morikawa:2020agf
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Hiromasa Takaura
+  title: Identification of perturbative ambiguity canceled against bion
+  year: 2020
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:2003.04759
+  arxiv: '2003.04759'
+  arxiv_url: https://arxiv.org/abs/2003.04759
+  arxiv_date: 2020-03
+  arxiv_class: hep-th
+  doi: 10.1016/j.physletb.2020.135570
+  doi_url: https://doi.org/10.1016/j.physletb.2020.135570
+  journal: Phys. Lett. B
+  volume: '807'
+  pages: '135570'
+  report_number: KYUSHU-HET-210
+  inspire_bibkey: Morikawa:2020agf
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2020agf
+  topics:
+  - resurgence
+  - semiclassical field theory
+- id: Ishikawa:2020eht
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Kosuke Ishikawa
+  - Okuto Morikawa
+  - Kazuya Shibata
+  - Hiroshi Suzuki
+  title: Vacuum energy of the supersymmetric ℂP^(N−1) model on ℝ × S^1 in the 1/N expansion
+  year: 2020
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:2001.07302
+  title_bibtex: Vacuum energy of the supersymmetric $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$ in the $1/N$ expansion
+  arxiv: '2001.07302'
+  arxiv_url: https://arxiv.org/abs/2001.07302
+  arxiv_date: 2020-01
+  arxiv_class: hep-th
+  doi: 10.1093/ptep/ptaa066
+  doi_url: https://doi.org/10.1093/ptep/ptaa066
+  journal: PTEP
+  volume: '2020'
+  number: '6'
+  pages: 063B02
+  report_number: KYUSHU-HET-206
+  inspire_bibkey: Ishikawa:2020eht
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AIshikawa%3A2020eht
+  topics:
+  - compactified field theory
+  - supersymmetry
+- id: Ishikawa:2019oga
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Kosuke Ishikawa
+  - Okuto Morikawa
+  - Kazuya Shibata
+  - Hiroshi Suzuki
+  - Hiromasa Takaura
+  title: Renormalon structure in compactified spacetime
+  year: 2020
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1909.09579
+  arxiv: '1909.09579'
+  arxiv_url: https://arxiv.org/abs/1909.09579
+  arxiv_date: 2019-09
+  arxiv_class: hep-th
+  doi: 10.1093/ptep/ptz147
+  doi_url: https://doi.org/10.1093/ptep/ptz147
+  journal: PTEP
+  volume: '2020'
+  number: '1'
+  pages: 013B01
+  report_number: KYUSHU-HET-199
+  inspire_bibkey: Ishikawa:2019oga
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AIshikawa%3A2019oga
+  topics:
+  - renormalons
+  - resurgence
+  - compactified field theory
+- id: Ashie:2019cmy
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Masahiro Ashie
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  - Hiromasa Takaura
+  - Kengo Takeuchi
+  title: Infrared renormalon in SU(N) QCD(adj.) on ℝ^3 × S^1
+  year: 2020
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1909.05489
+  title_bibtex: Infrared renormalon in $SU(N)$ QCD(adj.) on $\mathbb{R}^3\times S^1$
+  arxiv: '1909.05489'
+  arxiv_url: https://arxiv.org/abs/1909.05489
+  arxiv_date: 2019-09
+  arxiv_class: hep-th
+  doi: 10.1093/ptep/ptz157
+  doi_url: https://doi.org/10.1093/ptep/ptz157
+  journal: PTEP
+  volume: '2020'
+  number: '2'
+  pages: 023B01
+  report_number: KYUSHU-HET-198
+  inspire_bibkey: Ashie:2019cmy
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AAshie%3A2019cmy
+  topics:
+  - renormalons
+  - resurgence
+  - compactified field theory
+- id: Morikawa:2019aza
+  type: publications
+  kind: proceedings
+  status: published
+  authors:
+  - Okuto Morikawa
+  title: Numerical study of ADE-type 𝒩=2 Landau–Ginzburg models
+  year: 2019
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1908.03411
+  title_bibtex: Numerical study of ADE-type $\mathcal{N}=2$ Landau--Ginzburg models
+  arxiv: '1908.03411'
+  arxiv_url: https://arxiv.org/abs/1908.03411
+  arxiv_date: 2019-08
+  arxiv_class: hep-lat
+  doi: 10.22323/1.363.0145
+  doi_url: https://doi.org/10.22323/1.363.0145
+  journal: PoS
+  volume: LATTICE2019
+  pages: '145'
+  report_number: KYUSHU-HET-197
+  inspire_bibkey: Morikawa:2019aza
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2019aza
+  topics:
+  - Landau–Ginzburg model
+  - supersymmetry
+  - conformal field theory
+  - lattice field theory
+- id: Ishikawa:2019tnw
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Kosuke Ishikawa
+  - Okuto Morikawa
+  - Akira Nakayama
+  - Kazuya Shibata
+  - Hiroshi Suzuki
+  - Hiromasa Takaura
+  title: Infrared renormalon in the supersymmetric ℂP^(N−1) model on ℝ × S^1
+  year: 2020
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1908.00373
+  title_bibtex: Infrared renormalon in the supersymmetric $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$
+  arxiv: '1908.00373'
+  arxiv_url: https://arxiv.org/abs/1908.00373
+  arxiv_date: 2019-08
+  arxiv_class: hep-th
+  doi: 10.1093/ptep/ptaa002
+  doi_url: https://doi.org/10.1093/ptep/ptaa002
+  journal: PTEP
+  volume: '2020'
+  number: '2'
+  pages: 023B10
+  report_number: KYUSHU-HET-196
+  inspire_bibkey: Ishikawa:2019tnw
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AIshikawa%3A2019tnw
+  topics:
+  - renormalons
+  - resurgence
+  - compactified field theory
+  - supersymmetry
+- id: Morikawa:2019cql
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  title: Continuum limit in numerical simulations of the 𝒩=2 Landau–Ginzburg model
+  year: 2019
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1906.00653
+  title_bibtex: Continuum limit in numerical simulations of the $\mathcal{N}=2$ Landau--Ginzburg model
+  arxiv: '1906.00653'
+  arxiv_url: https://arxiv.org/abs/1906.00653
+  arxiv_date: 2019-06
+  arxiv_class: hep-lat
+  doi: 10.1093/ptep/ptz107
+  doi_url: https://doi.org/10.1093/ptep/ptz107
+  journal: PTEP
+  volume: '2019'
+  number: '10'
+  pages: 103B03
+  report_number: KYUSHU-HET-194
+  inspire_bibkey: Morikawa:2019cql
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2019cql
+  topics:
+  - Landau–Ginzburg model
+  - supersymmetry
+  - conformal field theory
+  - lattice field theory
+- id: Morikawa:2018zys
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  title: Numerical study of the 𝒩=2 Landau–Ginzburg model with two superfields
+  year: 2018
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1810.02519
+  title_bibtex: Numerical study of the $\mathcal{N}=2$ Landau--Ginzburg model with two superfields
+  arxiv: '1810.02519'
+  arxiv_url: https://arxiv.org/abs/1810.02519
+  arxiv_date: 2018-10
+  arxiv_class: hep-lat
+  doi: 10.1007/JHEP12(2018)045
+  doi_url: https://doi.org/10.1007/JHEP12(2018)045
+  journal: JHEP
+  volume: '12'
+  pages: '045'
+  report_number: KYUSHU-HET-189
+  inspire_bibkey: Morikawa:2018zys
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2018zys
+  topics:
+  - Landau–Ginzburg model
+  - supersymmetry
+  - conformal field theory
+  - lattice field theory
+- id: Kasai:2018koz
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Aya Kasai
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: Gradient flow representation of the four-dimensional 𝒩=2 super Yang–Mills supercurrent
+  year: 2018
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1808.07300
+  title_bibtex: Gradient flow representation of the four-dimensional $\mathcal{N}=2$ super Yang--Mills supercurrent
+  arxiv: '1808.07300'
+  arxiv_url: https://arxiv.org/abs/1808.07300
+  arxiv_date: 2018-08
+  arxiv_class: hep-lat
+  doi: 10.1093/ptep/pty117
+  doi_url: https://doi.org/10.1093/ptep/pty117
+  journal: PTEP
+  volume: '2018'
+  number: '11'
+  pages: 113B02
+  report_number: KYUSHU-HET-188
+  inspire_bibkey: Kasai:2018koz
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AKasai%3A2018koz
+  topics:
+  - lattice gauge theory
+  - gradient flow
+  - supersymmetry
+  - lattice field theory
+- id: Morikawa:2018ops
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: Numerical study of the 𝒩=2 Landau–Ginzburg model
+  year: 2018
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1805.10735
+  title_bibtex: Numerical study of the $\mathcal{N}=2$ Landau--Ginzburg model
+  arxiv: '1805.10735'
+  arxiv_url: https://arxiv.org/abs/1805.10735
+  arxiv_date: 2018-05
+  arxiv_class: hep-lat
+  doi: 10.1093/ptep/pty088
+  doi_url: https://doi.org/10.1093/ptep/pty088
+  journal: PTEP
+  volume: '2018'
+  number: '8'
+  pages: 083B05
+  report_number: KYUSHU-HET-184
+  inspire_bibkey: Morikawa:2018ops
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2018ops
+  topics:
+  - Landau–Ginzburg model
+  - supersymmetry
+  - conformal field theory
+  - lattice field theory
+- id: Morikawa:2018fek
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: Axial U(1) anomaly in a gravitational field via the gradient flow
+  year: 2018
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1803.04132
+  title_bibtex: Axial $U(1)$ anomaly in a gravitational field via the gradient flow
+  arxiv: '1803.04132'
+  arxiv_url: https://arxiv.org/abs/1803.04132
+  arxiv_date: 2018-03
+  arxiv_class: hep-th
+  doi: 10.1093/ptep/pty073
+  doi_url: https://doi.org/10.1093/ptep/pty073
+  journal: PTEP
+  volume: '2018'
+  number: '7'
+  pages: 073B02
+  report_number: KYUSHU-HET-183
+  inspire_bibkey: Morikawa:2018fek
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2018fek
+  topics:
+  - anomalies
+  - gradient flow
+- id: Makino:2018rys
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Hiroki Makino
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: Gradient flow and the Wilsonian renormalization group flow
+  year: 2018
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1802.07897
+  arxiv: '1802.07897'
+  arxiv_url: https://arxiv.org/abs/1802.07897
+  arxiv_date: 2018-02
+  arxiv_class: hep-th
+  doi: 10.1093/ptep/pty050
+  doi_url: https://doi.org/10.1093/ptep/pty050
+  journal: PTEP
+  volume: '2018'
+  number: '5'
+  pages: 053B02
+  report_number: KYUSHU-HET-182
+  note: '[Erratum: PTEP 2021, 099201 (2021)]'
+  inspire_bibkey: Makino:2018rys
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMakino%3A2018rys
+  topics:
+  - gradient flow
+  - renormalization group
+  - Wilsonian renormalization group
+- id: Makino:2017quz
+  type: publications
+  kind: proceedings
+  status: published
+  authors:
+  - Hiroki Makino
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: One-loop perturbative coupling of A and A_⋆ through the chiral overlap operator
+  year: 2018
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1710.00536
+  title_bibtex: One-loop perturbative coupling of $A$ and $A_\star$ through the chiral overlap operator
+  arxiv: '1710.00536'
+  arxiv_url: https://arxiv.org/abs/1710.00536
+  arxiv_date: 2017-10
+  arxiv_class: hep-lat
+  doi: 10.1051/epjconf/201817511013
+  doi_url: https://doi.org/10.1051/epjconf/201817511013
+  journal: EPJ Web Conf.
+  volume: '175'
+  pages: '11013'
+  report_number: KYUSHU-HET-178
+  inspire_bibkey: Makino:2017quz
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMakino%3A2017quz
+  topics:
+  - chiral gauge theory
+  - lattice field theory
+- id: Makino:2017pbq
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Hiroki Makino
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: One-loop perturbative coupling of A and A_⋆ through the chiral overlap operator
+  year: 2017
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1704.04862
+  title_bibtex: One-loop perturbative coupling of $A$ and $A_\star$ through the chiral overlap operator
+  arxiv: '1704.04862'
+  arxiv_url: https://arxiv.org/abs/1704.04862
+  arxiv_date: 2017-04
+  arxiv_class: hep-lat
+  doi: 10.1093/ptep/ptx085
+  doi_url: https://doi.org/10.1093/ptep/ptx085
+  journal: PTEP
+  volume: '2017'
+  number: '6'
+  pages: 063B08
+  report_number: KYUSHU-HET-177
+  inspire_bibkey: Makino:2017pbq
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMakino%3A2017pbq
+  topics:
+  - chiral gauge theory
+  - lattice field theory
+- id: Makino:2016auf
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Hiroki Makino
+  - Okuto Morikawa
+  title: Lorentz symmetry violation in the fermion number anomaly with the chiral overlap operator
+  year: 2016
+  affiliation_period: Kyushu University
+  affiliation_basis: arXiv:1609.08376
+  arxiv: '1609.08376'
+  arxiv_url: https://arxiv.org/abs/1609.08376
+  arxiv_date: 2016-09
+  arxiv_class: hep-lat
+  doi: 10.1093/ptep/ptw183
+  doi_url: https://doi.org/10.1093/ptep/ptw183
+  journal: PTEP
+  volume: '2016'
+  number: '12'
+  pages: 123B06
+  report_number: KYUSHU-HET-169
+  inspire_bibkey: Makino:2016auf
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMakino%3A2016auf
+  topics:
+  - anomalies
+  - chiral gauge theory
+  - lattice field theory

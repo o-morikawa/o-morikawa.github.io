@@ -1,67 +1,48 @@
 # YAML research database demo
 
-This version treats YAML as the source of truth and generates **one self-contained `site/index.html`**.
-The deployed site needs no JSON file, CSS file, JavaScript file, or server-side API.
+`data/*.yaml` is the canonical public data. `site/index.html` is a generated, self-contained searchable view.
 
-## Current tree
+## Current contents
 
-```text
-data/
-  publications.yaml
-scripts/
-  build.py
-site/
-  index.html
-requirements.txt
-README.md
-```
+- `data/publications.yaml` — publications imported from the supplied INSPIRE-style BibTeX
+- `scripts/import_bib.py` — reusable BibTeX → YAML importer
+- `scripts/build.py` — combines all future `data/*.yaml` files into one standalone `site/index.html`
 
-`build.py` automatically reads every `data/*.yaml` file, so future files can simply be added:
+The publication `id` is the INSPIRE BibTeX citation key (for example `Morikawa:2025xjq`).
 
-```text
-data/
-  publications.yaml
-  presentations.yaml
-  collaborators.yaml
-  software.yaml
-  books.yaml
-  photos.yaml
-```
+Affiliation periods are assigned primarily from the arXiv identifier:
 
-Each record must have at least:
+- 2016-01 through 2021-03 → `Kyushu University`
+- 2021-04 through 2024-03 → `Osaka University`
+- 2024-04 onward → `RIKEN (iTHEMS)`
 
-```yaml
-- id: unique-id
-  type: publications   # future: presentations, software, books, photos, ...
-  title: Title
-```
+Two source records have no arXiv identifier: the 2021 erratum is tied to its original 2018 arXiv record, and the 2021 PhD thesis is assigned from its thesis institution/year. Each YAML record includes `affiliation_basis` so this is explicit.
 
-Publication-specific details can be added freely, for example:
-
-```yaml
-  kind: paper
-  authors:
-    - O. Morikawa
-  year: 2026
-  status: preprint
-  topics:
-    - quantum resonance
-```
-
-## Build
+## Rebuild the HTML
 
 ```bash
-python -m pip install -r requirements.txt
 python scripts/build.py
 ```
 
-Then open `site/index.html` directly in a browser. No local web server is required.
+Then open `site/index.html` directly. It contains the CSS, JavaScript, and generated database in one file.
 
-The page provides:
+## Re-import a BibTeX file
 
-- one search box across all fields of all record types;
-- a dynamically generated **Type** filter (`publications`, later `presentations`, etc.);
-- all CSS, JavaScript, and data embedded in `index.html`;
-- query-string state such as `?q=resonance&type=publications`.
+```bash
+python scripts/import_bib.py /path/to/ref_om.bib -o data/publications.yaml
+python scripts/build.py
+```
 
-To publish on GitHub Pages, deploy `site/index.html` as the root `index.html` (or configure Pages/Actions to publish the `site/` directory).
+Requires PyYAML.
+
+## Future extension
+
+Drop additional files such as `data/presentations.yaml`, `data/software.yaml`, or `data/books.yaml` into `data/`. Each record needs at least:
+
+```yaml
+- id: unique-id
+  type: presentations
+  title: Example title
+```
+
+After rebuilding, `index.html` automatically adds the new `type` to the filter and searches all fields in every record.
