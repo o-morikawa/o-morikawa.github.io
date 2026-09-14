@@ -190,6 +190,16 @@
   source: cv(1).tex
   urls:
     award: http://www2.yukawa.kyoto-u.ac.jp/~sg.www/syorei_s/
+  researchmap_id: '33710967'
+  researchmap_type: awards
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  winners_ja:
+  - 森川億人
+  - 高浦大雅
+  winners_en:
+  - Okuto Morikawa
+  - Hiromasa Takaura
+  researchmap_date: 2021-09
 - id: cv-wolfram-staff-picks
   type: cv
   kind: award
@@ -495,6 +505,12 @@
   urls:
     kaken: https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-22KJ2096
   source: author-supplied KAKEN metadata; related ResearchMap project retained via researchmap_parent_id
+  researchmap_id: '42217777'
+  researchmap_type: research_projects
+  amount:
+    total_cost: '1300000'
+    direct_cost: '1000000'
+    indirect_cost: '300000'
 - id: cv-kakenhi-18j20935
   type: cv
   kind: grant
