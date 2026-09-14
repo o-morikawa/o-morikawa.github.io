@@ -1,3 +1,23 @@
+- id: Morikawa:2026mqk
+  type: publications
+  kind: paper
+  status: preprint
+  authors:
+  - Okuto Morikawa
+  title: Center-twisted Gribov spectra and the finite-volume Gaussian response in the refined Gribov–Zwanziger framework
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2609.03525
+  title_bibtex: Center-twisted Gribov spectra and the finite-volume Gaussian response in the refined Gribov--Zwanziger framework
+  arxiv: '2609.03525'
+  arxiv_url: https://arxiv.org/abs/2609.03525
+  arxiv_date: 2026-09
+  arxiv_class: hep-th
+  report_number: RIKEN-iTHEMS-Report-26
+  inspire_bibkey: Morikawa:2026mqk
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2026mqk
+  topics:
+  - quantum field theory
 - id: Morikawa:2026nzp
   type: publications
   kind: paper
