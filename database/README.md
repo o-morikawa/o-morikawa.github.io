@@ -1,4 +1,4 @@
-# O. Morikawa research database (v4)
+# O. Morikawa research database (v5)
 
 Static, machine-readable research/CV database with a single-file searchable viewer.
 
@@ -6,16 +6,37 @@ Static, machine-readable research/CV database with a single-file searchable view
 
 - `data/publications.yaml` - INSPIRE-backed papers/proceedings/thesis/erratum; INSPIRE BibTeX key is the record ID.
 - `data/other_publications.yaml` - editorial/preface and JPS meeting abstracts not covered by the INSPIRE BibTeX import.
-- `data/presentations.yaml` - conference talks, seminars, collaborator talks, posters, local/informal talks, journal clubs.
-- `data/cv.yaml` - career, education, awards, grants, memberships, service, teaching, mentorship, visits, skills and activities.
+- `data/presentations.yaml` - conference talks, seminars, collaborator talks, posters, local/informal talks, journal clubs; ResearchMap bilingual metadata and slide links are merged when available.
+- `data/cv.yaml` - career, education, awards, grants, memberships, service, teaching, mentorship, visits, skills and activities, enriched with ResearchMap Japanese/English metadata.
 - `data/books.yaml` - online books/monographs.
 - `data/software.yaml` - public repositories/software.
+- `sources/rm_researchers20260828.jsonl` - supplied ResearchMap export used for the bilingual merge.
 
-Every title/event-like field is bilingual-ready using `*_en` and `*_ja`. The supplied English LaTeX/CV sources populate English fields. Japanese fields are left `null` rather than guessed when no Japanese source is available.
+The canonical display fields use `*_en` and `*_ja`. ResearchMap source variants are retained in explicit `researchmap_*` fields when they differ from the existing CV/LaTeX wording rather than silently overwriting the other source.
 
-## ResearchMap
+## Slides
 
-The supplied ResearchMap ZIP is encrypted. See `RESEARCHMAP_IMPORT_STATUS.md`. Once its password is available, the Japanese originals can be merged into the matching records while retaining the English translations.
+ResearchMap presentation records with a `dataset.dataset_name` are linked to the corresponding public file under:
+
+`https://o-morikawa.github.io/slides/<dataset_name>`
+
+The presentation YAML retains the file name (`slides_file`), direct PDF URL (`slides_url`), GitHub repository URL (`slides_repo_url`), and ResearchMap attachment URL when present. The standalone viewer shows a **Slides** link.
+
+Current import: 75 presentation records matched to ResearchMap; 63 have exact slide file names from the ResearchMap export.
+
+## ResearchMap merge
+
+```bash
+python scripts/merge_researchmap.py
+python scripts/build.py
+```
+
+Or supply another JSONL export explicitly:
+
+```bash
+python scripts/merge_researchmap.py /path/to/rm_researchersYYYYMMDD.jsonl
+python scripts/build.py
+```
 
 ## Build
 

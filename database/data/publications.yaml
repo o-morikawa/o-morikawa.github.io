@@ -135,8 +135,12 @@
   - quasinormal modes
   - complex scaling method
   title_en: Complex scaling approach to quasinormal modes of Schwarzschild and Reissner–Nordström black holes
-  title_ja: null
+  title_ja: Complex scaling approach to quasinormal modes of Schwarzschild and Reissner--Nordström black holes
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '53446645'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Complex scaling approach to quasinormal modes of Schwarzschild and Reissner--Nordström black holes
 - id: Morikawa:2026wdx
   type: publications
   kind: proceedings
@@ -164,8 +168,12 @@
   - confinement
   - lattice field theory
   title_en: Direct numerical simulation of 't Hooft partition function and (de)confining phase
-  title_ja: null
+  title_ja: Direct numerical simulation of the 't Hooft partition function and (de)confining phases
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '52119934'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Direct numerical simulation of the 't Hooft partition function and (de)confining phases
 - id: Morikawa:2025inx
   type: publications
   kind: paper
@@ -196,8 +204,11 @@
   - exceptional points
   - quantum mechanics
   title_en: Geometric phase from encircling an exceptional point of a quantum resonance in the complex-scaling method
-  title_ja: null
+  title_ja: Geometric phase from encircling an exceptional point of a quantum resonance in the complex-scaling method
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '51968043'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Morikawa:2025ezl
   type: publications
   kind: paper
@@ -227,8 +238,11 @@
   - quantum resonance
   - quantum mechanics
   title_en: Exact WKB method for radial Schrödinger equation
-  title_ja: null
+  title_ja: Exact WKB method for radial Schrödinger equation
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '51469253'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Onoda:2025yue
   type: publications
   kind: paper
@@ -259,8 +273,11 @@
   - quantum many-body theory
   - projective symmetry
   title_en: Eigenstate Thermalization Hypothesis with projective representation
-  title_ja: null
+  title_ja: Eigenstate Thermalization Hypothesis with projective representation
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '51050316'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Morikawa:2025vvs
   type: publications
   kind: paper
@@ -289,8 +306,11 @@
   - exact WKB
   - quantum mechanics
   title_en: On continuum and resonant spectra from exact WKB analysis
-  title_ja: null
+  title_ja: On continuum and resonant spectra from exact WKB analysis
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '50855272'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Morikawa:2025xjq
   type: publications
   kind: paper
@@ -302,7 +322,8 @@
   year: 2025
   affiliation_period: RIKEN (iTHEMS)
   affiliation_basis: arXiv:2505.02301
-  title_bibtex: Unified exact WKB framework for resonance -- Zel'dovich/complex-scaling regularization and rigged Hilbert space
+  title_bibtex: Unified exact WKB framework for resonance -- Zel'dovich/complex-scaling regularization and rigged Hilbert
+    space
   arxiv: '2505.02301'
   arxiv_url: https://arxiv.org/abs/2505.02301
   arxiv_date: 2025-05
@@ -321,8 +342,13 @@
   - rigged Hilbert space
   - spectral theory
   title_en: Unified exact WKB framework for resonance – Zel'dovich/complex-scaling regularization and rigged Hilbert space
-  title_ja: null
+  title_ja: Unified exact WKB framework for resonance -- Zel'dovich/complex-scaling regularization and rigged Hilbert space
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '50077347'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Unified exact WKB framework for resonance -- Zel'dovich/complex-scaling regularization and rigged
+    Hilbert space
 - id: Morikawa:2025grx
   type: publications
   kind: paper
@@ -352,8 +378,11 @@
   - exact WKB
   - quantum mechanics
   title_en: Nonperturbative Formulation of Resonances in Quantum Mechanics Based on Exact WKB Method
-  title_ja: null
+  title_ja: Nonperturbative Formulation of Resonances in Quantum Mechanics Based on Exact WKB Method
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '49541684'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Morikawa:2025ldq
   type: publications
   kind: paper
@@ -383,8 +412,12 @@
   - confinement
   - lattice field theory
   title_en: Direct Monte Carlo computation of the 't Hooft partition function
-  title_ja: null
+  title_ja: Direct Monte Carlo computation of the 't~Hooft partition function
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '48921358'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Direct Monte Carlo computation of the 't~Hooft partition function
 - id: Morikawa:2025ieh
   type: publications
   kind: proceedings
@@ -415,8 +448,11 @@
   - bosonization
   - lattice field theory
   title_en: Novel Lattice Formulation of 2D Chiral Gauge Theory via Bosonization
-  title_ja: null
+  title_ja: Novel Lattice Formulation of 2D Chiral Gauge Theory via Bosonization
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '49064987'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Abe:2025bvr
   type: publications
   kind: proceedings
@@ -428,7 +464,8 @@
   year: 2025
   affiliation_period: RIKEN (iTHEMS)
   affiliation_basis: arXiv:2501.11438
-  title_bibtex: Numerical simulation of fractional topological charge in $SU(N)$ gauge theory coupled with $\mathbb{Z}_N$ 2-form gauge fields
+  title_bibtex: Numerical simulation of fractional topological charge in $SU(N)$ gauge theory coupled with $\mathbb{Z}_N$
+    2-form gauge fields
   arxiv: '2501.11438'
   arxiv_url: https://arxiv.org/abs/2501.11438
   arxiv_date: 2025-01
@@ -447,8 +484,14 @@
   - topology
   - lattice field theory
   title_en: Numerical simulation of fractional topological charge in SU(N) gauge theory coupled with ℤ_N 2-form gauge fields
-  title_ja: null
+  title_ja: Numerical simulation of fractional topological charge in $SU(N)$ gauge theory coupled with $\mathbb{Z}_N$ 2-form
+    gauge fields
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '48985225'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Numerical simulation of fractional topological charge in $SU(N)$ gauge theory coupled with $\mathbb{Z}_N$
+    2-form gauge fields
 - id: Abe:2024fpt
   type: publications
   kind: paper
@@ -479,8 +522,12 @@
   - lattice gauge theory
   - lattice field theory
   title_en: Monte Carlo simulation of the SU(2)/ℤ_2 Yang–Mills theory
-  title_ja: null
+  title_ja: Monte Carlo simulation of the $SU(2)/\mathbb{Z}_2$ Yang--Mills theory
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '48860673'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Monte Carlo simulation of the $SU(2)/\mathbb{Z}_2$ Yang--Mills theory
 - id: Morikawa:2024ucd
   type: publications
   kind: paper
@@ -538,8 +585,12 @@
   - renormalization group
   - lattice field theory
   title_en: Lattice study of RG fixed point based on gradient flow in 3D O(N) sigma model
-  title_ja: null
+  title_ja: Lattice study of RG fixed point based on gradient flow in $3$D $O(N)$ sigma model
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '48301049'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Lattice study of RG fixed point based on gradient flow in $3$D $O(N)$ sigma model
 - id: Morikawa:2024zyd
   type: publications
   kind: paper
@@ -574,6 +625,10 @@
   title_en: Yet Another Lattice Formulation of 2D U(1) Chiral Gauge Theory via Bosonization
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '45747194'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Yet another lattice formulation of 2D $U(1)$ chiral gauge theory via bosonization
 - id: Honda:2024yte
   type: publications
   kind: paper
@@ -607,6 +662,10 @@
   title_en: Lattice Realization of the Axial U(1) Noninvertible Symmetry
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '44384111'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Lattice realization of the axial $U(1)$ non-invertible symmetry
 - id: Abe:2023atv
   type: publications
   kind: proceedings
@@ -642,6 +701,9 @@
   title_en: Lattice construction of mixed 't Hooft anomaly with higher-form symmetry
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '44382663'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Abe:2023tuf
   type: publications
   kind: proceedings
@@ -676,6 +738,9 @@
   title_en: Higher-group symmetry in lattice gauge theories with restricted topological sectors
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '43666587'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Abe:2023ubg
   type: publications
   kind: paper
@@ -708,6 +773,10 @@
   title_en: Note on lattice description of generalized symmetries in SU(N)/ℤ_N gauge theories
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '42127688'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Note on lattice description of generalized symmetries in $SU(N)/\mathbb{Z}_N$ gauge theories
 - id: Abe:2023uan
   type: publications
   kind: paper
@@ -742,6 +811,9 @@
   title_en: Magnetic operators in 2D compact scalar field theories on the lattice
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '42175505'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Abe:2023ncy
   type: publications
   kind: paper
@@ -777,6 +849,10 @@
   title_en: Topology of SU(N) lattice gauge theories coupled with ℤ_N 2-form gauge fields
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '41792537'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Topology of $SU(N)$ lattice gauge theories coupled with $\mathbb{Z}_N$ $2$-form gauge fields
 - id: Kan:2023yhz
   type: publications
   kind: paper
@@ -810,6 +886,9 @@
   title_en: Higher-group structure in lattice Abelian gauge theory under instanton-sum modification
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '41569106'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Morikawa:2022liz
   type: publications
   kind: paper
@@ -843,6 +922,9 @@
   title_en: Phase structure of linear quiver gauge theories from anomaly matching
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '40561220'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Abe:2022nfq
   type: publications
   kind: paper
@@ -874,6 +956,9 @@
   title_en: Fractional topological charge in lattice Abelian gauge theory
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '41434852'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Morikawa:2021lmb
   type: publications
   kind: thesis
@@ -893,8 +978,12 @@
   - supersymmetry
   - conformal field theory
   title_en: Numerical study of infrared criticality of the supersymmetric Landau–Ginzburg model
-  title_ja: null
+  title_ja: Numerical study of infrared criticality of the supersymmetric Landau-Ginzburg model
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '32980962'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Numerical study of infrared criticality of the supersymmetric Landau-Ginzburg model
 - id: Makino:2021edc
   type: publications
   kind: erratum
@@ -922,6 +1011,9 @@
   title_en: Gradient flow and the Wilsonian renormalization group flow
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '36298730'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Ashie:2020bvw
   type: publications
   kind: paper
@@ -956,6 +1048,10 @@
   title_en: More on the infrared renormalon in SU(N) QCD(adj.) on ℝ^3 × S^1
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '27324421'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: More on the infrared renormalon in $SU(N)$ QCD(adj.) on $\mathbb{R}^3\times S^1$
 - id: Morikawa:2020agf
   type: publications
   kind: paper
@@ -985,6 +1081,9 @@
   title_en: Identification of perturbative ambiguity canceled against bion
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '28038510'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Ishikawa:2020eht
   type: publications
   kind: paper
@@ -1018,6 +1117,11 @@
   title_en: Vacuum energy of the supersymmetric ℂP^(N−1) model on ℝ × S^1 in the 1/N expansion
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '27686322'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Vacuum energy of the supersymmetric $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$ in the $1/N$
+    expansion
 - id: Ishikawa:2019oga
   type: publications
   kind: paper
@@ -1052,6 +1156,9 @@
   title_en: Renormalon structure in compactified spacetime
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018455'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Ashie:2019cmy
   type: publications
   kind: paper
@@ -1087,6 +1194,10 @@
   title_en: Infrared renormalon in SU(N) QCD(adj.) on ℝ^3 × S^1
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018454'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Infrared renormalon in $SU(N)$ QCD(adj.) on $\mathbb{R}^3\times S^1$
 - id: Morikawa:2019aza
   type: publications
   kind: proceedings
@@ -1118,6 +1229,10 @@
   title_en: Numerical study of ADE-type 𝒩=2 Landau–Ginzburg models
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018521'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Numerical study of ADE-type $\mathcal{N}=2$ Landau--Ginzburg models
 - id: Ishikawa:2019tnw
   type: publications
   kind: paper
@@ -1155,6 +1270,10 @@
   title_en: Infrared renormalon in the supersymmetric ℂP^(N−1) model on ℝ × S^1
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018453'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Infrared renormalon in the supersymmetric $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$
 - id: Morikawa:2019cql
   type: publications
   kind: paper
@@ -1187,6 +1306,10 @@
   title_en: Continuum limit in numerical simulations of the 𝒩=2 Landau–Ginzburg model
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018452'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Continuum limit in numerical simulations of the $\mathcal{N}=2$ Landau--Ginzburg model
 - id: Morikawa:2018zys
   type: publications
   kind: paper
@@ -1218,6 +1341,10 @@
   title_en: Numerical study of the 𝒩=2 Landau–Ginzburg model with two superfields
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018451'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Numerical study of the $\mathcal{N}=2$ Landau--Ginzburg model with two superfields
 - id: Kasai:2018koz
   type: publications
   kind: paper
@@ -1252,6 +1379,10 @@
   title_en: Gradient flow representation of the four-dimensional 𝒩=2 super Yang–Mills supercurrent
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018450'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Gradient flow representation of the four-dimensional $\mathcal{N}=2$ super Yang--Mills supercurrent
 - id: Morikawa:2018ops
   type: publications
   kind: paper
@@ -1285,6 +1416,10 @@
   title_en: Numerical study of the 𝒩=2 Landau–Ginzburg model
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018449'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Numerical study of the $\mathcal{N}=2$ Landau--Ginzburg model
 - id: Morikawa:2018fek
   type: publications
   kind: paper
@@ -1316,6 +1451,10 @@
   title_en: Axial U(1) anomaly in a gravitational field via the gradient flow
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018448'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Axial $U(1)$ anomaly in a gravitational field via the gradient flow
 - id: Makino:2018rys
   type: publications
   kind: paper
@@ -1349,6 +1488,9 @@
   title_en: Gradient flow and the Wilsonian renormalization group flow
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018445'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Makino:2017quz
   type: publications
   kind: proceedings
@@ -1380,6 +1522,10 @@
   title_en: One-loop perturbative coupling of A and A_⋆ through the chiral overlap operator
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018520'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: One-loop perturbative coupling of $A$ and $A_\star$ through the chiral overlap operator
 - id: Makino:2017pbq
   type: publications
   kind: paper
@@ -1412,6 +1558,10 @@
   title_en: One-loop perturbative coupling of A and A_⋆ through the chiral overlap operator
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018447'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: One-loop perturbative coupling of $A$ and $A_\star$ through the chiral overlap operator
 - id: Makino:2016auf
   type: publications
   kind: paper
@@ -1443,3 +1593,6 @@
   title_en: Lorentz symmetry violation in the fermion number anomaly with the chiral overlap operator
   title_ja: null
   source: INSPIRE BibTeX (ref_om.bib)
+  researchmap_id: '26018446'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa

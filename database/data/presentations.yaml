@@ -1,4 +1,4 @@
-- id: presentation-2026-09-14-gradient-flow-actions-integerness-and-gluonic-fermionic-topo
+- id: presentation-2026-09-16-gradient-flow-actions-integerness-and-gluonic-fermionic-topo
   type: presentations
   kind: talk
   role: collaborator
@@ -8,7 +8,7 @@
   title_ja: null
   event_en: 2026 Annual (81st) Meeting of the Physical Society of Japan
   event_ja: null
-  start_date: '2026-09-14'
+  start_date: '2026-09-16'
   end_date: '2026-09-17'
   year: 2026
   affiliation_period: RIKEN (iTHEMS)
@@ -16,6 +16,9 @@
   - lattice gauge theory
   - topology
   source: presentation.tex
+  legacy_ids:
+  - presentation-2026-09-14-gradient-flow-actions-integerness-and-gluonic-fermionic-topo
+  date_note: Corrected by author on 2026-09-15.
 - id: presentation-2026-09-14-quasinormal-modes-and-continuum-response-of-de-sitter-black
   type: presentations
   kind: talk
@@ -61,9 +64,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Complex scaling approach to black-hole quasinormal modes and continuum response
-  title_ja: null
+  title_ja: Complex scaling approach to black-hole quasinormal modes and continuum response
   event_en: Strings and Fields 2026
-  event_ja: null
+  event_ja: YITP Workshop 場の理論と弦理論 2026
   start_date: '2026-08-18'
   end_date: null
   year: 2026
@@ -73,6 +76,20 @@
   - quasinormal modes
   - complex scaling method
   source: presentation.tex
+  researchmap_id: '54670934'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/54670934
+  researchmap_event_en: YITP Workshop 場の理論と弦理論 2026
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  researchmap_presentation_type: oral_presentation
+  slides_file: yitp260818.pdf
+  slides_url: https://o-morikawa.github.io/slides/yitp260818.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/yitp260818.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54670934/attachment_file.pdf
 - id: presentation-2026-07-29-gradient-flow-actions-integerness-and-gluonic-fermionic-topo
   type: presentations
   kind: talk
@@ -98,9 +115,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Dyon Condensation at θ=2π from Wilson–'t Hooft Loops in Yang–Mills Theory
-  title_ja: null
+  title_ja: Dyon Condensation at $\theta=2\pi$ from Wilson-'t Hooft Loops in Yang-Mills Theory
   event_en: The 43rd International Symposium on Lattice Field Theory (Lattice2026)
-  event_ja: null
+  event_ja: The 43rd International Symposium on Lattice Field Theory (Lattice2026)
   start_date: '2026-07-29'
   end_date: null
   year: 2026
@@ -109,6 +126,32 @@
   - lattice gauge theory
   - confinement
   source: presentation.tex
+  researchmap_id: '54511473'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/54511473
+  researchmap_title_en: Dyon Condensation at $\theta=2\pi$ from Wilson-'t Hooft Loops in Yang-Mills Theory
+  presenters_en:
+  - Hiromasa Watanabe
+  - Issaku Kanamori
+  - Okuto Morikawa
+  - Yuki Nagai
+  - Yuya Tanizaki
+  - Akio Tomiya
+  presenters_ja:
+  - 渡辺展正
+  - 金森逸作
+  - 森川億人
+  - 永井佑紀
+  - 谷崎佑弥
+  - 富谷昭夫
+  languages:
+  - eng
+  researchmap_presentation_type: oral_presentation
+  slides_file: lattice260729.pdf
+  slides_url: https://o-morikawa.github.io/slides/lattice260729.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/lattice260729.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54511473/attachment_file.pdf
 - id: presentation-2026-07-20-towards-a-nonperturbative-formulation-of-non-hermitian-quant
   type: presentations
   kind: talk
@@ -116,9 +159,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Towards a nonperturbative formulation of non-Hermitian quantum physics
-  title_ja: null
+  title_ja: Towards a nonperturbative formulation of non-Hermitian quantum physics
   event_en: Particle-Physics Endeavor Across Kyushu (P^2EAK)
-  event_ja: null
+  event_ja: Particle-Physics Endeavor Across Kyushu (P^2EAK)
   start_date: '2026-07-20'
   end_date: null
   year: 2026
@@ -126,6 +169,19 @@
   topics:
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '54433010'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/54433010
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  researchmap_presentation_type: invited_oral_presentation
+  slides_file: kyushu260720.pdf
+  slides_url: https://o-morikawa.github.io/slides/kyushu260720.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kyushu260720.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54433010/attachment_file.pdf
 - id: presentation-2026-07-02-lattice-2d-u-1-chiral-gauge-theory-and-magnetically-charged
   type: presentations
   kind: talk
@@ -133,9 +189,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Lattice 2D U(1) chiral gauge theory and magnetically charged vertex operators via bosonization
-  title_ja: null
+  title_ja: Lattice 2D $U(1)$ chiral gauge theory and magnetically charged vertex operators via bosonization
   event_en: Frontiers of Lattice Fermions
-  event_ja: null
+  event_ja: Frontiers of Lattice Fermions
   start_date: '2026-07-02'
   end_date: null
   year: 2026
@@ -145,6 +201,22 @@
   - chiral gauge theory
   - bosonization
   source: presentation.tex
+  researchmap_id: '54312459'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/54312459
+  researchmap_title_en: Lattice 2D $U(1)$ chiral gauge theory and magnetically charged vertex operators via bosonization
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: invited_oral_presentation
+  slides_file: yitp260702.pdf
+  slides_url: https://o-morikawa.github.io/slides/yitp260702.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/yitp260702.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54312459/attachment_file.pdf
 - id: presentation-2026-03-17-infrared-renormalons-bion-ambiguities-and-resurgence-in-comp
   type: presentations
   kind: seminar
@@ -152,9 +224,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Infrared Renormalons, Bion Ambiguities, and Resurgence in Compactified Gauge Theories
-  title_ja: null
+  title_ja: Infrared Renormalons, Bion Ambiguities, and Resurgence in Compactified Gauge Theories
   event_en: Takushoku University
-  event_ja: null
+  event_ja: 拓殖大学セミナー
   start_date: '2026-03-17'
   end_date: null
   year: 2026
@@ -166,6 +238,15 @@
   - semiclassical field theory
   - compactified field theory
   source: presentation.tex
+  researchmap_id: '52960528'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/52960528
+  researchmap_event_en: Seminar at Takushoku University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
 - id: presentation-2026-03-26-t-hooft-loop-in-su-2-yang-mills-theory-revisited
   type: presentations
   kind: talk
@@ -191,9 +272,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Geometric phase of exceptional point as quantum resonance in complex scaling method
-  title_ja: null
+  title_ja: 複素スケーリング法による量子共鳴としての例外点の幾何学的位相
   event_en: 2026 Spring Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会2026年春季大会
   start_date: '2026-03-23'
   end_date: null
   year: 2026
@@ -203,6 +284,23 @@
   - exceptional points
   - complex scaling method
   source: presentation.tex
+  researchmap_id: '53028761'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/53028761
+  presenters_en:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  - Soma Onoda
+  presenters_ja:
+  - 森川億人
+  - 小川翔也
+  - 小野田壮真
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai260323_2.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai260323_2.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai260323_2.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/53028761/attachment_file.pdf
 - id: presentation-2026-03-23-complex-analytic-structure-and-resurgence-in-the-radial-schr
   type: presentations
   kind: talk
@@ -210,9 +308,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Complex Analytic Structure and Resurgence in the Radial Schrödinger Equation
-  title_ja: null
+  title_ja: 動径Schrödinger方程式における複素解析構造とリサージェンス
   event_en: 2026 Spring Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会2026年春季大会
   start_date: '2026-03-23'
   end_date: null
   year: 2026
@@ -220,16 +318,33 @@
   topics:
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '53028747'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/53028747
+  presenters_en:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  presenters_ja:
+  - 森川億人
+  - 小川翔也
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai260323_1.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai260323_1.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai260323_1.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/53028747/attachment_file.pdf
 - id: presentation-2026-01-21-towards-a-nonperturbative-formulation-of-non-hermitian-quant
   type: presentations
   kind: seminar
   role: self
   presenter: Okuto Morikawa
   invited: true
-  title_en: 'Towards a nonperturbative formulation of non-Hermitian quantum physics: resonance, complex scaling, and resurgence analysis'
-  title_ja: null
+  title_en: 'Towards a nonperturbative formulation of non-Hermitian quantum physics: resonance, complex scaling, and resurgence
+    analysis'
+  title_ja: 'Towards a nonperturbative formulation of non-Hermitian quantum physics: resonance, complex scaling, and resurgence
+    analysis'
   event_en: Takushoku University
-  event_ja: null
+  event_ja: 拓殖大学セミナー
   start_date: '2026-01-21'
   end_date: null
   year: 2026
@@ -238,6 +353,20 @@
   - quantum resonance
   - complex scaling method
   source: presentation.tex
+  researchmap_id: '52079555'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/52079555
+  researchmap_event_en: Seminar at Takushoku University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  researchmap_presentation_type: public_discourse
+  slides_file: takushoku260121.pdf
+  slides_url: https://o-morikawa.github.io/slides/takushoku260121.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/takushoku260121.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/52079555/attachment_file.pdf
 - id: presentation-2025-12-16-unified-exact-wkb-framework-for-quantum-resonance-and-scatte
   type: presentations
   kind: talk
@@ -245,9 +374,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Unified exact WKB framework for quantum resonance and scattering theory
-  title_ja: null
+  title_ja: Unified exact WKB framework for quantum resonance and scattering theory
   event_en: KEK Theory Workshop 2025
-  event_ja: null
+  event_ja: KEK Theory Workshop 2025
   start_date: '2025-12-16'
   end_date: null
   year: 2025
@@ -257,6 +386,21 @@
   - scattering theory
   - exact WKB
   source: presentation.tex
+  researchmap_id: '51870559'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/51870559
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: oral_presentation
+  slides_file: kek251216.pdf
+  slides_url: https://o-morikawa.github.io/slides/kek251216.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek251216.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51870559/attachment_file.pdf
 - id: presentation-2025-11-28-study-of-confinement-phase-based-on-lattice-qcd-simulation
   type: presentations
   kind: talk
@@ -264,9 +408,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Study of confinement phase based on lattice QCD simulation
-  title_ja: null
+  title_ja: 格子QCDシミュレーションによる閉じ込め相の研究
   event_en: Ikushi Prize Laureates’ Networking Meeting
-  event_ja: null
+  event_ja: 育志賞受賞者交流会
   start_date: '2025-11-28'
   end_date: null
   year: 2025
@@ -275,6 +419,15 @@
   - lattice gauge theory
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '51761406'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/51761406
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  researchmap_presentation_type: poster_presentation
 - id: presentation-2025-11-26-what-is-quantum-resonance-a-viewpoint-from-resurgence-theory
   type: presentations
   kind: seminar
@@ -282,9 +435,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: What is quantum resonance? —a viewpoint from resurgence theory—
-  title_ja: null
+  title_ja: What is quantum resonance? -a viewpoint from resurgence theory-
   event_en: Theoretical Particle Theory Group in Kobe University
-  event_ja: null
+  event_ja: 神戸大学素粒子論セミナー
   start_date: '2025-11-26'
   end_date: null
   year: 2025
@@ -293,6 +446,21 @@
   - quantum resonance
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '51742199'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/51742199
+  researchmap_title_en: What is quantum resonance? -a viewpoint from resurgence theory-
+  researchmap_event_en: Seminar at Theoretical Particle Physics Group in Kobe University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  researchmap_presentation_type: public_discourse
+  slides_file: kobe251126.pdf
+  slides_url: https://o-morikawa.github.io/slides/kobe251126.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kobe251126.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51742199/attachment_file.pdf
 - id: presentation-2025-11-21-exact-wkb-framework-for-quantum-resonance-and-spectral-theor
   type: presentations
   kind: seminar
@@ -300,9 +468,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Exact WKB framework for quantum resonance and spectral theory
-  title_ja: null
+  title_ja: Exact WKB framework for quantum resonance and spectral theory
   event_en: Particle Theory and Cosmology Group in Tohoku University
-  event_ja: null
+  event_ja: 東北大学素粒子論セミナー
   start_date: '2025-11-21'
   end_date: null
   year: 2025
@@ -311,6 +479,22 @@
   - quantum resonance
   - exact WKB
   source: presentation.tex
+  researchmap_id: '51712255'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/51712255
+  researchmap_event_en: Seminar at Theoretical Particle Physics Group in Tohoku University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
+  slides_file: tohoku251121.pdf
+  slides_url: https://o-morikawa.github.io/slides/tohoku251121.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/tohoku251121.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51712255/attachment_file.pdf
 - id: presentation-2025-11-04-direct-numerical-simulation-of-t-hooft-partition-function-an
   type: presentations
   kind: talk
@@ -318,9 +502,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Direct numerical simulation of 't Hooft partition function and (de)confining phase
-  title_ja: null
+  title_ja: Direct numerical simulation of 't Hooft partition function and (de)confining phase
   event_en: The 42nd International Symposium on Lattice Field Theory (Lattice2025)
-  event_ja: null
+  event_ja: The 42nd International Symposium on Lattice Field Theory (Lattice2025)
   start_date: '2025-11-04'
   end_date: null
   year: 2025
@@ -329,6 +513,23 @@
   - confinement
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '51598677'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/51598677
+  presenters_en:
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  presenters_ja:
+  - 森川億人
+  - 鈴木博
+  languages:
+  - eng
+  researchmap_presentation_type: oral_presentation
+  slides_file: lattice251104.pdf
+  slides_url: https://o-morikawa.github.io/slides/lattice251104.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/lattice251104.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51598677/attachment_file.pdf
 - id: presentation-2025-10-29-non-perturbative-confirmation-of-the-wilson-fisher-fixed-poi
   type: presentations
   kind: seminar
@@ -336,9 +537,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Non-perturbative Confirmation of the Wilson–Fisher Fixed Point via Gradient Flow in 3D O(N) Sigma Model
-  title_ja: null
+  title_ja: Non-perturbative Confirmation of the Wilson-Fisher Fixed Point via Gradient Flow in 3D O(N) Sigma Model
   event_en: Theoretical Particle Physics Group in Kyoto University
-  event_ja: null
+  event_ja: 京都大学素粒子論セミナー
   start_date: '2025-10-29'
   end_date: null
   year: 2025
@@ -347,6 +548,22 @@
   - gradient flow
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '51558533'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/51558533
+  researchmap_title_en: Non-perturbative Confirmation of the Wilson-Fisher Fixed Point via Gradient Flow in 3D O(N) Sigma
+    Model
+  researchmap_event_en: Seminar at Theoretical Particle Physics Group in Kyoto University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  researchmap_presentation_type: public_discourse
+  slides_file: kyoto251029.pdf
+  slides_url: https://o-morikawa.github.io/slides/kyoto251029.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kyoto251029.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51558533/attachment_file.pdf
 - id: presentation-2025-09-23-resonances-spectral-theory-and-the-resurgent-structure
   type: presentations
   kind: talk
@@ -354,9 +571,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Resonances, Spectral Theory, and the Resurgent Structure
-  title_ja: null
+  title_ja: Resonances, Spectral Theory, and the Resurgent Structure
   event_en: Japan-UK Workshop on Quantum Gravity
-  event_ja: null
+  event_ja: Japan-UK Workshop on Quantum Gravity
   start_date: '2025-09-23'
   end_date: null
   year: 2025
@@ -365,6 +582,21 @@
   - quantum resonance
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '51239096'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/51239096
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: invited_oral_presentation
+  slides_file: riken-durham250923.pdf
+  slides_url: https://o-morikawa.github.io/slides/riken-durham250923.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/riken-durham250923.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51239096/attachment_file.pdf
 - id: presentation-2025-09-19-unified-exact-wkb-framework-for-quantum-mechanical-resonance
   type: presentations
   kind: talk
@@ -372,9 +604,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Unified exact WKB framework for quantum mechanical resonance
-  title_ja: null
+  title_ja: 量子力学的共鳴を扱うための統一的な完全WKB解析の枠組み
   event_en: 2025 Annual (80th) Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会第80回年次大会
   start_date: '2025-09-19'
   end_date: null
   year: 2025
@@ -383,6 +615,23 @@
   - quantum resonance
   - exact WKB
   source: presentation.tex
+  researchmap_id: '51221938'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/51221938
+  presenters_en:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  presenters_ja:
+  - 森川億人
+  - 小川翔也
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai250919.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai250919.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai250919.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51221938/attachment_file.pdf
 - id: presentation-2025-09-18-lattice-gradient-flows-de-stabilizing-topological-sectors-fo
   type: presentations
   kind: talk
@@ -463,9 +712,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Non-perturbative analysis of resonance physics by exact WKB method
-  title_ja: null
+  title_ja: 共鳴物理の完全WKB法による非摂動解析
   event_en: Finite temperature field theory and its application 2025 (TQFT 2025)
-  event_ja: null
+  event_ja: 熱場の量子論とその応用2025 (TQFT 2025)
   start_date: '2025-09-03'
   end_date: null
   year: 2025
@@ -474,6 +723,21 @@
   - quantum resonance
   - exact WKB
   source: presentation.tex
+  researchmap_id: '51060012'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/51060012
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  researchmap_presentation_type: oral_presentation
+  researchmap_date: '2025-09-05'
+  date_conflict: true
+  slides_file: tqft250905.pdf
+  slides_url: https://o-morikawa.github.io/slides/tqft250905.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/tqft250905.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51060012/attachment_file.pdf
 - id: presentation-2025-08-01-non-perturbative-understanding-of-resonant-phenomena-based-o
   type: presentations
   kind: talk
@@ -481,9 +745,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Non-perturbative understanding of resonant phenomena based on exact WKB analysis
-  title_ja: null
+  title_ja: 完全WKB解析を用いた共鳴現象の非摂動論的理解
   event_en: Strings and Fields 2025
-  event_ja: null
+  event_ja: 場の理論と弦理論 2025
   start_date: '2025-08-01'
   end_date: null
   year: 2025
@@ -492,6 +756,19 @@
   - quantum resonance
   - exact WKB
   source: presentation.tex
+  researchmap_id: '50751986'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/50751986
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  researchmap_presentation_type: oral_presentation
+  slides_file: yitp250801.pdf
+  slides_url: https://o-morikawa.github.io/slides/yitp250801.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/yitp250801.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50751986/attachment_file.pdf
 - id: presentation-2025-07-24-lattice-simulation-of-wilson-t-hooft-classification-in-su-2
   type: presentations
   kind: poster
@@ -499,9 +776,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Lattice simulation of Wilson–'t Hooft classification in SU(2) Yang–Mills theory with θ term
-  title_ja: null
+  title_ja: Lattice simulation of Wilson--'t~Hooft classification in $SU(2)$ Yang--Mills theory with $\theta$ term
   event_en: iTHEMS NOW & NEXT 2025
-  event_ja: null
+  event_ja: iTHEMS Now&Next 2025
   start_date: '2025-07-24'
   end_date: null
   year: 2025
@@ -510,6 +787,30 @@
   - lattice gauge theory
   - confinement
   source: presentation.tex
+  researchmap_id: '50705810'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/50705810
+  researchmap_title_en: Lattice simulation of Wilson--'t~Hooft classification in $SU(2)$ Yang--Mills theory with $\theta$
+    term
+  researchmap_event_en: iTHEMS Now&Next 2025
+  presenters_en:
+  - Issaku Kanamori
+  - Okuto Morikawa
+  - Yuki Nagai
+  - Yuya Tanizaki
+  - Akio Tomiya
+  - Hiromasa Watanabe
+  presenters_ja:
+  - 金森逸作
+  - 森川億人
+  - 永井佑紀
+  - 谷崎佑弥
+  - 富谷昭夫
+  - 渡辺展正
+  languages:
+  - eng
+  researchmap_presentation_type: poster_presentation
 - id: presentation-2025-06-27-exact-wkb-as-unified-analytic-structure-for-resonance-physic
   type: presentations
   kind: seminar
@@ -517,9 +818,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Exact WKB as unified analytic structure for resonance physics
-  title_ja: null
+  title_ja: Exact WKB as unified analytic structure for resonance physics
   event_en: Math-Phys Working Group in RIKEN iTHEMS
-  event_ja: null
+  event_ja: Seminar at Math-Phys Working Group in RIKEN iTHEMS
   start_date: '2025-06-27'
   end_date: null
   year: 2025
@@ -528,6 +829,22 @@
   - quantum resonance
   - exact WKB
   source: presentation.tex
+  researchmap_id: '50495186'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/50495186
+  researchmap_event_en: Seminar at Math-Phys Working Group in RIKEN iTHEMS
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
+  slides_file: ithems250627.pdf
+  slides_url: https://o-morikawa.github.io/slides/ithems250627.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems250627.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50495186/attachment_file.pdf
 - id: presentation-2025-05-28-non-perturbative-formulation-of-resonant-quantum-mechanics-w
   type: presentations
   kind: seminar
@@ -535,9 +852,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Non-perturbative formulation of resonant quantum mechanics within unified exact WKB framework
-  title_ja: null
+  title_ja: Non-perturbative formulation of resonant quantum mechanics within unified exact WKB framework
   event_en: Asymptotics in Astrophysics Working Group in RIKEN iTHEMS
-  event_ja: null
+  event_ja: Seminar at Asymptotics in Astrophysics Working Group in RIKEN iTHEMS
   start_date: '2025-05-28'
   end_date: null
   year: 2025
@@ -547,6 +864,22 @@
   - exact WKB
   - quantum mechanics
   source: presentation.tex
+  researchmap_id: '50266647'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/50266647
+  researchmap_event_en: Seminar at Asymptotics in Astrophysics Working Group in RIKEN iTHEMS
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
+  slides_file: ithems250528.pdf
+  slides_url: https://o-morikawa.github.io/slides/ithems250528.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems250528.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50266647/attachment_file.pdf
 - id: presentation-2025-05-16-winding-number-on-3d-lattice
   type: presentations
   kind: talk
@@ -554,9 +887,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Winding number on 3D lattice
-  title_ja: null
+  title_ja: Winding number on 3D lattice
   event_en: JuliaQCD User Briefing
-  event_ja: null
+  event_ja: JuliaQCD ユーザーブリーフィング
   start_date: '2025-05-16'
   end_date: null
   year: 2025
@@ -565,6 +898,14 @@
   - lattice gauge theory
   - topology
   source: presentation.tex
+  researchmap_id: '50179324'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/50179324
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
 - id: presentation-2025-05-02-winding-number-on-3d-lattice
   type: presentations
   kind: seminar
@@ -572,9 +913,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Winding number on 3D lattice
-  title_ja: null
+  title_ja: Winding number on 3D lattice
   event_en: CREST Research Seminar on ``Theoretical studies of topological phases of matter,''
-  event_ja: null
+  event_ja: CREST Research Seminar on ``Theoretical studies of topological phases of matter''
   start_date: '2025-05-02'
   end_date: null
   year: 2025
@@ -583,6 +924,22 @@
   - lattice gauge theory
   - topology
   source: presentation.tex
+  researchmap_id: '50053094'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/50053094
+  researchmap_event_en: CREST Research Seminar on ``Theoretical studies of topological phases of matter''
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
+  slides_file: crest250502.pdf
+  slides_url: https://o-morikawa.github.io/slides/crest250502.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/crest250502.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50053094/attachment_file.pdf
 - id: presentation-2025-03-18-hybrid-monte-carlo-simulation-of-the-su-2-z-2-yang-mills-the
   type: presentations
   kind: talk
@@ -608,9 +965,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Lattice non-perturbative understanding of generalized symmetries and applications
-  title_ja: null
+  title_ja: Lattice non-perturbative understanding of generalized symmetries and applications
   event_en: 2025 Spring Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会2025年春季大会
   start_date: '2025-03-18'
   end_date: null
   year: 2025
@@ -619,6 +976,21 @@
   - lattice gauge theory
   - generalized symmetry
   source: presentation.tex
+  researchmap_id: '49465631'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/49465631
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: invited_oral_presentation
+  slides_file: gakkai250318.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai250318.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai250318.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/49465631/attachment_file.pdf
 - id: presentation-2024-11-22-computational-lattice-foundation-of-generalized-symmetry-and
   type: presentations
   kind: seminar
@@ -626,9 +998,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Computational lattice foundation of generalized symmetry and its applications
-  title_ja: null
+  title_ja: Computational lattice foundation of generalized symmetry and its applications
   event_en: Theoretical Particle Physics Group in University of Tsukuba
-  event_ja: null
+  event_ja: 筑波大学素粒子論セミナー
   start_date: '2024-11-22'
   end_date: null
   year: 2024
@@ -637,6 +1009,18 @@
   - lattice gauge theory
   - generalized symmetry
   source: presentation.tex
+  researchmap_id: '48519655'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/48519655
+  researchmap_event_en: Seminar at Theoretical Particle Physics Group in University of Tsukuba
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
 - id: presentation-2024-11-19-lattice-non-perturbative-foundation-of-generalized-symmetry
   type: presentations
   kind: seminar
@@ -644,9 +1028,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Lattice non-perturbative foundation of generalized symmetry and applications
-  title_ja: null
+  title_ja: Lattice non-perturbative foundation of generalized symmetry and applications
   event_en: Theoretical Particle Physics Group in Shinshu University
-  event_ja: null
+  event_ja: 信州大学素粒子論セミナー
   start_date: '2024-11-19'
   end_date: null
   year: 2024
@@ -655,6 +1039,22 @@
   - lattice gauge theory
   - generalized symmetry
   source: presentation.tex
+  researchmap_id: '48487432'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/48487432
+  researchmap_event_en: Seminar at Theoretical Particle Physics Group in Shinshu University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
+  slides_file: shinshu241119.pdf
+  slides_url: https://o-morikawa.github.io/slides/shinshu241119.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/shinshu241119.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/48487432/attachment_file.pdf
 - id: presentation-2024-09-18-non-perturbative-formulation-of-quasi-stationary-resonant-st
   type: presentations
   kind: talk
@@ -662,9 +1062,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Non-perturbative formulation of quasi-stationary resonant state based on exact WKB method
-  title_ja: null
+  title_ja: 完全WKB解析による準安定共鳴状態の非摂動定式化
   event_en: 2024 Annual (79th) Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会第79回年次大会
   start_date: '2024-09-18'
   end_date: null
   year: 2024
@@ -673,6 +1073,19 @@
   - quantum resonance
   - exact WKB
   source: presentation.tex
+  researchmap_id: '47845715'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/47845715
+  presenters_en:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  presenters_ja:
+  - 森川億人
+  - 小川翔也
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
 - id: presentation-2024-09-16-yet-another-lattice-formulation-of-2d-u-1-chiral-gauge-theor
   type: presentations
   kind: talk
@@ -717,9 +1130,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Complete implementation of generalized symmetries on the lattice
-  title_ja: null
+  title_ja: Complete implementation of generalized symmetries on the lattice
   event_en: Discrete Approaches to the Dynamics of Fields and Space–Time 2024
-  event_ja: null
+  event_ja: 離散的手法による場と時空のダイナミクス2024
   start_date: '2024-09-03'
   end_date: null
   year: 2024
@@ -728,6 +1141,20 @@
   - lattice gauge theory
   - generalized symmetry
   source: presentation.tex
+  researchmap_id: '47621210'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/47621210
+  researchmap_event_en: Discrete Approaches to the Dynamics of Fields and Space-Time 2024
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  researchmap_presentation_type: invited_oral_presentation
+  slides_file: discconf240903.pdf
+  slides_url: https://o-morikawa.github.io/slides/discconf240903.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/discconf240903.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47621210/attachment_file.pdf
 - id: presentation-2024-08-29-lattice-implementation-of-generalized-symmetry-and-t-hooft-a
   type: presentations
   kind: talk
@@ -735,9 +1162,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Lattice implementation of generalized symmetry and 't Hooft anomaly
-  title_ja: null
+  title_ja: Lattice implementation of generalized symmetry and 't Hooft anomaly
   event_en: 'NCTS-iTHEMS Joint Workshop on Matters to Spacetime: Symmetries and Geometry'
-  event_ja: null
+  event_ja: 'NCTS-iTHEMS Joint Workshop on Matters to Spacetime: Symmetries and Geometry'
   start_date: '2024-08-29'
   end_date: null
   year: 2024
@@ -748,6 +1175,21 @@
   - confinement
   - anomalies
   source: presentation.tex
+  researchmap_id: '47564959'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/47564959
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: invited_oral_presentation
+  slides_file: ncts240829.pdf
+  slides_url: https://o-morikawa.github.io/slides/ncts240829.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ncts240829.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47564959/attachment_file.pdf
 - id: presentation-2024-08-02-novel-lattice-formulation-of-2d-chiral-gauge-theory-via-boso
   type: presentations
   kind: talk
@@ -793,9 +1235,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Lattice study of RG fixed point based on gradient flow in 3D O(N) sigma model
-  title_ja: null
+  title_ja: Lattice study of RG fixed point based on gradient flow in $3$D $O(N)$ sigma model
   event_en: The 41st International Symposium on Lattice Field Theory (Lattice2024)
-  event_ja: null
+  event_ja: The 41st International Symposium on Lattice Field Theory (Lattice2024)
   start_date: '2024-07-30'
   end_date: null
   year: 2024
@@ -805,6 +1247,28 @@
   - gradient flow
   - renormalization group
   source: presentation.tex
+  researchmap_id: '47264837'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/47264837
+  researchmap_title_en: Lattice study of RG fixed point based on gradient flow in $3$D $O(N)$ sigma model
+  presenters_en:
+  - Mizuki Tanaka
+  - Masakiyo Kitazawa
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  presenters_ja:
+  - 田中瑞樹
+  - 北澤正清
+  - 森川億人
+  - 鈴木博
+  languages:
+  - eng
+  researchmap_presentation_type: oral_presentation
+  slides_file: lattice240730.pdf
+  slides_url: https://o-morikawa.github.io/slides/lattice240730.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/lattice240730.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47264837/attachment_file.pdf
 - id: presentation-2024-07-19-symmetry-and-anomaly-in-lattice-gauge-theory
   type: presentations
   kind: poster
@@ -812,9 +1276,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Symmetry and anomaly in lattice gauge theory
-  title_ja: null
+  title_ja: Symmetry and anomaly in lattice gauge theory
   event_en: iTHEMS NOW & NEXT 2024
-  event_ja: null
+  event_ja: iTHEMS NOW&NEXT 2024
   start_date: '2024-07-19'
   end_date: null
   year: 2024
@@ -823,6 +1287,22 @@
   - lattice gauge theory
   - anomalies
   source: presentation.tex
+  researchmap_id: '47151001'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/47151001
+  researchmap_event_en: iTHEMS NOW&NEXT 2024
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: poster_presentation
+  slides_file: ithems240719.pdf
+  slides_url: https://o-morikawa.github.io/slides/ithems240719.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems240719.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47151001/attachment_file.pdf
 - id: presentation-2024-04-26-towards-computational-foundations-of-generalized-symmetries
   type: presentations
   kind: seminar
@@ -830,9 +1310,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Towards computational foundations of generalized symmetries
-  title_ja: null
+  title_ja: Towards computational foundations of generalized symmetries
   event_en: Field Theory Research Team in RIKEN R-CCS
-  event_ja: null
+  event_ja: 理化学研究所計算科学センター連続系場の理論研究チームセミナー
   start_date: '2024-04-26'
   end_date: null
   year: 2024
@@ -841,6 +1321,22 @@
   - generalized symmetry
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '46308405'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/46308405
+  researchmap_event_en: Seminar at Field Theory Research Team in RIKEN R-CCS
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
+  slides_file: riken-rccs240426.pdf
+  slides_url: https://o-morikawa.github.io/slides/riken-rccs240426.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/riken-rccs240426.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/46308405/attachment_file.pdf
 - id: presentation-2024-03-30-generalized-symmetries-and-topological-phenomena-in-lattice
   type: presentations
   kind: talk
@@ -848,9 +1344,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Generalized symmetries and topological phenomena in lattice gauge theory
-  title_ja: null
+  title_ja: 格子ゲージ理論における一般化対称性とトポロジカル現象
   event_en: Komaba Workshop on Non-perturbative Approaches to Quantum Field Theory
-  event_ja: null
+  event_ja: 駒場研究会 場の理論への非摂動的アプローチ
   start_date: '2024-03-30'
   end_date: null
   year: 2024
@@ -859,6 +1355,19 @@
   - lattice gauge theory
   - generalized symmetry
   source: presentation.tex
+  researchmap_id: '45954847'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/45954847
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  researchmap_presentation_type: invited_oral_presentation
+  slides_file: komaba240330.pdf
+  slides_url: https://o-morikawa.github.io/slides/komaba240330.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/komaba240330.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/45954847/attachment_file.pdf
 - id: presentation-2024-03-19-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
   type: presentations
   kind: talk
@@ -884,9 +1393,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Studies on generalized symmetries in lattice field theory
-  title_ja: null
+  title_ja: 格子場の理論におけるgeneralized symmetryの研究
   event_en: 2024 Spring Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会2024年春季大会
   start_date: '2024-03-18'
   end_date: null
   year: 2024
@@ -895,6 +1404,21 @@
   - lattice gauge theory
   - generalized symmetry
   source: presentation.tex
+  researchmap_id: '45836747'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/45836747
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: invited_oral_presentation
+  slides_file: gakkai240318.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai240318.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai240318.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/45836747/attachment_file.pdf
 - id: presentation-2024-02-16-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
   type: presentations
   kind: seminar
@@ -902,9 +1426,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Lattice realization of the axial U(1) non-invertible symmetry
-  title_ja: null
+  title_ja: Lattice realization of the axial $U(1)$ non-invertible symmetry
   event_en: Yukawa Institute for Theoretical Physics (YITP) in Kyoto University
-  event_ja: null
+  event_ja: 京都大学基礎物理学研究所セミナー
   start_date: '2024-02-16'
   end_date: null
   year: 2024
@@ -913,6 +1437,23 @@
   - lattice gauge theory
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '45606945'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/45606945
+  researchmap_title_en: Lattice realization of the axial $U(1)$ non-invertible symmetry
+  researchmap_event_en: Seminar at Yukawa Institute for Theoretical Physics in Kyoto University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
+  slides_file: yitp20240216.pdf
+  slides_url: https://o-morikawa.github.io/slides/yitp20240216.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/yitp20240216.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/45606945/attachment_file.pdf
 - id: presentation-2023-11-30-lattice-study-of-rg-fixed-point-based-on-gradient-flow-in-3d
   type: presentations
   kind: talk
@@ -920,9 +1461,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Lattice study of RG fixed point based on gradient flow in 3D O(N) sigma model
-  title_ja: null
+  title_ja: Lattice study of RG fixed point based on gradient flow in 3D O(N) sigma model
   event_en: KEK Theory Workshop 2023
-  event_ja: null
+  event_ja: KEK Theory Workshop 2023
   start_date: '2023-11-30'
   end_date: null
   year: 2023
@@ -932,6 +1473,21 @@
   - gradient flow
   - renormalization group
   source: presentation.tex
+  researchmap_id: '44159800'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/44159800
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: oral_presentation
+  slides_file: kek231130.pdf
+  slides_url: https://o-morikawa.github.io/slides/kek231130.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek231130.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/44159800/attachment_file.pdf
 - id: presentation-2023-11-09-topological-charge-fractionality-and-higher-group-of-lattice
   type: presentations
   kind: seminar
@@ -939,9 +1495,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Topological charge fractionality and higher-group of lattice higher-form gauge fields
-  title_ja: null
+  title_ja: Topological charge fractionality and higher-group of lattice higher-form gauge fields
   event_en: Hadron Theory Group in the University of Tokyo
-  event_ja: null
+  event_ja: 東京大学ハドロン理論グループセミナー
   start_date: '2023-11-09'
   end_date: null
   year: 2023
@@ -951,6 +1507,18 @@
   - generalized symmetry
   - topology
   source: presentation.tex
+  researchmap_id: '43998769'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/43998769
+  researchmap_event_en: Seminar at Hadron Theory Group in the University of Tokyo
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
 - id: presentation-2023-10-03-lattice-description-of-generalized-symmetries-and-topologica
   type: presentations
   kind: seminar
@@ -958,9 +1526,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Lattice description of generalized symmetries and topological phenomena
-  title_ja: null
+  title_ja: Lattice description of generalized symmetries and topological phenomena
   event_en: KEK Theory Center
-  event_ja: null
+  event_ja: KEK理論セミナー
   start_date: '2023-10-03'
   end_date: null
   year: 2023
@@ -969,6 +1537,22 @@
   - lattice gauge theory
   - generalized symmetry
   source: presentation.tex
+  researchmap_id: '43635383'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/43635383
+  researchmap_event_en: Seminar at KEK Theory Center
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
+  slides_file: kek231003.pdf
+  slides_url: https://o-morikawa.github.io/slides/kek231003.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek231003.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/43635383/attachment_file.pdf
 - id: presentation-2023-09-26-how-to-construct-generalized-symmetries-and-t-hooft-anomaly
   type: presentations
   kind: talk
@@ -976,9 +1560,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: How to construct generalized symmetries and 't Hooft anomaly from lattice viewpoint
-  title_ja: null
+  title_ja: How to construct generalized symmetries and 't Hooft anomaly from lattice viewpoint
   event_en: The International Workshop on Theoretical Particle Physics 2023 (HET Camp 2023)
-  event_ja: null
+  event_ja: The International Workshop on Theoretical Particle Physics 2023 (HET Camp 2023)
   start_date: '2023-09-26'
   end_date: null
   year: 2023
@@ -989,6 +1573,17 @@
   - confinement
   - anomalies
   source: presentation.tex
+  researchmap_id: '43584104'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/43584104
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: oral_presentation
 - id: presentation-2023-09-16-higher-group-symmetry-in-lattice-gauge-theories-with-restric
   type: presentations
   kind: talk
@@ -996,9 +1591,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Higher-group symmetry in lattice gauge theories with restriction of instanton numbers
-  title_ja: null
+  title_ja: インスタントン数の制限された格子ゲージ理論における高次群対称性
   event_en: 2023 Annual (78th) Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会第78回年次大会
   start_date: '2023-09-16'
   end_date: null
   year: 2023
@@ -1007,6 +1602,31 @@
   - lattice gauge theory
   - generalized symmetry
   source: presentation.tex
+  researchmap_id: '43467567'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/43467567
+  presenters_en:
+  - Motokazu Abe
+  - Naoto Kan
+  - Okuto Morikawa
+  - Yuta Nagoya
+  - Soma Onoda
+  - Hiroki Wada
+  presenters_ja:
+  - 阿部元一
+  - 簡直人
+  - 森川億人
+  - 名古屋雄大
+  - 小野田壮真
+  - 和田博貴
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai230916.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai230916.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai230916.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/43467567/attachment_file.pdf
 - id: presentation-2023-09-16-lattice-formulation-of-magnetic-operators-in-2d-compact-scal
   type: presentations
   kind: talk
@@ -1050,9 +1670,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Higher-group symmetry in lattice gauge theories with restricted topological sectors
-  title_ja: null
+  title_ja: Higher-group symmetry in lattice gauge theories with restricted topological sectors
   event_en: The 40th International Symposium on Lattice Field Theory (Lattice2023)
-  event_ja: null
+  event_ja: The 40th International Symposium on Lattice Field Theory (Lattice2023)
   start_date: '2023-07-31'
   end_date: null
   year: 2023
@@ -1061,6 +1681,31 @@
   - lattice gauge theory
   - generalized symmetry
   source: presentation.tex
+  researchmap_id: '42961466'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/42961466
+  presenters_en:
+  - Motokazu Abe
+  - Naoto Kan
+  - Okuto Morikawa
+  - Soma Onoda
+  - Yuta Nagoya
+  - Hiroki Wada
+  presenters_ja:
+  - 阿部元一
+  - 簡直人
+  - 森川億人
+  - 小野田壮真
+  - 名古屋雄大
+  - 和田博貴
+  languages:
+  - eng
+  researchmap_presentation_type: oral_presentation
+  slides_file: lattice230731.pdf
+  slides_url: https://o-morikawa.github.io/slides/lattice230731.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/lattice230731.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/42961466/attachment_file.pdf
 - id: presentation-2023-07-31-lattice-construction-of-mixed-t-hooft-anomaly-with-higher-fo
   type: presentations
   kind: talk
@@ -1143,9 +1788,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Numerical study of deformation of target space for the 𝒩=2 Landau–Ginzburg models
-  title_ja: null
+  title_ja: N=2ランダウ・ギンツブルグ模型における標的空間の変形の数値的研究
   event_en: 2021 Autumn Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会2021年秋季大会
   start_date: '2021-09-14'
   end_date: null
   year: 2021
@@ -1155,6 +1800,22 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '33710917'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/33710917
+  researchmap_title_en: Numerical study of deformation of target space for the N=2 Landau-Ginzburg models
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai210914.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai210914.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai210914.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/33710917/attachment_file.pdf
 - id: presentation-2021-03-12-counterargument-to-the-expected-resurgence-structure-concern
   type: presentations
   kind: talk
@@ -1180,9 +1841,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Perturbative ambiguities and resurgence in circle-compactified theories
-  title_ja: null
+  title_ja: Perturbative ambiguities and resurgence in circle-compactified theories
   event_en: Theoretical Particle Physics Group in Tokyo Institute of Technology
-  event_ja: null
+  event_ja: 東京工業大学素粒子論セミナー
   start_date: '2021-01-20'
   end_date: null
   year: 2021
@@ -1191,6 +1852,22 @@
   - compactified field theory
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '31493460'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/31493460
+  researchmap_event_en: Seminar at Theoretical Particle Physics Group in Tokyo Institute of Technology
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
+  slides_file: toukou210120.pdf
+  slides_url: https://o-morikawa.github.io/slides/toukou210120.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/toukou210120.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/31493460/attachment_file.pdf
 - id: presentation-2020-09-24-perturbative-ambiguities-in-compactified-spacetime-and-resur
   type: presentations
   kind: talk
@@ -1198,9 +1875,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Perturbative ambiguities in compactified spacetime and resurgence structure
-  title_ja: null
+  title_ja: Perturbative ambiguities in compactified spacetime and resurgence structure
   event_en: Potential Toolkit to Attack Nonperturbative Aspects of QFT -Resurgence and related topics-
-  event_ja: null
+  event_ja: Potential Toolkit to Attack Nonperturbative Aspects of QFT -Resurgence and related topics-
   start_date: '2020-09-24'
   end_date: null
   year: 2020
@@ -1209,6 +1886,21 @@
   - compactified field theory
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '30158072'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/30158072
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: invited_oral_presentation
+  slides_file: resurgence200924.pdf
+  slides_url: https://o-morikawa.github.io/slides/resurgence200924.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/resurgence200924.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/30158072/attachment_file.pdf
 - id: presentation-2020-09-16-renormalon-in-su-n-qcd-adj-on-compactified-spacetime
   type: presentations
   kind: talk
@@ -1216,9 +1908,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Renormalon in SU(N) QCD(adj.) on compactified spacetime
-  title_ja: null
+  title_ja: Renormalon in SU(N) QCD(adj.) on compactified spacetime
   event_en: 2020 Autumn Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会2020年秋季大会
   start_date: '2020-09-16'
   end_date: null
   year: 2020
@@ -1228,6 +1920,27 @@
   - resurgence
   - compactified field theory
   source: presentation.tex
+  researchmap_id: '30091767'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/30091767
+  presenters_en:
+  - Masahiro Ashie
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  - Hiromasa Takaura
+  presenters_ja:
+  - 芦江誠大
+  - 森川億人
+  - 鈴木博
+  - 高浦大雅
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai200916.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai200916.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai200916.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/30091767/attachment_file.pdf
 - id: presentation-2020-09-14-identification-of-perturbative-ambiguity-canceled-against-bi
   type: presentations
   kind: talk
@@ -1235,9 +1948,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Identification of perturbative ambiguity canceled against bion
-  title_ja: null
+  title_ja: Identification of perturbative ambiguity canceled against bion
   event_en: 2020 Autumn Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会2020年秋季大会
   start_date: '2020-09-14'
   end_date: null
   year: 2020
@@ -1246,6 +1959,23 @@
   - resurgence
   - semiclassical field theory
   source: presentation.tex
+  researchmap_id: '30072791'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/30072791
+  presenters_en:
+  - Okuto Morikawa
+  - Hiromasa Takaura
+  presenters_ja:
+  - 森川億人
+  - 高浦大雅
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai200914.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai200914.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai200914.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/30072791/attachment_file.pdf
 - id: presentation-2020-08-28-resurgence-structure-in-s-1-compactified-spacetime
   type: presentations
   kind: talk
@@ -1253,9 +1983,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Resurgence structure in S^1-compactified spacetime
-  title_ja: null
+  title_ja: $S^1$コンパクト化された時空でのリサージェンス構造
   event_en: YONUPA Summer School 2020
-  event_ja: null
+  event_ja: 素粒子若手オンライン研究会2020
   start_date: '2020-08-28'
   end_date: null
   year: 2020
@@ -1264,6 +1994,22 @@
   - compactified field theory
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '29720697'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/29720697
+  researchmap_title_en: Resurgence structure in $S^1$-compactified spacetime
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: wakate200828.pdf
+  slides_url: https://o-morikawa.github.io/slides/wakate200828.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/wakate200828.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/29720697/attachment_file.pdf
 - id: presentation-2020-08-25-perturbative-ambiguity-in-compactified-spacetime-and-resurge
   type: presentations
   kind: poster
@@ -1271,9 +2017,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Perturbative ambiguity in compactified spacetime and resurgence structure
-  title_ja: null
+  title_ja: コンパクト化された時空における摂動論の不定性とリサージェンス構造
   event_en: Finite temperature field theory and its application 2020 (TQFT 2020)
-  event_ja: null
+  event_ja: 熱場の量子論とその応用2020 (TQFT 2020)
   start_date: '2020-08-25'
   end_date: null
   year: 2020
@@ -1282,6 +2028,21 @@
   - compactified field theory
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '29555725'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/29555725
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: poster_presentation
+  slides_file: tqft200825.pdf
+  slides_url: https://o-morikawa.github.io/slides/tqft200825.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/tqft200825.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/29555725/attachment_file.pdf
 - id: presentation-2020-08-04-resurgence-structure-on-compactified-spacetime-with-twisted
   type: presentations
   kind: talk
@@ -1289,9 +2050,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Resurgence structure on compactified spacetime with twisted boundary condition
-  title_ja: null
+  title_ja: Resurgence structure on compactified spacetime with twisted boundary condition
   event_en: Asia-Pacific Symposium for Lattice Field Theory (APLAT 2020)
-  event_ja: null
+  event_ja: Asia-Pacific Symposium for Lattice Field Theory (APLAT 2020)
   start_date: '2020-08-04'
   end_date: null
   year: 2020
@@ -1300,6 +2061,21 @@
   - compactified field theory
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '29367543'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/29367543
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: oral_presentation
+  slides_file: aplat200807.pdf
+  slides_url: https://o-morikawa.github.io/slides/aplat200807.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/aplat200807.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/29367543/attachment_file.pdf
 - id: presentation-2020-06-09-computer-simulation-of-the-n-2-landau-ginzburg-model
   type: presentations
   kind: seminar
@@ -1307,9 +2083,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Computer simulation of the 𝒩=2 Landau–Ginzburg model
-  title_ja: null
+  title_ja: Computer simulation of the N=2 Landau-Ginzburg model
   event_en: Theoretical Particle Physics Group in Osaka University
-  event_ja: null
+  event_ja: 大阪大学素粒子論セミナー
   start_date: '2020-06-09'
   end_date: null
   year: 2020
@@ -1319,6 +2095,23 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '27686342'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/27686342
+  researchmap_title_en: Computer simulation of the N=2 Landau-Ginzburg model
+  researchmap_event_en: Seminar at Theoretical Particle Physics Group in Osaka University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
+  slides_file: osaka200609.pdf
+  slides_url: https://o-morikawa.github.io/slides/osaka200609.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/osaka200609.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/27686342/attachment_file.pdf
 - id: presentation-2020-03-16-ir-renormalon-in-the-p-n-1-model-on-s-1
   type: presentations
   kind: talk
@@ -1326,9 +2119,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: IR renormalon in the ℂP^(N−1) model on ℝ × S^1
-  title_ja: null
+  title_ja: RxS^1上のCP^{N-1}模型におけるIRリノーマロン
   event_en: 2020 Annual (75th) Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会第75回年次大会
   start_date: '2020-03-16'
   end_date: null
   year: 2020
@@ -1338,6 +2131,32 @@
   - resurgence
   - compactified field theory
   source: presentation.tex
+  researchmap_id: '26018806'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018806
+  researchmap_title_en: IR renormalon in the CP^{N-1} model on RxS^1
+  presenters_en:
+  - Kosuke Ishikawa
+  - Okuto Morikawa
+  - Akira Nakayama
+  - Kazuya Shibata
+  - Hiroshi Suzuki
+  - Hiromasa Takaura
+  presenters_ja:
+  - 石川航輔
+  - 森川億人
+  - 中山聖
+  - 柴田和弥
+  - 鈴木博
+  - 高浦大雅
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai200316.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai200316.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai200316.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018806/attachment_file.pdf
 - id: presentation-2020-03-16-ir-renormalon-in-su-n-qcd-adj-on-3-s-1
   type: presentations
   kind: talk
@@ -1364,9 +2183,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Vacuum energy of the SUSY ℂP^(N−1) model on ℝ × S^1
-  title_ja: null
+  title_ja: Vacuum energy of the SUSY $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$
   event_en: 'CP^ N model: recent developments and future directions'
-  event_ja: null
+  event_ja: 'CP^N model: recent developments and future directions'
   start_date: '2020-01-23'
   end_date: null
   year: 2020
@@ -1375,6 +2194,23 @@
   - compactified field theory
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '26018930'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018930
+  researchmap_title_en: Vacuum energy of the SUSY $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$
+  researchmap_event_en: 'CP^N model: recent developments and future directions'
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: invited_oral_presentation
+  slides_file: keio200123.pdf
+  slides_url: https://o-morikawa.github.io/slides/keio200123.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/keio200123.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018930/attachment_file.pdf
 - id: presentation-2019-12-23-infrared-renormalon-in-the-p-n-1-model-on-s-1
   type: presentations
   kind: talk
@@ -1382,9 +2218,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Infrared renormalon in the ℂP^(N−1) model on ℝ × S^1
-  title_ja: null
+  title_ja: Infrared renormalon in the $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$
   event_en: RIKEN-Kyushu workshop on particle, nuclear and astrophysics
-  event_ja: null
+  event_ja: 理研-九大ジョイントワークショップ「数理が紡ぐ素粒子・原子核・宇宙」
   start_date: '2019-12-23'
   end_date: null
   year: 2019
@@ -1394,6 +2230,22 @@
   - resurgence
   - compactified field theory
   source: presentation.tex
+  researchmap_id: '26018801'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018801
+  researchmap_title_en: Infrared renormalon in the $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: kyushu-riken191223.pdf
+  slides_url: https://o-morikawa.github.io/slides/kyushu-riken191223.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kyushu-riken191223.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018801/attachment_file.pdf
 - id: presentation-2019-12-05-infrared-renormalon-in-the-supersymmetric-p-n-1-model-on-s-1
   type: presentations
   kind: poster
@@ -1401,9 +2253,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Infrared renormalon in the supersymmetric ℂP^(N−1) model on ℝ × S^1
-  title_ja: null
+  title_ja: Infrared renormalon in the supersymmetric $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$
   event_en: KEK Theory Workshop 2019
-  event_ja: null
+  event_ja: KEK Theory Workshop 2019
   start_date: '2019-12-05'
   end_date: null
   year: 2019
@@ -1414,6 +2266,22 @@
   - compactified field theory
   - supersymmetry
   source: presentation.tex
+  researchmap_id: '26018906'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018906
+  researchmap_title_en: Infrared renormalon in the supersymmetric $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: poster_presentation
+  slides_file: kek191205.pdf
+  slides_url: https://o-morikawa.github.io/slides/kek191205.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek191205.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018906/attachment_file.pdf
 - id: presentation-2019-09-18-continuum-extrapolation-and-precision-measurement-of-the-sca
   type: presentations
   kind: talk
@@ -1421,9 +2289,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Continuum extrapolation and precision measurement of the scaling dimension in the 𝒩=2 Landau–Ginzburg model
-  title_ja: null
+  title_ja: N=2 Landau-Ginzburg模型におけるスケーリング次元の連続極限と精密測定
   event_en: 2019 Autumn Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会2019年秋季大会
   start_date: '2019-09-18'
   end_date: null
   year: 2019
@@ -1433,6 +2301,23 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '26018778'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018778
+  researchmap_title_en: Continuum extrapolation and precision measurement of the scaling dimension in the N=2 Landau-Ginzburg
+    model
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai190918.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai190918.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai190918.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018778/attachment_file.pdf
 - id: presentation-2019-06-23-numerical-study-of-ade-type-n-2-landau-ginzburg-models
   type: presentations
   kind: talk
@@ -1440,9 +2325,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Numerical study of ADE-type 𝒩=2 Landau–Ginzburg models
-  title_ja: null
+  title_ja: Numerical study of ADE-type $\mathcal{N}=2$ Landau--Ginzburg models
   event_en: The 37th International Symposium on Lattice Field Theory (Lattice2019)
-  event_ja: null
+  event_ja: The 37th International Symposium on Lattice Field Theory (Lattice2019)
   start_date: '2019-06-23'
   end_date: null
   year: 2019
@@ -1452,6 +2337,22 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '26018897'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018897
+  researchmap_title_en: Numerical study of ADE-type $\mathcal{N}=2$ Landau--Ginzburg models
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: oral_presentation
+  slides_file: lattice190621.pdf
+  slides_url: https://o-morikawa.github.io/slides/lattice190621.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/lattice190621.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018897/attachment_file.pdf
 - id: presentation-2019-03-17-gradient-flow-representation-of-the-4d-n-2-sym-supercurrent
   type: presentations
   kind: talk
@@ -1459,9 +2360,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Gradient flow representation of the 4D 𝒩=2 SYM supercurrent
-  title_ja: null
+  title_ja: Gradient flow representation of the 4D N=2 SYM supercurrent
   event_en: 2019 Annual (74th) Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会第74回年次大会
   start_date: '2019-03-17'
   end_date: null
   year: 2019
@@ -1470,6 +2371,26 @@
   - gradient flow
   - supersymmetry
   source: presentation.tex
+  researchmap_id: '26018759'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018759
+  researchmap_title_en: Gradient flow representation of the 4D N=2 SYM supercurrent
+  presenters_en:
+  - Aya Kasai
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  presenters_ja:
+  - 笠井彩
+  - 森川億人
+  - 鈴木博
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai190317.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai190317.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai190317.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018759/attachment_file.pdf
 - id: presentation-2019-02-21-numerical-study-of-the-n-2-landau-ginzburg-model
   type: presentations
   kind: poster
@@ -1477,9 +2398,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Numerical study of the 𝒩=2 Landau–Ginzburg model
-  title_ja: null
+  title_ja: Numerical study of the $\mathcal{N}=2$ Landau--Ginzburg model
   event_en: The 4th International Workshop on ``Higgs as a Probe of New Physics'' (HPNP2019)
-  event_ja: null
+  event_ja: The 4th International Workshop on ``Higgs as a Probe of New Physics'' (HPNP2019)
   start_date: '2019-02-21'
   end_date: null
   year: 2019
@@ -1489,6 +2410,22 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '26018871'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018871
+  researchmap_title_en: Numerical study of the $\mathcal{N}=2$ Landau--Ginzburg model
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: poster_presentation
+  slides_file: osaka190218.pdf
+  slides_url: https://o-morikawa.github.io/slides/osaka190218.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/osaka190218.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018871/attachment_file.pdf
 - id: presentation-2018-12-19-numerical-study-of-the-n-2-landau-ginzburg-model
   type: presentations
   kind: poster
@@ -1496,9 +2433,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Numerical study of the 𝒩=2 Landau–Ginzburg model
-  title_ja: null
+  title_ja: Numerical study of the $\mathcal{N}=2$ Landau--Ginzburg model
   event_en: KEK Theory Workshop 2018
-  event_ja: null
+  event_ja: KEK Theory Workshop 2018
   start_date: '2018-12-19'
   end_date: null
   year: 2018
@@ -1508,6 +2445,22 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '26018858'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018858
+  researchmap_title_en: Numerical study of the $\mathcal{N}=2$ Landau--Ginzburg model
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: poster_presentation
+  slides_file: kek181217.pdf
+  slides_url: https://o-morikawa.github.io/slides/kek181217.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek181217.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018858/attachment_file.pdf
 - id: presentation-2018-11-21-numerical-study-of-the-n-2-landau-ginzburg-model
   type: presentations
   kind: talk
@@ -1515,9 +2468,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Numerical study of the 𝒩=2 Landau–Ginzburg model
-  title_ja: null
+  title_ja: Numerical study of the N=2 Landau-Ginzburg model
   event_en: iTHEMS-Kyushu WS -from particles and nuclei to cosmos-
-  event_ja: null
+  event_ja: 理研-九大ワークショップ --素粒子・原子核から宇宙へ--
   start_date: '2018-11-21'
   end_date: null
   year: 2018
@@ -1527,6 +2480,23 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '26018733'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018733
+  researchmap_title_en: Numerical study of the N=2 Landau-Ginzburg model
+  researchmap_event_en: iTHEMS-Kyushu WS - from particles and nuclei to cosmos -
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: riken181221.pdf
+  slides_url: https://o-morikawa.github.io/slides/riken181221.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/riken181221.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018733/attachment_file.pdf
 - id: presentation-2018-09-15-numerical-study-of-n-2-landau-ginzburg-models-with-multiple
   type: presentations
   kind: talk
@@ -1534,9 +2504,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Numerical study of 𝒩=2 Landau–Ginzburg models with multiple superfields
-  title_ja: null
+  title_ja: 複数超場を含むN=2 Landau-Ginzburg模型の数値的研究
   event_en: 2018 Autumn Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会2018年秋季大会
   start_date: '2018-09-15'
   end_date: null
   year: 2018
@@ -1546,6 +2516,22 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '26018718'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018718
+  researchmap_title_en: Numerical study of N=2 Landau-Ginzburg models with multiple superfields
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai180915.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai180915.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai180915.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018718/attachment_file.pdf
 - id: presentation-2018-05-20-gradient-flow-and-the-wilsonian-renormalization-group-flow
   type: presentations
   kind: seminar
@@ -1553,9 +2539,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Gradient flow and the Wilsonian renormalization group flow
-  title_ja: null
+  title_ja: Gradient flow and the Wilsonian renormalization group flow
   event_en: KEK Theory Center
-  event_ja: null
+  event_ja: KEK理論セミナー
   start_date: '2018-05-20'
   end_date: null
   year: 2018
@@ -1565,6 +2551,22 @@
   - renormalization group
   - Wilsonian renormalization group
   source: presentation.tex
+  researchmap_id: '26018984'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018984
+  researchmap_event_en: Seminar at KEK Theory Center
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: public_discourse
+  slides_file: kek180522.pdf
+  slides_url: https://o-morikawa.github.io/slides/kek180522.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek180522.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018984/attachment_file.pdf
 - id: presentation-2018-03-23-numerical-study-of-n-2-landau-ginzburg-models
   type: presentations
   kind: talk
@@ -1572,9 +2574,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Numerical study of 𝒩=2 Landau–Ginzburg models
-  title_ja: null
+  title_ja: Numerical study of $\mathcal{N}=2$ Landau–-Ginzburg models
   event_en: 2018 Annual (73rd) Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会第73回年次大会
   start_date: '2018-03-23'
   end_date: null
   year: 2018
@@ -1584,6 +2586,24 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '26018709'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018709
+  researchmap_title_en: Numerical study of $\mathcal{N}=2$ Landau–-Ginzburg models
+  presenters_en:
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  presenters_ja:
+  - 森川億人
+  - 鈴木博
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai180323.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai180323.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai180323.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018709/attachment_file.pdf
 - id: presentation-2018-03-23-gravitational-axial-u-1-anomaly-via-the-gradient-flow
   type: presentations
   kind: talk
@@ -1627,9 +2647,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Numerical study of the two-dimensional supersymmetric Landau–Ginzburg model
-  title_ja: null
+  title_ja: 2次元超対称Landau-Ginzburg模型の数値的研究
   event_en: 123rd Meeting of the Kyushu Branch of the Physical Society of Japan
-  event_ja: null
+  event_ja: 第123回物理学会九州支部例会
   start_date: '2017-12-09'
   end_date: null
   year: 2017
@@ -1639,6 +2659,18 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '26018696'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018696
+  researchmap_title_en: Numerical study of the two-dimensional supersymmetric Landau-Ginzburg model
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
 - id: presentation-2017-11-17-conformal-field-theory-and-the-landau-ginzburg-description
   type: presentations
   kind: seminar
@@ -1646,9 +2678,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Conformal field theory and the Landau–Ginzburg description
-  title_ja: null
+  title_ja: Conformal field theory and the Landau-Ginzburg description
   event_en: Theoretical Particle Physics Group in Hokkaido University
-  event_ja: null
+  event_ja: 北海道大学素粒子論セミナー
   start_date: '2017-11-17'
   end_date: null
   year: 2017
@@ -1658,6 +2690,19 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '26018946'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018946
+  researchmap_title_en: Conformal field theory and the Landau-Ginzburg description
+  researchmap_event_en: Seminar at Theoretical Particle Physics Group in Hokkaido University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: public_discourse
 - id: presentation-2017-11-17-numerical-study-of-n-2-landau-ginzburg-models
   type: presentations
   kind: seminar
@@ -1665,9 +2710,9 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Numerical study of 𝒩=2 Landau–Ginzburg models
-  title_ja: null
+  title_ja: Numerical study of $\mathcal{N}=2$ Landau--Ginzburg models
   event_en: Theoretical Particle Physics Group in Hokkaido University
-  event_ja: null
+  event_ja: 北海道大学素粒子論セミナー
   start_date: '2017-11-17'
   end_date: null
   year: 2017
@@ -1677,6 +2722,23 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '26018940'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018940
+  researchmap_title_en: Numerical study of $\mathcal{N}=2$ Landau--Ginzburg models
+  researchmap_event_en: Seminar at Theoretical Particle Physics Group in Hokkaido University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: public_discourse
+  slides_file: hokudai171117.pdf
+  slides_url: https://o-morikawa.github.io/slides/hokudai171117.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/hokudai171117.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018940/attachment_file.pdf
 - id: presentation-2017-09-28-numerical-simulation-of-the-n-2-landau-ginzburg-model
   type: presentations
   kind: talk
@@ -1684,9 +2746,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Numerical simulation of the 𝒩=2 Landau–Ginzburg model
-  title_ja: null
+  title_ja: Numerical simulation of the $\mathcal{N}=2$ Landau--Ginzburg model
   event_en: Setouchi Summer Institute 2017
-  event_ja: null
+  event_ja: 瀬戸内サマーインスティテュート2017
   start_date: '2017-09-28'
   end_date: null
   year: 2017
@@ -1696,6 +2758,22 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '26018670'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018670
+  researchmap_title_en: Numerical simulation of the $\mathcal{N}=2$ Landau--Ginzburg model
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: ssi170928.pdf
+  slides_url: https://o-morikawa.github.io/slides/ssi170928.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ssi170928.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018670/attachment_file.pdf
 - id: presentation-2017-09-14-numerical-simulation-of-n-2-landau-ginzburg-model
   type: presentations
   kind: talk
@@ -1703,9 +2781,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Numerical simulation of 𝒩=2 Landau–Ginzburg model
-  title_ja: null
+  title_ja: N=2ランダウ・ギンツブルグ模型の数値シミュレーション
   event_en: 2017 Autumn Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会2017年秋季大会
   start_date: '2017-09-14'
   end_date: null
   year: 2017
@@ -1715,6 +2793,24 @@
   - supersymmetry
   - conformal field theory
   source: presentation.tex
+  researchmap_id: '26018662'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018662
+  researchmap_title_en: Numerical simulation of N=2 Landau-Ginzburg model
+  presenters_en:
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  presenters_ja:
+  - 森川億人
+  - 鈴木博
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai170914.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai170914.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai170914.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018662/attachment_file.pdf
 - id: presentation-2017-09-14-gradient-flow-and-the-wilsonian-renormalization-group-flow
   type: presentations
   kind: talk
@@ -1759,9 +2855,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: One-loop perturbative coupling of A and A_⋆ through the chiral overlap operator
-  title_ja: null
+  title_ja: One-loop perturbative coupling of $A$ and $A_\star$ through the chiral overlap operator
   event_en: The 35th International Symposium on Lattice Field Theory (Lattice2017)
-  event_ja: null
+  event_ja: The 35th International Symposium on Lattice Field Theory (Lattice2017)
   start_date: '2017-06-23'
   end_date: null
   year: 2017
@@ -1770,6 +2866,26 @@
   - chiral gauge theory
   - theoretical physics
   source: presentation.tex
+  researchmap_id: '26018834'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018834
+  researchmap_title_en: One-loop perturbative coupling of $A$ and $A_\star$ through the chiral overlap operator
+  presenters_en:
+  - Hiroki Makino
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  presenters_ja:
+  - 牧野広樹
+  - 森川億人
+  - 鈴木博
+  languages:
+  - eng
+  researchmap_presentation_type: oral_presentation
+  slides_file: lat2017_0623.pdf
+  slides_url: https://o-morikawa.github.io/slides/lat2017_0623.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/lat2017_0623.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018834/attachment_file.pdf
 - id: presentation-2017-03-17-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
   type: presentations
   kind: talk
@@ -1777,9 +2893,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Lorentz symmetry violation in the fermion number anomaly with the chiral overlap operator
-  title_ja: null
+  title_ja: Lorentz symmetry violation in the fermion number anomaly with the chiral overlap operator
   event_en: 2017 Annual (72nd) Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会第72回年次大会
   start_date: '2017-03-17'
   end_date: null
   year: 2017
@@ -1788,6 +2904,23 @@
   - anomalies
   - chiral gauge theory
   source: presentation.tex
+  researchmap_id: '26018638'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018638
+  presenters_en:
+  - Hiroki Makino
+  - Okuto Morikawa
+  presenters_ja:
+  - 牧野広樹
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai170317.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai170317.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai170317.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018638/attachment_file.pdf
 - id: presentation-2016-12-10-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
   type: presentations
   kind: talk
@@ -1795,9 +2928,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Lorentz symmetry violation in the fermion number anomaly with the chiral overlap operator
-  title_ja: null
+  title_ja: カイラル・オーバーラップ演算子を用いたフェルミオン数アノマリーのローレンツ対称性の破れ
   event_en: 122nd Meeting of the Kyushu Branch of the Physical Society of Japan
-  event_ja: null
+  event_ja: 第122回物理学会九州支部例会
   start_date: '2016-12-10'
   end_date: null
   year: 2016
@@ -1806,6 +2939,19 @@
   - anomalies
   - chiral gauge theory
   source: presentation.tex
+  researchmap_id: '26018623'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018623
+  presenters_en:
+  - Hiroki Makino
+  - Okuto Morikawa
+  presenters_ja:
+  - 牧野広樹
+  - 森川億人
+  languages:
+  - jpn
+  researchmap_presentation_type: oral_presentation
 - id: presentation-2016-12-07-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
   type: presentations
   kind: poster
@@ -1813,9 +2959,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Lorentz symmetry violation in the fermion number anomaly with the chiral overlap operator
-  title_ja: null
+  title_ja: Lorentz symmetry violation in the fermion number anomaly with the chiral overlap operator
   event_en: KEK Theory Workshop 2016
-  event_ja: null
+  event_ja: KEK Theory Workshop 2016
   start_date: '2016-12-07'
   end_date: null
   year: 2016
@@ -1824,6 +2970,23 @@
   - anomalies
   - chiral gauge theory
   source: presentation.tex
+  researchmap_id: '26018827'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018827
+  presenters_en:
+  - Hiroki Makino
+  - Okuto Morikawa
+  presenters_ja:
+  - 牧野広樹
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: poster_presentation
+  slides_file: kek_poster20161207_ign.pdf
+  slides_url: https://o-morikawa.github.io/slides/kek_poster20161207_ign.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/kek_poster20161207_ign.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018827/attachment_file.pdf
 - id: presentation-2025-12-12-aspects-of-quantum-resonance-revisited
   type: presentations
   kind: informal_talk
@@ -1831,9 +2994,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Aspects of Quantum Resonance Revisited
-  title_ja: null
+  title_ja: Aspects of Quantum Resonance Revisited
   event_en: Coffee Meeting Talk at iTHEMS
-  event_ja: null
+  event_ja: iTHEMS Coffee Meeting Talk
   start_date: '2025-12-12'
   end_date: null
   year: 2025
@@ -1843,6 +3006,21 @@
   - theoretical physics
   source: presentation.tex
   url: https://www.youtube.com/live/dK8arrieLx8?si=geFnlfco9NnLaEWC
+  researchmap_id: '51847073'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/51847073
+  researchmap_event_en: iTHEMS Coffee Meeting Talk
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  slides_file: ithems251212.pdf
+  slides_url: https://o-morikawa.github.io/slides/ithems251212.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems251212.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51847073/attachment_file.pdf
 - id: presentation-2025-02-17-lattice-implementation-of-gauge-field-topology-and-generaliz
   type: presentations
   kind: journal_club
@@ -1850,9 +3028,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Lattice implementation of gauge field topology and generalized symmetry
-  title_ja: null
+  title_ja: Lattice implementation of gauge field topology and generalized symmetry
   event_en: Journal Club at Durham Univ.
-  event_ja: null
+  event_ja: HEP Journal Club at Mathematical Sciences Group in Durham University
   start_date: '2025-02-17'
   end_date: null
   year: 2025
@@ -1862,6 +3040,18 @@
   - generalized symmetry
   - topology
   source: presentation.tex
+  researchmap_id: '49252473'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/49252473
+  researchmap_event_en: HEP Journal Club at Mathematical Sciences Group in Durham University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
 - id: presentation-2024-09-13-gauge-field-topology-on-the-lattice
   type: presentations
   kind: informal_talk
@@ -1869,9 +3059,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Gauge field topology on the lattice
-  title_ja: null
+  title_ja: Gauge field topology on the lattice
   event_en: Coffee Meeting Talk at iTHEMS
-  event_ja: null
+  event_ja: iTHEMS Coffee Meeting Talk
   start_date: '2024-09-13'
   end_date: null
   year: 2024
@@ -1880,6 +3070,21 @@
   - lattice gauge theory
   - topology
   source: presentation.tex
+  researchmap_id: '47795057'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/47795057
+  researchmap_event_en: iTHEMS Coffee Meeting Talk
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  slides_file: ithems240913.pdf
+  slides_url: https://o-morikawa.github.io/slides/ithems240913.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems240913.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47795057/attachment_file.pdf
 - id: presentation-2024-01-18-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
   type: presentations
   kind: journal_club

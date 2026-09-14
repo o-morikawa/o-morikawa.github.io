@@ -64,7 +64,7 @@
   - O. Morikawa
   - S. Ogawa
   title_en: Unified exact WKB framework for quantum mechanical resonance
-  title_ja: null
+  title_ja: 量子力学的共鳴を扱うための統一的な完全WKB解析の枠組み
   year: 2025
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 80(2)
@@ -73,6 +73,12 @@
   - quantum resonance
   - exact WKB
   source: publication(1).tex
+  researchmap_id: '51128062'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.19aEK201-10
 - id: jps-abstract-2025-16ask310-10
   type: publications
   kind: meeting_abstract
@@ -82,7 +88,7 @@
   - O. Morikawa
   - H. Suzuki
   title_en: Gradient flow for winding numbers in real-space representation
-  title_ja: null
+  title_ja: 勾配流法を用いた実空間巻き付き数の定式化
   year: 2025
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 80(2)
@@ -91,6 +97,12 @@
   - topology
   - gradient flow
   source: publication(1).tex
+  researchmap_id: '51128054'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.16aSK310-10
 - id: jps-abstract-2025-16aek201-1
   type: publications
   kind: meeting_abstract
@@ -101,7 +113,7 @@
   - O. Morikawa
   - S. Onoda
   title_en: Eigenstate Thermalization Hypothesis with Projective Representation
-  title_ja: null
+  title_ja: 射影表現が存在する場合における固有状態熱化仮説
   year: 2025
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 80(2)
@@ -111,6 +123,12 @@
   - quantum many-body theory
   - projective symmetry
   source: publication(1).tex
+  researchmap_id: '51128046'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.16aEK201-9
 - id: jps-abstract-2025-18as1-2
   type: publications
   kind: meeting_abstract
@@ -118,7 +136,7 @@
   authors:
   - O. Morikawa
   title_en: Lattice non-perturbative understanding of generalized symmetries and applications
-  title_ja: null
+  title_ja: Lattice non-perturbative understanding of generalized symmetries and applications
   year: 2025
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 80(1)
@@ -128,6 +146,12 @@
   - generalized symmetry
   source: publication(1).tex
   j_global: '202502271580568708'
+  researchmap_id: '49594061'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.18aS1-2
 - id: jps-abstract-2024-18pwb101-16
   type: publications
   kind: meeting_abstract
@@ -136,7 +160,7 @@
   - O. Morikawa
   - S. Ogawa
   title_en: Non-perturbative formulation of quasi-stationary resonant state based on exact WKB method
-  title_ja: null
+  title_ja: 完全WKB解析による準安定共鳴状態の非摂動定式化
   year: 2024
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 79(2)
@@ -146,6 +170,12 @@
   - exact WKB
   source: publication(1).tex
   j_global: '202502278248352483'
+  researchmap_id: '47845847'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.18pWB101-16
 - id: jps-abstract-2024-16pwb102-6
   type: publications
   kind: meeting_abstract
@@ -155,7 +185,7 @@
   - S. Onoda
   - H. Suzuki
   title_en: Yet another lattice formulation of 2D U(1) chiral gauge theory via bosonization
-  title_ja: null
+  title_ja: Yet another lattice formulation of 2D U(1) chiral gauge theory via bosonization
   year: 2024
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 79(2)
@@ -166,6 +196,12 @@
   - bosonization
   source: publication(1).tex
   j_global: '202502234377619864'
+  researchmap_id: '47869260'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.16pWB102-6
 - id: jps-abstract-2024-18as1-8
   type: publications
   kind: meeting_abstract
@@ -173,7 +209,7 @@
   authors:
   - O. Morikawa
   title_en: Studies on generalized symmetries in lattice field theory
-  title_ja: null
+  title_ja: 格子場の理論におけるgeneralized symmetryの研究
   year: 2024
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 79(1)
@@ -183,6 +219,12 @@
   - generalized symmetry
   source: publication(1).tex
   j_global: '202402217971446919'
+  researchmap_id: '45850272'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.18aS1-8
 - id: jps-abstract-2023-16ara23-9
   type: publications
   kind: meeting_abstract
@@ -195,7 +237,7 @@
   - S. Onoda
   - H. Wada
   title_en: Higher-group symmetry in lattice gauge theories with restriction of instanton numbers
-  title_ja: null
+  title_ja: インスタントン数の制限された格子ゲージ理論における高次群対称性
   year: 2023
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 78(2)
@@ -205,6 +247,12 @@
   - generalized symmetry
   source: publication(1).tex
   j_global: '202302260250037895'
+  researchmap_id: '43502704'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.16aRA23-9
 - id: jps-abstract-2023-16ara23-8
   type: publications
   kind: meeting_abstract
@@ -216,7 +264,7 @@
   - H. Suzuki
   - Y. Tanizaki
   title_en: Lattice formulation of magnetic operators in 2D compact scalar theories
-  title_ja: null
+  title_ja: 格子正則化された2次元コンパクトスカラー理論における磁気的演算子の定式化
   year: 2023
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 78(2)
@@ -226,6 +274,12 @@
   - generalized symmetry
   source: publication(1).tex
   j_global: '202302241386562671'
+  researchmap_id: '43502699'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.16aRA23-8
 - id: jps-abstract-2023-16ara23-7
   type: publications
   kind: meeting_abstract
@@ -237,7 +291,7 @@
   - H. Suzuki
   - Y. Tanizaki
   title_en: Fractional topological charge in 4d lattice SU(N) gauge theory
-  title_ja: null
+  title_ja: $4$次元格子$SU(N)$ゲージ理論における分数トポロジカル電荷
   year: 2023
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 78(2)
@@ -247,6 +301,13 @@
   - topology
   source: publication(1).tex
   j_global: '202302255016737097'
+  researchmap_id: '43502686'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Fractional topological charge in $4$d lattice $SU(N)$ gauge theory
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.16aRA23-7
 - id: jps-abstract-2022-6pa132-12
   type: publications
   kind: meeting_abstract
@@ -256,7 +317,7 @@
   - H. Wada
   - S. Yamaguchi
   title_en: Constraints on the phase structure of linear quiver gauge theories from anomalies for one-form symmetries
-  title_ja: null
+  title_ja: 線型quiverゲージ理論の相構造に対する1-形式対称性のアノマリーからの制限
   year: 2022
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 77(2)
@@ -267,6 +328,12 @@
   - anomaly matching
   source: publication(1).tex
   j_global: '202302285992771528'
+  researchmap_id: '42736117'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.6pA132-12
 - id: jps-abstract-2022-15pa132-10
   type: publications
   kind: meeting_abstract
@@ -277,7 +344,7 @@
   - O. Morikawa
   - H. Suzuki
   title_en: Analysis of Fixed Point in 3-Dimensional O(N) Scalar Model Using Gradient Flow
-  title_ja: null
+  title_ja: グラディエントフローによる3次元O(N)スカラー模型の固定点の解析
   year: 2022
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 77(1)
@@ -287,6 +354,12 @@
   - theoretical physics
   source: publication(1).tex
   j_global: '202202213098911246'
+  researchmap_id: '42736103'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.15pA132-10
 - id: jps-abstract-2020-14psa-2
   type: publications
   kind: meeting_abstract
@@ -295,7 +368,7 @@
   - O. Morikawa
   - H. Takaura
   title_en: Identification of perturbative ambiguity canceled against bion
-  title_ja: null
+  title_ja: Identification of perturbative ambiguity canceled against bion
   year: 2020
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 75(2)
@@ -305,6 +378,12 @@
   - semiclassical field theory
   source: publication(1).tex
   j_global: '202102224526074437'
+  researchmap_id: '42736059'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.14pSA-2
 - id: jps-abstract-2019-18as31-1
   type: publications
   kind: meeting_abstract
@@ -312,7 +391,7 @@
   authors:
   - O. Morikawa
   title_en: Continuum extrapolation and precision measurement of the scaling dimension in the 𝒩=2 Landau–Ginzburg model
-  title_ja: null
+  title_ja: N=2 Landau-Ginzburg模型におけるスケーリング次元の連続極限と精密測定
   year: 2019
   journal: Meeting Abstracts of the Physical Society of Japan
   volume: 74(2)
@@ -325,3 +404,11 @@
   doi: 10.11316/jpsgaiyo.74.2.0_44
   doi_url: https://doi.org/10.11316/jpsgaiyo.74.2.0_44
   j_global: '202002267927805657'
+  researchmap_id: '42736016'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Continuum extrapolation and precision measurement of the scaling dimension in the N=2 Landau-Ginzburg
+    model
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.18aS31-1

@@ -1,7 +1,15 @@
 # ResearchMap import status
 
-The supplied `rm_researchers20260828.zip` is password-protected. Its JSONL payload could not be read without the ZIP password.
+`rm_researchers20260828.jsonl` is readable and has been imported.
 
-The schema is already bilingual-ready (`*_en` / `*_ja`). English values in this build come from the supplied LaTeX/CV sources. Japanese ResearchMap originals are intentionally left `null` rather than guessed.
+The export contains structured bilingual fields for career history, education, awards, research projects, teaching, memberships, presentations, works/software, academic contributions, social contributions, media coverage, research interests and related records.
 
-After the ZIP password is supplied, merge the ResearchMap JSONL into the YAML files, preserving both the Japanese original and the English translation.
+Merge policy:
+
+- existing English CV/LaTeX wording remains the canonical English display value when already present;
+- ResearchMap Japanese source values populate `*_ja`;
+- differing ResearchMap English text is retained separately as `researchmap_*_en` where appropriate;
+- ResearchMap IDs and provenance are retained on matched records;
+- no Japanese title/event is fabricated when the ResearchMap export has no corresponding record.
+
+Presentation matching result: 75 / 110 database presentation records matched to ResearchMap, and 63 matched records carry a ResearchMap `dataset_name`, which is used as the exact slide filename.
