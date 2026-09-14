@@ -1,20 +1,51 @@
-# Publications YAML demo
+# YAML research database demo
 
-Minimal prototype of a researcher-publications database.
+This version treats YAML as the source of truth and generates **one self-contained `site/index.html`**.
+The deployed site needs no JSON file, CSS file, JavaScript file, or server-side API.
 
-## Structure
+## Current tree
 
 ```text
 data/
   publications.yaml
 scripts/
   build.py
-generated/
-  publications.json
-  search-index.json
 site/
-  publications/
-    index.html
+  index.html
+requirements.txt
+README.md
+```
+
+`build.py` automatically reads every `data/*.yaml` file, so future files can simply be added:
+
+```text
+data/
+  publications.yaml
+  presentations.yaml
+  collaborators.yaml
+  software.yaml
+  books.yaml
+  photos.yaml
+```
+
+Each record must have at least:
+
+```yaml
+- id: unique-id
+  type: publications   # future: presentations, software, books, photos, ...
+  title: Title
+```
+
+Publication-specific details can be added freely, for example:
+
+```yaml
+  kind: paper
+  authors:
+    - O. Morikawa
+  year: 2026
+  status: preprint
+  topics:
+    - quantum resonance
 ```
 
 ## Build
@@ -24,18 +55,13 @@ python -m pip install -r requirements.txt
 python scripts/build.py
 ```
 
-## Preview locally
+Then open `site/index.html` directly in a browser. No local web server is required.
 
-From the project root:
+The page provides:
 
-```bash
-python -m http.server 8000
-```
+- one search box across all fields of all record types;
+- a dynamically generated **Type** filter (`publications`, later `presentations`, etc.);
+- all CSS, JavaScript, and data embedded in `index.html`;
+- query-string state such as `?q=resonance&type=publications`.
 
-Then open:
-
-```text
-http://localhost:8000/site/publications/
-```
-
-The HTML is deliberately minimal. `data/publications.yaml` is the source of truth; JSON and HTML are generated artifacts.
+To publish on GitHub Pages, deploy `site/index.html` as the root `index.html` (or configure Pages/Actions to publish the `site/` directory).

@@ -1,0 +1,17 @@
+- id: morikawa-ogawa-2026-qft-tunneling
+  type: publications
+  kind: paper
+  authors:
+    - O. Morikawa
+    - S. Ogawa
+  title: A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling
+  year: 2026
+  status: preprint
+  affiliation_period: RIKEN
+  arxiv: null
+  doi: null
+  inspire: null
+  topics:
+    - quantum resonance
+    - scattering
+    - QFT
