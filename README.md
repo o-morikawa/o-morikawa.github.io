@@ -1,4 +1,4 @@
-# O. Morikawa research database (v7.1)
+# O. Morikawa research database
 
 Static, machine-readable research/CV database with a single-file searchable viewer.
 
