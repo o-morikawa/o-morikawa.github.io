@@ -1,4 +1,4 @@
-# O. Morikawa research database (v7)
+# O. Morikawa research database (v7.1)
 
 Static, machine-readable research/CV database with a single-file searchable viewer.
 
@@ -50,7 +50,7 @@ The output `site/index.html` is self-contained: CSS, JavaScript and all database
 
 The default view is `?kind=profile`. Opening `index.html` without a query selects the root profile record and rewrites the URL to that state. Selecting `All kinds` writes `?kind=` explicitly, so a reload does not fall back to the profile.
 
-Filters: `type`, `kind`, and display language (`EN + JA`, `English`, `Japanese`). The search box recursively searches every field in every record.
+Filters: `type`, `kind`, and display language (`EN + JA`, `English`, `Japanese`). The search box recursively searches every field in every record. Space-separated search terms use AND semantics: every term must occur somewhere in the same record.
 
 Grant records expose KAKEN project links where supplied. Award records expose the official award/source links supplied by the author; the PTEP Editors' Choice record also links the JPS Hot Topics and BUTSURI coverage.
 
