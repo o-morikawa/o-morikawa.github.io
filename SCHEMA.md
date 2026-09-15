@@ -54,7 +54,7 @@ Bilingual/provenance policy:
 4. Do not silently resolve disagreements between sources; store the conflicting source value separately.
 5. Do not invent Japanese translations when the source does not supply them.
 
-## Source-native ID policy (v7)
+## Source-native ID policy
 
 IDs are generated from the most stable canonical external record when one exists.
 

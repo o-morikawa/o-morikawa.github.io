@@ -11,7 +11,7 @@ Static, machine-readable research/CV database with a single-file searchable view
 - `data/cv.yaml` - career, education, awards, grants, memberships, service, teaching, mentorship, visits, skills and activities, enriched with ResearchMap Japanese/English metadata.
 - `data/books.yaml` - online books/monographs.
 - `data/software.yaml` - public repositories/software.
-- `sources/rm_researchers20260828.jsonl` - supplied ResearchMap export used for the bilingual merge.
+- `sources/rm_researchers.jsonl` - supplied ResearchMap export used for the bilingual merge.
 
 The canonical display fields use `*_en` and `*_ja`. ResearchMap source variants are retained in explicit `researchmap_*` fields when they differ from the existing CV/LaTeX wording rather than silently overwriting the other source.
 
@@ -54,7 +54,7 @@ Filters: `type`, `kind`, and display language (`EN + JA`, `English`, `Japanese`)
 
 Grant records expose KAKEN project links where supplied. Award records expose the official award/source links supplied by the author; the PTEP Editors' Choice record also links the JPS Hot Topics and BUTSURI coverage.
 
-## v7: source-native identifiers
+## Source-native identifiers
 
 The database now prefers source-native IDs instead of hand-built presentation slugs.
 
