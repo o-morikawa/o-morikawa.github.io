@@ -30,6 +30,9 @@
   inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2026mqk
   topics:
   - quantum field theory
+  - center vortex
+  - Gribov problem
+  - higher form symmetry
   source: publication.tex
   bibtex_source: sources/ref_om.bib
 - id: Morikawa:2026nzp
