@@ -1,3 +1,20 @@
+- id: publication-undated-gradient-flow-actions-integerness-and-gluonic-fermionic-topology-matchin
+  type: publications
+  kind: proceedings
+  status: published
+  authors:
+  - A. Tomiya
+  - H. Watanabe
+  - I. Kanamori
+  - O. Morikawa
+  - Y. Nagai
+  - Y. Tanizaki
+  title: Gradient-flow actions, integerness, and gluonic–fermionic topology matching in SU(3) Yang–Mills theory
+  year: null
+  source: publication.tex
+  topics:
+  - lattice gauge theory
+  - topology
 - id: publication-undated-dyon-condensation-at-theta-2pi-from-wilson-t-hooft-loops-in-yang-mills-t
   type: publications
   kind: proceedings
