@@ -1,3 +1,34 @@
+- id: presentation-2026-12-14-mathematica-applications-in-theoretical-particle-physics
+  type: presentations
+  kind: talk
+  role: self
+  presenter: Okuto Morikawa
+  invited: true
+  title_en: Mathematica Applications in Theoretical Particle Physics
+  event_en: Wolfram Virtual Conference Japan 2026
+  start_date: '2026-12-14'
+  end_date: null
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - theoretical physics
+  source: presentation.tex
+- id: presentation-2026-11-30-quantum-resonance-as-a-global-connection-problem
+  type: presentations
+  kind: talk
+  role: self
+  presenter: Okuto Morikawa
+  invited: false
+  title_en: Quantum resonance as a Global Connection Problem
+  event_en: Ikushi Prize Laureates’ Networking Meeting
+  start_date: '2026-11-30'
+  end_date: null
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - quantum resonance
+  - theoretical physics
+  source: presentation.tex
 - id: presentation-2026-10-29-resonances-spectral-theory-and-resurgence-from-exact-wkb-ana
   type: presentations
   kind: talk
