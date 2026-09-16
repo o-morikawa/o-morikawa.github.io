@@ -8,6 +8,9 @@ from urllib.parse import quote
 
 import yaml
 
+from id_utils import promote_id
+from sync_utils import merge_unique, norm, same_author_list, similarity
+
 
 def split_entries(text: str):
     i = 0
@@ -391,26 +394,99 @@ def sort_key(r):
     return (str(r.get('arxiv_date') or f"{r.get('year', 0)}-00"), str(r['id']))
 
 
+def find_existing(records, incoming):
+    key = incoming.get('id')
+    for r in records:
+        if r.get('id') == key or key in (r.get('legacy_ids') or []):
+            return r
+    arxiv = incoming.get('arxiv')
+    if arxiv:
+        for r in records:
+            if str(r.get('arxiv') or '').lower() == str(arxiv).lower():
+                return r
+    doi = incoming.get('doi')
+    if doi:
+        for r in records:
+            if str(r.get('doi') or '').lower() == str(doi).lower():
+                return r
+    title = incoming.get('title')
+    exact = [r for r in records if norm(r.get('title') or r.get('title_en')) == norm(title)]
+    if len(exact) == 1:
+        return exact[0]
+    scored = [(similarity(r.get('title') or r.get('title_en'), title), r) for r in records]
+    if scored:
+        sc, r = max(scored, key=lambda x: x[0])
+        if sc >= .985:
+            return r
+    return None
+
+
+def merge_records(existing, incoming):
+    old_topics = existing.get('topics') or []
+    tex_backed = existing.get('source') == 'publication.tex'
+    if tex_backed:
+        # Keep the TeX title/current status as the fast-moving canonical layer.
+        # INSPIRE/BibTeX enriches identity and bibliographic metadata.
+        if incoming.get('authors'):
+            if existing.get('authors') and not same_author_list(existing.get('authors'), incoming.get('authors')):
+                existing['authors_latex'] = existing.get('authors_latex') or existing['authors']
+            existing['authors'] = incoming['authors']
+        if incoming.get('title_bibtex'):
+            existing['title_bibtex'] = incoming['title_bibtex']
+        elif incoming.get('title') and incoming.get('title') != existing.get('title'):
+            existing['title_bibtex'] = incoming['title']
+        for k, v in incoming.items():
+            if k in {'id', 'title', 'authors', 'kind', 'status', 'year', 'topics', 'title_bibtex'}:
+                continue
+            if v is not None and v != '':
+                existing[k] = v
+        if not existing.get('year') and incoming.get('year'):
+            existing['year'] = incoming['year']
+    else:
+        for k, v in incoming.items():
+            if k in {'id', 'topics'} or v is None:
+                continue
+            existing[k] = v
+    existing['topics'] = merge_unique(old_topics, incoming.get('topics') or [])
+    existing['bibtex_source'] = 'sources/ref_om.bib'
+    promote_id(existing, incoming['id'])
+    return existing
+
+
 def main():
-    ap = argparse.ArgumentParser(description='Convert an INSPIRE-style BibTeX file to the site publications YAML schema.')
+    ap = argparse.ArgumentParser(description='Convert or merge an INSPIRE-style BibTeX file into publications.yaml.')
     ap.add_argument('bib', type=Path)
     ap.add_argument('-o', '--output', type=Path, default=Path('data/publications.yaml'))
+    ap.add_argument('--merge', action='store_true', help='Non-destructively enrich an existing YAML file instead of replacing it.')
     args = ap.parse_args()
 
     parsed = parse_bibtex(args.bib)
-    records = [make_record(*entry) for entry in parsed]
-    records.sort(key=sort_key, reverse=True)
-
-    ids = [r['id'] for r in records]
+    incoming = [make_record(*entry) for entry in parsed]
+    ids = [r['id'] for r in incoming]
     if len(ids) != len(set(ids)):
         raise ValueError('Duplicate citation keys in BibTeX')
 
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(
-        yaml.safe_dump(records, allow_unicode=True, sort_keys=False, width=1000),
-        encoding='utf-8',
-    )
-    print(f'Wrote {len(records)} records to {args.output}')
+    if args.merge and args.output.exists():
+        records = yaml.safe_load(args.output.read_text(encoding='utf-8')) or []
+        added = updated = 0
+        for inc in incoming:
+            target = find_existing(records, inc)
+            if target is None:
+                inc['bibtex_source'] = 'sources/ref_om.bib'
+                records.append(inc); added += 1
+            else:
+                merge_records(target, inc); updated += 1
+        records.sort(key=sort_key, reverse=True)
+        args.output.write_text(yaml.safe_dump(records, allow_unicode=True, sort_keys=False, width=1000), encoding='utf-8')
+        print(f'BibTeX merge: +{added}, updated {updated}, total {len(records)} in {args.output}')
+    else:
+        records = incoming
+        for r in records:
+            r['bibtex_source'] = 'sources/ref_om.bib'
+        records.sort(key=sort_key, reverse=True)
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(yaml.safe_dump(records, allow_unicode=True, sort_keys=False, width=1000), encoding='utf-8')
+        print(f'Wrote {len(records)} records to {args.output}')
 
 
 if __name__ == '__main__':

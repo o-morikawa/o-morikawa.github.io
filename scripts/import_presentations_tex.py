@@ -1,105 +1,179 @@
+#!/usr/bin/env python3
 from __future__ import annotations
-import re, sys, importlib.util
+
+import argparse
+import re
 from pathlib import Path
-from datetime import datetime
 
-spec=importlib.util.spec_from_file_location('ib','/mnt/data/research_database_demo_v3/scripts/import_bib.py')
-ib=importlib.util.module_from_spec(spec); spec.loader.exec_module(ib)
-tex_to_text=ib.tex_to_text
-infer_topics=ib.infer_topics
+from import_bib import infer_topics, tex_to_text
+from sync_utils import load_yaml, merge_unique, norm, save_yaml, section_text, similarity, slug, split_top_level_items
 
-MONTHS={m:i for i,m in enumerate(['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],1)}
+ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_TEX = ROOT / 'sources' / 'presentation.tex'
+DEFAULT_YAML = ROOT / 'data' / 'presentations.yaml'
+MONTHS = {m: i for i, m in enumerate(['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], 1)}
 
-def clean_tex(s):
-    s=s.replace('\\OM','O. Morikawa')
-    # href -> label
-    s=re.sub(r'\\href\{[^{}]*\}\{([^{}]*)\}',r'\1',s)
-    s=re.sub(r'\\url\{([^{}]*)\}',r'\1',s)
-    # formatting macros retain body; repeat to handle simple nested-free
-    for _ in range(4):
-        s=re.sub(r'\\(?:textbf|textit|emph)\{([^{}]*)\}',r'\1',s)
-    s=s.replace('\\&','&').replace('\\textasciicircum','^')
-    s=s.replace('\\,',' ').replace('\\!','')
-    s=s.replace('\\\\',' ')
+
+def clean_tex(s: str) -> str:
+    s = s.replace('\\OM\\', 'O. Morikawa ').replace('\\OM', 'O. Morikawa')
+    s = re.sub(r'\\href\{[^{}]*\}\{([^{}]*)\}', r'\1', s)
+    s = re.sub(r'\\url\{([^{}]*)\}', r'\1', s)
+    for _ in range(5):
+        s = re.sub(r'\\(?:textbf|textit|emph)\{([^{}]*)\}', r'\1', s)
+    s = s.replace(r'\&', '&').replace(r'\textasciicircum', '^')
+    s = s.replace('\\\\', ' ')
     return tex_to_text(s)
 
-def split_top_items(block):
-    # main conference list has no nested enumerate; split on line-start item
-    parts=re.split(r'(?m)^\s*\\item\s+', block)
-    return [p.strip() for p in parts[1:] if p.strip()]
 
-def extract_title(raw):
-    m=re.search(r'``(.*?)\'\'', raw, re.S)
-    if not m:
-        return None,None
-    return clean_tex(m.group(1)), m.span()
+def extract_titles(raw: str):
+    return [clean_tex(m.group(1)).strip(' ,\n') for m in re.finditer(r"``(.*?)''", raw, re.S)]
 
-def parse_date(text):
-    # returns start,end, span; match last Month day(--day)?, year
-    pat=r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})(?:--(\d{1,2}))?,\s*(\d{4})\b'
-    ms=list(re.finditer(pat,text))
-    if not ms: return None,None,None
-    m=ms[-1]; mon=MONTHS[m.group(1)]; d1=int(m.group(2)); d2=int(m.group(3)) if m.group(3) else d1; y=int(m.group(4))
-    return f'{y:04d}-{mon:02d}-{d1:02d}', f'{y:04d}-{mon:02d}-{d2:02d}', m.span()
 
-def aff(date):
+def parse_date(text: str):
+    pat = r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+(\d{1,2})(?:--(\d{1,2}))?,\s*(\d{4})\b'
+    ms = list(re.finditer(pat, text))
+    if not ms:
+        return None, None, None
+    m = ms[-1]
+    mon = MONTHS[m.group(1)]
+    d1 = int(m.group(2)); d2 = int(m.group(3)) if m.group(3) else d1; y = int(m.group(4))
+    start = f'{y:04d}-{mon:02d}-{d1:02d}'
+    end = f'{y:04d}-{mon:02d}-{d2:02d}' if d2 != d1 else None
+    return start, end, m.span()
+
+
+def affiliation(date):
     if not date: return None
-    ym=int(date[:7].replace('-',''))
-    if ym<=202103: return 'Kyushu University'
-    if ym<=202403: return 'Osaka University'
+    ym = int(date[:7].replace('-', ''))
+    if ym <= 202103: return 'Kyushu University'
+    if ym <= 202403: return 'Osaka University'
     return 'RIKEN (iTHEMS)'
 
-def slug(s):
-    s=s.lower().replace('ℤ','z').replace('𝒩','n').replace('θ','theta').replace('π','pi')
-    s=re.sub(r'[^a-z0-9]+','-',s).strip('-')
-    return s[:60].rstrip('-')
 
-def parse_main(path):
-    text=Path(path).read_text()
-    sec=text.split('\\subsection{Conference activities, talks, and seminars}',1)[1].split('\\subsection{Other talks}',1)[0]
-    block=sec.split('\\begin{enumerate}',1)[1].rsplit('\\end{enumerate}',1)[0]
-    recs=[]
-    for idx,raw in enumerate(split_top_items(block),1):
-        title,tspan=extract_title(raw)
-        if not title:
-            print('NO TITLE',idx,raw[:100],file=sys.stderr); continue
-        presenter='Okuto Morikawa'
-        mp=re.search(r'\\textit\{talk by\s+([^{}]+)\}',raw,re.I)
-        role='self'
-        if mp:
-            presenter=clean_tex(mp.group(1)); role='collaborator'
-        invited=bool(re.search(r'\\textbf\{Invited (?:Speaker|Seminar)\}',raw))
-        kind='poster' if '\\textbf{Poster}' in raw else ('seminar' if 'Invited Seminar' in raw else 'talk')
-        start,end,dspan=parse_date(raw)
-        rest=raw[tspan[1]:]
-        rest=re.sub(r'\\textit\{talk by\s+[^{}]+\},?', '', rest, flags=re.I)
-        rest=re.sub(r'\\textbf\{(Invited Speaker|Invited Seminar|Poster)\}\s*(?:at\s*)?,?', '', rest)
-        rest=rest.strip(' ,\n')
-        if dspan:
-            # dspan applies raw; easier remove date pattern from rest
-            rest=re.sub(r'\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d{1,2}(?:--\d{1,2})?,\s*\d{4}\s*$', '', rest).strip(' ,\n')
-        event=clean_tex(rest)
-        rid=f"presentation-{start or 'undated'}-{slug(title)}"
-        # collision later suffix
-        topics=infer_topics(title,{})
-        rec={
-            'id':rid,'type':'presentations','kind':kind,'role':role,
-            'presenter':presenter,'invited':invited,
-            'title_en':title,'title_ja':None,'event_en':event,'event_ja':None,
-            'start_date':start,'end_date':end if end!=start else None,
-            'year':int(start[:4]) if start else None,'affiliation_period':aff(start),
-            'topics':topics,'source':'presentation.tex'
-        }
-        recs.append(rec)
-    # ensure ids unique
-    seen={}
-    for r in recs:
-        base=r['id']; n=seen.get(base,0)+1; seen[base]=n
-        if n>1:r['id']=f'{base}-{n}'
-    return recs
+def local_id(start, title):
+    return f'presentation-{start or "undated"}-{slug(title, 60)}'
 
-if __name__=='__main__':
-    import yaml
-    rs=parse_main('/mnt/data/presentation.tex')
-    print('count',len(rs),file=sys.stderr)
-    print(yaml.safe_dump(rs,allow_unicode=True,sort_keys=False,width=1000))
+
+def parse_main_item(raw: str):
+    tm = re.search(r"``(.*?)''", raw, re.S)
+    if not tm: return None
+    title = clean_tex(tm.group(1)).strip(' ,\n')
+    start, end, dspan = parse_date(raw)
+    presenter = 'Okuto Morikawa'; role = 'self'
+    pm = re.search(r'\\textit\{talk by\s+([^{}]+)\}', raw, re.I)
+    if pm:
+        presenter = clean_tex(pm.group(1)); role = 'collaborator'
+    invited = bool(re.search(r'\\textbf\{Invited (?:Speaker|Seminar)\}', raw))
+    kind = 'poster' if r'\textbf{Poster}' in raw else ('seminar' if 'Invited Seminar' in raw else 'talk')
+
+    event_raw = raw[tm.end(): dspan[0] if dspan else len(raw)]
+    event_raw = re.sub(r'\\textit\{talk by\s+[^{}]+\}\s*,?', '', event_raw, flags=re.I)
+    event_raw = re.sub(r'\\textbf\{(?:Invited Speaker|Invited Seminar|Poster)\}\s*(?:at\s*)?,?', '', event_raw)
+    event = clean_tex(event_raw).strip(' ,.;\n')
+    rec = {
+        'id': local_id(start, title), 'type': 'presentations', 'kind': kind, 'role': role,
+        'presenter': presenter, 'invited': invited, 'title_en': title, 'event_en': event,
+        'start_date': start, 'end_date': end, 'year': int(start[:4]) if start else None,
+        'affiliation_period': affiliation(start), 'topics': infer_topics(title, {}), 'source': 'presentation.tex',
+    }
+    return rec
+
+
+def parse_other_item(raw: str):
+    titles = extract_titles(raw)
+    if not titles: return None
+    title = titles[0]
+    start, end, dspan = parse_date(raw)
+    prefix = raw[:dspan[0] if dspan else raw.find('``')]
+    event = clean_tex(prefix).strip(' ,:;\n')
+    if 'Journal Club' in event:
+        kind = 'journal_club'
+    elif 'Coffee Meeting' in event:
+        kind = 'informal_talk'
+    else:
+        kind = 'seminar'
+    rec = {
+        'id': local_id(start, title), 'type': 'presentations', 'kind': kind, 'role': 'self',
+        'presenter': 'Okuto Morikawa', 'invited': False, 'title_en': title, 'event_en': event,
+        'start_date': start, 'end_date': end, 'year': int(start[:4]) if start else None,
+        'affiliation_period': affiliation(start), 'topics': infer_topics(title, {}), 'source': 'presentation.tex',
+    }
+    if len(titles) > 1:
+        rec['references_discussed_en'] = titles[1:]
+    hm = re.search(r'\\href\{([^{}]+)\}\{[^{}]+\}', raw)
+    if hm: rec['url'] = hm.group(1)
+    return rec
+
+
+def parse(tex_path: Path):
+    text = tex_path.read_text(encoding='utf-8')
+    main = [parse_main_item(x) for x in split_top_level_items(section_text(text, 'Conference activities, talks, and seminars'))]
+    other = [parse_other_item(x) for x in split_top_level_items(section_text(text, 'Other talks'))]
+    records = [x for x in main + other if x]
+    # Guard against parser-induced local-ID collisions without changing existing IDs on merge.
+    seen = {}
+    for r in records:
+        base = r['id']; seen[base] = seen.get(base, 0) + 1
+        if seen[base] > 1: r['id'] = f'{base}-{seen[base]}'
+    return records
+
+
+def find_match(records, inc):
+    iid = inc['id']
+    for r in records:
+        if r.get('id') == iid or iid in (r.get('legacy_ids') or []):
+            return r
+    exact = [r for r in records if norm(r.get('title_en')) == norm(inc.get('title_en')) and r.get('start_date') == inc.get('start_date')]
+    if len(exact) == 1: return exact[0]
+    same_title = [r for r in records if norm(r.get('title_en')) == norm(inc.get('title_en'))]
+    if len(same_title) == 1: return same_title[0]
+    scored = []
+    for r in records:
+        sc = similarity(r.get('title_en'), inc.get('title_en'))
+        if r.get('start_date') == inc.get('start_date'): sc += .15
+        if norm(r.get('event_en')) == norm(inc.get('event_en')): sc += .10
+        scored.append((sc, r))
+    if scored:
+        sc, r = max(scored, key=lambda x: x[0])
+        if sc >= 1.05: return r
+    return None
+
+
+def sync(tex_path: Path, yaml_path: Path):
+    incoming = parse(tex_path)
+    records = load_yaml(yaml_path)
+    added = updated = 0
+    for inc in incoming:
+        r = find_match(records, inc)
+        if r is None:
+            records.append(inc); added += 1; continue
+        updated += 1
+        old_topics = r.get('topics') or []
+        protected_date = bool(r.get('date_note'))
+        if protected_date and (r.get('start_date') != inc.get('start_date') or r.get('end_date') != inc.get('end_date')):
+            r['latex_start_date'] = inc.get('start_date')
+            r['latex_end_date'] = inc.get('end_date')
+        for k, v in inc.items():
+            if k in {'id', 'topics'}: continue
+            if protected_date and k in {'start_date', 'end_date', 'year', 'affiliation_period'}:
+                continue
+            if k in {'url', 'references_discussed_en'} and v is None:
+                continue
+            r[k] = v
+        r['topics'] = merge_unique(old_topics, inc.get('topics') or [])
+    records.sort(key=lambda r: (str(r.get('start_date') or ''), str(r.get('id') or '')), reverse=True)
+    save_yaml(yaml_path, records)
+    return len(incoming), added, updated, len(records)
+
+
+def main():
+    ap = argparse.ArgumentParser(description='Non-destructively upsert presentation.tex into presentations.yaml.')
+    ap.add_argument('tex', nargs='?', type=Path, default=DEFAULT_TEX)
+    ap.add_argument('-o', '--output', type=Path, default=DEFAULT_YAML)
+    args = ap.parse_args()
+    parsed, added, updated, total = sync(args.tex, args.output)
+    print(f'Parsed {parsed} TeX presentation records; +{added}, updated {updated}, total {total}')
+
+
+if __name__ == '__main__':
+    main()

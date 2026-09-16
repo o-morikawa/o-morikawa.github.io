@@ -1,26 +1,19 @@
-- id: editorial-2026-ijmpa-nonperturbative-methods-qft-preface
+- id: jps-abstract-2026-23ps1-9
   type: publications
-  kind: editorial
+  kind: meeting_abstract
   status: published
   authors:
-  - Okuto Morikawa
-  - Osamu Fukushima
-  title_en: Preface
+  - O. Morikawa
+  - S. Ogawa
+  title_en: Complex Analytic Structure and Resurgence in the Radial Schrödinger Equation
   title_ja: null
   year: 2026
-  journal: International Journal of Modern Physics A
-  volume: '41'
-  number: '07'
-  pages: '2602001'
-  doi: 10.1142/S0217751X2602001X
-  doi_url: https://doi.org/10.1142/S0217751X2602001X
-  special_issue_en: Non-perturbative Methods in Quantum Field Theory
-  special_issue_ja: null
-  url: https://www.worldscientific.com/toc/ijmpa/41/07
+  journal: Meeting Abstracts of the Physical Society of Japan
+  volume: 81(1)
+  article_number: 23pS1-9
   topics:
-  - quantum field theory
-  - nonperturbative methods
-  source: publication(1).tex
+  - theoretical physics
+  source: publication.tex
 - id: jps-abstract-2026-23ps1-10
   type: publications
   kind: meeting_abstract
@@ -39,23 +32,30 @@
   - quantum resonance
   - exceptional points
   - complex scaling method
-  source: publication(1).tex
-- id: jps-abstract-2026-23ps1-9
+  source: publication.tex
+- id: editorial-2026-ijmpa-nonperturbative-methods-qft-preface
   type: publications
-  kind: meeting_abstract
+  kind: editorial
   status: published
   authors:
   - O. Morikawa
-  - S. Ogawa
-  title_en: Complex Analytic Structure and Resurgence in the Radial Schrödinger Equation
+  - O. Fukushima
+  title_en: Preface
   title_ja: null
   year: 2026
-  journal: Meeting Abstracts of the Physical Society of Japan
-  volume: 81(1)
-  article_number: 23pS1-9
+  journal: International Journal of Modern Physics A
+  volume: '41'
+  number: '07'
+  pages: '2602001'
+  doi: 10.1142/S0217751X2602001X
+  doi_url: https://doi.org/10.1142/S0217751X2602001X
+  special_issue_en: Non-perturbative Methods in Quantum Field Theory
+  special_issue_ja: null
+  url: https://www.worldscientific.com/toc/ijmpa/41/07
   topics:
-  - theoretical physics
-  source: publication(1).tex
+  - quantum field theory
+  - nonperturbative methods
+  source: publication.tex
 - id: jps-abstract-2025-19aek201-10
   type: publications
   kind: meeting_abstract
@@ -72,13 +72,36 @@
   topics:
   - quantum resonance
   - exact WKB
-  source: publication(1).tex
+  source: publication.tex
   researchmap_id: '51128062'
   researchmap_type: misc
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.19aEK201-10
+- id: jps-abstract-2025-18as1-2
+  type: publications
+  kind: meeting_abstract
+  status: published
+  authors:
+  - O. Morikawa
+  title_en: Lattice non-perturbative understanding of generalized symmetries and applications
+  title_ja: Lattice non-perturbative understanding of generalized symmetries and applications
+  year: 2025
+  journal: Meeting Abstracts of the Physical Society of Japan
+  volume: 80(1)
+  article_number: 18aS1-2
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+  source: publication.tex
+  j_global: '202502271580568708'
+  researchmap_id: '49594061'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.18aS1-2
 - id: jps-abstract-2025-16ask310-10
   type: publications
   kind: meeting_abstract
@@ -96,7 +119,7 @@
   topics:
   - topology
   - gradient flow
-  source: publication(1).tex
+  source: publication.tex
   researchmap_id: '51128054'
   researchmap_type: misc
   researchmap_profile_url: https://researchmap.jp/o-morikawa
@@ -122,36 +145,13 @@
   - eigenstate thermalization hypothesis
   - quantum many-body theory
   - projective symmetry
-  source: publication(1).tex
+  source: publication.tex
   researchmap_id: '51128046'
   researchmap_type: misc
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.16aEK201-9
-- id: jps-abstract-2025-18as1-2
-  type: publications
-  kind: meeting_abstract
-  status: published
-  authors:
-  - O. Morikawa
-  title_en: Lattice non-perturbative understanding of generalized symmetries and applications
-  title_ja: Lattice non-perturbative understanding of generalized symmetries and applications
-  year: 2025
-  journal: Meeting Abstracts of the Physical Society of Japan
-  volume: 80(1)
-  article_number: 18aS1-2
-  topics:
-  - lattice gauge theory
-  - generalized symmetry
-  source: publication(1).tex
-  j_global: '202502271580568708'
-  researchmap_id: '49594061'
-  researchmap_type: misc
-  researchmap_profile_url: https://researchmap.jp/o-morikawa
-  publication_name_ja: 日本物理学会講演概要集
-  publication_name_en: Meeting Abstracts of the Physical Society of Japan
-  starting_page: ROMBUNNO.18aS1-2
 - id: jps-abstract-2024-18pwb101-16
   type: publications
   kind: meeting_abstract
@@ -168,7 +168,7 @@
   topics:
   - quantum resonance
   - exact WKB
-  source: publication(1).tex
+  source: publication.tex
   j_global: '202502278248352483'
   researchmap_id: '47845847'
   researchmap_type: misc
@@ -176,6 +176,29 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.18pWB101-16
+- id: jps-abstract-2024-18as1-8
+  type: publications
+  kind: meeting_abstract
+  status: published
+  authors:
+  - O. Morikawa
+  title_en: Studies on generalized symmetries in lattice field theory
+  title_ja: 格子場の理論におけるgeneralized symmetryの研究
+  year: 2024
+  journal: Meeting Abstracts of the Physical Society of Japan
+  volume: 79(1)
+  article_number: 18aS1-8
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+  source: publication.tex
+  j_global: '202402217971446919'
+  researchmap_id: '45850272'
+  researchmap_type: misc
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  publication_name_ja: 日本物理学会講演概要集
+  publication_name_en: Meeting Abstracts of the Physical Society of Japan
+  starting_page: ROMBUNNO.18aS1-8
 - id: jps-abstract-2024-16pwb102-6
   type: publications
   kind: meeting_abstract
@@ -194,7 +217,7 @@
   - lattice gauge theory
   - chiral gauge theory
   - bosonization
-  source: publication(1).tex
+  source: publication.tex
   j_global: '202502234377619864'
   researchmap_id: '47869260'
   researchmap_type: misc
@@ -202,29 +225,6 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.16pWB102-6
-- id: jps-abstract-2024-18as1-8
-  type: publications
-  kind: meeting_abstract
-  status: published
-  authors:
-  - O. Morikawa
-  title_en: Studies on generalized symmetries in lattice field theory
-  title_ja: 格子場の理論におけるgeneralized symmetryの研究
-  year: 2024
-  journal: Meeting Abstracts of the Physical Society of Japan
-  volume: 79(1)
-  article_number: 18aS1-8
-  topics:
-  - lattice gauge theory
-  - generalized symmetry
-  source: publication(1).tex
-  j_global: '202402217971446919'
-  researchmap_id: '45850272'
-  researchmap_type: misc
-  researchmap_profile_url: https://researchmap.jp/o-morikawa
-  publication_name_ja: 日本物理学会講演概要集
-  publication_name_en: Meeting Abstracts of the Physical Society of Japan
-  starting_page: ROMBUNNO.18aS1-8
 - id: jps-abstract-2023-16ara23-9
   type: publications
   kind: meeting_abstract
@@ -245,7 +245,7 @@
   topics:
   - lattice gauge theory
   - generalized symmetry
-  source: publication(1).tex
+  source: publication.tex
   j_global: '202302260250037895'
   researchmap_id: '43502704'
   researchmap_type: misc
@@ -272,7 +272,7 @@
   topics:
   - lattice gauge theory
   - generalized symmetry
-  source: publication(1).tex
+  source: publication.tex
   j_global: '202302241386562671'
   researchmap_id: '43502699'
   researchmap_type: misc
@@ -299,7 +299,7 @@
   topics:
   - lattice gauge theory
   - topology
-  source: publication(1).tex
+  source: publication.tex
   j_global: '202302255016737097'
   researchmap_id: '43502686'
   researchmap_type: misc
@@ -326,7 +326,7 @@
   - lattice gauge theory
   - gauge theory
   - anomaly matching
-  source: publication(1).tex
+  source: publication.tex
   j_global: '202302285992771528'
   researchmap_id: '42736117'
   researchmap_type: misc
@@ -352,7 +352,7 @@
   topics:
   - gradient flow
   - theoretical physics
-  source: publication(1).tex
+  source: publication.tex
   j_global: '202202213098911246'
   researchmap_id: '42736103'
   researchmap_type: misc
@@ -376,7 +376,7 @@
   topics:
   - resurgence
   - semiclassical field theory
-  source: publication(1).tex
+  source: publication.tex
   j_global: '202102224526074437'
   researchmap_id: '42736059'
   researchmap_type: misc
@@ -400,7 +400,7 @@
   - Landau–Ginzburg model
   - supersymmetry
   - conformal field theory
-  source: publication(1).tex
+  source: publication.tex
   doi: 10.11316/jpsgaiyo.74.2.0_44
   doi_url: https://doi.org/10.11316/jpsgaiyo.74.2.0_44
   j_global: '202002267927805657'

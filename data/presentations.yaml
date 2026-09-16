@@ -1,3 +1,19 @@
+- id: presentation-2026-10-29-resonances-spectral-theory-and-resurgence-from-exact-wkb-ana
+  type: presentations
+  kind: talk
+  role: self
+  presenter: Okuto Morikawa
+  invited: true
+  title_en: Resonances, Spectral Theory, and Resurgence from Exact WKB Analysis
+  event_en: New Developments in Microlocal Analysis and Asymptotic Analysis
+  start_date: '2026-10-29'
+  end_date: null
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - quantum resonance
+  - exact WKB
+  source: presentation.tex
 - id: presentation-2026-09-16-gradient-flow-actions-integerness-and-gluonic-fermionic-topo
   type: presentations
   kind: talk
@@ -19,25 +35,8 @@
   legacy_ids:
   - presentation-2026-09-14-gradient-flow-actions-integerness-and-gluonic-fermionic-topo
   date_note: Corrected by author on 2026-09-15.
-- id: presentation-2026-09-14-quasinormal-modes-and-continuum-response-of-de-sitter-black
-  type: presentations
-  kind: talk
-  role: collaborator
-  presenter: T. Hirose
-  invited: false
-  title_en: Quasinormal modes and continuum response of de Sitter black holes via complex scaling method
-  title_ja: null
-  event_en: 2026 Annual (81st) Meeting of the Physical Society of Japan
-  event_ja: null
-  start_date: '2026-09-14'
-  end_date: null
-  year: 2026
-  affiliation_period: RIKEN (iTHEMS)
-  topics:
-  - black holes
-  - quasinormal modes
-  - complex scaling method
-  source: presentation.tex
+  latex_start_date: '2026-09-16'
+  latex_end_date: null
 - id: researchmap:presentations:54946770
   type: presentations
   kind: talk
@@ -63,6 +62,25 @@
   researchmap_url: https://researchmap.jp/o-morikawa/presentations/54946770
   legacy_ids:
   - presentation-2026-09-14-complex-scaling-approach-to-quasinormal-modes-of-schwarzschi
+- id: presentation-2026-09-14-quasinormal-modes-and-continuum-response-of-de-sitter-black
+  type: presentations
+  kind: talk
+  role: collaborator
+  presenter: T. Hirose
+  invited: false
+  title_en: Quasinormal modes and continuum response of de Sitter black holes via complex scaling method
+  title_ja: null
+  event_en: 2026 Annual (81st) Meeting of the Physical Society of Japan
+  event_ja: null
+  start_date: '2026-09-14'
+  end_date: null
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - black holes
+  - quasinormal modes
+  - complex scaling method
+  source: presentation.tex
 - id: researchmap:presentations:54670934
   type: presentations
   kind: talk
@@ -98,24 +116,6 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54670934/attachment_file.pdf
   legacy_ids:
   - presentation-2026-08-18-complex-scaling-approach-to-black-hole-quasinormal-modes-and
-- id: presentation-2026-07-29-gradient-flow-actions-integerness-and-gluonic-fermionic-topo
-  type: presentations
-  kind: talk
-  role: collaborator
-  presenter: A. Tomiya
-  invited: false
-  title_en: Gradient-Flow Actions, Integerness, and Gluonic–Fermionic Topology Matching in SU(3) Yang–Mills Theory
-  title_ja: null
-  event_en: The 43rd International Symposium on Lattice Field Theory (Lattice2026)
-  event_ja: null
-  start_date: '2026-07-29'
-  end_date: null
-  year: 2026
-  affiliation_period: RIKEN (iTHEMS)
-  topics:
-  - lattice gauge theory
-  - topology
-  source: presentation.tex
 - id: researchmap:presentations:54511473
   type: presentations
   kind: talk
@@ -162,6 +162,24 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54511473/attachment_file.pdf
   legacy_ids:
   - presentation-2026-07-29-dyon-condensation-at-theta-2pi-from-wilson-t-hooft-loops-in
+- id: presentation-2026-07-29-gradient-flow-actions-integerness-and-gluonic-fermionic-topo
+  type: presentations
+  kind: talk
+  role: collaborator
+  presenter: A. Tomiya
+  invited: false
+  title_en: Gradient-Flow Actions, Integerness, and Gluonic–Fermionic Topology Matching in SU(3) Yang–Mills Theory
+  title_ja: null
+  event_en: The 43rd International Symposium on Lattice Field Theory (Lattice2026)
+  event_ja: null
+  start_date: '2026-07-29'
+  end_date: null
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - lattice gauge theory
+  - topology
+  source: presentation.tex
 - id: researchmap:presentations:54433010
   type: presentations
   kind: talk
@@ -231,38 +249,6 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54312459/attachment_file.pdf
   legacy_ids:
   - presentation-2026-07-02-lattice-2d-u-1-chiral-gauge-theory-and-magnetically-charged
-- id: researchmap:presentations:52960528
-  type: presentations
-  kind: seminar
-  role: self
-  presenter: Okuto Morikawa
-  invited: true
-  title_en: Infrared Renormalons, Bion Ambiguities, and Resurgence in Compactified Gauge Theories
-  title_ja: Infrared Renormalons, Bion Ambiguities, and Resurgence in Compactified Gauge Theories
-  event_en: Takushoku University
-  event_ja: 拓殖大学セミナー
-  start_date: '2026-03-17'
-  end_date: null
-  year: 2026
-  affiliation_period: RIKEN (iTHEMS)
-  topics:
-  - lattice gauge theory
-  - renormalons
-  - resurgence
-  - semiclassical field theory
-  - compactified field theory
-  source: presentation.tex
-  researchmap_id: '52960528'
-  researchmap_type: presentations
-  researchmap_profile_url: https://researchmap.jp/o-morikawa
-  researchmap_url: https://researchmap.jp/o-morikawa/presentations/52960528
-  researchmap_event_en: Seminar at Takushoku University
-  presenters_en:
-  - Okuto Morikawa
-  presenters_ja:
-  - 森川億人
-  legacy_ids:
-  - presentation-2026-03-17-infrared-renormalons-bion-ambiguities-and-resurgence-in-comp
 - id: presentation-2026-03-26-t-hooft-loop-in-su-2-yang-mills-theory-revisited
   type: presentations
   kind: talk
@@ -353,6 +339,38 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/53028747/attachment_file.pdf
   legacy_ids:
   - presentation-2026-03-23-complex-analytic-structure-and-resurgence-in-the-radial-schr
+- id: researchmap:presentations:52960528
+  type: presentations
+  kind: seminar
+  role: self
+  presenter: Okuto Morikawa
+  invited: true
+  title_en: Infrared Renormalons, Bion Ambiguities, and Resurgence in Compactified Gauge Theories
+  title_ja: Infrared Renormalons, Bion Ambiguities, and Resurgence in Compactified Gauge Theories
+  event_en: Takushoku University
+  event_ja: 拓殖大学セミナー
+  start_date: '2026-03-17'
+  end_date: null
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - lattice gauge theory
+  - renormalons
+  - resurgence
+  - semiclassical field theory
+  - compactified field theory
+  source: presentation.tex
+  researchmap_id: '52960528'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/52960528
+  researchmap_event_en: Seminar at Takushoku University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  legacy_ids:
+  - presentation-2026-03-17-infrared-renormalons-bion-ambiguities-and-resurgence-in-comp
 - id: researchmap:presentations:52079555
   type: presentations
   kind: seminar
@@ -425,6 +443,42 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51870559/attachment_file.pdf
   legacy_ids:
   - presentation-2025-12-16-unified-exact-wkb-framework-for-quantum-resonance-and-scatte
+- id: researchmap:presentations:51847073
+  type: presentations
+  kind: informal_talk
+  role: self
+  presenter: Okuto Morikawa
+  invited: false
+  title_en: Aspects of Quantum Resonance Revisited
+  title_ja: Aspects of Quantum Resonance Revisited
+  event_en: Coffee Meeting Talk at iTHEMS
+  event_ja: iTHEMS Coffee Meeting Talk
+  start_date: '2025-12-12'
+  end_date: null
+  year: 2025
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - quantum resonance
+  - theoretical physics
+  source: presentation.tex
+  url: https://www.youtube.com/live/dK8arrieLx8?si=geFnlfco9NnLaEWC
+  researchmap_id: '51847073'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/51847073
+  researchmap_event_en: iTHEMS Coffee Meeting Talk
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  slides_file: ithems251212.pdf
+  slides_url: https://o-morikawa.github.io/slides/ithems251212.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems251212.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51847073/attachment_file.pdf
+  legacy_ids:
+  - presentation-2025-12-12-aspects-of-quantum-resonance-revisited
 - id: researchmap:presentations:51761406
   type: presentations
   kind: talk
@@ -706,6 +760,24 @@
   - lattice gauge theory
   - theoretical physics
   source: presentation.tex
+- id: presentation-2025-09-16-gradient-flow-for-winding-numbers-in-real-space-representati
+  type: presentations
+  kind: talk
+  role: collaborator
+  presenter: T. Fukui
+  invited: false
+  title_en: Gradient flow for winding numbers in real-space representation
+  title_ja: null
+  event_en: 2025 Annual (80th) Meeting of the Physical Society of Japan
+  event_ja: null
+  start_date: '2025-09-16'
+  end_date: null
+  year: 2025
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - topology
+  - gradient flow
+  source: presentation.tex
 - id: presentation-2025-09-16-eigenstate-thermalization-hypothesis-with-projective-represe
   type: presentations
   kind: talk
@@ -724,24 +796,6 @@
   - eigenstate thermalization hypothesis
   - quantum many-body theory
   - projective symmetry
-  source: presentation.tex
-- id: presentation-2025-09-16-gradient-flow-for-winding-numbers-in-real-space-representati
-  type: presentations
-  kind: talk
-  role: collaborator
-  presenter: T. Fukui
-  invited: false
-  title_en: Gradient flow for winding numbers in real-space representation
-  title_ja: null
-  event_en: 2025 Annual (80th) Meeting of the Physical Society of Japan
-  event_ja: null
-  start_date: '2025-09-16'
-  end_date: null
-  year: 2025
-  affiliation_period: RIKEN (iTHEMS)
-  topics:
-  - topology
-  - gradient flow
   source: presentation.tex
 - id: researchmap:presentations:51060012
   type: presentations
@@ -992,24 +1046,6 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50053094/attachment_file.pdf
   legacy_ids:
   - presentation-2025-05-02-winding-number-on-3d-lattice
-- id: presentation-2025-03-18-hybrid-monte-carlo-simulation-of-the-su-2-z-2-yang-mills-the
-  type: presentations
-  kind: talk
-  role: collaborator
-  presenter: M. Abe
-  invited: false
-  title_en: Hybrid Monte Carlo simulation of the SU(2)/ℤ_2 Yang–Mills theory and resolution of topological freezing
-  title_ja: null
-  event_en: 2025 Spring Meeting of the Physical Society of Japan
-  event_ja: null
-  start_date: '2025-03-18'
-  end_date: null
-  year: 2025
-  affiliation_period: RIKEN (iTHEMS)
-  topics:
-  - lattice gauge theory
-  - theoretical physics
-  source: presentation.tex
 - id: researchmap:presentations:49465631
   type: presentations
   kind: talk
@@ -1045,6 +1081,57 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/49465631/attachment_file.pdf
   legacy_ids:
   - presentation-2025-03-18-lattice-non-perturbative-understanding-of-generalized-symmet
+- id: presentation-2025-03-18-hybrid-monte-carlo-simulation-of-the-su-2-z-2-yang-mills-the
+  type: presentations
+  kind: talk
+  role: collaborator
+  presenter: M. Abe
+  invited: false
+  title_en: Hybrid Monte Carlo simulation of the SU(2)/ℤ_2 Yang–Mills theory and resolution of topological freezing
+  title_ja: null
+  event_en: 2025 Spring Meeting of the Physical Society of Japan
+  event_ja: null
+  start_date: '2025-03-18'
+  end_date: null
+  year: 2025
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - lattice gauge theory
+  - theoretical physics
+  source: presentation.tex
+- id: researchmap:presentations:49252473
+  type: presentations
+  kind: journal_club
+  role: self
+  presenter: Okuto Morikawa
+  invited: false
+  title_en: Lattice implementation of gauge field topology and generalized symmetry
+  title_ja: Lattice implementation of gauge field topology and generalized symmetry
+  event_en: Journal Club at Durham Univ.
+  event_ja: HEP Journal Club at Mathematical Sciences Group in Durham University
+  start_date: '2025-02-17'
+  end_date: null
+  year: 2025
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - lattice gauge theory
+  - generalized symmetry
+  - topology
+  source: presentation.tex
+  researchmap_id: '49252473'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/49252473
+  researchmap_event_en: HEP Journal Club at Mathematical Sciences Group in Durham University
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  researchmap_presentation_type: public_discourse
+  legacy_ids:
+  - presentation-2025-02-17-lattice-implementation-of-gauge-field-topology-and-generaliz
 - id: researchmap:presentations:48519655
   type: presentations
   kind: seminar
@@ -1183,6 +1270,41 @@
   - topology
   - theoretical physics
   source: presentation.tex
+- id: researchmap:presentations:47795057
+  type: presentations
+  kind: informal_talk
+  role: self
+  presenter: Okuto Morikawa
+  invited: false
+  title_en: Gauge field topology on the lattice
+  title_ja: Gauge field topology on the lattice
+  event_en: Coffee Meeting Talk at iTHEMS
+  event_ja: iTHEMS Coffee Meeting Talk
+  start_date: '2024-09-13'
+  end_date: null
+  year: 2024
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - lattice gauge theory
+  - topology
+  source: presentation.tex
+  researchmap_id: '47795057'
+  researchmap_type: presentations
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_url: https://researchmap.jp/o-morikawa/presentations/47795057
+  researchmap_event_en: iTHEMS Coffee Meeting Talk
+  presenters_en:
+  - Okuto Morikawa
+  presenters_ja:
+  - 森川億人
+  languages:
+  - eng
+  slides_file: ithems240913.pdf
+  slides_url: https://o-morikawa.github.io/slides/ithems240913.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems240913.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47795057/attachment_file.pdf
+  legacy_ids:
+  - presentation-2024-09-13-gauge-field-topology-on-the-lattice
 - id: researchmap:presentations:47621210
   type: presentations
   kind: talk
@@ -1530,6 +1652,24 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/45606945/attachment_file.pdf
   legacy_ids:
   - presentation-2024-02-16-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
+- id: presentation-2024-01-18-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
+  type: presentations
+  kind: journal_club
+  role: self
+  presenter: Okuto Morikawa
+  invited: false
+  title_en: Lattice realization of the axial U(1) non-invertible symmetry
+  title_ja: null
+  event_en: Journal Club
+  event_ja: null
+  start_date: '2024-01-18'
+  end_date: null
+  year: 2024
+  affiliation_period: Osaka University
+  topics:
+  - lattice gauge theory
+  - theoretical physics
+  source: presentation.tex
 - id: researchmap:presentations:44159800
   type: presentations
   kind: talk
@@ -1906,6 +2046,24 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/33710917/attachment_file.pdf
   legacy_ids:
   - presentation-2021-09-14-numerical-study-of-deformation-of-target-space-for-the-n-2-l
+- id: presentation-2021-04-20-perturbative-ambiguities-and-resurgence-in-compactified-spac
+  type: presentations
+  kind: seminar
+  role: self
+  presenter: Okuto Morikawa
+  invited: false
+  title_en: Perturbative ambiguities and resurgence in compactified spacetime
+  title_ja: null
+  event_en: Local Seminar at Osaka Univ.
+  event_ja: null
+  start_date: '2021-04-20'
+  end_date: null
+  year: 2021
+  affiliation_period: Osaka University
+  topics:
+  - compactified field theory
+  - theoretical physics
+  source: presentation.tex
 - id: presentation-2021-03-12-counterargument-to-the-expected-resurgence-structure-concern
   type: presentations
   kind: talk
@@ -2180,6 +2338,26 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/29367543/attachment_file.pdf
   legacy_ids:
   - presentation-2020-08-04-resurgence-structure-on-compactified-spacetime-with-twisted
+- id: presentation-2020-07-14-nonperturbative-renormalization-of-operators-in-near-conform
+  type: presentations
+  kind: journal_club
+  role: self
+  presenter: Okuto Morikawa
+  invited: false
+  title_en: Nonperturbative Renormalization of Operators in Near-Conformal Systems Using Gradient Flow
+  title_ja: null
+  event_en: Journal Club
+  event_ja: null
+  start_date: '2020-07-14'
+  end_date: null
+  year: 2020
+  affiliation_period: Kyushu University
+  topics:
+  - gradient flow
+  - theoretical physics
+  source: presentation.tex
+  references_discussed_en:
+  - Stochastic Renormalization Group and Gradient Flow
 - id: researchmap:presentations:27686342
   type: presentations
   kind: seminar
@@ -2396,6 +2574,23 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018906/attachment_file.pdf
   legacy_ids:
   - presentation-2019-12-05-infrared-renormalon-in-the-supersymmetric-p-n-1-model-on-s-1
+- id: presentation-2019-10-18-a-quenched-momentum-prescription-for-large-n-theories
+  type: presentations
+  kind: journal_club
+  role: self
+  presenter: Okuto Morikawa
+  invited: false
+  title_en: A Quenched Momentum Prescription for Large N Theories
+  title_ja: null
+  event_en: Journal Club
+  event_ja: null
+  start_date: '2019-10-18'
+  end_date: null
+  year: 2019
+  affiliation_period: Kyushu University
+  topics:
+  - theoretical physics
+  source: presentation.tex
 - id: researchmap:presentations:26018778
   type: presentations
   kind: talk
@@ -2511,6 +2706,23 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018759/attachment_file.pdf
   legacy_ids:
   - presentation-2019-03-17-gradient-flow-representation-of-the-4d-n-2-sym-supercurrent
+- id: presentation-2019-02-25-sign-problem-and-monte-carlo-calculations-beyond-lefschetz-t
+  type: presentations
+  kind: journal_club
+  role: self
+  presenter: Okuto Morikawa
+  invited: false
+  title_en: Sign problem and Monte Carlo calculations beyond Lefschetz thimbles
+  title_ja: null
+  event_en: Journal Club
+  event_ja: null
+  start_date: '2019-02-25'
+  end_date: null
+  year: 2019
+  affiliation_period: Kyushu University
+  topics:
+  - theoretical physics
+  source: presentation.tex
 - id: researchmap:presentations:26018871
   type: presentations
   kind: poster
@@ -2697,6 +2909,23 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018984/attachment_file.pdf
   legacy_ids:
   - presentation-2018-05-20-gradient-flow-and-the-wilsonian-renormalization-group-flow
+- id: presentation-2018-05-14-a-numerical-method-to-compute-the-running-coupling-in-asympt
+  type: presentations
+  kind: journal_club
+  role: self
+  presenter: Okuto Morikawa
+  invited: false
+  title_en: A Numerical method to compute the running coupling in asymptotically free theories
+  title_ja: null
+  event_en: Journal Club
+  event_ja: null
+  start_date: '2018-05-14'
+  end_date: null
+  year: 2018
+  affiliation_period: Kyushu University
+  topics:
+  - theoretical physics
+  source: presentation.tex
 - id: researchmap:presentations:26018709
   type: presentations
   kind: talk
@@ -2914,6 +3143,25 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018670/attachment_file.pdf
   legacy_ids:
   - presentation-2017-09-28-numerical-simulation-of-the-n-2-landau-ginzburg-model
+- id: presentation-2017-09-21-string-theory-vol-2-superstring-theory-and-beyond
+  type: presentations
+  kind: journal_club
+  role: self
+  presenter: Okuto Morikawa
+  invited: false
+  title_en: 'String theory. Vol. 2: Superstring theory and beyond'
+  title_ja: null
+  event_en: Journal Club
+  event_ja: null
+  start_date: '2017-09-21'
+  end_date: null
+  year: 2017
+  affiliation_period: Kyushu University
+  topics:
+  - theoretical physics
+  source: presentation.tex
+  references_discussed_en:
+  - Conformal field theory
 - id: researchmap:presentations:26018662
   type: presentations
   kind: talk
@@ -2953,6 +3201,24 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018662/attachment_file.pdf
   legacy_ids:
   - presentation-2017-09-14-numerical-simulation-of-n-2-landau-ginzburg-model
+- id: presentation-2017-09-14-one-loop-perturbative-coupling-of-a-and-a-through-the-chiral
+  type: presentations
+  kind: talk
+  role: collaborator
+  presenter: H. Suzuki
+  invited: false
+  title_en: One-loop perturbative coupling of A and A_⋆ through the chiral overlap operator
+  title_ja: null
+  event_en: 2017 Autumn Meeting of the Physical Society of Japan
+  event_ja: null
+  start_date: '2017-09-14'
+  end_date: null
+  year: 2017
+  affiliation_period: Kyushu University
+  topics:
+  - chiral gauge theory
+  - theoretical physics
+  source: presentation.tex
 - id: presentation-2017-09-14-gradient-flow-and-the-wilsonian-renormalization-group-flow
   type: presentations
   kind: talk
@@ -2971,24 +3237,6 @@
   - gradient flow
   - renormalization group
   - Wilsonian renormalization group
-  source: presentation.tex
-- id: presentation-2017-09-14-one-loop-perturbative-coupling-of-a-and-a-through-the-chiral
-  type: presentations
-  kind: talk
-  role: collaborator
-  presenter: H. Suzuki
-  invited: false
-  title_en: One-loop perturbative coupling of A and A_⋆ through the chiral overlap operator
-  title_ja: null
-  event_en: 2017 Autumn Meeting of the Physical Society of Japan
-  event_ja: null
-  start_date: '2017-09-14'
-  end_date: null
-  year: 2017
-  affiliation_period: Kyushu University
-  topics:
-  - chiral gauge theory
-  - theoretical physics
   source: presentation.tex
 - id: researchmap:presentations:26018834
   type: presentations
@@ -3137,236 +3385,6 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018827/attachment_file.pdf
   legacy_ids:
   - presentation-2016-12-07-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
-- id: researchmap:presentations:51847073
-  type: presentations
-  kind: informal_talk
-  role: self
-  presenter: Okuto Morikawa
-  invited: false
-  title_en: Aspects of Quantum Resonance Revisited
-  title_ja: Aspects of Quantum Resonance Revisited
-  event_en: Coffee Meeting Talk at iTHEMS
-  event_ja: iTHEMS Coffee Meeting Talk
-  start_date: '2025-12-12'
-  end_date: null
-  year: 2025
-  affiliation_period: RIKEN (iTHEMS)
-  topics:
-  - quantum resonance
-  - theoretical physics
-  source: presentation.tex
-  url: https://www.youtube.com/live/dK8arrieLx8?si=geFnlfco9NnLaEWC
-  researchmap_id: '51847073'
-  researchmap_type: presentations
-  researchmap_profile_url: https://researchmap.jp/o-morikawa
-  researchmap_url: https://researchmap.jp/o-morikawa/presentations/51847073
-  researchmap_event_en: iTHEMS Coffee Meeting Talk
-  presenters_en:
-  - Okuto Morikawa
-  presenters_ja:
-  - 森川億人
-  languages:
-  - eng
-  slides_file: ithems251212.pdf
-  slides_url: https://o-morikawa.github.io/slides/ithems251212.pdf
-  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems251212.pdf
-  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51847073/attachment_file.pdf
-  legacy_ids:
-  - presentation-2025-12-12-aspects-of-quantum-resonance-revisited
-- id: researchmap:presentations:49252473
-  type: presentations
-  kind: journal_club
-  role: self
-  presenter: Okuto Morikawa
-  invited: false
-  title_en: Lattice implementation of gauge field topology and generalized symmetry
-  title_ja: Lattice implementation of gauge field topology and generalized symmetry
-  event_en: Journal Club at Durham Univ.
-  event_ja: HEP Journal Club at Mathematical Sciences Group in Durham University
-  start_date: '2025-02-17'
-  end_date: null
-  year: 2025
-  affiliation_period: RIKEN (iTHEMS)
-  topics:
-  - lattice gauge theory
-  - generalized symmetry
-  - topology
-  source: presentation.tex
-  researchmap_id: '49252473'
-  researchmap_type: presentations
-  researchmap_profile_url: https://researchmap.jp/o-morikawa
-  researchmap_url: https://researchmap.jp/o-morikawa/presentations/49252473
-  researchmap_event_en: HEP Journal Club at Mathematical Sciences Group in Durham University
-  presenters_en:
-  - Okuto Morikawa
-  presenters_ja:
-  - 森川億人
-  languages:
-  - eng
-  researchmap_presentation_type: public_discourse
-  legacy_ids:
-  - presentation-2025-02-17-lattice-implementation-of-gauge-field-topology-and-generaliz
-- id: researchmap:presentations:47795057
-  type: presentations
-  kind: informal_talk
-  role: self
-  presenter: Okuto Morikawa
-  invited: false
-  title_en: Gauge field topology on the lattice
-  title_ja: Gauge field topology on the lattice
-  event_en: Coffee Meeting Talk at iTHEMS
-  event_ja: iTHEMS Coffee Meeting Talk
-  start_date: '2024-09-13'
-  end_date: null
-  year: 2024
-  affiliation_period: RIKEN (iTHEMS)
-  topics:
-  - lattice gauge theory
-  - topology
-  source: presentation.tex
-  researchmap_id: '47795057'
-  researchmap_type: presentations
-  researchmap_profile_url: https://researchmap.jp/o-morikawa
-  researchmap_url: https://researchmap.jp/o-morikawa/presentations/47795057
-  researchmap_event_en: iTHEMS Coffee Meeting Talk
-  presenters_en:
-  - Okuto Morikawa
-  presenters_ja:
-  - 森川億人
-  languages:
-  - eng
-  slides_file: ithems240913.pdf
-  slides_url: https://o-morikawa.github.io/slides/ithems240913.pdf
-  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/ithems240913.pdf
-  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47795057/attachment_file.pdf
-  legacy_ids:
-  - presentation-2024-09-13-gauge-field-topology-on-the-lattice
-- id: presentation-2024-01-18-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
-  type: presentations
-  kind: journal_club
-  role: self
-  presenter: Okuto Morikawa
-  invited: false
-  title_en: Lattice realization of the axial U(1) non-invertible symmetry
-  title_ja: null
-  event_en: Journal Club
-  event_ja: null
-  start_date: '2024-01-18'
-  end_date: null
-  year: 2024
-  affiliation_period: Osaka University
-  topics:
-  - lattice gauge theory
-  - theoretical physics
-  source: presentation.tex
-- id: presentation-2021-04-20-perturbative-ambiguities-and-resurgence-in-compactified-spac
-  type: presentations
-  kind: seminar
-  role: self
-  presenter: Okuto Morikawa
-  invited: false
-  title_en: Perturbative ambiguities and resurgence in compactified spacetime
-  title_ja: null
-  event_en: Local Seminar at Osaka Univ.
-  event_ja: null
-  start_date: '2021-04-20'
-  end_date: null
-  year: 2021
-  affiliation_period: Osaka University
-  topics:
-  - compactified field theory
-  - theoretical physics
-  source: presentation.tex
-- id: presentation-2020-07-14-nonperturbative-renormalization-of-operators-in-near-conform
-  type: presentations
-  kind: journal_club
-  role: self
-  presenter: Okuto Morikawa
-  invited: false
-  title_en: Nonperturbative Renormalization of Operators in Near-Conformal Systems Using Gradient Flow
-  title_ja: null
-  event_en: Journal Club
-  event_ja: null
-  start_date: '2020-07-14'
-  end_date: null
-  year: 2020
-  affiliation_period: Kyushu University
-  topics:
-  - gradient flow
-  - theoretical physics
-  source: presentation.tex
-  references_discussed_en:
-  - Stochastic Renormalization Group and Gradient Flow
-- id: presentation-2019-10-18-a-quenched-momentum-prescription-for-large-n-theories
-  type: presentations
-  kind: journal_club
-  role: self
-  presenter: Okuto Morikawa
-  invited: false
-  title_en: A Quenched Momentum Prescription for Large N Theories
-  title_ja: null
-  event_en: Journal Club
-  event_ja: null
-  start_date: '2019-10-18'
-  end_date: null
-  year: 2019
-  affiliation_period: Kyushu University
-  topics:
-  - theoretical physics
-  source: presentation.tex
-- id: presentation-2019-02-25-sign-problem-and-monte-carlo-calculations-beyond-lefschetz-t
-  type: presentations
-  kind: journal_club
-  role: self
-  presenter: Okuto Morikawa
-  invited: false
-  title_en: Sign problem and Monte Carlo calculations beyond Lefschetz thimbles
-  title_ja: null
-  event_en: Journal Club
-  event_ja: null
-  start_date: '2019-02-25'
-  end_date: null
-  year: 2019
-  affiliation_period: Kyushu University
-  topics:
-  - theoretical physics
-  source: presentation.tex
-- id: presentation-2018-05-14-a-numerical-method-to-compute-the-running-coupling-in-asympt
-  type: presentations
-  kind: journal_club
-  role: self
-  presenter: Okuto Morikawa
-  invited: false
-  title_en: A Numerical method to compute the running coupling in asymptotically free theories
-  title_ja: null
-  event_en: Journal Club
-  event_ja: null
-  start_date: '2018-05-14'
-  end_date: null
-  year: 2018
-  affiliation_period: Kyushu University
-  topics:
-  - theoretical physics
-  source: presentation.tex
-- id: presentation-2017-09-21-string-theory-vol-2-superstring-theory-and-beyond
-  type: presentations
-  kind: journal_club
-  role: self
-  presenter: Okuto Morikawa
-  invited: false
-  title_en: 'String theory. Vol. 2: Superstring theory and beyond'
-  title_ja: null
-  event_en: Journal Club
-  event_ja: null
-  start_date: '2017-09-21'
-  end_date: null
-  year: 2017
-  affiliation_period: Kyushu University
-  topics:
-  - theoretical physics
-  source: presentation.tex
-  references_discussed_en:
-  - Conformal field theory
 - id: presentation-2016-11-04-a-chiral-solution-to-the-ginsparg-wilson-equation
   type: presentations
   kind: journal_club

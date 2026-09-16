@@ -9,7 +9,7 @@ from id_utils import promote_id
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data'
-RM_PATH = Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'sources'/'rm_researchers20260828.jsonl'
+RM_PATH = Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'sources'/'rm_researchers.jsonl'
 SLIDES_BASE = 'https://o-morikawa.github.io/slides/'
 SLIDES_REPO_BASE = 'https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/'
 RM_PROFILE = 'https://researchmap.jp/o-morikawa'

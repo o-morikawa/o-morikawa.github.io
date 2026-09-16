@@ -2,8 +2,8 @@
   type: software
   kind: repository
   authors:
-  - Shoya Ogawa
-  - Okuto Morikawa
+  - S. Ogawa
+  - O. Morikawa
   title_en: CSMQNM.jl
   title_ja: 'CSMQNM.jl: skeleton for computing black-hole quasinormal-mode candidates with the complex scaling method'
   description_en: skeleton for computing black-hole quasinormal-mode candidates with the complex scaling method (CSM)
@@ -14,7 +14,7 @@
   - black holes
   - quasinormal modes
   - complex scaling method
-  source: publication(1).tex
+  source: publication.tex
   researchmap_id: '53573359'
   researchmap_type: works
   researchmap_profile_url: https://researchmap.jp/o-morikawa
@@ -26,7 +26,7 @@
   type: software
   kind: repository
   authors:
-  - Okuto Morikawa
+  - O. Morikawa
   title_en: AutoTortoise.jl
   title_ja: 'AutoTortoise.jl: horizon-aware tortoise-coordinate construction for static spherically symmetric black-hole metrics'
   description_en: horizon-aware tortoise-coordinate construction for static spherically symmetric black-hole metrics
@@ -36,7 +36,8 @@
   topics:
   - black holes
   - symbolic computation
-  source: publication(1).tex
+  - quasinormal modes
+  source: publication.tex
   researchmap_id: '53573347'
   researchmap_type: works
   researchmap_profile_url: https://researchmap.jp/o-morikawa
@@ -44,32 +45,32 @@
     black-hole metrics'
   location_ja: GitHub
   location_en: GitHub
-- id: software-errorest-jl
+- id: software-wind3d
   type: software
   kind: repository
   authors:
-  - Okuto Morikawa
-  title_en: ErrorEst.jl
-  title_ja: 'ErrorEst.jl: Tools for julia programming of statistical analysis'
-  description_en: Tools for Julia programming of statistical analysis
+  - O. Morikawa
+  title_en: Wind3D
+  title_ja: 'Wind3D: Discrete approximation to 3D winding number mapping T^3->U(N)'
+  description_en: Discrete approximation to 3D winding number mapping T^3 -> U(N)
   description_ja: null
   year: 2024
-  url: https://github.com/o-morikawa/ErrorEst.jl
+  url: https://github.com/o-morikawa/Wind3D
   topics:
-  - statistics
-  - Julia
-  source: publication(1).tex
-  researchmap_id: '48860717'
+  - topology
+  - lattice field theory
+  source: publication.tex
+  researchmap_id: '48608031'
   researchmap_type: works
   researchmap_profile_url: https://researchmap.jp/o-morikawa
-  researchmap_title_en: 'ErrorEst.jl: Tools for julia programming of statistical analysis'
+  researchmap_title_en: 'Wind3D: Discrete approximation to 3D winding number mapping T^3->U(N)'
   location_ja: GitHub
   location_en: GitHub
 - id: software-highercup
   type: software
   kind: repository
   authors:
-  - Okuto Morikawa
+  - O. Morikawa
   title_en: HigherCup
   title_ja: 'HigherCup: Symbolic manipulation of Steenrod higher cups'
   description_en: Symbolic manipulation of Steenrod higher cups
@@ -80,56 +81,19 @@
   - topology
   - generalized symmetry
   - symbolic computation
-  source: publication(1).tex
+  source: publication.tex
   researchmap_id: '48860714'
   researchmap_type: works
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   researchmap_title_en: 'HigherCup: Symbolic manipulation of Steenrod higher cups'
   location_ja: GitHub
   location_en: GitHub
-- id: software-wind3d
-  type: software
-  kind: repository
-  authors:
-  - Okuto Morikawa
-  title_en: Wind3D
-  title_ja: 'Wind3D: Discrete approximation to 3D winding number mapping T^3->U(N)'
-  description_en: Discrete approximation to 3D winding number mapping T^3 -> U(N)
-  description_ja: null
-  year: 2024
-  url: https://github.com/o-morikawa/Wind3D
-  topics:
-  - topology
-  - lattice field theory
-  source: publication(1).tex
-  researchmap_id: '48608031'
-  researchmap_type: works
-  researchmap_profile_url: https://researchmap.jp/o-morikawa
-  researchmap_title_en: 'Wind3D: Discrete approximation to 3D winding number mapping T^3->U(N)'
-  location_ja: GitHub
-  location_en: GitHub
-- id: software-gaugefields-upstream
-  type: software
-  kind: repository
-  authors:
-  - Akio Tomiya
-  - Yuki Nagai et al.
-  title_en: akio-tomiya/Gaugefields.jl v0.4.0
-  title_ja: null
-  description_en: Julia package for utilities of gauge fields
-  description_ja: null
-  year: 2024
-  url: https://github.com/akio-tomiya/Gaugefields.jl
-  topics:
-  - lattice gauge theory
-  - Julia
-  source: publication(1).tex
 - id: software-higherbfields-jl
   type: software
   kind: repository
   authors:
-  - Okuto Morikawa
-  title_en: HigherBfields.jl
+  - O. Morikawa
+  title_en: HigherBfields.jl (forked from akio-tomiya/Gaugefields.jl)
   title_ja: 'HigherBfields.jl: Utilities of gauge fields coupled with higher-form gauge fields'
   description_en: Julia package for utilities of gauge fields coupled with higher-form gauge fields; forked from akio-tomiya/Gaugefields.jl
   description_ja: Forked from akio-tomiya/Gaugefields.jl
@@ -139,40 +103,78 @@
   - lattice gauge theory
   - generalized symmetry
   - Julia
-  source: publication(1).tex
+  source: publication.tex
   researchmap_id: '48608003'
   researchmap_type: works
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   researchmap_title_en: 'HigherBfields.jl: Utilities of gauge fields coupled with higher-form gauge fields'
   location_ja: GitHub
   location_en: GitHub
+- id: software-gaugefields-upstream
+  type: software
+  kind: repository
+  authors:
+  - A. Tomiya
+  - Y. Nagai
+  - et. al.
+  title_en: akio-tomiya/Gaugefields.jl v0.4.0
+  title_ja: null
+  description_en: Julia package for utilities of gauge fields
+  description_ja: null
+  year: 2024
+  url: https://github.com/akio-tomiya/Gaugefields.jl
+  topics:
+  - lattice gauge theory
+  - Julia
+  source: publication.tex
 - id: software-gaugefields-jl
   type: software
   kind: repository
   authors:
-  - Okuto Morikawa
+  - O. Morikawa
   title_en: Gaugefields.jl
   title_ja: 'Gaugefields.jl: Utilities of quantum theory of (higher-form) general gauge fields'
   description_en: Julia package for utilities of quantum theory of (higher-form) general gauge fields
-  description_ja: null
+  description_ja: Forked from akio-tomiya/Gaugefields.jl
   year: 2024
   url: https://github.com/o-morikawa/Gaugefields.jl
   topics:
   - lattice gauge theory
   - generalized symmetry
   - Julia
-  source: publication(1).tex
+  source: publication.tex
   researchmap_id: '46889833'
   researchmap_type: works
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   researchmap_title_en: 'Gaugefields.jl: Utilities of quantum theory of (higher-form) general gauge fields'
   location_ja: GitHub
   location_en: GitHub
+- id: software-errorest-jl
+  type: software
+  kind: repository
+  authors:
+  - O. Morikawa
+  title_en: ErrorEst.jl
+  title_ja: 'ErrorEst.jl: Tools for julia programming of statistical analysis'
+  description_en: Tools for Julia programming of statistical analysis
+  description_ja: null
+  year: 2024
+  url: https://github.com/o-morikawa/ErrorEst.jl
+  topics:
+  - statistics
+  - Julia
+  source: publication.tex
+  researchmap_id: '48860717'
+  researchmap_type: works
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: 'ErrorEst.jl: Tools for julia programming of statistical analysis'
+  location_ja: GitHub
+  location_en: GitHub
 - id: software-resummation
   type: software
   kind: repository
   authors:
-  - Okuto Morikawa
+  - O. Morikawa
   title_en: Resummation
   title_ja: 'Resummation: Some resummation techniques based on perturbation theory'
   description_en: Mathematica codes for resummation techniques based on perturbation theory
@@ -185,7 +187,7 @@
   - resurgence
   - perturbation theory
   - Mathematica
-  source: publication(1).tex
+  source: publication.tex
   researchmap_id: '46900948'
   researchmap_type: works
   researchmap_profile_url: https://researchmap.jp/o-morikawa
@@ -196,7 +198,7 @@
   type: software
   kind: repository
   authors:
-  - Okuto Morikawa
+  - O. Morikawa
   title_en: LandauGinzburg
   title_ja: 'LandauGinzburg: C++ codeset for simulation of N=2 Landau-Ginzburg model'
   description_en: C++ and Julia codeset for simulation of the N=2 Landau-Ginzburg model
@@ -208,7 +210,9 @@
   - lattice field theory
   - Julia
   - C++
-  source: publication(1).tex
+  - supersymmetry
+  - conformal field theory
+  source: publication.tex
   researchmap_id: '46889820'
   researchmap_type: works
   researchmap_profile_url: https://researchmap.jp/o-morikawa
