@@ -1,3 +1,15 @@
+- id: publication-undated-the-changing-meaning-of-one-loop-exactness-in-n-2-supersymmetric-yang-mi
+  type: publications
+  kind: paper
+  status: preprint
+  authors:
+  - O. Morikawa
+  title: The Changing Meaning of One-Loop Exactness in 𝒩=2 Supersymmetric Yang–Mills Theory
+  year: null
+  source: publication.tex
+  topics:
+  - lattice gauge theory
+  - supersymmetry
 - id: publication-undated-gradient-flow-actions-integerness-and-gluonic-fermionic-topology-matchin
   type: publications
   kind: proceedings

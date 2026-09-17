@@ -1,6 +1,8 @@
 #!/bin/bash
+cp ~/Dropbox/riken_2026/template/cv_om.pdf cv/
 cp ~/Dropbox/riken_2026/template/publication.tex sources/
 cp ~/Dropbox/riken_2026/template/presentation.tex sources/
+cp ~/Dropbox/riken_2026/template/ref_om.bib cv/
 cp ~/Dropbox/riken_2026/template/ref_om.bib sources/
 
 set -euo pipefail
