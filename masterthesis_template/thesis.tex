@@ -1,0 +1,131 @@
+\documentclass[dvipdfmx,a4j,twoside,openright]{jsbook}
+
+\usepackage{newtxtext}
+\usepackage{amsmath,amssymb}
+\usepackage{mathtools}
+%\usepackage{bm}
+
+\usepackage[dvipdfmx]{graphicx}
+%\usepackage{xcolor}
+%\usepackage{tikz}
+
+\usepackage{booktabs}
+\usepackage{subcaption}
+
+\usepackage{cite}
+%\usepackage{pdfpages}
+
+%\allowdisplaybreaks[1]
+\numberwithin{equation}{chapter}
+
+%\renewcommand{\bibname}{参考文献}
+
+\newcommand{\Slash}[1]{{\ooalign{\hfil/\hfil\crcr$#1$}}}
+%\usepackage{slashed}
+
+%%
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\sign}{sign}
+
+\usepackage[dvipdfm,margin=30truemm]{geometry}
+\setlength{\textwidth}{150truemm}
+\setlength{\fullwidth}{\textwidth}
+
+
+%--- Don't add any more settings  ---%
+%---  under this line in preamble ---%
+
+% bookmarks of PDF with hyperref
+\usepackage[dvipdfmx,%
+bookmarks=true,bookmarksnumbered=true,%
+pdftitle={},%
+pdfsubject={Master thesis},%
+pdfauthor={}%,
+pdfkeywords={}%
+]{hyperref}
+\usepackage{pxjahyper}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TITLE
+\title{何か面白い研究}
+\author{九州大学~理学府~物理学専攻\\
+粒子宇宙論講座~素粒子理論研究室\\
+\\
+Hogehoge~Foo\\%% author
+\\\\
+指導教員\hspace{3mm}
+鈴木~博}
+%\date{\today}
+%\date{20xx年2月xx日}%回覧用
+\date{20xx年2月xx日}%製本用
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\cleardoublepage
+\pagenumbering{roman}
+%%%
+\begin{abstract}
+ \begin{center}
+  \textgt{要旨}
+ \end{center}
+ 
+ 要旨（丁寧に!!!）
+
+「靴を脱げ。汝の立てるは聖なる地である。」 （\textgt{旧約聖書 出エジプト記}より）
+\end{abstract}
+%%%
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%本文
+\chapter{序論}
+とにかくintro, conclusionを丁寧に書こう!
+
+``It's so fine and yet so terrible to stand in front of a blank canvas.'' (P. C\'ezanne)
+
+\chapter{結論}
+``No, no, you're not thinking; you're just being logical.'' (N. Bohr)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{謝辞}
+\addcontentsline{toc}{chapter}{謝辞}
+感謝しなさい。
+
+「この素晴らしい世界に祝福を!」（\textgt{この素晴らしい世界に祝福を!}より）
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\chapter{補足}
+必要なら付録
+
+``All work and no play makes Jack a dull boy.'' （\textit{Shining}より）
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%"適度な"文献
+\begin{thebibliography}{00}
+%\cite{Ishikawa:2019tnw}
+\bibitem{Ishikawa:2019tnw}
+  K.~Ishikawa, O.~Morikawa, A.~Nakayama, K.~Shibata, H.~Suzuki and H.~Takaura,
+  %``Infrared renormalon in the supersymmetric $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$,''
+  arXiv:1908.00373 [hep-th].
+  %%CITATION = ARXIV:1908.00373;%%
+\end{thebibliography}
+
+%BibTeX使うなら（ref.bibに文献記入）
+%\bibliographystyle{utphys}
+%\bibliography{ref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
