@@ -21,7 +21,7 @@
 - id: researchmap:academic_contribution:54988591
   type: cv
   kind: activity
-  title_en: Review (Mathematical Reviews / MathSciNet) of
+  title_en: Review (Mathematical Reviews / MathSciNet) of N. Seiberg and W. Zhang
   title_ja: Review (Mathematical Reviews / MathSciNet) of N. Seiberg and W. Zhang, ``Tori, Klein bottles, and modulo 8 parity/time-reversal anomalies of 2+1d staggered fermions,'' JHEP, 2026, no. 5, 264
   start_date: 2026-09
   end_date: null
@@ -68,7 +68,7 @@
 - id: researchmap:academic_contribution:54988602
   type: cv
   kind: activity
-  title_en: Review (Mathematical Reviews / MathSciNet) of
+  title_en: Review (Mathematical Reviews / MathSciNet) of M. M. Anber
   title_ja: Review (Mathematical Reviews / MathSciNet) of M. M. Anber, ``Anomalies on ALE spaces and phases of gauge theory,'' JHEP, 2026, no. 6, 149
   start_date: 2026-08
   end_date: null
