@@ -6,10 +6,22 @@ import re
 from pathlib import Path
 
 from import_bib import arxiv_date, affiliation_from_arxiv, infer_topics, tex_to_text
-from sync_utils import load_yaml, merge_unique, norm, same_author_list, save_yaml, section_text, similarity, slug, split_top_level_items
+from sync_utils import (
+    load_yaml, merge_unique, norm, same_author_list, save_yaml, section_text,
+    similarity, slug, split_top_level_items, load_zero_arg_macros,
+    expand_zero_arg_macros,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data'
+DEFAULT_PREAMBLE = ROOT / 'sources' / 'cv_om.tex'
+PREAMBLE_MACROS = {}
+
+def configure_preamble(path: Path | None):
+    global PREAMBLE_MACROS
+    PREAMBLE_MACROS = load_zero_arg_macros(path)
+    return PREAMBLE_MACROS
+
 
 JOURNALS = {
     r'\PTEP': 'Prog. Theor. Exp. Phys.',
@@ -27,12 +39,14 @@ JOURNALS = {
 
 
 def clean_tex(s: str) -> str:
+    s = expand_zero_arg_macros(s, PREAMBLE_MACROS)
     s = s.replace('\\OM\\', 'O. Morikawa ').replace('\\OM', 'O. Morikawa')
     s = re.sub(r'\\href\{[^{}]*\}\{([^{}]*)\}', r'\1', s)
     s = re.sub(r'\\url\{([^{}]*)\}', r'\1', s)
     for _ in range(5):
-        s = re.sub(r'\\(?:textbf|textit|emph)\{([^{}]*)\}', r'\1', s)
+        s = re.sub(r'\\(?:textbf|textit|emph|underline|textrm|textsf|texttt)\{([^{}]*)\}', r'\1', s)
     s = s.replace(r'\&', '&').replace(r'\textasciicircum', '^')
+    s = s.replace(r'\ ', ' ')
     s = s.replace('\\\\', ' ')
     return tex_to_text(s)
 
@@ -67,7 +81,7 @@ def parse_jcite(raw: str):
     if not m:
         return {}
     doi, journal_macro, volume, detail = [x.strip() for x in m.groups()]
-    journal = JOURNALS.get(journal_macro, clean_tex(journal_macro))
+    journal = clean_tex(journal_macro) if PREAMBLE_MACROS else JOURNALS.get(journal_macro, clean_tex(journal_macro))
     year_m = re.search(r'\((\d{4})\)', detail)
     year = int(year_m.group(1)) if year_m else (int(volume) if volume.isdigit() and len(volume) == 4 else None)
     pages = re.sub(r'\s*\(\d{4}\)\s*$', '', clean_tex(detail)).strip(' ,')
@@ -332,7 +346,10 @@ def parse(path: Path):
 def main():
     ap = argparse.ArgumentParser(description='Non-destructively upsert publication.tex into the canonical YAML database.')
     ap.add_argument('tex', nargs='?', type=Path, default=ROOT / 'sources' / 'publication.tex')
+    ap.add_argument('--preamble', type=Path, default=DEFAULT_PREAMBLE,
+                    help='Shared cv_om.tex preamble used for zero-argument semantic macros.')
     args = ap.parse_args()
+    configure_preamble(args.preamble)
     pubs, other, books, software = parse(args.tex)
     results = [
         ('publications', upsert(DATA / 'publications.yaml', pubs, 'title', scholarly=True)),

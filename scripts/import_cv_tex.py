@@ -7,12 +7,23 @@ from pathlib import Path
 
 import yaml
 
-from sync_utils import load_yaml, save_yaml, norm, similarity, slug, merge_unique
+from sync_utils import (
+    load_yaml, save_yaml, norm, similarity, slug, merge_unique,
+    load_zero_arg_macros, expand_zero_arg_macros,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TEX = ROOT / 'sources' / 'cv.tex'
 DEFAULT_YAML = ROOT / 'data' / 'cv.yaml'
 DEFAULT_PROFILE = ROOT / 'data' / 'profile.yaml'
+DEFAULT_PREAMBLE = ROOT / 'sources' / 'cv_om.tex'
+
+PREAMBLE_MACROS = {}
+
+def configure_preamble(path: Path | None):
+    global PREAMBLE_MACROS
+    PREAMBLE_MACROS = load_zero_arg_macros(path)
+    return PREAMBLE_MACROS
 
 # Sections actually used in the author's CV.  The parser is deliberately
 # heading/text based rather than tied to a particular table environment, so
@@ -111,10 +122,15 @@ def _unwrap_command(text: str, command: str) -> str:
 def tex_to_plain(text: str) -> str:
     text = strip_comments(text)
     text = text.replace('\r\n', '\n').replace('\r', '\n')
-    # Stable author macros carry semantic text (institutions/journals), so expand
-    # them before the generic command stripper sees them.
-    for macro, value in AUTHOR_MACROS.items():
-        text = re.sub(macro + r'(?![A-Za-z@])', value, text)
+    # The shared cv_om.tex preamble is the primary source of semantic aliases
+    # (institutions, journals, author shorthand, etc.).  Fall back to the legacy
+    # built-in map only when a bundled/alternate preamble omits an older alias.
+    if PREAMBLE_MACROS:
+        text = expand_zero_arg_macros(text, PREAMBLE_MACROS)
+    else:
+        # Backward-compatible fallback for standalone use without cv_om.tex.
+        for macro, value in AUTHOR_MACROS.items():
+            text = re.sub(macro + r'(?![A-Za-z@])', value, text)
     # TeX often uses `\ ` after a macro to force a space.  Once the macro is
     # expanded, that control-space is just ordinary whitespace.
     text = text.replace(r'\ ', ' ')
@@ -601,7 +617,10 @@ def main():
     ap.add_argument('tex',nargs='?',type=Path,default=DEFAULT_TEX)
     ap.add_argument('-o','--output',type=Path,default=DEFAULT_YAML)
     ap.add_argument('--profile',type=Path,default=DEFAULT_PROFILE)
+    ap.add_argument('--preamble',type=Path,default=DEFAULT_PREAMBLE,
+                    help='Shared cv_om.tex preamble used for zero-argument semantic macros.')
     args=ap.parse_args()
+    configure_preamble(args.preamble)
     if not args.tex.exists():
         print(f'CV TeX not found; skipping: {args.tex}')
         return

@@ -9,6 +9,118 @@ from typing import Iterable
 import yaml
 
 
+def strip_latex_comments(text: str) -> str:
+    """Remove unescaped LaTeX comments while preserving line structure."""
+    out = []
+    for line in text.splitlines():
+        m = re.search(r'(?<!\\)%', line)
+        if m:
+            line = line[:m.start()]
+        out.append(line)
+    return '\n'.join(out)
+
+
+def _balanced_group(text: str, start: int, open_char: str = '{', close_char: str = '}'):
+    """Return (content, next_index) for a balanced group starting at *start*."""
+    if start >= len(text) or text[start] != open_char:
+        return None, start
+    depth = 0
+    i = start
+    while i < len(text):
+        ch = text[i]
+        if ch == open_char and (i == 0 or text[i - 1] != '\\'):
+            depth += 1
+        elif ch == close_char and (i == 0 or text[i - 1] != '\\'):
+            depth -= 1
+            if depth == 0:
+                return text[start + 1:i], i + 1
+        i += 1
+    return None, start
+
+
+def load_zero_arg_macros(path: Path | None):
+    r"""Read zero-argument ``newcommand``-style macros from a shared preamble.
+
+    Only commands without arguments are imported.  Structural commands such as
+    ``\newcommand{\foo}[1]{...}`` are intentionally ignored; the database
+    importers only need semantic aliases such as journal names, affiliations,
+    and ``\OM``.  Nested braces in replacement text are supported.
+    """
+    if path is None or not Path(path).exists():
+        return {}
+    text = strip_latex_comments(Path(path).read_text(encoding='utf-8'))
+    pat = re.compile(r'\\(?:newcommand|renewcommand|providecommand)\*?\s*')
+    macros = {}
+    pos = 0
+    while True:
+        m = pat.search(text, pos)
+        if not m:
+            break
+        i = m.end()
+        while i < len(text) and text[i].isspace():
+            i += 1
+        name = None
+        if i < len(text) and text[i] == '{':
+            group, j = _balanced_group(text, i)
+            if group is not None:
+                name = group.strip()
+                i = j
+        elif i < len(text) and text[i] == '\\':
+            nm = re.match(r'\\[A-Za-z@]+', text[i:])
+            if nm:
+                name = nm.group(0)
+                i += len(nm.group(0))
+        if not name or not re.fullmatch(r'\\[A-Za-z@]+', name):
+            pos = m.end()
+            continue
+        while i < len(text) and text[i].isspace():
+            i += 1
+        # Optional [n] means the command takes arguments.  Skip it entirely.
+        if i < len(text) and text[i] == '[':
+            j = text.find(']', i + 1)
+            if j < 0:
+                pos = i + 1
+                continue
+            argc = text[i + 1:j].strip()
+            if argc and argc != '0':
+                pos = j + 1
+                continue
+            i = j + 1
+            while i < len(text) and text[i].isspace():
+                i += 1
+        if i >= len(text) or text[i] != '{':
+            pos = i + 1
+            continue
+        replacement, j = _balanced_group(text, i)
+        if replacement is None:
+            pos = i + 1
+            continue
+        if '#' not in replacement:
+            macros[name] = replacement
+        pos = j
+    return macros
+
+
+def expand_zero_arg_macros(text: str, macros: dict[str, str] | None, passes: int = 8) -> str:
+    """Expand semantic zero-argument macros, longest name first.
+
+    Multiple passes allow aliases whose replacement contains another imported
+    zero-argument macro.  Unknown/argument-taking commands remain untouched for
+    the dedicated TeX parsers to handle.
+    """
+    if not macros:
+        return text
+    out = text
+    items = sorted(macros.items(), key=lambda kv: len(kv[0]), reverse=True)
+    for _ in range(max(1, passes)):
+        before = out
+        for macro, value in items:
+            out = re.sub(re.escape(macro) + r'(?![A-Za-z@])', lambda _m, v=value: v, out)
+        if out == before:
+            break
+    return out
+
+
 def load_yaml(path: Path):
     if not path.exists():
         return []

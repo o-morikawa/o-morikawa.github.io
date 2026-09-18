@@ -14,6 +14,7 @@ sync_if_exists() {
     cp "$src" "$dst"
   fi
 }
+sync_if_exists "$AUTHOR_CV_DIR/cv_om.tex" sources/cv_om.tex
 sync_if_exists "$AUTHOR_CV_DIR/cv.tex" sources/cv.tex
 sync_if_exists "$AUTHOR_CV_DIR/cv_om.pdf" cv/cv_om.pdf
 sync_if_exists "$AUTHOR_CV_DIR/publication.tex" sources/publication.tex
@@ -31,9 +32,9 @@ fi
 # Fast-moving author-maintained layer.  Every importer performs a non-destructive
 # upsert: it updates fields owned by that source, adds genuinely new records, and
 # never deletes records or metadata merely because a source omits them.
-"$PYTHON" scripts/import_cv_tex.py sources/cv.tex
-"$PYTHON" scripts/import_publications_tex.py sources/publication.tex
-"$PYTHON" scripts/import_presentations_tex.py sources/presentation.tex
+"$PYTHON" scripts/import_cv_tex.py sources/cv.tex --preamble sources/cv_om.tex
+"$PYTHON" scripts/import_publications_tex.py sources/publication.tex --preamble sources/cv_om.tex
+"$PYTHON" scripts/import_presentations_tex.py sources/presentation.tex --preamble sources/cv_om.tex
 
 # External enrichment layers.  BibTeX/INSPIRE and ResearchMap may add stable IDs,
 # bibliographic data, Japanese/bilingual metadata, and slide links.  ResearchMap

@@ -6,21 +6,26 @@ Static, machine-readable research/CV database with a single-file searchable view
 
 The database uses a **non-destructive layered upsert** model. The YAML files are the canonical merged state; the TeX/BibTeX/ResearchMap files are provenance-bearing inputs with different responsibilities.
 
-1. `sources/cv.tex`, `sources/publication.tex`, and `sources/presentation.tex` are the author's day-to-day source files. New records can therefore appear in the database before ResearchMap, INSPIRE, or slide metadata are complete.
-2. The TeX importers update fields owned by the corresponding TeX source and add genuinely new records. They do **not** delete records, Japanese text, URLs, external IDs, manual corrections, manual topics, or other enrichment merely because the current TeX omits them.
-3. `sources/ref_om.bib` enriches scholarly publications with INSPIRE/BibTeX identity and bibliographic metadata. A provisional local publication ID is promoted to the INSPIRE BibTeX key when a matching entry later appears; the old ID is retained in `legacy_ids`.
-4. `sources/rm_researchers.jsonl` is a second non-destructive upsert layer. A matching ResearchMap item enriches the existing record; an unmatched supported ResearchMap item is added as a source-native record. Local-only records, including collaborator talks, are retained.
-5. `scripts/build.py` renders the merged YAML state into the self-contained viewer.
+1. `sources/cv_om.tex` is the shared author preamble/driver. Its zero-argument semantic macros (journal names, affiliations, `\OM`, etc.) are loaded by the TeX importers, so the database follows the same macro definitions used to compile the CV.
+2. `sources/cv.tex`, `sources/publication.tex`, and `sources/presentation.tex` are the author's day-to-day content sources. New records can therefore appear in the database before ResearchMap, INSPIRE, or slide metadata are complete.
+3. The TeX importers update fields owned by the corresponding TeX source and add genuinely new records. They do **not** delete records, Japanese text, URLs, external IDs, manual corrections, manual topics, or other enrichment merely because the current TeX omits them.
+4. `sources/ref_om.bib` enriches scholarly publications with INSPIRE/BibTeX identity and bibliographic metadata. A provisional local publication ID is promoted to the INSPIRE BibTeX key when a matching entry later appears; the old ID is retained in `legacy_ids`.
+5. `sources/rm_researchers.jsonl` is a second non-destructive upsert layer. A matching ResearchMap item enriches the existing record; an unmatched supported ResearchMap item is added as a source-native record. Local-only records, including collaborator talks, are retained.
+6. `scripts/build.py` renders the merged YAML state into the self-contained viewer.
 
 In short:
 
 ```text
-cv.tex ------------\
-publication.tex ----+--> canonical YAML --> searchable index.html
-presentation.tex ---/
-          ^       ^
-          |       |
-      BibTeX   ResearchMap / slides
+cv_om.tex (shared preamble/macros)
+          |
+          +--------+----------------+
+          v        v                v
+cv.tex  publication.tex  presentation.tex
+   \          |          /
+    \---------+---------/----> canonical YAML --> searchable index.html
+              ^       ^
+              |       |
+          BibTeX   ResearchMap / slides
 ```
 
 The normal authoring workflow is therefore still LaTeX-first; external services can catch up later.
@@ -34,6 +39,7 @@ The normal authoring workflow is therefore still LaTeX-first; external services 
 - `data/cv.yaml` - career, education, awards, grants, memberships, service, teaching, mentorship, visits, skills, activities, and ResearchMap-only CV records.
 - `data/books.yaml` - online books/monographs.
 - `data/software.yaml` - public repositories/software.
+- `sources/cv_om.tex` - shared CV preamble/driver; zero-argument semantic macros are synchronized and reused by all TeX importers.
 - `sources/cv.tex` - author-maintained CV source.
 - `sources/publication.tex` - author-maintained publication/repository list.
 - `sources/presentation.tex` - author-maintained presentation list, including collaborator talks.
@@ -53,6 +59,7 @@ Edit the usual TeX files, then run:
 The build performs:
 
 ```text
+cv_om.tex        -> shared zero-argument macro definitions
 cv.tex           -> non-destructive CV/profile upsert
 publication.tex  -> non-destructive publication/book/software upsert
 presentation.tex -> non-destructive presentation upsert
@@ -61,14 +68,14 @@ ResearchMap      -> match: enrich; no match: add; never prune local-only data
 YAML             -> site/index.html -> index.html
 ```
 
-`build.sh` optionally refreshes the bundled author sources from `${AUTHOR_CV_DIR}` (default: `~/Dropbox/riken_2026/template`) when those files exist. If that directory is absent, the repository remains buildable from the bundled `sources/` files.
+`build.sh` optionally refreshes the bundled author sources from `${AUTHOR_CV_DIR}` (default: `~/Dropbox/riken_2026/template`) when those files exist, including `cv_om.tex` itself. Thus a change such as `\newcommand{\SciPostCore}{...}` is picked up on the next build without editing the Python importer. If that directory is absent, the repository remains buildable from the bundled `sources/` files.
 
 To run individual layers:
 
 ```bash
-python scripts/import_cv_tex.py sources/cv.tex
-python scripts/import_publications_tex.py sources/publication.tex
-python scripts/import_presentations_tex.py sources/presentation.tex
+python scripts/import_cv_tex.py sources/cv.tex --preamble sources/cv_om.tex
+python scripts/import_publications_tex.py sources/publication.tex --preamble sources/cv_om.tex
+python scripts/import_presentations_tex.py sources/presentation.tex --preamble sources/cv_om.tex
 python scripts/import_bib.py sources/ref_om.bib -o data/publications.yaml --merge
 python scripts/merge_researchmap.py sources/rm_researchers.jsonl
 python scripts/build.py
@@ -156,6 +163,10 @@ python scripts/attach_researchmap.py data/presentations.yaml \
   --slides-url https://o-morikawa.github.io/slides/<file>.pdf
 python scripts/build.py
 ```
+
+## v0.1.3
+
+v0.1.3 synchronizes the shared `cv_om.tex` preamble and makes its zero-argument semantic macros a first-class input to all TeX importers. Argument-taking structural macros continue to be handled by dedicated parsers, so macro expansion cannot accidentally reinterpret commands such as `\Jcite`, `\DOI`, or `\ID`. The build remains non-destructive and reproducible from the bundled sources.
 
 ## v0.1.2
 

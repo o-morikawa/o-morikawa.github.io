@@ -6,21 +6,34 @@ import re
 from pathlib import Path
 
 from import_bib import infer_topics, tex_to_text
-from sync_utils import load_yaml, merge_unique, norm, save_yaml, section_text, similarity, slug, split_top_level_items
+from sync_utils import (
+    load_yaml, merge_unique, norm, save_yaml, section_text, similarity, slug,
+    split_top_level_items, load_zero_arg_macros, expand_zero_arg_macros,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TEX = ROOT / 'sources' / 'presentation.tex'
 DEFAULT_YAML = ROOT / 'data' / 'presentations.yaml'
+DEFAULT_PREAMBLE = ROOT / 'sources' / 'cv_om.tex'
+PREAMBLE_MACROS = {}
+
+def configure_preamble(path: Path | None):
+    global PREAMBLE_MACROS
+    PREAMBLE_MACROS = load_zero_arg_macros(path)
+    return PREAMBLE_MACROS
+
 MONTHS = {m: i for i, m in enumerate(['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'], 1)}
 
 
 def clean_tex(s: str) -> str:
+    s = expand_zero_arg_macros(s, PREAMBLE_MACROS)
     s = s.replace('\\OM\\', 'O. Morikawa ').replace('\\OM', 'O. Morikawa')
     s = re.sub(r'\\href\{[^{}]*\}\{([^{}]*)\}', r'\1', s)
     s = re.sub(r'\\url\{([^{}]*)\}', r'\1', s)
     for _ in range(5):
-        s = re.sub(r'\\(?:textbf|textit|emph)\{([^{}]*)\}', r'\1', s)
+        s = re.sub(r'\\(?:textbf|textit|emph|underline|textrm|textsf|texttt)\{([^{}]*)\}', r'\1', s)
     s = s.replace(r'\&', '&').replace(r'\textasciicircum', '^')
+    s = s.replace(r'\ ', ' ')
     s = s.replace('\\\\', ' ')
     return tex_to_text(s)
 
@@ -177,7 +190,10 @@ def main():
     ap = argparse.ArgumentParser(description='Non-destructively upsert presentation.tex into presentations.yaml.')
     ap.add_argument('tex', nargs='?', type=Path, default=DEFAULT_TEX)
     ap.add_argument('-o', '--output', type=Path, default=DEFAULT_YAML)
+    ap.add_argument('--preamble', type=Path, default=DEFAULT_PREAMBLE,
+                    help='Shared cv_om.tex preamble used for zero-argument semantic macros.')
     args = ap.parse_args()
+    configure_preamble(args.preamble)
     parsed, added, updated, total = sync(args.tex, args.output)
     print(f'Parsed {parsed} TeX presentation records; +{added}, updated {updated}, total {total}')
 

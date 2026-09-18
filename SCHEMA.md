@@ -8,6 +8,7 @@ The database is a canonical **merged state**, not a destructive mirror of any on
 
 Author-maintained sources:
 
+- `sources/cv_om.tex` (shared preamble/driver and semantic macro definitions)
 - `sources/cv.tex`
 - `sources/publication.tex`
 - `sources/presentation.tex`
@@ -29,6 +30,15 @@ All importers follow non-destructive upsert semantics:
 English/basic wording supplied in the author's TeX is canonical where present. ResearchMap is authoritative for its own IDs/provenance and is primarily used to supply Japanese/bilingual structured metadata. Conflicting values are retained explicitly rather than silently reconciled.
 
 For an explicit author correction that intentionally differs from a source date, `date_note` protects the canonical date. Literal TeX or ResearchMap values can be retained as `latex_start_date` / `latex_end_date` or `researchmap_date`, with `date_conflict: true` where applicable.
+
+
+## Shared LaTeX preamble policy
+
+`sources/cv_om.tex` is synchronized alongside the content files and is the source of truth for zero-argument semantic macros used by the author's CV ecosystem. The importers automatically read `\newcommand`, `\renewcommand`, and `\providecommand` definitions that take no arguments, including aliases such as journal names, affiliations, and `\OM`.
+
+Argument-taking macros are not blindly expanded. Commands carrying structure or identifiers (for example `\Jcite`, `\Acite`, `\DOI`, `\HDL`, `\ID`, and `\JPScite`) remain under dedicated parsing rules. This separates semantic alias synchronization from schema-aware extraction. Unknown macros are left to the existing TeX cleanup/parser path rather than treated as data loss.
+
+A change in the author's local `${AUTHOR_CV_DIR}/cv_om.tex` is copied to `sources/cv_om.tex` by `build.sh` when present, then used immediately by the TeX importers.
 
 ## Common fields
 

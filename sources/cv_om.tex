@@ -1,0 +1,147 @@
+%%% YaTeX tex-command
+% %#! platex -synctex=1
+%\documentclass[titlepage,dvipdfmx,a4j,12pt]{jsarticle}
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[margin=2.3cm,headheight=14.49998pt,footskip=14.49998pt]{geometry}%\usepackage{a4wide}
+
+\usepackage{amsmath,amssymb}
+%\usepackage{bm}
+
+% Japanese characters¶
+\usepackage{CJKutf8}
+\newcommand{\jp}[1]{\begin{CJK*}{UTF8}{ipxm}#1\end{CJK*}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+
+\usepackage{titlesec}
+\titleformat{\section}[display]
+  {\LARGE\normalfont\scshape\sffamily\centering}{}{0em}{}
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+\usepackage{refcount}
+%\newcommand{\pagedifference}[2]{%
+%  \number\numexpr\getpagerefnumber{#2}-\getpagerefnumber{#1}\relax}
+\newcommand{\secpage}[1]{%
+  \number\numexpr\thepage-\getpagerefnumber{page:#1_str}+1\relax}
+\newcommand{\seclast}[1]{%
+  \number\numexpr\getpagerefnumber{page:#1_last}-\getpagerefnumber{page:#1_str}+1\relax}
+
+\newcommand{\mysection}[2]{
+\newpage
+\section{#1}\label{page:#1_str}
+\cfoot{#1 [\secpage{#1}/{}\seclast{#1}]}
+\input{#2}
+\label{page:#1_last}
+}
+
+\newcommand{\boxsec}[1]{
+\subsection{\normalsize\fbox{\sffamily #1}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\OM}{\underline{O. Morikawa}}
+
+\newcommand{\JSPS}{Japan Society for the Promotion of Science}
+\newcommand{\KAKENHI}{JSPS Grant-in-Aid for Scientific Research (KAKENHI)}
+
+\newcommand{\SG}{Japan Particle and Nuclear Theory Forum}
+\newcommand{\JPS}{The Physical Society of Japan}
+
+\newcommand{\riken}{RIKEN}
+\newcommand{\ithems}{iTHEMS, RIKEN}
+\newcommand{\ithemsP}{Interdisciplinary Theoretical and Mathematical Sciences Program (iTHEMS), RIKEN}
+\newcommand{\ithemsC}{Center for Interdisciplinary Theoretical and Mathematical Sciences (iTHEMS), RIKEN}
+\newcommand{\OsakaU}{Osaka University}
+\newcommand{\OsakaPhys}{Department of Physics, Osaka University}
+\newcommand{\KyushuU}{Kyushu University}
+\newcommand{\KyushuPhys}{Department of Physics, Kyushu University}
+
+\newcommand{\PTEP}{Prog.\ Theor.\ Exp.\ Phys.}
+\newcommand{\JHEP}{J.\ High Energy Phys.}
+\newcommand{\PRL}{Phys.\ Rev.\ Lett.}
+\newcommand{\PRA}{Phys.\ Rev.\ A}
+\newcommand{\PRB}{Phys.\ Rev.\ B}
+\newcommand{\PRC}{Phys.\ Rev.\ C}
+\newcommand{\PRD}{Phys.\ Rev.\ D}
+\newcommand{\PRE}{Phys.\ Rev.\ E}
+\newcommand{\EPJC}{Eur.\ Phys.\ J.\ C}
+\newcommand{\EPJWC}{EPJ Web Conf.}
+\newcommand{\PLB}{Phys.\ Lett.\ B}
+\newcommand{\NPB}{Nucl.\ Phys.\ B}
+\newcommand{\PoS}{Proc.\ Sci.}
+\newcommand{\JPhysA}{J.\ Phys.\ A: Math.\ Theor.}
+\newcommand{\IJMPA}{Int.\ J.\ Mod.\ Phys.\ A}
+\newcommand{\SciPost}{SciPost}
+\newcommand{\SciPostCore}{SciPost Physics Core}
+
+\newcommand{\JPScite}[2]{{Meeting Abstracts of the Physical Society of Japan} \textbf{#1},  ROMBUNNO.#2}
+
+\newcommand{\Jcite}[4]{\href{https://doi.org/#1}{{#2} \textbf{#3},  #4}}
+\newcommand{\Acite}[2]{\href{https://arxiv.org/abs/#1}{\texttt{arXiv:#1 [#2]}}}
+
+\newcommand{\ID}[2]{\href{#1/#2}{#2}}
+\newcommand{\DOI}[1]{DOI: \ID{https://doi.org}{#1}}
+\newcommand{\HDL}[1]{HDL: \ID{https://hdl.handle.net}{#1}}
+\newcommand{\GLB}[1]{J-Global: \href{https://jglobal.jst.go.jp/detail?JGLOBAL_ID=#1}{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{pdfpages}
+
+% 
+%\let\oldenumerate\enumerate
+%\renewcommand{\enumerate}{
+%\oldenumerate
+%\setlength{\itemsep}{1pt}
+%\setlength{\parskip}{0pt}
+%\setlength{\parsep}{0pt}
+%}
+%\let\olditemize\itemize
+%\renewcommand{\itemize}{
+%\olditemize
+%\setlength{\itemsep}{1pt}
+%\setlength{\parskip}{0pt}
+%\setlength{\parsep}{0pt}
+%}
+
+% bookmarks of PDF with hyperref
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[%
+bookmarks=true,bookmarksnumbered=true,%
+pdftitle={Curriculum Vitae},%
+pdfsubject={},%
+pdfauthor={Okuto Morikawa},%
+pdfkeywords={Last updated: \today}%
+]{hyperref}
+%\usepackage{pxjahyper}
+
+% TITLE
+\title{Curriculum Vitae}
+\author{Okuto Morikawa}
+\date{\today}
+
+\begin{document}
+%\maketitle
+
+\pagestyle{fancy}
+\lhead{}\chead{}\rhead{Okuto Morikawa (\today)}
+\renewcommand{\headrulewidth}{0.0pt}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+\mysection{Curriculum Vitae}{cv}
+\mysection{Publication List}{publication}
+\mysection{List of Presentations}{presentation}
+\mysection{Research Statement}{research}
+%\mysection{Research Plan}{plan}
+%\mysection{Reference Letters}{ref}
+
+%\newpage
+%\setcounter{page}{1}
+%\includepdf[pages=-,offset=0.5cm 0cm]{../suppl/1-s2.0-S0370269320303749-main.pdf}
+
+
+\end{document}
+

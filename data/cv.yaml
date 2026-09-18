@@ -985,7 +985,7 @@
 - id: cv-ptep-editors-choice
   type: cv
   kind: award
-  title_en: PTEP Editors’ Choice Award
+  title_en: Prog. Theor. Exp. Phys. Editors’ Choice Award
   title_ja: null
   start_date: 2023-03
   end_date: 2023-03
@@ -1024,6 +1024,7 @@
   researchmap_description_en: Picked up in JPS Hot Topics, https://doi.org/10.7566/JPSHT.3.010
   researchmap_media_title_en: Fractional Topological Charge Construction in a U(1) Lattice Gauge Theory Framework
   event_en: JPS Hot Topics
+  researchmap_title_en: PTEP Editors' Choice Award
 - id: cv-organizer-osaka-seminar-2022
   type: cv
   kind: activity
