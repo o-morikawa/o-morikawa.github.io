@@ -89,7 +89,7 @@
 - id: cv-referee-report-winding
   type: cv
   kind: activity
-  title_en: Referee Report on ``A discrete formulation for three-dimensional winding number,''
+  title_en: Referee Report on ``A discrete formulation for three-dimensional winding number,'' SciPost Physics Core 9, 026 (2026)
   title_ja: Referee Report on "A discrete formulation for three-dimensional winding number," SciPost Phys. Core 9, 026 (2026)
   start_date: '2026-04-09'
   end_date: '2026-04-09'
@@ -108,6 +108,8 @@
   researchmap_roles:
   - peer_review
   url: https://doi.org/10.21468/SciPost.Report.13242
+  doi: 10.21468/SciPost.Report.13242
+  doi_url: https://doi.org/10.21468/SciPost.Report.13242
 - id: cv-science-lab-2026a
   type: cv
   kind: teaching

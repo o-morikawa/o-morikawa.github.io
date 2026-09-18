@@ -281,12 +281,18 @@ def parse_generic_section(lines: list[str], kind: str):
         text = e['text']
         headline = e.get('headline') or text
         title, org = split_title_org(headline, kind)
+        activity_doi = None
         if kind == 'activity' and re.match(r'Referee Report on\b', title, re.I):
-            # The journal citation and DOI share the same TeX table row, but are
-            # metadata rather than part of the activity title.
-            qm = re.match(r'^(Referee Report on\s+(?:``|“|")?.*?(?:\'\'|”|"))', headline)
-            if qm:
-                title = qm.group(1).strip(' ,.;')
+            # Keep the bibliographic citation in the visible activity title.  Only
+            # the DOI identifier itself is split into structured metadata; otherwise
+            # the HTML would stop after the quoted manuscript title and hide the
+            # journal/citation information present in the author's CV.
+            dm = re.search(r'(?:DOI:\s*)?(10\.\d{4,9}/\S+)\s*$', headline, re.I)
+            if dm:
+                activity_doi = dm.group(1).rstrip('.,;')
+                title = headline[:dm.start()].rstrip(' ,.;')
+            else:
+                title = headline.strip(' ,.;')
         identity_text = title if not org else f'{title} {org}'
         rec = {
             'id': make_id(kind, e['start_date'], identity_text),
@@ -315,6 +321,9 @@ def parse_generic_section(lines: list[str], kind: str):
             rm = re.search(r'Research Title:\s*(?:``|“|")?(.*?)(?:\'\'|”|")?$', text, re.I)
             if rm:
                 rec['description_en'] = rm.group(1).strip(' ,.;\'"')
+        if activity_doi:
+            rec['doi'] = activity_doi
+            rec['doi_url'] = 'https://doi.org/' + activity_doi
         records.append(rec)
     return records
 
@@ -520,7 +529,7 @@ def merge_tex_record(target, inc):
     if protected_date and (target.get('start_date')!=inc.get('start_date') or target.get('end_date')!=inc.get('end_date')):
         target['latex_start_date']=inc.get('start_date')
         target['latex_end_date']=inc.get('end_date')
-    managed={'title_en','organization_en','event_en','description_en','role','level_en','skills','degree','thesis_title_en','advisor','doi','hdl','grant_number','grant_numbers'}
+    managed={'title_en','organization_en','event_en','description_en','role','level_en','skills','degree','thesis_title_en','advisor','doi','doi_url','hdl','grant_number','grant_numbers'}
     for k in managed:
         v=inc.get(k)
         if v is None or v=='':
