@@ -189,10 +189,10 @@
       </p>
 
       <div class="actions">
-        <a id="thesis-link" class="button" href="#" hidden>
+        <a class="button" href="morikawa_thesis.pdf">
           修士論文 PDF
         </a>
-        <a id="abstract-link" class="button secondary" href="#" hidden>
+        <a class="button secondary" href="morikawa_abst.pdf">
           概要 PDF
         </a>
       </div>
@@ -201,9 +201,6 @@
         PDFの閲覧にはパスワードが必要です。
       </div>
 
-      <p id="pdf-status" class="status">
-        PDFへのリンクを確認しています……
-      </p>
     </section>
 
     <section class="card">
@@ -241,105 +238,5 @@
     </footer>
   </main>
 
-  <script>
-    /*
-      この index.html を
-      masterthesis_template/index.html
-      として配置することを想定しています。
-
-      同じフォルダ内の PDF を GitHub API から取得し、
-      ファイル名に "thesis" / "master" または
-      "abstract" / "abst" を含む PDF を自動的にリンクします。
-    */
-
-    const owner = "o-morikawa";
-    const repo = "o-morikawa.github.io";
-    const path = "masterthesis_template";
-    const apiUrl =
-      `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
-
-    const thesisLink = document.getElementById("thesis-link");
-    const abstractLink = document.getElementById("abstract-link");
-    const status = document.getElementById("pdf-status");
-
-    function choosePdf(files, patterns, excluded = []) {
-      return files.find((file) => {
-        const name = file.name.toLowerCase();
-        return (
-          patterns.some((pattern) => name.includes(pattern)) &&
-          !excluded.some((pattern) => name.includes(pattern))
-        );
-      });
-    }
-
-    fetch(apiUrl, {
-      headers: {
-        Accept: "application/vnd.github+json"
-      }
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`GitHub API: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((items) => {
-        const pdfs = items.filter(
-          (item) =>
-            item.type === "file" &&
-            item.name.toLowerCase().endsWith(".pdf")
-        );
-
-        let thesis = choosePdf(
-          pdfs,
-          ["thesis", "master", "ronbun"],
-          ["abstract", "abst"]
-        );
-
-        let abstractPdf = choosePdf(
-          pdfs,
-          ["abstract", "abst", "gaiyou", "summary"]
-        );
-
-        if (!thesis && pdfs.length >= 1) {
-          thesis = pdfs.find((pdf) => pdf !== abstractPdf) || pdfs[0];
-        }
-
-        if (!abstractPdf && pdfs.length >= 2) {
-          abstractPdf = pdfs.find((pdf) => pdf !== thesis);
-        }
-
-        let count = 0;
-
-        if (thesis) {
-          thesisLink.href = thesis.download_url || thesis.html_url;
-          thesisLink.hidden = false;
-          count += 1;
-        }
-
-        if (abstractPdf) {
-          abstractLink.href =
-            abstractPdf.download_url || abstractPdf.html_url;
-          abstractLink.hidden = false;
-          count += 1;
-        }
-
-        if (count === 0) {
-          throw new Error("PDF not found");
-        }
-
-        status.textContent =
-          count === 2
-            ? "修士論文・概要PDFへのリンクを読み込みました。"
-            : "PDFへのリンクを読み込みました。";
-      })
-      .catch(() => {
-        status.innerHTML =
-          'PDFを自動検出できませんでした。' +
-          '<a href="https://github.com/o-morikawa/o-morikawa.github.io/tree/main/masterthesis_template"' +
-          ' target="_blank" rel="noopener noreferrer">GitHub上のファイル一覧</a>' +
-          'から開いてください。';
-      });
-  </script>
 </body>
 </html>
