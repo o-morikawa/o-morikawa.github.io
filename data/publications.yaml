@@ -1576,6 +1576,23 @@
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+- id: Morikawa:2018masterthesis
+  type: publications
+  kind: thesis
+  status: thesis
+  authors:
+  - Okuto Morikawa
+  title: 2次元超対称Landau-Ginzburg模型における低エネルギー臨界現象の数値的研究
+  year: 2018
+  affiliation_period: Kyushu University
+  affiliation_basis: thesis institution/year
+  school: Kyushu U.
+  topics:
+  - Landau–Ginzburg model
+  - supersymmetry
+  - conformal field theory
+  title_ja: 2次元超対称Landau-Ginzburg模型における低エネルギー臨界現象の数値的研究
+  url: https://o-morikawa.github.io/masterthesis_template/
 - id: Makino:2017quz
   type: publications
   kind: proceedings
