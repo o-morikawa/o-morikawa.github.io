@@ -427,7 +427,7 @@
   end_date: 2027-03
   grant_number: null
   source: cv(1).tex
-  researchmap_id: '49716188'
+  researchmap_id: '49716219'
   researchmap_type: research_projects
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   project_title_ja: Gradient flow for solving the over-smearing problem of topological charge
@@ -436,7 +436,7 @@
   funding_organization_en: University of Tsukuba
   system_name_ja: 2025年度学際共同利用プログラム
   system_name_en: Multidisciplinary Cooperative Research Program 2025
-  role: principal_investigator
+  role: coinvestigator
   amount:
     total_cost: '3000000'
 - id: cv-riken-spdr
@@ -1225,5 +1225,41 @@
   event_ja: 日本物理学会誌
   researchmap_id: '42730164'
   researchmap_type: media_coverage
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  source: researchmap
+- id: cv-research-project-54897133
+  type: cv
+  kind: grant
+  title_en: Multidisciplinary Cooperative Research Program 2026
+  title_ja: 2026年度学際共同利用プログラム
+  project_title_en: Gradient flow for solving the over-smearing problem of topological charge
+  project_title_ja: Gradient flow for solving the over-smearing problem of topological charge
+  start_date: 2026-04
+  end_date: 2027-03
+  researchmap_id: '54897133'
+  researchmap_type: research_projects
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  source: researchmap
+  funding_organization_en: University of Tsukuba
+  funding_organization_ja: 筑波大学
+  role: coinvestigator
+  system_name_ja: 2026年度学際共同利用プログラム
+  system_name_en: Multidisciplinary Cooperative Research Program 2026
+- id: cv-research-interest-54757864
+  type: cv
+  kind: research_interest
+  title_en: Quantum resonance
+  title_ja: 量子共鳴
+  researchmap_id: '54757864'
+  researchmap_type: research_interests
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  source: researchmap
+- id: cv-research-interest-54757863
+  type: cv
+  kind: research_interest
+  title_en: Generalized symmetry
+  title_ja: 一般化対称性
+  researchmap_id: '54757863'
+  researchmap_type: research_interests
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   source: researchmap

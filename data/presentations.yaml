@@ -75,9 +75,9 @@
   presenter: Okuto Morikawa
   invited: false
   title_en: Complex scaling approach to quasinormal modes of Schwarzschild and Reissner–Nordstrom black holes
-  title_ja: null
+  title_ja: Complex scaling approach to quasinormal modes of Schwarzschild and Reissner-Nordstrom black holes
   event_en: 2026 Annual (81st) Meeting of the Physical Society of Japan
-  event_ja: null
+  event_ja: 日本物理学会第81回年次大会
   start_date: '2026-09-14'
   end_date: null
   year: 2026
@@ -93,6 +93,20 @@
   researchmap_url: https://researchmap.jp/o-morikawa/presentations/54946770
   legacy_ids:
   - presentation-2026-09-14-complex-scaling-approach-to-quasinormal-modes-of-schwarzschi
+  researchmap_title_en: Complex scaling approach to quasinormal modes of Schwarzschild and Reissner-Nordstrom black holes
+  presenters_en:
+  - Shoya Ogawa
+  - Takuya Hirose
+  - Okuto Morikawa
+  presenters_ja:
+  - 小川翔也
+  - 廣瀬拓哉
+  - 森川億人
+  researchmap_presentation_type: oral_presentation
+  slides_file: gakkai260914.pdf
+  slides_url: https://o-morikawa.github.io/slides/gakkai260914.pdf
+  slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai260914.pdf
+  researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54946770/attachment_file.pdf
 - id: presentation-2026-09-14-quasinormal-modes-and-continuum-response-of-de-sitter-black
   type: presentations
   kind: talk
