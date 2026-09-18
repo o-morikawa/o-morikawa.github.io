@@ -18,10 +18,14 @@
   researchmap_id: '53573359'
   researchmap_type: works
   researchmap_profile_url: https://researchmap.jp/o-morikawa
-  researchmap_title_en: 'CSMQNM.jl: skeleton for computing black-hole quasinormal-mode candidates with the complex scaling
-    method'
+  researchmap_title_en: 'CSMQNM.jl: skeleton for computing black-hole quasinormal-mode candidates with the complex scaling method'
   location_ja: GitHub
   location_en: GitHub
+  researchmap_refs:
+  - type: works
+    id: '53573359'
+    url: https://researchmap.jp/o-morikawa/works/53573359
+  researchmap_url: https://researchmap.jp/o-morikawa/works/53573359
 - id: software-autotortoise-jl
   type: software
   kind: repository
@@ -41,10 +45,14 @@
   researchmap_id: '53573347'
   researchmap_type: works
   researchmap_profile_url: https://researchmap.jp/o-morikawa
-  researchmap_title_en: 'AutoTortoise.jl: horizon-aware tortoise-coordinate construction for static spherically symmetric
-    black-hole metrics'
+  researchmap_title_en: 'AutoTortoise.jl: horizon-aware tortoise-coordinate construction for static spherically symmetric black-hole metrics'
   location_ja: GitHub
   location_en: GitHub
+  researchmap_refs:
+  - type: works
+    id: '53573347'
+    url: https://researchmap.jp/o-morikawa/works/53573347
+  researchmap_url: https://researchmap.jp/o-morikawa/works/53573347
 - id: software-wind3d
   type: software
   kind: repository
@@ -66,6 +74,11 @@
   researchmap_title_en: 'Wind3D: Discrete approximation to 3D winding number mapping T^3->U(N)'
   location_ja: GitHub
   location_en: GitHub
+  researchmap_refs:
+  - type: works
+    id: '48608031'
+    url: https://researchmap.jp/o-morikawa/works/48608031
+  researchmap_url: https://researchmap.jp/o-morikawa/works/48608031
 - id: software-highercup
   type: software
   kind: repository
@@ -88,6 +101,11 @@
   researchmap_title_en: 'HigherCup: Symbolic manipulation of Steenrod higher cups'
   location_ja: GitHub
   location_en: GitHub
+  researchmap_refs:
+  - type: works
+    id: '48860714'
+    url: https://researchmap.jp/o-morikawa/works/48860714
+  researchmap_url: https://researchmap.jp/o-morikawa/works/48860714
 - id: software-higherbfields-jl
   type: software
   kind: repository
@@ -110,6 +128,12 @@
   researchmap_title_en: 'HigherBfields.jl: Utilities of gauge fields coupled with higher-form gauge fields'
   location_ja: GitHub
   location_en: GitHub
+  researchmap_refs:
+  - type: works
+    id: '48608003'
+    url: https://researchmap.jp/o-morikawa/works/48608003
+  researchmap_url: https://researchmap.jp/o-morikawa/works/48608003
+  researchmap_description_en: Forked from akio-tomiya/Gaugefields.jl
 - id: software-gaugefields-upstream
   type: software
   kind: repository
@@ -149,6 +173,11 @@
   researchmap_title_en: 'Gaugefields.jl: Utilities of quantum theory of (higher-form) general gauge fields'
   location_ja: GitHub
   location_en: GitHub
+  researchmap_refs:
+  - type: works
+    id: '46889833'
+    url: https://researchmap.jp/o-morikawa/works/46889833
+  researchmap_url: https://researchmap.jp/o-morikawa/works/46889833
 - id: software-errorest-jl
   type: software
   kind: repository
@@ -170,6 +199,11 @@
   researchmap_title_en: 'ErrorEst.jl: Tools for julia programming of statistical analysis'
   location_ja: GitHub
   location_en: GitHub
+  researchmap_refs:
+  - type: works
+    id: '48860717'
+    url: https://researchmap.jp/o-morikawa/works/48860717
+  researchmap_url: https://researchmap.jp/o-morikawa/works/48860717
 - id: software-resummation
   type: software
   kind: repository
@@ -178,9 +212,7 @@
   title_en: Resummation
   title_ja: 'Resummation: Some resummation techniques based on perturbation theory'
   description_en: Mathematica codes for resummation techniques based on perturbation theory
-  description_ja: "This repository provides comparison between many resummation techniques based on perturbation theory:\n\
-    \n - Truncation of perturbation series\n - Borel resummation\n - Pade approximation\n - Borel-Pada resummation\n - Optimized\
-    \ perturbation theory\n - Oder dependent mapping and so on."
+  description_ja: "This repository provides comparison between many resummation techniques based on perturbation theory:\n\n - Truncation of perturbation series\n - Borel resummation\n - Pade approximation\n - Borel-Pada resummation\n - Optimized perturbation theory\n - Oder dependent mapping and so on."
   year: 2022
   url: https://github.com/o-morikawa/Resummation
   topics:
@@ -194,6 +226,12 @@
   researchmap_title_en: 'Resummation: Some resummation techniques based on perturbation theory'
   location_ja: GitHub
   location_en: GitHub
+  researchmap_refs:
+  - type: works
+    id: '46900948'
+    url: https://researchmap.jp/o-morikawa/works/46900948
+  researchmap_url: https://researchmap.jp/o-morikawa/works/46900948
+  researchmap_description_en: "This repository provides comparison between many resummation techniques based on perturbation theory:\n\n - Truncation of perturbation series\n - Borel resummation\n - Pade approximation\n - Borel-Pada resummation\n - Optimized perturbation theory\n - Oder dependent mapping and so on."
 - id: software-landauginzburg
   type: software
   kind: repository
@@ -219,3 +257,8 @@
   researchmap_title_en: 'LandauGinzburg: C++ codeset for simulation of N=2 Landau-Ginzburg model'
   location_ja: GitHub
   location_en: GitHub
+  researchmap_refs:
+  - type: works
+    id: '46889820'
+    url: https://researchmap.jp/o-morikawa/works/46889820
+  researchmap_url: https://researchmap.jp/o-morikawa/works/46889820

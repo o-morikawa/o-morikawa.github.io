@@ -17,10 +17,18 @@
     inspire: '1790648'
     researchmap: o-morikawa
     researchmap_internal: R000002168
+    erad: '41000334'
   urls:
     website: https://sites.google.com/view/o-morikawa
     orcid: https://orcid.org/0000-0002-0044-4491
     github: https://github.com/o-morikawa
     inspire: https://inspirehep.net/authors/1790648
     researchmap: https://researchmap.jp/o-morikawa
+    cv_pdf: https://o-morikawa.github.io/cv/cv_om.pdf
+    bibtex: https://o-morikawa.github.io/cv/ref_om.bib
   source: cv(1).tex + ResearchMap
+  researchmap_affiliation_en: Center for Interdisciplinary Theoretical and Mathematical Sciences (iTHEMS) RIKEN
+  researchmap_affiliation_ja: 特定国立研究開発法人理化学研究所 数理創造研究センター(iTHEMS)
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  cv_pdf: https://o-morikawa.github.io/cv/cv_om.pdf
+  bibtex: https://o-morikawa.github.io/cv/ref_om.bib

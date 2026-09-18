@@ -81,6 +81,14 @@
   - higher form symmetry
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: misc
+    id: '54839661'
+    url: https://researchmap.jp/o-morikawa/misc/54839661
+  researchmap_id: '54839661'
+  researchmap_type: misc
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/54839661
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Morikawa:2026nzp
   type: publications
   kind: paper
@@ -105,6 +113,14 @@
   - quantum resonance
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: misc
+    id: '54802091'
+    url: https://researchmap.jp/o-morikawa/misc/54802091
+  researchmap_id: '54802091'
+  researchmap_type: misc
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/54802091
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Morikawa:2026fzn
   type: publications
   kind: paper
@@ -132,6 +148,14 @@
   - scattering theory
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: misc
+    id: '54666291'
+    url: https://researchmap.jp/o-morikawa/misc/54666291
+  researchmap_id: '54666291'
+  researchmap_type: misc
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/54666291
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Watanabe:2026ymb
   type: publications
   kind: paper
@@ -161,6 +185,15 @@
   - lattice field theory
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: misc
+    id: '53947619'
+    url: https://researchmap.jp/o-morikawa/misc/53947619
+  researchmap_id: '53947619'
+  researchmap_type: misc
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/53947619
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_title_en: Numerical Hints for Dyon Condensation at $θ=2π$ via Wilson-'t Hooft Loops in $SU(2)$ Yang-Mills Theory
 - id: Ogawa:2026opj
   type: publications
   kind: paper
@@ -186,6 +219,14 @@
   - complex scaling method
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: misc
+    id: '53573333'
+    url: https://researchmap.jp/o-morikawa/misc/53573333
+  researchmap_id: '53573333'
+  researchmap_type: misc
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/53573333
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Ogawa:2026veu
   type: publications
   kind: paper
@@ -222,6 +263,13 @@
   volume: '2026'
   pages: no.XX, XX3BXX
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '53446645'
+    url: https://researchmap.jp/o-morikawa/published_papers/53446645
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/53446645
+  publication_name_ja: PTEP
+  researchmap_referee: true
 - id: Morikawa:2026wdx
   type: publications
   kind: proceedings
@@ -255,6 +303,13 @@
   researchmap_title_en: Direct numerical simulation of the 't Hooft partition function and (de)confining phases
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '52119934'
+    url: https://researchmap.jp/o-morikawa/published_papers/52119934
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/52119934
+  publication_name_ja: PoS
+  researchmap_referee: true
 - id: Morikawa:2025inx
   type: publications
   kind: paper
@@ -290,6 +345,13 @@
   title_ja: Geometric phase from encircling an exceptional point of a quantum resonance in the complex-scaling method
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '51968043'
+    url: https://researchmap.jp/o-morikawa/published_papers/51968043
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/51968043
+  publication_name_ja: PRA
+  researchmap_referee: true
 - id: Morikawa:2025ezl
   type: publications
   kind: paper
@@ -324,6 +386,13 @@
   title_ja: Exact WKB method for radial Schrödinger equation
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '51469253'
+    url: https://researchmap.jp/o-morikawa/published_papers/51469253
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/51469253
+  publication_name_ja: JPhysA
+  researchmap_referee: true
 - id: Onoda:2025yue
   type: publications
   kind: paper
@@ -361,6 +430,13 @@
   title_bibtex: Eigenstate Thermalization Hypothesis with projective representation
   bibtex_source: sources/ref_om.bib
   researchmap_title_en: Eigenstate Thermalization Hypothesis with projective representation
+  researchmap_refs:
+  - type: published_papers
+    id: '51050316'
+    url: https://researchmap.jp/o-morikawa/published_papers/51050316
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/51050316
+  publication_name_ja: JHEP
+  researchmap_referee: true
 - id: Morikawa:2025vvs
   type: publications
   kind: paper
@@ -394,6 +470,13 @@
   title_ja: On continuum and resonant spectra from exact WKB analysis
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '50855272'
+    url: https://researchmap.jp/o-morikawa/published_papers/50855272
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/50855272
+  publication_name_ja: JPhysA
+  researchmap_referee: true
 - id: Morikawa:2025xjq
   type: publications
   kind: paper
@@ -405,8 +488,7 @@
   year: 2025
   affiliation_period: RIKEN (iTHEMS)
   affiliation_basis: arXiv:2505.02301
-  title_bibtex: Unified exact WKB framework for resonance -- Zel'dovich/complex-scaling regularization and rigged Hilbert
-    space
+  title_bibtex: Unified exact WKB framework for resonance -- Zel'dovich/complex-scaling regularization and rigged Hilbert space
   arxiv: '2505.02301'
   arxiv_url: https://arxiv.org/abs/2505.02301
   arxiv_date: 2025-05
@@ -428,10 +510,16 @@
   researchmap_type: published_papers
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   title_ja: Unified exact WKB framework for resonance -- Zel'dovich/complex-scaling regularization and rigged Hilbert space
-  researchmap_title_en: Unified exact WKB framework for resonance -- Zel'dovich/complex-scaling regularization and rigged
-    Hilbert space
+  researchmap_title_en: Unified exact WKB framework for resonance -- Zel'dovich/complex-scaling regularization and rigged Hilbert space
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '50077347'
+    url: https://researchmap.jp/o-morikawa/published_papers/50077347
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/50077347
+  publication_name_ja: JHEP
+  researchmap_referee: true
 - id: Morikawa:2025grx
   type: publications
   kind: paper
@@ -466,6 +554,13 @@
   title_ja: Nonperturbative Formulation of Resonances in Quantum Mechanics Based on Exact WKB Method
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '49541684'
+    url: https://researchmap.jp/o-morikawa/published_papers/49541684
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/49541684
+  publication_name_ja: PTEP
+  researchmap_referee: true
 - id: Morikawa:2025ldq
   type: publications
   kind: paper
@@ -501,6 +596,13 @@
   researchmap_title_en: Direct Monte Carlo computation of the 't~Hooft partition function
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '48921358'
+    url: https://researchmap.jp/o-morikawa/published_papers/48921358
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/48921358
+  publication_name_ja: PTEP
+  researchmap_referee: true
 - id: Morikawa:2025ieh
   type: publications
   kind: proceedings
@@ -536,6 +638,13 @@
   title_ja: Novel Lattice Formulation of 2D Chiral Gauge Theory via Bosonization
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '49064987'
+    url: https://researchmap.jp/o-morikawa/published_papers/49064987
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/49064987
+  publication_name_ja: PoS
+  researchmap_referee: true
 - id: Abe:2025bvr
   type: publications
   kind: proceedings
@@ -547,8 +656,7 @@
   year: 2025
   affiliation_period: RIKEN (iTHEMS)
   affiliation_basis: arXiv:2501.11438
-  title_bibtex: Numerical simulation of fractional topological charge in $SU(N)$ gauge theory coupled with $\mathbb{Z}_N$
-    2-form gauge fields
+  title_bibtex: Numerical simulation of fractional topological charge in $SU(N)$ gauge theory coupled with $\mathbb{Z}_N$ 2-form gauge fields
   arxiv: '2501.11438'
   arxiv_url: https://arxiv.org/abs/2501.11438
   arxiv_date: 2025-01
@@ -569,12 +677,17 @@
   researchmap_id: '48985225'
   researchmap_type: published_papers
   researchmap_profile_url: https://researchmap.jp/o-morikawa
-  title_ja: Numerical simulation of fractional topological charge in $SU(N)$ gauge theory coupled with $\mathbb{Z}_N$ 2-form
-    gauge fields
-  researchmap_title_en: Numerical simulation of fractional topological charge in $SU(N)$ gauge theory coupled with $\mathbb{Z}_N$
-    2-form gauge fields
+  title_ja: Numerical simulation of fractional topological charge in $SU(N)$ gauge theory coupled with $\mathbb{Z}_N$ 2-form gauge fields
+  researchmap_title_en: Numerical simulation of fractional topological charge in $SU(N)$ gauge theory coupled with $\mathbb{Z}_N$ 2-form gauge fields
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '48985225'
+    url: https://researchmap.jp/o-morikawa/published_papers/48985225
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/48985225
+  publication_name_ja: PoS
+  researchmap_referee: true
 - id: Abe:2024fpt
   type: publications
   kind: paper
@@ -611,6 +724,13 @@
   researchmap_title_en: Monte Carlo simulation of the $SU(2)/\mathbb{Z}_2$ Yang--Mills theory
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '48860673'
+    url: https://researchmap.jp/o-morikawa/published_papers/48860673
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/48860673
+  publication_name_ja: PTEP
+  researchmap_referee: true
 - id: Morikawa:2024ucd
   type: publications
   kind: paper
@@ -635,6 +755,14 @@
   - lattice field theory
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: misc
+    id: '48619065'
+    url: https://researchmap.jp/o-morikawa/misc/48619065
+  researchmap_id: '48619065'
+  researchmap_type: misc
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/48619065
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
 - id: Morikawa:2024nrp
   type: publications
   kind: proceedings
@@ -673,6 +801,13 @@
   researchmap_title_en: Lattice study of RG fixed point based on gradient flow in $3$D $O(N)$ sigma model
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '48301049'
+    url: https://researchmap.jp/o-morikawa/published_papers/48301049
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/48301049
+  publication_name_ja: PoS
+  researchmap_referee: true
 - id: Morikawa:2024zyd
   type: publications
   kind: paper
@@ -710,6 +845,12 @@
   researchmap_title_en: Yet another lattice formulation of 2D $U(1)$ chiral gauge theory via bosonization
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '45747194'
+    url: https://researchmap.jp/o-morikawa/published_papers/45747194
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/45747194
+  researchmap_referee: true
 - id: Honda:2024yte
   type: publications
   kind: paper
@@ -747,6 +888,12 @@
   source: publication.tex
   title_bibtex: Lattice Realization of the Axial U(1) Noninvertible Symmetry
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '44384111'
+    url: https://researchmap.jp/o-morikawa/published_papers/44384111
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/44384111
+  researchmap_referee: true
 - id: Abe:2023atv
   type: publications
   kind: proceedings
@@ -784,6 +931,12 @@
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '44382663'
+    url: https://researchmap.jp/o-morikawa/published_papers/44382663
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/44382663
+  researchmap_referee: true
 - id: publication-2024-erratum-to-higher-group-structure-in-lattice-abelian-gauge-theory-under
   type: publications
   kind: erratum
@@ -807,6 +960,13 @@
   researchmap_id: '44422449'
   researchmap_type: published_papers
   researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_refs:
+  - type: published_papers
+    id: '44422449'
+    url: https://researchmap.jp/o-morikawa/published_papers/44422449
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/44422449
+  number: '1'
+  researchmap_referee: true
 - id: Abe:2023tuf
   type: publications
   kind: proceedings
@@ -843,6 +1003,12 @@
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '43666587'
+    url: https://researchmap.jp/o-morikawa/published_papers/43666587
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/43666587
+  researchmap_referee: true
 - id: Abe:2023ubg
   type: publications
   kind: paper
@@ -878,6 +1044,12 @@
   researchmap_title_en: Note on lattice description of generalized symmetries in $SU(N)/\mathbb{Z}_N$ gauge theories
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '42127688'
+    url: https://researchmap.jp/o-morikawa/published_papers/42127688
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/42127688
+  researchmap_referee: true
 - id: Abe:2023uan
   type: publications
   kind: paper
@@ -914,6 +1086,12 @@
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '42175505'
+    url: https://researchmap.jp/o-morikawa/published_papers/42175505
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/42175505
+  researchmap_referee: true
 - id: Abe:2023ncy
   type: publications
   kind: paper
@@ -952,6 +1130,13 @@
   researchmap_title_en: Topology of $SU(N)$ lattice gauge theories coupled with $\mathbb{Z}_N$ $2$-form gauge fields
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '41792537'
+    url: https://researchmap.jp/o-morikawa/published_papers/41792537
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/41792537
+  number: '8'
+  researchmap_referee: true
 - id: Kan:2023yhz
   type: publications
   kind: paper
@@ -987,6 +1172,12 @@
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '41569106'
+    url: https://researchmap.jp/o-morikawa/published_papers/41569106
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/41569106
+  researchmap_referee: true
 - id: Morikawa:2022liz
   type: publications
   kind: paper
@@ -1022,6 +1213,12 @@
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '40561220'
+    url: https://researchmap.jp/o-morikawa/published_papers/40561220
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/40561220
+  researchmap_referee: true
 - id: Abe:2022nfq
   type: publications
   kind: paper
@@ -1055,6 +1252,12 @@
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '41434852'
+    url: https://researchmap.jp/o-morikawa/published_papers/41434852
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/41434852
+  researchmap_referee: true
 - id: Morikawa:2021lmb
   type: publications
   kind: thesis
@@ -1083,35 +1286,15 @@
   doi_url: https://doi.org/10.13140/RG.2.2.36216.42246
   hdl: 2324/4474929
   bibtex_source: sources/ref_om.bib
-- id: Makino:2021edc
-  type: publications
-  kind: erratum
-  status: published
-  authors:
-  - Hiroki Makino
-  - Okuto Morikawa
-  - Hiroshi Suzuki
-  title: Gradient flow and the Wilsonian renormalization group flow
-  year: 2021
-  affiliation_period: Kyushu University
-  affiliation_basis: erratum of arXiv:1802.07897
-  doi: 10.1093/ptep/ptab096
-  doi_url: https://doi.org/10.1093/ptep/ptab096
-  journal: PTEP
-  volume: '2021'
-  number: '9'
-  pages: 099201
-  inspire_bibkey: Makino:2021edc
-  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMakino%3A2021edc
-  topics:
-  - gradient flow
-  - renormalization group
-  - Wilsonian renormalization group
-  researchmap_id: '36298730'
-  researchmap_type: published_papers
-  researchmap_profile_url: https://researchmap.jp/o-morikawa
-  source: publication.tex
-  bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '32980962'
+    url: https://researchmap.jp/o-morikawa/published_papers/32980962
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/32980962
+  researchmap_referee: true
+  urls:
+    handle: https://hdl.handle.net/2324/4474929
+    pdf: https://o-morikawa.github.io/cv/sci1362.pdf
 - id: Ashie:2020bvw
   type: publications
   kind: paper
@@ -1149,6 +1332,12 @@
   researchmap_title_en: More on the infrared renormalon in $SU(N)$ QCD(adj.) on $\mathbb{R}^3\times S^1$
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '27324421'
+    url: https://researchmap.jp/o-morikawa/published_papers/27324421
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/27324421
+  researchmap_referee: true
 - id: Morikawa:2020agf
   type: publications
   kind: paper
@@ -1180,6 +1369,12 @@
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '28038510'
+    url: https://researchmap.jp/o-morikawa/published_papers/28038510
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/28038510
+  researchmap_referee: true
 - id: Ishikawa:2020eht
   type: publications
   kind: paper
@@ -1213,10 +1408,15 @@
   researchmap_id: '27686322'
   researchmap_type: published_papers
   researchmap_profile_url: https://researchmap.jp/o-morikawa
-  researchmap_title_en: Vacuum energy of the supersymmetric $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$ in the $1/N$
-    expansion
+  researchmap_title_en: Vacuum energy of the supersymmetric $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$ in the $1/N$ expansion
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '27686322'
+    url: https://researchmap.jp/o-morikawa/published_papers/27686322
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/27686322
+  researchmap_referee: true
 - id: Ishikawa:2019oga
   type: publications
   kind: paper
@@ -1253,6 +1453,12 @@
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018455'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018455
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018455
+  researchmap_referee: true
 - id: Ashie:2019cmy
   type: publications
   kind: paper
@@ -1291,6 +1497,12 @@
   researchmap_title_en: Infrared renormalon in $SU(N)$ QCD(adj.) on $\mathbb{R}^3\times S^1$
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018454'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018454
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018454
+  researchmap_referee: true
 - id: Morikawa:2019aza
   type: publications
   kind: proceedings
@@ -1325,6 +1537,12 @@
   researchmap_title_en: Numerical study of ADE-type $\mathcal{N}=2$ Landau--Ginzburg models
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018521'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018521
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018521
+  researchmap_referee: true
 - id: Ishikawa:2019tnw
   type: publications
   kind: paper
@@ -1365,6 +1583,12 @@
   researchmap_title_en: Infrared renormalon in the supersymmetric $\mathbb{C}P^{N-1}$ model on $\mathbb{R}\times S^1$
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018453'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018453
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018453
+  researchmap_referee: true
 - id: Morikawa:2019cql
   type: publications
   kind: paper
@@ -1400,6 +1624,12 @@
   researchmap_title_en: Continuum limit in numerical simulations of the $\mathcal{N}=2$ Landau--Ginzburg model
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018452'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018452
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018452
+  researchmap_referee: true
 - id: Morikawa:2018zys
   type: publications
   kind: paper
@@ -1434,6 +1664,12 @@
   researchmap_title_en: Numerical study of the $\mathcal{N}=2$ Landau--Ginzburg model with two superfields
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018451'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018451
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018451
+  researchmap_referee: true
 - id: Kasai:2018koz
   type: publications
   kind: paper
@@ -1471,6 +1707,12 @@
   researchmap_title_en: Gradient flow representation of the four-dimensional $\mathcal{N}=2$ super Yang--Mills supercurrent
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018450'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018450
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018450
+  researchmap_referee: true
 - id: Morikawa:2018ops
   type: publications
   kind: paper
@@ -1507,6 +1749,12 @@
   researchmap_title_en: Numerical study of the $\mathcal{N}=2$ Landau--Ginzburg model
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018449'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018449
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018449
+  researchmap_referee: true
 - id: Morikawa:2018fek
   type: publications
   kind: paper
@@ -1541,6 +1789,51 @@
   researchmap_title_en: Axial $U(1)$ anomaly in a gravitational field via the gradient flow
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018448'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018448
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018448
+  researchmap_referee: true
+- id: Makino:2021edc
+  type: publications
+  kind: erratum
+  status: published
+  authors:
+  - Hiroki Makino
+  - Okuto Morikawa
+  - Hiroshi Suzuki
+  title: Gradient flow and the Wilsonian renormalization group flow
+  year: 2018
+  affiliation_period: Kyushu University
+  affiliation_basis: erratum of arXiv:1802.07897
+  doi: 10.1093/ptep/ptab096
+  doi_url: https://doi.org/10.1093/ptep/ptab096
+  journal: PTEP
+  volume: '2021'
+  number: '9'
+  pages: 099201
+  inspire_bibkey: Makino:2021edc
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMakino%3A2021edc
+  topics:
+  - gradient flow
+  - renormalization group
+  - Wilsonian renormalization group
+  researchmap_id: '36298730'
+  researchmap_type: published_papers
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  source: publication.tex
+  bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '36298730'
+    url: https://researchmap.jp/o-morikawa/published_papers/36298730
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/36298730
+  arxiv: '1802.07897'
+  arxiv_url: https://arxiv.org/abs/1802.07897
+  researchmap_referee: true
+  arxiv_date: 2018-02
+  arxiv_class: hep-th
 - id: Makino:2018rys
   type: publications
   kind: paper
@@ -1576,6 +1869,12 @@
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018445'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018445
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018445
+  researchmap_referee: true
 - id: Morikawa:2018masterthesis
   type: publications
   kind: thesis
@@ -1627,6 +1926,12 @@
   researchmap_title_en: One-loop perturbative coupling of $A$ and $A_\star$ through the chiral overlap operator
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018520'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018520
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018520
+  researchmap_referee: true
 - id: Makino:2017pbq
   type: publications
   kind: paper
@@ -1662,6 +1967,12 @@
   researchmap_title_en: One-loop perturbative coupling of $A$ and $A_\star$ through the chiral overlap operator
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018447'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018447
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018447
+  researchmap_referee: true
 - id: Makino:2016auf
   type: publications
   kind: paper
@@ -1695,3 +2006,9 @@
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   source: publication.tex
   bibtex_source: sources/ref_om.bib
+  researchmap_refs:
+  - type: published_papers
+    id: '26018446'
+    url: https://researchmap.jp/o-morikawa/published_papers/26018446
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/26018446
+  researchmap_referee: true

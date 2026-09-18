@@ -56,6 +56,15 @@
   - quantum field theory
   - nonperturbative methods
   source: publication.tex
+  researchmap_refs:
+  - type: published_papers
+    id: '53043171'
+    url: https://researchmap.jp/o-morikawa/published_papers/53043171
+  researchmap_id: '53043171'
+  researchmap_type: published_papers
+  researchmap_url: https://researchmap.jp/o-morikawa/published_papers/53043171
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  researchmap_referee: true
 - id: jps-abstract-2025-19aek201-10
   type: publications
   kind: meeting_abstract
@@ -79,6 +88,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.19aEK201-10
+  researchmap_refs:
+  - type: misc
+    id: '51128062'
+    url: https://researchmap.jp/o-morikawa/misc/51128062
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/51128062
 - id: jps-abstract-2025-18as1-2
   type: publications
   kind: meeting_abstract
@@ -102,6 +116,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.18aS1-2
+  researchmap_refs:
+  - type: misc
+    id: '49594061'
+    url: https://researchmap.jp/o-morikawa/misc/49594061
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/49594061
 - id: jps-abstract-2025-16ask310-10
   type: publications
   kind: meeting_abstract
@@ -126,6 +145,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.16aSK310-10
+  researchmap_refs:
+  - type: misc
+    id: '51128054'
+    url: https://researchmap.jp/o-morikawa/misc/51128054
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/51128054
 - id: jps-abstract-2025-16aek201-1
   type: publications
   kind: meeting_abstract
@@ -152,6 +176,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.16aEK201-9
+  researchmap_refs:
+  - type: misc
+    id: '51128046'
+    url: https://researchmap.jp/o-morikawa/misc/51128046
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/51128046
 - id: jps-abstract-2024-18pwb101-16
   type: publications
   kind: meeting_abstract
@@ -176,6 +205,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.18pWB101-16
+  researchmap_refs:
+  - type: misc
+    id: '47845847'
+    url: https://researchmap.jp/o-morikawa/misc/47845847
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/47845847
 - id: jps-abstract-2024-18as1-8
   type: publications
   kind: meeting_abstract
@@ -199,6 +233,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.18aS1-8
+  researchmap_refs:
+  - type: misc
+    id: '45850272'
+    url: https://researchmap.jp/o-morikawa/misc/45850272
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/45850272
 - id: jps-abstract-2024-16pwb102-6
   type: publications
   kind: meeting_abstract
@@ -225,6 +264,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.16pWB102-6
+  researchmap_refs:
+  - type: misc
+    id: '47869260'
+    url: https://researchmap.jp/o-morikawa/misc/47869260
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/47869260
 - id: jps-abstract-2023-16ara23-9
   type: publications
   kind: meeting_abstract
@@ -253,6 +297,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.16aRA23-9
+  researchmap_refs:
+  - type: misc
+    id: '43502704'
+    url: https://researchmap.jp/o-morikawa/misc/43502704
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/43502704
 - id: jps-abstract-2023-16ara23-8
   type: publications
   kind: meeting_abstract
@@ -280,6 +329,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.16aRA23-8
+  researchmap_refs:
+  - type: misc
+    id: '43502699'
+    url: https://researchmap.jp/o-morikawa/misc/43502699
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/43502699
 - id: jps-abstract-2023-16ara23-7
   type: publications
   kind: meeting_abstract
@@ -308,6 +362,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.16aRA23-7
+  researchmap_refs:
+  - type: misc
+    id: '43502686'
+    url: https://researchmap.jp/o-morikawa/misc/43502686
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/43502686
 - id: jps-abstract-2022-6pa132-12
   type: publications
   kind: meeting_abstract
@@ -334,6 +393,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.6pA132-12
+  researchmap_refs:
+  - type: misc
+    id: '42736117'
+    url: https://researchmap.jp/o-morikawa/misc/42736117
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/42736117
 - id: jps-abstract-2022-15pa132-10
   type: publications
   kind: meeting_abstract
@@ -360,6 +424,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.15pA132-10
+  researchmap_refs:
+  - type: misc
+    id: '42736103'
+    url: https://researchmap.jp/o-morikawa/misc/42736103
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/42736103
 - id: jps-abstract-2020-14psa-2
   type: publications
   kind: meeting_abstract
@@ -384,6 +453,11 @@
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.14pSA-2
+  researchmap_refs:
+  - type: misc
+    id: '42736059'
+    url: https://researchmap.jp/o-morikawa/misc/42736059
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/42736059
 - id: jps-abstract-2019-18as31-1
   type: publications
   kind: meeting_abstract
@@ -407,8 +481,12 @@
   researchmap_id: '42736016'
   researchmap_type: misc
   researchmap_profile_url: https://researchmap.jp/o-morikawa
-  researchmap_title_en: Continuum extrapolation and precision measurement of the scaling dimension in the N=2 Landau-Ginzburg
-    model
+  researchmap_title_en: Continuum extrapolation and precision measurement of the scaling dimension in the N=2 Landau-Ginzburg model
   publication_name_ja: 日本物理学会講演概要集
   publication_name_en: Meeting Abstracts of the Physical Society of Japan
   starting_page: ROMBUNNO.18aS31-1
+  researchmap_refs:
+  - type: misc
+    id: '42736016'
+    url: https://researchmap.jp/o-morikawa/misc/42736016
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/42736016

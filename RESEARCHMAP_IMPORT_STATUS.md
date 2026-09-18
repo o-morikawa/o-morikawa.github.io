@@ -1,18 +1,44 @@
 # ResearchMap import status
 
-`sources/rm_researchers.jsonl` is readable and has been imported. The bundled export was produced before the September 2026 JPS records.
+`sources/rm_researchers.jsonl` is readable and is merged using complete non-destructive upsert semantics.
 
-The export contains structured bilingual fields for career history, education, awards, research projects, teaching, memberships, presentations, works/software, academic contributions, social contributions, media coverage, research interests and related records.
+Bundled ResearchMap source counts:
+
+- research experience: 7
+- education: 4
+- awards: 7
+- research projects: 9
+- teaching experience: 6
+- association memberships: 2
+- committee memberships: 3
+- academic contributions: 14
+- social contributions: 3
+- media coverage: 3
+- research interests: 6
+- research areas: 1
+- presentations: 76
+- published papers: 43
+- misc: 20
+- software/works: 9
+- others: 5
+
+Current merged state:
+
+- presentations: 113 total; 76 ResearchMap-linked; 64 exact slide links from `dataset.dataset_name`
+- scholarly publications: 53 total; 48 have ResearchMap provenance (`published_papers` and/or `misc`)
+- other publications: 17 total; 15 have ResearchMap provenance
+- software: 10 total; 9 have ResearchMap provenance
+- CV: 101 total; 69 have at least one ResearchMap reference
 
 Merge policy:
 
-- existing English CV/LaTeX wording remains the canonical English display value when already present;
-- ResearchMap Japanese source values populate `*_ja`;
-- differing ResearchMap English text is retained separately as `researchmap_*_en` where appropriate;
-- ResearchMap IDs and provenance are retained on matched records;
-- records absent from ResearchMap, notably collaborator talks, remain untouched;
-- no Japanese title/event is fabricated when the ResearchMap export has no corresponding record.
+- match -> enrich/update ResearchMap-owned metadata;
+- no match -> add a source-native ResearchMap record;
+- local/TeX-only records are retained;
+- author-supplied English wording remains canonical where present;
+- ResearchMap Japanese values populate `*_ja`;
+- materially different ResearchMap English is stored separately;
+- multiple ResearchMap source categories can coexist through `researchmap_refs`;
+- no source omission triggers deletion.
 
-Presentation matching result: 75 / 110 database presentation records matched to ResearchMap, and 63 matched records carry a ResearchMap `dataset_name`, which is used as the exact slide filename.
-
-Current publication matching after the TeX-first sync: 42 / 49 scholarly publication records have ResearchMap `published_papers` provenance. TeX-only/provisional records do not require a ResearchMap match.
+Notable v0.1.2 additions from the current ResearchMap export include the high-school education record, the 2025 University of Tsukuba multidisciplinary cooperative research project, and two dated MathSciNet review activities. The 2026 and 2021 Particle Physics Medal records are date-disambiguated and linked to their correct distinct ResearchMap award IDs.

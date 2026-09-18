@@ -67,12 +67,12 @@ input,select{width:100%;font:inherit;padding:.68rem .78rem;border:1px solid #888
 function $(x){return document.getElementById(x)}
 const data=JSON.parse($('database').textContent),q=$('q'),type=$('type'),kind=$('kind'),lang=$('lang'),count=$('count'),list=$('list');
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const LABELS={website:'Website',orcid:'ORCID',github:'GitHub',inspire:'INSPIRE',researchmap:'researchmap',kaken:'KAKEN',award:'Award',jps_hot_topics:'JPS Hot Topics',jps_butsuri:'JPS BUTSURI'};
+const LABELS={website:'Website',orcid:'ORCID',github:'GitHub',inspire:'INSPIRE',researchmap:'researchmap',cv_pdf:'CV (PDF)',bibtex:'BibTeX',handle:'Handle',pdf:'PDF',media:'Media',kaken:'KAKEN',award:'Award',jps_hot_topics:'JPS Hot Topics',jps_butsuri:'JPS BUTSURI'};
 const pretty=v=>LABELS[v]||String(v||'').replace(/[-_]+/g,' ').split(' ').map(w=>w?w[0].toUpperCase()+w.slice(1):w).join(' ');
 function flatten(v,o=[]){if(v==null)return o;if(Array.isArray(v))v.forEach(x=>flatten(x,o));else if(typeof v==='object')Object.values(v).forEach(x=>flatten(x,o));else o.push(String(v));return o}
 function titleBlock(r){let en=r.title_en||r.title||'',ja=r.title_ja||'';if(lang.value==='en')return `<div class="title">${esc(en||ja)}</div>`;if(lang.value==='ja')return `<div class="title">${esc(ja||en)}</div>`;return `<div class="title">${esc(en||ja)}</div>${ja&&ja!==en?`<div class="jp">${esc(ja)}</div>`:''}`}
 function bilingual(en,ja){if(lang.value==='en')return en||ja||'';if(lang.value==='ja')return ja||en||'';return [en,ja&&ja!==en?ja:null].filter(Boolean).join(' / ')}
-function links(r){let a=[];for(const [u,l] of [[r.slides_url,'Slides'],[r.researchmap_url,'ResearchMap'],[r.arxiv_url,r.arxiv?'arXiv:'+r.arxiv:'arXiv'],[r.doi_url,'DOI'],[r.inspire_url,'INSPIRE'],[r.url,'link']])if(u)a.push(`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(l)}</a>`);if(r.urls)for(const [k,u] of Object.entries(r.urls))if(u)a.push(`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(pretty(k))}</a>`);return a.join(' · ')}
+function links(r){let a=[];for(const [u,l] of [[r.slides_url,'Slides'],[r.researchmap_url,'ResearchMap'],[r.arxiv_url,r.arxiv?'arXiv:'+r.arxiv:'arXiv'],[r.doi_url,'DOI'],[r.inspire_url,'INSPIRE'],[r.url,'link']])if(u)a.push(`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(l)}</a>`);if(r.urls)for(const [k,u] of Object.entries(r.urls))if(u){const dl=k==='bibtex'?' download':'';a.push(`<a href="${esc(u)}" target="_blank" rel="noopener"${dl}>${esc(pretty(k))}</a>`)}return a.join(' · ')}
 function render(r){
  const date=r.start_date||r.arxiv_date||r.year||'';const meta=[date,r.affiliation_period,r.kind,r.status].filter(Boolean).map(esc).join(' · ');let body='';
  if(r.type==='profile'){

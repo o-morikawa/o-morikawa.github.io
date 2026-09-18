@@ -56,7 +56,7 @@
   event_en: 2026 Annual (81st) Meeting of the Physical Society of Japan
   event_ja: null
   start_date: '2026-09-16'
-  end_date: '2026-09-17'
+  end_date: null
   year: 2026
   affiliation_period: RIKEN (iTHEMS)
   topics:
@@ -66,8 +66,6 @@
   legacy_ids:
   - presentation-2026-09-14-gradient-flow-actions-integerness-and-gluonic-fermionic-topo
   date_note: Corrected by author on 2026-09-15.
-  latex_start_date: '2026-09-16'
-  latex_end_date: null
 - id: researchmap:presentations:54946770
   type: presentations
   kind: talk
@@ -107,6 +105,10 @@
   slides_url: https://o-morikawa.github.io/slides/gakkai260914.pdf
   slides_repo_url: https://github.com/o-morikawa/o-morikawa.github.io/blob/main/slides/gakkai260914.pdf
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54946770/attachment_file.pdf
+  researchmap_refs:
+  - type: presentations
+    id: '54946770'
+    url: https://researchmap.jp/o-morikawa/presentations/54946770
 - id: presentation-2026-09-14-quasinormal-modes-and-continuum-response-of-de-sitter-black
   type: presentations
   kind: talk
@@ -161,6 +163,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54670934/attachment_file.pdf
   legacy_ids:
   - presentation-2026-08-18-complex-scaling-approach-to-black-hole-quasinormal-modes-and
+  researchmap_refs:
+  - type: presentations
+    id: '54670934'
+    url: https://researchmap.jp/o-morikawa/presentations/54670934
 - id: researchmap:presentations:54511473
   type: presentations
   kind: talk
@@ -207,6 +213,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54511473/attachment_file.pdf
   legacy_ids:
   - presentation-2026-07-29-dyon-condensation-at-theta-2pi-from-wilson-t-hooft-loops-in
+  researchmap_refs:
+  - type: presentations
+    id: '54511473'
+    url: https://researchmap.jp/o-morikawa/presentations/54511473
 - id: presentation-2026-07-29-gradient-flow-actions-integerness-and-gluonic-fermionic-topo
   type: presentations
   kind: talk
@@ -257,6 +267,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54433010/attachment_file.pdf
   legacy_ids:
   - presentation-2026-07-20-towards-a-nonperturbative-formulation-of-non-hermitian-quant
+  researchmap_refs:
+  - type: presentations
+    id: '54433010'
+    url: https://researchmap.jp/o-morikawa/presentations/54433010
 - id: researchmap:presentations:54312459
   type: presentations
   kind: talk
@@ -294,6 +308,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/54312459/attachment_file.pdf
   legacy_ids:
   - presentation-2026-07-02-lattice-2d-u-1-chiral-gauge-theory-and-magnetically-charged
+  researchmap_refs:
+  - type: presentations
+    id: '54312459'
+    url: https://researchmap.jp/o-morikawa/presentations/54312459
 - id: presentation-2026-03-26-t-hooft-loop-in-su-2-yang-mills-theory-revisited
   type: presentations
   kind: talk
@@ -350,6 +368,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/53028761/attachment_file.pdf
   legacy_ids:
   - presentation-2026-03-23-geometric-phase-of-exceptional-point-as-quantum-resonance-in
+  researchmap_refs:
+  - type: presentations
+    id: '53028761'
+    url: https://researchmap.jp/o-morikawa/presentations/53028761
 - id: researchmap:presentations:53028747
   type: presentations
   kind: talk
@@ -384,6 +406,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/53028747/attachment_file.pdf
   legacy_ids:
   - presentation-2026-03-23-complex-analytic-structure-and-resurgence-in-the-radial-schr
+  researchmap_refs:
+  - type: presentations
+    id: '53028747'
+    url: https://researchmap.jp/o-morikawa/presentations/53028747
 - id: researchmap:presentations:52960528
   type: presentations
   kind: seminar
@@ -416,16 +442,18 @@
   - 森川億人
   legacy_ids:
   - presentation-2026-03-17-infrared-renormalons-bion-ambiguities-and-resurgence-in-comp
+  researchmap_refs:
+  - type: presentations
+    id: '52960528'
+    url: https://researchmap.jp/o-morikawa/presentations/52960528
 - id: researchmap:presentations:52079555
   type: presentations
   kind: seminar
   role: self
   presenter: Okuto Morikawa
   invited: true
-  title_en: 'Towards a nonperturbative formulation of non-Hermitian quantum physics: resonance, complex scaling, and resurgence
-    analysis'
-  title_ja: 'Towards a nonperturbative formulation of non-Hermitian quantum physics: resonance, complex scaling, and resurgence
-    analysis'
+  title_en: 'Towards a nonperturbative formulation of non-Hermitian quantum physics: resonance, complex scaling, and resurgence analysis'
+  title_ja: 'Towards a nonperturbative formulation of non-Hermitian quantum physics: resonance, complex scaling, and resurgence analysis'
   event_en: Takushoku University
   event_ja: 拓殖大学セミナー
   start_date: '2026-01-21'
@@ -452,6 +480,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/52079555/attachment_file.pdf
   legacy_ids:
   - presentation-2026-01-21-towards-a-nonperturbative-formulation-of-non-hermitian-quant
+  researchmap_refs:
+  - type: presentations
+    id: '52079555'
+    url: https://researchmap.jp/o-morikawa/presentations/52079555
 - id: researchmap:presentations:51870559
   type: presentations
   kind: talk
@@ -488,6 +520,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51870559/attachment_file.pdf
   legacy_ids:
   - presentation-2025-12-16-unified-exact-wkb-framework-for-quantum-resonance-and-scatte
+  researchmap_refs:
+  - type: presentations
+    id: '51870559'
+    url: https://researchmap.jp/o-morikawa/presentations/51870559
 - id: researchmap:presentations:51847073
   type: presentations
   kind: informal_talk
@@ -524,6 +560,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51847073/attachment_file.pdf
   legacy_ids:
   - presentation-2025-12-12-aspects-of-quantum-resonance-revisited
+  researchmap_refs:
+  - type: presentations
+    id: '51847073'
+    url: https://researchmap.jp/o-morikawa/presentations/51847073
 - id: researchmap:presentations:51761406
   type: presentations
   kind: talk
@@ -553,6 +593,10 @@
   researchmap_presentation_type: poster_presentation
   legacy_ids:
   - presentation-2025-11-28-study-of-confinement-phase-based-on-lattice-qcd-simulation
+  researchmap_refs:
+  - type: presentations
+    id: '51761406'
+    url: https://researchmap.jp/o-morikawa/presentations/51761406
 - id: researchmap:presentations:51742199
   type: presentations
   kind: seminar
@@ -588,6 +632,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51742199/attachment_file.pdf
   legacy_ids:
   - presentation-2025-11-26-what-is-quantum-resonance-a-viewpoint-from-resurgence-theory
+  researchmap_refs:
+  - type: presentations
+    id: '51742199'
+    url: https://researchmap.jp/o-morikawa/presentations/51742199
 - id: researchmap:presentations:51712255
   type: presentations
   kind: seminar
@@ -624,6 +672,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51712255/attachment_file.pdf
   legacy_ids:
   - presentation-2025-11-21-exact-wkb-framework-for-quantum-resonance-and-spectral-theor
+  researchmap_refs:
+  - type: presentations
+    id: '51712255'
+    url: https://researchmap.jp/o-morikawa/presentations/51712255
 - id: researchmap:presentations:51598677
   type: presentations
   kind: talk
@@ -661,6 +713,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51598677/attachment_file.pdf
   legacy_ids:
   - presentation-2025-11-04-direct-numerical-simulation-of-t-hooft-partition-function-an
+  researchmap_refs:
+  - type: presentations
+    id: '51598677'
+    url: https://researchmap.jp/o-morikawa/presentations/51598677
 - id: researchmap:presentations:51558533
   type: presentations
   kind: seminar
@@ -683,8 +739,7 @@
   researchmap_type: presentations
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   researchmap_url: https://researchmap.jp/o-morikawa/presentations/51558533
-  researchmap_title_en: Non-perturbative Confirmation of the Wilson-Fisher Fixed Point via Gradient Flow in 3D O(N) Sigma
-    Model
+  researchmap_title_en: Non-perturbative Confirmation of the Wilson-Fisher Fixed Point via Gradient Flow in 3D O(N) Sigma Model
   researchmap_event_en: Seminar at Theoretical Particle Physics Group in Kyoto University
   presenters_en:
   - Okuto Morikawa
@@ -697,6 +752,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51558533/attachment_file.pdf
   legacy_ids:
   - presentation-2025-10-29-non-perturbative-confirmation-of-the-wilson-fisher-fixed-poi
+  researchmap_refs:
+  - type: presentations
+    id: '51558533'
+    url: https://researchmap.jp/o-morikawa/presentations/51558533
 - id: researchmap:presentations:51239096
   type: presentations
   kind: talk
@@ -732,6 +791,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51239096/attachment_file.pdf
   legacy_ids:
   - presentation-2025-09-23-resonances-spectral-theory-and-the-resurgent-structure
+  researchmap_refs:
+  - type: presentations
+    id: '51239096'
+    url: https://researchmap.jp/o-morikawa/presentations/51239096
 - id: researchmap:presentations:51221938
   type: presentations
   kind: talk
@@ -769,6 +832,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51221938/attachment_file.pdf
   legacy_ids:
   - presentation-2025-09-19-unified-exact-wkb-framework-for-quantum-mechanical-resonance
+  researchmap_refs:
+  - type: presentations
+    id: '51221938'
+    url: https://researchmap.jp/o-morikawa/presentations/51221938
 - id: presentation-2025-09-18-lattice-gradient-flows-de-stabilizing-topological-sectors-fo
   type: presentations
   kind: talk
@@ -877,6 +944,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/51060012/attachment_file.pdf
   legacy_ids:
   - presentation-2025-09-03-non-perturbative-analysis-of-resonance-physics-by-exact-wkb
+  researchmap_refs:
+  - type: presentations
+    id: '51060012'
+    url: https://researchmap.jp/o-morikawa/presentations/51060012
 - id: researchmap:presentations:50751986
   type: presentations
   kind: talk
@@ -910,6 +981,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50751986/attachment_file.pdf
   legacy_ids:
   - presentation-2025-08-01-non-perturbative-understanding-of-resonant-phenomena-based-o
+  researchmap_refs:
+  - type: presentations
+    id: '50751986'
+    url: https://researchmap.jp/o-morikawa/presentations/50751986
 - id: researchmap:presentations:50705810
   type: presentations
   kind: poster
@@ -932,8 +1007,7 @@
   researchmap_type: presentations
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   researchmap_url: https://researchmap.jp/o-morikawa/presentations/50705810
-  researchmap_title_en: Lattice simulation of Wilson--'t~Hooft classification in $SU(2)$ Yang--Mills theory with $\theta$
-    term
+  researchmap_title_en: Lattice simulation of Wilson--'t~Hooft classification in $SU(2)$ Yang--Mills theory with $\theta$ term
   researchmap_event_en: iTHEMS Now&Next 2025
   presenters_en:
   - Issaku Kanamori
@@ -954,6 +1028,10 @@
   researchmap_presentation_type: poster_presentation
   legacy_ids:
   - presentation-2025-07-24-lattice-simulation-of-wilson-t-hooft-classification-in-su-2
+  researchmap_refs:
+  - type: presentations
+    id: '50705810'
+    url: https://researchmap.jp/o-morikawa/presentations/50705810
 - id: researchmap:presentations:50495186
   type: presentations
   kind: seminar
@@ -990,6 +1068,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50495186/attachment_file.pdf
   legacy_ids:
   - presentation-2025-06-27-exact-wkb-as-unified-analytic-structure-for-resonance-physic
+  researchmap_refs:
+  - type: presentations
+    id: '50495186'
+    url: https://researchmap.jp/o-morikawa/presentations/50495186
 - id: researchmap:presentations:50266647
   type: presentations
   kind: seminar
@@ -1027,6 +1109,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50266647/attachment_file.pdf
   legacy_ids:
   - presentation-2025-05-28-non-perturbative-formulation-of-resonant-quantum-mechanics-w
+  researchmap_refs:
+  - type: presentations
+    id: '50266647'
+    url: https://researchmap.jp/o-morikawa/presentations/50266647
 - id: researchmap:presentations:50179324
   type: presentations
   kind: talk
@@ -1055,6 +1141,10 @@
   - 森川億人
   legacy_ids:
   - presentation-2025-05-16-winding-number-on-3d-lattice
+  researchmap_refs:
+  - type: presentations
+    id: '50179324'
+    url: https://researchmap.jp/o-morikawa/presentations/50179324
 - id: researchmap:presentations:50053094
   type: presentations
   kind: seminar
@@ -1091,6 +1181,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/50053094/attachment_file.pdf
   legacy_ids:
   - presentation-2025-05-02-winding-number-on-3d-lattice
+  researchmap_refs:
+  - type: presentations
+    id: '50053094'
+    url: https://researchmap.jp/o-morikawa/presentations/50053094
 - id: researchmap:presentations:49465631
   type: presentations
   kind: talk
@@ -1126,6 +1220,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/49465631/attachment_file.pdf
   legacy_ids:
   - presentation-2025-03-18-lattice-non-perturbative-understanding-of-generalized-symmet
+  researchmap_refs:
+  - type: presentations
+    id: '49465631'
+    url: https://researchmap.jp/o-morikawa/presentations/49465631
 - id: presentation-2025-03-18-hybrid-monte-carlo-simulation-of-the-su-2-z-2-yang-mills-the
   type: presentations
   kind: talk
@@ -1177,6 +1275,10 @@
   researchmap_presentation_type: public_discourse
   legacy_ids:
   - presentation-2025-02-17-lattice-implementation-of-gauge-field-topology-and-generaliz
+  researchmap_refs:
+  - type: presentations
+    id: '49252473'
+    url: https://researchmap.jp/o-morikawa/presentations/49252473
 - id: researchmap:presentations:48519655
   type: presentations
   kind: seminar
@@ -1209,6 +1311,10 @@
   researchmap_presentation_type: public_discourse
   legacy_ids:
   - presentation-2024-11-22-computational-lattice-foundation-of-generalized-symmetry-and
+  researchmap_refs:
+  - type: presentations
+    id: '48519655'
+    url: https://researchmap.jp/o-morikawa/presentations/48519655
 - id: researchmap:presentations:48487432
   type: presentations
   kind: seminar
@@ -1245,6 +1351,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/48487432/attachment_file.pdf
   legacy_ids:
   - presentation-2024-11-19-lattice-non-perturbative-foundation-of-generalized-symmetry
+  researchmap_refs:
+  - type: presentations
+    id: '48487432'
+    url: https://researchmap.jp/o-morikawa/presentations/48487432
 - id: researchmap:presentations:47845715
   type: presentations
   kind: talk
@@ -1278,6 +1388,10 @@
   researchmap_presentation_type: oral_presentation
   legacy_ids:
   - presentation-2024-09-18-non-perturbative-formulation-of-quasi-stationary-resonant-st
+  researchmap_refs:
+  - type: presentations
+    id: '47845715'
+    url: https://researchmap.jp/o-morikawa/presentations/47845715
 - id: presentation-2024-09-16-yet-another-lattice-formulation-of-2d-u-1-chiral-gauge-theor
   type: presentations
   kind: talk
@@ -1350,6 +1464,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47795057/attachment_file.pdf
   legacy_ids:
   - presentation-2024-09-13-gauge-field-topology-on-the-lattice
+  researchmap_refs:
+  - type: presentations
+    id: '47795057'
+    url: https://researchmap.jp/o-morikawa/presentations/47795057
 - id: researchmap:presentations:47621210
   type: presentations
   kind: talk
@@ -1384,6 +1502,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47621210/attachment_file.pdf
   legacy_ids:
   - presentation-2024-09-03-complete-implementation-of-generalized-symmetries-on-the-lat
+  researchmap_refs:
+  - type: presentations
+    id: '47621210'
+    url: https://researchmap.jp/o-morikawa/presentations/47621210
 - id: researchmap:presentations:47564959
   type: presentations
   kind: talk
@@ -1421,6 +1543,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47564959/attachment_file.pdf
   legacy_ids:
   - presentation-2024-08-29-lattice-implementation-of-generalized-symmetry-and-t-hooft-a
+  researchmap_refs:
+  - type: presentations
+    id: '47564959'
+    url: https://researchmap.jp/o-morikawa/presentations/47564959
 - id: presentation-2024-08-02-novel-lattice-formulation-of-2d-chiral-gauge-theory-via-boso
   type: presentations
   kind: talk
@@ -1502,6 +1628,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47264837/attachment_file.pdf
   legacy_ids:
   - presentation-2024-07-30-lattice-study-of-rg-fixed-point-based-on-gradient-flow-in-3d
+  researchmap_refs:
+  - type: presentations
+    id: '47264837'
+    url: https://researchmap.jp/o-morikawa/presentations/47264837
 - id: researchmap:presentations:47151001
   type: presentations
   kind: poster
@@ -1538,6 +1668,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/47151001/attachment_file.pdf
   legacy_ids:
   - presentation-2024-07-19-symmetry-and-anomaly-in-lattice-gauge-theory
+  researchmap_refs:
+  - type: presentations
+    id: '47151001'
+    url: https://researchmap.jp/o-morikawa/presentations/47151001
 - id: researchmap:presentations:46308405
   type: presentations
   kind: seminar
@@ -1574,6 +1708,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/46308405/attachment_file.pdf
   legacy_ids:
   - presentation-2024-04-26-towards-computational-foundations-of-generalized-symmetries
+  researchmap_refs:
+  - type: presentations
+    id: '46308405'
+    url: https://researchmap.jp/o-morikawa/presentations/46308405
 - id: researchmap:presentations:45954847
   type: presentations
   kind: talk
@@ -1607,6 +1745,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/45954847/attachment_file.pdf
   legacy_ids:
   - presentation-2024-03-30-generalized-symmetries-and-topological-phenomena-in-lattice
+  researchmap_refs:
+  - type: presentations
+    id: '45954847'
+    url: https://researchmap.jp/o-morikawa/presentations/45954847
 - id: presentation-2024-03-19-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
   type: presentations
   kind: talk
@@ -1660,6 +1802,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/45836747/attachment_file.pdf
   legacy_ids:
   - presentation-2024-03-18-studies-on-generalized-symmetries-in-lattice-field-theory
+  researchmap_refs:
+  - type: presentations
+    id: '45836747'
+    url: https://researchmap.jp/o-morikawa/presentations/45836747
 - id: researchmap:presentations:45606945
   type: presentations
   kind: seminar
@@ -1697,6 +1843,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/45606945/attachment_file.pdf
   legacy_ids:
   - presentation-2024-02-16-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
+  researchmap_refs:
+  - type: presentations
+    id: '45606945'
+    url: https://researchmap.jp/o-morikawa/presentations/45606945
 - id: presentation-2024-01-18-lattice-realization-of-the-axial-u-1-non-invertible-symmetry
   type: presentations
   kind: journal_club
@@ -1751,6 +1901,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/44159800/attachment_file.pdf
   legacy_ids:
   - presentation-2023-11-30-lattice-study-of-rg-fixed-point-based-on-gradient-flow-in-3d
+  researchmap_refs:
+  - type: presentations
+    id: '44159800'
+    url: https://researchmap.jp/o-morikawa/presentations/44159800
 - id: researchmap:presentations:43998769
   type: presentations
   kind: seminar
@@ -1784,6 +1938,10 @@
   researchmap_presentation_type: public_discourse
   legacy_ids:
   - presentation-2023-11-09-topological-charge-fractionality-and-higher-group-of-lattice
+  researchmap_refs:
+  - type: presentations
+    id: '43998769'
+    url: https://researchmap.jp/o-morikawa/presentations/43998769
 - id: researchmap:presentations:43635383
   type: presentations
   kind: seminar
@@ -1820,6 +1978,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/43635383/attachment_file.pdf
   legacy_ids:
   - presentation-2023-10-03-lattice-description-of-generalized-symmetries-and-topologica
+  researchmap_refs:
+  - type: presentations
+    id: '43635383'
+    url: https://researchmap.jp/o-morikawa/presentations/43635383
 - id: researchmap:presentations:43584104
   type: presentations
   kind: talk
@@ -1853,6 +2015,10 @@
   researchmap_presentation_type: oral_presentation
   legacy_ids:
   - presentation-2023-09-26-how-to-construct-generalized-symmetries-and-t-hooft-anomaly
+  researchmap_refs:
+  - type: presentations
+    id: '43584104'
+    url: https://researchmap.jp/o-morikawa/presentations/43584104
 - id: researchmap:presentations:43467567
   type: presentations
   kind: talk
@@ -1898,6 +2064,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/43467567/attachment_file.pdf
   legacy_ids:
   - presentation-2023-09-16-higher-group-symmetry-in-lattice-gauge-theories-with-restric
+  researchmap_refs:
+  - type: presentations
+    id: '43467567'
+    url: https://researchmap.jp/o-morikawa/presentations/43467567
 - id: presentation-2023-09-16-lattice-formulation-of-magnetic-operators-in-2d-compact-scal
   type: presentations
   kind: talk
@@ -1979,6 +2149,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/42961466/attachment_file.pdf
   legacy_ids:
   - presentation-2023-07-31-higher-group-symmetry-in-lattice-gauge-theories-with-restric
+  researchmap_refs:
+  - type: presentations
+    id: '42961466'
+    url: https://researchmap.jp/o-morikawa/presentations/42961466
 - id: presentation-2023-07-31-lattice-construction-of-mixed-t-hooft-anomaly-with-higher-fo
   type: presentations
   kind: talk
@@ -2091,6 +2265,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/33710917/attachment_file.pdf
   legacy_ids:
   - presentation-2021-09-14-numerical-study-of-deformation-of-target-space-for-the-n-2-l
+  researchmap_refs:
+  - type: presentations
+    id: '33710917'
+    url: https://researchmap.jp/o-morikawa/presentations/33710917
 - id: presentation-2021-04-20-perturbative-ambiguities-and-resurgence-in-compactified-spac
   type: presentations
   kind: seminar
@@ -2163,6 +2341,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/31493460/attachment_file.pdf
   legacy_ids:
   - presentation-2021-01-20-perturbative-ambiguities-and-resurgence-in-circle-compactifi
+  researchmap_refs:
+  - type: presentations
+    id: '31493460'
+    url: https://researchmap.jp/o-morikawa/presentations/31493460
 - id: researchmap:presentations:30158072
   type: presentations
   kind: talk
@@ -2198,6 +2380,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/30158072/attachment_file.pdf
   legacy_ids:
   - presentation-2020-09-24-perturbative-ambiguities-in-compactified-spacetime-and-resur
+  researchmap_refs:
+  - type: presentations
+    id: '30158072'
+    url: https://researchmap.jp/o-morikawa/presentations/30158072
 - id: researchmap:presentations:30091767
   type: presentations
   kind: talk
@@ -2240,6 +2426,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/30091767/attachment_file.pdf
   legacy_ids:
   - presentation-2020-09-16-renormalon-in-su-n-qcd-adj-on-compactified-spacetime
+  researchmap_refs:
+  - type: presentations
+    id: '30091767'
+    url: https://researchmap.jp/o-morikawa/presentations/30091767
 - id: researchmap:presentations:30072791
   type: presentations
   kind: talk
@@ -2277,6 +2467,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/30072791/attachment_file.pdf
   legacy_ids:
   - presentation-2020-09-14-identification-of-perturbative-ambiguity-canceled-against-bi
+  researchmap_refs:
+  - type: presentations
+    id: '30072791'
+    url: https://researchmap.jp/o-morikawa/presentations/30072791
 - id: researchmap:presentations:29720697
   type: presentations
   kind: talk
@@ -2313,6 +2507,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/29720697/attachment_file.pdf
   legacy_ids:
   - presentation-2020-08-28-resurgence-structure-in-s-1-compactified-spacetime
+  researchmap_refs:
+  - type: presentations
+    id: '29720697'
+    url: https://researchmap.jp/o-morikawa/presentations/29720697
 - id: researchmap:presentations:29555725
   type: presentations
   kind: poster
@@ -2348,6 +2546,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/29555725/attachment_file.pdf
   legacy_ids:
   - presentation-2020-08-25-perturbative-ambiguity-in-compactified-spacetime-and-resurge
+  researchmap_refs:
+  - type: presentations
+    id: '29555725'
+    url: https://researchmap.jp/o-morikawa/presentations/29555725
 - id: researchmap:presentations:29367543
   type: presentations
   kind: talk
@@ -2383,6 +2585,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/29367543/attachment_file.pdf
   legacy_ids:
   - presentation-2020-08-04-resurgence-structure-on-compactified-spacetime-with-twisted
+  researchmap_refs:
+  - type: presentations
+    id: '29367543'
+    url: https://researchmap.jp/o-morikawa/presentations/29367543
 - id: presentation-2020-07-14-nonperturbative-renormalization-of-operators-in-near-conform
   type: presentations
   kind: journal_club
@@ -2441,6 +2647,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/27686342/attachment_file.pdf
   legacy_ids:
   - presentation-2020-06-09-computer-simulation-of-the-n-2-landau-ginzburg-model
+  researchmap_refs:
+  - type: presentations
+    id: '27686342'
+    url: https://researchmap.jp/o-morikawa/presentations/27686342
 - id: researchmap:presentations:26018806
   type: presentations
   kind: talk
@@ -2488,6 +2698,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018806/attachment_file.pdf
   legacy_ids:
   - presentation-2020-03-16-ir-renormalon-in-the-p-n-1-model-on-s-1
+  researchmap_refs:
+  - type: presentations
+    id: '26018806'
+    url: https://researchmap.jp/o-morikawa/presentations/26018806
 - id: presentation-2020-03-16-ir-renormalon-in-su-n-qcd-adj-on-3-s-1
   type: presentations
   kind: talk
@@ -2544,6 +2758,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018930/attachment_file.pdf
   legacy_ids:
   - presentation-2020-01-23-vacuum-energy-of-the-susy-p-n-1-model-on-s-1
+  researchmap_refs:
+  - type: presentations
+    id: '26018930'
+    url: https://researchmap.jp/o-morikawa/presentations/26018930
 - id: researchmap:presentations:26018801
   type: presentations
   kind: talk
@@ -2581,6 +2799,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018801/attachment_file.pdf
   legacy_ids:
   - presentation-2019-12-23-infrared-renormalon-in-the-p-n-1-model-on-s-1
+  researchmap_refs:
+  - type: presentations
+    id: '26018801'
+    url: https://researchmap.jp/o-morikawa/presentations/26018801
 - id: researchmap:presentations:26018906
   type: presentations
   kind: poster
@@ -2619,6 +2841,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018906/attachment_file.pdf
   legacy_ids:
   - presentation-2019-12-05-infrared-renormalon-in-the-supersymmetric-p-n-1-model-on-s-1
+  researchmap_refs:
+  - type: presentations
+    id: '26018906'
+    url: https://researchmap.jp/o-morikawa/presentations/26018906
 - id: presentation-2019-10-18-a-quenched-momentum-prescription-for-large-n-theories
   type: presentations
   kind: journal_club
@@ -2659,8 +2885,7 @@
   researchmap_type: presentations
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   researchmap_url: https://researchmap.jp/o-morikawa/presentations/26018778
-  researchmap_title_en: Continuum extrapolation and precision measurement of the scaling dimension in the N=2 Landau-Ginzburg
-    model
+  researchmap_title_en: Continuum extrapolation and precision measurement of the scaling dimension in the N=2 Landau-Ginzburg model
   presenters_en:
   - Okuto Morikawa
   presenters_ja:
@@ -2674,6 +2899,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018778/attachment_file.pdf
   legacy_ids:
   - presentation-2019-09-18-continuum-extrapolation-and-precision-measurement-of-the-sca
+  researchmap_refs:
+  - type: presentations
+    id: '26018778'
+    url: https://researchmap.jp/o-morikawa/presentations/26018778
 - id: researchmap:presentations:26018897
   type: presentations
   kind: talk
@@ -2711,6 +2940,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018897/attachment_file.pdf
   legacy_ids:
   - presentation-2019-06-23-numerical-study-of-ade-type-n-2-landau-ginzburg-models
+  researchmap_refs:
+  - type: presentations
+    id: '26018897'
+    url: https://researchmap.jp/o-morikawa/presentations/26018897
 - id: researchmap:presentations:26018759
   type: presentations
   kind: talk
@@ -2751,6 +2984,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018759/attachment_file.pdf
   legacy_ids:
   - presentation-2019-03-17-gradient-flow-representation-of-the-4d-n-2-sym-supercurrent
+  researchmap_refs:
+  - type: presentations
+    id: '26018759'
+    url: https://researchmap.jp/o-morikawa/presentations/26018759
 - id: presentation-2019-02-25-sign-problem-and-monte-carlo-calculations-beyond-lefschetz-t
   type: presentations
   kind: journal_club
@@ -2805,6 +3042,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018871/attachment_file.pdf
   legacy_ids:
   - presentation-2019-02-21-numerical-study-of-the-n-2-landau-ginzburg-model
+  researchmap_refs:
+  - type: presentations
+    id: '26018871'
+    url: https://researchmap.jp/o-morikawa/presentations/26018871
 - id: researchmap:presentations:26018858
   type: presentations
   kind: poster
@@ -2842,6 +3083,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018858/attachment_file.pdf
   legacy_ids:
   - presentation-2018-12-19-numerical-study-of-the-n-2-landau-ginzburg-model
+  researchmap_refs:
+  - type: presentations
+    id: '26018858'
+    url: https://researchmap.jp/o-morikawa/presentations/26018858
 - id: researchmap:presentations:26018733
   type: presentations
   kind: talk
@@ -2880,6 +3125,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018733/attachment_file.pdf
   legacy_ids:
   - presentation-2018-11-21-numerical-study-of-the-n-2-landau-ginzburg-model
+  researchmap_refs:
+  - type: presentations
+    id: '26018733'
+    url: https://researchmap.jp/o-morikawa/presentations/26018733
 - id: researchmap:presentations:26018718
   type: presentations
   kind: talk
@@ -2917,6 +3166,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018718/attachment_file.pdf
   legacy_ids:
   - presentation-2018-09-15-numerical-study-of-n-2-landau-ginzburg-models-with-multiple
+  researchmap_refs:
+  - type: presentations
+    id: '26018718'
+    url: https://researchmap.jp/o-morikawa/presentations/26018718
 - id: researchmap:presentations:26018984
   type: presentations
   kind: seminar
@@ -2954,6 +3207,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018984/attachment_file.pdf
   legacy_ids:
   - presentation-2018-05-20-gradient-flow-and-the-wilsonian-renormalization-group-flow
+  researchmap_refs:
+  - type: presentations
+    id: '26018984'
+    url: https://researchmap.jp/o-morikawa/presentations/26018984
 - id: presentation-2018-05-14-a-numerical-method-to-compute-the-running-coupling-in-asympt
   type: presentations
   kind: journal_club
@@ -3010,6 +3267,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018709/attachment_file.pdf
   legacy_ids:
   - presentation-2018-03-23-numerical-study-of-n-2-landau-ginzburg-models
+  researchmap_refs:
+  - type: presentations
+    id: '26018709'
+    url: https://researchmap.jp/o-morikawa/presentations/26018709
 - id: presentation-2018-03-23-gravitational-axial-u-1-anomaly-via-the-gradient-flow
   type: presentations
   kind: talk
@@ -3079,6 +3340,10 @@
   researchmap_presentation_type: oral_presentation
   legacy_ids:
   - presentation-2017-12-09-numerical-study-of-the-two-dimensional-supersymmetric-landau
+  researchmap_refs:
+  - type: presentations
+    id: '26018696'
+    url: https://researchmap.jp/o-morikawa/presentations/26018696
 - id: researchmap:presentations:26018946
   type: presentations
   kind: seminar
@@ -3113,6 +3378,10 @@
   researchmap_presentation_type: public_discourse
   legacy_ids:
   - presentation-2017-11-17-conformal-field-theory-and-the-landau-ginzburg-description
+  researchmap_refs:
+  - type: presentations
+    id: '26018946'
+    url: https://researchmap.jp/o-morikawa/presentations/26018946
 - id: researchmap:presentations:26018940
   type: presentations
   kind: seminar
@@ -3151,6 +3420,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018940/attachment_file.pdf
   legacy_ids:
   - presentation-2017-11-17-numerical-study-of-n-2-landau-ginzburg-models
+  researchmap_refs:
+  - type: presentations
+    id: '26018940'
+    url: https://researchmap.jp/o-morikawa/presentations/26018940
 - id: researchmap:presentations:26018670
   type: presentations
   kind: talk
@@ -3188,6 +3461,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018670/attachment_file.pdf
   legacy_ids:
   - presentation-2017-09-28-numerical-simulation-of-the-n-2-landau-ginzburg-model
+  researchmap_refs:
+  - type: presentations
+    id: '26018670'
+    url: https://researchmap.jp/o-morikawa/presentations/26018670
 - id: presentation-2017-09-21-string-theory-vol-2-superstring-theory-and-beyond
   type: presentations
   kind: journal_club
@@ -3246,6 +3523,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018662/attachment_file.pdf
   legacy_ids:
   - presentation-2017-09-14-numerical-simulation-of-n-2-landau-ginzburg-model
+  researchmap_refs:
+  - type: presentations
+    id: '26018662'
+    url: https://researchmap.jp/o-morikawa/presentations/26018662
 - id: presentation-2017-09-14-one-loop-perturbative-coupling-of-a-and-a-through-the-chiral
   type: presentations
   kind: talk
@@ -3323,6 +3604,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018834/attachment_file.pdf
   legacy_ids:
   - presentation-2017-06-23-one-loop-perturbative-coupling-of-a-and-a-through-the-chiral
+  researchmap_refs:
+  - type: presentations
+    id: '26018834'
+    url: https://researchmap.jp/o-morikawa/presentations/26018834
 - id: researchmap:presentations:26018638
   type: presentations
   kind: talk
@@ -3360,6 +3645,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018638/attachment_file.pdf
   legacy_ids:
   - presentation-2017-03-17-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
+  researchmap_refs:
+  - type: presentations
+    id: '26018638'
+    url: https://researchmap.jp/o-morikawa/presentations/26018638
 - id: researchmap:presentations:26018623
   type: presentations
   kind: talk
@@ -3393,6 +3682,10 @@
   researchmap_presentation_type: oral_presentation
   legacy_ids:
   - presentation-2016-12-10-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
+  researchmap_refs:
+  - type: presentations
+    id: '26018623'
+    url: https://researchmap.jp/o-morikawa/presentations/26018623
 - id: researchmap:presentations:26018827
   type: presentations
   kind: poster
@@ -3430,6 +3723,10 @@
   researchmap_attachment_url: https://researchmap.jp/o-morikawa/presentations/26018827/attachment_file.pdf
   legacy_ids:
   - presentation-2016-12-07-lorentz-symmetry-violation-in-the-fermion-number-anomaly-wit
+  researchmap_refs:
+  - type: presentations
+    id: '26018827'
+    url: https://researchmap.jp/o-morikawa/presentations/26018827
 - id: presentation-2016-11-04-a-chiral-solution-to-the-ginsparg-wilson-equation
   type: presentations
   kind: journal_club

@@ -150,12 +150,19 @@ def sync(tex_path: Path, yaml_path: Path):
         updated += 1
         old_topics = r.get('topics') or []
         protected_date = bool(r.get('date_note'))
-        if protected_date and (r.get('start_date') != inc.get('start_date') or r.get('end_date') != inc.get('end_date')):
+        date_disagrees = protected_date and r.get('start_date') != inc.get('start_date')
+        if date_disagrees:
             r['latex_start_date'] = inc.get('start_date')
             r['latex_end_date'] = inc.get('end_date')
+        elif protected_date:
+            # The author-maintained TeX has caught up with the explicit correction.
+            # Keep the historical note, but remove stale literal-date provenance and
+            # allow the current TeX end date/affiliation to become canonical again.
+            r.pop('latex_start_date', None)
+            r.pop('latex_end_date', None)
         for k, v in inc.items():
             if k in {'id', 'topics'}: continue
-            if protected_date and k in {'start_date', 'end_date', 'year', 'affiliation_period'}:
+            if date_disagrees and k in {'start_date', 'end_date', 'year', 'affiliation_period'}:
                 continue
             if k in {'url', 'references_discussed_en'} and v is None:
                 continue
