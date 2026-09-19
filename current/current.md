@@ -29,14 +29,13 @@ lang: en
    [.github.io](https://github.com/o-morikawa/o-morikawa.github.io),
    [GoogleSites-Mirror](https://o-morikawa.github.io/google-sites-mirror/Home.html)
 
-- [ORCID](https://orcid.org/0000-0002-0044-4491)
+- [ORCID](https://orcid.org/0000-0002-0044-4491),
+   [INSPIRE](https://inspirehep.net/authors/1790648?ui-citation-summary=true),  
+   [arXiv](https://arxiv.org/search/?searchtype=author&query=Morikawa%2C+O),
+   [ResearchGate](https://www.researchgate.net/profile/Okuto-Morikawa)
 
 - [ResearchMap](https://researchmap.jp/o-morikawa),
    [J-GLOBAL](https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202001002638083611)
-
-- [INSPIRE](https://inspirehep.net/authors/1790648?ui-citation-summary=true),
-   [arXiv](https://arxiv.org/search/?searchtype=author&query=Morikawa%2C+O),
-   [ResearchGate](https://www.researchgate.net/profile/Okuto-Morikawa)
 
 - [twitter](https://twitter.com/o_morikawa),
    [vivaldi](https://social.vivaldi.net/@omorikawa)
@@ -93,7 +92,7 @@ lang: en
 - [第18回（2024年）日本物理学会若手奨励賞](https://www.jps.or.jp/activities/awards/jusyosya/wakate2024.php)
 
 - PTEP Editors' Choice Award  
-   M. Abe, O. Morikawa, and H. Suzuki, “Fractional topological charge in lattice Abelian gauge theory,” PTEP 2023, no.2, 023B03 (2023)  
+   M. Abe, O. Morikawa, and H. Suzuki, ``Fractional topological charge in lattice Abelian gauge theory,'' PTEP 2023, no.2, 023B03 (2023)  
    Picked up in JPS Hot Topics [doi:10.7566/JPSHT.3.010](https://doi.org/10.7566/JPSHT.3.010)  
    Picked up in JPS Magazine BUTSURI [doi:10.11316/butsuri.78.7_419](https://doi.org/10.11316/butsuri.78.7_419)  
 
@@ -116,14 +115,15 @@ lang: en
 ## Thesis
 
 - 2021年（令和3年）3月 博士課程  
-   “Numerical study of infrared criticality of the supersymmetric Landau–Ginzburg model”  
+   ``Numerical study of infrared criticality of the supersymmetric Landau–Ginzburg model''  
    「超対称ランダウ・ギンツブルグ模型の赤外臨界点の数値的研究」  
-   [九州大学学位論文書誌データベース](http://hdl.handle.net/2324/4474929)  
-   [doi:10.13140/RG.2.2.36216.42246](http://dx.doi.org/10.13140/RG.2.2.36216.42246)  
+   [九州大学学位論文書誌データベース](http://hdl.handle.net/2324/4474929),
+   [doi:10.13140/RG.2.2.36216.42246](http://dx.doi.org/10.13140/RG.2.2.36216.42246),
    [INSPIRE](https://inspirehep.net/literature/2034101)  
 
 - 2018年（平成30年）3月 修士論文  
    「2次元超対称Landau–Ginzburg模型における低エネルギー臨界現象の数値的研究」  
+   [GitHub Database](https://o-morikawa.github.io/masterthesis_template/)
 
 ## Papers
 
@@ -252,7 +252,7 @@ lang: en
    JHEP, 2026, no. 6, 149.
 
 1. O. Morikawa,  
-   Referee Report on "A discrete formulation for three-dimensional winding number,"  
+   Referee Report on ``A discrete formulation for three-dimensional winding number,''  
    SciPost Phys. Core 9, 026 (2026)  
    [doi:10.21468/SciPost.Report.13242](https://doi.org/10.21468/SciPost.Report.13242).  
 
