@@ -92,7 +92,7 @@ lang: en
 - [第18回（2024年）日本物理学会若手奨励賞](https://www.jps.or.jp/activities/awards/jusyosya/wakate2024.php)
 
 - PTEP Editors' Choice Award  
-   M. Abe, O. Morikawa, and H. Suzuki, ``Fractional topological charge in lattice Abelian gauge theory,'' PTEP 2023, no.2, 023B03 (2023)  
+   M. Abe, O. Morikawa, and H. Suzuki, "Fractional topological charge in lattice Abelian gauge theory," PTEP 2023, no.2, 023B03 (2023)  
    Picked up in JPS Hot Topics [doi:10.7566/JPSHT.3.010](https://doi.org/10.7566/JPSHT.3.010)  
    Picked up in JPS Magazine BUTSURI [doi:10.11316/butsuri.78.7_419](https://doi.org/10.11316/butsuri.78.7_419)  
 
@@ -115,7 +115,7 @@ lang: en
 ## Thesis
 
 - 2021年（令和3年）3月 博士課程  
-   ``Numerical study of infrared criticality of the supersymmetric Landau–Ginzburg model''  
+   "Numerical study of infrared criticality of the supersymmetric Landau–Ginzburg model"  
    「超対称ランダウ・ギンツブルグ模型の赤外臨界点の数値的研究」  
    [九州大学学位論文書誌データベース](http://hdl.handle.net/2324/4474929),
    [doi:10.13140/RG.2.2.36216.42246](http://dx.doi.org/10.13140/RG.2.2.36216.42246),
@@ -128,86 +128,86 @@ lang: en
 ## Papers
 
 1. O. Morikawa and S. Ogawa,  
-   ``Exact WKB method in quantum field theory,''  
-   ``Non-Hermitian quantum physics for HAL QCD potential,''  
+   "Exact WKB method in quantum field theory,"  
+   "Non-Hermitian quantum physics for HAL QCD potential,"  
 
 1. T. Fukui, O. Morikawa and H. Suzuki,  
-   ``Gradient flow for winding numbers in real-space representation,''  
+   "Gradient flow for winding numbers in real-space representation,"  
 
 1. O. Morikawa and H. Suzuki,  
-   ``Numerical simulation of finite-temperature (de)confining phase of the 't Hooft partition function,''  
+   "Numerical simulation of finite-temperature (de)confining phase of the 't Hooft partition function,"  
 
 1. O. Fukushima, R. Hamazaki, O. Morikawa and S. Onoda,  
-   ``ETH,''  
+   "ETH,"  
 
 1. S. Ogawa, T. Hirose and O. Morikawa,  
-   ``Black hole quasinormal modes and non-Hermitian spectral theory in AdS holography,''  
-   ``Quadrupole radiation and gravitational-wave response of black hole spacetimes via complex scaling method,''  
-   ``Kerr black hole, quasinormal mode, and complex scaling method,''  
+   "Black hole quasinormal modes and non-Hermitian spectral theory in AdS holography,"  
+   "Quadrupole radiation and gravitational-wave response of black hole spacetimes via complex scaling method,"  
+   "Kerr black hole, quasinormal mode, and complex scaling method,"  
 
 1. I. Kanamori, O. Morikawa, Y. Nagai, Y. Tanizaki, A. Tomiya and H. Watanabe,  
-   ``Topological charge stability under gradient flow in $SU(3)$ lattice gauge theory,''  
+   "Topological charge stability under gradient flow in $SU(3)$ lattice gauge theory,"  
 
 1. M. Tanaka, M. Kitazawa, O. Morikawa and H. Suzuki,  
-   ``Depicting renormalization group flow based on gradient flow,''  
+   "Depicting renormalization group flow based on gradient flow,"  
 
 1. O. Morikawa,  
-   ``The Changing Meaning of One-Loop Exactness in $\mathcal{N}=2$ Supersymmetric Yang–Mills Theory,''  
+   "The Changing Meaning of One-Loop Exactness in $\mathcal{N}=2$ Supersymmetric Yang–Mills Theory,"  
    [INSPIRE].  
 
 1. O. Morikawa and S. Ogawa,  
-   ``A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling,''  
+   "A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling,"  
    [arXiv:2609:xxxxx (hep-th)],
    [INSPIRE].  
 
 1. O. Morikawa,  
-   ``Center-twisted Gribov spectra and the finite-volume Gaussian response in the refined Gribov–Zwanziger framework,''  
+   "Center-twisted Gribov spectra and the finite-volume Gaussian response in the refined Gribov–Zwanziger framework,"  
    [arXiv:2609:03525 (hep-th)](https://arxiv.org/abs/2609.03525),
    [INSPIRE](https://inspirehep.net/literature/3199522).  
 
 1. O. Morikawa,  
-   ``Two Languages for the Same Resonance: From Nuclear Decay to Black-Hole Ringdown,''  
+   "Two Languages for the Same Resonance: From Nuclear Decay to Black-Hole Ringdown,"  
    [arXiv:2608.29806 (gr-qc)](https://arxiv.org/abs/2608.29806),
    [INSPIRE](https://inspirehep.net/literature/3197805).  
 
 1. O. Morikawa, S. Ogawa and T. Hirose,  
-   ``Riesz–Laurent representation of black-hole scattering and sourced response at exceptional points,''  
+   "Riesz–Laurent representation of black-hole scattering and sourced response at exceptional points,"  
    [arXiv:2608.14752 (gr-qc)](https://arxiv.org/abs/2608.14752),
    [INSPIRE](https://inspirehep.net/literature/3191522).  
 
 1. H. Watanabe, I. Kanamori, O. Morikawa, Y. Nagai, Y. Tanizaki and A. Tomiya,  
-   ``Numerical Hint for Dyon Condensation at $\theta=2\pi$ via Wilson–'t Hooft Loops in $SU(2)$ Yang–Mills Theory,''  
+   "Numerical Hint for Dyon Condensation at $\theta=2\pi$ via Wilson–'t Hooft Loops in $SU(2)$ Yang–Mills Theory,"  
    [arXiv:2606.13428 (hep-lat)](https://arxiv.org/abs/2606.13428),
    [INSPIRE](https://inspirehep.net/literature/3167855).  
 
 1. S. Ogawa, O. Morikawa and T. Hirose,  
-   ``Quasinormal modes and continuum response of de Sitter black holes via complex scaling method,''  
+   "Quasinormal modes and continuum response of de Sitter black holes via complex scaling method,"  
    [arXiv:2605.03277 (hep-th)](https://arxiv.org/abs/2605.03277),
    [INSPIRE](https://inspirehep.net/literature/3152042).  
 
 1. S. Ogawa, T. Hirose and O. Morikawa,  
-   ``Complex scaling approach to quasinormal modes of Schwarzschild and Reissner–Nordström black holes,''  
+   "Complex scaling approach to quasinormal modes of Schwarzschild and Reissner–Nordström black holes,"  
    PTEP  
    [doi:10.1093/ptep/ptag160](https://doi.org/10.1093/ptep/ptag160),
    [arXiv:2604.20442 (hep-th)](https://arxiv.org/abs/2604.20442),
    [INSPIRE](https://inspirehep.net/literature/3148097).  
 
 1. O. Morikawa, S. Ogawa and S. Onoda,  
-   ``Geometric phase from encircling an exceptional point of a quantum resonance in the complex-scaling method,''  
+   "Geometric phase from encircling an exceptional point of a quantum resonance in the complex-scaling method,"  
    PRA **113**, 052225 (2026)  
    [doi:10.1103/pf6y-lxzp](https://doi.org/10.1103/pf6y-lxzp),
    [arXiv:2512.24528 (quant-ph)](https://arxiv.org/abs/2512.24528),
    [INSPIRE](https://inspirehep.net/literature/3096391).  
 
 1. O. Morikawa and S. Ogawa,  
-   ``Exact WKB method for radial Schrödinger equation,''  
+   "Exact WKB method for radial Schrödinger equation,"  
    JPhysA **59**, 145202 (2026)  
    [doi:10.1088/1751-8121/ae57ec](https://doi.org/10.1088/1751-8121/ae57ec),
    [arXiv:2510.11766 (quant-ph)](https://arxiv.org/abs/2510.11766),
    [INSPIRE](https://inspirehep.net/literature/3069158).  
 
 1. S. Onoda, O. Fukushima, R. Hamazaki and O. Morikawa,  
-   ``Eigenstate Thermalization Hypothesis with projective representation,''  
+   "Eigenstate Thermalization Hypothesis with projective representation,"  
    JHEP **06**, 138 (2026)  
    [doi:10.1007/JHEP06(2026)138](https://doi.org/10.1007/JHEP06(2026)138),
    [arXiv:2509.01931 (hep-th)](https://arxiv.org/abs/2509.01931),
@@ -216,21 +216,21 @@ lang: en
 ## Proceedings
 
 1. A. Tomiya, H. Watanabe, I. Kanamori, O. Morikawa, Y. Nagai and Y. Tanizaki,  
-   ``Gradient-Flow Actions, Integerness, and Gluonic–Fermionic Topology Matching in SU(3) Yang–Mills Theory,''  
+   "Gradient-Flow Actions, Integerness, and Gluonic–Fermionic Topology Matching in SU(3) Yang–Mills Theory,"  
    [doi:10.22323/1.542.0305](https://doi.org/10.22323/1.542.0305)  
    Talk presented at the 43rd International Symposium on Lattice Field Theory (Lattice2026),  
    July 26 - August 1st, 2026,
    University of Maryland, College Park, USA.  
 
 1. H. Watanabe, I. Kanamori, O. Morikawa, Y. Nagai, Y. Tanizaki and A. Tomiya,  
-   ``Dyon Condensation at $\theta=2\pi$ from Wilson–'t Hooft Loops in Yang–Mills Theory,''  
+   "Dyon Condensation at $\theta=2\pi$ from Wilson–'t Hooft Loops in Yang–Mills Theory,"  
    [doi:10.22323/1.542.0217](https://doi.org/10.22323/1.542.0217)  
    Talk presented at the 43rd International Symposium on Lattice Field Theory (Lattice2026),  
    July 26 - August 1st, 2026,
    University of Maryland, College Park, USA.  
 
 1. O. Morikawa and H. Suzuki,  
-   ``Direct numerical simulation of 't Hooft partition function and (de)confining phase,''  
+   "Direct numerical simulation of 't Hooft partition function and (de)confining phase,"  
    PoS **LATTICE2025**, 182 (2026)  
    [doi:10.22323/1.518.0182](https://doi.org/10.22323/1.518.0182),
    [arXiv:2601.20159 (hep-lat)](https://arxiv.org/abs/2601.20159),
@@ -243,21 +243,21 @@ lang: en
 
 1. O. Morikawa,  
    Review (Mathematical Reviews / MathSciNet) of N. Seiberg and W. Zhang,  
-   ``Tori, Klein bottles, and modulo 8 parity/time-reversal anomalies of 2+1d staggered fermions,''  
+   "Tori, Klein bottles, and modulo 8 parity/time-reversal anomalies of 2+1d staggered fermions,"  
    JHEP, 2026, no. 5, 264.  
 
 1. O. Morikawa,  
    Review (Mathematical Reviews / MathSciNet) of M. M. Anber,  
-   ``Anomalies on ALE spaces and phases of gauge theory,''  
+   "Anomalies on ALE spaces and phases of gauge theory,"  
    JHEP, 2026, no. 6, 149.
 
 1. O. Morikawa,  
-   Referee Report on ``A discrete formulation for three-dimensional winding number,''  
+   Referee Report on "A discrete formulation for three-dimensional winding number,"  
    SciPost Phys. Core 9, 026 (2026)  
    [doi:10.21468/SciPost.Report.13242](https://doi.org/10.21468/SciPost.Report.13242).  
 
 1. O. Morikawa and O. Fukushima,  
-   ``Preface,''  
+   "Preface,"  
    IJMPA **41**, Issue 07, 2602001 (2026)  
    [doi:10.1142/S0217751X2602001X](https://doi.org/10.1142/S0217751X2602001X)  
    [Special Issue: Non-perturbative Methods in Quantum Field Theory](https://www.worldscientific.com/toc/ijmpa/41/07).  
@@ -282,43 +282,43 @@ lang: en
 ## Talks (English)
 
 1. O. Morikawa,  
-   ``Resonances, Spectral Theory, and Resurgence from Exact WKB Analysis,''  
+   "Resonances, Spectral Theory, and Resurgence from Exact WKB Analysis,"  
    RIMS共同研究「超局所解析と漸近解析における新たな発展」、  
    京都大学数理解析研究所、
    2026年10月29日  
 
 1. H. Watanabe, I. Kanamori, ○O. Morikawa, Y. Nagai, Y. Tanizaki and A. Tomiya,  
-   ``Dyon Condensation at $\theta=2\pi$ from Wilson–'t Hooft Loops in Yang–Mills Theory,''  
+   "Dyon Condensation at $\theta=2\pi$ from Wilson–'t Hooft Loops in Yang–Mills Theory,"  
    the 43rd International Symposium on Lattice Field Theory (Lattice2026),  
    University of Maryland, College Park,
    2026年7月29日  
 
 1. O. Morikawa,  
-   ``Lattice 2D $U(1)$ chiral gauge theory and magnetically charged vertex operators via bosonization,''  
+   "Lattice 2D $U(1)$ chiral gauge theory and magnetically charged vertex operators via bosonization,"  
    Frontiers of Lattice Fermions,  
    基礎物理学研究所、
    2026年7月2日  
 
 1. O. Morikawa,  
-   ``Unified exact WKB framework for quantum resonance and scattering theory,''  
+   "Unified exact WKB framework for quantum resonance and scattering theory,"  
    KEK Theory Workshop 2025,  
    高エネルギー加速器研究機構(KEK)、
    2025年12月16日  
 
 1. O. Morikawa and H. Suzuki,  
-   ``Direct numerical simulation of 't Hooft partition function and (de)confining phase,''  
+   "Direct numerical simulation of 't Hooft partition function and (de)confining phase,"  
    the 42nd International Symposium on Lattice Field Theory (Lattice2025),  
    Tata Institute of Fundamental Research (TIFR),
    2025年11月2日  
 
 1. O. Morikawa,  
-   ``Resonances, Spectral Theory, and the Resurgent Structure,''  
+   "Resonances, Spectral Theory, and the Resurgent Structure,"  
    Japan-UK Workshop on Quantum Gravity,  
    理研(神戸)、
    2025年9月23日  
 
 1. I. Kanamori, O. Morikawa ,Y. Nagai, Y. Tanizaki, A. Tomiya and H. Watanabe,  
-   ``Lattice simulation of Wilson–'t Hooft classification in $SU(2)$ Yang–Mills theory with $\theta$ term,''  
+   "Lattice simulation of Wilson–'t Hooft classification in $SU(2)$ Yang–Mills theory with $\theta$ term,"  
    iTHEMS NOW&NEXT 2025,  
    ポスター発表、  
    理研iTHEMS、
@@ -339,19 +339,19 @@ lang: en
    2026年11年30日  
 
 1. 小川翔也、廣瀬拓哉、○森川億人、  
-   ``Complex scaling approach to quasinormal modes of Schwarzschild and Reissner-Nordstrom black holes,''  
+   "Complex scaling approach to quasinormal modes of Schwarzschild and Reissner-Nordstrom black holes,"  
    日本物理学会第81回年次大会、  
    東京大学、
    2026年9月14日  
 
 1. 森川億人、  
-   ``Complex scaling approach to black-hole quasinormal modes and continuum response,''  
+   "Complex scaling approach to black-hole quasinormal modes and continuum response,"  
    場の理論と弦理論2026、  
    京都大学基礎物理学研究所、
    2026年8月18日  
 
 1. 森川億人、  
-   ``Towards a nonperturbative formulation of non-Hermitian quantum physics,''  
+   "Towards a nonperturbative formulation of non-Hermitian quantum physics,"  
    Particle-Physics Endeavor Across Kyushu (P2EAK),  
    九重共同研修所、
    2026年7月20日  
@@ -394,45 +394,45 @@ lang: en
 
 ## Seminars
 
-1. ``Infrared Renormalons, Bion Ambiguities, and Resurgence in Compactified Gauge Theories,''  
+1. "Infrared Renormalons, Bion Ambiguities, and Resurgence in Compactified Gauge Theories,"  
    拓殖大学、
    2026年3月17日  
 
-1. ``Towards a nonperturbative formulation of non-Hermitian quantum physics: resonance, complex scaling, and resurgence analysis,''  
+1. "Towards a nonperturbative formulation of non-Hermitian quantum physics: resonance, complex scaling, and resurgence analysis,"  
    拓殖大学、
    2026年1月21日  
 
-1. ``What is quantum resonance? —a viewpoint from resurgence theory—,''  
+1. "What is quantum resonance? —a viewpoint from resurgence theory—,"  
    神戸大学、
    2025年11月26日  
 
-1. ``Exact WKB framework for quantum resonance and spectral theory,''  
+1. "Exact WKB framework for quantum resonance and spectral theory,"  
    東北大学、
    2025年11月21日  
 
-1. ``Non-perturbative Confirmation of the Wilson-Fisher Fixed Point via Gradient Flow in 3D O(N) Sigma Model,''  
+1. "Non-perturbative Confirmation of the Wilson-Fisher Fixed Point via Gradient Flow in 3D O(N) Sigma Model,"  
    京都大学、
    2025年10月29日  
 
-1. ``Exact WKB as unified analytic structure for resonance physics,''  
+1. "Exact WKB as unified analytic structure for resonance physics,"  
    RIKEN iTHEMS Math-Phys Seminar,
    2025年6月27日  
 
-1. ``Non-perturbative formulation of resonant quantum mechanics within unified exact WKB framework,''  
+1. "Non-perturbative formulation of resonant quantum mechanics within unified exact WKB framework,"  
    RIKEN iTHEMS Asymptotics in Astrophysics Seminar,
    2025年5月28日  
 
-1. ``Winding number on 3D lattice,''  
-   CREST Research Seminar on ``Theoretical studies of topological phases of matter,''
+1. "Winding number on 3D lattice,"  
+   CREST Research Seminar on "Theoretical studies of topological phases of matter,"
    2025年5月2日
 
 ## Other Talks
 
 1. Coffee Meeting Talk @iTHEMS, 2025/12/12:
-   ``Aspects of Quantum Resonance Revisited''  
+   "Aspects of Quantum Resonance Revisited"  
 
 1. Journal Club @Durham Univ., 2025/2/17:
-   ``Lattice implementation of gauge field topology and generalized symmetry''  
+   "Lattice implementation of gauge field topology and generalized symmetry"  
 
 1. Coffee Meeting Talk @iTHEMS, 2024/9/13:
-   ``Gauge field topology on the lattice''
+   "Gauge field topology on the lattice"
