@@ -242,18 +242,18 @@ lang: en
 ## 学術雑誌等又は商業誌における解説
 
 1. O. Morikawa,  
-   Review (Mathematical Reviews / MathSciNet) of N. Seiberg and W. Zhang,  
-   "Tori, Klein bottles, and modulo 8 parity/time-reversal anomalies of 2+1d staggered fermions,"  
+   Review (Mathematical Reviews / MathSciNet) of N. Seiberg and W. Zhang,
+   "Tori, Klein bottles, and modulo 8 parity/time-reversal anomalies of 2+1d staggered fermions,"
    JHEP, 2026, no. 5, 264.  
 
 1. O. Morikawa,  
-   Review (Mathematical Reviews / MathSciNet) of M. M. Anber,  
-   "Anomalies on ALE spaces and phases of gauge theory,"  
+   Review (Mathematical Reviews / MathSciNet) of M. M. Anber,
+   "Anomalies on ALE spaces and phases of gauge theory,"
    JHEP, 2026, no. 6, 149.
 
 1. O. Morikawa,  
-   Referee Report on "A discrete formulation for three-dimensional winding number,"  
-   SciPost Phys. Core 9, 026 (2026)  
+   Referee Report on "A discrete formulation for three-dimensional winding number,"
+   SciPost Phys. Core 9, 026 (2026),  
    [doi:10.21468/SciPost.Report.13242](https://doi.org/10.21468/SciPost.Report.13242).  
 
 1. O. Morikawa and O. Fukushima,  
@@ -287,7 +287,7 @@ lang: en
    京都大学数理解析研究所、
    2026年10月29日  
 
-1. H. Watanabe, I. Kanamori, ○O. Morikawa, Y. Nagai, Y. Tanizaki and A. Tomiya,  
+1. H. Watanabe, I. Kanamori, O. Morikawa, Y. Nagai, Y. Tanizaki and A. Tomiya,  
    "Dyon Condensation at $\theta=2\pi$ from Wilson–'t Hooft Loops in Yang–Mills Theory,"  
    the 43rd International Symposium on Lattice Field Theory (Lattice2026),  
    University of Maryland, College Park,
@@ -338,7 +338,7 @@ lang: en
    JA共済ビル　カンファレンスホール、
    2026年11年30日  
 
-1. 小川翔也、廣瀬拓哉、○森川億人、  
+1. 小川翔也、廣瀬拓哉、森川億人、  
    "Complex scaling approach to quasinormal modes of Schwarzschild and Reissner-Nordstrom black holes,"  
    日本物理学会第81回年次大会、  
    東京大学、
@@ -435,4 +435,4 @@ lang: en
    "Lattice implementation of gauge field topology and generalized symmetry"  
 
 1. Coffee Meeting Talk @iTHEMS, 2024/9/13:
-   "Gauge field topology on the lattice"
+   "Gauge field topology on the lattice"  
