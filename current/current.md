@@ -93,8 +93,8 @@ lang: en
 
 - PTEP Editors' Choice Award  
    M. Abe, O. Morikawa, and H. Suzuki, "Fractional topological charge in lattice Abelian gauge theory," PTEP 2023, no.2, 023B03 (2023)  
-   Picked up in JPS Hot Topics [doi:10.7566/JPSHT.3.010](https://doi.org/10.7566/JPSHT.3.010)  
-   Picked up in JPS Magazine BUTSURI [doi:10.11316/butsuri.78.7_419](https://doi.org/10.11316/butsuri.78.7_419)  
+   Picked up in JPS Hot Topics **3**, 010, [doi:10.7566/JPSHT.3.010](https://doi.org/10.7566/JPSHT.3.010)  
+   Picked up in 日本物理学会誌2023年78巻7号 p.419-421 「PTEPの最近の注目論文から」 [doi:10.11316/butsuri.78.7_419](https://doi.org/10.11316/butsuri.78.7_419)  
 
 - [２０２１年度（第１６回）素粒子メダル奨励賞](http://www2.yukawa.kyoto-u.ac.jp/~sg.www/syorei_s/)
 
