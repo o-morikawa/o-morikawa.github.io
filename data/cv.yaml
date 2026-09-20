@@ -339,7 +339,7 @@
   title_en: Referee
   title_ja: J. High Energy Phys., Referee
   start_date: '2026'
-  organization_en: J. High Energy Phys. (Springer)
+  organization_en: Eur. Phys. J. Plus (Springer)
   source: cv.tex
   researchmap_refs:
   - type: academic_contribution
@@ -353,6 +353,13 @@
   organization_ja: Springer
   researchmap_roles:
   - peer_review
+- id: cv-professional_service-2026-referee-j-high-energy-phys-springer
+  type: cv
+  kind: professional_service
+  title_en: Referee
+  start_date: '2026'
+  source: cv.tex
+  organization_en: J. High Energy Phys. (Springer)
 - id: cv-science-lab-2025b
   type: cv
   kind: teaching
