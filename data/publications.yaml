@@ -159,7 +159,7 @@
 - id: Watanabe:2026ymb
   type: publications
   kind: paper
-  status: preprint
+  status: published
   authors:
   - Hiromasa Watanabe
   - Issaku Kanamori
@@ -194,6 +194,7 @@
   researchmap_url: https://researchmap.jp/o-morikawa/misc/53947619
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   researchmap_title_en: Numerical Hints for Dyon Condensation at $θ=2π$ via Wilson-'t Hooft Loops in $SU(2)$ Yang-Mills Theory
+  journal: JHEP
 - id: Ogawa:2026opj
   type: publications
   kind: paper
