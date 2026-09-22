@@ -177,6 +177,7 @@ lang: en
 
 1. H. Watanabe, I. Kanamori, O. Morikawa, Y. Nagai, Y. Tanizaki and A. Tomiya,  
    "Numerical Hint for Dyon Condensation at $\theta=2\pi$ via Wilson–'t Hooft Loops in $SU(2)$ Yang–Mills Theory,"  
+   JHEP  
    [arXiv:2606.13428 (hep-lat)](https://arxiv.org/abs/2606.13428),
    [INSPIRE](https://inspirehep.net/literature/3167855).  
 
