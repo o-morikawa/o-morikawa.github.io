@@ -395,6 +395,10 @@ lang: en
 
 ## Seminars
 
+1. "TBA,"  
+   九州大学、
+   2026年11年13日
+
 1. "Infrared Renormalons, Bion Ambiguities, and Resurgence in Compactified Gauge Theories,"  
    拓殖大学、
    2026年3月17日  
