@@ -33,6 +33,21 @@
   - quantum resonance
   - theoretical physics
   source: presentation.tex
+- id: presentation-2026-11-13-tba
+  type: presentations
+  kind: seminar
+  role: self
+  presenter: Okuto Morikawa
+  invited: true
+  title_en: TBA
+  event_en: Theoretical Particle Theory Group in Kyushu University
+  start_date: '2026-11-13'
+  end_date: null
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - theoretical physics
+  source: presentation.tex
 - id: presentation-2026-10-29-resonances-spectral-theory-and-resurgence-from-exact-wkb-ana
   type: presentations
   kind: talk
