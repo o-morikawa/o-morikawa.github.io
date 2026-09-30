@@ -44,18 +44,6 @@
   topics:
   - lattice gauge theory
   - confinement
-- id: publication-undated-a-physical-connection-criterion-for-reaction-coordinate-reduction-in-qua
-  type: publications
-  kind: paper
-  status: preprint
-  authors:
-  - O. Morikawa
-  - S. Ogawa
-  title: A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling
-  year: null
-  source: publication.tex
-  topics:
-  - theoretical physics
 - id: Morikawa:2026mqk
   type: publications
   kind: paper
@@ -311,6 +299,22 @@
   researchmap_url: https://researchmap.jp/o-morikawa/published_papers/52119934
   publication_name_ja: PoS
   researchmap_referee: true
+- id: publication-undated-a-physical-connection-criterion-for-reaction-coordinate-reduction-in-qua
+  type: publications
+  kind: paper
+  status: preprint
+  authors:
+  - O. Morikawa
+  - S. Ogawa
+  title: A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  title_bibtex: A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling
+  report_number: RIKEN-iTHEMS-Report-26
+  source: publication.tex
+  topics:
+  - theoretical physics
+  url: https://doi.org/10.5281/zenodo.23050742
 - id: Morikawa:2025inx
   type: publications
   kind: paper
