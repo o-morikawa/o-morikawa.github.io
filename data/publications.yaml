@@ -299,22 +299,28 @@
   researchmap_url: https://researchmap.jp/o-morikawa/published_papers/52119934
   publication_name_ja: PoS
   researchmap_referee: true
-- id: publication-undated-a-physical-connection-criterion-for-reaction-coordinate-reduction-in-qua
+- id: Morikawa:2026xxx
   type: publications
   kind: paper
   status: preprint
   authors:
-  - O. Morikawa
-  - S. Ogawa
+  - Okuto Morikawa
+  - Shoya Ogawa
   title: A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling
   year: 2026
-  affiliation_period: RIKEN (iTHEMS)
+  affiliation_period: Unknown
   title_bibtex: A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling
   report_number: RIKEN-iTHEMS-Report-26
   source: publication.tex
   topics:
   - theoretical physics
   url: https://doi.org/10.5281/zenodo.23050742
+  affiliation_basis: no arXiv identifier
+  inspire_bibkey: Morikawa:2026xxx
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2026xxx
+  bibtex_source: sources/ref_om.bib
+  legacy_ids:
+  - publication-undated-a-physical-connection-criterion-for-reaction-coordinate-reduction-in-qua
 - id: Morikawa:2025inx
   type: publications
   kind: paper
