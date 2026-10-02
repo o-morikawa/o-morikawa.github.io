@@ -33,6 +33,21 @@
   - quantum resonance
   - theoretical physics
   source: presentation.tex
+- id: presentation-2026-11-24-center-twisted-gribov-spectra-and-confinement-problem
+  type: presentations
+  kind: seminar
+  role: self
+  presenter: Okuto Morikawa
+  invited: true
+  title_en: Center-twisted Gribov spectra and confinement problem
+  event_en: Theoretical Particle Theory Group in Kindai University
+  start_date: '2026-11-24'
+  end_date: null
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - theoretical physics
+  source: presentation.tex
 - id: presentation-2026-11-24-center-twisted-gribov-spectra-and-the-question-of-confinemen
   type: presentations
   kind: seminar
@@ -40,21 +55,6 @@
   presenter: Okuto Morikawa
   invited: true
   title_en: Center-Twisted Gribov Spectra and the Question of Confinement
-  event_en: Theoretical Particle Theory Group in Kyushu University
-  start_date: '2026-11-13'
-  end_date: null
-  year: 2026
-  affiliation_period: RIKEN (iTHEMS)
-  topics:
-  - theoretical physics
-  source: presentation.tex
-- id: presentation-2026-11-13-tba
-  type: presentations
-  kind: seminar
-  role: self
-  presenter: Okuto Morikawa
-  invited: true
-  title_en: TBA
   event_en: Theoretical Particle Theory Group in Kyushu University
   start_date: '2026-11-13'
   end_date: null
