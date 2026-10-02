@@ -396,7 +396,11 @@ lang: en
 
 ## Seminars
 
-1. "TBA,"  
+1. "TBA,"
+   近畿大学、
+   2026年11年xx日
+
+1. "Center-Twisted Gribov Spectra and the Question of Confinement,"  
    九州大学、
    2026年11年13日
 
