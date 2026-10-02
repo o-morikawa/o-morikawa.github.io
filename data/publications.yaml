@@ -299,7 +299,7 @@
   researchmap_url: https://researchmap.jp/o-morikawa/published_papers/52119934
   publication_name_ja: PoS
   researchmap_referee: true
-- id: Morikawa:2026xxx
+- id: '3210307'
   type: publications
   kind: paper
   status: preprint
@@ -316,11 +316,12 @@
   - theoretical physics
   url: https://doi.org/10.5281/zenodo.23050742
   affiliation_basis: no arXiv identifier
-  inspire_bibkey: Morikawa:2026xxx
-  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2026xxx
+  inspire_bibkey: '3210307'
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3A3210307
   bibtex_source: sources/ref_om.bib
   legacy_ids:
   - publication-undated-a-physical-connection-criterion-for-reaction-coordinate-reduction-in-qua
+  - Morikawa:2026xxx
 - id: Morikawa:2025inx
   type: publications
   kind: paper
