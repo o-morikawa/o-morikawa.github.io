@@ -158,7 +158,7 @@ lang: en
 1. O. Morikawa and S. Ogawa,  
    "A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling,"  
    [arXiv:2609:xxxxx (hep-th)],
-   [INSPIRE],
+   [INSPIRE](https://inspirehep.net/record/3210307),
    [Zenodo](https://doi.org/10.5281/zenodo.23050742).  
 
 1. O. Morikawa,  
