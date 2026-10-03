@@ -250,7 +250,7 @@
   researchmap_title_en: Complex scaling approach to quasinormal modes of Schwarzschild and Reissner--Nordström black holes
   source: publication.tex
   volume: '2026'
-  pages: no.9, 093E03
+  pages: 093E03
   bibtex_source: sources/ref_om.bib
   researchmap_refs:
   - type: published_papers
@@ -259,6 +259,7 @@
   researchmap_url: https://researchmap.jp/o-morikawa/published_papers/53446645
   publication_name_ja: PTEP
   researchmap_referee: true
+  number: '9'
 - id: Morikawa:2026wdx
   type: publications
   kind: proceedings
