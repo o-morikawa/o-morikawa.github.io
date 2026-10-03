@@ -189,7 +189,7 @@ lang: en
 
 1. S. Ogawa, T. Hirose and O. Morikawa,  
    "Complex scaling approach to quasinormal modes of Schwarzschild and Reissner–Nordström black holes,"  
-   PTEP  
+   PTEP **2026**, no. 9, 093E03 (2026)  
    [doi:10.1093/ptep/ptag160](https://doi.org/10.1093/ptep/ptag160),
    [arXiv:2604.20442 (hep-th)](https://arxiv.org/abs/2604.20442),
    [INSPIRE](https://inspirehep.net/literature/3148097).  
