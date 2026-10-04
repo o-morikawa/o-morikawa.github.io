@@ -300,6 +300,23 @@
   researchmap_url: https://researchmap.jp/o-morikawa/published_papers/52119934
   publication_name_ja: PoS
   researchmap_referee: true
+- id: Morikawa:2026mzj
+  type: publications
+  kind: paper
+  status: published
+  authors:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  title: Quantum Resonance as a Global Connection Problem
+  year: 2026
+  affiliation_period: Unknown
+  affiliation_basis: no arXiv identifier
+  inspire_bibkey: Morikawa:2026mzj
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2026mzj
+  topics:
+  - quantum resonance
+  - theoretical physics
+  bibtex_source: sources/ref_om.bib
 - id: '3210307'
   type: publications
   kind: paper
