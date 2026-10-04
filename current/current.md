@@ -276,7 +276,8 @@ lang: en
 
 1. O. Morikawa and S. Ogawa,  
    Quantum Resonance as a Global Connection Problem  
-   online textbook/monograph, publicly available from the authors' repositories, 2026.  
+   online textbook/monograph, publicly available from the authors' repositories, 2026,
+   [INSPIRE](https://inspirehep.net/literature/3210789).  
    Google Drive: [English version; Solutions in Japanese](https://drive.google.com/drive/folders/1qR1iONTnf2iShU-10wzj6FHL45_-zuMj?usp=drive_link)  
    GitHub: [English version](https://o-morikawa.github.io/books/quantum_resonance_monograph/main.pdf);
    （[演習問題解答集](https://o-morikawa.github.io/books/quantum_resonance_monograph/solutions_ja.pdf)）  
