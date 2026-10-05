@@ -244,14 +244,19 @@ lang: en
 ## 学術雑誌等又は商業誌における解説
 
 1. O. Morikawa,  
+   Review (Mathematical Reviews / MathSciNet) of J. A. Borrego-Morell and B. Shapiro,
+   "Semiclassical expansion for exactly solvable differential operators,"
+   JPhysA 59 (2026), no. 29, 295202.
+
+1. O. Morikawa,  
    Review (Mathematical Reviews / MathSciNet) of N. Seiberg and W. Zhang,
    "Tori, Klein bottles, and modulo 8 parity/time-reversal anomalies of 2+1d staggered fermions,"
-   JHEP, 2026, no. 5, 264.  
+   JHEP 2026, no. 5, 264.  
 
 1. O. Morikawa,  
    Review (Mathematical Reviews / MathSciNet) of M. M. Anber,
    "Anomalies on ALE spaces and phases of gauge theory,"
-   JHEP, 2026, no. 6, 149.
+   JHEP 2026, no. 6, 149.
 
 1. O. Morikawa,  
    Referee Report on "A discrete formulation for three-dimensional winding number,"
