@@ -152,7 +152,8 @@ lang: en
 
 1. O. Morikawa,  
    "The Changing Meaning of One-Loop Exactness in $\mathcal{N}=2$ Supersymmetric Yang–Mills Theory,"  
-   [INSPIRE].  
+   [INSPIRE],
+   [Zenodo](https://doi.org/10.5281/zenodo.23168337).  
 
 1. O. Morikawa and S. Ogawa,  
    "A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling,"  
