@@ -18,6 +18,12 @@
   role: lecturer
   organization_en: Takushoku University
   source: cv.tex
+- id: cv-activity-2026-10-review-mathematical-reviews-mathscinet-of-j-a-borrego-morell-and
+  type: cv
+  kind: activity
+  title_en: 'Review (Mathematical Reviews / MathSciNet) of J. A. Borrego-Morell and B. Shapiro, ``Semiclassical expansion for exactly solvable differential operators,'''' J. Phys. A: Math. Theor., 59 (2026), no. 29, 295202'
+  start_date: 2026-10
+  source: cv.tex
 - id: researchmap:academic_contribution:54988591
   type: cv
   kind: activity
