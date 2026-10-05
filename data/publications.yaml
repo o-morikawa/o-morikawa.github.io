@@ -1,15 +1,3 @@
-- id: publication-undated-the-changing-meaning-of-one-loop-exactness-in-n-2-supersymmetric-yang-mi
-  type: publications
-  kind: paper
-  status: preprint
-  authors:
-  - O. Morikawa
-  title: The Changing Meaning of One-Loop Exactness in 𝒩=2 Supersymmetric Yang–Mills Theory
-  year: null
-  source: publication.tex
-  topics:
-  - lattice gauge theory
-  - supersymmetry
 - id: publication-undated-gradient-flow-actions-integerness-and-gluonic-fermionic-topology-matchin
   type: publications
   kind: proceedings
@@ -306,27 +294,22 @@
   status: preprint
   authors:
   - Okuto Morikawa
-  title: A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling
+  title: The Changing Meaning of One-Loop Exactness in 𝒩=2 Supersymmetric Yang–Mills Theory
   year: 2026
-  affiliation_period: Unknown
-  title_bibtex: The Changing Meaning of One-Loop Exactness in $\mathcal{N}=2$ Supersymmetric Yang--Mills Theory
-  report_number: RIKEN-iTHEMS-Report-26
   source: publication.tex
   topics:
-  - theoretical physics
   - lattice gauge theory
   - supersymmetry
-  url: https://doi.org/10.5281/zenodo.23050742
+  url: https://doi.org/10.5281/zenodo.23168337
+  title_bibtex: The Changing Meaning of One-Loop Exactness in $\mathcal{N}=2$ Supersymmetric Yang--Mills Theory
+  affiliation_period: Unknown
   affiliation_basis: no arXiv identifier
+  report_number: RIKEN-iTHEMS-Report-26
   inspire_bibkey: Morikawa:2026xxx
   inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2026xxx
   bibtex_source: sources/ref_om.bib
   legacy_ids:
-  - publication-undated-a-physical-connection-criterion-for-reaction-coordinate-reduction-in-qua
-  - '3210307'
-  authors_latex:
-  - Okuto Morikawa
-  - Shoya Ogawa
+  - publication-undated-the-changing-meaning-of-one-loop-exactness-in-n-2-supersymmetric-yang-mi
 - id: Morikawa:2026mzj
   type: publications
   kind: paper
@@ -344,6 +327,34 @@
   - quantum resonance
   - theoretical physics
   bibtex_source: sources/ref_om.bib
+- id: '3210307'
+  type: publications
+  kind: paper
+  status: preprint
+  authors:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  title: A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling
+  year: 2026
+  affiliation_period: Unknown
+  title_bibtex: The Changing Meaning of One-Loop Exactness in $\mathcal{N}=2$ Supersymmetric Yang--Mills Theory
+  report_number: RIKEN-iTHEMS-Report-26
+  source: publication.tex
+  topics:
+  - theoretical physics
+  - lattice gauge theory
+  - supersymmetry
+  url: https://doi.org/10.5281/zenodo.23050742
+  affiliation_basis: no arXiv identifier
+  inspire_bibkey: '3210307'
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3A3210307
+  bibtex_source: sources/ref_om.bib
+  legacy_ids:
+  - publication-undated-a-physical-connection-criterion-for-reaction-coordinate-reduction-in-qua
+  - 3210307
+  authors_latex:
+  - O. Morikawa
+  - S. Ogawa
 - id: Morikawa:2025inx
   type: publications
   kind: paper
