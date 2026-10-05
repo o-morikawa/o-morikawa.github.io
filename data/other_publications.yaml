@@ -1,3 +1,46 @@
+- id: researchmap:misc:55170257
+  type: publications
+  kind: meeting_abstract
+  status: published
+  title_en: The Changing Meaning of One-Loop Exactness in $\mathcal{N}=2$ Supersymmetric Yang--Mills Theory
+  title_ja: The Changing Meaning of One-Loop Exactness in $\mathcal{N}=2$ Supersymmetric Yang--Mills Theory
+  authors:
+  - Okuto Morikawa
+  year: 2026
+  journal: null
+  source: researchmap
+  researchmap_refs:
+  - type: misc
+    id: '55170257'
+    url: https://researchmap.jp/o-morikawa/misc/55170257
+  researchmap_id: '55170257'
+  researchmap_type: misc
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/55170257
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  doi: 10.5281/zenodo.23168337
+  doi_url: https://doi.org/10.5281/zenodo.23168337
+- id: researchmap:misc:55093618
+  type: publications
+  kind: meeting_abstract
+  status: published
+  title_en: A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling
+  title_ja: A physical connection criterion for reaction-coordinate reduction in quantum-field tunneling
+  authors:
+  - Okuto Morikawa
+  - Shoya Ogawa
+  year: 2026
+  journal: null
+  source: researchmap
+  researchmap_refs:
+  - type: misc
+    id: '55093618'
+    url: https://researchmap.jp/o-morikawa/misc/55093618
+  researchmap_id: '55093618'
+  researchmap_type: misc
+  researchmap_url: https://researchmap.jp/o-morikawa/misc/55093618
+  researchmap_profile_url: https://researchmap.jp/o-morikawa
+  doi: 10.5281/zenodo.23050742
+  doi_url: https://doi.org/10.5281/zenodo.23050742
 - id: jps-abstract-2026-23ps1-9
   type: publications
   kind: meeting_abstract

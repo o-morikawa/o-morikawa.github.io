@@ -165,12 +165,18 @@
   - type: misc
     id: '53947619'
     url: https://researchmap.jp/o-morikawa/misc/53947619
+  - type: published_papers
+    id: '53947619'
+    url: https://researchmap.jp/o-morikawa/published_papers/53947619
   researchmap_id: '53947619'
   researchmap_type: misc
   researchmap_url: https://researchmap.jp/o-morikawa/misc/53947619
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   researchmap_title_en: Numerical Hints for Dyon Condensation at $θ=2π$ via Wilson-'t Hooft Loops in $SU(2)$ Yang-Mills Theory
   journal: JHEP
+  title_ja: Numerical Hints for Dyon Condensation at $\theta=2\pi$ via Wilson-'t Hooft Loops in $SU(2)$ Yang-Mills Theory
+  publication_name_ja: JHEP
+  researchmap_referee: true
 - id: Ogawa:2026opj
   type: publications
   kind: paper
