@@ -402,13 +402,17 @@ lang: en
 
 ## Seminars
 
-1. "TBA,"
+1. "Center-twisted Gribov spectra and confinement problem,"
    近畿大学、
-   2026年11年xx日
+   2026年11年27日
 
 1. "Center-Twisted Gribov Spectra and the Question of Confinement,"  
    九州大学、
    2026年11年13日
+
+1. "Analytic structure of quantum resonances via exact WKB, scattering theory, and complex scaling,"  
+   東京科学大学、
+   2026年11年9日
 
 1. "Infrared Renormalons, Bion Ambiguities, and Resurgence in Compactified Gauge Theories,"  
    拓殖大学、
