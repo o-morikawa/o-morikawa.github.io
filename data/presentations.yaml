@@ -41,7 +41,7 @@
   invited: true
   title_en: Center-twisted Gribov spectra and confinement problem
   event_en: Theoretical Particle Theory Group in Kindai University
-  start_date: '2026-11-24'
+  start_date: '2026-11-27'
   end_date: null
   year: 2026
   affiliation_period: RIKEN (iTHEMS)
@@ -62,6 +62,24 @@
   affiliation_period: RIKEN (iTHEMS)
   topics:
   - theoretical physics
+  source: presentation.tex
+- id: presentation-2026-11-09-analytic-structure-of-quantum-resonances-via-exact-wkb-scatt
+  type: presentations
+  kind: seminar
+  role: self
+  presenter: Okuto Morikawa
+  invited: true
+  title_en: Analytic structure of quantum resonances via exact WKB, scattering theory, and complex scaling
+  event_en: Nishida Group in Institute of Science Tokyo
+  start_date: '2026-11-09'
+  end_date: null
+  year: 2026
+  affiliation_period: RIKEN (iTHEMS)
+  topics:
+  - quantum resonance
+  - complex scaling method
+  - scattering theory
+  - exact WKB
   source: presentation.tex
 - id: presentation-2026-10-29-resonances-spectral-theory-and-resurgence-from-exact-wkb-ana
   type: presentations
