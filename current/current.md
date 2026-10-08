@@ -178,7 +178,8 @@ lang: en
 
 1. H. Watanabe, I. Kanamori, O. Morikawa, Y. Nagai, Y. Tanizaki and A. Tomiya,  
    "Numerical Hint for Dyon Condensation at $\theta=2\pi$ via Wilson–'t Hooft Loops in $SU(2)$ Yang–Mills Theory,"  
-   JHEP  
+   JHEP **10**, 068 (2026)  
+   [doi:10.1007/JHEP10(2026)068](https://doi.org/10.1007/JHEP10(2026)068),
    [arXiv:2606.13428 (hep-lat)](https://arxiv.org/abs/2606.13428),
    [INSPIRE](https://inspirehep.net/literature/3167855).  
 
@@ -402,7 +403,7 @@ lang: en
 
 ## Seminars
 
-1. "Center-twisted Gribov spectra and confinement problem,"
+1. "Center-twisted Gribov spectra and confinement problem,"  
    近畿大学、
    2026年11年27日
 
