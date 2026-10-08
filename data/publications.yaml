@@ -177,6 +177,10 @@
   title_ja: Numerical Hints for Dyon Condensation at $\theta=2\pi$ via Wilson-'t Hooft Loops in $SU(2)$ Yang-Mills Theory
   publication_name_ja: JHEP
   researchmap_referee: true
+  doi: 10.1007/JHEP10(2026)068
+  volume: '10'
+  pages: 068
+  doi_url: https://doi.org/10.1007/JHEP10(2026)068
 - id: Ogawa:2026opj
   type: publications
   kind: paper
