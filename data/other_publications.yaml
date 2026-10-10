@@ -41,6 +41,44 @@
   researchmap_profile_url: https://researchmap.jp/o-morikawa
   doi: 10.5281/zenodo.23050742
   doi_url: https://doi.org/10.5281/zenodo.23050742
+- id: jps-abstract-2026-quasinormal-modes-and-continuum-response-of-de-sitter-black-holes-via-co
+  type: publications
+  kind: meeting_abstract
+  status: published
+  authors:
+  - S. Ogawa
+  - O. Morikawa
+  - T. Hirose
+  title_en: Quasinormal modes and continuum response of de Sitter black holes via complex scaling method
+  title_ja: null
+  year: 2026
+  journal: Meeting Abstracts of the Physical Society of Japan
+  volume: 81(2)
+  article_number: 14pG721-4
+  topics:
+  - black holes
+  - quasinormal modes
+  - complex scaling method
+  source: publication.tex
+- id: jps-abstract-2026-complex-scaling-approach-to-quasinormal-modes-of-schwarzschild-and-reiss
+  type: publications
+  kind: meeting_abstract
+  status: published
+  authors:
+  - S. Ogawa
+  - T. Hirose
+  - O. Morikawa
+  title_en: Complex scaling approach to quasinormal modes of Schwarzschild and Reissner-Nordstrom black holes
+  title_ja: null
+  year: 2026
+  journal: Meeting Abstracts of the Physical Society of Japan
+  volume: 81(2)
+  article_number: 14pG721-3
+  topics:
+  - black holes
+  - quasinormal modes
+  - complex scaling method
+  source: publication.tex
 - id: jps-abstract-2026-23ps1-9
   type: publications
   kind: meeting_abstract
