@@ -298,28 +298,6 @@
   researchmap_url: https://researchmap.jp/o-morikawa/published_papers/52119934
   publication_name_ja: PoS
   researchmap_referee: true
-- id: Morikawa:2026xxx
-  type: publications
-  kind: paper
-  status: preprint
-  authors:
-  - Okuto Morikawa
-  title: The Changing Meaning of One-Loop Exactness in 𝒩=2 Supersymmetric Yang–Mills Theory
-  year: 2026
-  source: publication.tex
-  topics:
-  - lattice gauge theory
-  - supersymmetry
-  url: https://doi.org/10.5281/zenodo.23168337
-  title_bibtex: The Changing Meaning of One-Loop Exactness in $\mathcal{N}=2$ Supersymmetric Yang--Mills Theory
-  affiliation_period: Unknown
-  affiliation_basis: no arXiv identifier
-  report_number: RIKEN-iTHEMS-Report-26
-  inspire_bibkey: Morikawa:2026xxx
-  inspire_url: https://inspirehep.net/literature?q=texkeys%3AMorikawa%3A2026xxx
-  bibtex_source: sources/ref_om.bib
-  legacy_ids:
-  - publication-undated-the-changing-meaning-of-one-loop-exactness-in-n-2-supersymmetric-yang-mi
 - id: Morikawa:2026mzj
   type: publications
   kind: paper
@@ -337,6 +315,29 @@
   - quantum resonance
   - theoretical physics
   bibtex_source: sources/ref_om.bib
+- id: '3213525'
+  type: publications
+  kind: paper
+  status: preprint
+  authors:
+  - Okuto Morikawa
+  title: The Changing Meaning of One-Loop Exactness in 𝒩=2 Supersymmetric Yang–Mills Theory
+  year: 2026
+  source: publication.tex
+  topics:
+  - lattice gauge theory
+  - supersymmetry
+  url: https://doi.org/10.5281/zenodo.23168337
+  title_bibtex: The Changing Meaning of One-Loop Exactness in $\mathcal{N}=2$ Supersymmetric Yang--Mills Theory
+  affiliation_period: Unknown
+  affiliation_basis: no arXiv identifier
+  report_number: RIKEN-iTHEMS-Report-26
+  inspire_bibkey: '3213525'
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3A3213525
+  bibtex_source: sources/ref_om.bib
+  legacy_ids:
+  - publication-undated-the-changing-meaning-of-one-loop-exactness-in-n-2-supersymmetric-yang-mi
+  - Morikawa:2026xxx
 - id: '3210307'
   type: publications
   kind: paper
