@@ -33,6 +33,7 @@ lang: en
    [INSPIRE](https://inspirehep.net/authors/1790648?ui-citation-summary=true),  
    [arXiv](https://arxiv.org/search/?searchtype=author&query=Morikawa%2C+O),
    [ResearchGate](https://www.researchgate.net/profile/Okuto-Morikawa)
+   ([HEP Preprint Pilot on Zenodo](https://zenodo.org/communities/hep-preprint-pilot/))
 
 - [ResearchMap](https://researchmap.jp/o-morikawa),
    [J-GLOBAL](https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202001002638083611)
