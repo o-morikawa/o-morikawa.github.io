@@ -292,6 +292,12 @@ lang: en
 ## Talks (English)
 
 1. O. Morikawa,  
+   "Resonances, Spectral Theory, and Resurgent Structure,"  
+   第30回異分野交流の夕べ、  
+   理化学研究所、
+   2026年11月20日
+
+1. O. Morikawa,  
    "Resonances, Spectral Theory, and Resurgence from Exact WKB Analysis,"  
    RIMS共同研究「超局所解析と漸近解析における新たな発展」、  
    京都大学数理解析研究所、
