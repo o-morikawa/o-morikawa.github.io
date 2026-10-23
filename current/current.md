@@ -221,6 +221,7 @@ lang: en
 
 1. A. Tomiya, H. Watanabe, I. Kanamori, O. Morikawa, Y. Nagai and Y. Tanizaki,  
    "Gradient-Flow Actions, Integerness, and Gluonic–Fermionic Topology Matching in SU(3) Yang–Mills Theory,"  
+   PoS **LATTICE2026**, 305 (2026)  
    [doi:10.22323/1.542.0305](https://doi.org/10.22323/1.542.0305)  
    Talk presented at the 43rd International Symposium on Lattice Field Theory (Lattice2026),  
    July 26 - August 1st, 2026,
@@ -228,7 +229,10 @@ lang: en
 
 1. H. Watanabe, I. Kanamori, O. Morikawa, Y. Nagai, Y. Tanizaki and A. Tomiya,  
    "Dyon Condensation at $\theta=2\pi$ from Wilson–'t Hooft Loops in Yang–Mills Theory,"  
-   [doi:10.22323/1.542.0217](https://doi.org/10.22323/1.542.0217)  
+   PoS **LATTICE2026**, 217 (2026)  
+   [doi:10.22323/1.542.0217](https://doi.org/10.22323/1.542.0217),
+   [arXiv:2610.31281 (hep-lat)](https://arxiv.org/abs/2610.31281),
+   [INSPIRE](https://inspirehep.net/literature/3218165).  
    Talk presented at the 43rd International Symposium on Lattice Field Theory (Lattice2026),  
    July 26 - August 1st, 2026,
    University of Maryland, College Park, USA.  
