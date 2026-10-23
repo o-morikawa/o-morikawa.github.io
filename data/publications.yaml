@@ -10,28 +10,52 @@
   - Y. Nagai
   - Y. Tanizaki
   title: Gradient-flow actions, integerness, and gluonic–fermionic topology matching in SU(3) Yang–Mills theory
-  year: null
+  year: 2027
   source: publication.tex
   topics:
   - lattice gauge theory
   - topology
-- id: publication-undated-dyon-condensation-at-theta-2pi-from-wilson-t-hooft-loops-in-yang-mills-t
+  doi: 10.22323/1.542.0305
+  journal: Proc. Sci.
+  volume: LATTICE2026
+  pages: '305'
+  doi_url: https://doi.org/10.22323/1.542.0305
+- id: Watanabe:2026jmd
   type: publications
   kind: proceedings
   status: published
   authors:
-  - H. Watanabe
-  - I. Kanamori
-  - O. Morikawa
-  - Y. Nagai
-  - Y. Tanizaki
-  - A. Tomiya
+  - Hiromasa Watanabe
+  - Issaku Kanamori
+  - Okuto Morikawa
+  - Yuki Nagai
+  - Yuya Tanizaki
+  - Akio Tomiya
   title: Dyon Condensation at θ=2π from Wilson–'t Hooft Loops in Yang–Mills Theory
-  year: null
+  year: 2027
   source: publication.tex
   topics:
   - lattice gauge theory
   - confinement
+  - lattice field theory
+  doi: 10.22323/1.542.0217
+  journal: PoS
+  volume: LATTICE2026
+  pages: '217'
+  arxiv: '2610.31281'
+  arxiv_url: https://arxiv.org/abs/2610.31281
+  arxiv_date: 2026-10
+  arxiv_class: hep-lat
+  doi_url: https://doi.org/10.22323/1.542.0217
+  affiliation_period: RIKEN (iTHEMS)
+  affiliation_basis: arXiv:2610.31281
+  title_bibtex: Dyon Condensation at $\theta=2\pi$ from Wilson--'t Hooft Loops in Yang--Mills Theory
+  report_number: RIKEN-iTHEMS-Report-26
+  inspire_bibkey: Watanabe:2026jmd
+  inspire_url: https://inspirehep.net/literature?q=texkeys%3AWatanabe%3A2026jmd
+  bibtex_source: sources/ref_om.bib
+  legacy_ids:
+  - publication-undated-dyon-condensation-at-theta-2pi-from-wilson-t-hooft-loops-in-yang-mills-t
 - id: Morikawa:2026mqk
   type: publications
   kind: paper
